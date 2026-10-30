@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_amzn_pm_1030",
+  "date": "2026-10-30",
+  "ticker": "AMZN",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Amazon vorbörslich rund −7 % nach Q3",
+  "summary": "Der Ausblick enttäuscht, dazu wachsen die Sorgen über die sehr hohen KI-Investitionen. Mit dem Minus von gestern liegt die Aktie damit gut 10 % unter dem Kurs vor den Zahlen und würde zur Eröffnung in die Einstiegszone 215–230 $ fallen.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+ },
+ {
+  "id": "n_xom_q3_1030",
+  "date": "2026-10-30",
+  "ticker": "XOM",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Exxon schlägt Erwartungen, mehr Dividende und Rückkäufe",
+  "summary": "Bereinigter Gewinn 4,23 $ je Aktie (erwartet ~4,12 $), Umsatz +33 %. Dividende steigt auf 1,07 $ je Quartal, dazu ein Rückkaufprogramm über 20 Mrd. $. Vorbörslich ca. +2 % – das läge knapp über der Bestätigungsmarke 184,9 $; erst der Schlusskurs zählt.",
+  "url": "https://www.kiro7.com/news/business/exxonmobil-chevron/VIJHWIGWFM7EXAVSPFXPKNI2PI/"
+ },
+ {
+  "id": "n_mkt_pm_1030",
+  "date": "2026-10-30",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Nasdaq-Futures schwächer, Öl steigt",
+  "summary": "Schwache Ausblicke von Amazon und Intel (vorbörslich ca. −25 %) belasten Tech, Sorge um die KI-Ausgaben. Öl +2–2,5 % wegen Angriffen auf Tanker in der Straße von Hormus.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+ },
+ {
   "id": "n0",
   "date": "2026-10-29",
   "ticker": "GOOGL",
@@ -108,16 +138,6 @@
   "headline": "Bank of America: starker Zinsüberschuss, Geldwäsche-Vergleich",
   "summary": "Bereinigt über Erwartung, NII +8 %, Ausblick 2027 besser; 1,2 Mrd $ Vergleich drückte den Gewinn, Aktie fiel ~8 %.",
   "url": "https://finance.biggo.com/news/US_BAC_2026-10-14"
- },
- {
-  "id": "n11",
-  "date": "2026-10-30",
-  "ticker": "XOM",
-  "impact": "mittel",
-  "direction": "gemischt",
-  "headline": "Exxon legt heute Q3-Zahlen vor",
-  "summary": "Raffinerie-Margen dürften stark helfen, niedrigere Ölpreise belasten. Aktie nahe Rekordhoch und technisch überkauft.",
-  "url": "https://www.itiger.com/hans/news/2676044683"
  },
  {
   "id": "n12",

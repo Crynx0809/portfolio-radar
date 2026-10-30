@@ -42,12 +42,6 @@
   "event": "Q4-Zahlen"
  },
  {
-  "id": "e7",
-  "date": "2026-10-30",
-  "ticker": "XOM",
-  "event": "Q3-Zahlen (12:30 Uhr deutscher Zeit)"
- },
- {
   "id": "e8",
   "date": "2026-11-05",
   "ticker": "RHM",

@@ -1,5 +1,12 @@
 [
  {
+  "id": "a_amzn_1030",
+  "at": "2026-10-30T14:35:00+01:00",
+  "ticker": "AMZN",
+  "level": "hoch",
+  "text": "Vorbörslich ca. −7 % nach Q3-Ausblick (seit den Zahlen gut −10 %). Kurs würde in die Zone 215–230 $ fallen – Stop 205 $ im Blick behalten, Umkehrsignal in der Zone abwarten statt sofort zu handeln."
+ },
+ {
   "id": "a0",
   "at": "2026-10-30T12:55:00+01:00",
   "ticker": "MRVL",
@@ -21,17 +28,17 @@
   "text": "~−25 % nach Zahlen, Kurs in der Korrekturzone 121–135 $."
  },
  {
-  "id": "a3",
-  "at": "2026-10-30T12:55:00+01:00",
-  "ticker": "AMZN",
-  "level": "mittel",
-  "text": "Dreieck nachbörslich nach unten aufgelöst (unter 244,6 $)."
- },
- {
   "id": "a4",
   "at": "2026-10-30T14:05:00+01:00",
   "ticker": "AMD",
   "level": "mittel",
   "text": "Schluss über 560 $ (566 $): Welle-5-Szenario ist aktiv. Vor den Zahlen am 3.11. nicht aufstocken, Stop-Idee 500 $."
+ },
+ {
+  "id": "a_xom_1030",
+  "at": "2026-10-30T14:35:00+01:00",
+  "ticker": "XOM",
+  "level": "mittel",
+  "text": "Starke Q3-Zahlen, vorbörslich über der Bestätigung 184,9 $. Erst ein Schlusskurs darüber bestätigt den Ausbruch."
  }
 ]
