@@ -52,5 +52,11 @@
   "date": "2026-11-05",
   "ticker": "RHM",
   "event": "Q3-Zahlen"
+ },
+ {
+  "id": "e9",
+  "date": "2026-11-03",
+  "ticker": "RACE",
+  "event": "Q3-Zahlen"
  }
 ]
