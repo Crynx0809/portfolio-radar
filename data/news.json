@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_chips_1730",
+  "date": "2026-10-30",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf: Intel ~−25 %, AMD rund −11 %, Marvell −10 %",
+  "summary": "Intels schwacher Ausblick (schlechtester Tag seit über 50 Jahren) und Sorgen um die KI-Ausgaben ziehen Halbleiter breit nach unten. AMD fällt vor den eigenen Zahlen am 3.11. bis an den Stop bei 500 $, Marvell rutscht tiefer in die Zone 186–219 $. Auch Applied Digital, Cameco, Robinhood deutlich schwächer.",
+  "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html"
+ },
+ {
+  "id": "n_amzn_1730",
+  "date": "2026-10-30",
+  "ticker": "AMZN",
+  "impact": "mittel",
+  "direction": "neutral",
+  "headline": "Amazon erholt sich im Handel deutlich vom vorbörslichen Minus",
+  "summary": "Statt rund −7 % vorbörslich notiert Amazon am Nachmittag nur gut −1 % bei ca. 240 $ – die Einstiegszone 215–230 $ wurde damit (noch) nicht erreicht.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
+ },
+ {
   "id": "n_amzn_pm_1030",
   "date": "2026-10-30",
   "ticker": "AMZN",

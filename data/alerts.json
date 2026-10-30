@@ -1,17 +1,10 @@
 [
  {
-  "id": "a_amzn_1030",
-  "at": "2026-10-30T14:35:00+01:00",
-  "ticker": "AMZN",
-  "level": "hoch",
-  "text": "Vorbörslich ca. −7 % nach Q3-Ausblick (seit den Zahlen gut −10 %). Kurs würde in die Zone 215–230 $ fallen – Stop 205 $ im Blick behalten, Umkehrsignal in der Zone abwarten statt sofort zu handeln."
- },
- {
   "id": "a0",
-  "at": "2026-10-30T12:55:00+01:00",
+  "at": "2026-10-30T17:58:00+01:00",
   "ticker": "MRVL",
   "level": "hoch",
-  "text": "Größte Position −13 % nach Übernahmegerüchten (Lumentum). Deal-Details können nächste Woche kommen – Plan für die Zone 170–200 $ machen."
+  "text": "Weitere −10 % heute (ca. 196 $) im Chip-Ausverkauf, nach −13 % gestern (Lumentum-Gerüchte). Kurs in der Zone 186–219 $, Stop 178 $ noch 9 % entfernt."
  },
  {
   "id": "a1",
@@ -29,10 +22,17 @@
  },
  {
   "id": "a4",
-  "at": "2026-10-30T14:05:00+01:00",
+  "at": "2026-10-30T17:58:00+01:00",
   "ticker": "AMD",
+  "level": "hoch",
+  "text": "−11 % im Chip-Ausverkauf (Intel-Ausblick): ca. 504 $, Tagestief genau 500 $ = Stop/Welle-4-Tief. Schlusskurs unter 500 $ würde die Welle-5-Zählung widerlegen → laut Plan reduzieren oder absichern. Zahlen am 3.11."
+ },
+ {
+  "id": "a_amzn_1030",
+  "at": "2026-10-30T17:58:00+01:00",
+  "ticker": "AMZN",
   "level": "mittel",
-  "text": "Schluss über 560 $ (566 $): Welle-5-Szenario ist aktiv. Vor den Zahlen am 3.11. nicht aufstocken, Stop-Idee 500 $."
+  "text": "Vorbörsliches −7 % weitgehend aufgeholt (ca. 240 $, gut −1 %). Zone 215–230 $ nicht erreicht – weiter abwarten."
  },
  {
   "id": "a_xom_1030",
@@ -40,5 +40,19 @@
   "ticker": "XOM",
   "level": "mittel",
   "text": "Starke Q3-Zahlen, vorbörslich über der Bestätigung 184,9 $. Erst ein Schlusskurs darüber bestätigt den Ausbruch."
+ },
+ {
+  "id": "a_ccj_1030",
+  "at": "2026-10-30T17:58:00+01:00",
+  "ticker": "CCJ",
+  "level": "mittel",
+  "text": "−10 % auf ca. 75 $, unter die Zone 77–80 $; Stop 74 $ nah (Tagestief 73,9 $). Erst Stabilisierung abwarten."
+ },
+ {
+  "id": "a_apld_1030",
+  "at": "2026-10-30T17:58:00+01:00",
+  "ticker": "APLD",
+  "level": "mittel",
+  "text": "−9 % auf ca. 17,7 $, am unteren Rand der Zone 17,5–19,5 $; Stop 16,8 $ nah."
  }
 ]
