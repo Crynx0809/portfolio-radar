@@ -1,0 +1,162 @@
+[
+ {
+  "id": "n0",
+  "date": "2026-10-29",
+  "ticker": "GOOGL",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Alphabet −12,6 %: Gewinn verfehlt, Free Cashflow negativ",
+  "summary": "EPS-Miss durch Beteiligungsverluste, hohe KI-Investitionen (Capex 195–205 Mrd $ für 2026); Cloud wächst trotzdem um 103 %. Schwächster Tag seit Jahren.",
+  "url": "https://www.xtb.com/en/market-analysis/alphabet-disappoints-wall-street-despite-record-results-shares-plunge-over-8-and-test-300"
+ },
+ {
+  "id": "n1",
+  "date": "2026-10-29",
+  "ticker": "MRVL",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Marvell −13,2 %: Gespräche über Lumentum-Übernahme",
+  "summary": "Laut Bloomberg fortgeschrittene Gespräche über einen Aktientausch-Deal (Lumentum ~83 Mrd $). Nichts unterschrieben; Ankündigung evtl. nächste Woche.",
+  "url": "https://www.heygotrade.com/en/news/marvell-mrvl-stock-news-october-30-2026/"
+ },
+ {
+  "id": "n2",
+  "date": "2026-10-29",
+  "ticker": "AMZN",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Amazon nachbörslich schwächer nach Q3",
+  "summary": "Umsatz knapp unter Konsens, EPS-Miss; AWS +39 % stark, aber Capex 2026 ~220 Mrd $ und mehr in 2027. Aktie schloss −4,3 % und fiel nachbörslich weiter.",
+  "url": "https://www.marketbeat.com/earnings/reports/2026-10-29-amazoncom-inc-stock/"
+ },
+ {
+  "id": "n3",
+  "date": "2026-10-28",
+  "ticker": "FTNT",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Fortinet trotz Beat nachbörslich ~−25 %",
+  "summary": "Q3 über Erwartung, Prognose angehoben; Service-Umsatz wächst aber langsamer. Management spricht von Timing-Effekten und Besserung 2027.",
+  "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fortinet-beats-q3-2026-estimates-but-shares-plunge-93CH-4981034"
+ },
+ {
+  "id": "n4",
+  "date": "2026-10-29",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Nasdaq −1,4 %, Inflation zieht an",
+  "summary": "September-PCE bei 3,6 %, Kern-PCE 3,1 %; EZB hält Einlagenzins bei 2,5 %. Die Fed hatte am 28.10. die Zinsen gehalten, Markt preist eher Erhöhungen ein.",
+  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
+ },
+ {
+  "id": "n5",
+  "date": "2026-10-29",
+  "ticker": "LLY",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Eli Lilly: Umsatz +39 %, Prognose angehoben",
+  "summary": "Q3-Umsatz 24,4 Mrd $ über Erwartung; Jahresausblick erneut erhöht.",
+  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
+ },
+ {
+  "id": "n6",
+  "date": "2026-10-27",
+  "ticker": "APLD",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Applied Digital +8–10 %: Erholung der Rechenzentrums-Aktien",
+  "summary": "Gegenbewegung nach der Musk-Warnung zu Neocloud-Anbietern und Schuldensorgen; Mitgründer kauften am Jahrestief.",
+  "url": "https://stockanalysis.com/stocks/apld/"
+ },
+ {
+  "id": "n7",
+  "date": "2026-10-22",
+  "ticker": "AMD",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf: AMD und Marvell −8 %",
+  "summary": "Warnung vor Komponentenknappheit (Lam Research) und Sorgen um KI-Finanzierung belasteten den Sektor.",
+  "url": "https://www.tikr.com/blog/amd-stock-is-up-131-this-year-heres-where-it-stands-after-a-1-trillion-run"
+ },
+ {
+  "id": "n8",
+  "date": "2026-10-21",
+  "ticker": "SAP",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "SAP: Cloud-Backlog +28 %, Prognose oberes Ende",
+  "summary": "Cloud-Umsatz +26 % auf 6,67 Mrd €; Goldman hob das Kursziel auf 258 €. Risiko: leichte Abkühlung des Cloud-Wachstums in Q4.",
+  "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sap-lifts-2026-guidance-but-the-cloud-backlog-now-faces-the-harder-test/70427738"
+ },
+ {
+  "id": "n9",
+  "date": "2026-10-19",
+  "ticker": "NOVO-B",
+  "impact": "niedrig",
+  "direction": "negativ",
+  "headline": "HSBC senkt Kursziel für Novo auf 280 DKK",
+  "summary": "Einstufung Hold bestätigt; Zahlen folgen am 4.11.",
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/novo-nordisk-aktie-hsbc-senkt-ziel-auf-280-00-dkk/70421906"
+ },
+ {
+  "id": "n10",
+  "date": "2026-10-14",
+  "ticker": "BAC",
+  "impact": "mittel",
+  "direction": "gemischt",
+  "headline": "Bank of America: starker Zinsüberschuss, Geldwäsche-Vergleich",
+  "summary": "Bereinigt über Erwartung, NII +8 %, Ausblick 2027 besser; 1,2 Mrd $ Vergleich drückte den Gewinn, Aktie fiel ~8 %.",
+  "url": "https://finance.biggo.com/news/US_BAC_2026-10-14"
+ },
+ {
+  "id": "n11",
+  "date": "2026-10-30",
+  "ticker": "XOM",
+  "impact": "mittel",
+  "direction": "gemischt",
+  "headline": "Exxon legt heute Q3-Zahlen vor",
+  "summary": "Raffinerie-Margen dürften stark helfen, niedrigere Ölpreise belasten. Aktie nahe Rekordhoch und technisch überkauft.",
+  "url": "https://www.itiger.com/hans/news/2676044683"
+ },
+ {
+  "id": "n12",
+  "date": "2026-10-30",
+  "ticker": "ENR",
+  "impact": "niedrig",
+  "direction": "negativ",
+  "headline": "Siemens Energy −3,7 % am Vormittag",
+  "summary": "Aktie testet die 61,8 %-Zone um 131 €; Barclays sieht den Höhepunkt der Turbinen-Aufträge erreicht.",
+  "url": "https://www.boerse-express.com/news/articles/siemens-energy-aktie-946-prozent-wochenminus-nach-barclays-927312"
+ },
+ {
+  "id": "n13",
+  "date": "2026-10-29",
+  "ticker": "CAT",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Caterpillar: Beat, aber Aktie ~−9 %",
+  "summary": "EPS 7,20 $ über Erwartung, Rekord-Auftragsbestand 78 Mrd $, aber langsameres Wachstum; seit August über 20 % Minus.",
+  "url": "https://www.tradingpedia.com/2026/10/29/caterpillar-earnings-beat-fails-to-ease-growth-fears/"
+ },
+ {
+  "id": "n14",
+  "date": "2026-10-27",
+  "ticker": "V",
+  "impact": "niedrig",
+  "direction": "positiv",
+  "headline": "Visa: Umsatz +13 %, Dividende +16 %",
+  "summary": "Solides Quartal; Aktie nahe Rekordhoch.",
+  "url": "https://www.heygotrade.com/en/news/visa-fiscal-q4-2026-earnings-results/"
+ },
+ {
+  "id": "n15",
+  "date": "2026-10-17",
+  "ticker": "RHM",
+  "impact": "niedrig",
+  "direction": "gemischt",
+  "headline": "Rheinmetall: Zahlen am 5.11., Berenberg auf Halten",
+  "summary": "Aktie ~30 % im Minus seit Jahresbeginn; Erholung mit dem Rüstungssektor.",
+  "url": "https://www.boerse-global.de/rheinmetall-aktie-quartalszahlen-am-5-november/833939"
+ }
+]

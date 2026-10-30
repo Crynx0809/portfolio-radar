@@ -1,0 +1,30 @@
+[
+ {
+  "id": "a0",
+  "at": "2026-10-30T12:55:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Größte Position −13 % nach Übernahmegerüchten (Lumentum). Deal-Details können nächste Woche kommen – Plan für die Zone 170–200 $ machen."
+ },
+ {
+  "id": "a1",
+  "at": "2026-10-30T12:55:00+01:00",
+  "ticker": "GOOGL",
+  "level": "hoch",
+  "text": "−12,6 % nach Zahlen, 61,8 %-Retracement gebrochen. Nächste Unterstützung 265–280 $."
+ },
+ {
+  "id": "a2",
+  "at": "2026-10-30T12:55:00+01:00",
+  "ticker": "FTNT",
+  "level": "hoch",
+  "text": "~−25 % nach Zahlen, Kurs in der Korrekturzone 121–135 $."
+ },
+ {
+  "id": "a3",
+  "at": "2026-10-30T12:55:00+01:00",
+  "ticker": "AMZN",
+  "level": "mittel",
+  "text": "Dreieck nachbörslich nach unten aufgelöst (unter 244,6 $)."
+ }
+]

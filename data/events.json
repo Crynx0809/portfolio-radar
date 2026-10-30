@@ -1,0 +1,56 @@
+[
+ {
+  "id": "e0",
+  "date": "2026-11-01",
+  "ticker": "Markt",
+  "event": "US-Zeitumstellung: US-Börse öffnet ab 2.11. wieder um 15:30 Uhr deutscher Zeit"
+ },
+ {
+  "id": "e1",
+  "date": "2026-11-02",
+  "ticker": "MRVL",
+  "event": "Mögliche Ankündigung Lumentum-Deal (unbestätigt)"
+ },
+ {
+  "id": "e2",
+  "date": "2026-11-03",
+  "ticker": "AMD",
+  "event": "Q3-Zahlen nach US-Börsenschluss"
+ },
+ {
+  "id": "e3",
+  "date": "2026-11-03",
+  "ticker": "Markt",
+  "event": "US-Zwischenwahlen (Midterms)"
+ },
+ {
+  "id": "e4",
+  "date": "2026-11-04",
+  "ticker": "NOVO-B",
+  "event": "9-Monats-Zahlen, Call 13:00 Uhr"
+ },
+ {
+  "id": "e5",
+  "date": "2026-11-06",
+  "ticker": "Markt",
+  "event": "US-Arbeitsmarktbericht Oktober"
+ },
+ {
+  "id": "e6",
+  "date": "2027-01-28",
+  "ticker": "SAP",
+  "event": "Q4-Zahlen"
+ },
+ {
+  "id": "e7",
+  "date": "2026-10-30",
+  "ticker": "XOM",
+  "event": "Q3-Zahlen (12:30 Uhr deutscher Zeit)"
+ },
+ {
+  "id": "e8",
+  "date": "2026-11-05",
+  "ticker": "RHM",
+  "event": "Q3-Zahlen"
+ }
+]

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Portfolio Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f6f5f1; --panel: #ffffff; --fg: #1d1c1a; --muted: #6b6862; --line: #e4e1da;
+  --ok: #1f7a4a; --warn: #a86400; --bad: #c0392b; --accent: #2f5bd3; --zone: #c9c5bc; --track: #ecebe6;
+  --sans: "Inter", system-ui, -apple-system, Segoe UI, sans-serif; --serif: "Source Serif 4", Georgia, serif;
+  --r: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #151514; --panel: #1f1f1d; --fg: #ecebe7; --muted: #a09d96; --line: #33322f;
+    --ok: #4cc283; --warn: #e3a33c; --bad: #ef6f61; --accent: #7c9cf5; --zone: #57554f; --track: #2b2a27; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 28px 16px 60px; }
+.kicker { margin: 0 0 4px; font-size: 12.5px; color: var(--muted); }
+h1 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 5vw, 40px); line-height: 1.1; }
+.take { margin: 12px 0 4px; font-size: 18px; line-height: 1.4; max-width: 62rem; }
+.market { margin: 4px 0 0; color: var(--muted); max-width: 62rem; }
+.meta { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+.alerts { display: grid; gap: 8px; margin: 22px 0; }
+.alert { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 12px 14px; border-radius: var(--r); border: 1px solid var(--warn); background: var(--panel); }
+.alert.hoch { border-color: var(--bad); }
+.dot { width: 9px; height: 9px; border-radius: 50%; margin-top: 7px; background: var(--warn); }
+.alert.hoch .dot { background: var(--bad); }
+.alert b { font-weight: 600; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: 12px; margin-bottom: 22px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 18px; }
+.kpi p { margin: 0; }
+.kpi .l { font-size: 12.5px; color: var(--muted); }
+.kpi .v { font-family: var(--serif); font-size: 30px; line-height: 1.15; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi .s { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+.tab { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted); padding: 8px 12px; cursor: pointer; margin-bottom: -1px; }
+.tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--fg); }
+.note { margin: 0 0 14px; color: var(--muted); max-width: 62rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.card.hoch { border-color: var(--bad); }
+.top { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+.name { margin: 0; font-size: 17px; font-weight: 600; line-height: 1.25; }
+.sub { margin: 2px 0 0; font-size: 12.5px; color: var(--muted); }
+.badge { flex: none; font-size: 12px; padding: 2px 9px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; color: var(--warn); }
+.badge.bullisch { color: var(--ok); } .badge.bärisch { color: var(--bad); }
+.price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.px { font-family: var(--serif); font-size: 28px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.small { font-size: 12.5px; color: var(--muted); }
+.range { position: relative; height: 30px; }
+.track { position: absolute; left: 0; right: 0; top: 12px; height: 6px; border-radius: 3px; background: var(--track); }
+.zone { position: absolute; top: 10px; height: 10px; border-radius: 2px; }
+.zone.sup { background: var(--zone); } .zone.tgt { background: var(--accent); opacity: .7; }
+.inv { position: absolute; top: 6px; width: 2px; height: 18px; background: var(--bad); }
+.pt { position: absolute; top: 9px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--fg); border: 2px solid var(--panel); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted); }
+.key { display: inline-block; width: 11px; height: 8px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+.act { border: 1px solid var(--line); border-radius: var(--r); padding: 12px; display: grid; gap: 6px; }
+.act .l { margin: 0; font-size: 12.5px; color: var(--muted); }
+.act .v { margin: 0; font-size: 16.5px; font-weight: 600; line-height: 1.3; }
+.ifs { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 6px; }
+.if { display: grid; grid-template-columns: 9.5rem 1fr; gap: 8px; line-height: 1.45; }
+.if .k { font-size: 12.5px; font-weight: 600; padding-top: 2px; }
+.if.up .k { color: var(--ok); } .if.wait .k { color: var(--muted); } .if.down .k { color: var(--bad); }
+@media (max-width: 480px) { .if { grid-template-columns: 1fr; gap: 0; } }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; }
+dt { color: var(--muted); font-size: 12.5px; padding-top: 2px; } dd { margin: 0; font-variant-numeric: tabular-nums; }
+.p { margin: 0; line-height: 1.5; } .p b { font-weight: 600; } .muted { color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2px 0; width: 100%; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 12px; align-items: start; }
+.box { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; }
+.box h2 { margin: 0 0 10px; font-size: 17px; font-weight: 600; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.chip { font-size: 12px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); }
+.chip.hoch { color: var(--bad); border-color: currentColor; } .chip.mittel { color: var(--warn); border-color: currentColor; }
+.nmeta { display: flex; flex-wrap: wrap; gap: 4px 8px; font-size: 12.5px; color: var(--muted); align-items: center; }
+.nh { margin: 4px 0 2px; font-weight: 600; } .nh a { color: inherit; }
+.ev { display: grid; grid-template-columns: 5.5rem 1fr; gap: 8px; }
+.method { max-width: 62rem; } .method h3 { font-size: 17px; font-weight: 600; margin: 22px 0 4px; }
+.foot { margin-top: 40px; font-size: 12.5px; color: var(--muted); max-width: 62rem; }
+.err { color: var(--bad); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Elliott-Wellen + News · Updates werktags ca. 14:15, 17:45 und 22:15 Uhr</p>
+  <h1>Portfolio Radar</h1>
+  <p class="take" id="headline">Lade Daten …</p>
+  <p class="market" id="market"></p>
+  <p class="meta" id="meta"></p>
+
+  <div class="alerts" id="alerts"></div>
+
+  <div class="kpis">
+    <div class="kpi"><p class="l">Dringende Meldungen</p><p class="v" id="k-high">–</p><p class="s"><span id="k-mid">–</span> weitere zum Beobachten</p></div>
+    <div class="kpi"><p class="l">Trend im Depot</p><p class="v" id="k-bull">–</p><p class="s">bullisch · <span id="k-neu">–</span> neutral · <span id="k-bear">–</span> bärisch</p></div>
+    <div class="kpi"><p class="l">Nächster Termin</p><p class="v" id="k-date">–</p><p class="s" id="k-event"></p></div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" data-tab="portfolio" aria-selected="true">Meine Positionen</button>
+    <button class="tab" data-tab="watchlist" aria-selected="false">Watchlist</button>
+    <button class="tab" data-tab="news" aria-selected="false">News &amp; Termine</button>
+    <button class="tab" data-tab="methode" aria-selected="false">So lese ich das</button>
+  </div>
+
+  <section class="sec" id="portfolio">
+    <p class="note">Sortiert nach Dringlichkeit. Der Balken zeigt: grau = Unterstützungszone, blau = Zielzone, roter Strich = Invalidierung, Punkt = aktueller Kurs.</p>
+    <div class="grid" id="cards-portfolio"></div>
+  </section>
+  <section class="sec" id="watchlist" hidden>
+    <p class="note">15 Werte aus anderen Sektoren als Ideen zur Diversifizierung. Zonen und Einstiegssignale werden bei jedem Abend-Update aktualisiert.</p>
+    <div class="grid" id="cards-watchlist"></div>
+  </section>
+  <section class="sec" id="news" hidden>
+    <div class="two">
+      <div class="box"><h2>Wichtigste News</h2><ul class="list" id="newslist"></ul></div>
+      <div class="box"><h2>Was ansteht</h2><ul class="list" id="eventlist"></ul></div>
+    </div>
+  </section>
+  <section class="sec method" id="methode" hidden>
+    <h3>Wie die Analyse entsteht</h3>
+    <p>Jeden Werktag gegen 22:15 Uhr (nach US-Börsenschluss) werden Kurse, Kursverläufe und Nachrichten zu jedem Wert recherchiert und die Elliott-Wellen auf Tages- und Wochenbasis gezählt, für einen Horizont von einigen Wochen bis maximal sechs Monaten. Um ca. 14:15 Uhr und 17:45 Uhr wird nur die Nachrichtenlage geprüft.</p>
+    <h3>Die Begriffe auf den Karten</h3>
+    <ul>
+      <li><b>Technisches Signal:</b> die klare Kurzfassung, was die Wellenanalyse gerade nahelegt.</li>
+      <li><b>Wenn-dann-Regeln:</b> was technisch sinnvoll wäre, wenn der Kurs steigt (▲), in der Spanne bleibt (■) oder fällt (▼). „Schlusskurs“ heißt: zählt erst, wenn die Aktie zum Handelsende dort steht.</li>
+      <li><b>Hauptszenario / Alternative:</b> die wahrscheinlichste Wellenzählung und was passiert, wenn sie falsch ist. Impulswellen (1–5) laufen mit dem Trend, Korrekturen (A-B-C) dagegen.</li>
+      <li><b>Zielzone:</b> wohin der Kurs laut Hauptszenario als Nächstes laufen dürfte (Fibonacci).</li>
+      <li><b>Unterstützung:</b> wo eine Korrektur typischerweise endet (oft 38,2–61,8 % Retracement).</li>
+      <li><b>Invalidierung:</b> der Kurs, bei dem die Zählung nicht mehr stimmt – das wichtigste Level fürs Risikomanagement.</li>
+    </ul>
+    <h3>Grenzen</h3>
+    <p>Kurse stammen aus Web-Recherche, nicht aus einem Live-Feed, und können einige Stunden alt sein. Elliott-Zählungen sind Interpretation. Signale und Wenn-dann-Regeln sind technische Szenarien, keine Anlageberatung.</p>
+  </section>
+  <p class="foot">Keine Anlageberatung. Alle Angaben ohne Gewähr; Quellen bei jeder Meldung.</p>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const mk = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined && text !== null) e.textContent = text; return e; };
+const num = (v) => (v === null || v === undefined || v === '') ? null : Number(v);
+const fmt = (v, d = 2) => new Intl.NumberFormat('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d}).format(v);
+const cur = (c) => c === 'EUR' ? '€' : (c === 'USD' ? '$' : (c || ''));
+const money = (v, c) => num(v) === null ? '–' : fmt(Number(v), Number(v) >= 1000 ? 0 : 2) + ' ' + cur(c);
+const dDate = (s) => s ? new Date(String(s).slice(0, 10) + 'T12:00:00').toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: '2-digit'}) : '–';
+const rank = (a) => a === 'hoch' ? 0 : (a === 'mittel' ? 1 : 2);
+const zone = (lo, hi, c) => (num(lo) === null || num(hi) === null) ? '–' : fmt(Number(lo)) + '–' + fmt(Number(hi)) + ' ' + cur(c);
+
+document.querySelectorAll('.tab').forEach((t) => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+  document.querySelectorAll('.sec').forEach((s) => { s.hidden = s.id !== t.dataset.tab; });
+  history.replaceState(null, '', '#' + t.dataset.tab);
+}));
+const h = location.hash.slice(1); if (h) { const t = document.querySelector('.tab[data-tab="' + h + '"]'); if (t) t.click(); }
+
+function rangeBar(r) {
+  const vals = [r.range_low, r.range_high, r.invalidation, r.support_low, r.support_high, r.target_low, r.target_high, r.price].map(num).filter((v) => v !== null && !isNaN(v));
+  if (vals.length < 3 || num(r.price) === null) return null;
+  const lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.04, a = lo - pad, b = hi + pad;
+  const x = (v) => ((v - a) / (b - a) * 100) + '%', w = (v1, v2) => (Math.abs(v2 - v1) / (b - a) * 100) + '%';
+  const box = mk('div', 'range'); box.append(mk('div', 'track'));
+  const z = (cls, l, h) => { if (num(l) === null || num(h) === null) return; const e = mk('div', 'zone ' + cls); e.style.left = x(Math.min(l, h)); e.style.width = w(l, h); box.append(e); };
+  z('sup', r.support_low, r.support_high); z('tgt', r.target_low, r.target_high);
+  if (num(r.invalidation) !== null) { const i = mk('div', 'inv'); i.style.left = x(Number(r.invalidation)); box.append(i); }
+  const p = mk('div', 'pt'); p.style.left = x(Number(r.price)); box.append(p);
+  return box;
+}
+
+function card(r) {
+  const c = mk('article', 'card' + (r.alert === 'hoch' ? ' hoch' : ''));
+  const top = mk('div', 'top'), nm = mk('div');
+  nm.append(mk('h3', 'name', r.name), mk('p', 'sub', r.ticker + ' · ' + r.sector));
+  top.append(nm, mk('span', 'badge ' + (r.bias || 'neutral'), r.bias || 'neutral'));
+  c.append(top);
+  const pr = mk('div', 'price'); pr.append(mk('span', 'px', money(r.price, r.currency)));
+  if (r.chg_note) pr.append(mk('span', 'small', r.chg_note));
+  c.append(pr);
+  if (r.price_date) c.append(mk('p', 'small', 'Kurs vom ' + dDate(r.price_date)));
+  const bar = rangeBar(r);
+  if (bar) {
+    c.append(bar);
+    const lg = mk('div', 'legend');
+    [['var(--zone)', 'Unterstützung'], ['var(--accent)', 'Ziel'], ['var(--bad)', 'Invalidierung']].forEach(([col, t]) => { const s = mk('span'), k = mk('span', 'key'); k.style.background = col; s.append(k, document.createTextNode(t)); lg.append(s); });
+    c.append(lg);
+  }
+  const act = mk('div', 'act');
+  act.append(mk('p', 'l', r.group === 'Watchlist' ? 'Technisches Signal für einen Einstieg' : 'Technisches Signal für die Position'), mk('p', 'v', r.action || r.signal || '–'));
+  const ifs = mk('ul', 'ifs');
+  [['up', '▲ Wenn stärker', r.if_up], ['wait', '■ Solange dazwischen', r.if_wait], ['down', '▼ Wenn schwächer', r.if_down]].forEach(([k, l, t]) => {
+    if (!t) return; const li = mk('li', 'if ' + k); li.append(mk('span', 'k', l), mk('span', '', t)); ifs.append(li);
+  });
+  act.append(ifs); c.append(act);
+  const dl = mk('dl');
+  [['Zielzone', zone(r.target_low, r.target_high, r.currency)], ['Unterstützung', zone(r.support_low, r.support_high, r.currency)], ['Bestätigung über', money(r.trigger, r.currency)], ['Invalidierung unter', money(r.invalidation, r.currency)]]
+    .forEach(([k, v]) => dl.append(mk('dt', '', k), mk('dd', '', v)));
+  c.append(dl, mk('hr'));
+  const para = (label, text, cls) => { if (!text) return; const p = mk('p', 'p' + (cls ? ' ' + cls : '')); p.append(mk('b', '', label), document.createTextNode(text)); c.append(p); };
+  para('Hauptszenario: ', r.wave_primary); para('Alternative: ', r.wave_alt, 'muted');
+  para(r.group === 'Watchlist' ? 'Warum interessant: ' : 'Einordnung: ', r.plan); para('News: ', r.news_brief);
+  if (r.next_event) c.append(mk('p', 'small', 'Nächster Termin: ' + r.next_event + (r.next_event_date ? ' · ' + dDate(r.next_event_date) : '')));
+  return c;
+}
+
+async function load(name) { const r = await fetch('data/' + name + '.json?v=' + Date.now()); if (!r.ok) throw new Error(name); return r.json(); }
+
+(async () => {
+  try {
+    const [stocks, news, events, alerts, run] = await Promise.all(['stocks', 'news', 'events', 'alerts', 'run'].map(load));
+    const R = run[0] || {};
+    $('headline').textContent = R.headline || '';
+    $('market').textContent = R.market || '';
+    $('meta').textContent = 'Stand: ' + (R.updated_at ? new Date(R.updated_at).toLocaleString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '–') + ' · ' + (R.kind || '') + ' · Nächstes Update: ' + (R.next_update || '–');
+    document.title = 'Portfolio Radar · ' + (alerts.filter((a) => a.level === 'hoch').length ? '⚠️ ' : '') + dDate(R.updated_at);
+
+    const al = $('alerts');
+    const act = alerts.filter((a) => a.level === 'hoch' || a.level === 'mittel').sort((a, b) => rank(a.level) - rank(b.level));
+    if (!act.length) al.append(mk('p', 'muted', 'Keine dringenden Meldungen seit dem letzten Update.'));
+    act.forEach((a) => { const d = mk('div', 'alert ' + a.level), b = mk('div'); b.append(mk('b', '', (a.level === 'hoch' ? 'Handlungsbedarf prüfen · ' : 'Beobachten · ') + a.ticker + ' '), document.createTextNode(a.text)); d.append(mk('span', 'dot'), b); al.append(d); });
+
+    const port = stocks.filter((r) => r.group === 'Portfolio');
+    $('k-high').textContent = alerts.filter((a) => a.level === 'hoch').length;
+    $('k-mid').textContent = alerts.filter((a) => a.level === 'mittel').length;
+    $('k-bull').textContent = port.filter((r) => r.bias === 'bullisch').length;
+    $('k-neu').textContent = port.filter((r) => r.bias === 'neutral').length;
+    $('k-bear').textContent = port.filter((r) => r.bias === 'bärisch').length;
+    const from = String(R.updated_at || '').slice(0, 10);
+    const nx = events.filter((e) => String(e.date) >= from).sort((a, b) => String(a.date).localeCompare(String(b.date)))[0];
+    if (nx) { $('k-date').textContent = dDate(nx.date); $('k-event').textContent = nx.ticker + ': ' + nx.event; }
+
+    port.sort((a, b) => rank(a.alert) - rank(b.alert)).forEach((r) => $('cards-portfolio').append(card(r)));
+    stocks.filter((r) => r.group === 'Watchlist').sort((a, b) => rank(a.alert) - rank(b.alert) || String(a.sector).localeCompare(String(b.sector))).forEach((r) => $('cards-watchlist').append(card(r)));
+
+    news.slice().sort((a, b) => String(b.date).localeCompare(String(a.date)) || rank(a.impact) - rank(b.impact)).forEach((n) => {
+      const li = mk('li'), m = mk('div', 'nmeta');
+      m.append(mk('span', '', dDate(n.date)), mk('span', 'chip', n.ticker), mk('span', 'chip ' + n.impact, 'Relevanz ' + n.impact), mk('span', '', n.direction));
+      const hd = mk('p', 'nh');
+      if (/^https:\/\//.test(n.url || '')) { const a = mk('a', '', n.headline); a.href = n.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; hd.append(a); } else hd.textContent = n.headline;
+      li.append(m, hd, mk('p', 'p muted', n.summary)); $('newslist').append(li);
+    });
+    events.slice().sort((a, b) => String(a.date).localeCompare(String(b.date))).forEach((e) => {
+      const li = mk('li', 'ev'), t = mk('div'); t.append(mk('span', 'chip', e.ticker), document.createTextNode(' ' + e.event));
+      li.append(mk('span', 'small', dDate(e.date)), t); $('eventlist').append(li);
+    });
+  } catch (e) {
+    $('headline').textContent = 'Daten konnten nicht geladen werden.'; $('headline').className = 'take err';
+  }
+})();
+</script>
+</body>
+</html>
