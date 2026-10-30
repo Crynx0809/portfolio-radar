@@ -168,5 +168,25 @@
   "headline": "Siemens Energy rutscht um rund 7 % ab",
   "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
   "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
+ },
+ {
+  "id": "n17",
+  "date": "2026-10-16",
+  "ticker": "RKLB",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Rocket Lab: Neutron-Erststart rutscht ins Jahr 2027",
+  "summary": "Die Verschiebung der neuen Rakete drückte die Aktie; Auftragsbestand liegt bei 2,4 Mrd $.",
+  "url": "https://www.tikr.com/de/blog/rocket-lab-stock-falls-neutron-launch-delay"
+ },
+ {
+  "id": "n18",
+  "date": "2026-10-20",
+  "ticker": "OKLO",
+  "impact": "niedrig",
+  "direction": "gemischt",
+  "headline": "Barclays senkt Oklo-Ziel auf 59 $, bleibt bei Overweight",
+  "summary": "Aktie seit dem Hoch vor einem Jahr um über 80 % gefallen; Aktienverkäufe und steigende Zinsen belasten.",
+  "url": "https://www.tikr.com/blog/oklo-has-lost-83-in-a-year-barclays-sees-117-upside"
  }
 ]
