@@ -158,5 +158,15 @@
   "headline": "Rheinmetall: Zahlen am 5.11., Berenberg auf Halten",
   "summary": "Aktie ~30 % im Minus seit Jahresbeginn; Erholung mit dem Rüstungssektor.",
   "url": "https://www.boerse-global.de/rheinmetall-aktie-quartalszahlen-am-5-november/833939"
+ },
+ {
+  "id": "n16",
+  "date": "2026-10-30",
+  "ticker": "ENR",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Siemens Energy rutscht um rund 7 % ab",
+  "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
+  "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
  }
 ]

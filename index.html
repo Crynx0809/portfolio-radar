@@ -153,6 +153,20 @@ body { margin: 0; background: #f6f5f1; font-size: 15px; line-height: 1.5; }
   try {
     const [stocks, news, events, alerts, run] = await Promise.all(['stocks', 'news', 'events', 'alerts', 'run'].map(load));
     const RUN = run[0] || {};
+    // Frischere Schlusskurse aus dem automatischen Kurs-Abruf (GitHub Actions) übernehmen
+    let prices = null;
+    try { prices = await load('prices'); } catch (e) { prices = null; }
+    if (prices && prices.stocks) {
+      stocks.forEach((r) => {
+        const q = prices.stocks[r.ticker];
+        if (!q || !q.close || String(q.date) < String(r.price_date || '')) return;
+        if (String(q.date) > String(r.price_date || '') || Number(q.close) !== Number(r.price)) {
+          const d = new Date(q.date + 'T12:00:00').toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'});
+          r.chg_note = (q.chg_pct >= 0 ? '+' : '−') + Math.abs(q.chg_pct * 100).toFixed(1).replace('.', ',') + ' % am ' + d;
+        }
+        r.price = q.close; r.price_date = q.date; r.range_low = q.low_52w; r.range_high = q.high_52w;
+      });
+    }
     const setups = stocks.map((r) => R.setupOf(r, RUN.updated_at));
     const S = new Map(setups.map((s) => [s.ticker, s]));
     const text = (name, v) => draw(name, (el) => { el.textContent = (v === null || v === undefined) ? '—' : String(v); });

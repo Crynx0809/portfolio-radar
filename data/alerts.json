@@ -26,5 +26,12 @@
   "ticker": "AMZN",
   "level": "mittel",
   "text": "Dreieck nachbörslich nach unten aufgelöst (unter 244,6 $)."
+ },
+ {
+  "id": "a4",
+  "at": "2026-10-30T14:05:00+01:00",
+  "ticker": "AMD",
+  "level": "mittel",
+  "text": "Schluss über 560 $ (566 $): Welle-5-Szenario ist aktiv. Vor den Zahlen am 3.11. nicht aufstocken, Stop-Idee 500 $."
  }
 ]
