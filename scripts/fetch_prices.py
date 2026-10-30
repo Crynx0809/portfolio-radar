@@ -13,6 +13,8 @@ TICKERS = {  # unser Ticker -> (Yahoo-Symbol, Stooq-Symbol, Währung)
     "FCX": ("FCX", "fcx.us", "USD"), "CAT": ("CAT", "cat.us", "USD"), "DTE": ("DTE.DE", "dte.de", "EUR"),
     "CCJ": ("CCJ", "ccj.us", "USD"), "AIR": ("AIR.PA", "air.fr", "EUR"), "BRK-B": ("BRK-B", "brk-b.us", "USD"),
     "RACE": ("RACE", "race.us", "USD"), "MELI": ("MELI", "meli.us", "USD"),
+    "RKLB": ("RKLB", "rklb.us", "USD"), "OKLO": ("OKLO", "oklo.us", "USD"), "HIMS": ("HIMS", "hims.us", "USD"),
+    "NU": ("NU", "nu.us", "USD"), "HOOD": ("HOOD", "hood.us", "USD"),
 }
 UA = {"User-Agent": "Mozilla/5.0 (portfolio-radar; GitHub Actions)"}
 
