@@ -1,11 +1,13 @@
 name: Kurse laden
 on:
   schedule:
-    - cron: "*/15 7-21 * * 1-5"  # alle 15 Min. von 8 bis 22:45 Uhr deutscher Zeit (Winterzeit), Mo–Fr
-    - cron: "10 22 * * 1-5"      # Nachzügler nach US-Schluss
+    - cron: "30 7 * * 1-5"   # 8:30 Uhr – morgens
+    - cron: "0 13 * * 1-5"   # 14:00 Uhr – vor dem News-Check 14:15
+    - cron: "25 16 * * 1-5"  # 17:25 Uhr – vor dem News-Check 17:45
+    - cron: "10 21 * * 1-5"  # 22:10 Uhr – abends nach US-Schluss, vor der Abendanalyse
   workflow_dispatch:
   push:
-    paths: ["scripts/fetch_prices.py", ".github/workflows/prices.yml"]
+    paths: ["scripts/fetch_prices.py", ".github/workflows/prices.yml", "data/refresh.txt"]
 permissions:
   contents: write
 concurrency: { group: prices, cancel-in-progress: false }
