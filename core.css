@@ -115,3 +115,23 @@
 .rx-example { background: var(--rx-panel); border: 1px solid var(--rx-line); border-radius: var(--rx-radius); padding: 14px 16px; margin: 10px 0; }
 .rx-example summary { cursor: pointer; font-weight: 600; }
 .rx-foot { margin-top: 40px; font-size: 12.5px; color: var(--rx-muted); max-width: 62rem; }
+
+.rx-chart { border-radius: 6px; overflow: hidden; }
+.rx-chart svg { display: block; height: 170px; }
+.rx-ch-up, .rx-ch-dn { stroke-width: 1; vector-effect: non-scaling-stroke; }
+.rx-ch-up { stroke: var(--rx-ok); } .rx-ch-dn { stroke: var(--rx-bad); }
+.rx-ch-up-b { fill: var(--rx-ok); } .rx-ch-dn-b { fill: var(--rx-bad); }
+.rx-ch-ent { fill: var(--rx-ok); opacity: .14; } .rx-ch-tgt { fill: var(--rx-accent); opacity: .14; }
+.rx-ch-stop { stroke: var(--rx-bad); stroke-width: 1.2; stroke-dasharray: 5 4; vector-effect: non-scaling-stroke; }
+.rx-ch-last { stroke: var(--rx-fg); stroke-width: 1; stroke-dasharray: 2 3; opacity: .6; vector-effect: non-scaling-stroke; }
+.rx-ch-lab { font: 11px var(--rx-sans); fill: var(--rx-muted); }
+.rx-ch-ent-t { fill: var(--rx-ok); } .rx-ch-tgt-t { fill: var(--rx-accent); } .rx-ch-stop-t { fill: var(--rx-bad); }
+.rx-live { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; font-size: 13px; }
+.rx-live-btn { font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--rx-line); background: transparent; color: var(--rx-fg); cursor: pointer; }
+.rx-live-btn:hover { border-color: var(--rx-fg); }
+.rx-live-link { color: var(--rx-muted); }
+.rx-live-frame { flex-basis: 100%; }
+.rx-live-frame iframe { width: 100%; height: 420px; border: 1px solid var(--rx-line); border-radius: 6px; }
+.rx-horizon { display: grid; gap: 2px; font-size: 13.5px; padding-left: 10px; border-left: 3px solid var(--rx-accent); }
+.rx-hz-l { font-size: 12px; color: var(--rx-muted); }
+.rx-hz-v { font-weight: 600; }

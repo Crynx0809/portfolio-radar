@@ -140,6 +140,7 @@ body { margin: 0; background: #f6f5f1; font-size: 15px; line-height: 1.5; }
 (async () => {
   const R = window.RX;
   const COLORS = [getComputedStyle(document.querySelector('.rx')).getPropertyValue('--rx-accent').trim() || '#2f5bd3', '#8a5cd0', '#8a5cd0'];
+  document.querySelector('.rx-kicker').textContent = 'Elliott-Wellen + News · Kurse live (alle 15 Min.), Analyse werktags 14:15, 17:45 und 22:30 Uhr';
   const draw = (name, fn) => document.querySelectorAll('[data-draw="' + name + '"]').forEach(fn);
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
   const show = (name) => {
@@ -153,6 +154,7 @@ body { margin: 0; background: #f6f5f1; font-size: 15px; line-height: 1.5; }
   try {
     const [stocks, news, events, alerts, run] = await Promise.all(['stocks', 'news', 'events', 'alerts', 'run'].map(load));
     const RUN = run[0] || {};
+    setTimeout(() => { if (!document.hidden) location.reload(); }, 10 * 60 * 1000); // alle 10 Min. neu laden (Live-Kurse)
     // Frischere Schlusskurse aus dem automatischen Kurs-Abruf (GitHub Actions) übernehmen
     let prices = null;
     try { prices = await load('prices'); } catch (e) { prices = null; }
@@ -193,7 +195,7 @@ body { margin: 0; background: #f6f5f1; font-size: 15px; line-height: 1.5; }
       el.replaceChildren();
       stocks.filter((r) => r.group === group)
         .sort((a, b) => R.rank(a.alert) - R.rank(b.alert) || ((R.STATUS[a.status] || {}).order - (R.STATUS[b.status] || {}).order))
-        .forEach((r) => el.append(R.card(r, S.get(r.ticker), {colors: COLORS})));
+        .forEach((r) => el.append(R.card(r, S.get(r.ticker), {colors: COLORS, embed: true, q: prices && prices.stocks ? prices.stocks[r.ticker] : null})));
     };
     draw('cards-portfolio', cards('Portfolio'));
     draw('cards-watchlist', cards('Watchlist'));

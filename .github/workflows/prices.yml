@@ -1,9 +1,8 @@
 name: Kurse laden
 on:
   schedule:
-    - cron: "5 13 * * 1-5"   # 14:05 MEZ – vor dem Mittags-Check
-    - cron: "30 16 * * 1-5"  # 17:30 MEZ – vor dem Nachmittags-Check
-    - cron: "10 21 * * 1-5"  # 22:10 MEZ – nach US-Börsenschluss
+    - cron: "*/15 7-21 * * 1-5"  # alle 15 Min. von 8 bis 22:45 Uhr deutscher Zeit (Winterzeit), Mo–Fr
+    - cron: "10 22 * * 1-5"      # Nachzügler nach US-Schluss
   workflow_dispatch:
   push:
     paths: ["scripts/fetch_prices.py", ".github/workflows/prices.yml"]

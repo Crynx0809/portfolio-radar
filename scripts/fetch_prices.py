@@ -68,7 +68,7 @@ for t, (ysym, ssym, ccy) in TICKERS.items():
         "source": src, "currency": ccy, "date": last[0], "close": last[4], "prev_close": prev[4],
         "chg_pct": round(last[4] / prev[4] - 1, 5) if prev[4] else None,
         "high_52w": max(r[2] for r in year), "low_52w": min(r[3] for r in year),
-        "live_price": live, "live_time": datetime.datetime.utcfromtimestamp(live_ts).isoformat() + "Z" if live_ts else None,
+        "live_price": live, "market_open": bool(live_ts and (time.time() - live_ts) < 1200), "live_time": datetime.datetime.utcfromtimestamp(live_ts).isoformat() + "Z" if live_ts else None,
         "ohlc": rows[-130:],  # ca. 6 Monate Tageskerzen: [Datum, Open, High, Low, Close]
     }
 os.makedirs("data", exist_ok=True)

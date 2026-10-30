@@ -33,7 +33,13 @@
   "status": "trend",
   "entry_low": 515,
   "entry_high": 530,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-04",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:AMD"
  },
  {
   "ticker": "GOOGL",
@@ -69,7 +75,13 @@
   "status": "annaeherung",
   "entry_low": 271,
   "entry_high": 280,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-01",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Anfang Nov.)",
+  "tv_symbol": "NASDAQ:GOOGL"
  },
  {
   "ticker": "AMZN",
@@ -105,7 +117,13 @@
   "status": "annaeherung",
   "entry_low": 215,
   "entry_high": 230,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 12,
+  "horizon_end": "2027-01-24",
+  "horizon_text": "Ziel in ca. 5–12 Wochen (bis ca. Ende Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "tv_symbol": "NASDAQ:AMZN"
  },
  {
   "ticker": "APLD",
@@ -141,7 +159,13 @@
   "status": "zone",
   "entry_low": 17.5,
   "entry_high": 19.5,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:APLD"
  },
  {
   "ticker": "BAC",
@@ -177,7 +201,13 @@
   "status": "annaeherung",
   "entry_low": 48,
   "entry_high": 51,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-07",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NYSE:BAC"
  },
  {
   "ticker": "FTNT",
@@ -213,7 +243,13 @@
   "status": "annaeherung",
   "entry_low": 126,
   "entry_high": 136,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-12",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Anfang Nov.)",
+  "tv_symbol": "NASDAQ:FTNT"
  },
  {
   "ticker": "MRVL",
@@ -249,14 +285,20 @@
   "status": "zone",
   "entry_low": 186,
   "entry_high": 219,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-27",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:MRVL"
  },
  {
   "ticker": "NOVO-B",
   "name": "Novo Nordisk B",
   "group": "Portfolio",
   "sector": "Pharma",
-  "price": 35.55,
+  "price": 35.52,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "+2,2 % am 30.10. (Kurs heute Mittag)",
@@ -285,14 +327,20 @@
   "status": "annaeherung",
   "entry_low": 32.5,
   "entry_high": 33.5,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 9,
+  "horizon_weeks_high": 21,
+  "horizon_end": "2027-03-29",
+  "horizon_text": "Ziel in ca. 9–21 Wochen (bis ca. Ende März)",
+  "entry_eta_text": "Einstiegszone in ca. 2–6 Wochen (bis ca. Anfang Dez.)",
+  "tv_symbol": "XETR:NOV"
  },
  {
   "ticker": "SAP",
   "name": "SAP SE",
   "group": "Portfolio",
   "sector": "Software",
-  "price": 212.5,
+  "price": 212.9,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "+1,7 % am 30.10. (Kurs heute Mittag)",
@@ -321,7 +369,13 @@
   "status": "trend",
   "entry_low": 185,
   "entry_high": 190,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-27",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "XETR:SAP"
  },
  {
   "ticker": "LLY",
@@ -357,7 +411,13 @@
   "status": "trend",
   "entry_low": 1160,
   "entry_high": 1250,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-27",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:LLY"
  },
  {
   "ticker": "ISRG",
@@ -393,7 +453,13 @@
   "status": "trend",
   "entry_low": 400,
   "entry_high": 420,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-11",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:ISRG"
  },
  {
   "ticker": "XOM",
@@ -429,14 +495,20 @@
   "status": "trend",
   "entry_low": 160,
   "entry_high": 170,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-27",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:XOM"
  },
  {
   "ticker": "RHM",
   "name": "Rheinmetall",
   "group": "Watchlist",
   "sector": "Rüstung",
-  "price": 1035.2,
+  "price": 1038.6,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "−1,2 % am 30.10. (Kurs heute Mittag)",
@@ -465,14 +537,20 @@
   "status": "boden",
   "entry_low": 1150,
   "entry_high": 1180,
-  "entry_type": "Ausbruch"
+  "entry_type": "Ausbruch",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-15",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "",
+  "tv_symbol": "XETR:RHM"
  },
  {
   "ticker": "ENR",
   "name": "Siemens Energy",
   "group": "Watchlist",
   "sector": "Energietechnik",
-  "price": 126.28,
+  "price": 126.22,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "−7,3 % am 30.10. (Kurs heute Mittag)",
@@ -501,7 +579,13 @@
   "status": "zone",
   "entry_low": 115,
   "entry_high": 131,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-06",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "XETR:ENR"
  },
  {
   "ticker": "GEV",
@@ -537,7 +621,13 @@
   "status": "annaeherung",
   "entry_low": 785,
   "entry_high": 865,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 7,
+  "horizon_end": "2026-12-18",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NYSE:GEV"
  },
  {
   "ticker": "NEE",
@@ -573,14 +663,20 @@
   "status": "boden",
   "entry_low": 75,
   "entry_high": 78,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 7,
+  "horizon_weeks_high": 16,
+  "horizon_end": "2027-02-22",
+  "horizon_text": "Ziel in ca. 7–16 Wochen (bis ca. Ende Feb.)",
+  "entry_eta_text": "Einstiegszone in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "tv_symbol": "NYSE:NEE"
  },
  {
   "ticker": "ALV",
   "name": "Allianz",
   "group": "Watchlist",
   "sector": "Versicherung",
-  "price": 437.7,
+  "price": 438.3,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "−0,4 % am 30.10. (Kurs heute Mittag)",
@@ -609,7 +705,13 @@
   "status": "trend",
   "entry_low": 410,
   "entry_high": 420,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-05",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "XETR:ALV"
  },
  {
   "ticker": "JPM",
@@ -645,7 +747,13 @@
   "status": "trend",
   "entry_low": 325,
   "entry_high": 332,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-12",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:JPM"
  },
  {
   "ticker": "V",
@@ -681,7 +789,13 @@
   "status": "trend",
   "entry_low": 375,
   "entry_high": 385,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-27",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:V"
  },
  {
   "ticker": "COST",
@@ -717,7 +831,13 @@
   "status": "boden",
   "entry_low": 900,
   "entry_high": 930,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 8,
+  "horizon_weeks_high": 19,
+  "horizon_end": "2027-03-15",
+  "horizon_text": "Ziel in ca. 8–19 Wochen (bis ca. Mitte März)",
+  "entry_eta_text": "Einstiegszone in ca. 3–7 Wochen (bis ca. Mitte Dez.)",
+  "tv_symbol": "NASDAQ:COST"
  },
  {
   "ticker": "WMT",
@@ -753,7 +873,13 @@
   "status": "trend",
   "entry_low": 112,
   "entry_high": 115,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-06",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:WMT"
  },
  {
   "ticker": "FCX",
@@ -789,7 +915,13 @@
   "status": "annaeherung",
   "entry_low": 59,
   "entry_high": 64,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-17",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NYSE:FCX"
  },
  {
   "ticker": "CAT",
@@ -825,14 +957,20 @@
   "status": "zone",
   "entry_low": 600,
   "entry_high": 652,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:CAT"
  },
  {
   "ticker": "DTE",
   "name": "Deutsche Telekom",
   "group": "Watchlist",
   "sector": "Telekom",
-  "price": 25.89,
+  "price": 25.93,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "+1,1 % am 30.10. (Kurs heute Mittag)",
@@ -861,7 +999,13 @@
   "status": "meiden",
   "entry_low": 26.5,
   "entry_high": 27,
-  "entry_type": "Ausbruch"
+  "entry_type": "Ausbruch",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-15",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "XETR:DTE"
  },
  {
   "ticker": "CCJ",
@@ -897,14 +1041,20 @@
   "status": "boden",
   "entry_low": 77,
   "entry_high": 80,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-17",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NYSE:CCJ"
  },
  {
   "ticker": "AIR",
   "name": "Airbus",
   "group": "Watchlist",
   "sector": "Luftfahrt",
-  "price": 193.08,
+  "price": 193.54,
   "currency": "EUR",
   "price_date": "2026-10-30",
   "chg_note": "−1,7 % am 30.10. (Kurs heute Mittag)",
@@ -933,7 +1083,13 @@
   "status": "annaeherung",
   "entry_low": 186,
   "entry_high": 192,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2026-12-29",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Anfang Nov.)",
+  "tv_symbol": "EURONEXT:AIR"
  },
  {
   "ticker": "BRK-B",
@@ -969,7 +1125,13 @@
   "status": "trend",
   "entry_low": 515,
   "entry_high": 525,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2026-12-27",
+  "horizon_text": "Ziel in ca. 4–8 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:BRK.B"
  },
  {
   "ticker": "RACE",
@@ -1005,7 +1167,13 @@
   "status": "trend",
   "entry_low": 380,
   "entry_high": 388,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-10",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:RACE"
  },
  {
   "ticker": "MELI",
@@ -1041,7 +1209,13 @@
   "status": "annaeherung",
   "entry_low": 1500,
   "entry_high": 1560,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 12,
+  "horizon_end": "2027-01-23",
+  "horizon_text": "Ziel in ca. 5–12 Wochen (bis ca. Ende Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Ende Nov.)",
+  "tv_symbol": "NASDAQ:MELI"
  },
  {
   "ticker": "RKLB",
@@ -1077,7 +1251,13 @@
   "status": "boden",
   "entry_low": 52,
   "entry_high": 56,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-02",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NASDAQ:RKLB"
  },
  {
   "ticker": "OKLO",
@@ -1113,7 +1293,13 @@
   "status": "meiden",
   "entry_low": 30,
   "entry_high": 32,
-  "entry_type": "Ausbruch"
+  "entry_type": "Ausbruch",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-04",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:OKLO"
  },
  {
   "ticker": "HIMS",
@@ -1149,7 +1335,13 @@
   "status": "boden",
   "entry_low": 26,
   "entry_high": 27.5,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-06",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Nov.)",
+  "tv_symbol": "NYSE:HIMS"
  },
  {
   "ticker": "NU",
@@ -1185,7 +1377,13 @@
   "status": "zone",
   "entry_low": 11.4,
   "entry_high": 12.1,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-11-29",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NYSE:NU"
  },
  {
   "ticker": "HOOD",
@@ -1221,6 +1419,12 @@
   "status": "zone",
   "entry_low": 82,
   "entry_high": 92,
-  "entry_type": "Rücksetzer"
+  "entry_type": "Rücksetzer",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": "",
+  "tv_symbol": "NASDAQ:HOOD"
  }
 ]

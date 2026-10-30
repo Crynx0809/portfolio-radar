@@ -65,6 +65,67 @@
     return ul;
   }
 
+
+  // Kerzenchart der letzten ~90 Handelstage mit Einstiegszone, Ziel, Stop
+  function chart(r, q, opts) {
+    const wrap = mk('div', 'rx-chart');
+    if (!q || !q.ohlc || !q.ohlc.length) return null;
+    const rows = (typeof q.ohlc === 'string' ? JSON.parse(q.ohlc) : q.ohlc).slice(-90);
+    const W = 600, H = 170, padL = 4, padR = 52, padT = 8, padB = 16;
+    const lv = [r.entry_low, r.entry_high, r.target_low, r.target_high, r.stop].map(num).filter((v) => v !== null);
+    let lo = Math.min(...rows.map((x) => x[3]), ...lv), hi = Math.max(...rows.map((x) => x[2]), ...lv);
+    const pad = (hi - lo) * 0.05; lo -= pad; hi += pad;
+    const y = (v) => padT + (hi - v) / (hi - lo) * (H - padT - padB);
+    const bw = (W - padL - padR) / rows.length;
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('width', '100%'); svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Kursverlauf ' + r.name + ' mit Einstiegszone, Ziel und Stop');
+    const el = (tag, at) => { const e = document.createElementNS(NS, tag); Object.entries(at).forEach(([k, v]) => e.setAttribute(k, v)); svg.append(e); return e; };
+    const band = (a, b, cls, label) => {
+      if (num(a) === null || num(b) === null) return;
+      el('rect', {x: padL, y: y(Math.max(a, b)), width: W - padL - padR, height: Math.max(2, Math.abs(y(a) - y(b))), class: cls});
+      const t = el('text', {x: W - padR + 4, y: y((a + b) / 2) + 4, class: 'rx-ch-lab ' + cls + '-t'}); t.textContent = label;
+    };
+    band(Number(r.target_low), Number(r.target_high), 'rx-ch-tgt', 'Ziel');
+    band(Number(r.entry_low), Number(r.entry_high), 'rx-ch-ent', 'Einstieg');
+    if (num(r.stop) !== null) { el('line', {x1: padL, x2: W - padR, y1: y(r.stop), y2: y(r.stop), class: 'rx-ch-stop'}); const t = el('text', {x: W - padR + 4, y: y(r.stop) + 4, class: 'rx-ch-lab rx-ch-stop-t'}); t.textContent = 'Stop'; }
+    rows.forEach((c, i) => {
+      const [d, o, h, l, cl] = c, x = padL + i * bw + bw / 2, up = cl >= o;
+      el('line', {x1: x, x2: x, y1: y(h), y2: y(l), class: up ? 'rx-ch-up' : 'rx-ch-dn'});
+      el('rect', {x: x - Math.max(0.6, bw * 0.32), y: y(Math.max(o, cl)), width: Math.max(1.2, bw * 0.64), height: Math.max(0.8, Math.abs(y(o) - y(cl))), class: up ? 'rx-ch-up-b' : 'rx-ch-dn-b'});
+    });
+    const last = rows[rows.length - 1][4];
+    el('line', {x1: padL, x2: W - padR, y1: y(last), y2: y(last), class: 'rx-ch-last'});
+    const f = el('text', {x: padL + 2, y: H - 3, class: 'rx-ch-lab'}); f.textContent = dDate(rows[0][0]);
+    const g = el('text', {x: W - padR - 2, y: H - 3, class: 'rx-ch-lab', 'text-anchor': 'end'}); g.textContent = dDate(rows[rows.length - 1][0]);
+    wrap.append(svg);
+    return wrap;
+  }
+
+  function liveLinks(r, opts) {
+    if (!r.tv_symbol) return null;
+    const box = mk('div', 'rx-live');
+    const a = mk('a', 'rx-live-link', 'Live-Chart auf TradingView ↗');
+    a.href = 'https://www.tradingview.com/chart/?symbol=' + encodeURIComponent(r.tv_symbol); a.target = '_blank'; a.rel = 'noopener noreferrer';
+    if (opts.embed) {
+      const b = mk('button', 'rx-live-btn', '▶ Live-Chart hier öffnen'); b.type = 'button';
+      const frameBox = mk('div', 'rx-live-frame'); frameBox.hidden = true;
+      b.addEventListener('click', () => {
+        if (!frameBox.firstChild) {
+          const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const f = document.createElement('iframe');
+          f.src = 'https://s.tradingview.com/widgetembed/?symbol=' + encodeURIComponent(r.tv_symbol) + '&interval=D&hidesidetoolbar=0&symboledit=0&saveimage=0&withdateranges=1&theme=' + (dark ? 'dark' : 'light') + '&style=1&timezone=Europe%2FBerlin&locale=de';
+          f.loading = 'lazy'; f.title = 'TradingView Live-Chart ' + r.name; f.setAttribute('allowtransparency', 'true');
+          frameBox.append(f);
+        }
+        frameBox.hidden = !frameBox.hidden; b.textContent = frameBox.hidden ? '▶ Live-Chart hier öffnen' : '✕ Live-Chart schließen';
+      });
+      box.append(b, a, frameBox);
+    } else box.append(a);
+    return box;
+  }
+
   function card(r, s, opts) {
     const colors = opts.colors;
     const c = mk('article', 'rx-card' + (r.alert === 'hoch' ? ' rx-hot' : ''));
@@ -79,7 +140,8 @@
     if (r.chg_note) pr.append(mk('span', 'rx-small', r.chg_note));
     c.append(pr);
     const meta = [];
-    if (r.price_date) meta.push('Kurs vom ' + dDate(r.price_date));
+    if (opts.q && opts.q.market_open && opts.q.live_time) meta.push('● Live-Kurs ' + new Date(opts.q.live_time).toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'}) + ' Uhr');
+    else if (r.price_date) meta.push('Schlusskurs vom ' + dDate(r.price_date));
     if (opts.weight !== undefined && num(r.position_eur) !== null) meta.push('Position ' + fmtN(Number(r.position_eur), 2) + ' € (' + fmtN(opts.weight * 100, 1) + ' % vom Depot)');
     const m = mk('p', 'rx-small', meta.join(' · '));
     if (s && s.days_to_event !== null && s.days_to_event >= 0 && s.days_to_event <= 14) {
@@ -100,6 +162,15 @@
       }
     }
 
+    const ch = chart(r, opts.q, opts); if (ch) c.append(ch);
+    const ll = liveLinks(r, opts); if (ll) c.append(ll);
+    if (r.horizon_text || r.entry_eta_text) {
+      const hz = mk('div', 'rx-horizon');
+      hz.append(mk('span', 'rx-hz-l', 'Erwarteter Zeitraum'));
+      if (r.entry_eta_text) hz.append(mk('span', '', r.entry_eta_text));
+      if (r.horizon_text) hz.append(mk('span', 'rx-hz-v', r.horizon_text));
+      c.append(hz);
+    }
     const act = mk('div', 'rx-act');
     act.append(mk('p', 'rx-act-l', r.group === 'Portfolio' ? 'Für deine Position' : 'Einstieg'), mk('p', 'rx-act-v', r.action || '–'));
     c.append(act);
