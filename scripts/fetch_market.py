@@ -31,7 +31,8 @@ def yahoo(sym, rng="2y", interval="1d"):
     out = []
     for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]):
         if c is not None:
-            out.append((datetime.datetime.utcfromtimestamp(t + off).strftime("%Y-%m-%d"), float(c)))
+            ts = t + off if interval == "1d" else t + 43200  # Monatskerzen: Zeitstempel = Monatsanfang, nicht verschieben
+            out.append((datetime.datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d"), float(c)))
     # doppelte Tage (Live-Kerze) zusammenfassen
     ded = {}
     for day, c in out:
@@ -169,18 +170,21 @@ for t, (ysym, _, ccy) in TICKERS.items():
                         k[lab] = rnd((last / o[-1 - n][4]) / (b1 / b0) - 1)
     # Saisonalität (10 Jahre Monatsdaten) – nur einmal am Tag neu
     prev = old.get(t, {})
-    if prev.get("season_date") == NOW.strftime("%Y-%m-%d") and prev.get("season"):
-        k["season"] = prev["season"]; k["season_date"] = prev["season_date"]; k["sma200_gap"] = prev.get("sma200_gap")
+    if prev.get("season_date") == NOW.strftime("%Y-%m-%d") and prev.get("season") and prev.get("season_v") == 2:
+        k["season"] = prev["season"]; k["season_date"] = prev["season_date"]; k["season_v"] = 2; k["sma200_gap"] = prev.get("sma200_gap")
     else:
         try:
             m = yahoo(ysym, "10y", "1mo")
             rets = {}
+            cur_m = NOW.strftime("%Y-%m")
             for i in range(1, len(m)):
+                if m[i][0][:7] == cur_m:  # laufender Monat ist unvollständig
+                    continue
                 mm = int(m[i][0][5:7])
                 rets.setdefault(mm, []).append(m[i][1] / m[i - 1][1] - 1)
             k["season"] = {str(mm): {"avg": rnd(statistics.mean(v), 4), "up": rnd(sum(x > 0 for x in v) / len(v), 3), "n": len(v)}
                            for mm, v in rets.items()}
-            k["season_date"] = NOW.strftime("%Y-%m-%d")
+            k["season_date"] = NOW.strftime("%Y-%m-%d"); k["season_v"] = 2
             d = yahoo(ysym, "2y")
             v = [x for _, x in d]
             s200 = sma(v, 200)

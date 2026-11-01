@@ -158,7 +158,7 @@ def stats(rows):
     rs = [r["r"] for r in closed if r.get("r") is not None]
     pos, neg = sum(x for x in rs if x > 0), -sum(x for x in rs if x < 0)
     filled = [r for r in rows if r.get("fill") is not None]
-    eligible = [r for r in rows if r["outcome"] not in ("wartet",)]
+    eligible = rows
     mean = lambda v: round(statistics.mean(v), 3) if v else None  # noqa
     dirs = [r for r in rows if r.get("ret_20d") is not None and r.get("bias") in ("bullisch", "bärisch")]
     dirs5 = [r for r in rows if r.get("ret_5d") is not None and r.get("bias") in ("bullisch", "bärisch")]

@@ -15,7 +15,11 @@ Analyse-Horizont: einige Wochen bis max. 6 Monate, Grundlage Tageskerzen.
 - **(B) Website** (öffentlich, ohne Euro-Beträge): Repo `Crynx0809/portfolio-radar` (add_repo, access `push`; dann
   `git clone --depth 1 https://github.com/Crynx0809/portfolio-radar /home/claude/portfolio-radar`).
   Vor dem Schreiben `git pull`. Dann `python3 scripts/export_public.py <Ordner mit stocks/news/events/alerts/run.json>`,
-  committen, pushen. index.html, app.js, app.css, logo.svg, data/prices.json und den Workflow nicht ändern.
+  committen, pushen. index.html, app.js, app.css, logo.svg, data/prices.json, data/market.json, data/kpis.json, data/signals.json,
+  data/track.json, die Skripte in scripts/ (außer TICKERS/TV in fetch_prices.py für neue Werte) und den Workflow nicht ändern.
+  market.json/kpis.json (Markt-Cockpit, Kennzahlen) und signals.json/track.json (Trefferquote) schreibt die Action selbst.
+  In der Abendanalyse darf data/track.json gelesen werden: auffällige Muster (z. B. Stops in einer Phase/Branche gehäuft) kurz in der
+  Zusammenfassung nennen, aber Zonen deswegen nicht rückwirkend schönrechnen.
   Die Website zeigt unter „News“ nur Meldungen mit impact „hoch“.
 
 ## Kurse – nur aus data/prices.json (TradingView)

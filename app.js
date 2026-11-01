@@ -25,14 +25,15 @@
   const dShort = (s) => { const d = new Date(String(s).slice(0, 10) + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'}); };
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
 
-  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '';
+  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null;
   const REPO = 'Crynx0809/portfolio-radar';
 
   /* ---------- Navigation ---------- */
-  const PAGES = ['aktien', 'news', 'ausblick'];
+  const PAGES = ['aktien', 'news', 'ausblick', 'analyse'];
   function show(page, first) {
     if (!PAGES.includes(page)) page = 'aktien';
     PAGES.forEach((p) => { $('#' + p).hidden = p !== page; });
+    document.body.dataset.page = page;
     document.querySelectorAll('.tabbar a').forEach((a) => a.classList.toggle('on', a.dataset.page === page));
     if (!first) window.scrollTo({top: 0});
     anim((g) => g.from('#' + page + ' > *', {y: 14, opacity: 0, duration: .45, stagger: .05, ease: 'power2.out', clearProps: 'all'}));
@@ -117,6 +118,7 @@
     }).join('') || (qy ? `<li class="empty">„${esc(SEARCH.trim())}“ ist noch nicht dabei.<br><button class="wish-btn" id="wishFromSearch">＋ „${esc(SEARCH.trim())}“ wünschen</button></li>` : '<li class="empty">Keine Werte.</li>');
     const wf = $('#wishFromSearch'); if (wf) wf.onclick = () => openWish(SEARCH.trim());
     ul.querySelectorAll('.row').forEach((li) => {
+      li.classList.toggle('sel', li.dataset.t === SEL);
       const go = () => openSheet(li.dataset.t);
       li.addEventListener('click', go);
       li.addEventListener('keydown', (e) => { if (e.key === 'Enter') go(); });
@@ -227,15 +229,16 @@
     if (!(risk > 0) || r.target_low == null) return null;
     return (r.target_low - mid) / risk;
   }
-  function openSheet(t) {
-    const r = STOCKS.find((x) => x.ticker === t); if (!r) return;
+  const isDesk = () => matchMedia('(min-width: 1180px)').matches;
+  let SEL = null;
+  function detailHTML(r, pid) {
     const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
     const q = PRICES[r.ticker] || {};
     const k = crv(r);
     const auto = !(Array.isArray(r.waves) && r.waves.length);
-    $('#sheetBody').innerHTML = `
+    return `
       <div class="sh-head"><div><div class="t">${esc(r.ticker)}</div><div class="n">${esc(r.name)} · ${esc(r.sector || '')}</div></div>
-        <div class="sh-price"><div class="p" id="shP">${money(r.price, r)}</div>
+        <div class="sh-price"><div class="p" id="${pid}">${money(r.price, r)}</div>
         <div class="c ${q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct != null ? pct(q.chg_pct) : esc(r.chg_note || '')}</div></div></div>
       <div class="sh-pills"><span class="pill" style="--sc:${s.c}">${s.l}</span>
         ${r.alert === 'hoch' ? '<span class="pill" style="--sc:var(--down)">Dringend</span>' : r.alert === 'mittel' ? '<span class="pill" style="--sc:var(--warn)">Beobachten</span>' : ''}
@@ -255,25 +258,45 @@
         <div><small>Chance : Risiko</small><b style="color:${k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)'}">${k == null ? '—' : '1 : ' + num(k, 1)}</b></div>
       </div>
       <div class="when">${r.entry_eta_text && r.status !== 'zone' && r.status !== 'trend' ? `<span>${esc(r.entry_eta_text)}</span>` : ''}${r.horizon_text ? `<span>${esc(r.horizon_text)}</span>` : ''}${r.next_event ? `<span>${esc(r.next_event)}${r.next_event_date ? ' · ' + dShort(r.next_event_date) : ''}</span>` : ''}</div>
+      ${kpiHTML(r)}
       <details class="more"><summary>Wellenanalyse</summary>
         <p><b>Hauptszenario</b>${esc(r.wave_primary)}</p><p><b>Alternative</b>${esc(r.wave_alt)}</p>
         <p><b>Bestätigung / Invalidierung</b>Über ${money(r.trigger, r)} bestätigt · unter ${money(r.invalidation, r)} ist die Zählung falsch.</p></details>
       ${r.news_brief ? `<details class="more"><summary>Aktuelle Lage</summary><p>${esc(r.news_brief)}</p></details>` : ''}
       <p class="foot">Technisches Szenario, keine Anlageberatung.</p>`;
+  }
+  function animateDetail(box, r, pid, delay) {
+    anim((g) => {
+      const w = box.querySelector('.wave'), p = box.querySelector('.proj');
+      if (w) { const L = w.getTotalLength(); g.fromTo(w, {strokeDasharray: L, strokeDashoffset: L}, {strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', delay: delay}); }
+      if (p) g.from(p, {opacity: 0, duration: .5, delay: delay + .9});
+      g.from(box.querySelectorAll('.cdl > *'), {opacity: 0, duration: .02, stagger: .004, delay: delay - .1});
+      g.from(box.querySelectorAll('.do, .if, .levels > div, .kpi-grid > div'), {y: 12, opacity: 0, duration: .4, stagger: .03, delay: delay + .05, ease: 'power2.out', clearProps: 'transform,opacity'});
+      const el = document.getElementById(pid), o = {v: r.price * .97};
+      if (el) g.to(o, {v: r.price, duration: .8, ease: 'power2.out', onUpdate: () => { el.textContent = money(o.v, r); }});
+    });
+  }
+  function openSheet(t) {
+    const r = STOCKS.find((x) => x.ticker === t); if (!r) return;
+    SEL = r.ticker;
+    document.querySelectorAll('#list .row').forEach((li) => li.classList.toggle('sel', li.dataset.t === SEL));
+    if (isDesk() && $('#detail')) {
+      const box = $('#detail');
+      box.innerHTML = detailHTML(r, 'dtP'); box.scrollTop = 0;
+      anim((g) => g.from(box, {opacity: 0, x: 16, duration: .35, ease: 'power2.out', clearProps: 'all'}));
+      animateDetail(box, r, 'dtP', .15);
+      history.replaceState(null, '', '#aktien/' + r.ticker);
+      return;
+    }
+    $('#sheetBody').innerHTML = detailHTML(r, 'shP');
     const sh = $('#sheet'), bg = $('#sheetBg');
     sh.hidden = false; bg.hidden = false; sh.scrollTop = 0;
     document.body.style.overflow = 'hidden';
     anim((g) => {
       g.fromTo(bg, {opacity: 0}, {opacity: 1, duration: .25});
       g.fromTo(sh, {y: 60, opacity: 0}, {y: 0, opacity: 1, duration: .45, ease: 'power3.out'});
-      const w = sh.querySelector('.wave'), p = sh.querySelector('.proj');
-      if (w) { const L = w.getTotalLength(); g.fromTo(w, {strokeDasharray: L, strokeDashoffset: L}, {strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', delay: .2}); }
-      if (p) g.from(p, {opacity: 0, duration: .5, delay: 1.1});
-      g.from(sh.querySelectorAll('.cdl > *'), {opacity: 0, duration: .02, stagger: .004, delay: .1});
-      g.from(sh.querySelectorAll('.do, .if, .levels > div'), {y: 12, opacity: 0, duration: .4, stagger: .05, delay: .25, ease: 'power2.out', clearProps: 'transform,opacity'});
-      const el = $('#shP'), o = {v: r.price * .97};
-      g.to(o, {v: r.price, duration: .8, ease: 'power2.out', onUpdate: () => { el.textContent = money(o.v, r); }});
     });
+    animateDetail(sh, r, 'shP', .2);
     history.replaceState(null, '', '#aktien/' + r.ticker);
   }
   function closeSheet() {
@@ -310,12 +333,175 @@
       .map((a) => `<li data-t="${esc(a.ticker)}" style="--lc:${lv(a.level)}"><span class="tk">${esc(a.ticker)}</span><span class="lv">${a.level === 'hoch' ? 'Dringend' : 'Beobachten'}</span><div class="x">${esc(a.text)}</div></li>`).join('')
       || '<li class="empty">Keine Meldungen.</li>';
     $('#alertList').querySelectorAll('li[data-t]').forEach((li) => li.addEventListener('click', () => {
-      if (STOCKS.some((r) => r.ticker === li.dataset.t)) { location.hash = 'aktien'; setTimeout(() => openSheet(li.dataset.t), 50); }
+      if (STOCKS.some((r) => r.ticker === li.dataset.t)) { location.hash = 'aktien'; setTimeout(() => openSheet(li.dataset.t), 60); }
     }));
     const today = new Date().toISOString().slice(0, 10);
     $('#eventList').innerHTML = events.filter((e) => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 15)
       .map((e) => `<li><span class="d">${dShort(e.date)}</span><span class="e"><span class="tk">${esc(e.ticker)}</span> ${esc(e.event)}</span></li>`).join('')
       || '<li class="empty">Keine Termine.</li>';
+  }
+
+  /* ---------- Kennzahlen je Aktie ---------- */
+  const pc = (x, d) => x == null || isNaN(x) ? '—' : (x >= 0 ? '+' : '−') + Math.abs(x * 100).toFixed(d == null ? 1 : d).replace('.', ',') + ' %';
+  const cls = (x) => x == null ? '' : x >= 0 ? 'up' : 'down';
+  const MON = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+  const big = (v) => v == null ? '—' : v >= 1e12 ? num(v / 1e12, 2) + ' Bio.' : v >= 1e9 ? num(v / 1e9, 1) + ' Mrd.' : num(v / 1e6, 0) + ' Mio.';
+  function kpiHTML(r) {
+    const k = KPIS[r.ticker]; if (!k) return '';
+    const bm = r.currency === 'EUR' ? 'DAX' : 'S&P 500';
+    const cell = (label, val, c, hint) => `<div${hint ? ` title="${esc(hint)}"` : ''}><small>${label}</small><b class="${c || ''}">${val}</b></div>`;
+    let h = '<details class="more kpis" open><summary>Kennzahlen</summary><h4>Kursverlauf</h4><div class="kpi-grid">';
+    h += cell('1 Woche', pc(k.perf_1w), cls(k.perf_1w)) + cell('1 Monat', pc(k.perf_1m), cls(k.perf_1m)) + cell('3 Monate', pc(k.perf_3m), cls(k.perf_3m));
+    h += cell('vs. ' + bm + ' (1 M)', pc(k.rs_1m), cls(k.rs_1m), 'Relative Stärke: besser (+) oder schlechter (−) als der Index')
+       + cell('vs. ' + bm + ' (3 M)', pc(k.rs_3m), cls(k.rs_3m), 'Relative Stärke über 3 Monate');
+    h += cell('Abst. 50-Tage-Linie', pc(k.vs_sma50), cls(k.vs_sma50)) + cell('Abst. 200-Tage-Linie', pc(k.sma200_gap), cls(k.sma200_gap), 'Über der 200-Tage-Linie = langfristiger Aufwärtstrend');
+    h += cell('Abst. 52-W-Hoch', pc(k.from_high_52w), 'down') + cell('Schwankung pro Tag', k.atr_pct != null ? num(k.atr_pct * 100, 1) + ' %' : '—', '', 'Durchschnittliche Tagesspanne (ATR) – Maß für das Risiko');
+    h += '</div>';
+    const tv = (f) => k['tv_' + f];
+    const val = [];
+    if (tv('market_cap_basic') != null) val.push(cell('Börsenwert', big(tv('market_cap_basic')) + ' ' + cur(r)));
+    if (tv('price_earnings_ttm') != null) val.push(cell('KGV', num(tv('price_earnings_ttm'), 1), '', 'Kurs-Gewinn-Verhältnis (letzte 12 Monate)'));
+    if (tv('price_earnings_growth_ttm') != null) val.push(cell('PEG', num(tv('price_earnings_growth_ttm'), 2), '', 'KGV geteilt durch Gewinnwachstum – unter 1 gilt als günstig'));
+    if (tv('price_sales_current') != null) val.push(cell('KUV', num(tv('price_sales_current'), 1), '', 'Kurs-Umsatz-Verhältnis'));
+    if (tv('price_book_fq') != null) val.push(cell('KBV', num(tv('price_book_fq'), 1), '', 'Kurs-Buchwert-Verhältnis'));
+    const dy = tv('dividends_yield_current') != null ? tv('dividends_yield_current') : tv('dividend_yield_recent');
+    if (dy != null) val.push(cell('Dividendenrendite', num(dy, 2) + ' %'));
+    if (tv('total_revenue_yoy_growth_ttm') != null) val.push(cell('Umsatzwachstum', pc(tv('total_revenue_yoy_growth_ttm') / 100), cls(tv('total_revenue_yoy_growth_ttm'))));
+    if (tv('earnings_per_share_diluted_yoy_growth_ttm') != null) val.push(cell('Gewinnwachstum', pc(tv('earnings_per_share_diluted_yoy_growth_ttm') / 100), cls(tv('earnings_per_share_diluted_yoy_growth_ttm'))));
+    if (tv('net_margin_ttm') != null) val.push(cell('Nettomarge', num(tv('net_margin_ttm'), 1) + ' %'));
+    if (tv('beta_1_year') != null) val.push(cell('Beta', num(tv('beta_1_year'), 2), '', 'Schwankung im Vergleich zum Markt (1 = wie der Markt)'));
+    if (tv('Recommend_All') != null) {
+      const v = tv('Recommend_All'), t = v > .5 ? 'Stark kaufen' : v > .1 ? 'Kaufen' : v >= -.1 ? 'Neutral' : v >= -.5 ? 'Verkaufen' : 'Stark verkaufen';
+      val.push(cell('TradingView-Technik', t, v > .1 ? 'up' : v < -.1 ? 'down' : '', 'Sammelsignal aus gleitenden Durchschnitten und Oszillatoren'));
+    }
+    if (tv('earnings_release_next_date')) val.push(cell('Nächste Zahlen', new Date(tv('earnings_release_next_date') * 1000).toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit', year: '2-digit'})));
+    if (val.length) h += '<h4>Bewertung &amp; Fundamentaldaten</h4><div class="kpi-grid">' + val.join('') + '</div>';
+    if (k.season) {
+      const m = new Date().getMonth() + 1, cm = k.season[String(m)];
+      const vals = Object.values(k.season).map((x) => Math.abs(x.avg)); const mx = Math.max(...vals, 0.01);
+      h += `<h4>Saisonalität (10 Jahre)</h4><p class="kpi-note">${cm ? `Im ${MON[m - 1]} im Schnitt <b class="${cls(cm.avg)}">${pc(cm.avg)}</b>, in ${Math.round(cm.up * cm.n)} von ${cm.n} Jahren gestiegen.` : ''}</p><div class="season">`;
+      for (let i = 1; i <= 12; i++) {
+        const x = k.season[String(i)]; const v = x ? x.avg : 0; const hh = Math.round(Math.abs(v) / mx * 34);
+        h += `<div class="${i === m ? 'now' : ''}" title="${MON[i - 1]}: ${pc(v)}"><span class="${v >= 0 ? 'pos' : 'neg'}" style="height:${Math.max(2, hh)}px"></span><em>${MON[i - 1][0]}</em></div>`;
+      }
+      h += '</div>';
+    }
+    const sig = TRACK && TRACK.signals ? TRACK.signals.filter((x) => x.ticker === r.ticker) : [];
+    if (sig.length) {
+      h += '<h4>Bisherige Signale</h4><ul class="sig-mini">' + sig.slice(0, 5).map((x) => `<li><span>${dShort(x.issued_day)}</span><span>${esc((STATUS[x.status] || {l: x.status}).l)}</span><span class="oc oc-${x.outcome}">${OUT[x.outcome] || x.outcome}</span><span class="${cls(x.r)}">${x.r != null ? num(x.r, 2) + ' R' : ''}</span></li>`).join('') + '</ul>';
+    }
+    return h + '</details>';
+  }
+
+  /* ---------- Markt-Cockpit ---------- */
+  function spark(v, w, h) {
+    if (!v || v.length < 2) return '';
+    const mn = Math.min(...v), mx = Math.max(...v), sx = w / (v.length - 1), sy = (h - 4) / ((mx - mn) || 1);
+    const pts = v.map((x, i) => (i * sx).toFixed(1) + ',' + (h - 2 - (x - mn) * sy).toFixed(1)).join(' ');
+    const up = v[v.length - 1] >= v[0];
+    return `<svg viewBox="0 0 ${w} ${h}" width="${w}" height="${h}"><polyline points="${pts}" fill="none" stroke="${up ? '#2fd08a' : '#ff5d6c'}" stroke-width="1.6" stroke-linejoin="round"/></svg>`;
+  }
+  function cockpitHTML(events) {
+    const M = MARKET; if (!M || !M.items) return '<p class="empty">Marktdaten werden geladen, sobald der nächste Kursabruf gelaufen ist.</p>';
+    const it = (k) => M.items.find((x) => x.key === k);
+    let h = '';
+    // Stimmung
+    const vix = it('VIX'), fg = M.fear_greed, spx = it('SPX');
+    const vixL = !vix ? '' : vix.last < 15 ? 'ruhig' : vix.last < 20 ? 'normal' : vix.last < 30 ? 'nervös' : 'Panik';
+    h += '<div class="ck-card"><h3>Stimmung</h3>';
+    if (fg) {
+      const lab = fg.score < 25 ? 'Extreme Angst' : fg.score < 45 ? 'Angst' : fg.score <= 55 ? 'Neutral' : fg.score <= 75 ? 'Gier' : 'Extreme Gier';
+      h += `<div class="gauge"><div class="gauge-bar"><i style="left:${fg.score}%"></i></div><div class="gauge-l"><b>${fg.score}</b> ${lab}<small>Fear &amp; Greed · vor 1 Woche ${fg.prev_week}</small></div></div>`;
+    }
+    h += '<div class="ck-mini">';
+    if (vix) h += `<div><small>VIX (Angst)</small><b>${num(vix.last, 1)}</b><em>${vixL}</em></div>`;
+    if (spx && spx.above_200 != null) h += `<div><small>Trend S&amp;P 500</small><b class="${spx.above_200 ? 'up' : 'down'}">${spx.above_200 ? 'über' : 'unter'}</b><em>200-Tage-Linie</em></div>`;
+    if (M.breadth_50 != null) h += `<div><small>Marktbreite</small><b>${Math.round(M.breadth_50 * 100)} %</b><em>unserer Werte über 50-T-Linie</em></div>`;
+    h += '</div></div>';
+    // Indizes
+    const row = (x, digits) => `<div class="ck-row"><div><b>${esc(x.name)}</b><small>1M ${pc(x.chg_1m)} · Jahr ${pc(x.chg_ytd)}</small></div>${spark(x.spark, 56, 24)}<div class="r"><b>${num(x.last, digits)}</b><small class="${cls(x.chg_1d)}">${pc(x.chg_1d)}</small></div></div>`;
+    h += '<div class="ck-card"><h3>Indizes</h3>' + ['SPX', 'NDX', 'DAX', 'STOXX'].map(it).filter(Boolean).map((x) => row(x, 0)).join('') + '</div>';
+    h += '<div class="ck-card"><h3>Zinsen, Währung, Rohstoffe</h3>' + ['EURUSD', 'TNX', 'BRENT', 'GOLD', 'BTC'].map(it).filter(Boolean)
+      .map((x) => row(x, x.key === 'EURUSD' ? 4 : x.key === 'TNX' ? 2 : x.last > 1000 ? 0 : 1)).join('') + '<p class="kpi-note">Steigt EUR/USD, verlieren US-Aktien in Euro an Wert.</p></div>';
+    // Sektoren
+    if (M.sectors && M.sectors.length) {
+      const sec = M.sectors.slice().sort((a, b) => (b.chg_1w || 0) - (a.chg_1w || 0));
+      const col = (v) => { const a = Math.min(1, Math.abs(v || 0) / 0.05); return v >= 0 ? `rgba(47,208,138,${.12 + a * .55})` : `rgba(255,93,108,${.12 + a * .55})`; };
+      h += '<div class="ck-card"><h3>Sektoren (USA, 1 Woche)</h3><div class="heat">' + sec.map((x) => `<div style="background:${col(x.chg_1w)}" title="1 Monat ${pc(x.chg_1m)} · 3 Monate ${pc(x.chg_3m)}"><b>${esc(x.name)}</b><span>${pc(x.chg_1w)}</span></div>`).join('') + '</div></div>';
+    }
+    // Termine nächste 7 Tage
+    const today = new Date().toISOString().slice(0, 10), wk = new Date(Date.now() + 8 * 864e5).toISOString().slice(0, 10);
+    const ev = (events || []).filter((e) => e.date >= today && e.date <= wk).sort((a, b) => a.date.localeCompare(b.date));
+    if (ev.length) h += '<div class="ck-card"><h3>Diese Woche</h3><ul class="ck-ev">' + ev.map((e) => `<li><span>${dShort(e.date)}</span><span class="tk">${esc(e.ticker)}</span><span>${esc(e.event)}</span></li>`).join('') + '</ul></div>';
+    h += `<p class="foot">Marktdaten: Yahoo Finance${fg ? ', CNN' : ''} · ${M.generated_at ? new Date(M.generated_at).toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : ''}</p>`;
+    return h;
+  }
+  function renderCockpit(events) {
+    const html = cockpitHTML(events);
+    if ($('#cockpit')) $('#cockpit').innerHTML = html;
+    if ($('#cockpitM')) $('#cockpitM').innerHTML = html;
+  }
+
+  /* ---------- Analyse / Trefferquote ---------- */
+  const OUT = {ziel: 'Ziel erreicht', stop: 'Stop', laeuft: 'läuft', wartet: 'wartet auf Einstieg', ersetzt: 'ersetzt', ersetzt_ohne_einstieg: 'ersetzt (kein Einstieg)', abgelaufen: 'abgelaufen', nicht_ausgeloest: 'nicht ausgelöst'};
+  const GRP = {status: 'Nach Phase beim Signal', group: 'Depot vs. Watchlist', entry_type: 'Nach Einstiegsart', bias: 'Nach Einschätzung', crv: 'Nach geplantem Chance:Risiko', sector: 'Nach Branche'};
+  function renderAnalyse() {
+    const box = $('#analyseBody'); if (!box) return;
+    const T = TRACK;
+    if (!T || !T.summary) { box.innerHTML = '<p class="empty">Die Auswertung erscheint nach dem nächsten Kursabruf.</p>'; return; }
+    const S = T.summary;
+    const pr = (x) => x == null ? '—' : Math.round(x * 100) + ' %';
+    const r2 = (x) => x == null ? '—' : num(x, 2) + ' R';
+    const tile = (l, v, c, hint, sub) => `<div class="kpi"${hint ? ` title="${esc(hint)}"` : ''}><small>${l}</small><b class="${c || ''}">${v}</b>${sub ? `<em>${sub}</em>` : ''}</div>`;
+    const few = (S.wins + S.losses) < 20;
+    let h = `<p class="sub">Jede Einschätzung wird seit dem ${dShort(T.since)}${T.since.slice(0, 4)} gespeichert und mit den echten Kursen nachgespielt: Einstieg, sobald der Kurs die Zone berührt, dann Stop oder Ziel – was zuerst kommt. <b>R</b> = Gewinn oder Verlust in Vielfachen des Risikos (1 R = Abstand Einstieg bis Stop).</p>`;
+    if (few) h += `<div class="warnbox">Noch wenig Daten: ${S.wins + S.losses} abgeschlossene Trades. Aussagekräftig wird die Trefferquote ab etwa 20–30 Trades – bis dahin sind die Zahlen ein erster Eindruck.</div>`;
+    h += '<h2>Ergebnis</h2><div class="kpis-big">' +
+      tile('Trefferquote', pr(S.hit_rate), S.hit_rate == null ? '' : S.hit_rate >= .4 ? 'up' : 'down', 'Ziel erreicht ÷ (Ziel + Stop). Bei 1:2-Chance reichen schon gut 33 %.', `${S.wins} Ziele · ${S.losses} Stops`) +
+      tile('Ø Ergebnis pro Trade', r2(S.avg_r), cls(S.avg_r), 'Erwartungswert: über 0 R verdient die Methode Geld') +
+      tile('Summe', r2(S.sum_r), cls(S.sum_r), 'Alle abgeschlossenen Trades zusammen') +
+      tile('Profit-Faktor', S.profit_factor == null ? '—' : num(S.profit_factor, 2), S.profit_factor == null ? '' : S.profit_factor >= 1.5 ? 'up' : S.profit_factor < 1 ? 'down' : '', 'Summe Gewinne ÷ Summe Verluste – über 1,5 ist gut') + '</div>';
+    h += '<h2>Signale &amp; Trades</h2><div class="kpis-grid">' +
+      tile('Signale gesamt', S.signals) + tile('Einstieg ausgelöst', pr(S.fill_rate), '', 'Anteil der Signale, bei denen der Kurs die Zone erreicht hat', `${S.filled} Trades`) +
+      tile('Laufende Trades', S.open) + tile('Warten auf Einstieg', S.waiting) + tile('Abgeschlossen', S.closed) +
+      tile('Bester / schlechtester', S.best_r == null ? '—' : num(S.best_r, 1) + ' / ' + num(S.worst_r, 1) + ' R') +
+      tile('Ø Gewinner', r2(S.avg_win_r), 'up') + tile('Ø Verlierer', r2(S.avg_loss_r), 'down') + '</div>';
+    h += '<h2>Wie genau sind die Analysen?</h2><div class="kpis-grid">' +
+      tile('Ø geplantes Chance:Risiko', S.avg_crv_plan == null ? '—' : '1 : ' + num(S.avg_crv_plan, 1), S.avg_crv_plan >= 2 ? 'up' : 'down', 'Durchschnitt aller Signale – Ziel ist mindestens 1:2') +
+      tile('Zone hat gehalten', pr(S.zone_respected), '', 'Anteil der Trades, die nach dem Einstieg weniger als 0,5 R ins Minus liefen – zeigt, wie genau die Einstiegszone sitzt') +
+      tile('Ø bester Stand', r2(S.avg_mfe_r), 'up', 'Wie weit lief der Trade im Schnitt maximal ins Plus (MFE)') +
+      tile('Ø schlechtester Stand', r2(S.avg_mae_r), 'down', 'Wie weit lief der Trade im Schnitt maximal ins Minus (MAE)') +
+      tile('Richtung nach 5 Tagen', pr(S.dir_hit_5d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_5d} Signale`) +
+      tile('Richtung nach 20 Tagen', pr(S.dir_hit_20d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_20d} Signale`) +
+      tile('Hauptszenario bestätigt', pr(S.scenario_ok), '', 'Kurs schloss zuerst über der Bestätigungsmarke statt unter der Invalidierung', `${S.scenario_n} entschieden`) +
+      tile('Ziel im Zeitfenster', pr(S.horizon_ok), '', 'Ziel innerhalb des geschätzten Zeitraums erreicht') +
+      tile('Ø Tage bis Einstieg', S.avg_days_fill == null ? '—' : num(S.avg_days_fill, 1)) + tile('Ø Haltedauer (Tage)', S.avg_days_trade == null ? '—' : num(S.avg_days_trade, 1)) + '</div>';
+    // Kurve
+    h += '<h2>Verlauf (Summe R)</h2>';
+    if (T.curve && T.curve.length > 1) {
+      const v = T.curve.map((c) => c[1]); const W = 600, H = 160, mn = Math.min(0, ...v), mx = Math.max(0, ...v), sx = W / (v.length - 1), sy = (H - 20) / ((mx - mn) || 1);
+      const y = (x) => 10 + (mx - x) * sy;
+      h += `<div class="chart"><svg viewBox="0 0 ${W} ${H}"><line x1="0" x2="${W}" y1="${y(0)}" y2="${y(0)}" stroke="#ffffff" stroke-opacity=".15" stroke-dasharray="4 4"/><polyline class="wave" points="${v.map((x, i) => (i * sx).toFixed(1) + ',' + y(x).toFixed(1)).join(' ')}" fill="none" stroke="#22d3a6" stroke-width="2.2"/></svg></div>`;
+    } else h += '<p class="empty small">Erscheint nach den ersten abgeschlossenen Trades.</p>';
+    // Aufschlüsselung
+    Object.keys(GRP).forEach((g) => {
+      const rows = (T.groups || {})[g]; if (!rows || !rows.length) return;
+      const lab = (k) => g === 'status' ? (STATUS[k] || {l: k}).l : g === 'group' ? (k === 'Portfolio' ? 'Depot' : k) : k;
+      h += `<h2>${GRP[g]}</h2><div class="tbl"><table><tr><th></th><th>Signale</th><th>Einstieg</th><th>Ziel / Stop</th><th>Treffer</th><th>Ø R</th></tr>` +
+        rows.map((x) => `<tr><td>${esc(lab(x.key))}</td><td>${x.signals}</td><td>${x.filled}</td><td>${x.wins} / ${x.losses}</td><td>${pr(x.hit_rate)}</td><td class="${cls(x.avg_r)}">${x.avg_r == null ? '—' : num(x.avg_r, 2)}</td></tr>`).join('') + '</table></div>';
+    });
+    // Signal-Liste
+    const sig = T.signals || [];
+    const live = sig.filter((x) => x.outcome === 'laeuft');
+    if (live.length) {
+      h += '<h2>Laufende Trades</h2><div class="tbl"><table><tr><th>Aktie</th><th>Einstieg</th><th>Stop</th><th>Ziel</th><th>Stand</th><th>bester / schlechtester</th></tr>' +
+        live.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td><b>${esc(x.ticker)}</b></td><td>${num(x.fill)} · ${dShort(x.fill_day)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td class="${cls(x.r)}">${x.r == null ? '—' : num(x.r, 2) + ' R'}</td><td>${x.mfe_r == null ? '—' : num(x.mfe_r, 1) + ' / ' + num(x.mae_r, 1)}</td></tr>`).join('') + '</table></div>';
+    }
+    h += `<details class="more"><summary>Alle ${sig.length} Signale</summary><div class="tbl"><table><tr><th>Datum</th><th>Aktie</th><th>Phase</th><th>Zone</th><th>Stop</th><th>Ziel</th><th>C:R</th><th>Ergebnis</th><th>R</th></tr>` +
+      sig.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td>${dShort(x.issued_day)}</td><td><b>${esc(x.ticker)}</b></td><td>${esc((STATUS[x.status] || {l: x.status}).l)}</td><td>${num(x.entry_low)}–${num(x.entry_high)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td>${x.crv_plan == null ? '—' : num(x.crv_plan, 1)}</td><td><span class="oc oc-${x.outcome}">${OUT[x.outcome] || x.outcome}</span></td><td class="${cls(x.r)}">${x.r == null ? '' : num(x.r, 2)}</td></tr>`).join('') + '</table></div></details>';
+    h += '<p class="foot">Vereinfachte Simulation: nur Kauf (long), ohne Gebühren und Steuern, Einstieg zum Zonenpreis, am selben Tag gilt im Zweifel der Stop. Kein Versprechen für die Zukunft.</p>';
+    box.innerHTML = h;
+    box.querySelectorAll('tr.go').forEach((tr) => tr.addEventListener('click', () => { location.hash = 'aktien'; setTimeout(() => openSheet(tr.dataset.t), 60); }));
   }
 
   /* ---------- Start ---------- */
@@ -326,6 +512,10 @@
       const [stocks, news, events, alerts, run] = await Promise.all(['stocks', 'news', 'events', 'alerts', 'run'].map(load));
       let prices = null; try { prices = await load('prices'); } catch (e) { /* ohne Kerzen weiter */ }
       PRICES = (prices && prices.stocks) || {};
+      const opt = async (n) => { try { return await load(n); } catch (e) { return null; } };
+      const [market, kpis, track] = await Promise.all(['market', 'kpis', 'track'].map(opt));
+      MARKET = market; KPIS = (kpis && kpis.stocks) || {}; TRACK = track;
+      window.__events = events;
       stocks.forEach((r) => {
         const q = PRICES[r.ticker];
         if (q && q.close && String(q.date) >= String(r.price_date || '')) { r.price = q.close; r.price_date = q.date; }
@@ -337,7 +527,9 @@
       const nh = alerts.filter((a) => a.level === 'hoch').length;
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
       renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
+      renderCockpit(events); renderAnalyse();
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
+      else if (isDesk()) { const f = $('#list .row'); if (f) openSheet(f.dataset.t); }
       anim((g) => g.from('.brand img', {rotate: -90, scale: .6, opacity: 0, duration: .8, ease: 'back.out(1.7)'}));
       setTimeout(() => { if (!document.hidden && $('#sheet').hidden) location.reload(); }, 30 * 60 * 1000);
     } catch (e) {
