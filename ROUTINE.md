@@ -16,7 +16,7 @@ Analyse-Horizont: einige Wochen bis max. 6 Monate, Grundlage Tageskerzen.
   `git clone --depth 1 https://github.com/Crynx0809/portfolio-radar /home/claude/portfolio-radar`).
   Vor dem Schreiben `git pull`. Dann `python3 scripts/export_public.py <Ordner mit stocks/news/events/alerts/run.json>`,
   committen, pushen. index.html, app.js, app.css, logo.svg, data/prices.json, data/market.json, data/kpis.json, data/signals.json,
-  data/track.json, die Skripte in scripts/ (außer TICKERS/TV in fetch_prices.py für neue Werte) und den Workflow nicht ändern.
+  data/track.json, data/fund.json, data/screen.json, die Skripte in scripts/ (außer TICKERS/TV in fetch_prices.py für neue Werte) und den Workflow nicht ändern.
   market.json/kpis.json (Markt-Cockpit, Kennzahlen) und signals.json/track.json (Trefferquote) schreibt die Action selbst.
   In der Abendanalyse darf data/track.json gelesen werden: auffällige Muster (z. B. Stops in einer Phase/Branche gehäuft) kurz in der
   Zusammenfassung nennen, aber Zonen deswegen nicht rückwirkend schönrechnen.
@@ -80,6 +80,8 @@ entry_eta_text.
   heutigen Datum aufrufen und das Ergebnis (horizon_text, horizon_end, horizon_weeks_low/high, entry_eta_text) in die Zeile
   übernehmen. Wenn die Wellenstruktur klar etwas anderes nahelegt (z. B. Zahlen-Termin, sehr langsame Welle), darf horizon_text
   angepasst werden – dann im Hauptszenario kurz begründen.
+- **pros / cons / risk** (optional, Abendanalyse): je bis zu 3 kurze Punkte „spricht dafür“ / „spricht dagegen“ und ein Satz „größtes Risiko“.
+  Ohne diese Felder erzeugt die Website sie automatisch aus Kennzahlen. Ehrlich und konkret, keine Werbesprache.
 - tv_symbol (TradingView, z. B. „NASDAQ:AMD“, „XETR:SAP“) beibehalten; für neue Werte ergänzen.
 - Branchen stabil halten („Halbleiter“, „Internet / Cloud“, „E-Commerce / Cloud“, „KI-Rechenzentren“, „Cybersecurity“,
   „Software“ zählen als Tech).

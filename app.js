@@ -25,11 +25,11 @@
   const dShort = (s) => { const d = new Date(String(s).slice(0, 10) + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'}); };
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
 
-  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null;
+  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null, FUND = {}, SCREEN = null;
   const REPO = 'Crynx0809/portfolio-radar';
 
   /* ---------- Navigation ---------- */
-  const PAGES = ['aktien', 'news', 'ausblick', 'analyse'];
+  const PAGES = ['aktien', 'chancen', 'news', 'ausblick', 'analyse'];
   function show(page, first) {
     if (!PAGES.includes(page)) page = 'aktien';
     PAGES.forEach((p) => { $('#' + p).hidden = p !== page; });
@@ -243,6 +243,9 @@
       <div class="sh-pills"><span class="pill" style="--sc:${s.c}">${s.l}</span>
         ${r.alert === 'hoch' ? '<span class="pill" style="--sc:var(--down)">Dringend</span>' : r.alert === 'mittel' ? '<span class="pill" style="--sc:var(--warn)">Beobachten</span>' : ''}
         <span class="pill" style="--sc:var(--muted)">${r.group === 'Portfolio' ? 'Im Depot' : 'Watchlist'}</span></div>
+      <div class="dtabs"><button data-p="ov">Überblick</button><button data-p="num">Zahlen</button><button data-p="calc">Rechner</button></div>
+      <div class="dpane" data-pane="ov">
+      ${checkHTML(r)}
       <div class="chart">${chart(r)}
         <div class="legend"><span style="--lc:#2fd08a">Einstiegszone</span><span style="--lc:#5aa7ff">Ziel</span><span style="--lc:#ff5d6c">Stop</span>${r.trigger != null ? '<span style="--lc:#f5b74a">Bestätigung</span>' : ''}<span style="--lc:#b18cff">${auto ? 'Wellen-Wendepunkte' : 'Elliott-Zählung'}</span><span style="--lc:#22d3a6">erwarteter Weg</span></div></div>
       <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
@@ -258,20 +261,37 @@
         <div><small>Chance : Risiko</small><b style="color:${k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)'}">${k == null ? '—' : '1 : ' + num(k, 1)}</b></div>
       </div>
       <div class="when">${r.entry_eta_text && r.status !== 'zone' && r.status !== 'trend' ? `<span>${esc(r.entry_eta_text)}</span>` : ''}${r.horizon_text ? `<span>${esc(r.horizon_text)}</span>` : ''}${r.next_event ? `<span>${esc(r.next_event)}${r.next_event_date ? ' · ' + dShort(r.next_event_date) : ''}</span>` : ''}</div>
-      ${kpiHTML(r)}
       <details class="more"><summary>Wellenanalyse</summary>
         <p><b>Hauptszenario</b>${esc(r.wave_primary)}</p><p><b>Alternative</b>${esc(r.wave_alt)}</p>
         <p><b>Bestätigung / Invalidierung</b>Über ${money(r.trigger, r)} bestätigt · unter ${money(r.invalidation, r)} ist die Zählung falsch.</p></details>
       ${r.news_brief ? `<details class="more"><summary>Aktuelle Lage</summary><p>${esc(r.news_brief)}</p></details>` : ''}
-      <p class="foot">Technisches Szenario, keine Anlageberatung.</p>`;
+      <p class="foot">Technisches Szenario, keine Anlageberatung.</p></div>
+      <div class="dpane kpis" data-pane="num" hidden>${analystHTML(r)}${kpiHTML(r)}<p class="foot">Analysten: Yahoo Finance · Kennzahlen: TradingView, Yahoo</p></div>
+      <div class="dpane" data-pane="calc" hidden>${calcHTML(r)}</div>`;
+  }
+  let DTAB = 'ov';
+  function wireDetail(box, r) {
+    const set = (p) => {
+      DTAB = p;
+      box.querySelectorAll('.dtabs button').forEach((b) => b.classList.toggle('on', b.dataset.p === p));
+      box.querySelectorAll('.dpane').forEach((x) => { x.hidden = x.dataset.pane !== p; });
+      anim((g) => g.from(box.querySelectorAll('.dpane:not([hidden]) > *'), {y: 8, opacity: 0, duration: .3, stagger: .03, clearProps: 'all'}));
+    };
+    box.querySelectorAll('.dtabs button').forEach((b) => b.addEventListener('click', () => set(b.dataset.p)));
+    box.querySelectorAll('.dtabs button').forEach((b) => b.classList.toggle('on', b.dataset.p === DTAB));
+    box.querySelectorAll('.dpane').forEach((x) => { x.hidden = x.dataset.pane !== DTAB; });
+    wireCalc(box, r);
   }
   function animateDetail(box, r, pid, delay) {
+    wireDetail(box, r);
     anim((g) => {
+      const ring = box.querySelector('.ring .fg');
+      if (ring) g.from(ring, {strokeDashoffset: ring.getAttribute('stroke-dasharray'), duration: 1, ease: 'power2.out', delay: delay});
       const w = box.querySelector('.wave'), p = box.querySelector('.proj');
       if (w) { const L = w.getTotalLength(); g.fromTo(w, {strokeDasharray: L, strokeDashoffset: L}, {strokeDashoffset: 0, duration: 1.1, ease: 'power2.inOut', delay: delay}); }
       if (p) g.from(p, {opacity: 0, duration: .5, delay: delay + .9});
       g.from(box.querySelectorAll('.cdl > *'), {opacity: 0, duration: .02, stagger: .004, delay: delay - .1});
-      g.from(box.querySelectorAll('.do, .if, .levels > div, .kpi-grid > div'), {y: 12, opacity: 0, duration: .4, stagger: .03, delay: delay + .05, ease: 'power2.out', clearProps: 'transform,opacity'});
+      g.from(box.querySelectorAll('.dpane:not([hidden]) .do, .dpane:not([hidden]) .if, .dpane:not([hidden]) .levels > div, .check'), {y: 12, opacity: 0, duration: .4, stagger: .03, delay: delay + .05, ease: 'power2.out', clearProps: 'transform,opacity'});
       const el = document.getElementById(pid), o = {v: r.price * .97};
       if (el) g.to(o, {v: r.price, duration: .8, ease: 'power2.out', onUpdate: () => { el.textContent = money(o.v, r); }});
     });
@@ -350,7 +370,7 @@
     const k = KPIS[r.ticker]; if (!k) return '';
     const bm = r.currency === 'EUR' ? 'DAX' : 'S&P 500';
     const cell = (label, val, c, hint) => `<div${hint ? ` title="${esc(hint)}"` : ''}><small>${label}</small><b class="${c || ''}">${val}</b></div>`;
-    let h = '<details class="more kpis" open><summary>Kennzahlen</summary><h4>Kursverlauf</h4><div class="kpi-grid">';
+    let h = '<h4>Kursverlauf</h4><div class="kpi-grid">';
     h += cell('1 Woche', pc(k.perf_1w), cls(k.perf_1w)) + cell('1 Monat', pc(k.perf_1m), cls(k.perf_1m)) + cell('3 Monate', pc(k.perf_3m), cls(k.perf_3m));
     h += cell('vs. ' + bm + ' (1 M)', pc(k.rs_1m), cls(k.rs_1m), 'Relative Stärke: besser (+) oder schlechter (−) als der Index')
        + cell('vs. ' + bm + ' (3 M)', pc(k.rs_3m), cls(k.rs_3m), 'Relative Stärke über 3 Monate');
@@ -390,7 +410,7 @@
     if (sig.length) {
       h += '<h4>Bisherige Signale</h4><ul class="sig-mini">' + sig.slice(0, 5).map((x) => `<li><span>${dShort(x.issued_day)}</span><span>${esc((STATUS[x.status] || {l: x.status}).l)}</span><span class="oc oc-${x.outcome}">${OUT[x.outcome] || x.outcome}</span><span class="${cls(x.r)}">${x.r != null ? num(x.r, 2) + ' R' : ''}</span></li>`).join('') + '</ul>';
     }
-    return h + '</details>';
+    return h;
   }
 
   /* ---------- Markt-Cockpit ---------- */
@@ -504,6 +524,184 @@
     box.querySelectorAll('tr.go').forEach((tr) => tr.addEventListener('click', () => { location.hash = 'aktien'; setTimeout(() => openSheet(tr.dataset.t), 60); }));
   }
 
+  /* ---------- Entscheidungs-Check ---------- */
+  function scoreOf(r) {
+    const k = KPIS[r.ticker] || {}, f = FUND[r.ticker] || {};
+    const P = {tech: {l: 'Technik', s: 50, n: [], d: 0}, fund: {l: 'Fundament', s: 50, n: [], d: 0}, val: {l: 'Bewertung', s: 50, n: [], d: 0}, mood: {l: 'Stimmung', s: 50, n: [], d: 0}};
+    const add = (p, pts, txt) => { P[p].s += pts; P[p].d++; if (txt) P[p].n.push({pts, txt}); };
+    const has = (x) => typeof x === 'number' && !isNaN(x);
+    // Technik
+    const st = {zone: [20, 'Kurs in der Einstiegszone'], annaeherung: [8, 'Kurs läuft auf die Einstiegszone zu'], boden: [0, ''], trend: [5, 'Intakter Aufwärtstrend'], meiden: [-30, 'Aktiver Abwärtstrend']}[r.status];
+    if (st) add('tech', st[0], st[1]);
+    if (has(k.sma200_gap)) add('tech', k.sma200_gap > 0 ? 10 : -12, k.sma200_gap > 0 ? 'Über der 200-Tage-Linie' : 'Unter der 200-Tage-Linie (langfristig schwach)');
+    if (has(k.rs_3m)) add('tech', k.rs_3m > .05 ? 10 : k.rs_3m < -.05 ? -10 : 0, k.rs_3m > .05 ? 'Stärker als der Index (3 M ' + pc(k.rs_3m, 0) + ')' : k.rs_3m < -.05 ? 'Schwächer als der Index (3 M ' + pc(k.rs_3m, 0) + ')' : '');
+    if (has(k.vs_sma50) && k.vs_sma50 < -.05) add('tech', -8, 'Unter der 50-Tage-Linie (kurzfristig schwach)');
+    if (has(k.perf_1m) && k.perf_1m < -.1) add('tech', -8, 'Starker Rückgang im letzten Monat (' + pc(k.perf_1m, 0) + ')');
+    if (has(k.atr_pct) && k.atr_pct > .05) add('tech', -4, 'Sehr schwankungsanfällig (Ø ' + num(k.atr_pct * 100, 0) + ' % pro Tag)');
+    if (r.bias === 'bärisch') add('tech', -10, 'Wellenbild bärisch');
+    if (r.alert === 'hoch') add('tech', -6, 'Dringende Meldung offen – Lage angespannt');
+    const c = crv(r);
+    if (c != null) add('tech', c >= 2 ? 12 : c < 1.5 ? -12 : 0, c >= 2 ? 'Chance:Risiko 1:' + num(c, 1) : c < 1.5 ? 'Chance:Risiko nur 1:' + num(c, 1) : '');
+    // Fundament
+    if (has(f.revenueGrowth)) add('fund', f.revenueGrowth > .15 ? 15 : f.revenueGrowth > .05 ? 5 : f.revenueGrowth < 0 ? -15 : 0, f.revenueGrowth > .15 ? 'Umsatz wächst stark (' + pc(f.revenueGrowth, 0) + ')' : f.revenueGrowth < 0 ? 'Umsatz schrumpft (' + pc(f.revenueGrowth, 0) + ')' : '');
+    if (has(f.earningsGrowth)) add('fund', f.earningsGrowth > .15 ? 10 : f.earningsGrowth < 0 ? -10 : 0, f.earningsGrowth > .15 ? 'Gewinn wächst (' + pc(f.earningsGrowth, 0) + ')' : f.earningsGrowth < 0 ? 'Gewinn rückläufig (' + pc(f.earningsGrowth, 0) + ')' : '');
+    if (has(f.profitMargins)) add('fund', f.profitMargins > .15 ? 10 : f.profitMargins < 0 ? -15 : 0, f.profitMargins > .15 ? 'Hohe Gewinnmarge (' + num(f.profitMargins * 100, 0) + ' %)' : f.profitMargins < 0 ? 'Macht Verlust' : '');
+    if (has(f.freeCashflow)) add('fund', f.freeCashflow > 0 ? 5 : -12, f.freeCashflow > 0 ? '' : 'Negativer Free Cashflow');
+    if (has(f.debtToEquity)) add('fund', f.debtToEquity > 200 ? -10 : f.debtToEquity < 50 ? 5 : 0, f.debtToEquity > 200 ? 'Hohe Verschuldung' : f.debtToEquity < 50 ? 'Wenig Schulden' : '');
+    // Bewertung
+    const peg = has(f.pegRatio) ? f.pegRatio : k.tv_price_earnings_growth_ttm;
+    if (has(peg) && peg > 0) add('val', peg < 1 ? 20 : peg < 2 ? 5 : peg > 3 ? -15 : 0, peg < 1 ? 'Günstig im Verhältnis zum Wachstum (PEG ' + num(peg, 1) + ')' : peg > 3 ? 'Teuer im Verhältnis zum Wachstum (PEG ' + num(peg, 1) + ')' : '');
+    if (has(f.forwardPE) && f.forwardPE > 0) add('val', f.forwardPE < 15 ? 10 : f.forwardPE > 40 ? -15 : 0, f.forwardPE < 15 ? 'Niedriges erwartetes KGV (' + num(f.forwardPE, 0) + ')' : f.forwardPE > 40 ? 'Hohes erwartetes KGV (' + num(f.forwardPE, 0) + ')' : '');
+    const kgv = k.tv_price_earnings_ttm;
+    if (has(kgv)) add('val', kgv <= 0 ? -10 : kgv > 60 ? -12 : kgv < 15 ? 8 : 0, kgv <= 0 ? 'Kein Gewinn (KGV negativ)' : kgv > 60 ? 'Sehr hohes KGV (' + num(kgv, 0) + ')' : kgv < 15 ? 'Niedriges KGV (' + num(kgv, 0) + ')' : '');
+    const up = has(f.targetMeanPrice) && r.price ? f.targetMeanPrice / r.price - 1 : null;
+    if (up != null && f.numberOfAnalystOpinions >= 3) add('val', up > .2 ? 15 : up > .1 ? 5 : up < 0 ? -15 : 0, up > .1 ? 'Analysten-Kursziel ' + pc(up, 0) + ' über dem Kurs' : up < 0 ? 'Kurs schon über dem Analysten-Kursziel' : '');
+    // Stimmung
+    if (has(f.recommendationMean)) add('mood', f.recommendationMean <= 1.8 ? 15 : f.recommendationMean <= 2.5 ? 5 : f.recommendationMean > 3 ? -15 : 0, f.recommendationMean <= 1.8 ? 'Analysten klar positiv' : f.recommendationMean > 3 ? 'Analysten skeptisch' : '');
+    const t0 = (f.eps_trend || []).find((x) => x.period === '0y');
+    if (t0 && has(t0.eps_now) && has(t0.eps_30d) && t0.eps_30d) {
+      const ch = t0.eps_now / t0.eps_30d - 1;
+      add('mood', ch > .01 ? 15 : ch < -.01 ? -15 : 0, ch > .01 ? 'Gewinnschätzungen steigen (30 T ' + pc(ch, 1) + ')' : ch < -.01 ? 'Gewinnschätzungen sinken (30 T ' + pc(ch, 1) + ')' : '');
+    }
+    if (has(k.tv_Recommend_All)) add('mood', k.tv_Recommend_All > .1 ? 5 : k.tv_Recommend_All < -.1 ? -5 : 0, '');
+    if (has(f.shortPercentOfFloat) && f.shortPercentOfFloat > .1) add('mood', -10, 'Viele Leerverkäufer (' + num(f.shortPercentOfFloat * 100, 0) + ' %)');
+    const pil = Object.entries(P).map(([key, p]) => ({key, l: p.l, s: p.d ? Math.max(0, Math.min(100, Math.round(p.s))) : null, n: p.n}));
+    const W = {tech: .3, fund: .25, val: .2, mood: .25};
+    const av = pil.filter((p) => p.s != null); const ws = av.reduce((a, p) => a + W[p.key], 0);
+    const total = av.length ? Math.round(av.reduce((a, p) => a + p.s * W[p.key], 0) / ws) : null;
+    const all = pil.flatMap((p) => p.n).filter((x) => x.txt);
+    const pros = Array.isArray(r.pros) && r.pros.length ? r.pros : all.filter((x) => x.pts > 0).sort((a, b) => b.pts - a.pts).slice(0, 3).map((x) => x.txt);
+    const cons = Array.isArray(r.cons) && r.cons.length ? r.cons : all.filter((x) => x.pts < 0).sort((a, b) => a.pts - b.pts).slice(0, 3).map((x) => x.txt);
+    let risk = r.risk || '';
+    const ne = f.next_earnings || r.next_event_date;
+    if (ne) { const dd = Math.round((new Date(ne + 'T12:00:00') - Date.now()) / 864e5); if (dd >= 0 && dd <= 14) {
+      const t = `Zahlen ${dd === 0 ? 'heute' : dd === 1 ? 'morgen' : 'in ' + dd + ' Tagen'}`;
+      if (!risk) risk = t + ' – der Kurs kann stark springen.';
+      if (!(Array.isArray(r.cons) && r.cons.length) && cons.length < 3) cons.push(t + ' (Kurslücke möglich)');
+    } }
+    if (!risk && cons.length) risk = cons[0];
+    if (risk && cons[0] === risk && cons.length > 1) { /* doppelt vermeiden */ }
+    return {total, pil, pros, cons, risk, partial: av.length < 4};
+  }
+  const tone = (s) => s == null ? 'var(--dim)' : s >= 65 ? 'var(--up)' : s >= 45 ? 'var(--warn)' : 'var(--down)';
+  function checkHTML(r) {
+    const S = scoreOf(r); if (S.total == null) return '';
+    const lab = S.total >= 70 ? 'Starkes Gesamtbild' : S.total >= 55 ? 'Solide' : S.total >= 40 ? 'Gemischt' : 'Schwach';
+    const R = 26, C = 2 * Math.PI * R;
+    return `<div class="check">
+      <div class="check-top">
+        <div class="ring" style="--rc:${tone(S.total)}"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="${R}" class="bg"/><circle cx="32" cy="32" r="${R}" class="fg" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - S.total / 100)}"/></svg><b>${S.total}</b></div>
+        <div class="check-l"><small>Entscheidungs-Check</small><b>${lab}</b>
+          <div class="amps">${S.pil.map((p) => `<span title="${p.s == null ? 'keine Daten' : p.s + ' / 100'}"><i style="background:${tone(p.s)}"></i>${p.l}</span>`).join('')}</div></div>
+      </div>
+      <div class="pc">
+        <div><h5 class="up">Spricht dafür</h5><ul>${S.pros.map((x) => `<li>${esc(x)}</li>`).join('') || '<li class="dim">—</li>'}</ul></div>
+        <div><h5 class="down">Spricht dagegen</h5><ul>${S.cons.map((x) => `<li>${esc(x)}</li>`).join('') || '<li class="dim">—</li>'}</ul></div>
+      </div>
+      ${S.risk ? `<div class="risk"><b>Größtes Risiko:</b> ${esc(S.risk)}</div>` : ''}
+    </div>`;
+  }
+
+  /* ---------- Analysten & Gewinnschätzungen ---------- */
+  function analystHTML(r) {
+    const f = FUND[r.ticker]; if (!f) return '<p class="empty small">Analystendaten folgen mit dem nächsten Kursabruf.</p>';
+    let h = '';
+    if (f.targetMeanPrice && f.targetLowPrice && f.targetHighPrice) {
+      const lo = Math.min(f.targetLowPrice, r.price), hi = Math.max(f.targetHighPrice, r.price), x = (v) => (v - lo) / ((hi - lo) || 1) * 100;
+      const up = f.targetMeanPrice / r.price - 1;
+      h += `<h4>Kursziele der Analysten${f.numberOfAnalystOpinions ? ' (' + f.numberOfAnalystOpinions + ')' : ''}</h4>
+        <div class="tgt"><div class="tgt-bar"><span class="rng" style="left:${x(f.targetLowPrice)}%;right:${100 - x(f.targetHighPrice)}%"></span>
+          <i class="avg" style="left:${x(f.targetMeanPrice)}%"></i><i class="now" style="left:${x(r.price)}%"></i></div>
+          <div class="tgt-l"><span>Tief ${num(f.targetLowPrice)}</span><span>Ø <b>${money(f.targetMeanPrice, r)}</b> <em class="${cls(up)}">${pc(up, 0)}</em></span><span>Hoch ${num(f.targetHighPrice)}</span></div></div>`;
+    }
+    const rt = (f.rec_trend || []).find((t) => t.period === '0m');
+    if (rt) {
+      const parts = [['Stark kaufen', rt.strongBuy, '#2fd08a'], ['Kaufen', rt.buy, '#7bdcae'], ['Halten', rt.hold, '#f5b74a'], ['Verkaufen', (rt.sell || 0) + (rt.strongSell || 0), '#ff5d6c']];
+      const tot = parts.reduce((a, p) => a + (p[1] || 0), 0);
+      if (tot) h += '<h4>Empfehlungen</h4><div class="recbar">' + parts.filter((p) => p[1]).map((p) => `<span style="flex:${p[1]};background:${p[2]}" title="${p[0]}: ${p[1]}">${p[1]}</span>`).join('') + '</div><div class="reclab">' + parts.map((p) => `<span><i style="background:${p[2]}"></i>${p[0]}</span>`).join('') + '</div>';
+    }
+    const tr = (f.eps_trend || []).filter((t) => t.period === '0y' || t.period === '+1y');
+    if (tr.length) {
+      h += '<h4>Gewinnschätzungen je Aktie</h4><div class="tbl"><table><tr><th></th><th>heute</th><th>vor 30 T</th><th>vor 90 T</th><th>↑ / ↓ (30 T)</th></tr>' +
+        tr.map((t) => { const ch = t.eps_30d ? t.eps_now / t.eps_30d - 1 : null; return `<tr><td>${t.period === '0y' ? 'dieses Jahr' : 'nächstes Jahr'}</td><td><b>${num(t.eps_now, 2)}</b> <span class="${cls(ch)}">${ch == null ? '' : pc(ch, 1)}</span></td><td>${num(t.eps_30d, 2)}</td><td>${num(t.eps_90d, 2)}</td><td><span class="up">${t.up_30d || 0}</span> / <span class="down">${t.down_30d || 0}</span></td></tr>`; }).join('') + '</table></div><p class="kpi-note">Steigende Schätzungen sind einer der stärksten Kurstreiber.</p>';
+    }
+    const eh = (f.eps_hist || []).filter((e) => e.actual != null);
+    if (eh.length) {
+      h += '<h4>Letzte Quartalszahlen</h4><div class="beats">' + eh.map((e) => { const s = e.surprise; const beat = s != null ? s >= 0 : e.actual >= e.est; return `<div class="${beat ? 'b' : 'm'}"><b>${beat ? 'geschlagen' : 'verfehlt'}</b><span>${s != null ? pc(s, 0) : ''}</span><em>${e.q ? new Date(e.q * 1000).toLocaleDateString('de-DE', {month: 'short', year: '2-digit'}) : ''}</em></div>`; }).join('') + '</div>';
+    }
+    const rc = (f.rating_changes || []).filter((x) => x.date >= new Date(Date.now() - 60 * 864e5).toISOString().slice(0, 10));
+    if (rc.length) h += '<h4>Neue Einstufungen (60 Tage)</h4><ul class="sig-mini">' + rc.slice(0, 5).map((x) => `<li><span>${dShort(x.date)}</span><span>${esc(x.firm)}</span><span class="oc ${x.action === 'up' ? 'oc-ziel' : x.action === 'down' ? 'oc-stop' : ''}">${esc(x.to || '')}</span><span></span></li>`).join('') + '</ul>';
+    return h || '<p class="empty small">Keine Analystendaten verfügbar.</p>';
+  }
+
+  /* ---------- Positionsgrößen-Rechner ---------- */
+  const store = {get: (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* egal */ } }};
+  function calcHTML(r) {
+    const entry = r.price >= r.entry_low && r.price <= r.entry_high ? r.price : (r.entry_low + r.entry_high) / 2;
+    return `<div class="calc" data-t="${esc(r.ticker)}">
+      <p class="kpi-note">Wie viele Stück darf ich kaufen, damit ein Stop nur einen festen Teil meines Kontos kostet?</p>
+      <div class="calc-in">
+        <label>Konto (€)<input type="number" inputmode="decimal" data-k="acct" value="${esc(store.get('pr_acct', '10000'))}"></label>
+        <label>Risiko pro Trade (%)<input type="number" inputmode="decimal" step="0.25" data-k="risk" value="${esc(store.get('pr_risk', '1'))}"></label>
+        <label>Einstieg (${cur(r)})<input type="number" inputmode="decimal" data-k="entry" value="${+entry.toFixed(2)}"></label>
+        <label>Stop (${cur(r)})<input type="number" inputmode="decimal" data-k="stop" value="${r.stop}"></label>
+        <label>Ziel (${cur(r)})<input type="number" inputmode="decimal" data-k="target" value="${r.target_low}"></label>
+      </div>
+      <div class="calc-out"></div>
+      <p class="foot">Ohne Gebühren und Steuern. Ein Stop schützt nicht vor Kurslücken (z. B. nach Zahlen).</p></div>`;
+  }
+  function wireCalc(box, r) {
+    const c = box.querySelector('.calc'); if (!c) return;
+    const fx = r.currency === 'USD' ? ((MARKET && (MARKET.items || []).find((x) => x.key === 'EURUSD')) || {}).last || 1.1 : 1;
+    const run = () => {
+      const v = {}; c.querySelectorAll('input').forEach((i) => { v[i.dataset.k] = parseFloat(String(i.value).replace(',', '.')); });
+      store.set('pr_acct', v.acct); store.set('pr_risk', v.risk);
+      const o = c.querySelector('.calc-out');
+      const rps = (v.entry - v.stop) / fx;
+      if (!(v.acct > 0 && v.risk > 0 && rps > 0)) { o.innerHTML = '<p class="empty small">Stop muss unter dem Einstieg liegen.</p>'; return; }
+      const budget = v.acct * v.risk / 100; let n = Math.floor(budget / rps);
+      const cap = Math.floor(v.acct * .25 / (v.entry / fx)); const capped = n > cap; if (capped) n = cap;
+      const pos = n * v.entry / fx, loss = n * rps, gain = v.target > v.entry ? n * (v.target - v.entry) / fx : null;
+      o.innerHTML = `<div class="calc-big"><small>Stückzahl</small><b>${n.toLocaleString('de-DE')}</b></div>
+        <div class="kpi-grid">
+          <div><small>Kaufsumme</small><b>${num(pos, 0)} €</b></div><div><small>Anteil am Konto</small><b>${num(pos / v.acct * 100, 1)} %</b></div>
+          <div><small>Verlust beim Stop</small><b class="down">−${num(loss, 0)} €</b></div><div><small>Gewinn beim Ziel</small><b class="up">${gain == null ? '—' : '+' + num(gain, 0) + ' €'}</b></div>
+          <div><small>Chance : Risiko</small><b>${gain == null ? '—' : '1 : ' + num(gain / loss, 1)}</b></div>${fx !== 1 ? `<div><small>Umrechnung</small><b>1 € = ${num(fx, 4)} $</b></div>` : ''}</div>
+        ${capped ? '<div class="warnbox">Auf 25 % des Kontos begrenzt – sonst hinge zu viel an einer Aktie.</div>' : ''}${n === 0 ? '<div class="warnbox">Der Abstand zum Stop ist für dieses Risiko zu groß – Risiko erhöhen oder kleineres Setup wählen.</div>' : ''}`;
+    };
+    c.querySelectorAll('input').forEach((i) => i.addEventListener('input', run)); run();
+  }
+
+  /* ---------- Chancen-Finder ---------- */
+  let SCR_MODE = 'pullback';
+  const SECT = {'Technology Services': 'Software & IT', 'Electronic Technology': 'Elektronik & Halbleiter', 'Finance': 'Finanzen', 'Health Technology': 'Pharma & Medizintechnik',
+    'Retail Trade': 'Handel', 'Consumer Non-Durables': 'Basiskonsum', 'Consumer Durables': 'Gebrauchsgüter', 'Producer Manufacturing': 'Industrie', 'Energy Minerals': 'Energie',
+    'Utilities': 'Versorger', 'Communications': 'Telekom', 'Transportation': 'Transport', 'Commercial Services': 'Dienstleistungen', 'Health Services': 'Gesundheitsdienste',
+    'Process Industries': 'Chemie & Grundstoffe', 'Non-Energy Minerals': 'Rohstoffe', 'Industrial Services': 'Industriedienste', 'Consumer Services': 'Konsumdienste',
+    'Distribution Services': 'Großhandel', 'Miscellaneous': 'Sonstiges'};
+  function renderChancen() {
+    const box = $('#chancenBody'); if (!box) return;
+    const D = SCREEN;
+    if (!D || (!D.pullback && !D.breakout)) { box.innerHTML = '<p class="empty">Der Chancen-Finder erscheint nach dem nächsten Kursabruf.</p>'; return; }
+    const list = D[SCR_MODE] || [];
+    box.innerHTML = `<div class="seg seg-sc" data-i="${SCR_MODE === 'pullback' ? 0 : 1}"><button data-m="pullback" aria-selected="${SCR_MODE === 'pullback'}">Rücksetzer im Trend</button><button data-m="breakout" aria-selected="${SCR_MODE === 'breakout'}">Vor dem Ausbruch</button><span class="seg-ink"></span></div>
+      <p class="sub small">${SCR_MODE === 'pullback' ? 'Starke Aktien im Aufwärtstrend, die gerade an ihre 50-Tage-Linie zurückgekommen sind.' : 'Aktien mit Schwung knapp unter ihrem 52-Wochen-Hoch.'} Automatischer Vorfilter aus ${D.universe} großen US- und deutschen Aktien – erst nach der vollen Analyse kaufen.</p>
+      <ul class="opps">${list.map((x, i) => `<li>
+        <div class="o-h"><span class="o-rank">${i + 1}</span><div><b>${esc(x.name || x.ticker)}</b><small>${esc(x.ticker)} · ${esc(SECT[x.sector] || x.sector || '')}</small></div>
+          <div class="o-p"><b>${num(x.close)} ${x.currency === 'EUR' ? '€' : x.currency === 'USD' ? '$' : esc(x.currency || '')}</b><small class="${cls(x.perf_1m)}">1 M ${pc(x.perf_1m, 0)}</small></div></div>
+        <div class="o-why">${x.why.slice(0, 4).map((w) => `<span>${esc(w)}</span>`).join('')}</div>
+        <div class="o-act">${x.have ? '<span class="o-have">✓ schon im Radar</span>' : `<button class="o-add" data-n="${esc(x.name || x.ticker)}" data-t="${esc(x.tv)}">＋ Analysieren lassen</button>`}
+          <a href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(x.tv)}" target="_blank" rel="noopener">Chart ↗</a><span class="o-sc" title="Wie gut das Muster passt">${x.score}</span></div></li>`).join('') || '<li class="empty">Gerade keine Treffer für dieses Muster.</li>'}</ul>
+      <p class="foot">Stand ${D.generated_at ? new Date(D.generated_at).toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : ''} · Quelle: TradingView-Screener</p>`;
+    box.querySelectorAll('.seg-sc button').forEach((b) => b.addEventListener('click', () => { SCR_MODE = b.dataset.m; renderChancen(); }));
+    box.querySelectorAll('.o-add').forEach((b) => b.addEventListener('click', () => {
+      const n = b.dataset.n + ' (' + b.dataset.t + ')';
+      window.open('https://github.com/' + REPO + '/issues/new?labels=wunsch&title=' + encodeURIComponent('Wunsch: ' + n) + '&body=' + encodeURIComponent('Bitte beim nächsten Abend-Update analysieren und zur Watchlist hinzufügen: **' + n + '**\n\n(aus dem Chancen-Finder)'), '_blank', 'noopener');
+      b.textContent = '✓ Wunsch geöffnet'; b.disabled = true;
+    }));
+    anim((g) => g.from('#chancenBody .opps li', {y: 14, opacity: 0, duration: .4, stagger: .04, ease: 'power2.out', clearProps: 'all'}));
+  }
+
   /* ---------- Start ---------- */
   (async () => {
     const h = location.hash.slice(1).split('/');
@@ -513,8 +711,8 @@
       let prices = null; try { prices = await load('prices'); } catch (e) { /* ohne Kerzen weiter */ }
       PRICES = (prices && prices.stocks) || {};
       const opt = async (n) => { try { return await load(n); } catch (e) { return null; } };
-      const [market, kpis, track] = await Promise.all(['market', 'kpis', 'track'].map(opt));
-      MARKET = market; KPIS = (kpis && kpis.stocks) || {}; TRACK = track;
+      const [market, kpis, track, fund, screen] = await Promise.all(['market', 'kpis', 'track', 'fund', 'screen'].map(opt));
+      MARKET = market; KPIS = (kpis && kpis.stocks) || {}; TRACK = track; FUND = (fund && fund.stocks) || {}; SCREEN = screen;
       window.__events = events;
       stocks.forEach((r) => {
         const q = PRICES[r.ticker];
@@ -527,7 +725,7 @@
       const nh = alerts.filter((a) => a.level === 'hoch').length;
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
       renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
-      renderCockpit(events); renderAnalyse();
+      renderCockpit(events); renderAnalyse(); renderChancen();
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
       else if (isDesk()) { const f = $('#list .row'); if (f) openSheet(f.dataset.t); }
       anim((g) => g.from('.brand img', {rotate: -90, scale: .6, opacity: 0, duration: .8, ease: 'back.out(1.7)'}));
