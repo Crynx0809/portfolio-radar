@@ -25,7 +25,8 @@
   const dShort = (s) => { const d = new Date(String(s).slice(0, 10) + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'}); };
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
 
-  let STOCKS = [], PRICES = {}, group = 'Portfolio';
+  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '';
+  const REPO = 'Crynx0809/portfolio-radar';
 
   /* ---------- Navigation ---------- */
   const PAGES = ['aktien', 'news', 'ausblick'];
@@ -51,6 +52,35 @@
     renderList();
   }));
 
+  /* ---------- Suche & Wünsche ---------- */
+  const sIn = $('#search');
+  sIn.addEventListener('input', () => { SEARCH = sIn.value; renderList(); $('#searchClear').hidden = !SEARCH; });
+  $('#searchClear').addEventListener('click', () => { sIn.value = ''; SEARCH = ''; $('#searchClear').hidden = true; renderList(); sIn.focus(); });
+  function openWish(name) {
+    const d = $('#wish'); d.hidden = false; $('#wishOpen').hidden = true; $('#wishName').value = name || ''; $('#wishNote').value = '';
+    anim((g) => g.from(d, {y: 10, opacity: 0, duration: .3, ease: 'power2.out', clearProps: 'all'}));
+    d.scrollIntoView({behavior: 'smooth', block: 'center'}); setTimeout(() => $('#wishName').focus(), 300);
+  }
+  $('#wishOpen').addEventListener('click', () => openWish(''));
+  $('#wishCancel').addEventListener('click', () => { $('#wish').hidden = true; $('#wishOpen').hidden = false; });
+  $('#wish').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const n = $('#wishName').value.trim(); if (!n) return;
+    const note = $('#wishNote').value.trim();
+    const body = 'Bitte beim nächsten Abend-Update zur Watchlist hinzufügen: **' + n + '**' + (note ? '\n\nHinweis: ' + note : '') + '\n\n(gesendet über die Website)';
+    window.open('https://github.com/' + REPO + '/issues/new?labels=wunsch&title=' + encodeURIComponent('Wunsch: ' + n) + '&body=' + encodeURIComponent(body), '_blank', 'noopener');
+    $('#wish').hidden = true; $('#wishOpen').hidden = false;
+    $('#wishInfo').textContent = 'GitHub geöffnet – dort nur noch auf „Create“ tippen. „' + n + '“ kommt dann beim nächsten Abend-Update dazu.';
+  });
+  async function loadWishes() {
+    try {
+      const r = await fetch('https://api.github.com/repos/' + REPO + '/issues?state=open&per_page=30');
+      if (!r.ok) return;
+      const w = (await r.json()).filter((i) => !i.pull_request && /^wunsch:/i.test(i.title || ''));
+      $('#wishList').innerHTML = w.map((i) => `<li><span>${esc(i.title.replace(/^wunsch:\s*/i, ''))}</span><em>wartet aufs Abend-Update</em></li>`).join('');
+    } catch (e) { /* ohne Liste weiter */ }
+  }
+
   /* ---------- Liste ---------- */
   function rowBar(r) {
     const lo = Math.min(r.stop, r.price) , hi = Math.max(r.target_high || r.target_low, r.price);
@@ -68,20 +98,24 @@
   }
   function renderList() {
     const ul = $('#list');
-    const rows = STOCKS.filter((r) => r.group === group).sort((a, b) =>
+    const qy = SEARCH.trim().toLowerCase();
+    const hit = (r) => [r.ticker, r.name, r.sector, r.tv_symbol].some((v) => String(v || '').toLowerCase().includes(qy));
+    $('.seg').hidden = !!qy;
+    const rows = STOCKS.filter((r) => qy ? hit(r) : r.group === group).sort((a, b) =>
       (a.alert === 'hoch' ? 0 : 1) - (b.alert === 'hoch' ? 0 : 1) || (STATUS[a.status] || {o: 9}).o - (STATUS[b.status] || {o: 9}).o || a.ticker.localeCompare(b.ticker));
     ul.innerHTML = rows.map((r) => {
       const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
       const q = PRICES[r.ticker] || {};
       const chg = q.chg_pct != null ? q.chg_pct : null;
       return `<li class="row" data-t="${esc(r.ticker)}" style="--sc:${s.c}" tabindex="0">
-        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${esc(r.name)}</div></div>
+        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${qy ? (r.group === 'Portfolio' ? 'Depot · ' : 'Watchlist · ') : ''}${esc(r.name)}</div></div>
         <div><div class="p" data-v="${r.price}" data-cur="${cur(r)}">${money(r.price, r)}</div>
           <div class="c ${chg == null ? '' : chg >= 0 ? 'up' : 'down'}">${chg == null ? '' : pct(chg)}</div></div>
         <div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
           <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span></div>
         ${rowBar(r)}</li>`;
-    }).join('') || '<li class="empty">Keine Werte.</li>';
+    }).join('') || (qy ? `<li class="empty">„${esc(SEARCH.trim())}“ ist noch nicht dabei.<br><button class="wish-btn" id="wishFromSearch">＋ „${esc(SEARCH.trim())}“ wünschen</button></li>` : '<li class="empty">Keine Werte.</li>');
+    const wf = $('#wishFromSearch'); if (wf) wf.onclick = () => openWish(SEARCH.trim());
     ul.querySelectorAll('.row').forEach((li) => {
       const go = () => openSheet(li.dataset.t);
       li.addEventListener('click', go);
@@ -302,7 +336,7 @@
       $('#stand').textContent = st ? 'Stand ' + st.toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '';
       const nh = alerts.filter((a) => a.level === 'hoch').length;
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
-      renderList(); renderNews(news); renderAusblick(run, alerts, events);
+      renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
       anim((g) => g.from('.brand img', {rotate: -90, scale: .6, opacity: 0, duration: .8, ease: 'back.out(1.7)'}));
       setTimeout(() => { if (!document.hidden && $('#sheet').hidden) location.reload(); }, 30 * 60 * 1000);

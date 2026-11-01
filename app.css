@@ -145,3 +145,33 @@ details.more p b { color: var(--fg); display: block; font-size: 12px; text-trans
   .grab { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Suche */
+.search { display: flex; align-items: center; gap: 10px; background: var(--bg2); border: 1px solid var(--line); border-radius: 12px;
+  padding: 0 12px; margin: 6px 0 10px; transition: border-color .2s, box-shadow .2s; }
+.search:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,92,255,.18); }
+.search svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--muted); stroke-width: 2; stroke-linecap: round; }
+.search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--fg); font: 500 16px Inter, sans-serif; padding: 12px 0; }
+.search input::-webkit-search-cancel-button { display: none; }
+.search button { background: var(--card2); border: 0; color: var(--muted); width: 26px; height: 26px; border-radius: 50%; cursor: pointer; }
+.seg[hidden] { display: none; }
+/* Wünsche */
+.wishbox { margin-top: 16px; }
+.wish-btn { display: block; width: 100%; padding: 13px; border-radius: 14px; border: 1px dashed #3a4160; background: transparent;
+  color: var(--accent2); font: 600 14.5px Inter, sans-serif; cursor: pointer; }
+.empty .wish-btn { margin-top: 12px; }
+.wish { display: grid; gap: 10px; margin-top: 10px; padding: 16px; border-radius: var(--r); background: var(--card); border: 1px solid var(--line); }
+.wish[hidden] { display: none; }
+.wish input { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; color: var(--fg); font: 500 16px Inter, sans-serif; padding: 11px 12px; outline: 0; }
+.wish input:focus { border-color: var(--accent); }
+.wish small { color: var(--muted); font-size: 12px; }
+.wish-row { display: flex; gap: 8px; }
+.wish-go { flex: 1; padding: 11px; border: 0; border-radius: 10px; font: 700 14.5px Inter, sans-serif; color: #0b0c10; cursor: pointer;
+  background: linear-gradient(135deg, #7c5cff, #22d3a6); }
+.wish-x { padding: 11px 14px; border-radius: 10px; border: 1px solid var(--line); background: none; color: var(--muted); font: 600 14px Inter, sans-serif; cursor: pointer; }
+.wish-info { color: var(--accent2); font-size: 13px; margin: 10px 0 0; }
+.wish-info:empty { display: none; }
+.wishes { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
+.wishes li { display: flex; justify-content: space-between; gap: 10px; padding: 10px 14px; border-radius: 12px; background: var(--bg2); border: 1px solid var(--line); font-size: 14px; font-weight: 600; }
+.wishes em { font-style: normal; font-weight: 500; color: var(--warn); font-size: 12px; }
+.wish-btn[hidden] { display: none; }

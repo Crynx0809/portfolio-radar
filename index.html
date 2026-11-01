@@ -23,12 +23,27 @@
 
 <main>
   <section class="page" id="aktien">
+    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="search" type="search" placeholder="Aktie suchen – Name oder Kürzel" autocomplete="off" enterkeyhint="search">
+      <button type="button" id="searchClear" aria-label="Suche löschen" hidden>✕</button></label>
     <div class="seg" role="tablist">
       <button role="tab" data-grp="Portfolio" aria-selected="true">Depot</button>
       <button role="tab" data-grp="Watchlist" aria-selected="false">Watchlist</button>
       <span class="seg-ink"></span>
     </div>
     <ul class="list" id="list"></ul>
+    <div class="wishbox">
+      <button class="wish-btn" id="wishOpen" type="button">＋ Aktie wünschen</button>
+      <form class="wish" id="wish" hidden>
+        <b>Welche Aktie soll dazu?</b>
+        <input id="wishName" placeholder="z. B. Mercedes-Benz" required maxlength="60">
+        <input id="wishNote" placeholder="Hinweis (optional), z. B. „als Dividendenwert“" maxlength="200">
+        <div class="wish-row"><button type="submit" class="wish-go">Wunsch senden</button><button type="button" id="wishCancel" class="wish-x">Abbrechen</button></div>
+        <small>Öffnet GitHub mit fertig ausgefülltem Wunsch – dort nur auf „Create“ tippen. Beim nächsten Abend-Update wird die Aktie analysiert und in die Watchlist aufgenommen.</small>
+      </form>
+      <p class="wish-info" id="wishInfo"></p>
+      <ul class="wishes" id="wishList"></ul>
+    </div>
     <p class="foot">Kurse: TradingView · Tippe auf eine Aktie für Chart &amp; Plan · Keine Anlageberatung</p>
   </section>
 
