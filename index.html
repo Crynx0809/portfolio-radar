@@ -2,207 +2,67 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Portfolio Radar</title>
+<meta name="theme-color" content="#0b0c10">
+<title>LLM Radar</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="core.css">
-<style>
-:root { color-scheme: light dark; }
-body { margin: 0; background: #f6f5f1; font-size: 15px; line-height: 1.5; }
-.rx { --rx-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --rx-serif: "Source Serif 4", Georgia, serif;
-  --rx-fg: #1d1c1a; --rx-muted: #6b6862; --rx-panel: #ffffff; --rx-line: #e4e1da; --rx-ok: #1f7a4a; --rx-warn: #a86400; --rx-bad: #c0392b;
-  --rx-accent: #2f5bd3; --rx-hl: rgba(0,0,0,.05); --rx-track: #ecebe6; --rx-muted-bar: #c9c5bc; --rx-radius: 10px; padding: 28px 16px 60px; }
-@media (prefers-color-scheme: dark) {
-  body { background: #151514; }
-  .rx { --rx-fg: #ecebe7; --rx-muted: #a09d96; --rx-panel: #1f1f1d; --rx-line: #33322f; --rx-ok: #4cc283; --rx-warn: #e3a33c; --rx-bad: #ef6f61;
-    --rx-accent: #7c9cf5; --rx-hl: rgba(255,255,255,.06); --rx-track: #2b2a27; --rx-muted-bar: #57554f; }
-}
-.rx-private { display: none !important; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
-<div class="rx">
-  <header id="top">
-    <p class="rx-kicker">Elliott-Wellen + News · Updates werktags ca. 14:15, 17:45 und 22:30 Uhr</p>
-    <h1 class="rx-title">Portfolio Radar</h1>
-    <p class="rx-take" data-draw="headline" data-source="run" data-field="headline" data-row="0">—</p>
-    <p class="rx-market" data-draw="market" data-source="run" data-field="market" data-row="0">—</p>
-    <p class="rx-meta">Stand: <span data-draw="stand" data-source="run" data-field="updated_at" data-row="0">—</span> · <span data-draw="kind" data-source="run" data-field="kind" data-row="0">—</span> · Nächstes Update: <span data-draw="next" data-source="run" data-field="next_update" data-row="0">—</span></p>
-  </header>
+<header class="top">
+  <a class="brand" href="#aktien" aria-label="Start">
+    <img src="logo.svg" alt="" width="36" height="36">
+    <span><b>LLM Radar</b><small id="stand">lädt …</small></span>
+  </a>
+  <span class="badge" id="hotBadge" hidden></span>
+</header>
 
-  <div class="rx-alerts" id="alerts" data-draw="alerts" data-source="alerts">—</div>
-
-  <div class="rx-kpis" id="kpis">
-    <div class="rx-kpi rx-private">
-      <p class="rx-kpi-l">Depotwert (letzter Stand)</p>
-      <p class="rx-kpi-v" data-draw="total" data-source="depot" data-field="total" data-row="0">—</p>
-      <p class="rx-kpi-s"><span data-draw="npos" data-source="depot" data-field="positions" data-row="0">—</span> Positionen</p>
+<main>
+  <section class="page" id="aktien">
+    <div class="seg" role="tablist">
+      <button role="tab" data-grp="Portfolio" aria-selected="true">Depot</button>
+      <button role="tab" data-grp="Watchlist" aria-selected="false">Watchlist</button>
+      <span class="seg-ink"></span>
     </div>
-    <div class="rx-kpi">
-      <p class="rx-kpi-l">Dringende Meldungen</p>
-      <p class="rx-kpi-v" data-draw="nhigh" data-source="alert_count" data-field="high" data-row="0">—</p>
-      <p class="rx-kpi-s"><span data-draw="nmid" data-source="alert_count" data-field="medium" data-row="0">—</span> weitere zum Beobachten</p>
-    </div>
-    <div class="rx-kpi">
-      <p class="rx-kpi-l">In der Einstiegszone</p>
-      <p class="rx-kpi-v" data-draw="nzone" data-source="status_count" data-field="zone" data-row="0">—</p>
-      <p class="rx-kpi-s"><span data-draw="nnear" data-source="status_count" data-field="annaeherung" data-row="0">—</span> laufen darauf zu</p>
-    </div>
-    <div class="rx-kpi rx-private">
-      <p class="rx-kpi-l">Tech-Anteil im Depot</p>
-      <p class="rx-kpi-v" data-draw="tech" data-source="sector_mix" data-field="tech_share" data-row="0">—</p>
-      <p class="rx-kpi-s">Halbleiter, Software, Cloud, Rechenzentren</p>
-    </div>
-    <div class="rx-kpi">
-      <p class="rx-kpi-l">Nächster Termin</p>
-      <p class="rx-kpi-v" data-draw="nextd" data-source="next_event" data-field="date" data-row="0">—</p>
-      <p class="rx-kpi-s" data-draw="nexte" data-source="next_event" data-field="event" data-row="0">—</p>
-    </div>
-  </div>
-
-  <h2 class="rx-h2" id="uebersicht">Wo stehen die Aktien gerade?</h2>
-  <p class="rx-note">Jede Aktie ist einer Phase zugeordnet. Links stehen die Werte, die am nächsten an einem Einstieg sind. Daneben steht der Abstand zur Einstiegszone. ● = in deinem Depot. Klick auf einen Wert öffnet seine Karte.</p>
-  <div class="rx-board" data-draw="board" data-source="stocks setups">—</div>
-
-  <div class="rx-tabs" role="tablist">
-    <button class="rx-tab" role="tab" data-tab="portfolio" aria-selected="true">Meine Positionen</button>
-    <button class="rx-tab" role="tab" data-tab="watchlist" aria-selected="false">Watchlist</button>
-    <button class="rx-tab" role="tab" data-tab="news" aria-selected="false">News &amp; Termine</button>
-    <button class="rx-tab" role="tab" data-tab="methode" aria-selected="false">So liest du das</button>
-  </div>
-
-  <section class="rx-sec" id="portfolio">
-    <div class="rx-private">
-      <h2 class="rx-h2">Depot-Mix nach Branche</h2>
-      <p class="rx-note">Farbig = Technologie. Je länger die farbigen Balken zusammen, desto stärker hängt dein Depot an einer einzigen Branche.</p>
-      <div class="rx-mix" data-draw="mix" data-source="sector_mix">—</div>
-      <h2 class="rx-h2">Deine Positionen</h2>
-    </div>
-    <p class="rx-note">Sortiert nach Dringlichkeit. Die Kursleiter auf jeder Karte zeigt von oben nach unten: Ziel, Einstiegszone, Stop und wo der Kurs gerade steht.</p>
-    <div class="rx-grid" data-draw="cards-portfolio" data-source="stocks setups weights">—</div>
+    <ul class="list" id="list"></ul>
+    <p class="foot">Kurse: TradingView · Tippe auf eine Aktie für Chart &amp; Plan · Keine Anlageberatung</p>
   </section>
 
-  <section class="rx-sec" id="watchlist" hidden>
-    <p class="rx-note">Ideen aus anderen Branchen zur Streuung, darunter einige spekulativere Werte mit mehr Potenzial und mehr Risiko. Sortiert nach Phase: zuerst die Werte nahe am Einstieg.</p>
-    <div class="rx-grid" data-draw="cards-watchlist" data-source="stocks setups">—</div>
+  <section class="page" id="news" hidden>
+    <h1>Wichtige News</h1>
+    <p class="sub">Nur Meldungen, die eine Aktie oder den Markt spürbar bewegen.</p>
+    <ul class="news" id="newsList"></ul>
   </section>
 
-  <section class="rx-sec" id="news" hidden>
-    <div class="rx-two">
-      <div class="rx-box"><h2>Wichtigste News</h2><ul class="rx-list" data-draw="newslist" data-source="news"></ul></div>
-      <div class="rx-box"><h2>Was ansteht</h2><ul class="rx-list" data-draw="eventlist" data-source="events"></ul></div>
-    </div>
+  <section class="page" id="ausblick" hidden>
+    <h1>Ausblick</h1>
+    <div class="hero" id="hero"></div>
+    <h2>Meldungen</h2>
+    <ul class="alerts" id="alertList"></ul>
+    <h2>Termine</h2>
+    <ul class="events" id="eventList"></ul>
+    <p class="foot">Keine Anlageberatung. Alle Angaben ohne Gewähr.</p>
   </section>
+</main>
 
-  <section class="rx-sec rx-method" id="methode" hidden>
-    <h3>Die fünf Phasen</h3>
-    <table>
-      <tr><th>Phase</th><th>Was heißt das?</th><th>Was tun?</th></tr>
-      <tr><td><span class="rx-status rx-s-zone">In der Einstiegszone</span></td><td>Der Kurs ist im Kaufbereich angekommen.</td><td>Auf ein Umkehrsignal achten (z. B. ein Tag, der tief eröffnet und hoch schließt). Stop direkt mitplanen.</td></tr>
-      <tr><td><span class="rx-status rx-s-annaeherung">Läuft auf Einstieg zu</span></td><td>Der Kurs fällt Richtung Kaufbereich, ist aber noch darüber.</td><td>Noch nicht kaufen. Eine Kursalarm-Marke beim Broker auf den oberen Rand der Zone setzen.</td></tr>
-      <tr><td><span class="rx-status" style="--sc: currentColor">Bodenbildung</span></td><td>Der Abwärtstrend ist vielleicht vorbei, aber noch nicht bestätigt.</td><td>Abwarten, bis der Kurs die Bestätigungsmarke überwindet oder in die Zone zurückkommt.</td></tr>
-      <tr><td><span class="rx-status" style="--sc: currentColor">Aufwärtstrend</span></td><td>Die Aktie läuft gut und ist weit über der Einstiegszone.</td><td>Nicht hinterherkaufen. Wer sie hat: halten. Wer einsteigen will: auf einen Rücksetzer warten.</td></tr>
-      <tr><td><span class="rx-status rx-s-meiden">Abwärtstrend – meiden</span></td><td>Die Aktie fällt weiter, ein Boden ist nicht in Sicht.</td><td>Nicht kaufen („nicht ins fallende Messer greifen“).</td></tr>
-    </table>
+<nav class="tabbar">
+  <a href="#aktien" data-page="aktien"><svg viewBox="0 0 24 24"><path d="M3 17l5-6 4 4 8-10"/><path d="M15 5h5v5"/></svg><span>Aktien</span></a>
+  <a href="#news" data-page="news"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>News</span><i id="newsDot" hidden></i></a>
+  <a href="#ausblick" data-page="ausblick"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12l5-3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Ausblick</span></a>
+</nav>
 
-    <h3>Die Kursleiter auf jeder Karte</h3>
-    <p>Sie zeigt alle wichtigen Preise untereinander, von oben (teuer) nach unten (billig). Die grau hinterlegte Zeile ist der aktuelle Kurs. So siehst du sofort, ob die Aktie über, in oder unter der Einstiegszone steht und wie weit Stop und Ziel entfernt sind.</p>
-    <ul>
-      <li><b>Ziel:</b> wohin der Kurs laut Wellenanalyse als Nächstes laufen dürfte.</li>
-      <li><b>Einstiegszone:</b> der Preisbereich, in dem ein Kauf technisch sinnvoll wäre (meist das Ende einer Korrektur). „Einstieg bei Ausbruch“ heißt: erst kaufen, wenn der Kurs über diese Marke steigt.</li>
-      <li><b>Stop:</b> fällt der Kurs darunter, ist das Szenario falsch – dort würde man den Verlust begrenzen.</li>
-    </ul>
+<div class="sheet-bg" id="sheetBg" hidden></div>
+<article class="sheet" id="sheet" hidden aria-modal="true" role="dialog">
+  <div class="grab"></div>
+  <button class="close" id="sheetClose" aria-label="Schließen">✕</button>
+  <div id="sheetBody"></div>
+</article>
 
-    <h3>Chance : Risiko, an einem Beispiel</h3>
-    <div class="rx-example">
-      <p>Einstiegszone 95–105 €, Stop 92 €, Ziel 125 €.</p>
-      <p>1. Mitte der Einstiegszone: (95 + 105) / 2 = 100 €<br>2. Risiko: 100 € − 92 € = 8 € pro Aktie<br>3. Chance: 125 € − 100 € = 25 € pro Aktie<br>4. Chance : Risiko = 25 : 8 ≈ <b>1 : 3,1</b> → erfüllt die 1:2-Regel (du kannst mindestens doppelt so viel gewinnen, wie du riskierst).</p>
-    </div>
-    <details class="rx-example">
-      <summary>Übung: Rechne selbst</summary>
-      <p>Einstiegszone 48–52 €, Stop 45 €, Ziel 60 €. Wie hoch ist Chance : Risiko, und passt das zur 1:2-Regel?</p>
-      <p class="rx-muted">Lösung: Mitte 50 €. Risiko 50 − 45 = 5 €. Chance 60 − 50 = 10 €. 10 : 5 = 1 : 2 → erfüllt die Regel genau.</p>
-    </details>
-
-    <h3>Elliott-Wellen in einem Satz</h3>
-    <p>Kurse steigen oft in fünf Schritten (Wellen 1–5: drei aufwärts, zwei kleine Rücksetzer dazwischen) und korrigieren danach in drei Schritten (A-B-C). Die Analyse versucht zu erkennen, in welchem Schritt eine Aktie gerade ist. Die Details stehen auf jeder Karte unter „Szenarien &amp; Wellenanalyse“.</p>
-
-    <h3>Grenzen</h3>
-    <p>Kurse stammen aus Web-Recherche, nicht aus einem Live-Feed, und können einige Stunden alt sein; das Datum steht auf jeder Karte. Elliott-Zählungen sind Interpretation, deshalb gibt es immer eine Alternative. Alle Signale sind technische Szenarien, keine Anlageberatung; sie kennen weder deine Steuern noch deine übrige Finanzlage.</p>
-  </section>
-
-  <p class="rx-foot">Keine Anlageberatung. Alle Angaben ohne Gewähr; Quellen bei jeder Meldung.</p>
-</div>
-<script src="core.js"></script>
-<script>
-(async () => {
-  const R = window.RX;
-  const COLORS = [getComputedStyle(document.querySelector('.rx')).getPropertyValue('--rx-accent').trim() || '#2f5bd3', '#8a5cd0', '#8a5cd0'];
-  document.querySelector('.rx-kicker').textContent = 'Elliott-Wellen + News · Kurse von TradingView: morgens, vor jeder Analyse und abends · Analyse werktags 14:15, 17:45 und 22:30 Uhr';
-  const draw = (name, fn) => document.querySelectorAll('[data-draw="' + name + '"]').forEach(fn);
-  const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
-  const show = (name) => {
-    document.querySelectorAll('.rx-tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === name)));
-    document.querySelectorAll('.rx-sec').forEach((s) => { s.hidden = s.id !== name; });
-    history.replaceState(null, '', '#' + name);
-  };
-  document.querySelectorAll('.rx-tab').forEach((t) => t.addEventListener('click', () => show(t.dataset.tab)));
-  const want = location.hash.slice(1);
-  if (['portfolio', 'watchlist', 'news', 'methode'].includes(want)) show(want);
-  try {
-    const [stocks, news, events, alerts, run] = await Promise.all(['stocks', 'news', 'events', 'alerts', 'run'].map(load));
-    const RUN = run[0] || {};
-    setTimeout(() => { if (!document.hidden) location.reload(); }, 30 * 60 * 1000); // alle 30 Min. neu laden
-    // Frischere Schlusskurse aus dem automatischen Kurs-Abruf (GitHub Actions) übernehmen
-    let prices = null;
-    try { prices = await load('prices'); } catch (e) { prices = null; }
-    if (prices && prices.stocks) {
-      stocks.forEach((r) => {
-        const q = prices.stocks[r.ticker];
-        if (!q || !q.close || String(q.date) < String(r.price_date || '')) return;
-        if (String(q.date) > String(r.price_date || '') || Number(q.close) !== Number(r.price)) {
-          const d = new Date(q.date + 'T12:00:00').toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'});
-          r.chg_note = (q.chg_pct >= 0 ? '+' : '−') + Math.abs(q.chg_pct * 100).toFixed(1).replace('.', ',') + ' % am ' + d;
-        }
-        r.price = q.close; r.price_date = q.date; r.range_low = q.low_52w; r.range_high = q.high_52w;
-      });
-    }
-    const setups = stocks.map((r) => R.setupOf(r, RUN.updated_at));
-    const S = new Map(setups.map((s) => [s.ticker, s]));
-    const text = (name, v) => draw(name, (el) => { el.textContent = (v === null || v === undefined) ? '—' : String(v); });
-    text('headline', RUN.headline); text('market', RUN.market); text('kind', RUN.kind); text('next', RUN.next_update);
-    text('stand', RUN.updated_at ? new Date(RUN.updated_at).toLocaleString('de-DE', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '—');
-    text('nhigh', alerts.filter((a) => a.level === 'hoch').length);
-    text('nmid', alerts.filter((a) => a.level === 'mittel').length);
-    text('nzone', stocks.filter((r) => r.status === 'zone').length);
-    text('nnear', stocks.filter((r) => r.status === 'annaeherung').length);
-    const from = String(RUN.updated_at || '').slice(0, 10);
-    const nx = events.filter((e) => String(e.date) >= from).sort((a, b) => String(a.date).localeCompare(String(b.date)))[0];
-    text('nextd', nx ? R.dDate(nx.date) : '—'); text('nexte', nx ? nx.ticker + ': ' + nx.event : '');
-    document.title = 'Portfolio Radar' + (alerts.some((a) => a.level === 'hoch') ? ' ⚠️' : '');
-    draw('alerts', (el) => R.alerts(el, alerts));
-    draw('newslist', (el) => R.news(el, news));
-    draw('eventlist', (el) => R.events(el, events));
-    const open = (r) => {
-      show(r.group === 'Portfolio' ? 'portfolio' : 'watchlist');
-      const c = document.getElementById('card-' + r.ticker);
-      if (c) { c.scrollIntoView({behavior: 'smooth', block: 'start'}); c.classList.add('rx-flash'); setTimeout(() => c.classList.remove('rx-flash'), 1600); }
-    };
-    draw('board', (el) => R.board(el, stocks, setups, {colors: COLORS, open}));
-    const cards = (group) => (el) => {
-      el.replaceChildren();
-      stocks.filter((r) => r.group === group)
-        .sort((a, b) => R.rank(a.alert) - R.rank(b.alert) || ((R.STATUS[a.status] || {}).order - (R.STATUS[b.status] || {}).order))
-        .forEach((r) => el.append(R.card(r, S.get(r.ticker), {colors: COLORS, embed: true, q: prices && prices.stocks ? prices.stocks[r.ticker] : null})));
-    };
-    draw('cards-portfolio', cards('Portfolio'));
-    draw('cards-watchlist', cards('Watchlist'));
-  } catch (e) {
-    draw('headline', (el) => { el.textContent = 'Daten konnten nicht geladen werden.'; });
-  }
-})();
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

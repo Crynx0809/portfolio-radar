@@ -15,7 +15,8 @@ Analyse-Horizont: einige Wochen bis max. 6 Monate, Grundlage Tageskerzen.
 - **(B) Website** (öffentlich, ohne Euro-Beträge): Repo `Crynx0809/portfolio-radar` (add_repo, access `push`; dann
   `git clone --depth 1 https://github.com/Crynx0809/portfolio-radar /home/claude/portfolio-radar`).
   Vor dem Schreiben `git pull`. Dann `python3 scripts/export_public.py <Ordner mit stocks/news/events/alerts/run.json>`,
-  committen, pushen. index.html, core.js, core.css, data/prices.json und den Workflow nicht ändern.
+  committen, pushen. index.html, app.js, app.css, logo.svg, data/prices.json und den Workflow nicht ändern.
+  Die Website zeigt unter „News“ nur Meldungen mit impact „hoch“.
 
 ## Kurse – nur aus data/prices.json (TradingView)
 
@@ -65,7 +66,15 @@ entry_eta_text.
 - Branchen stabil halten („Halbleiter“, „Internet / Cloud“, „E-Commerce / Cloud“, „KI-Rechenzentren“, „Cybersecurity“,
   „Software“ zählen als Tech).
 
-Sonstige Dateien: news.json `[{id,date,ticker,impact,direction,headline,summary,url}]` (letzte ~10 Tage, max. ~30, eigene Worte);
+- **waves** (für das Chart-Bild der Website, bei jeder Abendanalyse pflegen): Liste der Elliott-Wendepunkte der Hauptzählung,
+  `[{d:"2026-10-06", p:658.5, l:"3"}, …]` – d = Datum einer Kerze aus ohlc, p = Hoch/Tief dieser Kerze, l = Wellen-Label
+  („1“…„5“, „A“, „B“, „C“, „W“, „X“, „Y“). 3–7 Punkte in den letzten ~110 Kerzen. Ohne waves zeigt die Seite automatische Wendepunkte.
+
+Sonstige Dateien: news.json `[{id,date,ticker,impact,direction,headline,summary,url}]` (letzte ~10 Tage, max. ~30, eigene Worte).
+**News-Auswahl streng:** impact „hoch“ nur, wenn die Meldung einen Wert aus der Liste oder den Gesamtmarkt spürbar bewegt oder
+bewegen kann (Zahlen mit Kursreaktion > ~5 %, Prognoseänderung, Übernahme/Fusion, große Analystenänderung, Zins-/Inflations-
+oder Makro-Schock, Index > ~1,5 %). Vorschauen, Routine-Meldungen und „Termin heute“ nicht als News aufnehmen (gehören in events.json).
+Lieber wenige echte News als viele;
 events.json `[{id,date,ticker,event}]` (nur kommende, ~3 Monate); alerts.json `[{id,at,ticker,level,text}]` („hoch“ = Lenn muss evtl.
 bald handeln: Stop/Invalidierung gebrochen, Zahlen-Schock >8 %, Übernahme/Prognose, große Analystenänderung, Ausbruch über Bestätigung,
 Watchlist-Wert mit Umkehrsignal in der Zone; „mittel“ = genau beobachten); run.json `[{id:"latest",updated_at,kind,headline,market,next_update}]`.
