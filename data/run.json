@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-10-30T17:58:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Ausverkauf nach Intel-Ausblick: AMD rund −11 % direkt am Stop 500 $, Marvell weitere −10 % (in der Zone). Amazon erholt sich auf ca. 240 $ (gut −1 %).",
-  "market": "Nasdaq deutlich im Minus, Halbleiter breit unter Druck (Intel ~−25 %); Defensive und Öl fester (Lilly, Costco, Visa, Exxon über ihren Bestätigungsmarken – Schlusskurs abwarten). Kurse: TradingView, Stand 30.10. 17:55 Uhr (laufender US-Handel).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-10-30T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Tech-Ausverkauf nach Intel-Ausblick: AMD schließt mit 504,8 $ knapp über dem Stop 500 $ (Tagestief 492 $), Marvell −10 % tief in der Zone. Eli Lilly bestätigt den Ausbruch über 1.410 $.",
+  "market": "Nasdaq −2,8 %, S&P 500 −1,8 %, Dow −1,1 %; Intel −29 %. Defensive und Öl fester (Lilly, Costco, Walmart, Exxon). Kurse: TradingView-Schlusskurse vom 30.10. (Abruf 22:32 Uhr).",
+  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
  }
 ]

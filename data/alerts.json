@@ -1,58 +1,72 @@
 [
  {
-  "id": "a0",
-  "at": "2026-10-30T17:58:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Weitere −10 % heute (ca. 196 $) im Chip-Ausverkauf, nach −13 % gestern (Lumentum-Gerüchte). Kurs in der Zone 186–219 $, Stop 178 $ noch 9 % entfernt."
- },
- {
-  "id": "a1",
-  "at": "2026-10-30T12:55:00+01:00",
-  "ticker": "GOOGL",
-  "level": "hoch",
-  "text": "−12,6 % nach Zahlen, 61,8 %-Retracement gebrochen. Nächste Unterstützung 265–280 $."
- },
- {
-  "id": "a2",
-  "at": "2026-10-30T12:55:00+01:00",
-  "ticker": "FTNT",
-  "level": "hoch",
-  "text": "~−25 % nach Zahlen, Kurs in der Korrekturzone 121–135 $."
- },
- {
-  "id": "a4",
-  "at": "2026-10-30T17:58:00+01:00",
+  "id": "a_amd_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "−11 % im Chip-Ausverkauf (Intel-Ausblick): ca. 504 $, Tagestief genau 500 $ = Stop/Welle-4-Tief. Schlusskurs unter 500 $ würde die Welle-5-Zählung widerlegen → laut Plan reduzieren oder absichern. Zahlen am 3.11."
+  "text": "Schluss 504,8 $ (−10,9 %): Stop 500 $ auf Schlussbasis gehalten, Tagestief 492 $ lag aber unter dem Welle-4-Tief 503 $. Zahlen am 3.11.: unter 485 $ reduzieren/absichern."
  },
  {
-  "id": "a_amzn_1030",
-  "at": "2026-10-30T17:58:00+01:00",
-  "ticker": "AMZN",
+  "id": "a_lly_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "LLY",
+  "level": "hoch",
+  "text": "Ausbruch per Schlusskurs bestätigt: 1.417,5 $ über 1.410 $ (Rekord 1.449,7 $). Welle-3-Ziel 1.480–1.600 $ – nicht hinterherkaufen, Rücksetzer abwarten."
+ },
+ {
+  "id": "a_mrvl_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Schluss 196,4 $ (−10,0 %) nach −13 % am Vortag, tief in der Zone 186–219 $; Stop 178 $ rund 9 % entfernt. Lumentum-Deal evtl. nächste Woche."
+ },
+ {
+  "id": "a_googl_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "GOOGL",
   "level": "mittel",
-  "text": "Vorbörsliches −7 % weitgehend aufgeholt (ca. 240 $, gut −1 %). Zone 215–230 $ nicht erreicht – weiter abwarten."
+  "text": "Weiter −1,4 % auf 279,8 $, in der Zone 271–280 $ knapp über dem Jahrestief 270,7 $. Stop 262 $."
  },
  {
-  "id": "a_xom_1030",
-  "at": "2026-10-30T14:35:00+01:00",
+  "id": "a_ftnt_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "FTNT",
+  "level": "mittel",
+  "text": "Nach dem Zahlen-Absturz stabil um 136 $ (−2,2 %), in der Korrekturzone 126–138 $. Boden abwarten."
+ },
+ {
+  "id": "a_xom_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
   "ticker": "XOM",
   "level": "mittel",
-  "text": "Starke Q3-Zahlen, vorbörslich über der Bestätigung 184,9 $. Erst ein Schlusskurs darüber bestätigt den Ausbruch."
+  "text": "Schluss 187,3 $ über 184,9 $ – Ausbruch bestätigt, Ziel 187–191 $ aber fast erreicht. Nicht jagen."
  },
  {
-  "id": "a_ccj_1030",
-  "at": "2026-10-30T17:58:00+01:00",
+  "id": "a_cost_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "COST",
+  "level": "mittel",
+  "text": "Schluss 1.012,3 $ nur 0,3 $ über der Marke 1.012 $ – Bestätigung am Montag abwarten."
+ },
+ {
+  "id": "a_ccj_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
   "ticker": "CCJ",
   "level": "mittel",
-  "text": "−10 % auf ca. 75 $, unter die Zone 77–80 $; Stop 74 $ nah (Tagestief 73,9 $). Erst Stabilisierung abwarten."
+  "text": "−7,9 % auf 76,9 $, Tagestief 73,9 $ knapp unter dem Stop 74 $ – Schluss darüber. Boden angeschlagen."
  },
  {
-  "id": "a_apld_1030",
-  "at": "2026-10-30T17:58:00+01:00",
+  "id": "a_apld_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
   "ticker": "APLD",
   "level": "mittel",
-  "text": "−9 % auf ca. 17,7 $, am unteren Rand der Zone 17,5–19,5 $; Stop 16,8 $ nah."
+  "text": "−8,2 % auf 17,8 $, neues 52-Wochen-Tief 17,2 $ im Handel; Stop 16,8 $ nah."
+ },
+ {
+  "id": "a_amzn_1030e",
+  "at": "2026-10-30T22:45:00+01:00",
+  "ticker": "AMZN",
+  "level": "mittel",
+  "text": "Schluss 240,4 $ (−1,4 %), vorbörsliches −7 % fast aufgeholt. Zone 215–230 $ nicht erreicht – abwarten."
  }
 ]

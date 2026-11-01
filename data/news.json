@@ -1,13 +1,23 @@
 [
  {
-  "id": "n_chips_1730",
+  "id": "n_mkt_close_1030",
+  "date": "2026-10-30",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Nasdaq −2,8 %, S&P 500 −1,8 %: Intel-Ausblick löst Tech-Ausverkauf aus",
+  "summary": "Intel schloss rund −29 % (schlechtester Tag seit 1974) nach einem Q4-Ausblick klar unter den Erwartungen und schwachem PC-Geschäft bis 2027. Halbleiter breit unter Druck, Volatilitätsindex VIX deutlich höher. Defensive Werte (Lilly, Costco, Walmart, Visa) und Öl legten zu. Arbeitskosten-Index Q3 +0,8 %.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
+ },
+ {
+  "id": "n_chips_close_1030",
   "date": "2026-10-30",
   "ticker": "AMD",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Chip-Ausverkauf: Intel ~−25 %, AMD rund −11 %, Marvell −10 %",
-  "summary": "Intels schwacher Ausblick (schlechtester Tag seit über 50 Jahren) und Sorgen um die KI-Ausgaben ziehen Halbleiter breit nach unten. AMD fällt vor den eigenen Zahlen am 3.11. bis an den Stop bei 500 $, Marvell rutscht tiefer in die Zone 186–219 $. Auch Applied Digital, Cameco, Robinhood deutlich schwächer.",
-  "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html"
+  "headline": "Chip-Ausverkauf: AMD −10,9 %, Marvell −10,0 %",
+  "summary": "AMD fiel im Tief bis 492 $, schloss aber mit 504,8 $ knapp über dem Stop 500 $ – vier Tage vor den eigenen Zahlen. Marvell rutschte nach dem Lumentum-Gerücht des Vortags tiefer in die Zone. Auch Applied Digital (−8 %), Cameco (−8 %), Robinhood und Rocket Lab (je −7 %) deutlich schwächer.",
+  "url": "https://www.marketscreener.com/news/semiconductor-stocks-fall-as-intel-earnings-trigger-broad-tech-selloff-update-ce785fdbdc80f521"
  },
  {
   "id": "n_amzn_1730",
@@ -38,16 +48,6 @@
   "headline": "Exxon schlägt Erwartungen, mehr Dividende und Rückkäufe",
   "summary": "Bereinigter Gewinn 4,23 $ je Aktie (erwartet ~4,12 $), Umsatz +33 %. Dividende steigt auf 1,07 $ je Quartal, dazu ein Rückkaufprogramm über 20 Mrd. $. Vorbörslich ca. +2 % – das läge knapp über der Bestätigungsmarke 184,9 $; erst der Schlusskurs zählt.",
   "url": "https://www.kiro7.com/news/business/exxonmobil-chevron/VIJHWIGWFM7EXAVSPFXPKNI2PI/"
- },
- {
-  "id": "n_mkt_pm_1030",
-  "date": "2026-10-30",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Nasdaq-Futures schwächer, Öl steigt",
-  "summary": "Schwache Ausblicke von Amazon und Intel (vorbörslich ca. −25 %) belasten Tech, Sorge um die KI-Ausgaben. Öl +2–2,5 % wegen Angriffen auf Tanker in der Straße von Hormus.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
  },
  {
   "id": "n0",
@@ -140,26 +140,6 @@
   "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sap-lifts-2026-guidance-but-the-cloud-backlog-now-faces-the-harder-test/70427738"
  },
  {
-  "id": "n9",
-  "date": "2026-10-19",
-  "ticker": "NOVO-B",
-  "impact": "niedrig",
-  "direction": "negativ",
-  "headline": "HSBC senkt Kursziel für Novo auf 280 DKK",
-  "summary": "Einstufung Hold bestätigt; Zahlen folgen am 4.11.",
-  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/novo-nordisk-aktie-hsbc-senkt-ziel-auf-280-00-dkk/70421906"
- },
- {
-  "id": "n10",
-  "date": "2026-10-14",
-  "ticker": "BAC",
-  "impact": "mittel",
-  "direction": "gemischt",
-  "headline": "Bank of America: starker Zinsüberschuss, Geldwäsche-Vergleich",
-  "summary": "Bereinigt über Erwartung, NII +8 %, Ausblick 2027 besser; 1,2 Mrd $ Vergleich drückte den Gewinn, Aktie fiel ~8 %.",
-  "url": "https://finance.biggo.com/news/US_BAC_2026-10-14"
- },
- {
   "id": "n12",
   "date": "2026-10-30",
   "ticker": "ENR",
@@ -190,16 +170,6 @@
   "url": "https://www.heygotrade.com/en/news/visa-fiscal-q4-2026-earnings-results/"
  },
  {
-  "id": "n15",
-  "date": "2026-10-17",
-  "ticker": "RHM",
-  "impact": "niedrig",
-  "direction": "gemischt",
-  "headline": "Rheinmetall: Zahlen am 5.11., Berenberg auf Halten",
-  "summary": "Aktie ~30 % im Minus seit Jahresbeginn; Erholung mit dem Rüstungssektor.",
-  "url": "https://www.boerse-global.de/rheinmetall-aktie-quartalszahlen-am-5-november/833939"
- },
- {
   "id": "n16",
   "date": "2026-10-30",
   "ticker": "ENR",
@@ -208,16 +178,6 @@
   "headline": "Siemens Energy rutscht um rund 7 % ab",
   "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
   "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
- },
- {
-  "id": "n17",
-  "date": "2026-10-16",
-  "ticker": "RKLB",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Rocket Lab: Neutron-Erststart rutscht ins Jahr 2027",
-  "summary": "Die Verschiebung der neuen Rakete drückte die Aktie; Auftragsbestand liegt bei 2,4 Mrd $.",
-  "url": "https://www.tikr.com/de/blog/rocket-lab-stock-falls-neutron-launch-delay"
  },
  {
   "id": "n18",
