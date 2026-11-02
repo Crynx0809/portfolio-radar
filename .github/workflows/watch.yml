@@ -1,0 +1,29 @@
+name: Wächter
+on:
+  schedule:
+    - cron: "*/15 8-20 * * 1-5"   # alle 15 Min. von 9 bis 21:45 Uhr deutscher Zeit (Winterzeit), Mo–Fr
+    - cron: "5 21 * * 1-5"        # 22:05 Uhr – nach US-Schluss
+  workflow_dispatch:
+  push:
+    paths: ["scripts/watch.py", ".github/workflows/watch.yml"]
+permissions:
+  contents: write
+  issues: write
+concurrency: { group: watch, cancel-in-progress: true }
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/watch.py
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+      - name: Speichern
+        run: |
+          git config user.name "portfolio-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/watch.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Wächter $(date -u +%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done

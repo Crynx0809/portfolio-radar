@@ -702,6 +702,39 @@
     anim((g) => g.from('#chancenBody .opps li', {y: 14, opacity: 0, duration: .4, stagger: .04, ease: 'power2.out', clearProps: 'all'}));
   }
 
+
+  /* ---------- Pop-up bei dringenden Meldungen ---------- */
+  function popups(alerts, watch) {
+    const seenKey = (id) => 'radar-seen:' + id;
+    const seen = (id) => { try { return localStorage.getItem(seenKey(id)) === '1'; } catch (e) { return false; } };
+    const mine = new Set(STOCKS.filter((r) => r.group === 'Portfolio').map((r) => r.ticker));
+    const fresh = (iso) => !iso || (Date.now() - new Date(iso).getTime()) < 36 * 3600 * 1000;
+    const items = [];
+    ((watch && watch.events) || []).filter((e) => e.level === 'hoch' && mine.has(e.ticker)).forEach((e) => !items.some((i) => i.t === e.ticker) &&
+      items.push({id: 'w:' + e.id, t: e.ticker, title: e.title, text: e.text, todo: e.todo, src: 'Wächter · ' + new Date(e.at).toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'}) + ' Uhr'}));
+    alerts.filter((a) => a.level === 'hoch' && mine.has(a.ticker) && fresh(a.at)).forEach((a) => {
+      if (items.some((i) => i.t === a.ticker)) return;
+      const r = STOCKS.find((x) => x.ticker === a.ticker) || {};
+      items.push({id: 'a:' + a.id, t: a.ticker, title: (r.name || a.ticker), text: a.text, todo: r.action || '', src: 'Analyse'});
+    });
+    const open = items.filter((i) => !seen(i.id)).slice(0, 5);
+    if (!open.length) return;
+    const bg = document.createElement('div'); bg.className = 'pop-bg';
+    const box = document.createElement('div'); box.className = 'pop'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Dringende Meldungen');
+    box.innerHTML = `<div class="pop-h"><span class="pop-ic">⚠️</span><b>${open.length === 1 ? 'Dringende Meldung' : open.length + ' dringende Meldungen'} zu deinem Depot</b></div>` +
+      open.map((i) => `<div class="pop-i"><div class="pop-t"><b>${esc(i.title)}</b><small>${esc(i.src)}</small></div><p>${esc(i.text)}</p>` +
+        (i.todo ? `<p class="pop-todo"><span>Was laut deinem Plan gilt</span>${esc(i.todo)}</p>` : '') +
+        `<button type="button" class="pop-go" data-t="${esc(i.t)}">Zur Aktie →</button></div>`).join('') +
+      `<p class="pop-note">Technische Regeln aus der Analyse, keine Anlageberatung. Erst den Schlusskurs abwarten, nicht im Affekt handeln.</p>` +
+      `<button type="button" class="pop-ok">Verstanden</button>`;
+    document.body.append(bg, box);
+    const close = () => { open.forEach((i) => { try { localStorage.setItem(seenKey(i.id), '1'); } catch (e) { /* ok */ } }); bg.remove(); box.remove(); };
+    box.querySelector('.pop-ok').addEventListener('click', close); bg.addEventListener('click', close);
+    box.querySelectorAll('.pop-go').forEach((b) => b.addEventListener('click', () => { close(); show('aktien'); openSheet(b.dataset.t); }));
+    anim((g) => { g.fromTo(bg, {opacity: 0}, {opacity: 1, duration: .25}); g.fromTo(box, {y: 30, opacity: 0, scale: .97}, {y: 0, opacity: 1, scale: 1, duration: .4, ease: 'power3.out'}); });
+    box.querySelector('.pop-ok').focus();
+  }
+
   /* ---------- Start ---------- */
   (async () => {
     const h = location.hash.slice(1).split('/');
@@ -711,7 +744,7 @@
       let prices = null; try { prices = await load('prices'); } catch (e) { /* ohne Kerzen weiter */ }
       PRICES = (prices && prices.stocks) || {};
       const opt = async (n) => { try { return await load(n); } catch (e) { return null; } };
-      const [market, kpis, track, fund, screen] = await Promise.all(['market', 'kpis', 'track', 'fund', 'screen'].map(opt));
+      const [market, kpis, track, fund, screen, watch] = await Promise.all(['market', 'kpis', 'track', 'fund', 'screen', 'watch'].map(opt));
       MARKET = market; KPIS = (kpis && kpis.stocks) || {}; TRACK = track; FUND = (fund && fund.stocks) || {}; SCREEN = screen;
       window.__events = events;
       stocks.forEach((r) => {
@@ -726,6 +759,7 @@
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
       renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       renderCockpit(events); renderAnalyse(); renderChancen();
+      setTimeout(() => popups(alerts, watch), 700);
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
       else if (isDesk()) { const f = $('#list .row'); if (f) openSheet(f.dataset.t); }
       anim((g) => g.from('.brand img', {rotate: -90, scale: .6, opacity: 0, duration: .8, ease: 'back.out(1.7)'}));

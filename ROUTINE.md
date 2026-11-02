@@ -64,6 +64,16 @@ nur „Aktie hinzufügen“ (bzw. „entfernen“, wenn das klar im Titel steht 
 4. Issue mit kurzer Antwort kommentieren (Status, Einstiegszone, Stop, Ziel, Footer laut Systemregeln) und schließen (`state_reason: completed`).
 5. In der Zusammenfassung erwähnen.
 
+## Wächter (data/watch.json)
+
+Eine GitHub Action („Wächter“) prüft werktags alle 15 Minuten (9–22 Uhr) die TradingView-Kurse gegen die Marken in stocks.json
+und schreibt `data/watch.json` (`events`: Stop unterschritten, Stop nah, Tagesverlust ≥ 8 %, Bestätigung überschritten, Watchlist
+in der Zone; `watched`: Depotwerte auf der Kippe, ≤ 5 % über dem Stop). Neue dringende Depot-Ereignisse meldet sie als GitHub-Issue
+(„⚠️ Wächter: …“, sofort geschlossen) – das ist Lenns Sofort-Benachrichtigung; die Seite zeigt sie als Pop-up.
+Die Läufe lesen watch.json zu Beginn: Für jedes Ereignis seit dem letzten Update die betroffene Aktie neu bewerten (News suchen,
+Zählung prüfen, action/if_* und Meldung in alerts.json anpassen) und in der Zusammenfassung erwähnen. watch.json, watch.py und
+den Workflow nicht ändern. Wächter-Issues nicht als Aktien-Wünsche behandeln (Titel beginnt mit „⚠️ Wächter:“).
+
 ## Felder je Aktie (stocks.json)
 
 ticker, name, group, sector, position_eur, price, currency, price_date, chg_note, bias („bullisch“|„neutral“|„bärisch“),
