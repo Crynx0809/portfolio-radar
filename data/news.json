@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_mrvl_lite_1102",
+  "date": "2026-11-02",
+  "ticker": "MRVL",
+  "impact": "hoch",
+  "direction": "neutral",
+  "headline": "Marvell kündigt Übernahme von Lumentum für rund 115 Mrd. $ an",
+  "summary": "Nach tagelangen Berichten bestätigt: Marvell kauft den KI-Optik-Spezialisten Lumentum – einer der größten Deals des Jahres, Marvells größter Zukauf seit Inphi 2021. Vorbörslich Marvell ca. +1 %, Lumentum ca. +2,5 %. Die Aktie hatte auf die Gerüchte bereits rund 22 % verloren (Sorge vor Prämie, Verwässerung durch neue Aktien, Kartellprüfung).",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
+ },
+ {
+  "id": "n_mkt_oil_1102",
+  "date": "2026-11-02",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Ölpreis rund −4,5 % auf Iran-Gesprächsberichte, Futures erholt",
+  "summary": "Brent fällt auf ca. 108 $, WTI unter 100 $, nach Berichten über Gespräche zur Beendigung des Iran-Konflikts. Nasdaq-Futures erholen sich nach dem Ausverkauf vom Freitag (QQQ vorbörslich ca. +0,8 %); Energiewerte schwächer. Apple-Zahlen heute nach Börsenschluss, Dienstag US-Midterms und AMD-Zahlen.",
+  "url": "https://currentlogic.substack.com/p/the-morning-brief-november-2-2026"
+ },
+ {
   "id": "n_mkt_close_1030",
   "date": "2026-10-30",
   "ticker": "Markt",
@@ -120,26 +140,6 @@
   "url": "https://stockanalysis.com/stocks/apld/"
  },
  {
-  "id": "n7",
-  "date": "2026-10-22",
-  "ticker": "AMD",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Chip-Ausverkauf: AMD und Marvell −8 %",
-  "summary": "Warnung vor Komponentenknappheit (Lam Research) und Sorgen um KI-Finanzierung belasteten den Sektor.",
-  "url": "https://www.tikr.com/blog/amd-stock-is-up-131-this-year-heres-where-it-stands-after-a-1-trillion-run"
- },
- {
-  "id": "n8",
-  "date": "2026-10-21",
-  "ticker": "SAP",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "SAP: Cloud-Backlog +28 %, Prognose oberes Ende",
-  "summary": "Cloud-Umsatz +26 % auf 6,67 Mrd €; Goldman hob das Kursziel auf 258 €. Risiko: leichte Abkühlung des Cloud-Wachstums in Q4.",
-  "url": "https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/sap-lifts-2026-guidance-but-the-cloud-backlog-now-faces-the-harder-test/70427738"
- },
- {
   "id": "n12",
   "date": "2026-10-30",
   "ticker": "ENR",
@@ -178,15 +178,5 @@
   "headline": "Siemens Energy rutscht um rund 7 % ab",
   "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
   "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
- },
- {
-  "id": "n18",
-  "date": "2026-10-20",
-  "ticker": "OKLO",
-  "impact": "niedrig",
-  "direction": "gemischt",
-  "headline": "Barclays senkt Oklo-Ziel auf 59 $, bleibt bei Overweight",
-  "summary": "Aktie seit dem Hoch vor einem Jahr um über 80 % gefallen; Aktienverkäufe und steigende Zinsen belasten.",
-  "url": "https://www.tikr.com/blog/oklo-has-lost-83-in-a-year-barclays-sees-117-upside"
  }
 ]

@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-10-30T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Tech-Ausverkauf nach Intel-Ausblick: AMD schließt mit 504,8 $ knapp über dem Stop 500 $ (Tagestief 492 $), Marvell −10 % tief in der Zone. Eli Lilly bestätigt den Ausbruch über 1.410 $.",
-  "market": "Nasdaq −2,8 %, S&P 500 −1,8 %, Dow −1,1 %; Intel −29 %. Defensive und Öl fester (Lilly, Costco, Walmart, Exxon). Kurse: TradingView-Schlusskurse vom 30.10. (Abruf 22:32 Uhr).",
-  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-02T14:40:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Marvell bestätigt Lumentum-Übernahme für rund 115 Mrd. $ (vorbörslich ca. +1 %). Ölpreis −4,5 % auf Iran-Gesprächsberichte; Tech-Futures erholt.",
+  "market": "Vorbörslich S&P 500 ca. +0,5 %, Nasdaq 100 ca. +0,8 % nach dem Freitags-Ausverkauf; Brent ca. 108 $ (−4,5 %). Heute Apple nach Börsenschluss, Dienstag Midterms und AMD-Zahlen. Kurse: TradingView-Abruf 14:33 Uhr (US-Werte noch Freitagsschluss, Europa aktuell).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]
