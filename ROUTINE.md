@@ -43,7 +43,12 @@ Für Datensatz `prices` im Dashboard: aus prices.json eine Liste machen
 
 Depot (group „Portfolio“): AMD, GOOGL, AMZN, APLD, BAC, FTNT, MRVL, NOVO-B, SAP.
 Watchlist: LLY, ISRG, XOM, RHM, ENR, GEV, NEE, ALV, JPM, V, COST, WMT, FCX, CAT, DTE, CCJ, AIR, BRK-B, RACE, MELI,
-RKLB, OKLO, HIMS, NU, HOOD. EUR: NOVO-B, SAP, RHM, ENR, ALV, DTE, AIR; sonst USD. Menge nur ändern, wenn Lenn es sagt.
+RKLB, OKLO, HIMS, NU, HOOD, MBG (Mercedes-Benz Group, XETR), TTD (The Trade Desk), NOW (ServiceNow), MOH (Molina Healthcare).
+EUR: NOVO-B, SAP, RHM, ENR, ALV, DTE, AIR, MBG; sonst USD.
+**Neu seit 2.11. (von Lenn direkt gewünscht):** MBG, TTD, NOW, MOH sind schon im Kursabruf, aber noch nicht in stocks.json.
+In der nächsten Abendanalyse alle vier mit vollständiger Analyse und allen Feldern als Watchlist-Werte aufnehmen
+(zählt nicht zum Limit von 3 Wünschen). Das offene Issue „Wunsch: Mercedes“ damit beantworten und schließen.
+Danach diesen fett markierten Absatz aus ROUTINE.md löschen. Menge nur ändern, wenn Lenn es sagt.
 Dazu kommen Werte aus erledigten Aktien-Wünschen (siehe unten).
 
 ## Aktien-Wünsche (über die Website)

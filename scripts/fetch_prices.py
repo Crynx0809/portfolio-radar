@@ -16,6 +16,8 @@ TICKERS = {  # unser Ticker -> (Yahoo-Symbol, Stooq-Symbol, Währung)
     "RACE": ("RACE", "race.us", "USD"), "MELI": ("MELI", "meli.us", "USD"),
     "RKLB": ("RKLB", "rklb.us", "USD"), "OKLO": ("OKLO", "oklo.us", "USD"), "HIMS": ("HIMS", "hims.us", "USD"),
     "NU": ("NU", "nu.us", "USD"), "HOOD": ("HOOD", "hood.us", "USD"),
+    "MBG": ("MBG.DE", "mbg.de", "EUR"), "TTD": ("TTD", "ttd.us", "USD"), "NOW": ("NOW", "now.us", "USD"),
+    "MOH": ("MOH", "moh.us", "USD"),
 }
 UA = {"User-Agent": "Mozilla/5.0 (portfolio-radar; GitHub Actions)"}
 TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD": "NASDAQ:APLD", "BAC": "NYSE:BAC",
@@ -24,7 +26,8 @@ TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD
       "ALV": "XETR:ALV", "JPM": "NYSE:JPM", "V": "NYSE:V", "COST": "NASDAQ:COST", "WMT": "NASDAQ:WMT", "FCX": "NYSE:FCX",
       "CAT": "NYSE:CAT", "DTE": "XETR:DTE", "CCJ": "NYSE:CCJ", "AIR": "EURONEXT:AIR", "BRK-B": "NYSE:BRK.B",
       "RACE": "NYSE:RACE", "MELI": "NASDAQ:MELI", "RKLB": "NASDAQ:RKLB", "OKLO": "NYSE:OKLO", "HIMS": "NYSE:HIMS",
-      "NU": "NYSE:NU", "HOOD": "NASDAQ:HOOD"}
+      "NU": "NYSE:NU", "HOOD": "NASDAQ:HOOD",
+      "MBG": "XETR:MBG", "TTD": "NASDAQ:TTD", "NOW": "NYSE:NOW", "MOH": "NYSE:MOH"}
 
 def tradingview():
     body = json.dumps({"symbols": {"tickers": list(TV.values()), "query": {"types": []}},
