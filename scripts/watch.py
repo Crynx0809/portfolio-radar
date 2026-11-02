@@ -94,7 +94,9 @@ def main():
 
     notified = [i for i in old.get("notified", []) if i.endswith(today)]
     for e in events:
-        if e["level"] != "hoch" or e["group"] != "Portfolio" or e["id"] in notified or not TOKEN:
+        if e["level"] != "hoch" or e["group"] != "Portfolio" or not TOKEN:
+            continue
+        if any(i.startswith(e["ticker"] + "-") for i in notified):  # pro Aktie und Tag nur eine Benachrichtigung
             continue
         try:
             body = (f"**{e['title']}**\n\n{e['text']}\n\n**Was laut deinem Plan gilt:** {e['todo']}\n\n"
