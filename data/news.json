@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_mrvl_drop_1102",
+  "date": "2026-11-02",
+  "ticker": "MRVL",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Marvell nach Lumentum-Deal im Handel rund −9 %",
+  "summary": "Die anfängliche Freude über die Übernahme-Bestätigung (vorbörslich +1 %) kippte: Marvell fällt bis ca. 179 $, Lumentum ca. −10 %. Anleger sorgen sich um den reinen Aktientausch (Verwässerung) und die Kartellprüfung; dazu schwache Halbleiter. Damit gut 30 % unter dem Kurs vor den ersten Gerüchten.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
+ },
+ {
+  "id": "n_amzn_1102",
+  "date": "2026-11-02",
+  "ticker": "AMZN",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Amazon +4,6 % auf ca. 251 $",
+  "summary": "Nach dem Zahlen-Wackler vom Freitag kaufen Anleger wieder – getragen vom Rekordwachstum im Cloud-Geschäft (AWS). Die Aktie nähert sich der Bestätigungsmarke 258 $.",
+  "url": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-midday-nov-2-stocks-rally-as-oil-prices-tumble-on-diplomatic-hopes/"
+ },
+ {
+  "id": "n_amd_1102",
+  "date": "2026-11-02",
+  "ticker": "AMD",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "AMD weiter schwach (−3 %) vor den Zahlen",
+  "summary": "Während der Gesamtmarkt sich erholt, fällt AMD auf ca. 489 $ – Halbleiter bleiben nach Intel-Ausblick und Marvell-Deal unter Druck. Q3-Zahlen am Dienstag nach US-Börsenschluss.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
+ },
+ {
   "id": "n_mrvl_lite_1102",
   "date": "2026-11-02",
   "ticker": "MRVL",

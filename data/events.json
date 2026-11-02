@@ -6,12 +6,6 @@
   "event": "US-Zeitumstellung: US-Börse öffnet ab 2.11. wieder um 15:30 Uhr deutscher Zeit"
  },
  {
-  "id": "e1",
-  "date": "2026-11-02",
-  "ticker": "MRVL",
-  "event": "Mögliche Ankündigung Lumentum-Deal (unbestätigt)"
- },
- {
   "id": "e2",
   "date": "2026-11-03",
   "ticker": "AMD",

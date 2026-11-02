@@ -1,10 +1,31 @@
 [
  {
-  "id": "a_mrvl_1102",
-  "at": "2026-11-02T14:40:00+01:00",
+  "id": "a_amd_1102b",
+  "at": "2026-11-02T18:27:01+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "Kurs 489,2 $ (−3,1 %): unter der Zone 495–515 $ und unter der Invalidierung 492 $; Stop 485 $ nur 0,8 % entfernt. Zahlen morgen nach US-Schluss – Schluss unter 485 $ = reduzieren/absichern."
+ },
+ {
+  "id": "a_mrvl_1102b",
+  "at": "2026-11-02T18:27:01+01:00",
   "ticker": "MRVL",
   "level": "hoch",
-  "text": "Lumentum-Übernahme (~115 Mrd. $) offiziell angekündigt; vorbörslich ca. +1 %. Kurs 196,4 $ in der Zone 186–219 $, Stop 178 $. Reaktion im Handel abwarten – kein Schluss unter 178 $."
+  "text": "Nach der Deal-Bestätigung −8,8 % auf 179,1 $: unter der Zone 186–219 $, Stop 178 $ nur 0,6 % entfernt. Schluss unter 178 $ = Position reduzieren/absichern."
+ },
+ {
+  "id": "a_apld_1102b",
+  "at": "2026-11-02T18:27:01+01:00",
+  "ticker": "APLD",
+  "level": "mittel",
+  "text": "17,18 $ (−3,6 %): knapp unter Zone 17,5–19,5 $ und Invalidierung 17,19 $; Stop 16,8 $ rund 2 % entfernt."
+ },
+ {
+  "id": "a_brk_1102b",
+  "at": "2026-11-02T18:27:01+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Im Handel über der Bestätigungsmarke: Visa 425,7 $ (>414,6), Walmart 126,4 $ (>125), Berkshire 553 $ (>549). Schlusskurs abwarten – Trend, nicht hinterherkaufen."
  },
  {
   "id": "a_amd_1030e",
