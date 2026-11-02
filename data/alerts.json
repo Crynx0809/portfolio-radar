@@ -1,100 +1,65 @@
 [
  {
-  "id": "a_amd_1102b",
-  "at": "2026-11-02T18:27:01+01:00",
+  "id": "a_amd_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "Kurs 489,2 $ (−3,1 %): unter der Zone 495–515 $ und unter der Invalidierung 492 $; Stop 485 $ nur 0,8 % entfernt. Zahlen morgen nach US-Schluss – Schluss unter 485 $ = reduzieren/absichern."
+  "text": "Schluss 466,8 $ (−7,5 %) unter deinem Stop 485 $ und unter der Invalidierung 492 $ – laut Plan reduzieren oder absichern. Zahlen morgen nach US-Schluss. Nächste Zone 420–445 $ (C = A), Stop für einen Rest 408 $."
  },
  {
-  "id": "a_mrvl_1102b",
-  "at": "2026-11-02T18:27:01+01:00",
+  "id": "a_mrvl_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
   "ticker": "MRVL",
   "level": "hoch",
-  "text": "Nach der Deal-Bestätigung −8,8 % auf 179,1 $: unter der Zone 186–219 $, Stop 178 $ nur 0,6 % entfernt. Schluss unter 178 $ = Position reduzieren/absichern."
+  "text": "Schluss 171,4 $ (−12,7 %) unter deinem Stop 178 $ – laut Plan Teilverkauf. Nächste Zone 150–162 $; unter 147 $ ist der große Aufwärtstrend gebrochen."
  },
  {
-  "id": "a_apld_1102b",
-  "at": "2026-11-02T18:27:01+01:00",
+  "id": "a_apld_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
   "ticker": "APLD",
-  "level": "mittel",
-  "text": "17,18 $ (−3,6 %): knapp unter Zone 17,5–19,5 $ und Invalidierung 17,19 $; Stop 16,8 $ rund 2 % entfernt."
- },
- {
-  "id": "a_brk_1102b",
-  "at": "2026-11-02T18:27:01+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Im Handel über der Bestätigungsmarke: Visa 425,7 $ (>414,6), Walmart 126,4 $ (>125), Berkshire 553 $ (>549). Schlusskurs abwarten – Trend, nicht hinterherkaufen."
- },
- {
-  "id": "a_amd_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "AMD",
   "level": "hoch",
-  "text": "Schluss 504,8 $ (−10,9 %): Stop 500 $ auf Schlussbasis gehalten, Tagestief 492 $ lag aber unter dem Welle-4-Tief 503 $. Zahlen am 3.11.: unter 485 $ reduzieren/absichern."
+  "text": "Schluss 16,22 $ (−9,0 %, neues 52-Wochen-Tief) unter deinem Stop 16,8 $ und unter 17,5 $ – laut Plan Ausstieg oder starke Reduktion. Mögliche Endzone von Welle C 14–16 $."
  },
  {
-  "id": "a_lly_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "LLY",
-  "level": "hoch",
-  "text": "Ausbruch per Schlusskurs bestätigt: 1.417,5 $ über 1.410 $ (Rekord 1.449,7 $). Welle-3-Ziel 1.480–1.600 $ – nicht hinterherkaufen, Rücksetzer abwarten."
- },
- {
-  "id": "a_mrvl_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Schluss 196,4 $ (−10,0 %) nach −13 % am Vortag, tief in der Zone 186–219 $; Stop 178 $ rund 9 % entfernt. Lumentum-Deal evtl. nächste Woche."
- },
- {
-  "id": "a_googl_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "GOOGL",
-  "level": "mittel",
-  "text": "Weiter −1,4 % auf 279,8 $, in der Zone 271–280 $ knapp über dem Jahrestief 270,7 $. Stop 262 $."
- },
- {
-  "id": "a_ftnt_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
+  "id": "a_ftnt_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
   "ticker": "FTNT",
   "level": "mittel",
-  "text": "Nach dem Zahlen-Absturz stabil um 136 $ (−2,2 %), in der Korrekturzone 126–138 $. Boden abwarten."
+  "text": "−7,3 % auf 126,2 $: genau am Zonenboden und am 61,8 %-Rücklauf (126 $). Stop 118 $ rund 6,5 % entfernt."
  },
  {
-  "id": "a_xom_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "XOM",
-  "level": "mittel",
-  "text": "Schluss 187,3 $ über 184,9 $ – Ausbruch bestätigt, Ziel 187–191 $ aber fast erreicht. Nicht jagen."
- },
- {
-  "id": "a_cost_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "COST",
-  "level": "mittel",
-  "text": "Schluss 1.012,3 $ nur 0,3 $ über der Marke 1.012 $ – Bestätigung am Montag abwarten."
- },
- {
-  "id": "a_ccj_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
+  "id": "a_ccj_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
   "ticker": "CCJ",
   "level": "mittel",
-  "text": "−7,9 % auf 76,9 $, Tagestief 73,9 $ knapp unter dem Stop 74 $ – Schluss darüber. Boden angeschlagen."
+  "text": "Schluss 73,4 $ (−4,6 %) unter dem Stop 74 $ – Boden gescheitert, meiden. Neue Beobachtungszone 64–68 $."
  },
  {
-  "id": "a_apld_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "APLD",
+  "id": "a_hims_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
+  "ticker": "HIMS",
   "level": "mittel",
-  "text": "−8,2 % auf 17,8 $, neues 52-Wochen-Tief 17,2 $ im Handel; Stop 16,8 $ nah."
+  "text": "−8,8 % auf 25,2 $, unterer Rand der Spanne 24–32 $. Zahlen am 9.11. abwarten."
  },
  {
-  "id": "a_amzn_1030e",
-  "at": "2026-10-30T22:45:00+01:00",
-  "ticker": "AMZN",
+  "id": "a_xom_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
+  "ticker": "XOM",
   "level": "mittel",
-  "text": "Schluss 240,4 $ (−1,4 %), vorbörsliches −7 % fast aufgeholt. Zone 215–230 $ nicht erreicht – abwarten."
+  "text": "−4,1 % auf 179,7 $ nach Ölpreissturz – Schluss wieder unter 184,9 $, Ausbruch vorerst gescheitert."
+ },
+ {
+  "id": "a_brk_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Ausbrüche per Schlusskurs bestätigt: Visa 425,5 $ (>414,6), Walmart 127,7 $ (>125), Berkshire 556,1 $ (>549), Costco 1.040,6 $ (>1.012, 2. Tag). Trend – nicht hinterherkaufen."
+ },
+ {
+  "id": "a_zone_1102e",
+  "at": "2026-11-02T22:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In der Einstiegszone ohne Umkehrsignal: GE Vernova 862 $ (785–865), Freeport 63,0 $ (59–64), ServiceNow 106 $ (98–107, neu)."
  }
 ]

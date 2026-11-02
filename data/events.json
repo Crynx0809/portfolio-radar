@@ -1,11 +1,5 @@
 [
  {
-  "id": "e0",
-  "date": "2026-11-01",
-  "ticker": "Markt",
-  "event": "US-Zeitumstellung: US-Börse öffnet ab 2.11. wieder um 15:30 Uhr deutscher Zeit"
- },
- {
   "id": "e2",
   "date": "2026-11-03",
   "ticker": "AMD",
@@ -18,22 +12,16 @@
   "event": "US-Zwischenwahlen (Midterms)"
  },
  {
+  "id": "e9",
+  "date": "2026-11-03",
+  "ticker": "RACE",
+  "event": "Q3-Zahlen"
+ },
+ {
   "id": "e4",
   "date": "2026-11-04",
   "ticker": "NOVO-B",
   "event": "9-Monats-Zahlen, Call 13:00 Uhr"
- },
- {
-  "id": "e5",
-  "date": "2026-11-06",
-  "ticker": "Markt",
-  "event": "US-Arbeitsmarktbericht Oktober"
- },
- {
-  "id": "e6",
-  "date": "2027-01-28",
-  "ticker": "SAP",
-  "event": "Q4-Zahlen"
  },
  {
   "id": "e8",
@@ -42,15 +30,27 @@
   "event": "Q3-Zahlen"
  },
  {
-  "id": "e9",
-  "date": "2026-11-03",
-  "ticker": "RACE",
-  "event": "Q3-Zahlen"
+  "id": "e5",
+  "date": "2026-11-06",
+  "ticker": "Markt",
+  "event": "US-Arbeitsmarktbericht Oktober"
  },
  {
   "id": "e10",
   "date": "2026-11-09",
   "ticker": "HIMS",
   "event": "Q3-Zahlen"
+ },
+ {
+  "id": "e11",
+  "date": "2026-11-09",
+  "ticker": "TTD",
+  "event": "Q3-Zahlen nach US-Schluss"
+ },
+ {
+  "id": "e6",
+  "date": "2027-01-28",
+  "ticker": "SAP",
+  "event": "Q4-Zahlen"
  }
 ]

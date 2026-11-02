@@ -1,13 +1,33 @@
 [
  {
-  "id": "n_mrvl_drop_1102",
+  "id": "n_mkt_close_1102",
+  "date": "2026-11-02",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Tech-Abverkauf: Nasdaq −1,1 %, S&P 500 −0,5 %, Dow +0,4 %; Öl −7,5 %",
+  "summary": "Anleger schichteten vor den Midterms aus Tech- und Chipwerten um (Tech-Sektor zeitweise −2,4 %). Oracles milliardenschwere Kapitalaufnahme nährt Sorgen um die Finanzierung des KI-Ausbaus. Öl (WTI) fiel auf ~96 $ nach Berichten über US-Iran-Gespräche; 10-j. Rendite 4,89 %.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html"
+ },
+ {
+  "id": "n_chips_close_1102",
+  "date": "2026-11-02",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip- und KI-Werte brechen ein: AMD −7,5 %, Marvell −12,7 %, Applied Digital −9,0 %",
+  "summary": "Drei Depotwerte schließen unter ihren Stops. AMD fiel vor den Zahlen (3.11.) von 513 $ im Hoch auf 466,8 $. Eigene Unternehmensmeldungen gab es außer bei Marvell nicht – der Druck kam aus der Branche.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
+ },
+ {
+  "id": "n_mrvl_close_1102",
   "date": "2026-11-02",
   "ticker": "MRVL",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Marvell nach Lumentum-Deal im Handel rund −9 %",
-  "summary": "Die anfängliche Freude über die Übernahme-Bestätigung (vorbörslich +1 %) kippte: Marvell fällt bis ca. 179 $, Lumentum ca. −10 %. Anleger sorgen sich um den reinen Aktientausch (Verwässerung) und die Kartellprüfung; dazu schwache Halbleiter. Damit gut 30 % unter dem Kurs vor den ersten Gerüchten.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
+  "headline": "Marvell −12,7 % nach Lumentum-Übernahme per Aktientausch",
+  "summary": "Marvell zahlt 4,5 eigene Aktien je Lumentum-Aktie (Unternehmenswert ca. 115 Mrd. $, Abschluss erwartet 1. Hj. 2028). Die Verwässerung belastet; Schluss 171,4 $, neues Tief seit Juli.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
  },
  {
   "id": "n_amzn_1102",
@@ -20,16 +40,6 @@
   "url": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-midday-nov-2-stocks-rally-as-oil-prices-tumble-on-diplomatic-hopes/"
  },
  {
-  "id": "n_amd_1102",
-  "date": "2026-11-02",
-  "ticker": "AMD",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "AMD weiter schwach (−3 %) vor den Zahlen",
-  "summary": "Während der Gesamtmarkt sich erholt, fällt AMD auf ca. 489 $ – Halbleiter bleiben nach Intel-Ausblick und Marvell-Deal unter Druck. Q3-Zahlen am Dienstag nach US-Börsenschluss.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
- },
- {
   "id": "n_mrvl_lite_1102",
   "date": "2026-11-02",
   "ticker": "MRVL",
@@ -40,14 +50,14 @@
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
  },
  {
-  "id": "n_mkt_oil_1102",
-  "date": "2026-11-02",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Ölpreis rund −4,5 % auf Iran-Gesprächsberichte, Futures erholt",
-  "summary": "Brent fällt auf ca. 108 $, WTI unter 100 $, nach Berichten über Gespräche zur Beendigung des Iran-Konflikts. Nasdaq-Futures erholen sich nach dem Ausverkauf vom Freitag (QQQ vorbörslich ca. +0,8 %); Energiewerte schwächer. Apple-Zahlen heute nach Börsenschluss, Dienstag US-Midterms und AMD-Zahlen.",
-  "url": "https://currentlogic.substack.com/p/the-morning-brief-november-2-2026"
+  "id": "n_ccj_1030",
+  "date": "2026-10-30",
+  "ticker": "CCJ",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Cameco −7,9 % nach Q3: Marge eingebrochen",
+  "summary": "Bruttomarge 19,7 % statt 27,7 % (Wartung Key Lake), Liefer-Prognose eingeengt, höhere Stückkosten. Am 2.11. Schluss unter 74 $ – neues Jahrestief.",
+  "url": "https://gokhshtein.com/news/2026-11-01-cameco-shares-fall-79-on-margin-collapse-and-guidance-cut"
  },
  {
   "id": "n_mkt_close_1030",
@@ -100,6 +110,36 @@
   "url": "https://www.kiro7.com/news/business/exxonmobil-chevron/VIJHWIGWFM7EXAVSPFXPKNI2PI/"
  },
  {
+  "id": "n12",
+  "date": "2026-10-30",
+  "ticker": "ENR",
+  "impact": "niedrig",
+  "direction": "negativ",
+  "headline": "Siemens Energy −3,7 % am Vormittag",
+  "summary": "Aktie testet die 61,8 %-Zone um 131 €; Barclays sieht den Höhepunkt der Turbinen-Aufträge erreicht.",
+  "url": "https://www.boerse-express.com/news/articles/siemens-energy-aktie-946-prozent-wochenminus-nach-barclays-927312"
+ },
+ {
+  "id": "n16",
+  "date": "2026-10-30",
+  "ticker": "ENR",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Siemens Energy rutscht um rund 7 % ab",
+  "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
+  "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
+ },
+ {
+  "id": "n_now_1029",
+  "date": "2026-10-29",
+  "ticker": "NOW",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "ServiceNow ca. −27 % nach schwachem cRPO-Ausblick",
+  "summary": "Umsatz +20,5 % knapp über Erwartung, aber das Wachstum der gesicherten Umsätze soll auf 18,5 % sinken. Mehrere Analysten senkten ihre Kursziele.",
+  "url": "https://www.marketbeat.com/instant-alerts/analyst-servicenow-nyse-now-stock-gets-price-target-trim-from-td-cowen-2026-10-29/"
+ },
+ {
   "id": "n0",
   "date": "2026-10-29",
   "ticker": "GOOGL",
@@ -130,16 +170,6 @@
   "url": "https://www.marketbeat.com/earnings/reports/2026-10-29-amazoncom-inc-stock/"
  },
  {
-  "id": "n3",
-  "date": "2026-10-28",
-  "ticker": "FTNT",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Fortinet trotz Beat nachbörslich ~−25 %",
-  "summary": "Q3 über Erwartung, Prognose angehoben; Service-Umsatz wächst aber langsamer. Management spricht von Timing-Effekten und Besserung 2027.",
-  "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fortinet-beats-q3-2026-estimates-but-shares-plunge-93CH-4981034"
- },
- {
   "id": "n4",
   "date": "2026-10-29",
   "ticker": "Markt",
@@ -160,26 +190,6 @@
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
  },
  {
-  "id": "n6",
-  "date": "2026-10-27",
-  "ticker": "APLD",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Applied Digital +8–10 %: Erholung der Rechenzentrums-Aktien",
-  "summary": "Gegenbewegung nach der Musk-Warnung zu Neocloud-Anbietern und Schuldensorgen; Mitgründer kauften am Jahrestief.",
-  "url": "https://stockanalysis.com/stocks/apld/"
- },
- {
-  "id": "n12",
-  "date": "2026-10-30",
-  "ticker": "ENR",
-  "impact": "niedrig",
-  "direction": "negativ",
-  "headline": "Siemens Energy −3,7 % am Vormittag",
-  "summary": "Aktie testet die 61,8 %-Zone um 131 €; Barclays sieht den Höhepunkt der Turbinen-Aufträge erreicht.",
-  "url": "https://www.boerse-express.com/news/articles/siemens-energy-aktie-946-prozent-wochenminus-nach-barclays-927312"
- },
- {
   "id": "n13",
   "date": "2026-10-29",
   "ticker": "CAT",
@@ -190,6 +200,36 @@
   "url": "https://www.tradingpedia.com/2026/10/29/caterpillar-earnings-beat-fails-to-ease-growth-fears/"
  },
  {
+  "id": "n3",
+  "date": "2026-10-28",
+  "ticker": "FTNT",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Fortinet trotz Beat nachbörslich ~−25 %",
+  "summary": "Q3 über Erwartung, Prognose angehoben; Service-Umsatz wächst aber langsamer. Management spricht von Timing-Effekten und Besserung 2027.",
+  "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fortinet-beats-q3-2026-estimates-but-shares-plunge-93CH-4981034"
+ },
+ {
+  "id": "n_mbg_1027",
+  "date": "2026-10-27",
+  "ticker": "MBG",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Mercedes-Benz senkt Prognose 2026",
+  "summary": "Pkw-Marge nur noch 2–3 % statt 3–5 %, Konzern-EBIT auf Vorjahresniveau; Gründe: China und höhere Kosten. Q3 (28.10.) operativ leicht über Konsens, Free Cashflow deutlich darunter.",
+  "url": "https://group.mercedes-benz.com/investors/reports-news/ad-hoc/adhoc-release-453568.html"
+ },
+ {
+  "id": "n6",
+  "date": "2026-10-27",
+  "ticker": "APLD",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Applied Digital +8–10 %: Erholung der Rechenzentrums-Aktien",
+  "summary": "Gegenbewegung nach der Musk-Warnung zu Neocloud-Anbietern und Schuldensorgen; Mitgründer kauften am Jahrestief.",
+  "url": "https://stockanalysis.com/stocks/apld/"
+ },
+ {
   "id": "n14",
   "date": "2026-10-27",
   "ticker": "V",
@@ -198,15 +238,5 @@
   "headline": "Visa: Umsatz +13 %, Dividende +16 %",
   "summary": "Solides Quartal; Aktie nahe Rekordhoch.",
   "url": "https://www.heygotrade.com/en/news/visa-fiscal-q4-2026-earnings-results/"
- },
- {
-  "id": "n16",
-  "date": "2026-10-30",
-  "ticker": "ENR",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Siemens Energy rutscht um rund 7 % ab",
-  "summary": "Deutlicher Rückgang am Freitag ohne eindeutige Unternehmensmeldung; die Aktie fällt zurück in die Einstiegszone 115–131 €.",
-  "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-30-10-2026-11210117"
  }
 ]
