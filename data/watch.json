@@ -1,32 +1,47 @@
 {
- "generated_at": "2026-11-03T16:02:42+00:00",
+ "generated_at": "2026-11-03T17:09:10+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 490.68,
+   "price": 490.94,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.2026
+   "gap_to_stop": 0.2033
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 17.74,
+   "price": 17.565,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3439
+   "gap_to_stop": 0.3307
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 170.7301,
+   "price": 168.665,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1856
+   "gap_to_stop": 0.1713
   }
  ],
- "events": [],
+ "events": [
+  {
+   "ticker": "MBG",
+   "name": "Mercedes-Benz Group",
+   "group": "Watchlist",
+   "price": 40.48,
+   "chg_pct": -0.0164,
+   "at": "2026-11-03T17:09+00:00",
+   "id": "MBG-zone-2026-11-03",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Mercedes-Benz Group in der Einstiegszone",
+   "text": "Kurs 40,48 € ist in die Zone 39,50 €–40,50 € gelaufen.",
+   "todo": "40,5–42 €: beobachten, Basis noch nicht bestätigt."
+  }
+ ],
  "notified": [
   "APLD-absturz-2026-11-03",
   "MRVL-absturz-2026-11-03"
