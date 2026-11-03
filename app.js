@@ -25,6 +25,8 @@
   const dShort = (s) => { const d = new Date(String(s).slice(0, 10) + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'}); };
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
 
+  let HOR = (() => { try { return localStorage.getItem('radar-hor') || 'kurz'; } catch (e) { return 'kurz'; } })();
+  let WEEKLY = null;
   let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null, FUND = {}, SCREEN = null;
   const REPO = 'Crynx0809/portfolio-radar';
 
@@ -52,6 +54,19 @@
     $('.seg').dataset.i = i;
     renderList();
   }));
+
+  const HORTXT = {
+    kurz: 'Kurzfristig = Trade über einige Wochen: Einstiegszone, enger Stop, nächstes Ziel aus dem Tageschart.',
+    lang: 'Langfristig = Investment bis ca. 18 Monate: großes Ziel und weite Absicherung aus dem Wochenchart (5 Jahre).'};
+  function setHor(h, keepScroll) {
+    HOR = h; try { localStorage.setItem('radar-hor', h); } catch (e) { /* ok */ }
+    document.body.dataset.hor = h;
+    document.querySelectorAll('.hor button, .hz-sw button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === h)));
+    $('#horNote').textContent = HORTXT[h];
+    const go = () => { renderList(); if (SEL && isDesk()) openSheet(SEL); else if (SEL && !$('#sheet').hidden) refreshSheet(); };
+    if (h === 'lang' && !WEEKLY) load('weekly').then((w) => { WEEKLY = (w && w.stocks) || {}; go(); }).catch(() => { WEEKLY = {}; go(); }); else go();
+  }
+  document.querySelectorAll('.hor button').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
 
   /* ---------- Suche & Wünsche ---------- */
   const sIn = $('#search');
@@ -102,19 +117,24 @@
     const qy = SEARCH.trim().toLowerCase();
     const hit = (r) => [r.ticker, r.name, r.sector, r.tv_symbol].some((v) => String(v || '').toLowerCase().includes(qy));
     $('.seg').hidden = !!qy;
-    const rows = STOCKS.filter((r) => qy ? hit(r) : r.group === group).sort((a, b) =>
-      (a.alert === 'hoch' ? 0 : 1) - (b.alert === 'hoch' ? 0 : 1) || (STATUS[a.status] || {o: 9}).o - (STATUS[b.status] || {o: 9}).o || a.ticker.localeCompare(b.ticker));
+    const LTO = {bullisch: 0, neutral: 1, spekulativ: 2, 'bärisch': 3};
+    const rows = STOCKS.filter((r) => qy ? hit(r) : r.group === group).sort((a, b) => HOR === 'lang'
+      ? (LTO[a.lt_view] ?? 9) - (LTO[b.lt_view] ?? 9) || (b.lt_target_low / b.price) - (a.lt_target_low / a.price)
+      : (a.alert === 'hoch' ? 0 : 1) - (b.alert === 'hoch' ? 0 : 1) || (STATUS[a.status] || {o: 9}).o - (STATUS[b.status] || {o: 9}).o || a.ticker.localeCompare(b.ticker));
     ul.innerHTML = rows.map((r) => {
       const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
       const q = PRICES[r.ticker] || {};
       const chg = q.chg_pct != null ? q.chg_pct : null;
-      return `<li class="row" data-t="${esc(r.ticker)}" style="--sc:${s.c}" tabindex="0">
-        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${qy ? (r.group === 'Portfolio' ? 'Depot · ' : 'Watchlist · ') : ''}${esc(r.name)}</div></div>
+      const rc = HOR === 'lang' ? (LTV[r.lt_view] || [, 'var(--muted)'])[1] : s.c;
+      return `<li class="row" data-t="${esc(r.ticker)}" style="--sc:${rc}" tabindex="0">
+        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' && HOR !== 'lang' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${qy ? (r.group === 'Portfolio' ? 'Depot · ' : 'Watchlist · ') : ''}${esc(r.name)}</div></div>
         <div><div class="p" data-v="${r.price}" data-cur="${cur(r)}">${money(r.price, r)}</div>
           <div class="c ${chg == null ? '' : chg >= 0 ? 'up' : 'down'}">${chg == null ? '' : pct(chg)}</div></div>
-        <div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
-          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span>${r.lt_target_low != null ? `<span class="zone lt-z"><em>18 M</em> ${pct(r.lt_target_low / r.price - 1)}</span>` : ''}</div>
-        ${rowBar(r)}</li>`;
+        ${HOR === 'lang' && r.lt_target_low != null ? `<div class="meta"><span class="pill" style="--sc:${(LTV[r.lt_view] || [, 'var(--muted)'])[1]}">${(LTV[r.lt_view] || ['—'])[0]}</span>
+          <span class="zone"><em>Ziel ${esc(r.lt_until || '')}</em> ${num(r.lt_target_low)}–${money(r.lt_target_high, r)} · <b class="up">${pct(r.lt_target_low / r.price - 1)}</b></span></div>
+        ${ltBar(r)}` : `<div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
+          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span></div>
+        ${rowBar(r)}`}</li>`;
     }).join('') || (qy ? `<li class="empty">„${esc(SEARCH.trim())}“ ist noch nicht dabei.<br><button class="wish-btn" id="wishFromSearch">＋ „${esc(SEARCH.trim())}“ wünschen</button></li>` : '<li class="empty">Keine Werte.</li>');
     const wf = $('#wishFromSearch'); if (wf) wf.onclick = () => openWish(SEARCH.trim());
     ul.querySelectorAll('.row').forEach((li) => {
@@ -239,21 +259,60 @@
     const crvNow = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null;
     const crvZone = mid > r.lt_stop && mid < p ? (r.lt_target_low - mid) / (mid - r.lt_stop) : null;
     const col = (k) => k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)';
-    const lo = Math.min(r.lt_stop, p, r.entry_low), hi = r.lt_target_high, span = hi - lo || 1, x = (val) => Math.max(0, Math.min(100, (val - lo) / span * 100));
+    const lo = Math.min(r.lt_stop, p), hi = r.lt_target_high, span = hi - lo || 1, x = (val) => Math.max(0, Math.min(100, (val - lo) / span * 100));
     return `<div class="lt">
       <div class="lt-h"><b>Großes Ziel bis ${esc(r.lt_until || '')}</b><span class="pill" style="--sc:${v[1]}">${v[0]}</span></div>
       <div class="lt-bar"><span class="g" style="left:${x(r.lt_target_low)}%;width:${Math.max(1.5, x(r.lt_target_high) - x(r.lt_target_low))}%"></span>
-        <span class="z" style="left:${x(r.entry_low)}%;width:${Math.max(1, x(r.entry_high) - x(r.entry_low))}%"></span>
         <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(p)}%"></span></div>
       <div class="levels lt-lv">
         <div><small>Ziel 18 Monate</small><b class="up">${num(r.lt_target_low)}–${money(r.lt_target_high, r)}</b><em>${pct(r.lt_target_low / p - 1)} ab Kurs</em></div>
         <div><small>Langfristige Absicherung</small><b class="down">${money(r.lt_stop, r)}</b><em>${pct(r.lt_stop / p - 1)}</em></div>
-        <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b>${crvZone != null ? `<em>ab Einstiegszone 1 : ${num(crvZone, 1)}</em>` : ''}</div>
+        <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b></div>
         <div><small>Analysten-Ziel (Schnitt)</small><b>${r.lt_consensus != null ? money(r.lt_consensus, r) : '—'}</b>${r.lt_analysts ? `<em>${r.lt_analysts} Analysten</em>` : ''}</div>
       </div>
       <p class="lt-t">${esc(r.lt_text || '')}</p>
       <p class="lt-c">Sicherheit der Einschätzung: <b>${esc(r.lt_conf || '—')}</b> · Grundlage: Wochenchart (5 Jahre). Die Absicherung liegt weiter weg als beim kurzen Trade – dafür kleinere Position.</p>
     </div>`;
+  }
+
+  function ltBar(r) {
+    const lo = Math.min(r.lt_stop, r.price), hi = Math.max(r.lt_target_high, r.price);
+    const span = hi - lo || 1, x = (v) => Math.max(0, Math.min(100, (v - lo) / span * 100));
+    return `<div class="bar lt-bar2"><span class="g" style="left:${x(r.lt_target_low)}%;width:${Math.max(1.5, x(r.lt_target_high) - x(r.lt_target_low))}%"></span>
+      <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(r.price)}%"></span></div>`;
+  }
+  function ltChart(r) {
+    const w = (WEEKLY && WEEKLY[r.ticker]) || null;
+    if (!w || w.length < 20) return '<p class="empty">Wochenchart lädt …</p>';
+    const c = w.slice(-156), W = 360, H = 220, PL = 6, PR = 54, PT = 12, PB = 20, FUT = 90;
+    const cw = (W - PL - PR - FUT) / c.length;
+    const lv = [r.lt_target_low, r.lt_target_high, r.lt_stop, r.price];
+    let lo = Math.min(...c.map((k) => k[3]), ...lv), hi = Math.max(...c.map((k) => k[2]), ...lv);
+    const pad = (hi - lo) * .06; lo -= pad; hi += pad;
+    const y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
+    const xe = W - PR - FUT, xEnd = W - PR;
+    const line = c.map((k, i) => (i ? 'L' : 'M') + (PL + i * cw + cw / 2).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ');
+    const yr = (d) => d.slice(0, 4); let lab = ''; let prev = '';
+    c.forEach((k, i) => { if (yr(k[0]) !== prev && i > 3) lab += `<text x="${(PL + i * cw).toFixed(1)}" y="${H - 5}" class="ax">${yr(k[0])}</text><line x1="${(PL + i * cw).toFixed(1)}" x2="${(PL + i * cw).toFixed(1)}" y1="${PT}" y2="${H - PB}" class="gl"/>`; prev = yr(k[0]); });
+    const tm = (r.lt_target_low + r.lt_target_high) / 2;
+    return `<svg viewBox="0 0 ${W} ${H}" class="ltc" role="img" aria-label="Wochenchart ${esc(r.name)} mit großem Ziel und Absicherung">
+      ${lab}
+      <rect x="${PL}" y="${y(r.lt_target_high)}" width="${xEnd - PL}" height="${Math.max(2, y(r.lt_target_low) - y(r.lt_target_high))}" class="tz"/>
+      <line x1="${PL}" x2="${xEnd}" y1="${y(r.lt_stop)}" y2="${y(r.lt_stop)}" class="st"/>
+      <path d="${line}" class="wl"/>
+      <path d="M${xe} ${y(r.price)} L${xEnd - 6} ${y(tm)}" class="pj"/>
+      <circle cx="${xe}" cy="${y(r.price)}" r="3.5" class="pt"/>
+      <text x="${xEnd + 4}" y="${y(tm) + 4}" class="lb up">Ziel</text>
+      <text x="${xEnd + 4}" y="${y(r.lt_stop) + 4}" class="lb down">Absich.</text>
+      <text x="${xEnd - 4}" y="${H - 5}" class="ax" text-anchor="end">${esc(r.lt_until || '')}</text>
+    </svg>`;
+  }
+  function ltDo(r) {
+    const p = r.price, k = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null;
+    const small = r.lt_view === 'spekulativ' || r.lt_view === 'bärisch' || r.lt_conf === 'niedrig' ? ' Nur mit einer kleinen Position.' : '';
+    if (r.lt_view === 'bärisch') return 'Langfristig noch kein bestätigter Boden – eher abwarten.' + small;
+    if (k != null && k >= 2) return `Ab dem aktuellen Kurs lohnt sich ein langfristiger Einstieg rechnerisch (Chance : Risiko 1 : ${num(k, 1)}). Absicherung unter ${money(r.lt_stop, r)}.` + small;
+    return `Ab dem aktuellen Kurs ist der Abstand zum großen Ziel zu klein (Chance : Risiko ${k == null ? '—' : '1 : ' + num(k, 1)}). Langfristig besser in Rücksetzern kaufen – je näher an der Absicherung ${money(r.lt_stop, r)}, desto besser.` + small;
   }
   const isDesk = () => matchMedia('(min-width: 1180px)').matches;
   let SEL = null;
@@ -266,12 +325,20 @@
       <div class="sh-head"><div><div class="t">${esc(r.ticker)}</div><div class="n">${esc(r.name)} · ${esc(r.sector || '')}</div></div>
         <div class="sh-price"><div class="p" id="${pid}">${money(r.price, r)}</div>
         <div class="c ${q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct != null ? pct(q.chg_pct) : esc(r.chg_note || '')}</div></div></div>
-      <div class="sh-pills"><span class="pill" style="--sc:${s.c}">${s.l}</span>
-        ${r.alert === 'hoch' ? '<span class="pill" style="--sc:var(--down)">Dringend</span>' : r.alert === 'mittel' ? '<span class="pill" style="--sc:var(--warn)">Beobachten</span>' : ''}
-        <span class="pill" style="--sc:var(--muted)">${r.group === 'Portfolio' ? 'Im Depot' : 'Watchlist'}</span></div>
+      <div class="sh-pills">${HOR === 'lang' && r.lt_view ? `<span class="pill" style="--sc:${(LTV[r.lt_view] || [, 'var(--muted)'])[1]}">${(LTV[r.lt_view] || ['—'])[0]}</span>` : `<span class="pill" style="--sc:${s.c}">${s.l}</span>`}
+        ${HOR === 'lang' ? '' : r.alert === 'hoch' ? '<span class="pill" style="--sc:var(--down)">Dringend</span>' : r.alert === 'mittel' ? '<span class="pill" style="--sc:var(--warn)">Beobachten</span>' : ''}
+        <span class="pill" style="--sc:var(--muted)">${r.group === 'Portfolio' ? 'Im Depot' : 'Watchlist'}</span>
+        <span class="hz-sw" role="tablist" aria-label="Zeitraum"><button data-h="kurz" aria-selected="${HOR === 'kurz'}">⚡ Kurz</button><button data-h="lang" aria-selected="${HOR === 'lang'}">🧭 Lang</button></span></div>
       <div class="dtabs"><button data-p="ov">Überblick</button><button data-p="num">Zahlen</button><button data-p="calc">Rechner</button></div>
-      <div class="dpane" data-pane="ov">
-      ${checkHTML(r)}
+${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pane="ov">
+      <div class="hz-band lang"><b>🧭 Langfristig · Investment</b><span>bis ${esc(r.lt_until || '')} · Wochenchart</span></div>
+      <div class="chart">${ltChart(r)}
+        <div class="legend"><span style="--lc:#5aa7ff">Großes Ziel</span><span style="--lc:#ff5d6c">Langfristige Absicherung</span><span style="--lc:#7c5cff">Weg zum Ziel</span></div></div>
+      <div class="do lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
+      ${ltHTML(r)}
+      <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
+` : `      <div class="dpane" data-pane="ov">
+      <div class="hz-band kurz"><b>⚡ Kurzfristig · Trade</b><span>${esc(r.horizon_text || 'einige Wochen')}</span></div>
       <div class="chart">${chart(r)}
         <div class="legend"><span style="--lc:#2fd08a">Einstiegszone</span><span style="--lc:#5aa7ff">Ziel</span><span style="--lc:#ff5d6c">Stop</span>${r.trigger != null ? '<span style="--lc:#f5b74a">Bestätigung</span>' : ''}<span style="--lc:#b18cff">${auto ? 'Wellen-Wendepunkte' : 'Elliott-Zählung'}</span><span style="--lc:#22d3a6">erwarteter Weg</span></div></div>
       <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
@@ -286,14 +353,13 @@
         <div><small>Kurzes Ziel (Swing)</small><b class="up">${num(r.target_low)}–${money(r.target_high, r)}</b></div>
         <div><small>Chance : Risiko</small><b style="color:${k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)'}">${k == null ? '—' : '1 : ' + num(k, 1)}</b></div>
       </div>
-      ${ltHTML(r)}
       <div class="when">${r.entry_eta_text && r.status !== 'zone' && r.status !== 'trend' ? `<span>${esc(r.entry_eta_text)}</span>` : ''}${r.horizon_text ? `<span>${esc(r.horizon_text)}</span>` : ''}${r.next_event ? `<span>${esc(r.next_event)}${r.next_event_date ? ' · ' + dShort(r.next_event_date) : ''}</span>` : ''}</div>
       <details class="more"><summary>Wellenanalyse</summary>
         <p><b>Hauptszenario</b>${esc(r.wave_primary)}</p><p><b>Alternative</b>${esc(r.wave_alt)}</p>
         <p><b>Bestätigung / Invalidierung</b>Über ${money(r.trigger, r)} bestätigt · unter ${money(r.invalidation, r)} ist die Zählung falsch.</p></details>
       ${r.news_brief ? `<details class="more"><summary>Aktuelle Lage</summary><p>${esc(r.news_brief)}</p></details>` : ''}
       <p class="foot">Technisches Szenario, keine Anlageberatung.</p></div>
-      <div class="dpane kpis" data-pane="num" hidden>${analystHTML(r)}${kpiHTML(r)}<p class="foot">Analysten: Yahoo Finance · Kennzahlen: TradingView, Yahoo</p></div>
+`}      <div class="dpane kpis" data-pane="num" hidden><p class="kpi-note">Gesamtbild aus Technik, Fundament, Bewertung und Stimmung – gilt für kurz und lang.</p>${checkHTML(r)}${analystHTML(r)}${kpiHTML(r)}<p class="foot">Analysten: Yahoo Finance · Kennzahlen: TradingView, Yahoo</p></div>
       <div class="dpane" data-pane="calc" hidden>${calcHTML(r)}</div>`;
   }
   let DTAB = 'ov';
@@ -308,6 +374,12 @@
     box.querySelectorAll('.dtabs button').forEach((b) => b.classList.toggle('on', b.dataset.p === DTAB));
     box.querySelectorAll('.dpane').forEach((x) => { x.hidden = x.dataset.pane !== DTAB; });
     wireCalc(box, r);
+    box.querySelectorAll('.hz-sw button').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
+  }
+  function refreshSheet() {
+    const r = STOCKS.find((x) => x.ticker === SEL); if (!r) return;
+    const sh = $('#sheet'), top = sh.scrollTop;
+    $('#sheetBody').innerHTML = detailHTML(r, 'shP'); wireDetail(sh, r); sh.scrollTop = top;
   }
   function animateDetail(box, r, pid, delay) {
     wireDetail(box, r);
@@ -664,15 +736,16 @@
   /* ---------- Positionsgrößen-Rechner ---------- */
   const store = {get: (k, d) => { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* egal */ } }};
   function calcHTML(r) {
-    const entry = r.price >= r.entry_low && r.price <= r.entry_high ? r.price : (r.entry_low + r.entry_high) / 2;
+    const L = HOR === 'lang' && r.lt_stop != null;
+    const entry = L ? r.price : r.price >= r.entry_low && r.price <= r.entry_high ? r.price : (r.entry_low + r.entry_high) / 2;
     return `<div class="calc" data-t="${esc(r.ticker)}">
-      <p class="kpi-note">Wie viele Stück darf ich kaufen, damit ein Stop nur einen festen Teil meines Kontos kostet?</p>
+      <p class="kpi-note">${L ? '🧭 Langfristig: ' : '⚡ Kurzfristig: '}Wie viele Stück darf ich kaufen, damit ${L ? 'die langfristige Absicherung' : 'ein Stop'} nur einen festen Teil meines Kontos kostet?</p>
       <div class="calc-in">
         <label>Konto (€)<input type="number" inputmode="decimal" data-k="acct" value="${esc(store.get('pr_acct', '10000'))}"></label>
         <label>Risiko pro Trade (%)<input type="number" inputmode="decimal" step="0.25" data-k="risk" value="${esc(store.get('pr_risk', '1'))}"></label>
         <label>Einstieg (${cur(r)})<input type="number" inputmode="decimal" data-k="entry" value="${+entry.toFixed(2)}"></label>
-        <label>Stop (${cur(r)})<input type="number" inputmode="decimal" data-k="stop" value="${r.stop}"></label>
-        <label>Ziel (${cur(r)})<input type="number" inputmode="decimal" data-k="target" value="${r.target_low}"></label>
+        <label>${L ? 'Langfr. Absicherung' : 'Stop'} (${cur(r)})<input type="number" inputmode="decimal" data-k="stop" value="${L ? r.lt_stop : r.stop}"></label>
+        <label>${L ? 'Großes Ziel' : 'Ziel'} (${cur(r)})<input type="number" inputmode="decimal" data-k="target" value="${L ? r.lt_target_low : r.target_low}"></label>
       </div>
       <div class="calc-out"></div>
       <p class="foot">Ohne Gebühren und Steuern. Ein Stop schützt nicht vor Kurslücken (z. B. nach Zahlen).</p></div>`;
@@ -784,6 +857,8 @@
       $('#stand').textContent = st ? 'Stand ' + st.toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '';
       const nh = alerts.filter((a) => a.level === 'hoch').length;
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
+      document.body.dataset.hor = HOR; document.querySelectorAll('.hor button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === HOR))); $('#horNote').textContent = HORTXT[HOR];
+      if (HOR === 'lang') { try { WEEKLY = ((await load('weekly')) || {}).stocks || {}; } catch (e) { WEEKLY = {}; } }
       renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       renderCockpit(events); renderAnalyse(); renderChancen();
       setTimeout(() => popups(alerts, watch), 700);

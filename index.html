@@ -28,6 +28,11 @@
     <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
       <input id="search" type="search" placeholder="Aktie suchen – Name oder Kürzel" autocomplete="off" enterkeyhint="search">
       <button type="button" id="searchClear" aria-label="Suche löschen" hidden>✕</button></label>
+    <div class="hor" role="tablist" aria-label="Zeitraum der Analyse">
+      <button role="tab" data-h="kurz" aria-selected="true"><b>⚡ Kurzfristig</b><small>Trade · einige Wochen</small></button>
+      <button role="tab" data-h="lang" aria-selected="false"><b>🧭 Langfristig</b><small>Investment · 18 Monate</small></button>
+    </div>
+    <p class="hor-note" id="horNote"></p>
     <div class="seg" role="tablist">
       <button role="tab" data-grp="Portfolio" aria-selected="true">Depot</button>
       <button role="tab" data-grp="Watchlist" aria-selected="false">Watchlist</button>
