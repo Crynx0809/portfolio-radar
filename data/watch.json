@@ -1,81 +1,45 @@
 {
- "generated_at": "2026-11-02T21:23:31+00:00",
+ "generated_at": "2026-11-03T08:54:18+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "price": 466.84,
-   "stop": 485,
-   "trigger": 580,
-   "gap_to_stop": -0.0374
+   "stop": 408,
+   "trigger": 513,
+   "gap_to_stop": 0.1442
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
    "price": 16.22,
-   "stop": 16.8,
-   "trigger": 24,
-   "gap_to_stop": -0.0345
+   "stop": 13.2,
+   "trigger": 20.4,
+   "gap_to_stop": 0.2288
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "price": 171.41,
-   "stop": 178,
-   "trigger": 252,
-   "gap_to_stop": -0.037
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "price": 210.5,
-   "stop": 178,
-   "trigger": 217,
-   "gap_to_stop": 0.1826
+   "stop": 144,
+   "trigger": 208,
+   "gap_to_stop": 0.1903
   }
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 466.84,
-   "chg_pct": -0.0752,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "AMD-stop-2026-11-02",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Advanced Micro Devices unter dem Stop 485,00 $",
-   "text": "Kurs 466,84 $ (−7,5 % heute) liegt unter deinem Stop 485,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schlusskurs unter 485 $ → Welle-C-Szenario: reduzieren oder absichern, nächste Zone 443–484 $."
-  },
-  {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
    "price": 16.22,
    "chg_pct": -0.0895,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "APLD-stop-2026-11-02",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Applied Digital unter dem Stop 16,80 $",
-   "text": "Kurs 16,22 $ (−9,0 % heute) liegt unter deinem Stop 16,80 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schlusskurs unter 17,5 $ → Ausstieg oder starke Reduktion, nächstes Ziel 13–15 $."
-  },
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 16.22,
-   "chg_pct": -0.0895,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "APLD-absturz-2026-11-02",
+   "at": "2026-11-03T08:54+00:00",
+   "id": "APLD-absturz-2026-11-03",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −9,0 % heute",
    "text": "Starker Tagesverlust auf 16,22 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Kurs 17,2 $ knapp unter der Zone und der Invalidierung 17,19 $; Stop 16,8 $ beachten – nicht aufstocken"
+   "todo": "Schluss 16,22 $ unter deinem Stop 16,8 $ – laut Plan Ausstieg oder starke Reduktion; nicht aufstocken"
   },
   {
    "ticker": "MRVL",
@@ -83,62 +47,17 @@
    "group": "Portfolio",
    "price": 171.41,
    "chg_pct": -0.1272,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "MRVL-stop-2026-11-02",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Marvell Technology unter dem Stop 178,00 $",
-   "text": "Kurs 171,41 $ (−12,7 % heute) liegt unter deinem Stop 178,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schlusskurs unter 178 $ → Teilverkauf erwägen; unter 147 $ ist der große Aufwärtstrend gebrochen."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 171.41,
-   "chg_pct": -0.1272,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "MRVL-absturz-2026-11-02",
+   "at": "2026-11-03T08:54+00:00",
+   "id": "MRVL-absturz-2026-11-03",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −12,7 % heute",
    "text": "Starker Tagesverlust auf 171,41 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Kurs 179 $ (−8,8 %) nach Deal-Bestätigung unter der Zone, Stop 178 $ nur 0,6 % entfernt – Schluss unter 178 $ = Position reduzieren/absichern, nicht aufstocken"
-  },
-  {
-   "ticker": "GEV",
-   "name": "GE Vernova",
-   "group": "Watchlist",
-   "price": 862.25,
-   "chg_pct": 0.0051,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "GEV-zone-2026-11-02",
-   "type": "zone",
-   "level": "mittel",
-   "title": "GE Vernova in der Einstiegszone",
-   "text": "Kurs 862,25 $ ist in die Zone 785,00 $–865,00 $ gelaufen.",
-   "todo": "Einstiegsidee bei einer Umkehr in 785–865 $."
-  },
-  {
-   "ticker": "FCX",
-   "name": "Freeport-McMoRan",
-   "group": "Watchlist",
-   "price": 62.97,
-   "chg_pct": 0.008,
-   "at": "2026-11-02T21:23+00:00",
-   "id": "FCX-zone-2026-11-02",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Freeport-McMoRan in der Einstiegszone",
-   "text": "Kurs 62,97 $ ist in die Zone 59,00 $–64,00 $ gelaufen.",
-   "todo": "Einstiegsidee bei Umkehr in 59–64 $."
+   "todo": "Schluss 171,4 $ unter deinem Stop 178 $ – laut Plan Teilverkauf; Rest nur mit Stop 144 $ halten, nicht aufstocken"
   }
  ],
  "notified": [
-  "AMD-stop-2026-11-02",
-  "APLD-stop-2026-11-02",
-  "APLD-absturz-2026-11-02",
-  "MRVL-stop-2026-11-02",
-  "MRVL-absturz-2026-11-02"
+  "APLD-absturz-2026-11-03",
+  "MRVL-absturz-2026-11-03"
  ]
 }
