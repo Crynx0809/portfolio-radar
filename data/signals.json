@@ -1223,5 +1223,30 @@
 "stop": 189.0,
 "target_low": 226.0,
 "target_high": 245.0
+},
+{
+"id": "NKE-20261103T1015",
+"ticker": "NKE",
+"name": "Nike",
+"group": "Watchlist",
+"sector": "Sportartikel",
+"currency": "USD",
+"issued_at": "2026-11-03T10:15:00+01:00",
+"issued_day": "2026-11-03",
+"issued_price": 39.12,
+"trigger": 40.0,
+"invalidation": 31.97,
+"horizon_weeks_low": 4.0,
+"horizon_weeks_high": 9.0,
+"horizon_end": "2027-01-03",
+"replaced": null,
+"status": "boden",
+"bias": "neutral",
+"entry_type": "Rücksetzer",
+"entry_low": 36.8,
+"entry_high": 37.9,
+"stop": 35.8,
+"target_low": 41.7,
+"target_high": 43.5
 }
 ]
