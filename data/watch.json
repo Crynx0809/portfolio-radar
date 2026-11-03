@@ -1,29 +1,37 @@
 {
- "generated_at": "2026-11-03T17:09:10+00:00",
+ "generated_at": "2026-11-03T18:49:53+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 490.94,
+   "price": 494.845,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.2033
+   "gap_to_stop": 0.2129
+  },
+  {
+   "ticker": "AMZN",
+   "name": "Amazon.com",
+   "price": 251.0,
+   "stop": 205,
+   "trigger": 258,
+   "gap_to_stop": 0.2244
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 17.565,
+   "price": 17.88,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3307
+   "gap_to_stop": 0.3545
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 168.665,
+   "price": 172.27,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1713
+   "gap_to_stop": 0.1963
   }
  ],
  "events": [
@@ -33,7 +41,7 @@
    "group": "Watchlist",
    "price": 40.48,
    "chg_pct": -0.0164,
-   "at": "2026-11-03T17:09+00:00",
+   "at": "2026-11-03T18:49+00:00",
    "id": "MBG-zone-2026-11-03",
    "type": "zone",
    "level": "mittel",
