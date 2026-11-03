@@ -71,6 +71,19 @@ Die Läufe lesen watch.json zu Beginn: Für jedes Ereignis seit dem letzten Upda
 Zählung prüfen, action/if_* und Meldung in alerts.json anpassen) und in der Zusammenfassung erwähnen. watch.json, watch.py und
 den Workflow nicht ändern. Wächter-Issues nicht als Aktien-Wünsche behandeln (Titel beginnt mit „⚠️ Wächter:“).
 
+## Großes Ziel (18 Monate) – Felder lt_*
+
+Neben dem kurzen Swing-Ziel hat jede Aktie ein übergeordnetes Ziel aus dem **Wochenchart** (data/weekly.json, 5 Jahre Wochenkerzen,
+täglich von der Action aktualisiert): `lt_view` („bullisch“|„neutral“|„spekulativ“|„bärisch“), `lt_conf` („hoch“|„mittel“|„niedrig“),
+`lt_target_low`, `lt_target_high`, `lt_stop` (langfristige Absicherung = großes Wochentief bzw. Invalidierung der großen Welle),
+`lt_until` (heute + 18 Monate, z. B. „Mai 2028“), `lt_text` (1–2 Sätze: große Welle mit echten Wendepunkten/Daten, warum dieses Ziel),
+`lt_consensus` und `lt_analysts` (aus data/fund.json: targetMeanPrice, numberOfAnalystOpinions).
+- Ermittlung: große Welle höheren Grades (Impuls/Korrektur im Wochenchart), Fibonacci-Retracements/-Extensions; `scripts/longterm.py`
+  liefert einen groben Vorschlag, der immer geprüft wird. Bedingung: lt_stop < Kurs < lt_target_low ≤ lt_target_high.
+- **Stabil halten:** nur in der Abendanalyse am Freitag überprüfen (dann lt_until auf heute + 18 Monate setzen), oder sofort, wenn der
+  Wochen-Schlusskurs unter lt_stop fällt bzw. lt_target_low erreicht ist (dann begründet neu festlegen und in der Zusammenfassung nennen).
+- Neue Werte bekommen die lt-Felder gleich bei der Aufnahme.
+
 ## Felder je Aktie (stocks.json)
 
 ticker, name, group, sector, position_eur, price, currency, price_date, chg_note, bias („bullisch“|„neutral“|„bärisch“),

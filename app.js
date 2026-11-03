@@ -113,7 +113,7 @@
         <div><div class="p" data-v="${r.price}" data-cur="${cur(r)}">${money(r.price, r)}</div>
           <div class="c ${chg == null ? '' : chg >= 0 ? 'up' : 'down'}">${chg == null ? '' : pct(chg)}</div></div>
         <div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
-          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span></div>
+          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span>${r.lt_target_low != null ? `<span class="zone lt-z"><em>18 M</em> ${pct(r.lt_target_low / r.price - 1)}</span>` : ''}</div>
         ${rowBar(r)}</li>`;
     }).join('') || (qy ? `<li class="empty">„${esc(SEARCH.trim())}“ ist noch nicht dabei.<br><button class="wish-btn" id="wishFromSearch">＋ „${esc(SEARCH.trim())}“ wünschen</button></li>` : '<li class="empty">Keine Werte.</li>');
     const wf = $('#wishFromSearch'); if (wf) wf.onclick = () => openWish(SEARCH.trim());
@@ -229,6 +229,32 @@
     if (!(risk > 0) || r.target_low == null) return null;
     return (r.target_low - mid) / risk;
   }
+
+  /* ---------- Langfristiges Ziel (18 Monate) ---------- */
+  const LTV = {bullisch: ['Langfristig aufwärts', 'var(--up)'], neutral: ['Langfristig offen', 'var(--warn)'], spekulativ: ['Spekulativ', 'var(--purple)'], 'bärisch': ['Langfristig schwach', 'var(--down)']};
+  function ltHTML(r) {
+    if (r.lt_target_low == null) return '';
+    const p = r.price, v = LTV[r.lt_view] || ['Langfristig', 'var(--muted)'];
+    const mid = (r.entry_low + r.entry_high) / 2;
+    const crvNow = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null;
+    const crvZone = mid > r.lt_stop && mid < p ? (r.lt_target_low - mid) / (mid - r.lt_stop) : null;
+    const col = (k) => k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)';
+    const lo = Math.min(r.lt_stop, p, r.entry_low), hi = r.lt_target_high, span = hi - lo || 1, x = (val) => Math.max(0, Math.min(100, (val - lo) / span * 100));
+    return `<div class="lt">
+      <div class="lt-h"><b>Großes Ziel bis ${esc(r.lt_until || '')}</b><span class="pill" style="--sc:${v[1]}">${v[0]}</span></div>
+      <div class="lt-bar"><span class="g" style="left:${x(r.lt_target_low)}%;width:${Math.max(1.5, x(r.lt_target_high) - x(r.lt_target_low))}%"></span>
+        <span class="z" style="left:${x(r.entry_low)}%;width:${Math.max(1, x(r.entry_high) - x(r.entry_low))}%"></span>
+        <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(p)}%"></span></div>
+      <div class="levels lt-lv">
+        <div><small>Ziel 18 Monate</small><b class="up">${num(r.lt_target_low)}–${money(r.lt_target_high, r)}</b><em>${pct(r.lt_target_low / p - 1)} ab Kurs</em></div>
+        <div><small>Langfristige Absicherung</small><b class="down">${money(r.lt_stop, r)}</b><em>${pct(r.lt_stop / p - 1)}</em></div>
+        <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b>${crvZone != null ? `<em>ab Einstiegszone 1 : ${num(crvZone, 1)}</em>` : ''}</div>
+        <div><small>Analysten-Ziel (Schnitt)</small><b>${r.lt_consensus != null ? money(r.lt_consensus, r) : '—'}</b>${r.lt_analysts ? `<em>${r.lt_analysts} Analysten</em>` : ''}</div>
+      </div>
+      <p class="lt-t">${esc(r.lt_text || '')}</p>
+      <p class="lt-c">Sicherheit der Einschätzung: <b>${esc(r.lt_conf || '—')}</b> · Grundlage: Wochenchart (5 Jahre). Die Absicherung liegt weiter weg als beim kurzen Trade – dafür kleinere Position.</p>
+    </div>`;
+  }
   const isDesk = () => matchMedia('(min-width: 1180px)').matches;
   let SEL = null;
   function detailHTML(r, pid) {
@@ -257,9 +283,10 @@
       <div class="levels">
         <div><small>Einstieg${r.entry_type === 'Ausbruch' ? ' (Ausbruch)' : ''}</small><b>${num(r.entry_low)}–${money(r.entry_high, r)}</b></div>
         <div><small>Stop</small><b class="down">${money(r.stop, r)}</b></div>
-        <div><small>Ziel</small><b class="up">${num(r.target_low)}–${money(r.target_high, r)}</b></div>
+        <div><small>Kurzes Ziel (Swing)</small><b class="up">${num(r.target_low)}–${money(r.target_high, r)}</b></div>
         <div><small>Chance : Risiko</small><b style="color:${k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)'}">${k == null ? '—' : '1 : ' + num(k, 1)}</b></div>
       </div>
+      ${ltHTML(r)}
       <div class="when">${r.entry_eta_text && r.status !== 'zone' && r.status !== 'trend' ? `<span>${esc(r.entry_eta_text)}</span>` : ''}${r.horizon_text ? `<span>${esc(r.horizon_text)}</span>` : ''}${r.next_event ? `<span>${esc(r.next_event)}${r.next_event_date ? ' · ' + dShort(r.next_event_date) : ''}</span>` : ''}</div>
       <details class="more"><summary>Wellenanalyse</summary>
         <p><b>Hauptszenario</b>${esc(r.wave_primary)}</p><p><b>Alternative</b>${esc(r.wave_alt)}</p>

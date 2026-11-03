@@ -344,3 +344,19 @@ details.more .tbl { margin-bottom: 12px; }
 .pop-go:hover { border-color: var(--fg); }
 .pop-note { color: var(--dim); font-size: 12px; margin: 4px 0 12px; }
 .pop-ok { width: 100%; background: var(--accent); border: 0; color: #fff; font: 700 15px Inter, sans-serif; padding: 12px; border-radius: 12px; cursor: pointer; }
+
+/* Langfristiges Ziel */
+.lt { margin: 14px 0; padding: 14px; border-radius: 14px; background: linear-gradient(135deg, rgba(124,92,255,.10), rgba(34,211,166,.06)); border: 1px solid var(--line); }
+.lt-h { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 10px; }
+.lt-bar { position: relative; height: 10px; border-radius: 6px; background: var(--bg2); margin: 4px 0 12px; }
+.lt-bar span { position: absolute; top: 0; bottom: 0; }
+.lt-bar .g { background: rgba(90,167,255,.55); border-radius: 4px; }
+.lt-bar .z { background: rgba(47,208,138,.6); border-radius: 4px; }
+.lt-bar .s { width: 2px; background: var(--down); }
+.lt-bar .k { width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--fg); box-shadow: 0 0 0 2px var(--card); }
+.lt-lv em { display: block; font-style: normal; color: var(--muted); font-size: 12px; margin-top: 2px; }
+.lt-t { margin: 10px 0 4px; font-size: 14px; line-height: 1.5; }
+.lt-c { margin: 0; color: var(--dim); font-size: 12px; }
+.lt-z em { color: var(--blue); }
+
+.row .meta { flex-wrap: wrap; row-gap: 6px; }

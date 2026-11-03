@@ -66,7 +66,16 @@
     "p": 466.07,
     "l": "C"
    }
-  ]
+  ],
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 660,
+  "lt_target_high": 780,
+  "lt_stop": 360,
+  "lt_until": "Mai 2028",
+  "lt_text": "Riesiger Impuls vom April-2025-Tief (76 $) auf 658 $ (Okt. 2026). Der aktuelle Rücksetzer ist vermutlich Welle 4; typische Zone 367–436 $ (38,2–50 %). Danach Welle 5 über das Rekordhoch.",
+  "lt_consensus": 646.74,
+  "lt_analysts": 49
  },
  {
   "ticker": "GOOGL",
@@ -125,7 +134,16 @@
     "p": 276.92,
     "l": "C"
    }
-  ]
+  ],
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 380,
+  "lt_target_high": 440,
+  "lt_stop": 240,
+  "lt_until": "Mai 2028",
+  "lt_text": "Anstieg 2025 von 140 $ auf 409 $ (Mai 2026), seitdem Korrektur bis an das 50 %-Retracement (~275 $). Hält diese Zone, ist die Rückkehr zum Rekordhoch das große Ziel.",
+  "lt_consensus": 402.73,
+  "lt_analysts": 53
  },
  {
   "ticker": "AMZN",
@@ -167,7 +185,16 @@
   "horizon_end": "2027-01-15",
   "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "Einstiegszone in ca. 2–4 Wochen (bis ca. Anfang Dez.)",
-  "tv_symbol": "NASDAQ:AMZN"
+  "tv_symbol": "NASDAQ:AMZN",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 290,
+  "lt_target_high": 340,
+  "lt_stop": 196,
+  "lt_until": "Mai 2028",
+  "lt_text": "Aufwärtstrend seit 2023 intakt: Hoch 287 $ (Aug. 2026), Korrektur bis 229 $ zwischen 38,2 und 50 %. Nächste große Welle über das Rekordhoch.",
+  "lt_consensus": 327.08,
+  "lt_analysts": 58
  },
  {
   "ticker": "APLD",
@@ -231,7 +258,16 @@
     "p": 16.16,
     "l": "C"
    }
-  ]
+  ],
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 28,
+  "lt_target_high": 40,
+  "lt_stop": 12,
+  "lt_until": "Mai 2028",
+  "lt_text": "Kursvervielfachung von 3 $ auf 51 $, danach −68 %. Der Rückgang liegt tief zwischen 61,8 und 78,6 % – als große Welle 2 möglich, aber nur mit sehr kleiner Position und hartem Stop.",
+  "lt_consensus": 60.94,
+  "lt_analysts": 16
  },
  {
   "ticker": "BAC",
@@ -273,7 +309,16 @@
   "horizon_end": "2026-12-24",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:BAC"
+  "tv_symbol": "NYSE:BAC",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 62,
+  "lt_target_high": 70,
+  "lt_stop": 44,
+  "lt_until": "Mai 2028",
+  "lt_text": "Langer Aufwärtstrend vom 2023-Tief (25 $) bis 65 $ (Aug. 2026). Der Rücksetzer steht am 38,2–50 %-Retracement (45–50 $) – klassische Zone für das Ende einer großen Korrektur.",
+  "lt_consensus": 62.61,
+  "lt_analysts": 22
  },
  {
   "ticker": "FTNT",
@@ -337,7 +382,16 @@
     "p": 125.8,
     "l": "C"
    }
-  ]
+  ],
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 170,
+  "lt_target_high": 200,
+  "lt_stop": 112,
+  "lt_until": "Mai 2028",
+  "lt_text": "Starker Impuls von 70 $ (2025) auf 197 $ (Okt. 2026). Die Korrektur hat bereits 56 % zurückgegeben; bei 118 $ liegt das 61,8 %-Retracement. Hält das, ist die Rückkehr Richtung Hoch das große Ziel.",
+  "lt_consensus": 145.96,
+  "lt_analysts": 37
  },
  {
   "ticker": "MRVL",
@@ -401,7 +455,16 @@
     "p": 168.59,
     "l": "C"
    }
-  ]
+  ],
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 250,
+  "lt_target_high": 330,
+  "lt_stop": 145,
+  "lt_until": "Mai 2028",
+  "lt_text": "Impuls von 47 $ (2025) auf 330 $ (Juni 2026), jetzt Rückfall Richtung 61,8 % (155 $). Die Lumentum-Übernahme läuft bis 2028 und belastet – langfristig Chance, aber mit hoher Unsicherheit.",
+  "lt_consensus": 333.09,
+  "lt_analysts": 41
  },
  {
   "ticker": "NOVO-B",
@@ -460,7 +523,16 @@
     "p": 36.23,
     "l": "3"
    }
-  ]
+  ],
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 45,
+  "lt_target_high": 55,
+  "lt_stop": 29,
+  "lt_until": "Mai 2028",
+  "lt_text": "Absturz von 138 € (2024) auf 30 € (März 2026), seitdem Bodenbildung. Großes Ziel sind die Zwischenhochs von 2026 (45 € und 55 €) – erst über 45 € wäre die Trendwende belegt.",
+  "lt_consensus": null,
+  "lt_analysts": null
  },
  {
   "ticker": "SAP",
@@ -519,7 +591,16 @@
     "p": 216.65,
     "l": "3"
    }
-  ]
+  ],
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 240,
+  "lt_target_high": 280,
+  "lt_stop": 165,
+  "lt_until": "Mai 2028",
+  "lt_text": "Großer Aufwärtstrend seit 2022 (80 € → 284 €). Die tiefe Korrektur endete vermutlich bei 127,5 € (Juli 2026); seitdem kräftige neue Welle. Großes Ziel: Rückkehr in Richtung Rekordhoch.",
+  "lt_consensus": 238.93,
+  "lt_analysts": 27
  },
  {
   "ticker": "LLY",
@@ -561,7 +642,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:LLY"
+  "tv_symbol": "NYSE:LLY",
+  "lt_view": "bullisch",
+  "lt_conf": "hoch",
+  "lt_target_low": 1600,
+  "lt_target_high": 1850,
+  "lt_stop": 1150,
+  "lt_until": "Mai 2028",
+  "lt_text": "Einer der stärksten Langfristtrends am Markt: neues Rekordhoch 1.450 $ (Okt. 2026). Die laufende Welle 3 hat rechnerisch Platz bis 1.600–1.850 $. Analysten liegen im Schnitt schon unter dem Kurs – Rücksetzer einplanen.",
+  "lt_consensus": 1426.92,
+  "lt_analysts": 29
  },
  {
   "ticker": "ISRG",
@@ -603,7 +693,16 @@
   "horizon_end": "2026-12-20",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NASDAQ:ISRG"
+  "tv_symbol": "NASDAQ:ISRG",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 520,
+  "lt_target_high": 600,
+  "lt_stop": 380,
+  "lt_until": "Mai 2028",
+  "lt_text": "Hoch 616 $ (Jan. 2025), Korrektur bis 329 $ (Juli 2026), seitdem Erholung. Großes Ziel ist die Rückkehr zum alten Hoch.",
+  "lt_consensus": 482.63,
+  "lt_analysts": 30
  },
  {
   "ticker": "XOM",
@@ -645,7 +744,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:XOM"
+  "tv_symbol": "NYSE:XOM",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 200,
+  "lt_target_high": 225,
+  "lt_stop": 150,
+  "lt_until": "Mai 2028",
+  "lt_text": "Ausbruch 2026 aus einer mehrjährigen Spanne (95–126 $) auf 188 $. Das Kursziel aus der Spanne liegt bei 200–225 $. Stark vom Ölpreis abhängig.",
+  "lt_consensus": 182.05,
+  "lt_analysts": 21
  },
  {
   "ticker": "RHM",
@@ -687,7 +795,16 @@
   "horizon_end": "2027-01-22",
   "horizon_text": "Ziel in ca. 5–12 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
-  "tv_symbol": "XETR:RHM"
+  "tv_symbol": "XETR:RHM",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 1330,
+  "lt_target_high": 1600,
+  "lt_stop": 850,
+  "lt_until": "Mai 2028",
+  "lt_text": "Großer Anstieg bis 2.008 € (Sept. 2025), Absturz um 55 % bis 909 € – genau am 61,8 %-Retracement des Gesamtanstiegs. Hält das, ist eine Erholung um 38,2–61,8 % (1.330–1.600 €) das große Ziel.",
+  "lt_consensus": 1552.24,
+  "lt_analysts": 21
  },
  {
   "ticker": "ENR",
@@ -729,7 +846,16 @@
   "horizon_end": "2026-12-03",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "XETR:ENR"
+  "tv_symbol": "XETR:ENR",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 175,
+  "lt_target_high": 210,
+  "lt_stop": 100,
+  "lt_until": "Mai 2028",
+  "lt_text": "Einer der größten Gewinner der letzten Jahre (6 € → 192 €). Die Korrektur bis 117 € gab 40 % zurück; der große Trend ist intakt.",
+  "lt_consensus": 192.55,
+  "lt_analysts": 28
  },
  {
   "ticker": "GEV",
@@ -771,7 +897,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:GEV"
+  "tv_symbol": "NYSE:GEV",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 1100,
+  "lt_target_high": 1300,
+  "lt_stop": 700,
+  "lt_until": "Mai 2028",
+  "lt_text": "Großer Aufwärtstrend (115 $ → 1.196 $). Die Korrektur bis 796 $ erreichte das 38,2 %-Retracement – typisch für eine Welle 4. Danach neues Hoch.",
+  "lt_consensus": 1188.92,
+  "lt_analysts": 33
  },
  {
   "ticker": "NEE",
@@ -813,7 +948,16 @@
   "horizon_end": "2027-03-08",
   "horizon_text": "Ziel in ca. 8–18 Wochen (bis ca. Anfang März)",
   "entry_eta_text": "Einstiegszone in ca. 3–8 Wochen (bis ca. Ende Dez.)",
-  "tv_symbol": "NYSE:NEE"
+  "tv_symbol": "NYSE:NEE",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 95,
+  "lt_target_high": 105,
+  "lt_stop": 72,
+  "lt_until": "Mai 2028",
+  "lt_text": "Seit Jahren breite Spanne zwischen 47 und 99 $. Großes Ziel ist der obere Rand; als Versorger stark zinsabhängig.",
+  "lt_consensus": 94.0,
+  "lt_analysts": 19
  },
  {
   "ticker": "ALV",
@@ -855,7 +999,16 @@
   "horizon_end": "2026-12-04",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "XETR:ALV"
+  "tv_symbol": "XETR:ALV",
+  "lt_view": "bullisch",
+  "lt_conf": "hoch",
+  "lt_target_low": 480,
+  "lt_target_high": 540,
+  "lt_stop": 390,
+  "lt_until": "Mai 2028",
+  "lt_text": "Ruhiger, stabiler Aufwärtstrend seit 2022 (156 € → 455 €). Ziel ist die Fortsetzung im bisherigen Tempo.",
+  "lt_consensus": 447.77,
+  "lt_analysts": 16
  },
  {
   "ticker": "JPM",
@@ -897,7 +1050,16 @@
   "horizon_end": "2026-12-21",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:JPM"
+  "tv_symbol": "NYSE:JPM",
+  "lt_view": "bullisch",
+  "lt_conf": "hoch",
+  "lt_target_low": 380,
+  "lt_target_high": 420,
+  "lt_stop": 295,
+  "lt_until": "Mai 2028",
+  "lt_text": "Stabiler Aufwärtstrend seit 2022 (101 $ → 367 $). Der Rücksetzer ist klein; das Ziel ist die Fortsetzung des Trends.",
+  "lt_consensus": 373.48,
+  "lt_analysts": 23
  },
  {
   "ticker": "V",
@@ -939,7 +1101,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:V"
+  "tv_symbol": "NYSE:V",
+  "lt_view": "bullisch",
+  "lt_conf": "hoch",
+  "lt_target_low": 470,
+  "lt_target_high": 520,
+  "lt_stop": 370,
+  "lt_until": "Mai 2028",
+  "lt_text": "Neues Rekordhoch; seit 2022 gleichmäßiger Aufwärtstrend (175 $ → 427 $). Ziel ist die Fortsetzung.",
+  "lt_consensus": 443.44,
+  "lt_analysts": 37
  },
  {
   "ticker": "COST",
@@ -981,7 +1152,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NASDAQ:COST"
+  "tv_symbol": "NASDAQ:COST",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 1150,
+  "lt_target_high": 1250,
+  "lt_stop": 920,
+  "lt_until": "Mai 2028",
+  "lt_text": "Langer Aufwärtstrend, seit 2025 Seitwärtsphase 844–1.097 $. Ein Ausbruch nach oben hat ein rechnerisches Ziel von 1.150–1.250 $.",
+  "lt_consensus": 1067.59,
+  "lt_analysts": 37
  },
  {
   "ticker": "WMT",
@@ -1023,7 +1203,16 @@
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
   "entry_eta_text": "",
-  "tv_symbol": "NASDAQ:WMT"
+  "tv_symbol": "NASDAQ:WMT",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 140,
+  "lt_target_high": 155,
+  "lt_stop": 110,
+  "lt_until": "Mai 2028",
+  "lt_text": "Großer Aufwärtstrend (39 $ → 135 $). Die Korrektur bis 102 $ ist beendet, die Erholung läuft Richtung neues Hoch.",
+  "lt_consensus": 127.47,
+  "lt_analysts": 40
  },
  {
   "ticker": "FCX",
@@ -1065,7 +1254,16 @@
   "horizon_end": "2026-12-18",
   "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:FCX"
+  "tv_symbol": "NYSE:FCX",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 78,
+  "lt_target_high": 90,
+  "lt_stop": 52,
+  "lt_until": "Mai 2028",
+  "lt_text": "Kupfer-Aufschwung: 28 $ (2025) → 80 $ (Aug. 2026), seitdem Korrektur. Großes Ziel ist die Rückkehr zum Hoch und etwas darüber.",
+  "lt_consensus": 78.75,
+  "lt_analysts": 22
  },
  {
   "ticker": "CAT",
@@ -1107,7 +1305,16 @@
   "horizon_end": "2026-12-17",
   "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:CAT"
+  "tv_symbol": "NYSE:CAT",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 850,
+  "lt_target_high": 1000,
+  "lt_stop": 540,
+  "lt_until": "Mai 2028",
+  "lt_text": "Kursverdopplung bis 1.073 $ (Juni 2026), danach −43 % bis ans 61,8 %-Retracement (575 $). Hält diese Zone, ist eine große Erholung Richtung 850–1.000 $ das Ziel.",
+  "lt_consensus": 838.38,
+  "lt_analysts": 26
  },
  {
   "ticker": "DTE",
@@ -1149,7 +1356,16 @@
   "horizon_end": "2026-12-18",
   "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "XETR:DTE"
+  "tv_symbol": "XETR:DTE",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 30,
+  "lt_target_high": 34,
+  "lt_stop": 22.5,
+  "lt_until": "Mai 2028",
+  "lt_text": "Hoch 36 € (März 2025), Tief 23,5 € (Juni 2026). Das große Ziel ist die obere Hälfte dieser Spanne – erst über 29,5 € wird es überzeugend.",
+  "lt_consensus": 36.26,
+  "lt_analysts": 18
  },
  {
   "ticker": "CCJ",
@@ -1191,7 +1407,16 @@
   "horizon_end": "2026-12-06",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:CCJ"
+  "tv_symbol": "NYSE:CCJ",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 105,
+  "lt_target_high": 130,
+  "lt_stop": 60,
+  "lt_until": "Mai 2028",
+  "lt_text": "Anstieg von 35 $ auf 135 $ (Jan. 2026), Korrektur genau bis ans 61,8 %-Retracement (73 $). Hält diese Marke, ist der große Uran-Trend intakt.",
+  "lt_consensus": 121.56,
+  "lt_analysts": 10
  },
  {
   "ticker": "AIR",
@@ -1233,7 +1458,16 @@
   "horizon_end": "2027-01-03",
   "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)",
-  "tv_symbol": "EURONEXT:AIR"
+  "tv_symbol": "EURONEXT:AIR",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 230,
+  "lt_target_high": 260,
+  "lt_stop": 170,
+  "lt_until": "Mai 2028",
+  "lt_text": "Langer Aufwärtstrend seit 2022 (87 € → 221 €), seit Anfang 2026 Seitwärtsphase 157–221 €. Ziel ist der Ausbruch nach oben.",
+  "lt_consensus": 231.96,
+  "lt_analysts": 24
  },
  {
   "ticker": "BRK-B",
@@ -1275,7 +1509,16 @@
   "horizon_end": "2026-12-05",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:BRK.B"
+  "tv_symbol": "NYSE:BRK.B",
+  "lt_view": "bullisch",
+  "lt_conf": "hoch",
+  "lt_target_low": 600,
+  "lt_target_high": 660,
+  "lt_stop": 495,
+  "lt_until": "Mai 2028",
+  "lt_text": "Neues Rekordhoch nach zwei Jahren Seitwärtsphase – ruhiger Langfristtrend. Ziel ist die Fortsetzung im gewohnten Tempo.",
+  "lt_consensus": 555.67,
+  "lt_analysts": 3
  },
  {
   "ticker": "RACE",
@@ -1317,7 +1560,16 @@
   "horizon_end": "2026-12-07",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:RACE"
+  "tv_symbol": "NYSE:RACE",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 470,
+  "lt_target_high": 520,
+  "lt_stop": 360,
+  "lt_until": "Mai 2028",
+  "lt_text": "Hoch 519 $ (Juli 2025), Korrektur bis 313 $ (März 2026), seitdem Erholung. Großes Ziel ist die Rückkehr zum alten Hoch.",
+  "lt_consensus": 455.85,
+  "lt_analysts": 12
  },
  {
   "ticker": "MELI",
@@ -1359,7 +1611,16 @@
   "horizon_end": "2027-01-22",
   "horizon_text": "Ziel in ca. 5–12 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Ende Nov.)",
-  "tv_symbol": "NASDAQ:MELI"
+  "tv_symbol": "NASDAQ:MELI",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 2100,
+  "lt_target_high": 2500,
+  "lt_stop": 1450,
+  "lt_until": "Mai 2028",
+  "lt_text": "Hoch 2.645 $ (Juni 2025), Korrektur bis 1.495 $ (Mai 2026), seitdem breite Bodenbildung. Großes Ziel ist eine Erholung um 50–80 % des Rückgangs.",
+  "lt_consensus": 2271.93,
+  "lt_analysts": 26
  },
  {
   "ticker": "RKLB",
@@ -1401,7 +1662,16 @@
   "horizon_end": "2026-12-24",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NASDAQ:RKLB"
+  "tv_symbol": "NASDAQ:RKLB",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 85,
+  "lt_target_high": 120,
+  "lt_stop": 40,
+  "lt_until": "Mai 2028",
+  "lt_text": "Kursexplosion von 3,5 $ auf 151 $, danach −66 %. Großes Bild eher eine tiefe Welle 2; der Neutron-Erststart 2027 ist der Schlüssel. Sehr schwankungsanfällig.",
+  "lt_consensus": 102.15,
+  "lt_analysts": 20
  },
  {
   "ticker": "OKLO",
@@ -1443,7 +1713,16 @@
   "horizon_end": "2027-01-23",
   "horizon_text": "Ziel in ca. 5–12 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:OKLO"
+  "tv_symbol": "NYSE:OKLO",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 40,
+  "lt_target_high": 60,
+  "lt_stop": 18,
+  "lt_until": "Mai 2028",
+  "lt_text": "Absturz um 88 % (194 $ → 23 $), noch kein bestätigter Boden. Das große Ziel gilt nur, wenn sich ein Boden bildet – reine Spekulation.",
+  "lt_consensus": 65.25,
+  "lt_analysts": 20
  },
  {
   "ticker": "HIMS",
@@ -1485,7 +1764,16 @@
   "horizon_end": "2026-12-25",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:HIMS"
+  "tv_symbol": "NYSE:HIMS",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 35,
+  "lt_target_high": 45,
+  "lt_stop": 18,
+  "lt_until": "Mai 2028",
+  "lt_text": "Große Spanne seit 2025 zwischen 14 $ und 73 $. Großes Ziel ist die obere Hälfte; hohes Regulierungsrisiko.",
+  "lt_consensus": 31.15,
+  "lt_analysts": 13
  },
  {
   "ticker": "NU",
@@ -1527,7 +1815,16 @@
   "horizon_end": "2026-12-07",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NYSE:NU"
+  "tv_symbol": "NYSE:NU",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 16,
+  "lt_target_high": 19,
+  "lt_stop": 10,
+  "lt_until": "Mai 2028",
+  "lt_text": "Aufwärtstrend seit 2022 (3,3 $ → 19 $), seitdem Korrektur bis 11,2 $. Großes Ziel ist die Rückkehr zum Hoch.",
+  "lt_consensus": 18.8,
+  "lt_analysts": 23
  },
  {
   "ticker": "HOOD",
@@ -1569,7 +1866,16 @@
   "horizon_end": "2026-12-16",
   "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
-  "tv_symbol": "NASDAQ:HOOD"
+  "tv_symbol": "NASDAQ:HOOD",
+  "lt_view": "spekulativ",
+  "lt_conf": "mittel",
+  "lt_target_low": 120,
+  "lt_target_high": 150,
+  "lt_stop": 62,
+  "lt_until": "Mai 2028",
+  "lt_text": "Riesiger Anstieg 2025 (30 $ → 154 $), Korrektur bis 64 $ (März 2026). Großes Ziel ist die Rückkehr Richtung Hoch – stark abhängig vom Krypto-Markt.",
+  "lt_consensus": 130.67,
+  "lt_analysts": 30
  },
  {
   "ticker": "MBG",
@@ -1639,7 +1945,16 @@
   "horizon_weeks_high": 7,
   "horizon_end": "2026-12-22",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)"
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 50,
+  "lt_target_high": 58,
+  "lt_stop": 36,
+  "lt_until": "Mai 2028",
+  "lt_text": "Seit 2022 langsamer Abwärtstrend (78 € → 39 €). Das große Ziel ist die Rückkehr in die alte Spanne um 50–58 € – nur wenn das Tief bei 39 € hält.",
+  "lt_consensus": 51.16,
+  "lt_analysts": 20
  },
  {
   "ticker": "TTD",
@@ -1714,7 +2029,16 @@
   "horizon_weeks_high": 9,
   "horizon_end": "2027-01-03",
   "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
-  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)"
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)",
+  "lt_view": "bärisch",
+  "lt_conf": "niedrig",
+  "lt_target_low": 18,
+  "lt_target_high": 25,
+  "lt_stop": 10,
+  "lt_until": "Mai 2028",
+  "lt_text": "Absturz um 91 % (141 $ → 11,6 $), kein bestätigter Boden. Das große Ziel ist nur eine Erholung um 5–10 % des Absturzes – reine Spekulation.",
+  "lt_consensus": 13.53,
+  "lt_analysts": 30
  },
  {
   "ticker": "NOW",
@@ -1784,7 +2108,16 @@
   "horizon_weeks_high": 4,
   "horizon_end": "2026-11-30",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Nov.)",
-  "entry_eta_text": ""
+  "entry_eta_text": "",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 140,
+  "lt_target_high": 170,
+  "lt_stop": 90,
+  "lt_until": "Mai 2028",
+  "lt_text": "Hoch 240 $ (Jan. 2025), Tief 81 $ (Apr. 2026), danach schwankend zwischen 100 und 160 $. Großes Ziel ist der obere Bereich dieser Spanne.",
+  "lt_consensus": 154.69,
+  "lt_analysts": 46
  },
  {
   "ticker": "MOH",
@@ -1859,7 +2192,16 @@
   "horizon_weeks_high": 5,
   "horizon_end": "2026-12-10",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
-  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)"
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)",
+  "lt_view": "neutral",
+  "lt_conf": "mittel",
+  "lt_target_low": 260,
+  "lt_target_high": 300,
+  "lt_stop": 175,
+  "lt_until": "Mai 2028",
+  "lt_text": "Absturz von 424 $ (2024) auf 121 $ (Feb. 2026), seitdem Erholung bis 245 $ und höhere Tiefs. Großes Ziel ist eine Erholung um 38,2–50 % des Absturzes.",
+  "lt_consensus": 219.53,
+  "lt_analysts": 17
  },
  {
   "ticker": "NKE",
@@ -1940,6 +2282,15 @@
     "p": 36.84,
     "l": "2"
    }
-  ]
+  ],
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 48,
+  "lt_target_high": 58,
+  "lt_stop": 31,
+  "lt_until": "Mai 2028",
+  "lt_text": "Absturz um 82 % seit 2021 (179 $ → 32 $), erst seit Oktober eine Erholung. Großes Ziel ist eine Erholung um 38,2 % des letzten Rückgangs – nur wenn das Tief bei 32 $ hält.",
+  "lt_consensus": 36.5,
+  "lt_analysts": 37
  }
 ]
