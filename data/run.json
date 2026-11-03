@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-02T22:55:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Schwarzer Tag für die Chip-Positionen: AMD (466,8 $), Marvell (171,4 $) und Applied Digital (16,22 $) schließen unter ihren Stops – laut Plan reduzieren. Fortinet am Zonenboden. Neu auf der Watchlist: Mercedes-Benz, The Trade Desk, ServiceNow, Molina.",
-  "market": "Nasdaq −1,1 %, S&P 500 −0,5 %, Dow +0,4 %: Rotation aus Tech vor den Midterms. Öl −7,5 % (WTI ~96 $) auf Iran-Gesprächsberichte, 10-j. Rendite 4,89 %. Morgen Midterms und AMD-Zahlen, Mi. Novo Nordisk, Do. Rheinmetall, Fr. US-Arbeitsmarkt. Kurse: TradingView, Abruf 22:32 Uhr (US-Schluss).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-03T14:20:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
+  "market": "Vorbörse US: Dow-Futures ca. −0,9 %, S&P 500 −0,2 %, Nasdaq-100 +0,1 % – Apple schwächer nach Zahlen (China-Umsatz verfehlt), Palantir trotz Beat im Minus. Heute Midterms (Ergebnisse ab heute Nacht), AMD-Zahlen nach US-Schluss. Öl +2,2 % (WTI ~98,6 $), 10-j. Rendite 4,89 %. Europa: SAP −2,9 %, Airbus −1,4 %. Kurse: TradingView, Abruf 14:15 Uhr (US-Werte = Schluss 2.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]
