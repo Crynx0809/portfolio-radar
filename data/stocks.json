@@ -1860,5 +1860,86 @@
   "horizon_end": "2026-12-10",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Anfang Dez.)",
   "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)"
+ },
+ {
+  "ticker": "NKE",
+  "group": "Watchlist",
+  "name": "Nike",
+  "sector": "Sportartikel",
+  "currency": "USD",
+  "tv_symbol": "NYSE:NKE",
+  "bias": "neutral",
+  "status": "boden",
+  "entry_low": 36.8,
+  "entry_high": 37.9,
+  "entry_type": "Rücksetzer",
+  "stop": 35.8,
+  "invalidation": 31.97,
+  "trigger": 40.0,
+  "target_low": 41.7,
+  "target_high": 43.5,
+  "support_low": 36.8,
+  "support_high": 37.9,
+  "alert": "",
+  "wave_primary": "ABC-Korrektur vom Hoch bei 47,65 $ (28.5.): A bis 40,00 $ (26.6.), B bis 45,04 $ (2.7.), C bis zum 52-Wochen-Tief 31,97 $ (2.10., nach den Q1-Zahlen). Seitdem +22 % mit höheren Tiefs (36,84 $ am 28.10. = vermutlich Welle 2) – möglicher Beginn einer neuen Aufwärtswelle. Der Kurs steht knapp unter dem 50 %-Retracement (39,81 $); 61,8 % liegt bei 41,66 $.",
+  "wave_alt": "Die Erholung ist nur eine Gegenbewegung (Welle B/4): Abprall am 50–61,8 %-Bereich und neuer Abwärtsschub unter 36 $ Richtung 32 $.",
+  "plan": "Bekannte Marke mitten im Umbau (Lagerabbau, schwaches China, Zölle). Langsamer Turnaround, aber 4,2 % Dividendenrendite. Gegengewicht zu Tech. Investor Day am 16./17.11. kann den Kurs stark bewegen.",
+  "news_brief": "1.10.: Q1-Gewinn über Erwartung (0,48 $ je Aktie), Umsatz −4 % und knapp darunter; Jahresprognose unter Konsens – Aktie fiel aufs 52-Wochen-Tief. Investor Day am 16./17.11.",
+  "next_event": "Investor Day",
+  "next_event_date": "2026-11-16",
+  "action": "Möglicher Boden – Rücksetzer auf 36,80–37,90 $ oder Schluss über 40 $ abwarten",
+  "if_up": "Schlusskurs über 40 $ → Erholung bestätigt, Ziel 41,70–43,50 $ (61,8 % Rücklauf / Sommer-Niveau).",
+  "if_wait": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $.",
+  "if_down": "Schlusskurs unter 35,80 $ → Boden gescheitert, kein Einstieg; Ziel wieder 32 $.",
+  "position_eur": null,
+  "price": 39.12,
+  "price_date": "2026-11-02",
+  "range_low": 31.97,
+  "range_high": 69.14,
+  "chg_note": "+1,2 % am 02.11.",
+  "updated_at": "2026-11-03T10:15:00+01:00",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-03",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Ende Nov.)",
+  "pros": [
+   "Höhere Tiefs seit dem 52-Wochen-Tief (32 $ → 36,8 $)",
+   "Gewinn und Marge im Q1 über den Erwartungen",
+   "Rund 4 % Dividendenrendite, starke Marke"
+  ],
+  "cons": [
+   "Umsatz schrumpft (Q1 −4 %), Jahresprognose unter Konsens",
+   "Schwäche in China und Belastung durch Zölle",
+   "Dividende höher als der erwartete Gewinn"
+  ],
+  "risk": "Enttäuscht der Investor Day am 16./17.11., kann die Erholung schnell kippen.",
+  "waves": [
+   {
+    "d": "2026-05-28",
+    "p": 47.65,
+    "l": "Start"
+   },
+   {
+    "d": "2026-06-26",
+    "p": 40.0,
+    "l": "A"
+   },
+   {
+    "d": "2026-07-02",
+    "p": 45.04,
+    "l": "B"
+   },
+   {
+    "d": "2026-10-02",
+    "p": 31.97,
+    "l": "C"
+   },
+   {
+    "d": "2026-10-28",
+    "p": 36.84,
+    "l": "2"
+   }
+  ]
  }
 ]

@@ -48,6 +48,12 @@
   "event": "Q3-Zahlen nach US-Schluss"
  },
  {
+  "id": "e_nke_investor",
+  "date": "2026-11-16",
+  "ticker": "NKE",
+  "event": "Investor Day (16./17.11.)"
+ },
+ {
   "id": "e6",
   "date": "2027-01-28",
   "ticker": "SAP",
