@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-03T14:20:00+01:00",
-  "kind": "News-Check 14:15",
+  "updated_at": "2026-11-03T17:50:00+01:00",
+  "kind": "News-Check 17:45",
   "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
-  "market": "Vorbörse US: Dow-Futures ca. −0,9 %, S&P 500 −0,2 %, Nasdaq-100 +0,1 % – Apple schwächer nach Zahlen (China-Umsatz verfehlt), Palantir trotz Beat im Minus. Heute Midterms (Ergebnisse ab heute Nacht), AMD-Zahlen nach US-Schluss. Öl +2,2 % (WTI ~98,6 $), 10-j. Rendite 4,89 %. Europa: SAP −2,9 %, Airbus −1,4 %. Kurse: TradingView, Abruf 14:15 Uhr (US-Werte = Schluss 2.11.).",
-  "next_update": "heute ca. 17:45 Uhr (News-Check)"
+  "market": "US-Sitzung (Midterm-Wahltag): S&P 500 und Nasdaq leicht im Plus, Dow schwächer (Apple nach Zahlen belastet). Chipwerte erholen sich nach dem Abverkauf vom Montag: AMD +4,5 % vor den Zahlen heute nach US-Schluss, Applied Digital +7,8 %, Marvell −1,7 %. GE Vernova +6,2 %, Ferrari +4,3 %. Kurse: TradingView, Abruf 17:48 Uhr.",
+  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
  }
 ]
