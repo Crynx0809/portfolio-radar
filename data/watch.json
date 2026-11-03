@@ -1,59 +1,45 @@
 {
- "generated_at": "2026-11-03T08:54:18+00:00",
+ "generated_at": "2026-11-03T15:01:42+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 466.84,
+   "price": 495.595,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.1442
+   "gap_to_stop": 0.2147
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.22,
+   "price": 17.21,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2288
+   "gap_to_stop": 0.3038
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 171.41,
+   "price": 175.79,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1903
+   "gap_to_stop": 0.2208
   }
  ],
  "events": [
   {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 16.22,
-   "chg_pct": -0.0895,
-   "at": "2026-11-03T08:54+00:00",
-   "id": "APLD-absturz-2026-11-03",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Applied Digital −9,0 % heute",
-   "text": "Starker Tagesverlust auf 16,22 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Schluss 16,22 $ unter deinem Stop 16,8 $ – laut Plan Ausstieg oder starke Reduktion; nicht aufstocken"
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 171.41,
-   "chg_pct": -0.1272,
-   "at": "2026-11-03T08:54+00:00",
-   "id": "MRVL-absturz-2026-11-03",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Marvell Technology −12,7 % heute",
-   "text": "Starker Tagesverlust auf 171,41 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Schluss 171,4 $ unter deinem Stop 178 $ – laut Plan Teilverkauf; Rest nur mit Stop 144 $ halten, nicht aufstocken"
+   "ticker": "TTD",
+   "name": "The Trade Desk",
+   "group": "Watchlist",
+   "price": 12.35,
+   "chg_pct": -0.0159,
+   "at": "2026-11-03T15:01+00:00",
+   "id": "TTD-zone-2026-11-03",
+   "type": "zone",
+   "level": "mittel",
+   "title": "The Trade Desk in der Einstiegszone",
+   "text": "Kurs 12,35 $ ist in die Zone 11,80 $–12,40 $ gelaufen.",
+   "todo": "12,4–13,35 $: abwarten, Spanne noch nicht verlassen."
   }
  ],
  "notified": [
