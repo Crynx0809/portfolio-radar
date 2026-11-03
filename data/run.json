@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-03T17:50:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
-  "market": "US-Sitzung (Midterm-Wahltag): S&P 500 und Nasdaq leicht im Plus, Dow schwächer (Apple nach Zahlen belastet). Chipwerte erholen sich nach dem Abverkauf vom Montag: AMD +4,5 % vor den Zahlen heute nach US-Schluss, Applied Digital +7,8 %, Marvell −1,7 %. GE Vernova +6,2 %, Ferrari +4,3 %. Kurse: TradingView, Abruf 17:48 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-03T22:50:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "AMD liefert starke Zahlen (Q4-Ausblick ca. 17 Mrd. $), nachbörslich über 513 $ – der Schlusskurs morgen entscheidet. Ferrari hebt Prognose an; Mercedes in der Einstiegszone.",
+  "market": "Wahltag in den USA: Nasdaq +0,8 %, S&P 500 +0,4 %, Dow −0,4 % (Apple −1,9 %). Chipwerte erholen sich: AMD +3,7 %, Applied Digital +9,8 %; GE Vernova +6,5 %. Kurse: TradingView, Abruf 22:34 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

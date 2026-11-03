@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_amd_q3_1103",
+  "date": "2026-11-03",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "AMD: Rekord im Rechenzentrum, Q4-Ausblick ca. 17 Mrd. $",
+  "summary": "Q3-Umsatz 13,4 Mrd. $ (+45 %), Rechenzentrum 8,5 Mrd. $ (+97 %), bereinigtes EPS 2,09 $. Für Q4 erwartet AMD rund 17 Mrd. $ (±3 %), etwa +66 % zum Vorjahr. Nachbörslich laut Bericht ca. +8 % – Schlusskurs am 4.11. abwarten.",
+  "url": "https://www.marketscreener.com/news/amd-reports-third-quarter-2026-financial-results-ce785fdedc89f625"
+ },
+ {
+  "id": "n_race_q3_1103",
+  "date": "2026-11-03",
+  "ticker": "RACE",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Ferrari hebt Prognose 2026 erneut an",
+  "summary": "Q3-Umsatz 1,90 Mrd. € (+7 %), EBITDA +12 % (Marge 39,7 %), EPS 2,44 €. Neue Jahresziele: Umsatz ca. 7,65 Mrd. €, bereinigtes EPS mindestens 9,85 €. Aktie +2,9 %.",
+  "url": "https://www.sec.gov/Archives/edgar/data/0001648416/000164841626000141/fnvq32026results.htm"
+ },
+ {
+  "id": "n_mkt_close_1103",
+  "date": "2026-11-03",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Wahltag: Nasdaq +0,8 %, S&P 500 +0,4 %, Dow −0,4 %",
+  "summary": "Chipwerte erholen sich nach dem Abverkauf vom Montag; Apple (−1,9 %) belastet den Dow nach schwachem Margenausblick. 10-j. Rendite ca. 4,9 %, Brent um 104 $.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-3-dow-sp-500-nasdaq-midterms-amd-earnings-141143244.html"
+ },
+ {
   "id": "n_mkt_close_1102",
   "date": "2026-11-02",
   "ticker": "Markt",

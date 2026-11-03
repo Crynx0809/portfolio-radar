@@ -1,10 +1,10 @@
 [
  {
-  "id": "a_amd_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
+  "id": "a_amd_1103e",
+  "at": "2026-11-03T22:50:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "Schluss 466,8 $ (−7,5 %) unter deinem Stop 485 $ und unter der Invalidierung 492 $ – laut Plan reduzieren oder absichern. Zahlen morgen nach US-Schluss. Nächste Zone 420–445 $ (C = A), Stop für einen Rest 408 $."
+  "text": "Starke Q3-Zahlen (Rechenzentrum +97 %, Q4-Ausblick ca. 17 Mrd. $). Schluss 483,9 $, nachbörslich laut Bericht ca. 524 $ – über der Bestätigung 513 $. Schlusskurs am 4.11. entscheidet: über 513 $ Rest halten (Ziel 560–658 $), unter 466 $ gilt der Reduktionsplan weiter."
  },
  {
   "id": "a_mrvl_1102e",
@@ -14,18 +14,32 @@
   "text": "Schluss 171,4 $ (−12,7 %) unter deinem Stop 178 $ – laut Plan Teilverkauf. Nächste Zone 150–162 $; unter 147 $ ist der große Aufwärtstrend gebrochen."
  },
  {
-  "id": "a_apld_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
+  "id": "a_apld_1103e",
+  "at": "2026-11-03T22:50:00+01:00",
   "ticker": "APLD",
-  "level": "hoch",
-  "text": "Schluss 16,22 $ (−9,0 %, neues 52-Wochen-Tief) unter deinem Stop 16,8 $ und unter 17,5 $ – laut Plan Ausstieg oder starke Reduktion. Mögliche Endzone von Welle C 14–16 $."
+  "level": "mittel",
+  "text": "Erholung +9,8 % auf 17,81 $ nach dem Stop-Bruch vom 2.11. – ein Erholungstag ist noch kein Boden; Entwarnung erst über 20,4 $."
  },
  {
-  "id": "gev-2026-11-03",
-  "at": "2026-11-03T17:50:00+01:00",
+  "id": "a_mbg_1103e",
+  "at": "2026-11-03T22:50:00+01:00",
+  "ticker": "MBG",
+  "level": "mittel",
+  "text": "Mercedes-Benz 40,48 € in der Einstiegszone 39,5–40,5 € (Wächter-Meldung). Umkehrsignal abwarten, Stop 38,4 €."
+ },
+ {
+  "id": "a_race_1103e",
+  "at": "2026-11-03T22:50:00+01:00",
+  "ticker": "RACE",
+  "level": "mittel",
+  "text": "Ferrari hebt Prognose an, Aktie 414,8 $ – nahe Ziel 425–437 $. Nicht hinterherkaufen."
+ },
+ {
+  "id": "a_gev_1103e",
+  "at": "2026-11-03T22:50:00+01:00",
   "ticker": "GEV",
   "level": "mittel",
-  "text": "GE Vernova +6,2 % auf 915 $ – über der Einstiegszone 785–865 $, Bestätigung erst über 960 $. Nicht hinterherkaufen; Rücksetzer Richtung Zone abwarten."
+  "text": "GE Vernova +6,5 % auf 918 $ – über der Zone 785–865 $, Bestätigung erst über 960 $. Rücksetzer abwarten."
  },
  {
   "id": "a_ftnt_1102e",

@@ -1,23 +1,5 @@
 [
  {
-  "id": "e2",
-  "date": "2026-11-03",
-  "ticker": "AMD",
-  "event": "Q3-Zahlen nach US-Börsenschluss"
- },
- {
-  "id": "e3",
-  "date": "2026-11-03",
-  "ticker": "Markt",
-  "event": "US-Zwischenwahlen (Midterms)"
- },
- {
-  "id": "e9",
-  "date": "2026-11-03",
-  "ticker": "RACE",
-  "event": "Q3-Zahlen"
- },
- {
   "id": "e4",
   "date": "2026-11-04",
   "ticker": "NOVO-B",
@@ -46,12 +28,6 @@
   "date": "2026-11-09",
   "ticker": "TTD",
   "event": "Q3-Zahlen nach US-Schluss"
- },
- {
-  "id": "e_nke_investor",
-  "date": "2026-11-16",
-  "ticker": "NKE",
-  "event": "Investor Day (16./17.11.)"
  },
  {
   "id": "e6",
