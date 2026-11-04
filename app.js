@@ -112,13 +112,114 @@
     if (r.price < r.entry_low) return r.entry_type === 'Ausbruch' ? 'Ausbruch ab ' + num(r.entry_low) : pct(r.price / r.entry_low - 1).replace('−', '') + ' darunter';
     return 'im Bereich';
   }
+
+  /* ---------- Filter, Land, Spalten ---------- */
+  let ALERTS = [], FIL = 'alle', LAND = '', SEK = '', SORT = {k: 'score', d: -1};
+  const LAND_X = {'NOVO-B': 'Dänemark', AIR: 'Frankreich', RACE: 'Italien', MELI: 'Uruguay', NU: 'Brasilien'};
+  const landOf = (r) => LAND_X[r.ticker] || (/^(XETR|FWB|GETTEX)/.test(r.tv_symbol || '') ? 'Deutschland' : /^EURONEXT/.test(r.tv_symbol || '') ? 'Frankreich' : r.currency === 'EUR' ? 'Europa' : 'USA');
+  const nearTgt = (r) => r.target_low != null && r.status !== 'boden' && r.status !== 'meiden' && r.price >= r.target_low * .98;
+  const sell = (r) => nearTgt(r) || /teilverkauf|gewinne? sichern|ziel (war )?erreicht/i.test(r.action || '');
+  const FILT = {
+    alle: ['Alle', () => true],
+    kauf: ['Kaufbereich', (r) => HOR === 'lang' ? ltState(r)[0] === 'In Zone' : r.status === 'zone'],
+    sell: ['Gewinne sichern', sell],
+    wait: ['Abwarten', (r) => r.status === 'annaeherung' || r.status === 'boden'],
+    up: ['Aufwärtstrend', (r) => r.status === 'trend'],
+    down: ['Abwärtstrend', (r) => r.status === 'meiden' || r.lt_view === 'bärisch'],
+    hot: ['Dringend', (r) => r.alert === 'hoch'],
+  };
+  function ltState(r) {
+    const z = ltZone(r), p = r.price;
+    if (r.lt_target_low != null && p >= r.lt_target_low) return ['Ziel erreicht', 'var(--warn)'];
+    if (z && p >= z[0] && p <= z[1] * 1.02) return ['In Zone', 'var(--up)'];
+    if (r.lt_stop != null && p < r.lt_stop) return ['Unter Stop', 'var(--down)'];
+    const v = {bullisch: ['Aufwärts', 'var(--up)'], neutral: ['Offen', 'var(--warn)'], spekulativ: ['Spekulativ', 'var(--purple)'], 'bärisch': ['Schwach', 'var(--down)']}[r.lt_view];
+    return v || ['—', 'var(--dim)'];
+  }
+  const waveTxt = (lv) => { const c = (lv && lv.count) || []; const l = c.length ? c[c.length - 1].l : ''; return l ? 'Welle ' + l : ''; };
+  function crvLang(r) { const p = r.price; return r.lt_target_low != null && r.lt_stop != null && p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null; }
+  const crvOf = (r) => HOR === 'lang' ? crvLang(r) : crv(r);
+  const crvCls = (c) => c == null ? '' : c >= 2 ? 'g' : c >= 1.5 ? 'a' : 'r';
+  const scCls = (s) => s == null ? '' : s >= 65 ? 'g' : s >= 45 ? 'a' : 'r';
+  function wireFilters() {
+    const lands = [...new Set(STOCKS.map(landOf))].sort(), seks = [...new Set(STOCKS.map((r) => r.sector).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'de'));
+    $('#fLand').innerHTML = '<option value="">Alle Länder</option>' + lands.map((x) => `<option>${esc(x)}</option>`).join('');
+    $('#fSek').innerHTML = '<option value="">Alle Sektoren</option>' + seks.map((x) => `<option>${esc(x)}</option>`).join('');
+    $('#fLand').onchange = (e) => { LAND = e.target.value; renderList(); };
+    $('#fSek').onchange = (e) => { SEK = e.target.value; renderList(); };
+  }
+  function renderChips(base) {
+    $('#chips').innerHTML = Object.entries(FILT).map(([k, [l, f]]) => { const n = base.filter(f).length;
+      return k !== 'alle' && !n ? '' : `<button data-f="${k}" aria-pressed="${FIL === k}">${l}${k === 'alle' ? '' : ` <i>${n}</i>`}</button>`; }).join('');
+    $('#chips').querySelectorAll('button').forEach((b) => b.onclick = () => { FIL = b.dataset.f; renderList(); });
+  }
+  function renderTable(rows, SC) {
+    const W = (r) => (KPIS[r.ticker] || {}).perf_1w;
+    const th = (k, l, c) => `<th data-k="${k}" class="${c || ''}${SORT.k === k ? ' on' : ''}">${l}${SORT.k === k ? (SORT.d < 0 ? ' ↓' : ' ↑') : ''}</th>`;
+    const bar = (w) => w == null ? '' : `<span class="wb"><i class="${w >= 0 ? 'up' : 'down'}" style="width:${Math.min(100, Math.abs(w) / .3 * 100)}%"></i></span>`;
+    $('#tbl').innerHTML = `<table class="st"><thead><tr>${th('name', 'Aktie')}${th('price', 'Kurs', 'n')}${th('day', 'Heute', 'n wide')}${th('week', 'Woche', 'n')}${th('score', 'Score', 'c')}${th('crv', 'CRV', 'c wide')}${th('lang', 'Langfristig', 'wide')}${th('kurz', 'Kurzfristig', 'wide')}</tr></thead><tbody>` +
+      rows.map((r) => {
+        const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'}, q = PRICES[r.ticker] || {}, w = W(r), sc = SC[r.ticker], k = crvOf(r), L = ltState(r);
+        const lv = (r.ew || {}).lang, wt = waveTxt(lv);
+        return `<tr class="go${r.ticker === SEL ? ' sel' : ''}" data-t="${esc(r.ticker)}" tabindex="0">
+          <td><div class="nm"><i class="dot" style="background:${HOR === 'lang' ? L[1] : s.c}"></i><div><b>${esc(r.name)}</b> <span class="tk">${esc(r.ticker)}</span>${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}<small>${esc(landOf(r))} · ${esc(r.sector || '')}</small></div></div></td>
+          <td class="n"><b class="mono">${money(r.price, r)}</b></td>
+          <td class="n wide ${q.chg_pct == null ? '' : q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct == null ? '' : pct(q.chg_pct)}</td>
+          <td class="n"><span class="wk ${w == null ? '' : w >= 0 ? 'up' : 'down'}">${w == null ? '—' : pct(w)}</span>${bar(w)}</td>
+          <td class="c"><span class="bdg ${scCls(sc)}">${sc == null ? '—' : sc}</span></td>
+          <td class="c wide"><span class="bdg ${crvCls(k)}">${k == null ? '—' : num(k, 1) + ' : 1'}</span></td>
+          <td class="wide"><span class="stt" style="--c:${L[1]}">${L[0]}</span>${wt ? `<small>${esc(wt)}</small>` : ''}</td>
+          <td class="wide"><span class="stt" style="--c:${s.c}">${s.l}</span><small>${esc(distText(r))}</small></td></tr>`;
+      }).join('') + '</tbody></table>' + (rows.length ? '' : '<p class="empty">Keine Aktie passt zu diesem Filter.</p>');
+    $('#tbl').querySelectorAll('th').forEach((h) => h.onclick = () => { const k = h.dataset.k; SORT = {k, d: SORT.k === k ? -SORT.d : (k === 'name' || k === 'kurz' || k === 'lang' ? 1 : -1)}; renderList(); });
+    $('#tbl').querySelectorAll('tr.go').forEach((tr) => { const go = () => openSheet(tr.dataset.t); tr.onclick = go; tr.onkeydown = (e) => { if (e.key === 'Enter') go(); }; });
+  }
+  /* rechte Spalte am Desktop, solange keine Aktie offen ist */
+  function todoHTML() {
+    const today = new Date().toLocaleDateString('de-DE', {weekday: 'short', day: '2-digit', month: '2-digit', year: '2-digit'});
+    const item = (r, tag, cls, txt, warn) => `<button class="td" data-t="${esc(r.ticker)}"><span class="tag ${cls}">${tag}</span><span><b>${esc(r.name)}</b><small>${esc(txt)}</small>${warn ? `<em>⚠ ${esc(warn)}</em>` : ''}</span></button>`;
+    const evt = (r) => { const d = r.next_event_date ? Math.round((new Date(r.next_event_date + 'T12:00:00') - Date.now()) / 864e5) : null; return d != null && d >= 0 && d <= 3 ? (r.next_event || 'Termin') + (d === 0 ? ' heute' : d === 1 ? ' morgen' : ' in ' + d + ' Tagen') : ''; };
+    const short = (t) => String(t || '').split(/ – | — /)[0].slice(0, 90);
+    const G = [
+      ['Dringend', STOCKS.filter((r) => r.alert === 'hoch'), 'r', 'Prüfen', (r) => { const a = ALERTS.find((x) => x.ticker === r.ticker && x.level === 'hoch'); return a ? a.text : r.action; }],
+      ['Kaufbereich', STOCKS.filter((r) => r.status === 'zone' && r.alert !== 'hoch'), 'g', 'Zone'],
+      ['Gewinne sichern', STOCKS.filter((r) => sell(r) && r.alert !== 'hoch' && r.status !== 'zone'), 'a', 'Sichern'],
+    ];
+    let h = `<div class="pnl"><div class="pnl-h"><b>🌙 Heute zu tun</b><small>${today}</small></div>` +
+      G.filter((g) => g[1].length).map(([l, a, c, tag, tx]) => `<h4>${l} · ${a.length}</h4>` + a.map((r) => item(r, tag, c, short(tx ? tx(r) : r.action), evt(r))).join('')).join('') + '</div>';
+    const mv = STOCKS.map((r) => ({r, c: (PRICES[r.ticker] || {}).chg_pct})).filter((x) => x.c != null && Math.abs(x.c) >= .05).sort((a, b) => Math.abs(b.c) - Math.abs(a.c));
+    const SCm = {}; mv.forEach((x) => { SCm[x.r.ticker] = scoreOf(x.r).total; });
+    h += `<div class="pnl"><div class="pnl-h"><b>⚡ Ausreißer heute</b><small>ab ±5 %</small></div>` + (mv.map(({r, c}) => {
+      const hint = c < 0 ? (r.status === 'zone' ? 'Fällt in die Zone – Umkehrsignal abwarten' : r.status === 'meiden' ? 'Abwärtstrend – nicht auffangen' : 'Rücksetzer – Zone ' + num(r.entry_low) + '–' + money(r.entry_high, r) + ' beobachten')
+        : (nearTgt(r) ? 'Am Ziel – Gewinne sichern prüfen' : 'Starker Anstieg – nicht hinterherkaufen');
+      return `<button class="mv" data-t="${esc(r.ticker)}"><span class="mv-c ${c >= 0 ? 'up' : 'down'}">${pct(c)}</span><span><b>${esc(r.name)}</b> <span class="tk">${esc(r.ticker)}</span><small class="${c >= 0 ? 'up' : 'down'}">${hint}</small></span><span class="bdg ${scCls(SCm[r.ticker])}">${SCm[r.ticker] ?? '—'}</span></button>`;
+    }).join('') || '<p class="empty">Heute keine großen Ausschläge.</p>') + '</div>';
+    return h;
+  }
+  function renderTodo() {
+    const box = $('#detail'); if (!box || !isDesk() || SEL) return;
+    box.innerHTML = todoHTML(); box.scrollTop = 0;
+    box.querySelectorAll('[data-t]').forEach((b) => b.onclick = () => openSheet(b.dataset.t));
+  }
+  function closePick() {
+    SEL = null; document.body.classList.remove('pick');
+    history.replaceState(null, '', '#aktien'); renderList(); renderTodo();
+  }
   function renderList() {
     const ul = $('#list');
     const qy = SEARCH.trim().toLowerCase();
     const hit = (r) => [r.ticker, r.name, r.sector, r.tv_symbol].some((v) => String(v || '').toLowerCase().includes(qy));
     
     const LTO = {bullisch: 0, neutral: 1, spekulativ: 2, 'bärisch': 3};
-    const rows = STOCKS.filter((r) => !qy || hit(r)).sort((a, b) => HOR === 'lang'
+    const base = STOCKS.filter((r) => (!qy || hit(r)) && (!LAND || landOf(r) === LAND) && (!SEK || r.sector === SEK));
+    renderChips(base);
+    const flt = (FILT[FIL] || FILT.alle)[1];
+    const SC = {}; STOCKS.forEach((r) => { SC[r.ticker] = scoreOf(r).total; });
+    const KEY = {name: (r) => r.name, price: (r) => r.price, day: (r) => (PRICES[r.ticker] || {}).chg_pct, week: (r) => (KPIS[r.ticker] || {}).perf_1w, score: (r) => SC[r.ticker], crv: crvOf, lang: (r) => ltState(r)[0], kurz: (r) => (STATUS[r.status] || {o: 9}).o};
+    const tr = base.filter(flt).sort((a, b) => { const x = KEY[SORT.k](a), y = KEY[SORT.k](b); if (x == null) return 1; if (y == null) return -1; return (typeof x === 'string' ? x.localeCompare(y, 'de') : x - y) * SORT.d; });
+    renderTable(tr, SC);
+    $('#cnt').textContent = tr.length + ' von ' + STOCKS.length;
+    const rows = base.filter(flt).sort((a, b) => HOR === 'lang'
       ? (LTO[a.lt_view] ?? 9) - (LTO[b.lt_view] ?? 9) || (b.lt_target_low / b.price) - (a.lt_target_low / a.price)
       : (a.alert === 'hoch' ? 0 : 1) - (b.alert === 'hoch' ? 0 : 1) || (STATUS[a.status] || {o: 9}).o - (STATUS[b.status] || {o: 9}).o || a.ticker.localeCompare(b.ticker));
     ul.innerHTML = rows.map((r) => {
@@ -613,9 +714,12 @@
   }
   function redraw() {
     const r = STOCKS.find((x) => x.ticker === SEL); if (!r) return;
-    if (isDesk() && $('#detail')) { const box = $('#detail'), top = box.scrollTop; box.innerHTML = detailHTML(r, 'dtP'); wireDetail(box, r); box.scrollTop = top; }
+    if (isDesk() && $('#detail')) { const box = $('#detail'), top = box.scrollTop; box.innerHTML = deskHTML(r); wireDetail(box, r); box.scrollTop = top; }
     else if (!$('#sheet').hidden) refreshSheet();
   }
+  const deskHTML = (r) => '<button class="back" type="button" data-back>← Alle Aktien</button>' + detailHTML(r, 'dtP');
+  document.addEventListener('click', (e) => { if (e.target.closest('[data-back]')) closePick(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !FS && SEL && isDesk()) closePick(); });
   const isDesk = () => matchMedia('(min-width: 1180px)').matches;
   // breites Analyse-Fenster am Desktop: Chart in echter Größe zeichnen (Schrift bleibt gut lesbar)
   const deskSz = () => { if (!isDesk()) return null; const d = $('#detail'); const w = Math.max(560, ((d && d.clientWidth) || 900) - 40);
@@ -705,10 +809,11 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     const r = STOCKS.find((x) => x.ticker === t); if (!r) return;
     SEL = r.ticker;
     ensure(HOR).then((ch) => { if (ch && SEL === r.ticker) redraw(); });
-    document.querySelectorAll('#list .row').forEach((li) => li.classList.toggle('sel', li.dataset.t === SEL));
+    document.querySelectorAll('#list .row, #tbl tr.go').forEach((li) => li.classList.toggle('sel', li.dataset.t === SEL));
     if (isDesk() && $('#detail')) {
       const box = $('#detail');
-      box.innerHTML = detailHTML(r, 'dtP'); box.scrollTop = 0;
+      document.body.classList.add('pick');
+      box.innerHTML = deskHTML(r); box.scrollTop = 0;
       anim((g) => g.from(box, {opacity: 0, x: 16, duration: .35, ease: 'power2.out', clearProps: 'all'}));
       animateDetail(box, r, 'dtP', .15);
       history.replaceState(null, '', '#aktien/' + r.ticker);
@@ -1167,7 +1272,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
         const q = PRICES[r.ticker];
         if (q && q.close && String(q.date) >= String(r.price_date || '')) { r.price = q.close; r.price_date = q.date; }
       });
-      STOCKS = stocks;
+      STOCKS = stocks; ALERTS = alerts || [];
       const R = run[0] || {};
       const st = R.updated_at ? new Date(R.updated_at) : null;
       $('#stand').textContent = st ? 'Stand ' + st.toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '';
@@ -1175,11 +1280,11 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
       document.body.dataset.hor = HOR; document.querySelectorAll('.hor button[data-h]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === HOR))); $('#horNote').textContent = HORTXT[HOR];
       if (HOR === 'lang') { try { WEEKLY = ((await load('weekly')) || {}).stocks || {}; } catch (e) { WEEKLY = {}; } }
-      renderHello(); renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
+      wireFilters(); renderHello(); renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       renderCockpit(events); renderAnalyse(); renderChancen();
       setTimeout(() => popups(alerts, watch), 700);
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
-      else if (isDesk()) { const f = $('#list .row'); if (f) openSheet(f.dataset.t); }
+      else renderTodo();
       anim((g) => g.from('.brand img', {rotate: -90, scale: .6, opacity: 0, duration: .8, ease: 'back.out(1.7)'}));
       setTimeout(() => { if (!document.hidden && $('#sheet').hidden) location.reload(); }, 30 * 60 * 1000);
     } catch (e) {

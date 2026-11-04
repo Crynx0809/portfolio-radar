@@ -26,15 +26,22 @@
   <section class="page" id="aktien">
     <div class="hello"><h1 id="hello">Hallo</h1><p id="helloSub"></p></div>
     <div class="kp4" id="kp4"></div>
-    <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-      <input id="search" type="search" placeholder="Aktie suchen – Name oder Kürzel" autocomplete="off" enterkeyhint="search">
-      <button type="button" id="searchClear" aria-label="Suche löschen" hidden>✕</button></label>
     <div class="hor" role="tablist" aria-label="Zeitraum der Analyse">
       <button role="tab" data-h="kurz" aria-selected="true"><b>⚡ Kurzfristig</b><small>Trade · Wochen bis Monate</small></button>
       <button role="tab" data-h="lang" aria-selected="false"><b>🧭 Langfristig</b><small>Investment · Monate bis Jahre</small></button>
     </div>
     <p class="hor-note" id="horNote"></p>
+    <div class="tools">
+      <div class="chips" id="chips"></div>
+      <label class="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input id="search" type="search" placeholder="Aktie suchen …" autocomplete="off" enterkeyhint="search">
+        <button type="button" id="searchClear" aria-label="Suche löschen" hidden>✕</button></label>
+      <select id="fLand" aria-label="Land"></select>
+      <select id="fSek" aria-label="Sektor"></select>
+      <span class="cnt" id="cnt"></span>
+    </div>
     <ul class="list" id="list"></ul>
+    <div class="tblw" id="tbl"></div>
     <div class="wishbox">
       <button class="wish-btn" id="wishOpen" type="button">＋ Aktie wünschen</button>
       <form class="wish" id="wish" hidden>
