@@ -45,7 +45,9 @@ Für Datensatz `prices` im Dashboard: aus prices.json eine Liste machen
 Depot (group „Portfolio“): AMD, GOOGL, AMZN, APLD, BAC, FTNT, MRVL, NOVO-B, SAP.
 Watchlist: LLY, ISRG, XOM, RHM, ENR, GEV, NEE, ALV, JPM, V, COST, WMT, FCX, CAT, DTE, CCJ, AIR, BRK-B, RACE, MELI,
 RKLB, OKLO, HIMS, NU, HOOD, MBG (Mercedes-Benz Group, XETR), TTD (The Trade Desk), NOW (ServiceNow), MOH (Molina Healthcare), NKE (Nike).
-EUR: NOVO-B, SAP, RHM, ENR, ALV, DTE, AIR, MBG; sonst USD.
+Aus Wünschen (4.11.26): META, ADBE, ZS (Zscaler), NVDA, INTC, EL (Estée Lauder), ZTS (Zoetis), MRNA (Moderna), 1810 (Xiaomi, HKEX, Währung HKD),
+BABA (Alibaba), MU (Micron), TEAM (Atlassian).
+EUR: NOVO-B, SAP, RHM, ENR, ALV, DTE, AIR, MBG; HKD: 1810; sonst USD.
 Menge nur ändern, wenn Lenn es sagt.
 Dazu kommen Werte aus erledigten Aktien-Wünschen (siehe unten).
 

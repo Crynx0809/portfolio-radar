@@ -2762,5 +2762,1633 @@
   "lt_text": "Absturz um 82 % seit 2021 (179 $ → 32 $), erst seit Oktober eine Erholung. Großes Ziel ist eine Erholung um 38,2 % des letzten Rückgangs – nur wenn das Tief bei 32 $ hält.",
   "lt_consensus": 36.5,
   "lt_analysts": 37
+ },
+ {
+  "ticker": "META",
+  "name": "Meta Platforms",
+  "sector": "Internet / Social Media",
+  "tv_symbol": "NASDAQ:META",
+  "status": "boden",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 595,
+  "entry_high": 615,
+  "stop": 578,
+  "invalidation": 524.49,
+  "trigger": 660,
+  "target_low": 700,
+  "target_high": 740,
+  "waves": [
+   {
+    "d": "2026-09-24",
+    "p": 779.82,
+    "l": "Start"
+   },
+   {
+    "d": "2026-10-08",
+    "p": 711.68,
+    "l": "A"
+   },
+   {
+    "d": "2026-10-13",
+    "p": 771.27,
+    "l": "B"
+   },
+   {
+    "d": "2026-11-02",
+    "p": 606.41,
+    "l": "C"
+   }
+  ],
+  "wave_primary": "ABC-Korrektur vom Hoch 779,82 $ (24.9.): A bis 711,68 $ (8.10.), B bis 771,27 $ (13.10.), C nach den Q3-Zahlen bis 606,41 $ (2.11.) – knapp unter dem 61,8 %-Rücklauf (622 $) der Welle ab 524,49 $ (30.7.). Hält 606 $, ist die Korrektur fertig und eine neue Aufwärtswelle Richtung 700–740 $ möglich.",
+  "wave_alt": "C ist noch nicht fertig: Schluss unter 600 $ öffnet 560–575 $ (Sommer-Tiefs).",
+  "plan": "Großer Plattform-Konzern mit stark wachsendem Werbegeschäft; seit über einem Jahr Seitwärtsphase zwischen 520 und 800 $. Kaufidee am unteren Teil der Spanne.",
+  "news_brief": "Q3-Zahlen am 29.10.: kräftiges Umsatzwachstum, aber der Markt störte sich an den hohen KI-Ausgaben – Kurs fiel bis 606 $ (2.11.).",
+  "next_event": "Q4-Zahlen",
+  "next_event_date": "2027-01-27",
+  "action": "Möglicher Boden – Rücksetzer auf 595–615 $ mit Umkehrsignal oder Schluss über 660 $ abwarten",
+  "if_up": "Schluss über 660 $ → Korrektur beendet, Ziel 700–740 $.",
+  "if_wait": "Zwischen 615 und 660 $: abwarten, nicht hinterherkaufen.",
+  "if_down": "Schluss unter 578 $ → C läuft weiter Richtung 560 $, kein Einstieg.",
+  "pros": [
+   "Kurs am unteren Teil der einjährigen Spanne (520–800 $)",
+   "Umsatz wächst weiter zweistellig",
+   "Analysten-Kursziel deutlich über dem Kurs"
+  ],
+  "cons": [
+   "Hohe KI-Investitionen drücken auf die Stimmung",
+   "Unter der 50-Tage-Linie",
+   "Seit über einem Jahr kein neues Hoch"
+  ],
+  "risk": "Fällt der Kurs per Schluss unter 600 $, ist das Tief vom 2.11. nicht der Boden.",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 790,
+  "lt_target_high": 900,
+  "lt_stop": 520,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 560,
+  "lt_entry_high": 615,
+  "lt_text": "Großer Aufwärtstrend seit dem Tief 2022 (88 $). Seit dem Rekordhoch 796 $ (Aug. 2025) läuft eine breite Seitwärts-Korrektur [4] zwischen 520 und 780 $. Ist sie fertig, zielt Welle [5] über das Rekordhoch auf 790–900 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-10-31",
+      "p": 88.09,
+      "l": "[2]"
+     },
+     {
+      "d": "2025-08-11",
+      "p": 796.25,
+      "l": "[3]"
+     },
+     {
+      "d": "2026-03-23",
+      "p": 520.26,
+      "l": "(A)"
+     },
+     {
+      "d": "2026-09-21",
+      "p": 779.82,
+      "l": "(B)"
+     },
+     {
+      "d": "2026-11-02",
+      "p": 606.41,
+      "l": "[4]"
+     }
+    ],
+    "path": [
+     {
+      "p": 845,
+      "l": "[5]"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 540
+      }
+     ],
+     "label": "alt. [4] tiefer",
+     "prob": 35
+    },
+    "up": 796.25
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 595,
+  "support_high": 615,
+  "price": 633.66,
+  "price_date": "2026-11-04",
+  "range_low": 520.26,
+  "range_high": 779.82,
+  "chg_note": "+1,6 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 848.38,
+  "lt_analysts": 58,
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-02",
+  "horizon_text": "Ziel in ca. 4–8 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)"
+ },
+ {
+  "ticker": "ADBE",
+  "name": "Adobe",
+  "sector": "Software",
+  "tv_symbol": "NASDAQ:ADBE",
+  "status": "annaeherung",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 238,
+  "entry_high": 247,
+  "stop": 223,
+  "invalidation": 224.67,
+  "trigger": 272.1,
+  "target_low": 295,
+  "target_high": 320,
+  "waves": [
+   {
+    "d": "2026-06-18",
+    "p": 190.12,
+    "l": "Start"
+   },
+   {
+    "d": "2026-09-01",
+    "p": 294.53,
+    "l": "1"
+   },
+   {
+    "d": "2026-09-28",
+    "p": 224.67,
+    "l": "2"
+   },
+   {
+    "d": "2026-10-22",
+    "p": 272.1,
+    "l": "i"
+   },
+   {
+    "d": "2026-11-03",
+    "p": 241.01,
+    "l": "ii"
+   }
+  ],
+  "wave_primary": "Boden 190,12 $ (18.6.), Welle 1 bis 294,53 $ (1.9.), Welle 2 bis 224,67 $ (28.9., höheres Tief). Darin i bis 272,10 $ (22.10.) und ii bis 241,01 $ (3.11.). Welle 3 hätte Ziel 295–320 $.",
+  "wave_alt": "Nur Seitwärtsphase im großen Abwärtstrend: Schluss unter 224,67 $ → Rückfall Richtung 190 $.",
+  "plan": "Software-Riese (Photoshop, Acrobat) mit hoher Marge, aber Angst vor KI-Konkurrenz. Günstig bewertet – Kaufidee nur, wenn die höheren Tiefs halten.",
+  "news_brief": "Software-Werte wegen KI-Sorgen unter Druck; Adobe fiel bis Juni auf 190 $ (Mehrjahrestief) und baut seitdem höhere Tiefs. Zahlen am 9.12.",
+  "next_event": "Q4-Zahlen",
+  "next_event_date": "2026-12-09",
+  "action": "Einstieg bei Rücksetzer in 238–247 $ mit Umkehrsignal, Stop 223 $",
+  "if_up": "Schluss über 272,10 $ → Welle 3 bestätigt, Ziel 295–320 $.",
+  "if_wait": "Zwischen 247 und 272 $: abwarten.",
+  "if_down": "Schluss unter 223 $ → Aufwärtsstruktur gebrochen, Ziel wieder 190–200 $.",
+  "pros": [
+   "Höhere Tiefs seit Juni (190 → 225 → 241 $)",
+   "Hohe Gewinnmarge und Aktienrückkäufe",
+   "Niedrige Bewertung für einen Software-Marktführer"
+  ],
+  "cons": [
+   "KI-Konkurrenz bei Bild- und Video-Tools",
+   "Langfristig im Abwärtstrend seit 2021",
+   "Analysten eher zurückhaltend"
+  ],
+  "risk": "Kippt die Stimmung bei Software erneut, kann der Kurs schnell wieder Richtung 200 $ fallen.",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 330,
+  "lt_target_high": 365,
+  "lt_stop": 188,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 225,
+  "lt_entry_high": 247,
+  "lt_text": "Großer Abwärtstrend 2021–2026 (700 → 190 $, ABC). Möglicher Boden im Juni; großes Ziel ist eine Erholung bis zum 38,2 %-Rücklauf (330–365 $) – nur solange 190 $ hält.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-09-26",
+      "p": 274.73,
+      "l": "(A)"
+     },
+     {
+      "d": "2024-01-29",
+      "p": 638.25,
+      "l": "(B)"
+     },
+     {
+      "d": "2026-06-15",
+      "p": 190.12,
+      "l": "(C)"
+     },
+     {
+      "d": "2026-08-31",
+      "p": 294.53,
+      "l": "1"
+     },
+     {
+      "d": "2026-09-28",
+      "p": 224.67,
+      "l": "2"
+     }
+    ],
+    "path": [
+     {
+      "p": 348,
+      "l": "3"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 200
+      }
+     ],
+     "label": "alt. neues Tief",
+     "prob": 40
+    },
+    "up": 294.53
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 45
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 238,
+  "support_high": 247,
+  "price": 249.33,
+  "price_date": "2026-11-04",
+  "range_low": 190.12,
+  "range_high": 362.71,
+  "chg_note": "+1,4 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 268.3,
+  "lt_analysts": 33,
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-10",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)"
+ },
+ {
+  "ticker": "ZS",
+  "name": "Zscaler",
+  "sector": "Cybersecurity",
+  "tv_symbol": "NASDAQ:ZS",
+  "status": "annaeherung",
+  "bias": "bärisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 196,
+  "entry_high": 212,
+  "stop": 185,
+  "invalidation": 187.67,
+  "trigger": 245,
+  "target_low": 255,
+  "target_high": 275,
+  "waves": [
+   {
+    "d": "2026-06-12",
+    "p": 119.5,
+    "l": "Start"
+   },
+   {
+    "d": "2026-09-24",
+    "p": 216.97,
+    "l": "3"
+   },
+   {
+    "d": "2026-09-28",
+    "p": 187.67,
+    "l": "4"
+   },
+   {
+    "d": "2026-10-27",
+    "p": 267.87,
+    "l": "5"
+   },
+   {
+    "d": "2026-11-03",
+    "p": 220.07,
+    "l": "a"
+   }
+  ],
+  "wave_primary": "Fünf Wellen aufwärts vom Tief 119,50 $ (12.6.) bis 267,87 $ (27.10.), Welle 4 bei 187,67 $ (28.9.). Jetzt ABC-Korrektur: a bis 220,07 $ (3.11.). Ziel der Korrektur ist der 38,2–50 %-Rücklauf (194–211 $), dann neuer Anstieg.",
+  "wave_alt": "Die Korrektur ist mit 220 $ schon fertig: Schluss über 245 $ → direkt Richtung 255–275 $.",
+  "plan": "Cloud-Security-Spezialist, nach dem Absturz Anfang 2026 kräftig erholt (+120 %). Nach fünf Wellen erst die Korrektur abwarten.",
+  "news_brief": "Starke Erholung seit April (114 → 268 $); seit dem Hoch am 27.10. Rücksetzer um 18 %. Zahlen am 24.11.",
+  "next_event": "Q1-Zahlen",
+  "next_event_date": "2026-11-24",
+  "action": "Noch nicht kaufen – Rücksetzer in 196–212 $ abwarten (vor den Zahlen am 24.11. vorsichtig)",
+  "if_up": "Schluss über 245 $ → Korrektur vorbei, Ziel 255–275 $.",
+  "if_wait": "Zwischen 212 und 245 $: abwarten.",
+  "if_down": "Schluss unter 185 $ → tiefere Korrektur Richtung 160 $, kein Einstieg.",
+  "pros": [
+   "Klare Fünf-Wellen-Struktur aufwärts",
+   "Weit über der 200-Tage-Linie",
+   "Analysten positiv"
+  ],
+  "cons": [
+   "Nach +120 % in sieben Monaten ist eine Korrektur normal",
+   "Software-Sektor schwankt stark (KI-Sorgen)",
+   "Hohe Schwankung (Ø 6 % pro Tag)"
+  ],
+  "risk": "Zahlen am 24.11. können eine Kurslücke von 15–20 % auslösen.",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 300,
+  "lt_target_high": 360,
+  "lt_stop": 150,
+  "lt_until": "Sept. 2027",
+  "lt_entry_low": 196,
+  "lt_entry_high": 212,
+  "lt_text": "Nach dem Absturz 2025/26 (337 → 115 $) hat eine neue große Aufwärtswelle begonnen. Nach einem Rücksetzer (Welle 2) zielt Welle 3 über das alte Hoch auf 300–360 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2023-05-01",
+      "p": 84.93,
+      "l": "[2]"
+     },
+     {
+      "d": "2025-11-03",
+      "p": 336.99,
+      "l": "(1)"
+     },
+     {
+      "d": "2026-04-06",
+      "p": 114.62,
+      "l": "(2)"
+     },
+     {
+      "d": "2026-10-26",
+      "p": 267.87,
+      "l": "1"
+     }
+    ],
+    "path": [
+     {
+      "p": 205,
+      "l": "2"
+     },
+     {
+      "p": 330,
+      "l": "3"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 150
+      }
+     ],
+     "label": "alt. 2 tiefer",
+     "prob": 35
+    },
+    "up": 267.87
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. Boden schon da",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 196,
+  "support_high": 212,
+  "price": 226.95,
+  "price_date": "2026-11-04",
+  "range_low": 114.625,
+  "range_high": 335.7,
+  "chg_note": "+1,3 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 235.19,
+  "lt_analysts": 45,
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2026-12-30",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Ende Nov.)"
+ },
+ {
+  "ticker": "NVDA",
+  "name": "Nvidia",
+  "sector": "Halbleiter",
+  "tv_symbol": "NASDAQ:NVDA",
+  "status": "annaeherung",
+  "bias": "bärisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 190,
+  "entry_high": 197,
+  "stop": 183,
+  "invalidation": 164.27,
+  "trigger": 218,
+  "target_low": 230,
+  "target_high": 243,
+  "waves": [
+   {
+    "d": "2026-06-29",
+    "p": 189.8,
+    "l": "Start"
+   },
+   {
+    "d": "2026-10-06",
+    "p": 243.37,
+    "l": "Hoch"
+   },
+   {
+    "d": "2026-10-30",
+    "p": 200.92,
+    "l": "A"
+   }
+  ],
+  "wave_primary": "Seit gut einem Jahr Seitwärtsphase zwischen 164 und 243 $. Vom Hoch 243,37 $ (6.10.) ABC-Korrektur: A bis 200,92 $ (30.10.); nach einer kleinen B-Erholung C in die Unterstützung 190–197 $ (Sommer-Tiefs), dann zurück Richtung 230–243 $.",
+  "wave_alt": "Die Spanne bricht nach unten: Schluss unter 189 $ → 165–175 $ (Tief vom März).",
+  "plan": "KI-Chip-Marktführer, wächst weiter stark. Die Aktie pendelt seit über einem Jahr in einer Spanne – Kaufidee am unteren Rand.",
+  "news_brief": "Chip-Werte nach dem Intel-Absturz (30.10.) unter Druck; Nvidia seit dem Hoch am 6.10. −17 %. Zahlen am 17.11.",
+  "next_event": "Q3-Zahlen",
+  "next_event_date": "2026-11-17",
+  "action": "Einstieg bei Rücksetzer in 190–197 $ mit Umkehrsignal, Stop 183 $",
+  "if_up": "Schluss über 218 $ → Korrektur vorbei, Ziel 230–243 $.",
+  "if_wait": "Zwischen 197 und 218 $: abwarten.",
+  "if_down": "Schluss unter 183 $ → Spanne bricht, Ziel 165–175 $.",
+  "pros": [
+   "Wachstum und Margen weiter sehr hoch",
+   "Kurs nahe dem unteren Teil der Jahresspanne",
+   "Analysten-Kursziel weit über dem Kurs"
+  ],
+  "cons": [
+   "Seit über einem Jahr kein Ausbruch",
+   "Chip-Sektor gerade schwach",
+   "Unter der 50-Tage-Linie"
+  ],
+  "risk": "Zahlen am 17.11. – eine Enttäuschung kann die Spanne nach unten brechen.",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 270,
+  "lt_target_high": 310,
+  "lt_stop": 160,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 175,
+  "lt_entry_high": 197,
+  "lt_text": "Großer Aufwärtstrend seit 2022 (11 $). Welle (3) endete wohl bei 243 $; die Seitwärtsphase ist Welle (4). Danach zielt Welle (5) auf 270–310 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-10-10",
+      "p": 10.81,
+      "l": "[2]"
+     },
+     {
+      "d": "2024-11-18",
+      "p": 152.89,
+      "l": "(1)"
+     },
+     {
+      "d": "2025-04-07",
+      "p": 86.62,
+      "l": "(2)"
+     },
+     {
+      "d": "2026-10-05",
+      "p": 243.37,
+      "l": "(3)"
+     }
+    ],
+    "path": [
+     {
+      "p": 185,
+      "l": "(4)"
+     },
+     {
+      "p": 290,
+      "l": "(5)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 155
+      }
+     ],
+     "label": "alt. (4) tiefer",
+     "prob": 35
+    },
+    "up": 243.37
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 190,
+  "support_high": 197,
+  "price": 202.205,
+  "price_date": "2026-11-04",
+  "range_low": 164.27,
+  "range_high": 243.37,
+  "chg_note": "−2,1 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 327.14,
+  "lt_analysts": 58,
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-17",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Mitte Nov.)"
+ },
+ {
+  "ticker": "INTC",
+  "name": "Intel",
+  "sector": "Halbleiter",
+  "tv_symbol": "NASDAQ:INTC",
+  "status": "meiden",
+  "bias": "bärisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 46,
+  "entry_high": 52,
+  "stop": 41,
+  "invalidation": 40.63,
+  "trigger": 66,
+  "target_low": 72,
+  "target_high": 82,
+  "waves": [
+   {
+    "d": "2026-06-30",
+    "p": 142.35,
+    "l": "Hoch"
+   },
+   {
+    "d": "2026-07-29",
+    "p": 81.79,
+    "l": "A"
+   },
+   {
+    "d": "2026-09-24",
+    "p": 127.44,
+    "l": "B"
+   },
+   {
+    "d": "2026-11-04",
+    "p": 56.77,
+    "l": "C"
+   }
+  ],
+  "wave_primary": "Nach +700 % (17,67 $ im April 2025 → 142,35 $ am 30.6.) läuft eine große ABC-Korrektur: A bis 81,79 $ (29.7.), B bis 127,44 $ (24.9.), C seit dem Kurssturz nach den Zahlen (−30 % am 30.10.) bis 56,77 $ (4.11.). Ziel von C: 1,272 × A ≈ 50 $ – Kaufzone 46–52 $.",
+  "wave_alt": "Der Boden ist schon da: Schluss über 66 $ (Kurslücke) → Gegenbewegung Richtung 72–82 $.",
+  "plan": "Spekulativer Turnaround (Fertigung, KI-Chips). Nach dem Einbruch fallendes Messer – erst einen Boden abwarten.",
+  "news_brief": "Q3-Zahlen (29.10.): schwacher Ausblick (PC-Nachfrage, Lieferengpässe) – Aktie fiel am 30.10. um fast 30 %, größter Tagesverlust seit Jahrzehnten.",
+  "next_event": "Q4-Zahlen",
+  "next_event_date": "2027-01-28",
+  "action": "Meiden – fallendes Messer nach −30 %; frühestens in 46–52 $ mit klarem Umkehrsignal",
+  "if_up": "Schluss über 66 $ → Boden bestätigt, Gegenbewegung Richtung 72–82 $.",
+  "if_wait": "Über 52 $ ohne Umkehrsignal: abwarten.",
+  "if_down": "Schluss unter 41 $ → Korrektur geht tiefer (Ausbruchsniveau 2025 bei 30–40 $).",
+  "pros": [
+   "Kurs hat schon mehr als 60 % vom Hoch verloren",
+   "Analysten-Kursziel deutlich über dem Kurs",
+   "Kaufzone trifft auf das 1,272-Ziel der C-Welle"
+  ],
+  "cons": [
+   "Schwacher Ausblick, Turnaround wackelt",
+   "Extrem hohe Schwankung (Ø 11 % pro Tag)",
+   "Weit unter der 200-Tage-Linie"
+  ],
+  "risk": "Nach einem Absturz dieser Größe kann der Kurs noch deutlich weiter fallen, bevor sich ein Boden bildet.",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 120,
+  "lt_target_high": 150,
+  "lt_stop": 38,
+  "lt_until": "Juni 2028",
+  "lt_entry_low": 46,
+  "lt_entry_high": 52,
+  "lt_text": "Gewaltiger Anstieg 2025/26 (18 → 142 $) als große Welle (1). Die laufende Korrektur ist Welle (2). Hält sie über 38 $, zielt Welle (3) langfristig wieder auf 120–150 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2025-04-07",
+      "p": 17.67,
+      "l": "[2]"
+     },
+     {
+      "d": "2026-06-29",
+      "p": 142.35,
+      "l": "(1)"
+     }
+    ],
+    "path": [
+     {
+      "p": 49,
+      "l": "(2)"
+     },
+     {
+      "p": 135,
+      "l": "(3)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 30
+      }
+     ],
+     "label": "alt. (2) tiefer",
+     "prob": 45
+    },
+    "up": 95.68
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. Boden schon da",
+     "prob": 35
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 46,
+  "support_high": 52,
+  "price": 58.075,
+  "price_date": "2026-11-04",
+  "range_low": 32.89,
+  "range_high": 142.35,
+  "chg_note": "−4,3 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 92.72,
+  "lt_analysts": 43,
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": ""
+ },
+ {
+  "ticker": "EL",
+  "name": "Estée Lauder",
+  "sector": "Kosmetik",
+  "tv_symbol": "NYSE:EL",
+  "status": "trend",
+  "bias": "bullisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 100,
+  "entry_high": 104,
+  "stop": 96,
+  "invalidation": 88.68,
+  "trigger": 121.7,
+  "target_low": 120,
+  "target_high": 128,
+  "waves": [
+   {
+    "d": "2026-04-02",
+    "p": 66.22,
+    "l": "Start"
+   },
+   {
+    "d": "2026-05-28",
+    "p": 92.35,
+    "l": "1"
+   },
+   {
+    "d": "2026-06-30",
+    "p": 76.83,
+    "l": "2"
+   },
+   {
+    "d": "2026-08-27",
+    "p": 108.38,
+    "l": "3"
+   },
+   {
+    "d": "2026-10-01",
+    "p": 88.68,
+    "l": "4"
+   }
+  ],
+  "wave_primary": "Fünf Wellen aufwärts vom Tief 66,22 $ (2.4.): 1 bis 92,35 $, 2 bis 76,83 $, 3 bis 108,38 $ (27.8.), 4 bis 88,68 $ (1.10.). Welle 5 läuft (heute 113,5 $) und erreicht ihr Mindestziel (~115 $). Danach Rücksetzer in 100–104 $ als Einstieg; Ziel danach 120–128 $.",
+  "wave_alt": "Welle 5 dehnt sich aus: Schluss über 121,70 $ (Februar-Hoch) → direkt 125–135 $ ohne Rücksetzer.",
+  "plan": "Kosmetik-Konzern im Umbau (Kostensenkung, Erholung in Asien). Klarer Aufwärtstrend – aber nicht nach +70 % hinterherkaufen.",
+  "news_brief": "Starke Erholung seit März (66 → 113 $); heute +6,5 % auf den höchsten Stand seit Februar.",
+  "next_event": "Q2-Zahlen",
+  "next_event_date": "2027-02-03",
+  "action": "Aufwärtstrend – nicht hinterherkaufen, Rücksetzer in 100–104 $ abwarten",
+  "if_up": "Schluss über 121,70 $ → Ausbruch, Ziel 125–135 $.",
+  "if_wait": "Über 104 $: abwarten, Trend läuft.",
+  "if_down": "Schluss unter 96 $ → Trend geschwächt; unter 88,68 $ ist die Zählung falsch.",
+  "pros": [
+   "Klarer Aufwärtstrend mit höheren Tiefs",
+   "Über der 50- und 200-Tage-Linie",
+   "Kostensenkungsprogramm stützt die Marge"
+  ],
+  "cons": [
+   "Welle 5 kann bald enden",
+   "Analysten-Kursziel schon fast erreicht",
+   "Geschäft in China weiter unsicher"
+  ],
+  "risk": "Am Ende der fünften Welle sind Rücksetzer von 10–15 % normal – wer jetzt kauft, kauft möglicherweise das Hoch.",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 150,
+  "lt_target_high": 175,
+  "lt_stop": 66,
+  "lt_until": "Juni 2028",
+  "lt_entry_low": 92,
+  "lt_entry_high": 104,
+  "lt_text": "Nach dem Absturz 2022–2025 (374 → 48 $) baut sich ein Aufwärtstrend auf: Welle (1) bis 121,64 $ (Feb. 2026), (2) bis 66,22 $. Welle (3) zielt auf 150–175 $ (38,2 % des großen Rückgangs).",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2025-04-07",
+      "p": 48.37,
+      "l": "[C]"
+     },
+     {
+      "d": "2026-02-02",
+      "p": 121.64,
+      "l": "(1)"
+     },
+     {
+      "d": "2026-03-30",
+      "p": 66.22,
+      "l": "(2)"
+     }
+    ],
+    "path": [
+     {
+      "p": 100,
+      "l": "1/2"
+     },
+     {
+      "p": 162,
+      "l": "(3)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 80
+      }
+     ],
+     "label": "alt. nur Erholung",
+     "prob": 40
+    },
+    "up": 121.64
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. direkt höher",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 100,
+  "support_high": 104,
+  "price": 112.665,
+  "price_date": "2026-11-04",
+  "range_low": 66.22,
+  "range_high": 121.64,
+  "chg_note": "+6,5 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 113.98,
+  "lt_analysts": 27,
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": ""
+ },
+ {
+  "ticker": "ZTS",
+  "name": "Zoetis",
+  "sector": "Tiergesundheit",
+  "tv_symbol": "NYSE:ZTS",
+  "status": "boden",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 78,
+  "entry_high": 82,
+  "stop": 74,
+  "invalidation": 68.77,
+  "trigger": 92,
+  "target_low": 95,
+  "target_high": 102,
+  "waves": [
+   {
+    "d": "2026-10-02",
+    "p": 68.77,
+    "l": "Tief"
+   },
+   {
+    "d": "2026-10-22",
+    "p": 82.29,
+    "l": "1"
+   },
+   {
+    "d": "2026-10-28",
+    "p": 77.03,
+    "l": "2"
+   },
+   {
+    "d": "2026-11-04",
+    "p": 88.15,
+    "l": "3"
+   }
+  ],
+  "wave_primary": "Nach dem Absturz auf 68,77 $ (2.10., Mehrjahrestief) erste Aufwärtsstruktur: 1 bis 82,29 $ (22.10.), 2 bis 77,03 $ (28.10.), 3 läuft (88,15 $ am 4.11.). Ziel nach einem Rücksetzer 95–102 $ (Lücke vom Mai).",
+  "wave_alt": "Nur eine Gegenbewegung im Abwärtstrend: Rückfall unter 77 $ Richtung 69–72 $.",
+  "plan": "Weltmarktführer für Tiermedizin, nach dem Absturz 2026 günstig bewertet. Spekulative Bodenbildung – Zahlen am 5.11. entscheiden.",
+  "news_brief": "Kurs von 132 $ (Feb.) auf 68,77 $ (2.10.) gefallen, großer Einbruch im Mai. Seit Oktober Erholung, heute +5,2 %. Zahlen am 5.11.",
+  "next_event": "Q3-Zahlen",
+  "next_event_date": "2026-11-05",
+  "action": "Zahlen am 5.11. abwarten – danach Rücksetzer in 78–82 $ oder Schluss über 92 $",
+  "if_up": "Schluss über 92 $ → Boden bestätigt, Ziel 95–102 $.",
+  "if_wait": "Zwischen 82 und 92 $: abwarten.",
+  "if_down": "Schluss unter 74 $ → Erholung gescheitert, Ziel wieder 69 $.",
+  "pros": [
+   "Höhere Tiefs seit dem 2.10.",
+   "Über der 50-Tage-Linie",
+   "Marktführer mit hoher Marge"
+  ],
+  "cons": [
+   "Langfristig im Abwärtstrend seit 2021",
+   "Unter der 200-Tage-Linie",
+   "Zahlen-Termin direkt voraus"
+  ],
+  "risk": "Zahlen am 5.11. – enttäuscht die Prognose, ist die Erholung schnell vorbei.",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 105,
+  "lt_target_high": 120,
+  "lt_stop": 66,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 76,
+  "lt_entry_high": 82,
+  "lt_text": "Großer Abwärtstrend seit 2021 (249 → 69 $) als ABC-Korrektur. Hält das Tief, ist eine Erholung bis zum 38,2 %-Rücklauf des letzten Abschnitts (105–120 $) das große Ziel.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2023-12-11",
+      "p": 201.92,
+      "l": "(B)"
+     },
+     {
+      "d": "2026-09-28",
+      "p": 68.77,
+      "l": "(C)"
+     }
+    ],
+    "path": [
+     {
+      "p": 80,
+      "l": "2"
+     },
+     {
+      "p": 112,
+      "l": "[A]"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 60
+      }
+     ],
+     "label": "alt. neues Tief",
+     "prob": 45
+    },
+    "up": 115.13
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. nur Gegenbewegung",
+     "prob": 45
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 78,
+  "support_high": 82,
+  "price": 87.6,
+  "price_date": "2026-11-04",
+  "range_low": 68.77,
+  "range_high": 132.49,
+  "chg_note": "+5,2 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 88.38,
+  "lt_analysts": 13,
+  "horizon_weeks_low": 7,
+  "horizon_weeks_high": 16,
+  "horizon_end": "2027-02-23",
+  "horizon_text": "Ziel in ca. 7–16 Wochen (bis ca. Ende Feb.)",
+  "entry_eta_text": "Einstiegszone in ca. 2–5 Wochen (bis ca. Mitte Dez.)"
+ },
+ {
+  "ticker": "MRNA",
+  "name": "Moderna",
+  "sector": "Biotech",
+  "tv_symbol": "NASDAQ:MRNA",
+  "status": "trend",
+  "bias": "bullisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 180,
+  "entry_high": 200,
+  "stop": 168,
+  "invalidation": 128.61,
+  "trigger": 254.5,
+  "target_low": 290,
+  "target_high": 330,
+  "waves": [
+   {
+    "d": "2026-08-03",
+    "p": 52.66,
+    "l": "2"
+   },
+   {
+    "d": "2026-10-21",
+    "p": 254.48,
+    "l": "3"
+   },
+   {
+    "d": "2026-10-27",
+    "p": 179.53,
+    "l": "4"
+   }
+  ],
+  "wave_primary": "Gewaltiger Aufwärtsimpuls seit 22,28 $ (Nov. 2025): Welle 2 bei 52,66 $ (3.8.), Welle 3 bis 254,48 $ (21.10.), Welle 4 bis 179,53 $ (27.10.). Welle 5 läuft – Ziel 290–310 $. Danach ist ein kräftiger Rücksetzer Richtung 180–200 $ wahrscheinlich; dort liegt die Einstiegszone.",
+  "wave_alt": "Das Hoch ist schon da (Doppelhoch um 254 $): Rückfall Richtung 130–180 $.",
+  "plan": "Hochspekulativ: Krebsimpfstoff-Hoffnung hat die Aktie verzehnfacht. Nur kleine Position und nur nach einem Rücksetzer.",
+  "news_brief": "Seit Jahresbeginn über +600 %: Erfolg der personalisierten Krebsimpfung (19.8. +125 % an einem Tag), Aufnahme in den Nasdaq-100. Heute +8,9 %. Zahlen am 6.11.",
+  "next_event": "Q3-Zahlen",
+  "next_event_date": "2026-11-06",
+  "action": "Nicht hinterherkaufen – Zahlen am 6.11.; Rücksetzer in 180–200 $ abwarten",
+  "if_up": "Schluss über 254,50 $ → Welle 5 bestätigt, Ziel 290–330 $ (dort Gewinne sichern).",
+  "if_wait": "Über 200 $: abwarten, nicht jagen.",
+  "if_down": "Schluss unter 168 $ → Hoch war das Ende, Ziel 130 $.",
+  "pros": [
+   "Starker Aufwärtstrend mit klarer Wellenstruktur",
+   "Großer Impuls durch die Krebsimpfstoff-Daten",
+   "Weit über allen gleitenden Durchschnitten"
+  ],
+  "cons": [
+   "Analysten-Kursziel weit unter dem Kurs (≈ 138 $)",
+   "Extrem hohe Schwankung (Ø 9 % pro Tag)",
+   "Nach +1.000 % ist viel Hoffnung eingepreist"
+  ],
+  "risk": "Schon kleine Rückschläge in den Studien können den Kurs um 30–50 % fallen lassen.",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 300,
+  "lt_target_high": 380,
+  "lt_stop": 128,
+  "lt_until": "Sept. 2027",
+  "lt_entry_low": 175,
+  "lt_entry_high": 205,
+  "lt_text": "Nach dem Absturz 2021–2025 (497 → 22 $) ein neuer großer Impuls. Welle 3 endete bei 254 $; nach Welle 4 zielt Welle 5 auf 300–380 $ – hochspekulativ.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2025-11-17",
+      "p": 22.28,
+      "l": "(C)"
+     },
+     {
+      "d": "2026-07-06",
+      "p": 85.6,
+      "l": "1"
+     },
+     {
+      "d": "2026-08-03",
+      "p": 52.66,
+      "l": "2"
+     },
+     {
+      "d": "2026-10-19",
+      "p": 254.48,
+      "l": "3"
+     }
+    ],
+    "path": [
+     {
+      "p": 190,
+      "l": "4"
+     },
+     {
+      "p": 340,
+      "l": "5"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 110
+      }
+     ],
+     "label": "alt. Hoch erreicht",
+     "prob": 40
+    },
+    "up": 254.48
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. Hoch erreicht",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 180,
+  "support_high": 200,
+  "price": 250.45,
+  "price_date": "2026-11-04",
+  "range_low": 22.28,
+  "range_high": 254.48,
+  "chg_note": "+8,9 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 138.37,
+  "lt_analysts": 19,
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-12-02",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Anfang Dez.)",
+  "entry_eta_text": ""
+ },
+ {
+  "ticker": "1810",
+  "name": "Xiaomi",
+  "sector": "Smartphones / E-Autos",
+  "tv_symbol": "HKEX:1810",
+  "currency": "HKD",
+  "status": "annaeherung",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 25.5,
+  "entry_high": 26.8,
+  "stop": 24.4,
+  "invalidation": 23.58,
+  "trigger": 30,
+  "target_low": 32,
+  "target_high": 34.5,
+  "waves": [
+   {
+    "d": "2026-06-26",
+    "p": 21.3,
+    "l": "Tief"
+   },
+   {
+    "d": "2026-07-30",
+    "p": 32.4,
+    "l": "A"
+   },
+   {
+    "d": "2026-10-08",
+    "p": 23.58,
+    "l": "B"
+   },
+   {
+    "d": "2026-11-03",
+    "p": 28.92,
+    "l": "i"
+   }
+  ],
+  "wave_primary": "Tief 21,30 HK$ (26.6.), A bis 32,40 HK$ (30.7.), B bis 23,58 HK$ (8.10., höheres Tief). C aufwärts hat begonnen (i bis 28,92 HK$ am 3.11.). Nach einem Rücksetzer (ii) in 25,5–26,8 HK$ Ziel C = A bei 32–34,5 HK$.",
+  "wave_alt": "B ist noch nicht fertig: Schluss unter 23,58 HK$ → neues Tief Richtung 21 HK$.",
+  "plan": "Chinesischer Elektronik- und E-Auto-Hersteller, Kurs mehr als halbiert. Spekulative Bodenbildung; Kurse in Hongkong-Dollar.",
+  "news_brief": "Kurs seit dem Hoch im Juni 2025 (61 HK$) mehr als halbiert; seit Oktober höhere Tiefs, Woche +12 %. Zahlen am 24.11.",
+  "next_event": "Q3-Zahlen",
+  "next_event_date": "2026-11-24",
+  "action": "Einstieg bei Rücksetzer in 25,5–26,8 HK$ mit Umkehrsignal, Stop 24,4 HK$",
+  "if_up": "Schluss über 30 HK$ → C-Welle läuft, Ziel 32–34,5 HK$.",
+  "if_wait": "Zwischen 26,8 und 30 HK$: abwarten.",
+  "if_down": "Schluss unter 24,4 HK$ → Boden gescheitert, Ziel 21–23 HK$.",
+  "pros": [
+   "Höheres Tief im Oktober",
+   "Analysten-Kursziel deutlich über dem Kurs",
+   "Über der 50-Tage-Linie"
+  ],
+  "cons": [
+   "Langfristig im Abwärtstrend seit Mitte 2025",
+   "Starker Wettbewerb bei Smartphones und E-Autos",
+   "Hongkong-Börse: andere Handelszeiten, Währung HK$"
+  ],
+  "risk": "China-Risiko: Konjunktur, Preiskampf bei E-Autos und politische Spannungen können den Kurs stark bewegen.",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 42,
+  "lt_target_high": 50,
+  "lt_stop": 20.5,
+  "lt_until": "Juni 2028",
+  "lt_entry_low": 24,
+  "lt_entry_high": 27,
+  "lt_text": "Großer Anstieg 2022–2025 (8 → 61 HK$) als Welle (1), danach Korrektur (2) bis 21,30 HK$. Hält das Tief, zielt Welle (3) auf 42–50 HK$ (61,8 % des Rückgangs und mehr).",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-10-09",
+      "p": 8.31,
+      "l": "[2]"
+     },
+     {
+      "d": "2025-06-22",
+      "p": 61.45,
+      "l": "(1)"
+     },
+     {
+      "d": "2026-06-21",
+      "p": 21.3,
+      "l": "(2)"
+     }
+    ],
+    "path": [
+     {
+      "p": 26,
+      "l": "2"
+     },
+     {
+      "p": 46,
+      "l": "(3)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 18
+      }
+     ],
+     "label": "alt. (2) tiefer",
+     "prob": 40
+    },
+    "up": 32.4
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 40
+    }
+   }
+  },
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 25.5,
+  "support_high": 26.8,
+  "price": 28.76,
+  "price_date": "2026-11-04",
+  "range_low": 21.3,
+  "range_high": 44.9,
+  "chg_note": "+0,6 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 34.15,
+  "lt_analysts": 27,
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-20",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Ende Nov.)"
+ },
+ {
+  "ticker": "BABA",
+  "name": "Alibaba",
+  "sector": "E-Commerce / Cloud China",
+  "tv_symbol": "NYSE:BABA",
+  "status": "boden",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 98,
+  "entry_high": 102,
+  "stop": 94,
+  "invalidation": 91.99,
+  "trigger": 113,
+  "target_low": 122,
+  "target_high": 132,
+  "waves": [
+   {
+    "d": "2025-09-29",
+    "p": 192.67,
+    "l": "Hoch"
+   },
+   {
+    "d": "2026-06-26",
+    "p": 91.99,
+    "l": "A"
+   },
+   {
+    "d": "2026-08-10",
+    "p": 132.57,
+    "l": "B"
+   },
+   {
+    "d": "2026-10-30",
+    "p": 97.48,
+    "l": "C"
+   }
+  ],
+  "wave_primary": "Korrektur vom Hoch 192,67 $ (Sept. 2025): A bis 91,99 $ (26.6.), B bis 132,57 $ (10.8.), C bis 97,48 $ (30.10.) – höheres Tief über A. Damit kann die Korrektur fertig sein; Ziel einer neuen Aufwärtswelle 122–132 $.",
+  "wave_alt": "C ist noch nicht fertig: Schluss unter 92 $ → 80–85 $.",
+  "plan": "Chinas größter Online-Händler mit wachsendem Cloud-/KI-Geschäft; günstig bewertet. Spekulative Bodenbildung, China-Risiko beachten.",
+  "news_brief": "Kurs seit dem Hoch im Sept. 2025 fast halbiert; höheres Tief am 30.10. (97,48 $), heute +5,5 %. Zahlen am 24.11.",
+  "next_event": "Q2-Zahlen",
+  "next_event_date": "2026-11-24",
+  "action": "Möglicher Boden – Rücksetzer in 98–102 $ oder Schluss über 113 $ abwarten",
+  "if_up": "Schluss über 113 $ → Boden bestätigt, Ziel 122–132 $.",
+  "if_wait": "Zwischen 102 und 113 $: abwarten.",
+  "if_down": "Schluss unter 94 $ → Boden gescheitert, Ziel 80–85 $.",
+  "pros": [
+   "Höheres Tief über dem Juni-Tief",
+   "Analysten-Kursziel weit über dem Kurs (≈ 184 $)",
+   "Niedrige Bewertung, Cloud wächst"
+  ],
+  "cons": [
+   "Unter der 200-Tage-Linie, Abwärtstrend seit Sept. 2025",
+   "China-Konjunktur schwach",
+   "Politische Risiken (USA–China)"
+  ],
+  "risk": "US-China-Spannungen können den Kurs jederzeit stark drücken.",
+  "lt_view": "bullisch",
+  "lt_conf": "niedrig",
+  "lt_target_low": 160,
+  "lt_target_high": 195,
+  "lt_stop": 88,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 95,
+  "lt_entry_high": 103,
+  "lt_text": "Großer Anstieg 2022–2025 (58 → 193 $) als Welle (1), Korrektur (2) bis 92 $. Hält das Tief, zielt Welle (3) auf 160–195 $ (Rückkehr zum Hoch).",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-10-24",
+      "p": 58.01,
+      "l": "[2]"
+     },
+     {
+      "d": "2025-09-29",
+      "p": 192.67,
+      "l": "(1)"
+     },
+     {
+      "d": "2026-06-22",
+      "p": 91.99,
+      "l": "(2)"
+     }
+    ],
+    "path": [
+     {
+      "p": 100,
+      "l": "2"
+     },
+     {
+      "p": 178,
+      "l": "(3)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 78
+      }
+     ],
+     "label": "alt. (2) tiefer",
+     "prob": 40
+    },
+    "up": 132.57
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 45
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 98,
+  "support_high": 102,
+  "price": 105.78,
+  "price_date": "2026-11-04",
+  "range_low": 91.99,
+  "range_high": 181.1,
+  "chg_note": "+5,5 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 184.19,
+  "lt_analysts": 40,
+  "horizon_weeks_low": 6,
+  "horizon_weeks_high": 14,
+  "horizon_end": "2027-02-08",
+  "horizon_text": "Ziel in ca. 6–14 Wochen (bis ca. Anfang Feb.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Ende Nov.)"
+ },
+ {
+  "ticker": "MU",
+  "name": "Micron Technology",
+  "sector": "Halbleiter (Speicher)",
+  "tv_symbol": "NASDAQ:MU",
+  "status": "annaeherung",
+  "bias": "bärisch",
+  "entry_type": "Rücksetzer",
+  "entry_low": 745,
+  "entry_high": 790,
+  "stop": 705,
+  "invalidation": 737.88,
+  "trigger": 900,
+  "target_low": 990,
+  "target_high": 1100,
+  "waves": [
+   {
+    "d": "2026-06-25",
+    "p": 1255.0,
+    "l": "Hoch"
+   },
+   {
+    "d": "2026-07-29",
+    "p": 737.88,
+    "l": "A"
+   },
+   {
+    "d": "2026-09-25",
+    "p": 1108.72,
+    "l": "B"
+   },
+   {
+    "d": "2026-11-04",
+    "p": 791.03,
+    "l": "C"
+   }
+  ],
+  "wave_primary": "Nach dem Speicher-Boom (61,5 $ im April 2025 → 1.255 $ am 25.6.) Korrektur: A bis 737,88 $ (29.7.), B bis 1.108,72 $ (25.9.), C läuft (791 $ am 4.11.). C = 0,618 × A liegt bei ~790 $; Zone 745–790 $ (Sommer-Tiefs). Danach Ziel 990–1.100 $.",
+  "wave_alt": "C = A: Korrektur bis 590–650 $ – Schluss unter 705 $.",
+  "plan": "Speicherchip-Hersteller mitten im KI-Speicherboom. Breite Korrektur nach Verzwanzigfachung – Einstieg erst in der Zone mit Umkehrsignal.",
+  "news_brief": "Speicher-Boom: von 62 $ (April 2025) auf 1.255 $ (Juni 2026). Seitdem breite Korrektur; heute −6,8 % in der Chip-Schwäche. Zahlen am 23.12.",
+  "next_event": "Q1-Zahlen",
+  "next_event_date": "2026-12-23",
+  "action": "Läuft auf die Zone 745–790 $ zu – dort Umkehrsignal abwarten, Stop 705 $",
+  "if_up": "Schluss über 900 $ → Korrektur vorbei, Ziel 990–1.100 $.",
+  "if_wait": "Über 790 $: abwarten, Korrektur läuft noch.",
+  "if_down": "Schluss unter 705 $ → C = A, Ziel 590–650 $.",
+  "pros": [
+   "Kurs nähert sich der Sommer-Unterstützung",
+   "Analysten-Kursziel weit über dem Kurs",
+   "Speicher-Nachfrage durch KI sehr hoch"
+  ],
+  "cons": [
+   "Speicher ist ein Zyklus – nach +1.900 % ist viel eingepreist",
+   "Unter der 50-Tage-Linie, Woche −19 %",
+   "Sehr hohe Schwankung (Ø 6 % pro Tag)"
+  ],
+  "risk": "Dreht der Speicherzyklus, kann die Korrektur deutlich tiefer gehen als 700 $.",
+  "lt_view": "bullisch",
+  "lt_conf": "mittel",
+  "lt_target_low": 1250,
+  "lt_target_high": 1600,
+  "lt_stop": 600,
+  "lt_until": "Sept. 2027",
+  "lt_entry_low": 740,
+  "lt_entry_high": 800,
+  "lt_text": "Großer Aufwärtstrend: Welle (3) endete bei 1.255 $ (Juni 2026), seitdem Welle (4). Hält sie über 600 $, zielt Welle (5) auf 1.250–1.600 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-12-19",
+      "p": 48.43,
+      "l": "[2]"
+     },
+     {
+      "d": "2024-06-17",
+      "p": 157.54,
+      "l": "(1)"
+     },
+     {
+      "d": "2025-04-07",
+      "p": 61.54,
+      "l": "(2)"
+     },
+     {
+      "d": "2026-06-22",
+      "p": 1255.0,
+      "l": "(3)"
+     }
+    ],
+    "path": [
+     {
+      "p": 765,
+      "l": "(4)"
+     },
+     {
+      "p": 1420,
+      "l": "(5)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 560
+      }
+     ],
+     "label": "alt. (4) tiefer",
+     "prob": 35
+    },
+    "up": 1255.0
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 745,
+  "support_high": 790,
+  "price": 797.124,
+  "price_date": "2026-11-04",
+  "range_low": 192.59,
+  "range_high": 1255.0,
+  "chg_note": "−6,8 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 1561.91,
+  "lt_analysts": 45,
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2026-12-27",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Mitte Nov.)"
+ },
+ {
+  "ticker": "TEAM",
+  "name": "Atlassian",
+  "sector": "Software",
+  "tv_symbol": "NASDAQ:TEAM",
+  "status": "annaeherung",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 168,
+  "entry_high": 178,
+  "stop": 158,
+  "invalidation": 152,
+  "trigger": 205,
+  "target_low": 225,
+  "target_high": 250,
+  "waves": [
+   {
+    "d": "2026-06-25",
+    "p": 74.41,
+    "l": "Tief"
+   },
+   {
+    "d": "2026-09-22",
+    "p": 200.0,
+    "l": "3"
+   },
+   {
+    "d": "2026-09-29",
+    "p": 168.05,
+    "l": "4"
+   },
+   {
+    "d": "2026-10-22",
+    "p": 229.96,
+    "l": "5"
+   },
+   {
+    "d": "2026-11-03",
+    "p": 178.34,
+    "l": "A"
+   }
+  ],
+  "wave_primary": "Fünf Wellen aufwärts vom Tief 74,41 $ (25.6.) bis 229,96 $ (22.10.), Welle 4 bei 168,05 $. Jetzt ABC-Korrektur: A bis 178,34 $ (3.11.), B-Erholung läuft (192 $). C zielt auf 168–178 $ (38,2 %-Rücklauf ≈ 170 $), dann neuer Anstieg.",
+  "wave_alt": "Tiefere Korrektur bis zum 50 %-Rücklauf (152 $) – Schluss unter 158 $.",
+  "plan": "Software für Teamarbeit (Jira, Confluence). Nach dem Absturz Anfang 2026 kräftig erholt; nach fünf Wellen erst die Korrektur abwarten.",
+  "news_brief": "Absturz bis April (KI-Sorgen bei Software, 56 $), dann Vervierfachung bis 230 $. Zahlen am 5.11.",
+  "next_event": "Q1-Zahlen",
+  "next_event_date": "2026-11-05",
+  "action": "Zahlen am 5.11. abwarten – Einstieg erst in 168–178 $ mit Umkehrsignal",
+  "if_up": "Schluss über 205 $ → Korrektur vorbei, Ziel 225–250 $.",
+  "if_wait": "Zwischen 178 und 205 $: abwarten.",
+  "if_down": "Schluss unter 158 $ → tiefere Korrektur Richtung 150 $.",
+  "pros": [
+   "Klare Fünf-Wellen-Struktur aufwärts",
+   "Weit über der 200-Tage-Linie",
+   "Analysten-Kursziel über dem Kurs"
+  ],
+  "cons": [
+   "Software-Sektor schwankt stark (KI-Sorgen)",
+   "Nach +200 % ist eine Korrektur normal",
+   "Zahlen-Termin direkt voraus"
+  ],
+  "risk": "Zahlen am 5.11. können eine große Kurslücke auslösen – in beide Richtungen.",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 250,
+  "lt_target_high": 290,
+  "lt_stop": 140,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 165,
+  "lt_entry_high": 180,
+  "lt_text": "Großer Absturz 2025/26 (326 → 56 $) als ABC. Neue Aufwärtswelle seit April: nach Welle 2 zielt Welle 3 auf 250–290 $ (78,6 % des Rückgangs und mehr) – spekulativ.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2025-02-10",
+      "p": 326.0,
+      "l": "(B)"
+     },
+     {
+      "d": "2026-04-06",
+      "p": 56.01,
+      "l": "(C)"
+     },
+     {
+      "d": "2026-10-19",
+      "p": 229.96,
+      "l": "1"
+     }
+    ],
+    "path": [
+     {
+      "p": 172,
+      "l": "2"
+     },
+     {
+      "p": 270,
+      "l": "3"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 120
+      }
+     ],
+     "label": "alt. nur Erholung",
+     "prob": 45
+    },
+    "up": 229.96
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. tiefer",
+     "prob": 40
+    }
+   }
+  },
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "support_low": 168,
+  "support_high": 178,
+  "price": 190.56,
+  "price_date": "2026-11-04",
+  "range_low": 56.01,
+  "range_high": 229.96,
+  "chg_note": "+0,7 % am 4.11.",
+  "updated_at": "2026-11-04T21:55:00+01:00",
+  "lt_consensus": 230.2,
+  "lt_analysts": 31,
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-12",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Ende Nov.)"
  }
 ]
