@@ -115,6 +115,9 @@ ew: {
   Abendanalyse für ~10 Werte pro Abend `ew.lang` ergänzen (Depot ist erledigt, dann Watchlist), bestehende Zählungen und
   Wahrscheinlichkeiten nur ändern, wenn der Kurs sie widerlegt bzw. bestätigt (dann im Hauptszenario sagen). Wahrscheinlichkeiten
   ehrlich: selten über 70 %.
+- **Wahrscheinlichkeit für jede Aktie und beide Ebenen setzen** (`ew.kurz.alt.prob`, `ew.lang.alt.prob`), ~10 Werte pro Abend, bis alle
+  versorgt sind. Fehlt sie, zeigt die Website einen groben Schätzwert aus lt_conf bzw. alert/status.
+- Die Website zeigt die Einstiegszone (kurz: entry_*) bzw. Kaufzone (lang: lt_entry_* oder erster Rücksetzer im Pfad) immer im Chart.
 
 ## Felder je Aktie (stocks.json)
 

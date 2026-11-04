@@ -192,7 +192,7 @@
     } else {
       const d = ((DAILY && DAILY[r.ticker]) || []).filter((k) => k.every((v) => v != null));
       const f = live.length ? live[0][0] : '9999';
-      c = d.filter((k) => k[0] < f).concat(live).slice(-200);
+      c = d.filter((k) => k[0] < f).concat(live).slice(-170);
     }
     return c.length >= 20 ? c : null;
   }
@@ -265,8 +265,16 @@
       alt = {path: a.path && a.path.length ? timed(ap) : ap, prob: a.prob != null ? a.prob : null, label: a.label || 'Alternative'};
     }
     const end = path[path.length - 1];
-    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end,
-      prob: e.prob != null ? e.prob : alt && alt.prob != null ? 100 - alt.prob : null,
+    // Wahrscheinlichkeit: aus der Analyse, sonst grob aus der Sicherheit der Einschätzung
+    const pDef = L ? ({hoch: 70, mittel: 60, niedrig: 55}[r.lt_conf] || 60) : (r.alert === 'hoch' || r.status === 'meiden' ? 55 : 60);
+    let prob = e.prob != null ? e.prob : alt && alt.prob != null ? 100 - alt.prob : pDef;
+    const probEst = e.prob == null && !(alt && alt.prob != null);
+    if (alt && alt.prob == null) alt.prob = 100 - prob;
+    // Einstiegs-/Kaufzone: immer zeigen
+    let zone = null;
+    if (L) { const z = ltZone(r); zone = z ? {lo: z[0], hi: z[1], at: 'path', label: 'Kaufzone'} : {lo: p0 * .97, hi: p0 * 1.01, at: 'now', label: 'Kaufzone (Kurs)'}; }
+    else if (r.entry_low != null) zone = {lo: r.entry_low, hi: r.entry_high, at: needEntry ? 'path' : 'now', label: r.entry_type === 'Ausbruch' ? 'Einstieg (Ausbruch)' : 'Einstieg'};
+    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end, prob, probEst, zone,
       fib: e.fib || null};
   }
   const ewEnd = (r, lv) => { const P = ewPlan(r, lv); return P ? P.end.d : null; };
@@ -287,16 +295,16 @@
       .sort((x, y) => Math.abs(x[1] - tm) - Math.abs(y[1] - tm)).slice(0, 3).sort((x, y) => y[1] - x[1]);
   }
 
-  function ewChart(r, lv) {
+  function ewChart(r, lv, sz) {
     const P = ewPlan(r, lv);
     if (!P) return `<p class="empty">${lv === 'lang' ? 'Wochenchart' : 'Chart'} lädt …</p>`;
     const {L, c, n, now, p0, bar} = P;
     const fi = (d) => (n - 1) + ddays(now, d) / bar; // Datum -> x-Index (auch Zukunft)
     const ends = P.path.map((w) => fi(w.d)).concat(P.alt ? P.alt.path.map((w) => fi(w.d)) : []);
     const fut = Math.max(n * .25, (Math.max(...ends) - (n - 1)) * 1.12 + n * .03);
-    const W = 380, H = 300, PL = 4, PR = 58, PT = 18, PB = 30;
+    const W = sz ? sz.W : 380, H = sz ? sz.H : 330, PL = 4, PR = 58, PT = 18, PB = 30;
     const cw = (W - PL - PR) / (n + fut), x = (i) => PL + i * cw + cw / 2;
-    const vals = c.map((k) => k[4]).concat(P.tgt, P.path.map((w) => w.p), P.alt ? P.alt.path.map((w) => w.p) : [], [P.up, P.down, P.stop].filter((v) => v != null));
+    const vals = c.map((k) => k[4]).concat(P.tgt, P.path.map((w) => w.p), P.alt ? P.alt.path.map((w) => w.p) : [], [P.up, P.down, P.stop].filter((v) => v != null), P.zone ? [P.zone.lo, P.zone.hi] : []);
     let lo = Math.min(...c.map((k) => k[3]), ...vals), hi = Math.max(...c.map((k) => k[2]), ...vals);
     const logS = L && hi / lo > 3; // lange Sicht mit großer Spanne: logarithmisch
     const tf = (v) => logS ? Math.log(v) : v;
@@ -335,12 +343,14 @@
     });
     if (!fl.length) s += `<text x="${bx1 + 3}" y="${ty1 - 4}" font-size="8" font-weight="700" fill="#9cc8ff" class="halo">Ziel</text>`;
     // Einstiegskasten (kurz)
-    const ez = L ? ltZone(r) : P.needEntry ? [r.entry_low, r.entry_high] : null;
-    if (ez && P.path.length > 1 || (ez && !L)) {
-      const ei2 = fi(P.path[0].d), w2 = Math.max(fut * .12, 4);
-      const ex1 = x(Math.max(n - 1 + 1, ei2 - w2)), ex2 = x(ei2 + w2 * .7);
-      s += `<rect x="${ex1}" y="${y(ez[1])}" width="${ex2 - ex1}" height="${Math.max(5, y(ez[0]) - y(ez[1]))}" rx="3" fill="#2fd08a" fill-opacity=".14" stroke="#2fd08a" stroke-opacity=".7"/>` +
-        `<text x="${ex2 + 3}" y="${(y(ez[0]) + y(ez[1])) / 2 + 3}" font-size="8" font-weight="700" fill="#2fd08a" class="halo">${L ? 'Kaufzone' : 'Einstieg'}</text>`;
+    if (P.zone) {
+      const Z = P.zone, w2 = Math.max(fut * .14, 5);
+      const ei2 = Z.at === 'path' && P.path.length ? fi(P.path[0].d) : n - 1 + w2 * .5;
+      const ex1 = x(Math.max(n - 1 + .5, ei2 - w2)), ex2 = Math.min(bx1 - 4 > x(ei2) ? bx1 - 4 : xr - 2, x(ei2 + w2 * .7));
+      const zy1 = y(Z.hi), zy2 = y(Z.lo), zh = Math.max(6, zy2 - zy1);
+      s += `<rect x="${ex1}" y="${zy1}" width="${Math.max(10, ex2 - ex1)}" height="${zh}" rx="3" fill="#2fd08a" fill-opacity=".2" stroke="#2fd08a" stroke-width="1.3"/>` +
+        `<line x1="${PL}" x2="${ex1}" y1="${zy1}" y2="${zy1}" stroke="#2fd08a" stroke-opacity=".25" stroke-dasharray="2 3"/><line x1="${PL}" x2="${ex1}" y1="${zy1 + zh}" y2="${zy1 + zh}" stroke="#2fd08a" stroke-opacity=".25" stroke-dasharray="2 3"/>` +
+        `<text x="${ex1 + 2}" y="${zy1 - 4}" font-size="8.5" font-weight="800" fill="#2fd08a" class="halo">${Z.label}</text>`;
     }
     // Kurslinie
     s += `<path d="${c.map((k, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ')}" fill="none" stroke="#d6d9e4" stroke-width="1.15" stroke-linejoin="round" class="wave"/>`;
@@ -376,7 +386,7 @@
       seg = [px, py, nx, ny]; px = nx; py = ny; pv = w.p;
     });
     if (P.prob != null) {
-      const t2 = P.prob + ' %', tw = 30, mx = (seg[0] + seg[2]) / 2, my = (seg[1] + seg[3]) / 2;
+      const t2 = P.prob + ' %', tw = 32, mx = (seg[0] + seg[2]) / 2, my = (seg[1] + seg[3]) / 2;
       const bxx = Math.min(xr - tw - 2, Math.max(x0 + 2, mx + 5)), byy = Math.max(PT - 6, Math.min(H - PB - 16, my + 2));
       s += `<rect x="${bxx}" y="${byy}" width="${tw}" height="14" rx="4" fill="#0b0c10" stroke="#2fd08a" stroke-opacity=".8"/><text x="${bxx + tw / 2}" y="${byy + 10}" font-size="8.5" font-weight="800" fill="#2fd08a" text-anchor="middle">${t2}</text>`;
     }
@@ -386,6 +396,7 @@
     const labs = [[p0, 'now']];
     if (P.up != null) labs.push([P.up, '#2fd08a']); if (P.down != null) labs.push([P.down, '#ff6b78']);
     labs.push([P.tgt[1], '#5aa7ff'], [P.tgt[0], '#5aa7ff']);
+    if (P.zone) labs.push([P.zone.hi, '#2fd08a'], [P.zone.lo, '#2fd08a']);
     const used = labs.map((v) => y(v[0]));
     gl.forEach((g) => { if (used.every((u) => Math.abs(u - y(g)) > 11)) labs.push([g, '#5d6378']); });
     labs.sort((a, b) => b[0] - a[0]); let prevY = -99;
@@ -483,9 +494,36 @@
     const gr = new Set(P.piv.filter((p) => p.l).map((p) => deg(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg(w.l))));
     const G = [['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
     return `<div class="legend">${G.map((g) => `<span style="--lc:${DEGC[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">automatische Wendepunkte</span>' : ''}
-      <span style="--lc:#2fd08a">Hauptszenario${P.prob != null ? ' ' + P.prob + ' %' : ''}</span><span style="--lc:#f5b74a">Alternative</span><span style="--lc:#5aa7ff">Zielzone + Fibonacci</span><span style="--lc:#9aa0b4">Z = Quartalszahlen</span></div>
-      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.</p>`;
+      <span style="--lc:#2fd08a">Hauptszenario ${P.prob} %</span><span style="--lc:#f5b74a">Alternative ${P.alt ? P.alt.prob + ' %' : ''}</span><span style="--lc:#2fd08a">${P.L ? 'Kaufzone' : 'Einstiegszone'}</span><span style="--lc:#5aa7ff">Zielzone + Fibonacci</span><span style="--lc:#9aa0b4">Z = Quartalszahlen</span></div>
+      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ' Wahrscheinlichkeit grob aus der Sicherheit der Einschätzung, bis die Abendanalyse sie festlegt.' : ''}</p>`;
   }
+  // Vollbild für den Wellen-Chart (dreh das Handy quer für mehr Platz)
+  let FS = null;
+  function fsDraw() {
+    if (!FS) return;
+    const r = STOCKS.find((x) => x.ticker === FS.t); if (!r) return;
+    const k = innerWidth < 700 ? 1.15 : innerWidth < 1100 ? 1.5 : 1.9, top = 64, legendH = innerWidth < 700 ? 70 : 40;
+    const W = Math.max(380, Math.round((innerWidth - 16) / k)), H = Math.max(260, Math.round((innerHeight - top - legendH - 12) / k));
+    FS.el.querySelector('.fs-h').innerHTML = `<div><b>${esc(r.ticker)}</b> <span>${esc(r.name)}</span></div>
+      <span class="hz-sw"><button data-l="kurz" aria-selected="${FS.lv === 'kurz'}">⚡ Wochen/Monate</button><button data-l="lang" aria-selected="${FS.lv === 'lang'}">🧭 Monate/Jahre</button></span>
+      <button class="fs-x" aria-label="Schließen">✕</button>`;
+    FS.el.querySelector('.fs-c').innerHTML = ewChart(r, FS.lv, {W, H}) + legend(r, FS.lv);
+    FS.el.querySelectorAll('[data-l]').forEach((b) => b.onclick = () => { FS.lv = b.dataset.l; ensure(FS.lv).then(fsDraw); fsDraw(); });
+    FS.el.querySelector('.fs-x').onclick = fsClose;
+  }
+  function fsOpen(t, lv) {
+    const el = document.createElement('div'); el.className = 'fs'; el.innerHTML = '<div class="fs-h"></div><div class="fs-c"></div>';
+    document.body.appendChild(el); document.body.classList.add('fs-on');
+    FS = {t, lv, el}; ensure(lv).then(fsDraw); fsDraw();
+    try { if (el.requestFullscreen && innerWidth < 900) el.requestFullscreen().catch(() => {}); } catch (e) { /* ok */ }
+  }
+  function fsClose() {
+    if (!FS) return; try { if (document.fullscreenElement) document.exitFullscreen(); } catch (e) { /* ok */ }
+    FS.el.remove(); FS = null; document.body.classList.remove('fs-on');
+  }
+  addEventListener('resize', () => { clearTimeout(window.__fsT); window.__fsT = setTimeout(fsDraw, 150); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && FS) fsClose(); });
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && FS && innerWidth < 900) fsClose(); });
   function ensure(h) {
     if (h === 'lang' && !WEEKLY) return load('weekly').then((w) => { WEEKLY = (w && w.stocks) || {}; return true; }).catch(() => { WEEKLY = {}; return true; });
     if (h === 'kurz' && !DAILY) return load('daily').then((w) => { DAILY = (w && w.stocks) || {}; return true; }).catch(() => { DAILY = {}; return true; });
@@ -513,14 +551,14 @@
       <div class="dtabs"><button data-p="ov">Überblick</button><button data-p="num">Zahlen</button><button data-p="calc">Rechner</button></div>
 ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pane="ov">
       <div class="hz-band lang"><b>🧭 Langfristig · Monate bis Jahre</b><span>Ziel um ${esc(ltUntil(r))} · Wochenchart</span></div>
-      <div class="chart">${ewChart(r, 'lang')}
+      <div class="chart"><button class="fs-btn" data-fs="lang" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'lang')}
         ${legend(r, 'lang')}</div>
       <div class="do lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
       ${ltHTML(r)}
       <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
 ` : `      <div class="dpane" data-pane="ov">
       <div class="hz-band kurz"><b>⚡ Kurzfristig · Wochen bis Monate</b><span>${(() => { const d = ewEnd(r, 'kurz'); return d ? 'Ziel um ' + esc(roughTxt(d)) : esc(r.horizon_text || ''); })()} · Tageschart</span></div>
-      <div class="chart">${ewChart(r, 'kurz')}
+      <div class="chart"><button class="fs-btn" data-fs="kurz" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'kurz')}
         ${legend(r, 'kurz')}</div>
       <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="ifs">
@@ -556,6 +594,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     box.querySelectorAll('.dpane').forEach((x) => { x.hidden = x.dataset.pane !== DTAB; });
     wireCalc(box, r);
     box.querySelectorAll('.hz-sw button').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
+    box.querySelectorAll('.fs-btn').forEach((b) => b.addEventListener('click', (e) => { e.stopPropagation(); fsOpen(r.ticker, b.dataset.fs); }));
   }
   function refreshSheet() {
     const r = STOCKS.find((x) => x.ticker === SEL); if (!r) return;

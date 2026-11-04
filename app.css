@@ -397,3 +397,14 @@ body[data-hor="lang"] { --hz: var(--accent); }
 .rulebox{background:rgba(90,167,255,.08);border:1px solid rgba(90,167,255,.3);border-radius:12px;padding:12px 14px;font-size:13.5px;margin:10px 0;line-height:1.5}
 .rulebox b{display:block;margin-bottom:3px}
 #analyse .hor{margin-bottom:12px}
+.chart{position:relative}
+.fs-btn{position:absolute;top:6px;left:8px;z-index:2;background:rgba(11,12,16,.8);border:1px solid var(--line);color:var(--text,#eef0f6);border-radius:8px;padding:4px 8px;font:600 12px Inter,system-ui,sans-serif;cursor:pointer}
+.fs-btn:hover{border-color:#5aa7ff}
+.fs{position:fixed;inset:0;z-index:1000;background:#0b0c10;display:flex;flex-direction:column;padding:8px 8px max(8px,env(safe-area-inset-bottom))}
+.fs-h{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:4px 6px 8px;flex-wrap:wrap}
+.fs-h b{font-size:17px}.fs-h span{color:var(--muted);font-size:13px}
+.fs-h .hz-sw{margin-left:auto}
+.fs-x{background:var(--bg2);border:1px solid var(--line);color:inherit;border-radius:10px;width:36px;height:36px;font-size:16px;cursor:pointer}
+.fs-c{flex:1;overflow:auto}.fs-c svg{display:block;width:100%;height:auto}
+.fs-c .legend{margin-top:6px}
+body.fs-on{overflow:hidden}
