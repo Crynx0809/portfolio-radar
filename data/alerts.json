@@ -1,10 +1,17 @@
 [
  {
+  "id": "a_novo_1104n",
+  "at": "2026-11-04T14:25:00+01:00",
+  "ticker": "NOVO-B",
+  "level": "hoch",
+  "text": "Q3 über Erwartungen, Prognose 2026 angehoben: Kurs 37,94 € (+5,1 %) über der Bestätigung 37,5 €. Hält der Schlusskurs heute über 37,5 €, ist der Boden wahrscheinlicher – Position halten; unter 36 € wäre der Ausbruch gescheitert."
+ },
+ {
   "id": "a_amd_1103e",
-  "at": "2026-11-03T22:50:00+01:00",
+  "at": "2026-11-04T14:25:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "Starke Q3-Zahlen (Rechenzentrum +97 %, Q4-Ausblick ca. 17 Mrd. $). Schluss 483,9 $, nachbörslich laut Bericht ca. 524 $ – über der Bestätigung 513 $. Schlusskurs am 4.11. entscheidet: über 513 $ Rest halten (Ziel 560–658 $), unter 466 $ gilt der Reduktionsplan weiter."
+  "text": "Starke Q3-Zahlen (Rechenzentrum +97 %, Q4-Ausblick ca. 17 Mrd. $). Schluss 483,9 $, nachbörslich laut Bericht ca. 524 $ – über der Bestätigung 513 $. Schlusskurs am 4.11. entscheidet: über 513 $ Rest halten (Ziel 560–658 $), unter 466 $ gilt der Reduktionsplan weiter. Vorbörslich am 4.11. widersprüchliche Berichte (zwischen +7 % und −1 %) – erst der Schlusskurs zählt."
  },
  {
   "id": "a_mrvl_1102e",

@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_novo_q3_1104",
+  "date": "2026-11-04",
+  "ticker": "NOVO-B",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Novo Nordisk: Q3 über den Erwartungen, Prognose 2026 angehoben",
+  "summary": "Novo Nordisk hat im dritten Quartal mehr verdient als erwartet und die Jahresprognose 2026 erhöht. Die Aktie stieg bis Mittag um 5,1 % auf 37,94 € – über die Bestätigungsmarke 37,5 €.",
+  "url": "https://www.investing.com/news/stock-market-news/novo-nordisk-q3-profit-beats-forecast-raises-2026-guidance-4997498"
+ },
+ {
+  "id": "n_macro_kongress_1104",
+  "date": "2026-11-04",
+  "ticker": "",
+  "impact": "mittel",
+  "direction": "neutral",
+  "headline": "US-Kongresswahl: Demokraten gewinnen laut Berichten Repräsentantenhaus und Senat",
+  "summary": "Nach der Zwischenwahl zeichnet sich ein Machtwechsel im Kongress ab. Chipwerte zeigten sich vorbörslich dennoch fest; wie der Gesamtmarkt reagiert, zeigt der US-Handel heute.",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
+ },
+ {
   "id": "n_amd_q3_1103",
   "date": "2026-11-03",
   "ticker": "AMD",
