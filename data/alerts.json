@@ -1,45 +1,66 @@
 [
  {
-  "id": "a_mrvl_1102e",
-  "at": "2026-11-04T17:55:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Weiterer Einbruch −7,7 % auf 158,7 $ – jetzt in der Zone 150–162 $ (Stop 178 $ war schon am 2.11. gebrochen, Teilverkauf laut Plan). Rest nur mit Stop 144 $ halten, nicht aufstocken; unter 147 $ ist der größere Boden gescheitert."
- },
- {
-  "id": "a_apld_1103e",
-  "at": "2026-11-04T17:55:00+01:00",
-  "ticker": "APLD",
-  "level": "hoch",
-  "text": "−8,6 % auf 16,28 $ – die Erholung vom 3.11. ist wieder weg (KI-Rechenzentrums-Sorgen nach der Wahl). Kurs knapp über der Zone 14–16 $, Stop 13,2 $. Plan (Ausstieg/Reduktion nach Stop-Bruch am 2.11.) bleibt, erst über 20,4 $ hinfällig; nicht aufstocken."
- },
- {
-  "id": "a_novo_1104n",
-  "at": "2026-11-04T14:25:00+01:00",
+  "id": "a_novo_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
   "ticker": "NOVO-B",
   "level": "hoch",
-  "text": "Q3 über Erwartungen, Prognose 2026 angehoben: Kurs 37,94 € (+5,1 %) über der Bestätigung 37,5 €. Hält der Schlusskurs heute über 37,5 €, ist der Boden wahrscheinlicher – Position halten; unter 36 € wäre der Ausbruch gescheitert."
+  "text": "Schluss 37,95 € (+5,1 %) über der Bestätigung 37,5 € nach starken Q3-Zahlen und höherer Prognose – der Boden ist wahrscheinlicher. Position halten, nicht hinterherkaufen; Schluss unter 36 € hieße: Ausbruch gescheitert. Ziel 40–42 €."
  },
  {
-  "id": "AMZN-2026-11-04",
-  "at": "2026-11-04T17:55:00+01:00",
+  "id": "a_mrvl_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Schluss 159,8 $ (−7,1 %) in der Zone 150–162 $. Stop 178 $ war schon am 2.11. gebrochen (Teilverkauf laut Plan). Rest nur mit Stop 144 $ halten, nicht aufstocken; Umkehrsignal in der Zone abwarten."
+ },
+ {
+  "id": "a_apld_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
+  "ticker": "APLD",
+  "level": "hoch",
+  "text": "Schluss 16,61 $ (−6,7 %) – Erholung vom 3.11. weg, KI-Rechenzentrums-Werte nach der Wahl unter Druck. Knapp über der Zone 14–16 $, Stop 13,2 $. Plan (Ausstieg/Reduktion) gilt, erst über 20,4 $ hinfällig."
+ },
+ {
+  "id": "a_amzn_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
   "ticker": "AMZN",
   "level": "mittel",
-  "text": "+6,1 % auf 265,9 $ – über der Bestätigung 258 $ (Wächter). Hält der Schluss darüber, greift das bullische Szenario: halten, Ziel 276–287 $."
+  "text": "Schluss 266,0 $ (+6,1 %) über der Bestätigung 258 $ – der Abwärtsbruch war ein Fehlausbruch. Halten, Ziel 276–287 $; neuer Stop-Vorschlag 228 $ (unter dem Oktober-Tief)."
  },
  {
-  "id": "a_amd_1103e",
-  "at": "2026-11-04T17:55:00+01:00",
+  "id": "a_amd_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
   "ticker": "AMD",
   "level": "mittel",
-  "text": "Zahlen-Gewinn verpufft: nachbörslich ca. 524 $, jetzt nur 486,4 $ (+0,5 %) – die KI-Rechenzentrums-Sorgen drücken. Bestätigung 513 $ nicht erreicht; Zone 420–445 $, Stop 408 $ unverändert."
+  "text": "Tageshoch 514,6 $, aber Schluss nur 488,8 $ (+1,0 %) – Bestätigung 513 $ per Schluss nicht erreicht. Rest halten, keine Käufe; unter 466 $ reduzieren/absichern, Zone 420–445 $, Stop 408 $."
  },
  {
-  "id": "a_gev_1103e",
-  "at": "2026-11-04T17:55:00+01:00",
+  "id": "a_cat_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
+  "ticker": "CAT",
+  "level": "mittel",
+  "text": "Caterpillar −5,2 % auf 591,3 $ – unter die Zone 600–652 $ gefallen, Tief 582,5 $. Meiden; unter 575 $ nächstes Ziel 537 $."
+ },
+ {
+  "id": "a_xom_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
+  "ticker": "XOM",
+  "level": "mittel",
+  "text": "Exxon −4,6 % auf 169,3 $ – in der Einstiegszone 160–170 $ (Wächter). Umkehrsignal abwarten, Stop 152 $."
+ },
+ {
+  "id": "a_gev_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
   "ticker": "GEV",
   "level": "mittel",
-  "text": "−10,6 % auf 821 $ – jetzt in der Einstiegszone 785–865 $ (Rechenzentrums-Sorgen, Streit mit Iberdrola). Kein Kauf ins fallende Messer: Umkehrsignal in der Zone abwarten, Stop 760 $."
+  "text": "GE Vernova −9,3 % auf 832,8 $, Siemens Energy −8,0 % auf 119,5 € – beide in ihren Einstiegszonen, aber kein Umkehrsignal. Nicht ins fallende Messer greifen; Stops 760 $ bzw. 108 €."
+ },
+ {
+  "id": "a_hc_1104e",
+  "at": "2026-11-04T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Gesundheitswerte springen nach der Wahl: Moderna +13,1 % (neues Hoch 258,4 $, Zahlen 6.11.), Intuitive Surgical +9,4 %, Molina +8,9 % (knapp über 226 $), Zoetis +7,5 % (Zahlen 5.11.). Nicht hinterherkaufen."
  },
  {
   "id": "a_mbg_1103e",
@@ -63,38 +84,10 @@
   "text": "−7,3 % auf 126,2 $: genau am Zonenboden und am 61,8 %-Rücklauf (126 $). Stop 118 $ rund 6,5 % entfernt."
  },
  {
-  "id": "a_ccj_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "CCJ",
-  "level": "mittel",
-  "text": "Schluss 73,4 $ (−4,6 %) unter dem Stop 74 $ – Boden gescheitert, meiden. Neue Beobachtungszone 64–68 $."
- },
- {
   "id": "a_hims_1102e",
   "at": "2026-11-02T22:55:00+01:00",
   "ticker": "HIMS",
   "level": "mittel",
   "text": "−8,8 % auf 25,2 $, unterer Rand der Spanne 24–32 $. Zahlen am 9.11. abwarten."
- },
- {
-  "id": "a_xom_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "XOM",
-  "level": "mittel",
-  "text": "−4,1 % auf 179,7 $ nach Ölpreissturz – Schluss wieder unter 184,9 $, Ausbruch vorerst gescheitert."
- },
- {
-  "id": "a_brk_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Ausbrüche per Schlusskurs bestätigt: Visa 425,5 $ (>414,6), Walmart 127,7 $ (>125), Berkshire 556,1 $ (>549), Costco 1.040,6 $ (>1.012, 2. Tag). Trend – nicht hinterherkaufen."
- },
- {
-  "id": "a_zone_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "In der Einstiegszone ohne Umkehrsignal: Freeport 63,0 $ (59–64), ServiceNow 106 $ (98–107, neu)."
  }
 ]

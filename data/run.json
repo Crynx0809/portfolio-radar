@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-04T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Wahl-Rally, aber KI-Rechenzentren im Abverkauf: Applied Digital −8,6 %, Marvell −7,7 % (jetzt in der Zone 150–162 $), GE Vernova −10,6 % in der Zone. AMD verliert den Zahlen-Gewinn (+0,5 %), Amazon +6,1 % über der Bestätigung 258 $.",
-  "market": "US-Börse: Dow ca. +2,2 %, S&P 500 +1,6 %, Nasdaq +2 % nach Demokraten-Sieg im Kongress (Stillstand bei Gesetzen erwartet). Rechenzentrums-Werte schwach wegen Sorgen um Ausbau-Stopps. Europa: SAP +4,0 %, Novo +5,5 %, Siemens Energy −7,4 %. Kurse: TradingView, Abruf 17:47 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-04T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Wahl-Rally mit klaren Gewinnern und Verlierern: Amazon schließt bei 266 $ über der Bestätigung 258 $ (bullisch), Novo bei 37,95 € über 37,5 €. KI-Rechenzentrums-Werte schwach: Marvell −7,1 % (in der Zone), Applied Digital −6,7 %, GE Vernova −9,3 %, Micron −7,0 %. AMD gibt den Zahlen-Gewinn ab (Schluss 488,8 $). Caterpillar fällt unter die Zone.",
+  "market": "US-Börse: Dow ca. +2,4 %, S&P 500 +1,6 %, Nasdaq +1,9 % nach Demokraten-Sieg im Kongress. Gesundheitswerte und Erneuerbare stark, Rechenzentrums-Werte schwach. Europa: SAP +3,7 %, Novo +5,1 %, Siemens Energy −8,0 %. Morgen: Rheinmetall und Zoetis Q3, Freitag US-Arbeitsmarkt und Moderna-Zahlen. Kurse: TradingView, Abruf 22:32 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

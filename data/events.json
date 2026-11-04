@@ -1,21 +1,27 @@
 [
  {
-  "id": "e4",
-  "date": "2026-11-04",
-  "ticker": "NOVO-B",
-  "event": "9-Monats-Zahlen, Call 13:00 Uhr"
- },
- {
   "id": "e8",
   "date": "2026-11-05",
   "ticker": "RHM",
   "event": "Q3-Zahlen"
  },
  {
+  "id": "e_zts_1105",
+  "date": "2026-11-05",
+  "ticker": "ZTS",
+  "event": "Q3-Zahlen (vor US-Start)"
+ },
+ {
   "id": "e5",
   "date": "2026-11-06",
   "ticker": "Markt",
   "event": "US-Arbeitsmarktbericht Oktober"
+ },
+ {
+  "id": "e_mrna_1106",
+  "date": "2026-11-06",
+  "ticker": "MRNA",
+  "event": "Q3-Zahlen"
  },
  {
   "id": "e10",

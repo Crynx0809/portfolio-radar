@@ -1,13 +1,33 @@
 [
  {
-  "id": "2026-11-04-markt-wahl",
+  "id": "n_mkt_close_1104",
   "date": "2026-11-04",
   "ticker": "Markt",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "Wahl-Rally: Dow +2,2 %, S&P 500 +1,6 %, Nasdaq +2 % nach Demokraten-Sieg im Kongress",
-  "summary": "Anleger werten die geteilte Macht (Präsident vs. Kongress) als Stillstand bei Gesetzen; Trump will das Ergebnis akzeptieren. Große Tech-Werte steigen kräftig (Amazon ca. +6–8 %, Alphabet ca. +3–5 %), Öl gibt nach.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
+  "headline": "Wahl-Rally: Dow ca. +2,4 %, S&P 500 +1,6 %, Nasdaq +1,9 % nach Demokraten-Sieg im Kongress",
+  "summary": "Laut Berichten bester Tag nach einer Zwischenwahl seit Jahrzehnten. Gewinner: Krankenversicherer, Kliniken, Erneuerbare. Verlierer: KI-Rechenzentrums-Werte (Sorge vor Anhörungen und Untersuchungen zum Ausbau), Rüstung. US-Zehnjahresrendite um 4,95 %.",
+  "url": "https://finance.yahoo.com/energy/articles/ai-data-center-stocks-dip-113427491.html"
+ },
+ {
+  "id": "n_hc_1104",
+  "date": "2026-11-04",
+  "ticker": "MOH",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Krankenversicherer und Kliniken steigen kräftig – Molina +8,9 %, Moderna +13,1 %, Intuitive Surgical +9,4 %",
+  "summary": "Analysten erwarten, dass ein demokratischer Kongress Medicaid-Kürzungen verzögert und ACA-Zuschüsse eher verlängert. Centene über +8 %, HCA/Tenet +6–8 %. Moderna mit neuem Hoch vor den Zahlen am 6.11.",
+  "url": "https://finance.yahoo.com/healthcare/articles/health-insurers-hospitals-rally-sweeping-150037226.html"
+ },
+ {
+  "id": "n_nee_1104",
+  "date": "2026-11-04",
+  "ticker": "NEE",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Erneuerbare gefragt: NextEra +4,9 %, Ausbruch über 86 $",
+  "summary": "Anleger erwarten, dass die Förderung sauberer Energie unter einem demokratischen Kongress bestehen bleibt; First Solar und Sunrun zweistellig im Plus.",
+  "url": "https://finance.yahoo.com/energy/articles/ai-data-center-stocks-dip-113427491.html"
  },
  {
   "id": "2026-11-04-ki-infra",
@@ -180,16 +200,6 @@
   "url": "https://www.kiro7.com/news/business/exxonmobil-chevron/VIJHWIGWFM7EXAVSPFXPKNI2PI/"
  },
  {
-  "id": "n12",
-  "date": "2026-10-30",
-  "ticker": "ENR",
-  "impact": "niedrig",
-  "direction": "negativ",
-  "headline": "Siemens Energy −3,7 % am Vormittag",
-  "summary": "Aktie testet die 61,8 %-Zone um 131 €; Barclays sieht den Höhepunkt der Turbinen-Aufträge erreicht.",
-  "url": "https://www.boerse-express.com/news/articles/siemens-energy-aktie-946-prozent-wochenminus-nach-barclays-927312"
- },
- {
   "id": "n16",
   "date": "2026-10-30",
   "ticker": "ENR",
@@ -288,15 +298,5 @@
   "headline": "Mercedes-Benz senkt Prognose 2026",
   "summary": "Pkw-Marge nur noch 2–3 % statt 3–5 %, Konzern-EBIT auf Vorjahresniveau; Gründe: China und höhere Kosten. Q3 (28.10.) operativ leicht über Konsens, Free Cashflow deutlich darunter.",
   "url": "https://group.mercedes-benz.com/investors/reports-news/ad-hoc/adhoc-release-453568.html"
- },
- {
-  "id": "n6",
-  "date": "2026-10-27",
-  "ticker": "APLD",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Applied Digital +8–10 %: Erholung der Rechenzentrums-Aktien",
-  "summary": "Gegenbewegung nach der Musk-Warnung zu Neocloud-Anbietern und Schuldensorgen; Mitgründer kauften am Jahrestief.",
-  "url": "https://stockanalysis.com/stocks/apld/"
  }
 ]
