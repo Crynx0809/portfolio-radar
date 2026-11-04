@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T21:43:00+00:00",
+ "generated_at": "2026-11-04T08:51:27+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -24,11 +24,16 @@
    "stop": 144,
    "trigger": 208,
    "gap_to_stop": 0.1942
+  },
+  {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "price": 37.33,
+   "stop": 30,
+   "trigger": 37.5,
+   "gap_to_stop": 0.2443
   }
  ],
  "events": [],
- "notified": [
-  "APLD-absturz-2026-11-03",
-  "MRVL-absturz-2026-11-03"
- ]
+ "notified": []
 }
