@@ -19,7 +19,7 @@
     if (d == null) d = Math.abs(x) >= 1000 || (Number.isInteger(x) && Math.abs(x) >= 10) ? 0 : 2;
     return x.toLocaleString('de-DE', {minimumFractionDigits: d, maximumFractionDigits: d});
   };
-  const cur = (r) => (r.currency === 'EUR' ? '€' : '$');
+  const cur = (r) => (r.currency === 'EUR' ? '€' : r.currency === 'HKD' ? 'HK$' : r.currency === 'USD' || !r.currency ? '$' : r.currency);
   const money = (v, r, d) => num(v, d) + ' ' + cur(r);
   const pct = (x) => (x >= 0 ? '+' : '−') + Math.abs(x * 100).toFixed(1).replace('.', ',') + ' %';
   const dShort = (s) => { const d = new Date(String(s).slice(0, 10) + 'T12:00:00'); return isNaN(d) ? s : d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'}); };
@@ -115,7 +115,7 @@
 
   /* ---------- Filter, Land, Spalten ---------- */
   let ALERTS = [], FIL = 'alle', LAND = '', SEK = '', SORT = {k: 'score', d: -1};
-  const LAND_X = {'NOVO-B': 'Dänemark', AIR: 'Frankreich', RACE: 'Italien', MELI: 'Uruguay', NU: 'Brasilien'};
+  const LAND_X = {'1810': 'China', BABA: 'China', 'NOVO-B': 'Dänemark', AIR: 'Frankreich', RACE: 'Italien', MELI: 'Uruguay', NU: 'Brasilien'};
   const landOf = (r) => LAND_X[r.ticker] || (/^(XETR|FWB|GETTEX)/.test(r.tv_symbol || '') ? 'Deutschland' : /^EURONEXT/.test(r.tv_symbol || '') ? 'Frankreich' : r.currency === 'EUR' ? 'Europa' : 'USA');
   const nearTgt = (r) => r.target_low != null && r.status !== 'boden' && r.status !== 'meiden' && r.price >= r.target_low * .98;
   const sell = (r) => nearTgt(r) || /teilverkauf|gewinne? sichern|ziel (war )?erreicht/i.test(r.action || '');
@@ -149,9 +149,20 @@
     $('#fSek').onchange = (e) => { SEK = e.target.value; renderList(); };
   }
   function renderChips(base) {
-    $('#chips').innerHTML = Object.entries(FILT).map(([k, [l, f]]) => { const n = base.filter(f).length;
+    const box = $('#chips'), keep = box.scrollLeft;
+    box.innerHTML = Object.entries(FILT).map(([k, [l, f]]) => { const n = base.filter(f).length;
       return k !== 'alle' && !n ? '' : `<button data-f="${k}" aria-pressed="${FIL === k}">${l}${k === 'alle' ? '' : ` <i>${n}</i>`}</button>`; }).join('');
-    $('#chips').querySelectorAll('button').forEach((b) => b.onclick = () => { FIL = b.dataset.f; renderList(); });
+    box.scrollLeft = keep;
+    box.querySelectorAll('button').forEach((b) => b.onclick = () => { FIL = b.dataset.f; renderList(); });
+    // gewählten Filter ganz ins Bild schieben (weich), damit man ihn komplett lesen kann
+    const on = box.querySelector('[aria-pressed="true"]');
+    if (on) { const l = on.offsetLeft - box.offsetLeft, r = l + on.offsetWidth, pad = 28;
+      if (r > box.scrollLeft + box.clientWidth - pad || l < box.scrollLeft) box.scrollTo({left: Math.max(0, l - (box.clientWidth - on.offsetWidth) / 2), behavior: 'smooth'}); }
+    if (!box.dataset.w) { box.dataset.w = 1;
+      box.addEventListener('wheel', (e) => { if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && box.scrollWidth > box.clientWidth) { box.scrollLeft += e.deltaY; e.preventDefault(); } }, {passive: false});
+      let dn = null; box.addEventListener('pointerdown', (e) => { if (e.pointerType === 'mouse') dn = {x: e.clientX, s: box.scrollLeft, m: 0}; });
+      addEventListener('pointermove', (e) => { if (dn) { dn.m = Math.max(dn.m, Math.abs(e.clientX - dn.x)); box.scrollLeft = dn.s - (e.clientX - dn.x); } });
+      addEventListener('pointerup', () => { if (dn && dn.m > 5) box.addEventListener('click', (e) => { e.stopPropagation(); e.preventDefault(); }, {capture: true, once: true}); dn = null; }); }
   }
   function renderTable(rows, SC) {
     const W = (r) => (KPIS[r.ticker] || {}).perf_1w;
