@@ -408,3 +408,5 @@ body[data-hor="lang"] { --hz: var(--accent); }
 .fs-c{flex:1;overflow:auto}.fs-c svg{display:block;width:100%;height:auto}
 .fs-c .legend{margin-top:6px}
 body.fs-on{overflow:hidden}
+.ew2 .halo2{paint-order:stroke;stroke:#131722;stroke-width:3px;stroke-linejoin:round}
+.chart:has(.ew2){background:#131722;border-color:#2a2e39}

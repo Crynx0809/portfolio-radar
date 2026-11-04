@@ -116,9 +116,9 @@
     const ul = $('#list');
     const qy = SEARCH.trim().toLowerCase();
     const hit = (r) => [r.ticker, r.name, r.sector, r.tv_symbol].some((v) => String(v || '').toLowerCase().includes(qy));
-    $('.seg').hidden = !!qy;
+    
     const LTO = {bullisch: 0, neutral: 1, spekulativ: 2, 'bärisch': 3};
-    const rows = STOCKS.filter((r) => qy ? hit(r) : r.group === group).sort((a, b) => HOR === 'lang'
+    const rows = STOCKS.filter((r) => !qy || hit(r)).sort((a, b) => HOR === 'lang'
       ? (LTO[a.lt_view] ?? 9) - (LTO[b.lt_view] ?? 9) || (b.lt_target_low / b.price) - (a.lt_target_low / a.price)
       : (a.alert === 'hoch' ? 0 : 1) - (b.alert === 'hoch' ? 0 : 1) || (STATUS[a.status] || {o: 9}).o - (STATUS[b.status] || {o: 9}).o || a.ticker.localeCompare(b.ticker));
     ul.innerHTML = rows.map((r) => {
@@ -127,7 +127,7 @@
       const chg = q.chg_pct != null ? q.chg_pct : null;
       const rc = HOR === 'lang' ? (LTV[r.lt_view] || [, 'var(--muted)'])[1] : s.c;
       return `<li class="row" data-t="${esc(r.ticker)}" style="--sc:${rc}" tabindex="0">
-        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' && HOR !== 'lang' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${qy ? (r.group === 'Portfolio' ? 'Depot · ' : 'Watchlist · ') : ''}${esc(r.name)}</div></div>
+        <div><div class="t">${esc(r.ticker)}${r.alert === 'hoch' && HOR !== 'lang' ? '<span class="hot" title="Dringend"></span>' : ''}</div><div class="n">${esc(r.name)}</div></div>
         <div><div class="p" data-v="${r.price}" data-cur="${cur(r)}">${money(r.price, r)}</div>
           <div class="c ${chg == null ? '' : chg >= 0 ? 'up' : 'down'}">${chg == null ? '' : pct(chg)}</div></div>
         ${HOR === 'lang' && r.lt_target_low != null ? `<div class="meta"><span class="pill" style="--sc:${(LTV[r.lt_view] || [, 'var(--muted)'])[1]}">${(LTV[r.lt_view] || ['—'])[0]}</span>
@@ -192,7 +192,7 @@
     } else {
       const d = ((DAILY && DAILY[r.ticker]) || []).filter((k) => k.every((v) => v != null));
       const f = live.length ? live[0][0] : '9999';
-      c = d.filter((k) => k[0] < f).concat(live).slice(-170);
+      c = d.filter((k) => k[0] < f).concat(live).slice(-250);
     }
     return c.length >= 20 ? c : null;
   }
@@ -218,6 +218,9 @@
       return bi; };
     let piv = cnt ? cnt.map((w) => { const i = snap(w); return {i, d: c[i][0], p: w.p, l: String(w.l)}; }).filter((p) => p.d > c[0][0] || p.i > 0)
       : ((z) => (L && z.length < 4 ? zigzag(c, 3) : z))(zigzag(c, L ? 5 : 0)).map((p) => ({i: p.i, d: c[p.i][0], p: p.p, l: null}));
+    // kurzer Chart: Labels der großen Zählung (ew.lang.count) mit anzeigen – mehrere Grade übereinander
+    const hiL = !L && r.ew && r.ew.lang && r.ew.lang.count ? r.ew.lang.count.filter((w) => w.d >= c[0][0]).map((w) => { const i = snap(w); return {i, d: c[i][0], p: w.p, l: String(w.l)}; }) : [];
+    hiL.forEach((h, j) => { const pr = j ? hiL[j - 1].p : null; h.top = pr == null ? h.p >= c[h.i][4] : h.p >= pr; });
     // Wellenlängen: Dauer (Tage) und Größe (%) der bisherigen Wellen je Richtung
     const legs = [];
     for (let j = 1; j < piv.length; j++) legs.push({up: piv[j].p > piv[j - 1].p, t: ddays(piv[j - 1].d, piv[j].d), m: Math.abs(Math.log(piv[j].p / piv[j - 1].p))});
@@ -274,7 +277,7 @@
     let zone = null;
     if (L) { const z = ltZone(r); zone = z ? {lo: z[0], hi: z[1], at: 'path', label: 'Kaufzone'} : {lo: p0 * .97, hi: p0 * 1.01, at: 'now', label: 'Kaufzone (Kurs)'}; }
     else if (r.entry_low != null) zone = {lo: r.entry_low, hi: r.entry_high, at: needEntry ? 'path' : 'now', label: r.entry_type === 'Ausbruch' ? 'Einstieg (Ausbruch)' : 'Einstieg'};
-    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end, prob, probEst, zone,
+    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end, prob, probEst, zone, hi: hiL,
       fib: e.fib || null};
   }
   const ewEnd = (r, lv) => { const P = ewPlan(r, lv); return P ? P.end.d : null; };
@@ -295,138 +298,175 @@
       .sort((x, y) => Math.abs(x[1] - tm) - Math.abs(y[1] - tm)).slice(0, 3).sort((x, y) => y[1] - x[1]);
   }
 
+  // Farben wie im Profi-Chart: Grad klein = türkis, ( ) = pink, [ ] = hellgrün, w/x/y (sehr groß) = weiß
+  const DEGC2 = ['#26c6da', '#ff4f9a', '#b5e3a1', '#e8e8e8'];
+  const deg2 = (l) => { const c0 = core(l); return /^\[.*\]$/.test(core0(l)) ? 2 : /^\(.*\)$/.test(core0(l)) ? 1 : /^[wxyz]$/.test(c0) ? 3 : 0; };
+  const core0 = (l) => String(l).replace(/^alt\.?\s*/i, '');
   function ewChart(r, lv, sz) {
     const P = ewPlan(r, lv);
     if (!P) return `<p class="empty">${lv === 'lang' ? 'Wochenchart' : 'Chart'} lädt …</p>`;
     const {L, c, n, now, p0, bar} = P;
-    const fi = (d) => (n - 1) + ddays(now, d) / bar; // Datum -> x-Index (auch Zukunft)
+    const fi = (d) => (n - 1) + ddays(now, d) / bar;
     const ends = P.path.map((w) => fi(w.d)).concat(P.alt ? P.alt.path.map((w) => fi(w.d)) : []);
-    const fut = Math.max(n * .25, (Math.max(...ends) - (n - 1)) * 1.12 + n * .03);
-    const W = sz ? sz.W : 380, H = sz ? sz.H : 330, PL = 4, PR = 58, PT = 18, PB = 30;
+    const W = sz ? sz.W : 400, H = sz ? sz.H : 320, PL = 2, PR = 54, PT = 20, PB = 36, TXR = 74; // TXR: Platz für Marken-Text rechts
+    // Zukunft so breit, dass der Zielkasten samt Beschriftung links der Marken-Texte endet
+    const LBW = sz ? 82 : 60, eOff = Math.max(...ends) - (n - 1), BXF = (W - PR - TXR - 10 - PL) / (W - PL - PR);
+    const fut = Math.min(n * (sz ? 1 : .8), Math.max(n * .45, ((n - 1) + eOff * 1.15 + 2) / BXF - n));
     const cw = (W - PL - PR) / (n + fut), x = (i) => PL + i * cw + cw / 2;
-    const vals = c.map((k) => k[4]).concat(P.tgt, P.path.map((w) => w.p), P.alt ? P.alt.path.map((w) => w.p) : [], [P.up, P.down, P.stop].filter((v) => v != null), P.zone ? [P.zone.lo, P.zone.hi] : []);
+    const zoneV = P.zone ? [P.zone.lo, P.zone.hi] : [];
+    const vals = c.map((k) => k[4]).concat(P.tgt, P.path.map((w) => w.p), P.alt ? P.alt.path.map((w) => w.p) : [], [P.up, P.stop].filter((v) => v != null), zoneV);
     let lo = Math.min(...c.map((k) => k[3]), ...vals), hi = Math.max(...c.map((k) => k[2]), ...vals);
-    const logS = L && hi / lo > 3; // lange Sicht mit großer Spanne: logarithmisch
+    const logS = false; // linear wie im Profi-Chart
     const tf = (v) => logS ? Math.log(v) : v;
-    let tlo = tf(lo), thi = tf(hi); const pad = (thi - tlo) * .08; tlo -= pad; thi += pad;
+    let tlo = tf(lo), thi = tf(hi); const pad = (thi - tlo) * .09; tlo -= pad; thi += pad;
     const y = (v) => PT + (thi - tf(v)) / (thi - tlo) * (H - PT - PB);
     const fmt = (v) => num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2);
     const x0 = x(n - 1), xr = W - PR;
-    const id = r.ticker.replace(/\W/g, '') + lv;
-    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew" font-family="Inter, system-ui, sans-serif" role="img" aria-label="Elliott-Wellen ${esc(r.name)} ${L ? 'Monate/Jahre' : 'Wochen/Monate'}">
-      <defs>${[['G', '#2fd08a'], ['R', '#ff6b78'], ['A', '#f5b74a'], ['U', '#2fd08a'], ['D', '#ff6b78']].map(([k, col]) => `<marker id="m${k}${id}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="${k === 'U' || k === 'D' ? 5 : 6}" markerHeight="${k === 'U' || k === 'D' ? 5 : 6}" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="${col}"/></marker>`).join('')}</defs>`;
-    // Preisraster rechts
-    const tick = (() => { const span = hi - lo, raw = span / 5, mag = Math.pow(10, Math.floor(Math.log10(raw))); return [1, 2, 2.5, 5, 10].map((k) => k * mag).find((k) => k >= raw) || raw; })();
-    const grid = []; for (let g = Math.ceil(lo / tick) * tick; g <= hi; g += tick) grid.push(g);
-    const gl = logS ? [1, 2, 5].flatMap((k) => [1, 10, 100, 1000, 10000].map((m) => k * m)).filter((v) => v > lo * 1.08 && v < hi * .92) : grid;
-    gl.forEach((g) => {
-      s += `<line x1="${PL}" x2="${xr}" y1="${y(g)}" y2="${y(g)}" stroke="#fff" stroke-opacity=".05"/>`;
-    });
-    // Zukunftsbereich
-    s += `<rect x="${x0}" y="${PT - 8}" width="${xr - x0}" height="${H - PT - PB + 8}" fill="#22d3a6" opacity=".03"/>`;
-    s += `<line x1="${x0}" x2="${x0}" y1="${PT - 8}" y2="${H - PB}" stroke="#fff" stroke-opacity=".14" stroke-dasharray="2 3"/>`;
-    // Marken-Linien über den ganzen Chart (grün = Bestätigung oben, rot = Absicherung unten)
-    const mark = (v, col, k, txt) => v == null ? '' : `<line x1="${PL}" x2="${xr - 2}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.2" stroke-opacity=".85" marker-end="url(#m${k}${id})"/>` +
-      `<text x="${PL + 3}" y="${y(v) + (k === 'U' ? -4 : 11)}" font-size="8.5" font-weight="700" fill="${col}" class="halo">${txt}</text>`;
-    s += mark(P.up, '#2fd08a', 'U', 'Bestätigung');
-    s += mark(P.down, '#ff6b78', 'D', L ? 'Absicherung' : 'Stop');
-    // Zielkasten mit Fibonacci-Stufen
-    const ei = fi(P.end.d), bw = Math.max(fut * .18, 6);
-    const bx1 = x(Math.max(n - 1 + 2, ei - bw)), bx2 = Math.min(xr - 2, x(ei + bw * .6));
-    const ty1 = y(Math.max(...P.tgt)), ty2 = y(Math.min(...P.tgt));
-    s += `<rect x="${bx1}" y="${ty1}" width="${bx2 - bx1}" height="${Math.max(6, ty2 - ty1)}" rx="3" fill="#5aa7ff" fill-opacity=".13" stroke="#5aa7ff" stroke-opacity=".7"/>`;
-    const fl = fibLevels(P);
-    let fy = -99;
-    fl.forEach(([k, v]) => {
-      const yy = y(v); s += `<line x1="${bx1}" x2="${bx2}" y1="${yy}" y2="${yy}" stroke="#9cc8ff" stroke-opacity=".55" stroke-dasharray="3 2"/>`;
-      if (Math.abs(yy - fy) > 10) { s += `<text x="${bx1 - 3}" y="${yy + 3}" font-size="7.5" fill="#9cc8ff" text-anchor="end" class="halo">${num(k * 100, 1)} % (${fmt(v)})</text>`; fy = yy; }
-    });
-    if (!fl.length) s += `<text x="${bx1 + 3}" y="${ty1 - 4}" font-size="8" font-weight="700" fill="#9cc8ff" class="halo">Ziel</text>`;
-    // Einstiegskasten (kurz)
+    const id = r.ticker.replace(/\W/g, '') + lv + (sz ? 'f' : '');
+    const arrow = (k, col) => `<marker id="a${k}${id}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="${col}" stroke-width="1.6"/></marker>`;
+    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew ew2" font-family="Inter, system-ui, sans-serif" role="img" aria-label="Elliott-Wellen ${esc(r.name)} ${L ? 'Monate/Jahre' : 'Wochen/Monate'}">
+      <defs>${arrow('G', '#3ddc5a')}${arrow('R', '#ff3b3b')}${arrow('g', '#3ddc5a')}${arrow('r', '#ff3b3b')}</defs>
+      <rect width="${W}" height="${H}" fill="#131722"/>`;
+    if (sz) s += `<text x="${PL + 6}" y="13" font-size="8.5" fill="#9598a1">${esc(r.name)} · ${L ? '1W · Wochenkerzen' : '1T · Tageskerzen'} · ${esc((r.tv_symbol || '').split(':')[0])}</text>`;
+    // Kerzen (weiß/grau, schlank)
+    const bw = Math.max(.6, Math.min(5, cw * .62));
+    s += '<g class="cdl">' + c.map((k, i) => {
+      const upk = k[4] >= k[1], col = upk ? '#e6e8ee' : '#8a8e99', yo = y(k[1]), yc = y(k[4]);
+      return `<line x1="${x(i).toFixed(1)}" x2="${x(i).toFixed(1)}" y1="${y(k[2]).toFixed(1)}" y2="${y(k[3]).toFixed(1)}" stroke="${col}" stroke-width="${Math.max(.6, Math.min(1, cw * .3))}"/>` +
+        (cw > 1.6 ? `<rect x="${(x(i) - bw / 2).toFixed(1)}" width="${bw.toFixed(1)}" y="${Math.min(yo, yc).toFixed(1)}" height="${Math.max(.6, Math.abs(yo - yc)).toFixed(1)}" fill="${upk ? '#131722' : col}" stroke="${col}" stroke-width=".6"/>` : '');
+    }).join('') + '</g>';
+    // Marken-Linien: grün = Widerstände/Bestätigung über dem Kurs (ab ihrem Wendepunkt), rot = Stop/Absicherung
+    const pivAll = P.piv.concat(P.hi || []);
+    const startOf = (v) => { const q = pivAll.filter((p) => Math.abs(p.p - v) / v < .02).sort((a, b) => a.i - b.i)[0]; return q ? x(q.i) : PL; };
+    let ups = [];
+    if (P.up != null) ups.push(P.up);
+    pivAll.filter((p) => p.p > p0 * 1.04 && p.p > (P.up || 0) * 1.03).sort((a, b) => a.p - b.p).forEach((p) => { if (ups.length < 3 && ups.every((u) => Math.abs(u - p.p) / u > .05)) ups.push(p.p); });
+    const used = [];
+    const lvl = (v, col, upw) => {
+      const yy = y(v), sx = startOf(v), ax = xr - TXR + 4;
+      let ty = yy + (upw ? -3 : 11); while (used.some((u) => Math.abs(u - ty) < 11)) ty += upw ? -11 : 11; used.push(ty);
+      return `<line x1="${sx}" x2="${xr - 4}" y1="${yy}" y2="${yy}" stroke="${col}" stroke-width="1.1"/>` +
+        `<path d="${upw ? `M${ax} ${ty - 1}l4 -6l4 6h-2.5v3h-3v-3z` : `M${ax} ${ty - 9}l4 6l4 -6h-2.5v-3h-3v3z`}" fill="${col}"/>` +
+        `<text x="${ax + 11}" y="${ty}" font-size="9" font-weight="800" fill="${col}">${fmt(v)} ${cur(r)}</text>`;
+    };
+    ups.forEach((v) => { s += lvl(v, '#3ddc5a', true); });
+    if (P.stop != null) s += lvl(P.stop, '#ff3b3b', false);
+    const BXR = xr - TXR - 6; // Kästen enden links davon, damit ihre Beschriftung Platz hat
+    // Fibonacci-Beschriftung eines Kastens: Retracement der letzten großen Bewegung
+    const swing = (() => { const hs = pivAll.filter((p) => p.i <= n - 1); if (hs.length < 2) return null;
+      const top = hs.reduce((a, b) => (b.p > a.p ? b : a)); const base = hs.filter((p) => p.i < top.i).reduce((a, b) => (b.p < a.p ? b : a), {p: Math.min(...c.slice(0, top.i + 1).map((k) => k[3])), i: 0});
+      return top.p > base.p ? {top: top.p, base: base.p} : null; })();
+    const STD = [23.6, 38.2, 50, 61.8, 70.7, 76.4, 78.6, 88.7, 100, 127.2, 161.8];
+    const fibTxt = (v) => {
+      if (!swing) return '';
+      let pc = (swing.top - v) / (swing.top - swing.base) * 100; // Retracement
+      if (v > swing.top) pc = (v - swing.base) / (swing.top - swing.base) * 100; // Ausdehnung über das Hoch
+      const st = STD.find((f) => Math.abs(f - pc) < 1.6);
+      return (st != null ? num(st, st % 1 ? 1 : 0) : num(pc, 1)) + ' %';
+    };
+    // Beschriftung rechts vom Kasten, wenn Platz ist, sonst links davon
+    const boxLab = (bx2, v, col, bx1) => { const right = bx2 + LBW <= xr - TXR || bx1 == null;
+      return `<text x="${right ? bx2 + 4 : bx1 - 4}" y="${y(v) + 3}" font-size="8.5" font-weight="700" fill="${col}"${right ? '' : ' text-anchor="end"'} class="halo2">${fibTxt(v)} (${fmt(v)})</text>`; };
+    // Einstiegs-/Kaufzone (blau mit grünem Rand, wie „Long-term Entry“)
+    let ZB = null;
     if (P.zone) {
-      const Z = P.zone, w2 = Math.max(fut * .14, 5);
-      const ei2 = Z.at === 'path' && P.path.length ? fi(P.path[0].d) : n - 1 + w2 * .5;
-      const ex1 = x(Math.max(n - 1 + .5, ei2 - w2)), ex2 = Math.min(bx1 - 4 > x(ei2) ? bx1 - 4 : xr - 2, x(ei2 + w2 * .7));
-      const zy1 = y(Z.hi), zy2 = y(Z.lo), zh = Math.max(6, zy2 - zy1);
-      s += `<rect x="${ex1}" y="${zy1}" width="${Math.max(10, ex2 - ex1)}" height="${zh}" rx="3" fill="#2fd08a" fill-opacity=".2" stroke="#2fd08a" stroke-width="1.3"/>` +
-        `<line x1="${PL}" x2="${ex1}" y1="${zy1}" y2="${zy1}" stroke="#2fd08a" stroke-opacity=".25" stroke-dasharray="2 3"/><line x1="${PL}" x2="${ex1}" y1="${zy1 + zh}" y2="${zy1 + zh}" stroke="#2fd08a" stroke-opacity=".25" stroke-dasharray="2 3"/>` +
-        `<text x="${ex1 + 2}" y="${zy1 - 4}" font-size="8.5" font-weight="800" fill="#2fd08a" class="halo">${Z.label}</text>`;
+      const Z = P.zone, w2 = Math.max(fut * .2, 6);
+      const ei2 = Z.at === 'path' && P.path.length ? fi(P.path[0].d) : n - 1 + w2 * .55;
+      const ex2 = Math.min(BXR, x(ei2 + w2 * .55)), ex1 = Math.min(ex2 - 14, x(Math.max(n - 1 + .5, ei2 - w2 * .55)));
+      const zy1 = y(Z.hi), zh = Math.max(7, y(Z.lo) - zy1);
+      s += `<rect x="${ex1}" y="${zy1}" width="${Math.max(12, ex2 - ex1)}" height="${zh}" fill="#1a3a8f" fill-opacity=".55" stroke="#3ddc5a" stroke-width="1"/>`;
+      s += boxLab(ex2, Z.hi, '#3ddc5a', ex1) + (zh > 12 ? boxLab(ex2, Z.lo, '#3ddc5a', ex1) : '');
+      ZB = {x1: ex1, x2: Math.max(ex1 + 12, ex2), y2: zy1 + zh + 26};
+      s += `<text x="${ex1}" y="${zy1 + zh + 11}" font-size="9" font-weight="700" fill="#e8e8e8">${L ? 'Langfristiger Einstieg' : 'Einstieg'}:</text><text x="${ex1}" y="${zy1 + zh + 22}" font-size="9" font-weight="700" fill="#e8e8e8">${fmt(Z.hi)} – ${fmt(Z.lo)} ${cur(r)}</text>`;
     }
-    // Kurslinie
-    s += `<path d="${c.map((k, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ')}" fill="none" stroke="#d6d9e4" stroke-width="1.15" stroke-linejoin="round" class="wave"/>`;
-    // Zählung
-    const lab = (cx, cy, l, top, extra) => {
-      const d = deg(l), col = DEGC[d], fs = [9.5, 10.5, 12][d], ty = cy + (top ? -6 : 6 + fs * .8);
-      return `<text x="${cx}" y="${ty}" font-size="${fs}" font-weight="800" fill="${col}" text-anchor="middle" class="halo"${extra || ''}>${esc(l)}</text>`;
+    // Zielzone (rot = dort wird eine Umkehr erwartet, wenn der Pfad danach fällt; sonst grün)
+    const ei = fi(P.end.d), tw2 = Math.max(fut * .16, 5);
+    const bx2 = Math.min(BXR, x(ei + tw2 * .5)), bx1 = Math.min(bx2 - 14, x(Math.max(n - 1 + 1, ei - tw2 * .6)));
+    const ty1 = y(Math.max(...P.tgt)), th = Math.max(6, y(Math.min(...P.tgt)) - ty1);
+    s += `<rect x="${bx1}" y="${ty1}" width="${Math.max(12, bx2 - bx1)}" height="${th}" fill="#3ddc5a" fill-opacity=".12" stroke="#3ddc5a" stroke-opacity=".8"/>`;
+    s += boxLab(bx2, Math.max(...P.tgt), '#3ddc5a', bx1) + (th > 12 ? boxLab(bx2, Math.min(...P.tgt), '#3ddc5a', bx1) : '');
+    // Zwischen-Hochs im Pfad, nach denen es fällt: roter Widerstandskasten
+    P.path.forEach((w, j) => {
+      const nx = P.path[j + 1], pv = j ? P.path[j - 1].p : p0;
+      if (!nx || !(w.p > pv && nx.p < w.p)) return;
+      const xi = fi(w.d), a1 = x(Math.max(n - 1 + .5, xi - tw2 * .5)), a2 = x(xi + tw2 * .5), hh = w.p * .04;
+      s += `<rect x="${a1}" y="${y(w.p + hh)}" width="${a2 - a1}" height="${y(w.p - hh) - y(w.p + hh)}" fill="#8b1a1a" fill-opacity=".55" stroke="#ff3b3b" stroke-opacity=".6"/>` + boxLab(a2, w.p + hh, '#ff5a5a', a1) + boxLab(a2, w.p - hh, '#ff5a5a', a1);
+    });
+    // Wellen-Labels, mehrere Grade am selben Wendepunkt übereinander
+    const groups = [];
+    const addLab = (i, p, l, top, alt) => {
+      let g = groups.find((q) => Math.abs(q.i - i) <= (L ? 2 : 3) && q.top === top);
+      if (!g) { g = {i, p, top, ls: []}; groups.push(g); }
+      if (top ? p > g.p : p < g.p) { g.p = p; g.i = i; }
+      g.ls.push({l, alt});
     };
     P.piv.forEach((p, j) => {
+      if (!p.l) return;
       const prev = j ? P.piv[j - 1].p : null, nxt = j < P.piv.length - 1 ? P.piv[j + 1].p : p0;
-      const top = prev == null ? p.p > nxt : p.p >= prev;
-      if (p.l && !p.moved) s += lab(x(p.i), y(p.p), p.l, top);
-      else if (p.l) s += lab(x(p.i), y(p.p), p.l + '?', top, ' opacity=".45"');
-      else s += `<circle cx="${x(p.i)}" cy="${y(p.p)}" r="2" fill="#c9b8ff" opacity=".8"/>`;
+      if (!p.moved) addLab(p.i, p.p, p.l, prev == null ? p.p > nxt : p.p >= prev);
     });
-    // Alternative (gepunktet)
+    (P.hi || []).forEach((p) => addLab(p.i, p.p, p.l, p.top));
+    let pv0 = p0;
+    P.path.forEach((w) => { if (w.l) addLab(fi(w.d), w.p, w.l, w.p >= pv0); pv0 = w.p; });
+    if (P.alt) { let pa = p0; P.alt.path.forEach((w, j) => { const last = j === P.alt.path.length - 1; addLab(fi(w.d), w.p, last ? (P.alt.label || 'alt.') : (w.l || ''), w.p >= pa, true); pa = w.p; }); }
+    const labSvg = groups.map((g) => {
+      const ls = g.ls.filter((q) => q.l).sort((a, b) => deg2(a.l) - deg2(b.l)); // klein am nächsten am Kurs
+      return ls.map((q, k) => {
+        const dgx = q.alt ? -1 : deg2(q.l), col = q.alt ? '#b5e3a1' : DEGC2[dgx], fs = q.alt ? 9 : [9.5, 10, 11, 10.5][dgx];
+        const below0 = ZB && !g.top && x(g.i) >= ZB.x1 - 4 && x(g.i) <= ZB.x2 + 4 && y(g.p) < ZB.y2 ? ZB.y2 - y(g.p) : 0; // nicht in die Einstiegs-Beschriftung schreiben
+        const yy = g.top ? y(g.p) - 5 - k * (fs + 1.5) : y(g.p) + 4 + fs * .85 + below0 + k * (fs + 1.5);
+        return `<text x="${x(g.i)}" y="${yy}" font-size="${fs}" font-weight="${q.alt ? 600 : 700}" fill="${col}" text-anchor="middle"${q.alt ? ' font-style="italic"' : ''} class="halo2">${esc(q.l)}</text>`;
+      }).join('');
+    }).join('');
+    // Hauptpfad: grün aufwärts, rot abwärts, offene Pfeilspitzen
+    let px = x0, py = y(p0), pv = p0;
+    P.path.forEach((w) => {
+      const nx = x(fi(w.d)), ny = y(w.p), upw = w.p >= pv;
+      s += `<line x1="${px}" y1="${py}" x2="${nx}" y2="${ny}" stroke="${upw ? '#3ddc5a' : '#ff3b3b'}" stroke-width="1.5" marker-end="url(#a${upw ? 'G' : 'R'}${id})" class="proj"/>`;
+      px = nx; py = ny; pv = w.p;
+    });
+    // Alternative: gepunktet, mit Wahrscheinlichkeit im Kasten
     if (P.alt) {
-      const ap = [[x0, y(p0)]].concat(P.alt.path.map((w) => [x(fi(w.d)), y(w.p)]));
-      s += `<polyline points="${ap.map((q) => q.join(',')).join(' ')}" fill="none" stroke="#f5b74a" stroke-width="1.4" stroke-dasharray="2 3" stroke-linejoin="round" marker-end="url(#mA${id})" class="proj"/>`;
-      P.alt.path.forEach((w, j) => { if (w.l && j < P.alt.path.length - 1) s += `<text x="${x(fi(w.d))}" y="${y(w.p) + (w.p > p0 ? -6 : 13)}" font-size="9" font-weight="700" fill="#f5b74a" text-anchor="middle" class="halo">${esc(w.l)}</text>`; });
-      const a = P.alt.path[P.alt.path.length - 1], ax = x(fi(a.d)), ay = y(a.p), below = a.p < p0;
-      const txt = (P.alt.label || 'Alternative') + (P.alt.prob != null ? ' · ' + P.alt.prob + ' %' : '');
-      const tw = txt.length * 4.6 + 10, bxx = Math.min(xr - tw - 2, Math.max(x0 + 2, ax - tw / 2));
-      s += `<rect x="${bxx}" y="${ay + (below ? 6 : -21)}" width="${tw}" height="15" rx="4" fill="#0b0c10" stroke="#f5b74a" stroke-opacity=".8"/>` +
-        `<text x="${bxx + tw / 2}" y="${ay + (below ? 16.5 : -10.5)}" font-size="8.5" font-weight="700" fill="#f5b74a" text-anchor="middle">${esc(txt)}</text>`;
+      let ax = x0, ay = y(p0), av = p0, mid = null;
+      P.alt.path.forEach((w, j) => {
+        const nx = x(fi(w.d)), ny = y(w.p), upw = w.p >= av;
+        s += `<line x1="${ax}" y1="${ay}" x2="${nx}" y2="${ny}" stroke="${upw ? '#3ddc5a' : '#ff3b3b'}" stroke-width="1.3" stroke-dasharray="1.5 2.5" marker-end="url(#a${upw ? 'g' : 'r'}${id})"/>`;
+        if (!j) mid = [(ax + nx) / 2, (ay + ny) / 2];
+        ax = nx; ay = ny; av = w.p;
+      });
+      if (P.alt.prob != null && mid) {
+        const t = P.alt.prob + '%', bw2 = 30, bx = Math.max(PL + 2, ax - bw2 - 10), by = ay - 26;
+        s += `<rect x="${bx}" y="${by}" width="${bw2}" height="15" fill="#131722" stroke="#e8e8e8" stroke-width="1"/><text x="${bx + bw2 / 2}" y="${by + 11}" font-size="9.5" font-weight="700" fill="#e8e8e8" text-anchor="middle" font-style="italic">${t}</text>`;
+      }
     }
-    // Hauptpfad: grün aufwärts, rot abwärts, Pfeil an jedem Abschnitt
-    let px = x0, py = y(p0), pv = p0, seg = null;
-    P.path.forEach((w, j) => {
-      const nx = x(fi(w.d)), ny = y(w.p), isUp = w.p >= pv, col = isUp ? '#2fd08a' : '#ff6b78';
-      s += `<line x1="${px}" y1="${py}" x2="${nx}" y2="${ny}" stroke="${col}" stroke-width="2.1" stroke-linecap="round" marker-end="url(#m${isUp ? 'G' : 'R'}${id})" class="proj"/>`;
-      if (w.l) s += lab(nx, ny, w.l, isUp);
-      seg = [px, py, nx, ny]; px = nx; py = ny; pv = w.p;
-    });
-    if (P.prob != null) {
-      const t2 = P.prob + ' %', tw = 32, mx = (seg[0] + seg[2]) / 2, my = (seg[1] + seg[3]) / 2;
-      const bxx = Math.min(xr - tw - 2, Math.max(x0 + 2, mx + 5)), byy = Math.max(PT - 6, Math.min(H - PB - 16, my + 2));
-      s += `<rect x="${bxx}" y="${byy}" width="${tw}" height="14" rx="4" fill="#0b0c10" stroke="#2fd08a" stroke-opacity=".8"/><text x="${bxx + tw / 2}" y="${byy + 10}" font-size="8.5" font-weight="800" fill="#2fd08a" text-anchor="middle">${t2}</text>`;
-    }
-    // aktueller Kurs
-    s += `<circle cx="${x0}" cy="${y(p0)}" r="3.4" fill="#eef0f6" stroke="#0b0c10" stroke-width="1.5"/>`;
-    // Preisachse rechts: Raster + Marken + Kurs
-    const labs = [[p0, 'now']];
-    if (P.up != null) labs.push([P.up, '#2fd08a']); if (P.down != null) labs.push([P.down, '#ff6b78']);
-    labs.push([P.tgt[1], '#5aa7ff'], [P.tgt[0], '#5aa7ff']);
-    if (P.zone) labs.push([P.zone.hi, '#2fd08a'], [P.zone.lo, '#2fd08a']);
-    const used = labs.map((v) => y(v[0]));
-    gl.forEach((g) => { if (used.every((u) => Math.abs(u - y(g)) > 11)) labs.push([g, '#5d6378']); });
-    labs.sort((a, b) => b[0] - a[0]); let prevY = -99;
-    labs.forEach(([v, col]) => {
-      const yy = Math.max(y(v) + 3, prevY + 11); if (yy > H - PB + 4) return; prevY = yy;
-      s += col === 'now' ? `<rect x="${xr + 3}" y="${yy - 9}" width="${PR - 5}" height="13" rx="3" fill="#eef0f6"/><text x="${xr + 6}" y="${yy}" font-size="9.5" font-weight="800" fill="#0b0c10" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`
-        : `<text x="${xr + 6}" y="${yy}" font-size="9" fill="${col}" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`;
-    });
-    // Quartalszahlen: vergangene (grün = besser als erwartet) und die nächste (hohl)
-    const f = FUND[r.ticker] || {}, zy = H - PB + 3;
+    s += labSvg;
+    // Preisachse rechts
+    const tick = (() => { const span = hi - lo, raw = span / 6, mag = Math.pow(10, Math.floor(Math.log10(raw))); return [1, 2, 2.5, 5, 10].map((k) => k * mag).find((k) => k >= raw) || raw; })();
+    const gl = logS ? [1, 2, 5].flatMap((k) => [1, 10, 100, 1000, 10000].map((m) => k * m)).filter((v) => v > lo * 1.05 && v < hi * .95) : (() => { const g = []; for (let v = Math.ceil(lo / tick) * tick; v <= hi; v += tick) g.push(v); return g; })();
+    s += `<line x1="${xr}" x2="${xr}" y1="${PT - 6}" y2="${H - PB + 4}" stroke="#2a2e39"/>`;
+    gl.forEach((v) => { if (Math.abs(y(v) - y(p0)) > 10) s += `<text x="${xr + 5}" y="${y(v) + 3}" font-size="8.5" fill="#b2b5be" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`; });
+    s += `<rect x="${xr + 2}" y="${y(p0) - 7}" width="${PR - 3}" height="14" fill="#e8e8e8"/><text x="${xr + 5}" y="${y(p0) + 3.5}" font-size="9" font-weight="700" fill="#131722" font-family="JetBrains Mono, monospace">${fmt(p0)}</text>`;
+    // Quartalszahlen „E“
+    const f = FUND[r.ticker] || {}, zy = H - PB + 6;
     const ern = (f.eps_hist || []).map((h) => ({d: addDays(new Date(h.q * 1000).toISOString().slice(0, 10), 32), s: h.surprise}));
-    const nx = f.next_earnings || (/zahl/i.test(r.next_event || '') ? r.next_event_date : null);
-    if (nx && !ern.some((h) => Math.abs(ddays(h.d, nx)) < 20)) ern.push({d: nx, s: null, fut: nx > now});
-    ern.forEach((h) => {
-      const i = fi(h.d); if (i < 0 || x(i) > xr) return;
-      const col = h.fut || h.s == null ? '#9aa0b4' : h.s >= 0 ? '#2fd08a' : '#ff6b78';
-      s += `<g><title>Quartalszahlen ${dShort(h.d)}${h.s != null ? ' · Überraschung ' + pct(h.s) : ''}</title><rect x="${x(i) - 5}" y="${zy}" width="10" height="10" rx="2" fill="${h.fut ? '#0b0c10' : col}" fill-opacity="${h.fut ? 1 : .85}" stroke="${col}"/>` +
-        `<text x="${x(i)}" y="${zy + 7.8}" font-size="7" font-weight="800" fill="${h.fut ? col : '#0b0c10'}" text-anchor="middle">Z</text></g>`;
+    const nxE = f.next_earnings || (/zahl/i.test(r.next_event || '') ? r.next_event_date : null);
+    if (nxE && !ern.some((h) => Math.abs(ddays(h.d, nxE)) < 20)) ern.push({d: nxE, s: null, fut: nxE > now});
+    let lastE = -99;
+    ern.sort((a, b) => (a.d < b.d ? -1 : 1)).forEach((h) => {
+      const i = fi(h.d); if (i < 0 || x(i) > xr - 6 || x(i) - lastE < 12) return; lastE = x(i);
+      const col = h.fut ? '#c147e9' : h.s == null ? '#9aa0b4' : h.s >= 0 ? '#2fbf71' : '#ef4444', cx = x(i);
+      s += `<g><title>Quartalszahlen ${dShort(h.d)}${h.s != null ? ' · Überraschung ' + pct(h.s) : ''}</title><path d="M${cx - 5} ${zy}h10v8l-5 3l-5 -3z" fill="none" stroke="${col}" stroke-width="1.1"/><text x="${cx}" y="${zy + 7.3}" font-size="6.5" font-weight="800" fill="${col}" text-anchor="middle">E</text></g>`;
     });
-    // Zeitachse bis zum Ende des Pfads
-    const ay = H - 6;
-    const tickAt = (i, txt, futr) => { s += `<text x="${x(i)}" y="${ay}" font-size="8.5" fill="${futr ? '#22d3a6' : '#5d6378'}" text-anchor="middle">${txt}</text>`; };
-    const totalDays = (n + fut) * bar, stepM = L ? (totalDays > 2400 ? 12 : 6) : (totalDays > 400 ? 3 : totalDays > 200 ? 2 : 1);
+    // Zeitachse
+    const ay2 = H - 8;
+    const totalDays = (n + fut) * bar, stepM = L ? (totalDays > 2400 ? 12 : 6) : (totalDays > 500 ? 2 : 1);
     let d = new Date(c[0][0].slice(0, 7) + '-01T12:00:00'); d.setMonth(d.getMonth() + 1);
     const endD = addDays(now, fut * bar);
     while (d.toISOString().slice(0, 10) <= endD) {
       const ds = d.toISOString().slice(0, 10), m = d.getMonth();
       if (m % stepM === 0) {
         const i = ds <= now ? near(c, ds) + .5 : fi(ds);
-        if (x(i) > PL + 8 && x(i) < xr - 8) tickAt(i, L ? (m === 0 ? d.getFullYear() : MN[m]) : (m === 0 ? String(d.getFullYear()) : MN[m]), ds > now);
+        if (x(i) > PL + 10 && x(i) < xr - 10) s += `<text x="${x(i)}" y="${ay2}" font-size="8.5" fill="#b2b5be" text-anchor="middle"${m === 0 ? ' font-weight="700"' : ''}>${m === 0 ? d.getFullYear() : MN[m]}</text>`;
       }
       d.setMonth(d.getMonth() + 1);
     }
@@ -491,10 +531,10 @@
   }
   function legend(r, lv) {
     const P = ewPlan(r, lv); if (!P) return '';
-    const gr = new Set(P.piv.filter((p) => p.l).map((p) => deg(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg(w.l))));
-    const G = [['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
-    return `<div class="legend">${G.map((g) => `<span style="--lc:${DEGC[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">automatische Wendepunkte</span>' : ''}
-      <span style="--lc:#2fd08a">Hauptszenario ${P.prob} %</span><span style="--lc:#f5b74a">Alternative ${P.alt ? P.alt.prob + ' %' : ''}</span><span style="--lc:#2fd08a">${P.L ? 'Kaufzone' : 'Einstiegszone'}</span><span style="--lc:#5aa7ff">Zielzone + Fibonacci</span><span style="--lc:#9aa0b4">Z = Quartalszahlen</span></div>
+    const gr = new Set(P.piv.concat(P.hi || []).filter((p) => p.l).map((p) => deg2(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg2(w.l))));
+    const G = [['w x y sehr groß', 3], ['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
+    return `<div class="legend">${G.map((g) => `<span style="--lc:${DEGC2[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">noch keine Zählung</span>' : ''}
+      <span style="--lc:#3ddc5a">Hauptszenario ${P.prob} %</span><span style="--lc:#e8e8e8">gepunktet = Alternative ${P.alt ? P.alt.prob + ' %' : ''}</span><span style="--lc:#1a3a8f">${P.L ? 'Langfristiger Einstieg' : 'Einstiegszone'}</span><span style="--lc:#3ddc5a">grüne Linien = Marken nach oben · Ziel</span><span style="--lc:#ff3b3b">rote Linie = ${P.L ? 'Absicherung' : 'Stop'}</span><span style="--lc:#c147e9">E = Quartalszahlen</span></div>
       <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ' Wahrscheinlichkeit grob aus der Sicherheit der Einschätzung, bis die Abendanalyse sie festlegt.' : ''}</p>`;
   }
   // Vollbild für den Wellen-Chart (dreh das Handy quer für mehr Platz)
