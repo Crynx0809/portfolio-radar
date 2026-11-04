@@ -1,53 +1,45 @@
 {
- "generated_at": "2026-11-04T15:35:17+00:00",
+ "generated_at": "2026-11-04T16:37:21+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 497.675,
+   "price": 483.76,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.2198
-  },
-  {
-   "ticker": "GOOGL",
-   "name": "Alphabet A",
-   "price": 295.665,
-   "stop": 262,
-   "trigger": 301,
-   "gap_to_stop": 0.1285
+   "gap_to_stop": 0.1857
   },
   {
    "ticker": "AMZN",
    "name": "Amazon.com",
-   "price": 269.01,
+   "price": 266.45,
    "stop": 205,
    "trigger": 258,
-   "gap_to_stop": 0.3122
+   "gap_to_stop": 0.2998
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 163.26,
+   "price": 157.46,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1338
+   "gap_to_stop": 0.0935
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 38.015,
+   "price": 38.075,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2672
+   "gap_to_stop": 0.2692
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 215.2,
+   "price": 215.15,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.209
+   "gap_to_stop": 0.2087
   }
  ],
  "events": [
@@ -55,44 +47,75 @@
    "ticker": "AMZN",
    "name": "Amazon.com",
    "group": "Portfolio",
-   "price": 269.01,
-   "chg_pct": 0.0731,
-   "at": "2026-11-04T15:35+00:00",
+   "price": 266.45,
+   "chg_pct": 0.0629,
+   "at": "2026-11-04T16:37+00:00",
    "id": "AMZN-ausbruch-2026-11-04",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Amazon.com über der Bestätigungsmarke 258,00 $",
-   "text": "Kurs 269,01 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 266,45 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schnelle Rückkehr über 258 $ → der Bruch war ein Fehlausbruch: halten, Ziel 276–287 $."
+  },
+  {
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "group": "Portfolio",
+   "price": 16.295,
+   "chg_pct": -0.0851,
+   "at": "2026-11-04T16:37+00:00",
+   "id": "APLD-absturz-2026-11-04",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Applied Digital −8,5 % heute",
+   "text": "Starker Tagesverlust auf 16,30 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Erholung auf 17,81 $ – zurück über 17,5 $, aber Plan (Ausstieg/Reduktion nach Stop-Bruch am 2.11.) erst über 20,4 $ hinfällig; nicht aufstocken"
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "group": "Portfolio",
+   "price": 157.46,
+   "chg_pct": -0.0844,
+   "at": "2026-11-04T16:37+00:00",
+   "id": "MRVL-absturz-2026-11-04",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Marvell Technology −8,4 % heute",
+   "text": "Starker Tagesverlust auf 157,46 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Schluss 171,4 $ unter deinem Stop 178 $ – laut Plan Teilverkauf; Rest nur mit Stop 144 $ halten, nicht aufstocken"
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
    "group": "Portfolio",
-   "price": 38.015,
-   "chg_pct": 0.0533,
-   "at": "2026-11-04T15:35+00:00",
+   "price": 38.075,
+   "chg_pct": 0.055,
+   "at": "2026-11-04T16:37+00:00",
    "id": "NOVO-B-ausbruch-2026-11-04",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
-   "text": "Kurs 38,02 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 38,08 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
   },
   {
    "ticker": "GEV",
    "name": "GE Vernova",
    "group": "Watchlist",
-   "price": 824.625,
-   "chg_pct": -0.1019,
-   "at": "2026-11-04T15:35+00:00",
+   "price": 812.565,
+   "chg_pct": -0.115,
+   "at": "2026-11-04T16:37+00:00",
    "id": "GEV-zone-2026-11-04",
    "type": "zone",
    "level": "mittel",
    "title": "GE Vernova in der Einstiegszone",
-   "text": "Kurs 824,62 $ ist in die Zone 785,00 $–865,00 $ gelaufen.",
+   "text": "Kurs 812,57 $ ist in die Zone 785,00 $–865,00 $ gelaufen.",
    "todo": "Einstiegsidee bei einer Umkehr in 785–865 $."
   }
  ],
- "notified": []
+ "notified": [
+  "APLD-absturz-2026-11-04",
+  "MRVL-absturz-2026-11-04"
+ ]
 }
