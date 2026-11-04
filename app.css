@@ -391,3 +391,5 @@ body[data-hor="lang"] { --hz: var(--accent); }
 .ltc .ax { fill: var(--dim); font: 10px Inter, sans-serif; }
 .ltc .lb { font: 600 10.5px Inter, sans-serif; } .ltc .lb.up { fill: var(--blue); } .ltc .lb.down { fill: var(--down); }
 .sh-pills { flex-wrap: wrap; }
+
+.ew .halo { paint-order: stroke; stroke: #0b0c10; stroke-width: 3px; stroke-linejoin: round; }

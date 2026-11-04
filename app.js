@@ -171,75 +171,117 @@
   function chart(r) {
     const q = PRICES[r.ticker];
     if (!q || !q.ohlc || q.ohlc.length < 10) return '<p class="empty">Keine Kursdaten.</p>';
-    const c = q.ohlc.slice(-110).filter((k) => k.every((v) => v != null));
-    const W = 360, H = 240, PL = 6, PR = 50, PT = 12, PB = 20, FUT = 66;
-    const cw = (W - PL - PR - FUT) / c.length;
-    const levels = [r.entry_low, r.entry_high, r.stop, r.target_low, r.target_high, r.trigger].filter((v) => v != null && !isNaN(v));
-    let lo = Math.min(...c.map((k) => k[3]), ...levels), hi = Math.max(...c.map((k) => k[2]), ...levels);
-    const pad = (hi - lo) * .06; lo -= pad; hi += pad;
-    const y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
+    const c = q.ohlc.slice(-95).filter((k) => k.every((v) => v != null));
+    const n = c.length, last = {i: n - 1, p: c[n - 1][4]};
+    // Zukunft: Zeitachse aus dem erwarteten Zeitraum (Handelstage)
+    const hwHi = Math.max(3, Math.min(14, r.horizon_weeks_high || 6)), hwLo = Math.max(1, Math.min(hwHi - 1, r.horizon_weeks_low || Math.round(hwHi / 2)));
+    const fut = Math.max(Math.round(n * .5), Math.min(Math.round(n * .85), hwHi * 5 + 6));
+    const W = 380, H = 300, PL = 4, PR = 56, PT = 16, PB = 22;
+    const cw = (W - PL - PR) / (n + fut);
     const x = (i) => PL + i * cw + cw / 2;
-    const xEnd = PL + c.length * cw, xR = W - PR;
-    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">`;
-    // Zonen
-    const band = (a, b, col, op) => `<rect x="${PL}" width="${xR - PL}" y="${y(Math.max(a, b))}" height="${Math.max(1.5, Math.abs(y(a) - y(b)))}" fill="${col}" opacity="${op}"/>`;
-    s += band(r.target_low, r.target_high, '#5aa7ff', .13) + band(r.entry_low, r.entry_high, '#2fd08a', .16);
-    const hline = (v, col, dash) => `<line x1="${PL}" x2="${xR}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1" stroke-dasharray="${dash}" opacity=".85"/>`;
-    s += hline(r.stop, '#ff5d6c', '4 3');
-    if (r.trigger != null) s += hline(r.trigger, '#f5b74a', '1.5 3');
-    // Kerzen
+    const mid = (r.entry_low + r.entry_high) / 2, tmid = (r.target_low + r.target_high) / 2;
+    const needEntry = r.entry_type !== 'Ausbruch' && r.price > r.entry_high && ['annaeherung', 'boden', 'meiden'].includes(r.status);
+    const altEnd = r.invalidation != null && r.invalidation < r.stop ? r.invalidation : r.stop - (Math.abs(mid - r.stop) || r.price * .05);
+    const levels = [r.entry_low, r.entry_high, r.stop, r.target_low, r.target_high, altEnd].filter((v) => v != null && !isNaN(v));
+    let lo = Math.min(...c.map((k) => k[3]), ...levels), hi = Math.max(...c.map((k) => k[2]), ...levels);
+    const pad = (hi - lo) * .07; lo -= pad; hi += pad;
+    const y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
+    const fmt = (v) => num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2);
+    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew" font-family="Inter, system-ui, sans-serif">
+      <defs><marker id="ahG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2fd08a"/></marker>
+      <marker id="ahR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8a95"/></marker></defs>`;
+    // Raster
+    const step = (hi - lo) / 5;
+    for (let g = 1; g < 5; g++) s += `<line x1="${PL}" x2="${W - PR}" y1="${y(lo + g * step)}" y2="${y(lo + g * step)}" stroke="#ffffff" stroke-opacity=".045"/>`;
+    // Zukunftsbereich
+    const x0 = x(n - 1) + cw / 2;
+    s += `<rect x="${x0}" y="${PT - 6}" width="${W - PR - x0}" height="${H - PT - PB + 6}" fill="#22d3a6" opacity=".035"/>`;
+    s += `<line x1="${x0}" x2="${x0}" y1="${PT - 6}" y2="${H - PB}" stroke="#ffffff" stroke-opacity=".12" stroke-dasharray="2 3"/>`;
+    // Kerzen (gedämpft, damit die Zählung im Vordergrund steht)
     s += '<g class="cdl">' + c.map((k, i) => {
-      const up = k[4] >= k[1], col = up ? '#2fd08a' : '#ff5d6c';
-      const yo = y(k[1]), yc = y(k[4]);
-      return `<line x1="${x(i)}" x2="${x(i)}" y1="${y(k[2])}" y2="${y(k[3])}" stroke="${col}" stroke-width=".8" opacity=".55"/>` +
-        `<rect x="${x(i) - Math.max(.6, cw * .32)}" width="${Math.max(1.2, cw * .64)}" y="${Math.min(yo, yc)}" height="${Math.max(.8, Math.abs(yo - yc))}" fill="${col}" opacity=".75"/>`;
+      const up = k[4] >= k[1], col = up ? '#2fd08a' : '#ff5d6c', yo = y(k[1]), yc = y(k[4]);
+      return `<line x1="${x(i)}" x2="${x(i)}" y1="${y(k[2])}" y2="${y(k[3])}" stroke="${col}" stroke-width=".7" opacity=".35"/>` +
+        `<rect x="${x(i) - Math.max(.5, cw * .3)}" width="${Math.max(1, cw * .6)}" y="${Math.min(yo, yc)}" height="${Math.max(.7, Math.abs(yo - yc))}" fill="${col}" opacity=".45"/>`;
     }).join('') + '</g>';
-    // Wellen: echte Zählung (Feld "waves") oder automatische Wendepunkte
+    // Stop / Invalidierung
+    s += `<line x1="${PL}" x2="${W - PR}" y1="${y(r.stop)}" y2="${y(r.stop)}" stroke="#ff5d6c" stroke-width="1.1" stroke-dasharray="5 4" opacity=".9"/>`;
+    s += `<text x="${PL + 3}" y="${y(r.stop) - 4}" font-size="9" fill="#ff8a95" font-weight="700" class="halo">Stop ${fmt(r.stop)}</text>`;
+    // Zeitfenster der Kästen
+    const fx = (d) => x(n - 1) + d * cw;
+    const eA = 2, eB = needEntry ? Math.max(12, Math.round(fut * .32)) : 0;
+    const tA = Math.max(eB + 4, Math.min(hwLo * 5, fut - 14)), tB = Math.min(fut - 2, Math.max(tA + 10, hwHi * 5));
+    const box = (a, b, v1, v2, col, label) => {
+      const yy = y(Math.max(v1, v2)), hh = Math.max(6, Math.abs(y(v1) - y(v2)));
+      return `<rect x="${fx(a)}" y="${yy}" width="${fx(b) - fx(a)}" height="${hh}" rx="4" fill="${col}" fill-opacity=".16" stroke="${col}" stroke-opacity=".75" stroke-width="1"/>` +
+        `<text x="${fx(a) + 5}" y="${hh >= 22 ? yy + 11 : yy + hh + 10}" font-size="8.5" font-weight="700" fill="${col}" class="halo">${label}</text>`;
+    };
+    if (needEntry) s += box(eA, eB, r.entry_low, r.entry_high, '#2fd08a', 'Einstieg');
+    else s += `<rect x="${PL}" y="${y(r.entry_high)}" width="${x0 - PL}" height="${Math.max(2, y(r.entry_low) - y(r.entry_high))}" fill="#2fd08a" opacity=".07"/>`;
+    s += box(tA, tB, r.target_low, r.target_high, '#5aa7ff', 'Ziel');
+    // Wellen der Zählung
     let pts;
     if (Array.isArray(r.waves) && r.waves.length) {
       const idx = new Map(c.map((k, i) => [k[0], i]));
       pts = r.waves.map((w) => ({i: idx.get(w.d), p: w.p, l: w.l})).filter((p) => p.i != null);
-    } else {
-      pts = zigzag(c);
-    }
-    const last = {i: c.length - 1, p: c[c.length - 1][4]};
+    } else pts = zigzag(c).map((p) => ({...p, l: null}));
     const path = pts.concat([last]);
-    s += `<polyline class="wave" points="${path.map((p) => x(p.i) + ',' + y(p.p)).join(' ')}" fill="none" stroke="#b18cff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
-    pts.forEach((p) => {
-      const top = p.h === 1 || (p.h == null && p.p >= c[p.i][4]);
-      s += `<circle cx="${x(p.i)}" cy="${y(p.p)}" r="2.6" fill="#b18cff"/>`;
-      const lab = p.l != null ? p.l : num(p.p, p.p >= 100 ? 0 : 1);
-      s += `<text x="${x(p.i)}" y="${y(p.p) + (top ? -7 : 14)}" text-anchor="middle" font-size="${p.l != null ? 11 : 8.5}" font-weight="600" fill="${p.l != null ? '#e6dcff' : '#a99bd6'}">${esc(lab)}</text>`;
+    s += `<polyline class="wave" points="${path.map((p) => x(p.i) + ',' + y(p.p)).join(' ')}" fill="none" stroke="#c9b8ff" stroke-width="1.6" stroke-linejoin="round" opacity=".9"/>`;
+    const imp = (l) => /^\(?[1-5]\)?$/.test(String(l));
+    const tag = (cx, cy, l, top, hollow) => {
+      const col = imp(l) ? '#5aa7ff' : '#f5b74a', ty = cy + (top ? -13 : 13);
+      const w = String(l).length > 2 ? 22 : 15;
+      return `<line x1="${cx}" x2="${cx}" y1="${cy}" y2="${ty + (top ? 6 : -6)}" stroke="${col}" stroke-opacity=".5"/>` +
+        (String(l).length > 2 ? `<rect x="${cx - w / 2}" y="${ty - 7}" width="${w}" height="14" rx="7" fill="${hollow ? '#0b0c10' : col}" stroke="${col}" stroke-width="1.3"/>`
+          : `<circle cx="${cx}" cy="${ty}" r="7.5" fill="${hollow ? '#0b0c10' : col}" stroke="${col}" stroke-width="1.3"/>`) +
+        `<text x="${cx}" y="${ty + 3.3}" font-size="${String(l).length > 2 ? 7.5 : 9.5}" font-weight="800" fill="${hollow ? col : '#0b0c10'}" text-anchor="middle">${esc(l)}</text>`;
+    };
+    pts.forEach((p, j) => {
+      const prevP = j ? pts[j - 1].p : p.p, nextP = j < pts.length - 1 ? pts[j + 1].p : last.p;
+      const top = p.p >= prevP && p.p >= nextP ? true : p.p <= prevP && p.p <= nextP ? false : p.p >= c[p.i][4];
+      if (p.l != null) s += tag(x(p.i), y(p.p), p.l, top, false);
+      else s += `<circle cx="${x(p.i)}" cy="${y(p.p)}" r="2.2" fill="#c9b8ff"/>`;
     });
-    // Projektion
-    const mid = (r.entry_low + r.entry_high) / 2, tgt = r.target_low;
-    let proj = [];
-    if (r.status === 'trend') proj = [tgt];
-    else if (r.status === 'meiden') proj = [mid];
-    else if (r.status === 'boden') proj = [r.trigger != null ? r.trigger : mid, tgt];
-    else if (r.status === 'zone') proj = [tgt];
-    else proj = r.price > r.entry_high ? [mid, tgt] : [tgt];
-    const fx = (j) => xEnd + (xR - xEnd) * (j + 1) / proj.length * .92;
-    s += `<polyline class="proj" points="${x(last.i)},${y(last.p)} ${proj.map((v, j) => fx(j) + ',' + y(v)).join(' ')}" fill="none" stroke="#22d3a6" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>`;
-    s += `<circle cx="${fx(proj.length - 1)}" cy="${y(proj[proj.length - 1])}" r="3.5" fill="#22d3a6"/>`;
-    s += `<line x1="${xEnd}" x2="${xEnd}" y1="${PT}" y2="${H - PB}" stroke="#ffffff" stroke-opacity=".08"/>`;
-    // aktueller Kurs
-    s += `<line x1="${PL}" x2="${xR}" y1="${y(last.p)}" y2="${y(last.p)}" stroke="#eef0f6" stroke-opacity=".35" stroke-width=".8"/>`;
-    // Achsen-Labels rechts (ohne Überlappung)
-    const labs = [[r.target_high, '#5aa7ff'], [r.target_low, '#5aa7ff'], [r.entry_high, '#2fd08a'], [r.entry_low, '#2fd08a'], [r.stop, '#ff5d6c'], [last.p, '#eef0f6']];
-    if (r.trigger != null) labs.push([r.trigger, '#f5b74a']);
-    labs.sort((a, b) => b[0] - a[0]);
-    let prev = -99;
+    // nächste Wellen (Projektion)
+    const NEXT = {'1': '2', '2': '3', '3': '4', '4': '5', '5': 'A', 'A': 'B', 'B': 'C', 'C': '1', 'W': 'X', 'X': 'Y', 'Y': '1', 'Start': '1'};
+    const lastL = pts.length && pts[pts.length - 1].l != null ? String(pts[pts.length - 1].l) : null;
+    // Richtung der nächsten Welle: nach einem Hoch abwärts, nach einem Tief aufwärts
+    const lp = pts.length ? pts[pts.length - 1] : null;
+    const lastTop = lp ? lp.p >= Math.max(last.p, pts.length > 1 ? pts[pts.length - 2].p : -Infinity) : false;
+    let tl = null;
+    if (lastL && NEXT[lastL]) tl = (tmid > last.p) === !lastTop ? NEXT[lastL] : NEXT[NEXT[lastL]] || null;
+    const prim = needEntry ? [[(eA + eB) / 2, mid, null], [(tA + tB) / 2, tmid, tl]] : [[(tA + tB) / 2, tmid, tl]];
+    const pp = [[x(last.i), y(last.p)]].concat(prim.map((v) => [fx(v[0]), y(v[1])]));
+    s += `<polyline class="proj" points="${pp.map((p) => p.join(',')).join(' ')}" fill="none" stroke="#2fd08a" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#ahG)"/>`;
+    prim.forEach((v, j) => {
+      if (!v[2]) return;
+      const isT = j === prim.length - 1, up = isT ? v[1] >= (j ? prim[j - 1][1] : last.p) : v[1] > prim[j + 1][1];
+      const edge = isT ? (up ? r.target_high : r.target_low) : (up ? r.entry_high : r.entry_low);
+      s += tag(fx(v[0]), y(edge), '(' + v[2] + ')', up, true);
+    });
+    // Alternative
+    const ax = fx(Math.max(6, Math.round((tA + tB) / 2 * .7)));
+    s += `<path d="M${x(last.i)} ${y(last.p)} L${ax} ${y(altEnd)}" fill="none" stroke="#ff8a95" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahR)" class="proj"/>`;
+    s += `<text x="${ax + 4}" y="${y(altEnd) + 3}" font-size="9" fill="#ff8a95" font-weight="700" class="halo">Alternative</text>`;
+    // Kurs-Marker
+    s += `<line x1="${PL}" x2="${W - PR}" y1="${y(last.p)}" y2="${y(last.p)}" stroke="#eef0f6" stroke-opacity=".25" stroke-width=".8"/>`;
+    s += `<circle cx="${x(last.i)}" cy="${y(last.p)}" r="3.6" fill="#eef0f6" stroke="#0b0c10" stroke-width="1.5"/>`;
+    // Preisachse rechts
+    const labs = [[r.target_high, '#5aa7ff'], [r.target_low, '#5aa7ff'], [r.entry_high, '#2fd08a'], [r.entry_low, '#2fd08a'], [r.stop, '#ff8a95'], [last.p, 'now']];
+    labs.sort((a, b) => b[0] - a[0]); let prev = -99;
     labs.forEach(([v, col]) => {
-      let yy = Math.max(y(v) + 3, prev + 10); prev = yy;
-      const isNow = v === last.p && col === '#eef0f6';
-      s += isNow ? `<rect x="${xR + 2}" y="${yy - 8.5}" width="${PR - 3}" height="12" rx="3" fill="#eef0f6"/><text x="${xR + 5}" y="${yy}" font-size="9" font-weight="700" fill="#0b0c10">${num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2)}</text>`
-        : `<text x="${xR + 5}" y="${yy}" font-size="9" fill="${col}">${num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2)}</text>`;
+      const yy = Math.max(y(v) + 3, prev + 11); prev = yy;
+      s += col === 'now' ? `<rect x="${W - PR + 3}" y="${yy - 9}" width="${PR - 5}" height="13" rx="3" fill="#eef0f6"/><text x="${W - PR + 6}" y="${yy}" font-size="9.5" font-weight="800" fill="#0b0c10" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`
+        : `<text x="${W - PR + 6}" y="${yy}" font-size="9.5" fill="${col}" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`;
     });
-    // Monats-Labels
-    let lm = '';
-    c.forEach((k, i) => { const m = k[0].slice(5, 7); if (m !== lm && i > 2) { lm = m; s += `<text x="${x(i)}" y="${H - 6}" font-size="8.5" fill="#5d6378">${['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][+m - 1]}</text>`; } else lm = m; });
-    s += `<text x="${(xEnd + xR) / 2}" y="${H - 6}" font-size="8.5" fill="#22d3a6" text-anchor="middle">Plan</text>`;
+    // Zeitachse (Vergangenheit + Zukunft)
+    const MN = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+    let lm = c[0][0].slice(5, 7);
+    c.forEach((k, i) => { const m = k[0].slice(5, 7); if (m !== lm) { lm = m; s += `<text x="${x(i)}" y="${H - 7}" font-size="8.5" fill="#5d6378">${MN[+m - 1]}</text>`; } });
+    const d0 = new Date(c[n - 1][0] + 'T12:00:00');
+    for (let d = 1; d < fut; d++) {
+      const dt = new Date(d0.getTime() + d * 7 / 5 * 864e5), m = String(dt.getMonth() + 1).padStart(2, '0');
+      if (m !== lm) { lm = m; s += `<text x="${fx(d)}" y="${H - 7}" font-size="8.5" fill="#22d3a6" opacity=".8">${MN[+m - 1]}</text>`; }
+    }
     return s + '</svg>';
   }
 
@@ -340,7 +382,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
 ` : `      <div class="dpane" data-pane="ov">
       <div class="hz-band kurz"><b>⚡ Kurzfristig · Trade</b><span>${esc(r.horizon_text || 'einige Wochen')}</span></div>
       <div class="chart">${chart(r)}
-        <div class="legend"><span style="--lc:#2fd08a">Einstiegszone</span><span style="--lc:#5aa7ff">Ziel</span><span style="--lc:#ff5d6c">Stop</span>${r.trigger != null ? '<span style="--lc:#f5b74a">Bestätigung</span>' : ''}<span style="--lc:#b18cff">${auto ? 'Wellen-Wendepunkte' : 'Elliott-Zählung'}</span><span style="--lc:#22d3a6">erwarteter Weg</span></div></div>
+        <div class="legend"><span style="--lc:#5aa7ff">Impulswelle 1–5</span><span style="--lc:#f5b74a">Korrektur A-B-C</span><span style="--lc:#2fd08a">Hauptszenario</span><span style="--lc:#ff8a95">Alternative</span>${auto ? '<span style="--lc:#c9b8ff">automatische Wendepunkte</span>' : ''}</div></div>
       <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="ifs">
         ${r.if_up ? `<div class="if" style="--ic:var(--up)"><span class="ic">▲</span><div><b>Wenn es steigt</b>${esc(r.if_up)}</div></div>` : ''}
