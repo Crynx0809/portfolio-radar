@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T21:31:18+00:00",
+ "generated_at": "2026-11-04T21:48:07+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -8,14 +8,6 @@
    "stop": 408,
    "trigger": 513,
    "gap_to_stop": 0.198
-  },
-  {
-   "ticker": "AMZN",
-   "name": "Amazon.com",
-   "price": 266.03,
-   "stop": 205,
-   "trigger": 258,
-   "gap_to_stop": 0.2977
   },
   {
    "ticker": "MRVL",
@@ -44,46 +36,18 @@
  ],
  "events": [
   {
-   "ticker": "AMZN",
-   "name": "Amazon.com",
-   "group": "Portfolio",
-   "price": 266.03,
-   "chg_pct": 0.0612,
-   "at": "2026-11-04T21:31+00:00",
-   "id": "AMZN-ausbruch-2026-11-04",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Amazon.com über der Bestätigungsmarke 258,00 $",
-   "text": "Kurs 266,03 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schnelle Rückkehr über 258 $ → der Bruch war ein Fehlausbruch: halten, Ziel 276–287 $."
-  },
-  {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
    "group": "Portfolio",
    "price": 37.945,
    "chg_pct": 0.0514,
-   "at": "2026-11-04T21:31+00:00",
+   "at": "2026-11-04T21:48+00:00",
    "id": "NOVO-B-ausbruch-2026-11-04",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
    "text": "Kurs 37,95 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
-  },
-  {
-   "ticker": "XOM",
-   "name": "Exxon Mobil",
-   "group": "Watchlist",
-   "price": 169.27,
-   "chg_pct": -0.0462,
-   "at": "2026-11-04T21:31+00:00",
-   "id": "XOM-zone-2026-11-04",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Exxon Mobil in der Einstiegszone",
-   "text": "Kurs 169,27 $ ist in die Zone 160,00 $–170,00 $ gelaufen.",
-   "todo": "Einstiegsidee erst in 160–170 $ nach einer Korrektur."
   }
  ],
  "notified": [
