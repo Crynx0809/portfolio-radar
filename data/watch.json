@@ -1,61 +1,97 @@
 {
- "generated_at": "2026-11-04T13:21:15+00:00",
+ "generated_at": "2026-11-04T15:35:17+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 483.9,
+   "price": 497.675,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.186
+   "gap_to_stop": 0.2198
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Alphabet A",
+   "price": 295.665,
+   "stop": 262,
+   "trigger": 301,
+   "gap_to_stop": 0.1285
   },
   {
    "ticker": "AMZN",
    "name": "Amazon.com",
-   "price": 250.69,
+   "price": 269.01,
    "stop": 205,
    "trigger": 258,
-   "gap_to_stop": 0.2229
+   "gap_to_stop": 0.3122
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 171.97,
+   "price": 163.26,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1942
+   "gap_to_stop": 0.1338
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.84,
+   "price": 38.015,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2613
+   "gap_to_stop": 0.2672
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 211.2,
+   "price": 215.2,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.1865
+   "gap_to_stop": 0.209
   }
  ],
  "events": [
   {
+   "ticker": "AMZN",
+   "name": "Amazon.com",
+   "group": "Portfolio",
+   "price": 269.01,
+   "chg_pct": 0.0731,
+   "at": "2026-11-04T15:35+00:00",
+   "id": "AMZN-ausbruch-2026-11-04",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Amazon.com über der Bestätigungsmarke 258,00 $",
+   "text": "Kurs 269,01 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schnelle Rückkehr über 258 $ → der Bruch war ein Fehlausbruch: halten, Ziel 276–287 $."
+  },
+  {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
    "group": "Portfolio",
-   "price": 37.84,
-   "chg_pct": 0.0485,
-   "at": "2026-11-04T13:21+00:00",
+   "price": 38.015,
+   "chg_pct": 0.0533,
+   "at": "2026-11-04T15:35+00:00",
    "id": "NOVO-B-ausbruch-2026-11-04",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
-   "text": "Kurs 37,84 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 38,02 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
+  },
+  {
+   "ticker": "GEV",
+   "name": "GE Vernova",
+   "group": "Watchlist",
+   "price": 824.625,
+   "chg_pct": -0.1019,
+   "at": "2026-11-04T15:35+00:00",
+   "id": "GEV-zone-2026-11-04",
+   "type": "zone",
+   "level": "mittel",
+   "title": "GE Vernova in der Einstiegszone",
+   "text": "Kurs 824,62 $ ist in die Zone 785,00 $–865,00 $ gelaufen.",
+   "todo": "Einstiegsidee bei einer Umkehr in 785–865 $."
   }
  ],
  "notified": []
