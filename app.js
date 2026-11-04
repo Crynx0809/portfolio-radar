@@ -690,6 +690,68 @@
     const bad = !!lastStop;
     return `<div class="pm${bad ? ' bad' : ''}" title="Aus dem Signal-Log (signals.json): jede geänderte Einschätzung ist eine neue Fassung">🗂 ${t}${bad && r.stop_reset_reason ? ` · Grund: ${esc(r.stop_reset_reason)}` : ''}</div>`;
   }
+
+  /* ---------- Entscheidung: 3 Fragen + Fazit (unter dem Chart) ----------
+     1. Darf ich?  Ausschluss: Zone erreicht? EV ≥ 0? Stop nicht im Rauschen? (Kurs nicht schon unter dem Stop)
+     2. Wie viel?  Score = Qualität: ≥ 65 normal, 45–64 halb, < 45 klein; Zahlen in ≤ 5 Tagen oder wenig Daten → eine Stufe kleiner
+     3. Wann?      Timing aus Zone / Bestätigungsmarke
+     Fazit:        🔴 Finger weg (EV < −0,05 R, Abwärtstrend, Kurs unter Stop; EV −0,05…0 = gelb „knapp“) · 🟡 Beobachten/Vormerken · 🟢 Kaufen mit … Position */
+  function decide(r, lv) {
+    const L = lv === 'lang', e = edgeOf(r, lv) || {}, p = r.price, c = (r2) => money(r2, r);
+    const z = L ? ltZone(r) : [r.entry_low, r.entry_high];
+    const inZ = z ? p >= z[0] * .99 && p <= z[1] * 1.02 : true;
+    const above = z && p > z[1] * 1.02, gap = z ? z[1] / p - 1 : 0;
+    const S = scoreOf(r).total;
+    const ne = (FUND[r.ticker] || {}).next_earnings || r.next_event_date;
+    const dd = ne ? Math.round((new Date(ne + 'T12:00:00') - Date.now()) / 864e5) : null;
+    const soon = dd != null && dd >= 0 && dd <= 5;
+    // 1. Darf ich?
+    const no = [], ok = [];
+    const down = L ? r.lt_view === 'bärisch' : r.status === 'meiden';
+    if (down) no.push(L ? 'langfristig schwach' : 'Abwärtstrend');
+    if (e.below_stop || (!L && p < r.stop) || (L && r.lt_stop != null && p < r.lt_stop)) no.push('Kurs schon unter dem Stop');
+    const knapp = e.ev_r != null && e.ev_r < 0 && e.ev_r >= -.05;   // im Rahmen der Messungenauigkeit
+    if (e.ev_r != null && e.ev_r < -.05) no.push(`EV ${evTxt(e.ev_r)} (Ziel kommt zu selten zuerst)`);
+    else if (knapp) no.push(`EV knapp unter 0 (${evTxt(e.ev_r)})`);
+    else if (e.ev_r != null) ok.push(`EV ${evTxt(e.ev_r)}`);
+    const tight = noisy(e);
+    if (tight) no.push(`Stop zu eng (${num(e.stop_pct * 100, 1)} % bei ${num(e.stop_pct / e.stop_atr * 100, 1)} % ${L ? 'Wochen' : 'Tages'}schwankung)`);
+    else if (e.stop_atr != null) ok.push('Stop ok');
+    if (inZ) ok.unshift(z && (L ? ltZone(r) : true) ? 'Kurs in der Zone' : 'Einstieg ab Kurs');
+    const hard = no.some((x) => !x.startsWith('Stop zu eng') && !x.startsWith('EV knapp'));
+    const pass = !no.length;
+    // 2. Wie viel?
+    let lvl = S == null ? 1 : S >= 65 ? 2 : S >= 45 ? 1 : 0;
+    const why2 = [];
+    if (soon) { lvl = Math.max(0, lvl - 1); why2.push(dd === 0 ? 'Zahlen heute' : dd === 1 ? 'Zahlen morgen' : `Zahlen in ${dd} Tagen`); }
+    if (e.few) { lvl = Math.max(0, lvl - 1); why2.push('wenig Daten'); }
+    if (L && r.lt_view === 'spekulativ' && lvl > 0) { lvl -= 1; why2.push('spekulativ'); }
+    const size = ['kleiner', 'halber', 'normaler'][lvl];
+    // 3. Wann?
+    let when;
+    if (down && !L) when = 'Nicht auffangen – erst Bodenbildung abwarten.';
+    else if (!L && r.entry_type === 'Ausbruch' && p < r.entry_low) when = `Erst bei Schlusskurs über ${c(r.entry_low)} (Ausbruch).`;
+    else if (inZ) when = L ? 'Jetzt im Kaufbereich – gestaffelt kaufen, Absicherung per Wochenschluss.' : `Jetzt in der Zone – auf Umkehrsignal warten${r.trigger ? `, bestätigt über ${c(r.trigger)}` : ''}.`;
+    else if (above) when = `Rücksetzer in ${num(z[0])}–${c(z[1])} abwarten (noch ${pct(gap).replace('−', '')} entfernt), nicht hinterherkaufen.`;
+    else when = `Unter der Zone – erst zurück über ${c(z[0])} abwarten.`;
+    // Fazit
+    let col, fz;
+    if (hard) { col = 'r'; fz = 'Finger weg'; }
+    else if (tight) { col = 'a'; fz = 'Beobachten – Stop zu eng, so nicht handeln'; }
+    else if (knapp) { col = 'a'; fz = 'Beobachten – Setup lohnt sich historisch nur knapp'; }
+    else if (inZ && !(r.entry_type === 'Ausbruch' && p < r.entry_low)) { col = 'g'; fz = `Kaufen mit ${size} Position${L ? '' : ' (bei Umkehrsignal)'}`; }
+    else { col = 'a'; fz = `Vormerken: Kauf in der Zone mit ${size} Position`; }
+    return {col, fz, a1: pass ? '✓ ' + ok.join(' · ') : '✗ ' + no.join(' · '), a2: `${['Kleine', 'Halbe', 'Normale'][lvl]} Position (Score ${S == null ? '—' : S}${why2.length ? ', ' + why2.join(', ') : ''})`, a3: when};
+  }
+  function decideHTML(r, lv) {
+    const d = decide(r, lv);
+    return `<div class="dec ${d.col}">
+      <div class="dec-f"><span class="dot"></span>${esc(d.fz)}</div>
+      <div class="dec-q"><b>Darf ich?</b><span>${esc(d.a1)}</span></div>
+      <div class="dec-q"><b>Wie viel?</b><span>${esc(d.a2)}</span></div>
+      <div class="dec-q"><b>Wann?</b><span>${esc(d.a3)}</span></div>
+      <small>Regel-Fazit aus Zone, Realitäts-Check und Score – keine Anlageberatung.</small></div>`;
+  }
   function ltHTML(r) {
     if (r.lt_target_low == null) return '';
     const p = r.price, v = LTV[r.lt_view] || ['Langfristig', 'var(--muted)'];
@@ -803,6 +865,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       <div class="hz-band lang"><b>🧭 Langfristig · Monate bis Jahre</b><span>Ziel um ${esc(ltUntil(r))} · Wochenchart</span></div>
       <div class="chart"><button class="fs-btn" data-fs="lang" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'lang', deskSz())}
         ${legend(r, 'lang')}</div>
+      ${decideHTML(r, 'lang')}
       ${ltHTML(r)}
       <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
 ` : `      <div class="dpane" data-pane="ov">
@@ -810,6 +873,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       <div class="hz-band kurz"><b>⚡ Kurzfristig · Wochen bis Monate</b><span>${(() => { const d = ewEnd(r, 'kurz'); return d ? 'Ziel um ' + esc(roughTxt(d)) : esc(r.horizon_text || ''); })()} · Tageschart</span></div>
       <div class="chart"><button class="fs-btn" data-fs="kurz" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'kurz', deskSz())}
         ${legend(r, 'kurz')}</div>
+      ${decideHTML(r, 'kurz')}
       <div class="ifs">
         ${r.if_up ? `<div class="if" style="--ic:var(--up)"><span class="ic">▲</span><div><b>Wenn es steigt</b>${esc(r.if_up)}</div></div>` : ''}
         ${r.if_wait ? `<div class="if" style="--ic:var(--warn)"><span class="ic">▶</span><div><b>Solange dazwischen</b>${esc(r.if_wait)}</div></div>` : ''}

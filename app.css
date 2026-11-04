@@ -630,3 +630,15 @@ details.lgd summary::before { content: "ⓘ  "; }
 .pm.bad { color: #ffb4a8; border-color: rgba(255,90,90,.3); background: rgba(255,90,90,.08); }
 body.pick .st .noise { display: none; }
 .bdg, .evb, .rc-h .ev { white-space: nowrap; } .rc-h .ev { flex: none; }
+
+/* ===== Entscheidung unter dem Chart ===== */
+.dec { margin: 10px 0 4px; padding: 12px 14px; border-radius: 16px; border: 1px solid var(--line); background: var(--glass); box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(22px); backdrop-filter: blur(22px); grid-column: 1 / -1; }
+.dec-f { font-size: 16px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 9px; }
+.dec-f .dot { flex: none; width: 12px; height: 12px; border-radius: 50%; }
+.dec.g { border-color: rgba(47,210,127,.45); } .dec.g .dot { background: #2fd27f; box-shadow: 0 0 10px #2fd27f; } .dec.g .dec-f { color: #6ef0ad; }
+.dec.a { border-color: rgba(255,180,40,.45); } .dec.a .dot { background: #ffb428; box-shadow: 0 0 10px #ffb428; } .dec.a .dec-f { color: #ffd27a; }
+.dec.r { border-color: rgba(255,90,90,.45); } .dec.r .dot { background: #ff5a5a; box-shadow: 0 0 10px #ff5a5a; } .dec.r .dec-f { color: #ff8f8f; }
+.dec-q { display: grid; grid-template-columns: 86px 1fr; gap: 8px; font-size: 13.5px; line-height: 1.4; padding: 4px 0; border-top: 1px solid rgba(255,255,255,.06); }
+.dec-q b { color: var(--muted); font-weight: 600; }
+.dec small { display: block; margin-top: 6px; font-size: 11px; color: var(--dim); }
