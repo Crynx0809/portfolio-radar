@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T08:51:27+00:00",
+ "generated_at": "2026-11-04T09:55:34+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -28,12 +28,27 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.33,
+   "price": 37.695,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2443
+   "gap_to_stop": 0.2565
   }
  ],
- "events": [],
+ "events": [
+  {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "group": "Portfolio",
+   "price": 37.695,
+   "chg_pct": 0.0445,
+   "at": "2026-11-04T09:55+00:00",
+   "id": "NOVO-B-ausbruch-2026-11-04",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
+   "text": "Kurs 37,70 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
+  }
+ ],
  "notified": []
 }
