@@ -18,6 +18,18 @@ TICKERS = {  # unser Ticker -> (Yahoo-Symbol, Stooq-Symbol, Währung)
     "NU": ("NU", "nu.us", "USD"), "HOOD": ("HOOD", "hood.us", "USD"),
     "MBG": ("MBG.DE", "mbg.de", "EUR"), "TTD": ("TTD", "ttd.us", "USD"), "NOW": ("NOW", "now.us", "USD"),
     "MOH": ("MOH", "moh.us", "USD"), "NKE": ("NKE", "nke.us", "USD"),
+    "META": ("META", "meta.us", "USD"),
+    "ADBE": ("ADBE", "adbe.us", "USD"),
+    "ZS": ("ZS", "zs.us", "USD"),
+    "NVDA": ("NVDA", "nvda.us", "USD"),
+    "INTC": ("INTC", "intc.us", "USD"),
+    "EL": ("EL", "el.us", "USD"),
+    "ZTS": ("ZTS", "zts.us", "USD"),
+    "MRNA": ("MRNA", "mrna.us", "USD"),
+    "1810": ("1810.HK", "1810.hk", "HKD"),
+    "BABA": ("BABA", "baba.us", "USD"),
+    "MU": ("MU", "mu.us", "USD"),
+    "TEAM": ("TEAM", "team.us", "USD"),
 }
 UA = {"User-Agent": "Mozilla/5.0 (portfolio-radar; GitHub Actions)"}
 TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD": "NASDAQ:APLD", "BAC": "NYSE:BAC",
@@ -27,7 +39,8 @@ TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD
       "CAT": "NYSE:CAT", "DTE": "XETR:DTE", "CCJ": "NYSE:CCJ", "AIR": "EURONEXT:AIR", "BRK-B": "NYSE:BRK.B",
       "RACE": "NYSE:RACE", "MELI": "NASDAQ:MELI", "RKLB": "NASDAQ:RKLB", "OKLO": "NYSE:OKLO", "HIMS": "NYSE:HIMS",
       "NU": "NYSE:NU", "HOOD": "NASDAQ:HOOD",
-      "MBG": "XETR:MBG", "TTD": "NASDAQ:TTD", "NOW": "NYSE:NOW", "MOH": "NYSE:MOH", "NKE": "NYSE:NKE"}
+      "MBG": "XETR:MBG", "TTD": "NASDAQ:TTD", "NOW": "NYSE:NOW", "MOH": "NYSE:MOH", "NKE": "NYSE:NKE",
+      "META": "NASDAQ:META", "ADBE": "NASDAQ:ADBE", "ZS": "NASDAQ:ZS", "NVDA": "NASDAQ:NVDA", "INTC": "NASDAQ:INTC", "EL": "NYSE:EL", "ZTS": "NYSE:ZTS", "MRNA": "NASDAQ:MRNA", "1810": "HKEX:1810", "BABA": "NYSE:BABA", "MU": "NASDAQ:MU", "TEAM": "NASDAQ:TEAM"}
 
 def tradingview():
     body = json.dumps({"symbols": {"tickers": list(TV.values()), "query": {"types": []}},
