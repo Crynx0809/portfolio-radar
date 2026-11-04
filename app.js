@@ -347,7 +347,7 @@
     let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew ew2" font-family="Inter, system-ui, sans-serif" role="img" aria-label="Elliott-Wellen ${esc(r.name)} ${L ? 'Monate/Jahre' : 'Wochen/Monate'}">
       <defs>${arrow('G', '#3ddc5a')}${arrow('R', '#ff3b3b')}${arrow('g', '#3ddc5a')}${arrow('r', '#ff3b3b')}</defs>
       <rect width="${W}" height="${H}" fill="#131722"/>`;
-    if (sz) s += `<text x="${PL + 6}" y="13" font-size="8.5" fill="#9598a1">${esc(r.name)} · ${L ? '1W · Wochenkerzen' : '1T · Tageskerzen'} · ${esc((r.tv_symbol || '').split(':')[0])}</text>`;
+    if (sz) s += `<text x="${PL + (sz.inline ? 74 : 6)}" y="13" font-size="8.5" fill="#9598a1">${esc(r.name)} · ${L ? '1W · Wochenkerzen' : '1T · Tageskerzen'} · ${esc((r.tv_symbol || '').split(':')[0])}</text>`;
     // Kerzen (weiß/grau, schlank)
     const bw = Math.max(.6, Math.min(5, cw * .62));
     s += '<g class="cdl">' + c.map((k, i) => {
@@ -595,6 +595,9 @@
     else if (!$('#sheet').hidden) refreshSheet();
   }
   const isDesk = () => matchMedia('(min-width: 1180px)').matches;
+  // breites Analyse-Fenster am Desktop: Chart in echter Größe zeichnen (Schrift bleibt gut lesbar)
+  const deskSz = () => { if (!isDesk()) return null; const d = $('#detail'); const w = Math.max(560, ((d && d.clientWidth) || 900) - 40);
+    return {W: Math.round(w / 1.25), H: Math.round(Math.min(560, Math.max(380, innerHeight * .55)) / 1.25), inline: 1}; };
   let SEL = null;
   function detailHTML(r, pid) {
     const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
@@ -612,14 +615,14 @@
 ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pane="ov">
       <div class="do do-top lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
       <div class="hz-band lang"><b>🧭 Langfristig · Monate bis Jahre</b><span>Ziel um ${esc(ltUntil(r))} · Wochenchart</span></div>
-      <div class="chart"><button class="fs-btn" data-fs="lang" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'lang')}
+      <div class="chart"><button class="fs-btn" data-fs="lang" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'lang', deskSz())}
         ${legend(r, 'lang')}</div>
       ${ltHTML(r)}
       <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
 ` : `      <div class="dpane" data-pane="ov">
       <div class="do do-top"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="hz-band kurz"><b>⚡ Kurzfristig · Wochen bis Monate</b><span>${(() => { const d = ewEnd(r, 'kurz'); return d ? 'Ziel um ' + esc(roughTxt(d)) : esc(r.horizon_text || ''); })()} · Tageschart</span></div>
-      <div class="chart"><button class="fs-btn" data-fs="kurz" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'kurz')}
+      <div class="chart"><button class="fs-btn" data-fs="kurz" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'kurz', deskSz())}
         ${legend(r, 'kurz')}</div>
       <div class="ifs">
         ${r.if_up ? `<div class="if" style="--ic:var(--up)"><span class="ic">▲</span><div><b>Wenn es steigt</b>${esc(r.if_up)}</div></div>` : ''}

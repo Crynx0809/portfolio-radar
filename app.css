@@ -485,3 +485,18 @@ details.lgd summary { cursor: pointer; color: var(--muted); font-size: 12.5px; p
 details.lgd summary::before { content: "ⓘ  "; }
 .chart { border-radius: 18px; overflow: hidden; }
 .fs { background: rgba(21,17,14,.9); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }
+
+/* ===== Desktop: Liste links, großes Analyse-Fenster rechts ===== */
+@media (min-width: 1180px) {
+  .layout { grid-template-columns: minmax(380px, 440px) minmax(0, 1fr); gap: 24px; max-width: 1760px; }
+  .side.right { max-height: calc(100vh - 92px); padding: 20px 24px 24px; }
+  .side.right .dpane[data-pane="ov"] { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; align-items: start; }
+  .side.right .dpane[data-pane="ov"] > * { grid-column: 1 / -1; }
+  .side.right .dpane[data-pane="ov"] > .ifs { grid-column: 1; }
+  .side.right .dpane[data-pane="ov"] > .levels { grid-column: 2; margin-top: 12px; }
+  .side.right .dpane[data-pane="ov"] > details.more { grid-column: auto; }
+  .side.right .sh-head .t { font-size: 30px; }
+  .kp4 { grid-template-columns: repeat(2, 1fr); }
+  body:not([data-page="aktien"]) .layout main { grid-column: 1 / -1; max-width: 1100px; margin: 0 auto; width: 100%; }
+  .ck-mobile { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; align-items: start; }
+}
