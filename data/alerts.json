@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_mrvl_1102e",
+  "at": "2026-11-04T17:55:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Weiterer Einbruch −7,7 % auf 158,7 $ – jetzt in der Zone 150–162 $ (Stop 178 $ war schon am 2.11. gebrochen, Teilverkauf laut Plan). Rest nur mit Stop 144 $ halten, nicht aufstocken; unter 147 $ ist der größere Boden gescheitert."
+ },
+ {
+  "id": "a_apld_1103e",
+  "at": "2026-11-04T17:55:00+01:00",
+  "ticker": "APLD",
+  "level": "hoch",
+  "text": "−8,6 % auf 16,28 $ – die Erholung vom 3.11. ist wieder weg (KI-Rechenzentrums-Sorgen nach der Wahl). Kurs knapp über der Zone 14–16 $, Stop 13,2 $. Plan (Ausstieg/Reduktion nach Stop-Bruch am 2.11.) bleibt, erst über 20,4 $ hinfällig; nicht aufstocken."
+ },
+ {
   "id": "a_novo_1104n",
   "at": "2026-11-04T14:25:00+01:00",
   "ticker": "NOVO-B",
@@ -7,25 +21,25 @@
   "text": "Q3 über Erwartungen, Prognose 2026 angehoben: Kurs 37,94 € (+5,1 %) über der Bestätigung 37,5 €. Hält der Schlusskurs heute über 37,5 €, ist der Boden wahrscheinlicher – Position halten; unter 36 € wäre der Ausbruch gescheitert."
  },
  {
-  "id": "a_amd_1103e",
-  "at": "2026-11-04T14:25:00+01:00",
-  "ticker": "AMD",
-  "level": "hoch",
-  "text": "Starke Q3-Zahlen (Rechenzentrum +97 %, Q4-Ausblick ca. 17 Mrd. $). Schluss 483,9 $, nachbörslich laut Bericht ca. 524 $ – über der Bestätigung 513 $. Schlusskurs am 4.11. entscheidet: über 513 $ Rest halten (Ziel 560–658 $), unter 466 $ gilt der Reduktionsplan weiter. Vorbörslich am 4.11. widersprüchliche Berichte (zwischen +7 % und −1 %) – erst der Schlusskurs zählt."
- },
- {
-  "id": "a_mrvl_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Schluss 171,4 $ (−12,7 %) unter deinem Stop 178 $ – laut Plan Teilverkauf. Nächste Zone 150–162 $; unter 147 $ ist der große Aufwärtstrend gebrochen."
- },
- {
-  "id": "a_apld_1103e",
-  "at": "2026-11-03T22:50:00+01:00",
-  "ticker": "APLD",
+  "id": "AMZN-2026-11-04",
+  "at": "2026-11-04T17:55:00+01:00",
+  "ticker": "AMZN",
   "level": "mittel",
-  "text": "Erholung +9,8 % auf 17,81 $ nach dem Stop-Bruch vom 2.11. – ein Erholungstag ist noch kein Boden; Entwarnung erst über 20,4 $."
+  "text": "+6,1 % auf 265,9 $ – über der Bestätigung 258 $ (Wächter). Hält der Schluss darüber, greift das bullische Szenario: halten, Ziel 276–287 $."
+ },
+ {
+  "id": "a_amd_1103e",
+  "at": "2026-11-04T17:55:00+01:00",
+  "ticker": "AMD",
+  "level": "mittel",
+  "text": "Zahlen-Gewinn verpufft: nachbörslich ca. 524 $, jetzt nur 486,4 $ (+0,5 %) – die KI-Rechenzentrums-Sorgen drücken. Bestätigung 513 $ nicht erreicht; Zone 420–445 $, Stop 408 $ unverändert."
+ },
+ {
+  "id": "a_gev_1103e",
+  "at": "2026-11-04T17:55:00+01:00",
+  "ticker": "GEV",
+  "level": "mittel",
+  "text": "−10,6 % auf 821 $ – jetzt in der Einstiegszone 785–865 $ (Rechenzentrums-Sorgen, Streit mit Iberdrola). Kein Kauf ins fallende Messer: Umkehrsignal in der Zone abwarten, Stop 760 $."
  },
  {
   "id": "a_mbg_1103e",
@@ -40,13 +54,6 @@
   "ticker": "RACE",
   "level": "mittel",
   "text": "Ferrari hebt Prognose an, Aktie 414,8 $ – nahe Ziel 425–437 $. Nicht hinterherkaufen."
- },
- {
-  "id": "a_gev_1103e",
-  "at": "2026-11-03T22:50:00+01:00",
-  "ticker": "GEV",
-  "level": "mittel",
-  "text": "GE Vernova +6,5 % auf 918 $ – über der Zone 785–865 $, Bestätigung erst über 960 $. Rücksetzer abwarten."
  },
  {
   "id": "a_ftnt_1102e",

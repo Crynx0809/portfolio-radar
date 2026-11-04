@@ -1,5 +1,25 @@
 [
  {
+  "id": "2026-11-04-markt-wahl",
+  "date": "2026-11-04",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Wahl-Rally: Dow +2,2 %, S&P 500 +1,6 %, Nasdaq +2 % nach Demokraten-Sieg im Kongress",
+  "summary": "Anleger werten die geteilte Macht (Präsident vs. Kongress) als Stillstand bei Gesetzen; Trump will das Ergebnis akzeptieren. Große Tech-Werte steigen kräftig (Amazon ca. +6–8 %, Alphabet ca. +3–5 %), Öl gibt nach.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
+ },
+ {
+  "id": "2026-11-04-ki-infra",
+  "date": "2026-11-04",
+  "ticker": "APLD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "KI-Rechenzentrums-Werte unter Druck: Applied Digital −8,6 %, Marvell −7,7 %, GE Vernova −10,6 %",
+  "summary": "Sorge, dass die neue Kongress-Mehrheit und angekündigte Rechenzentrums-Stopps auf Bundesstaats-Ebene (Texas) den Ausbau bremsen. CoreWeave, Iren, Nebius ebenfalls schwach; Siemens Energy −7,4 %. Bei GE Vernova belastet laut Bericht zusätzlich ein Streit mit Iberdrola.",
+  "url": "https://www.pulse.bot/manufacturing/news/ge-vernova-shares-tumble-11-as-datacenter-slowdown-and-iberdrola-dispute-raise-doubts-9af8fecd-ffef-43d6-b3f2-26da0306c5bf/"
+ },
+ {
   "id": "n_novo_q3_1104",
   "date": "2026-11-04",
   "ticker": "NOVO-B",
@@ -278,15 +298,5 @@
   "headline": "Applied Digital +8–10 %: Erholung der Rechenzentrums-Aktien",
   "summary": "Gegenbewegung nach der Musk-Warnung zu Neocloud-Anbietern und Schuldensorgen; Mitgründer kauften am Jahrestief.",
   "url": "https://stockanalysis.com/stocks/apld/"
- },
- {
-  "id": "n14",
-  "date": "2026-10-27",
-  "ticker": "V",
-  "impact": "niedrig",
-  "direction": "positiv",
-  "headline": "Visa: Umsatz +13 %, Dividende +16 %",
-  "summary": "Solides Quartal; Aktie nahe Rekordhoch.",
-  "url": "https://www.heygotrade.com/en/news/visa-fiscal-q4-2026-earnings-results/"
  }
 ]
