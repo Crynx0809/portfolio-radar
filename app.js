@@ -288,8 +288,30 @@
       alt = {path: a.path && a.path.length ? timed(ap) : ap, prob: a.prob != null ? a.prob : null, label: a.label || 'Alternative'};
     }
     const end = path[path.length - 1];
+    const P_up = end.p >= p0; let P_why = [];
     // Wahrscheinlichkeit: aus der Analyse, sonst grob aus der Sicherheit der Einschätzung
-    const pDef = L ? ({hoch: 70, mittel: 60, niedrig: 55}[r.lt_conf] || 60) : (r.alert === 'hoch' || r.status === 'meiden' ? 55 : 60);
+    // Schätzung, solange die Abendanalyse keinen Wert gesetzt hat – aus nachvollziehbaren Punkten statt pauschal 60 %
+    const pDef = (() => {
+      const why = [];
+      let p = 55;
+      const lu = r.lt_view === 'bullisch', ld = r.lt_view === 'bärisch', ku = r.bias === 'bullisch', kd = r.bias === 'bärisch';
+      const pathUp = P_up;
+      if (L) {
+        if (r.lt_conf === 'hoch') { p += 12; why.push('hohe Sicherheit der langen Einschätzung'); } else if (r.lt_conf === 'niedrig') { p -= 8; why.push('geringe Sicherheit'); }
+        if (r.lt_view === 'spekulativ') { p -= 5; why.push('spekulativ'); }
+        if ((lu && ku) || (ld && kd)) { p += 5; why.push('kurze und lange Sicht zeigen in dieselbe Richtung'); } else if ((lu && kd) || (ld && ku)) { p -= 5; why.push('kurze Sicht widerspricht'); }
+      } else {
+        if ((ku && pathUp) || (kd && !pathUp)) { p += 6; why.push('Pfad passt zur Einschätzung'); } else if ((ku && !pathUp) || (kd && pathUp)) { p -= 6; why.push('Pfad gegen die Einschätzung'); }
+        if ((lu && pathUp) || (ld && !pathUp)) { p += 6; why.push('übergeordneter Trend in Pfad-Richtung'); } else if ((lu && !pathUp) || (ld && pathUp)) { p -= 8; why.push('gegen den übergeordneten Trend'); }
+        if (r.status === 'zone' || r.status === 'trend') { p += 4; why.push(r.status === 'zone' ? 'Kurs in der Zone' : 'intakter Aufwärtstrend'); }
+        if (r.status === 'meiden') { p -= 6; why.push('aktiver Abwärtstrend'); }
+        if (r.alert === 'hoch') { p -= 6; why.push('dringende Meldung, Lage unklar'); }
+        const inv = r.invalidation != null ? r.invalidation : r.stop, gap = inv ? (r.price - inv) / r.price : 0;
+        if (gap > 0 && gap < .04) { p -= 5; why.push('Invalidierung sehr nah'); }
+      }
+      p = Math.max(40, Math.min(75, Math.round(p / 5) * 5));
+      P_why = why; return p;
+    })();
     let prob = e.prob != null ? e.prob : alt && alt.prob != null ? 100 - alt.prob : pDef;
     const probEst = e.prob == null && !(alt && alt.prob != null);
     if (alt && alt.prob == null) alt.prob = 100 - prob;
@@ -297,7 +319,7 @@
     let zone = null;
     if (L) { const z = ltZone(r); zone = z ? {lo: z[0], hi: z[1], at: 'path', label: 'Kaufzone'} : {lo: p0 * .97, hi: p0 * 1.01, at: 'now', label: 'Kaufzone (Kurs)'}; }
     else if (r.entry_low != null) zone = {lo: r.entry_low, hi: r.entry_high, at: needEntry ? 'path' : 'now', label: r.entry_type === 'Ausbruch' ? 'Einstieg (Ausbruch)' : 'Einstieg'};
-    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end, prob, probEst, zone, hi: hiL,
+    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end, prob, probEst, why: P_why, zone, hi: hiL,
       fib: e.fib || null};
   }
   const ewEnd = (r, lv) => { const P = ewPlan(r, lv); return P ? P.end.d : null; };
@@ -553,9 +575,9 @@
     const P = ewPlan(r, lv); if (!P) return '';
     const gr = new Set(P.piv.concat(P.hi || []).filter((p) => p.l).map((p) => deg2(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg2(w.l))));
     const G = [['w x y sehr groß', 3], ['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
-    return `<details class="lgd"><summary>Legende &amp; Erklärung</summary><div class="legend">${G.map((g) => `<span style="--lc:${DEGC2[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">noch keine Zählung</span>' : ''}
+    return `<div class="lgd"><div class="legend">${G.map((g) => `<span style="--lc:${DEGC2[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">noch keine Zählung</span>' : ''}
       <span style="--lc:#3ddc5a">Hauptszenario ${P.prob} %</span><span style="--lc:#e8e8e8">gepunktet = Alternative ${P.alt ? P.alt.prob + ' %' : ''}</span><span style="--lc:#1a3a8f">${P.L ? 'Langfristiger Einstieg' : 'Einstiegszone'}</span><span style="--lc:#3ddc5a">grüne Linien = Marken nach oben · Ziel</span><span style="--lc:#ff3b3b">rote Linie = ${P.L ? 'Absicherung' : 'Stop'}</span><span style="--lc:#c147e9">E = Quartalszahlen</span></div>
-      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ' Wahrscheinlichkeit grob aus der Sicherheit der Einschätzung, bis die Abendanalyse sie festlegt.' : ''}</p></details>`;
+      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ` Wahrscheinlichkeit geschätzt (noch nicht von der Abendanalyse festgelegt)${P.why.length ? ': ' + esc(P.why.join(', ')) : ''}.` : ''}</p></div>`;
   }
   // Vollbild für den Wellen-Chart (dreh das Handy quer für mehr Platz)
   let FS = null;
@@ -650,6 +672,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       DTAB = p;
       box.querySelectorAll('.dtabs button').forEach((b) => b.classList.toggle('on', b.dataset.p === p));
       box.querySelectorAll('.dpane').forEach((x) => { x.hidden = x.dataset.pane !== p; });
+      const tabs = box.querySelector('.dtabs'); if (tabs && box.scrollTop > tabs.offsetTop) box.scrollTop = Math.max(0, tabs.offsetTop - 10);
       anim((g) => g.from(box.querySelectorAll('.dpane:not([hidden]) > *'), {y: 8, opacity: 0, duration: .3, stagger: .03, clearProps: 'all'}));
     };
     box.querySelectorAll('.dtabs button').forEach((b) => b.addEventListener('click', () => set(b.dataset.p)));
