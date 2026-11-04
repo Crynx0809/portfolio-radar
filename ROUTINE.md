@@ -113,7 +113,9 @@ entry_eta_text.
 
 - **waves** (für das Chart-Bild der Website, bei jeder Abendanalyse pflegen): Liste der Elliott-Wendepunkte der Hauptzählung,
   `[{d:"2026-10-06", p:658.5, l:"3"}, …]` – d = Datum einer Kerze aus ohlc, p = Hoch/Tief dieser Kerze, l = Wellen-Label
-  („1“…„5“, „A“, „B“, „C“, „W“, „X“, „Y“). 3–7 Punkte in den letzten ~110 Kerzen. Ohne waves zeigt die Seite automatische Wendepunkte.
+  („1“…„5“, „A“, „B“, „C“, „W“, „X“, „Y“). 3–7 Punkte in den letzten ~95 Kerzen. **Pflicht für jede Aktie** – der Chart zeigt die Zählung
+  als nummerierte Kreise und leitet daraus die nächste Welle am Ziel ab (letzter Punkt = zuletzt abgeschlossene Welle, Datum muss eine Kerze in
+  prices.json sein). Fehlt waves bei einem Wert, in der nächsten Abendanalyse ergänzen (höchstens ~15 pro Abend, Depotwerte zuerst).
 
 Sonstige Dateien: news.json `[{id,date,ticker,impact,direction,headline,summary,url}]` (letzte ~10 Tage, max. ~30, eigene Worte).
 **News-Auswahl streng:** impact „hoch“ nur, wenn die Meldung einen Wert aus der Liste oder den Gesamtmarkt spürbar bewegt oder
