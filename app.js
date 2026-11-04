@@ -61,12 +61,12 @@
   function setHor(h, keepScroll) {
     HOR = h; try { localStorage.setItem('radar-hor', h); } catch (e) { /* ok */ }
     document.body.dataset.hor = h;
-    document.querySelectorAll('.hor button, .hz-sw button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === h)));
+    document.querySelectorAll('.hor button[data-h], .hz-sw button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === h)));
     $('#horNote').textContent = HORTXT[h];
     const go = () => { renderList(); if (SEL && isDesk()) openSheet(SEL); else if (SEL && !$('#sheet').hidden) refreshSheet(); };
     ensure(h).then(go);
   }
-  document.querySelectorAll('.hor button').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
+  document.querySelectorAll('.hor button[data-h]').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
 
   /* ---------- Suche & Wünsche ---------- */
   const sIn = $('#search');
@@ -335,11 +335,12 @@
     });
     if (!fl.length) s += `<text x="${bx1 + 3}" y="${ty1 - 4}" font-size="8" font-weight="700" fill="#9cc8ff" class="halo">Ziel</text>`;
     // Einstiegskasten (kurz)
-    if (P.needEntry && !P.e.path) {
+    const ez = L ? ltZone(r) : P.needEntry ? [r.entry_low, r.entry_high] : null;
+    if (ez && P.path.length > 1 || (ez && !L)) {
       const ei2 = fi(P.path[0].d), w2 = Math.max(fut * .12, 4);
       const ex1 = x(Math.max(n - 1 + 1, ei2 - w2)), ex2 = x(ei2 + w2 * .7);
-      s += `<rect x="${ex1}" y="${y(r.entry_high)}" width="${ex2 - ex1}" height="${Math.max(5, y(r.entry_low) - y(r.entry_high))}" rx="3" fill="#2fd08a" fill-opacity=".14" stroke="#2fd08a" stroke-opacity=".7"/>` +
-        `<text x="${ex2 + 3}" y="${(y(r.entry_low) + y(r.entry_high)) / 2 + 3}" font-size="8" font-weight="700" fill="#2fd08a" class="halo">Einstieg</text>`;
+      s += `<rect x="${ex1}" y="${y(ez[1])}" width="${ex2 - ex1}" height="${Math.max(5, y(ez[0]) - y(ez[1]))}" rx="3" fill="#2fd08a" fill-opacity=".14" stroke="#2fd08a" stroke-opacity=".7"/>` +
+        `<text x="${ex2 + 3}" y="${(y(ez[0]) + y(ez[1])) / 2 + 3}" font-size="8" font-weight="700" fill="#2fd08a" class="halo">${L ? 'Kaufzone' : 'Einstieg'}</text>`;
     }
     // Kurslinie
     s += `<path d="${c.map((k, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ')}" fill="none" stroke="#d6d9e4" stroke-width="1.15" stroke-linejoin="round" class="wave"/>`;
@@ -430,6 +431,12 @@
 
   /* ---------- Langfristiges Ziel (große Wellen) ---------- */
   const LTV = {bullisch: ['Langfristig aufwärts', 'var(--up)'], neutral: ['Langfristig offen', 'var(--warn)'], spekulativ: ['Spekulativ', 'var(--purple)'], 'bärisch': ['Langfristig schwach', 'var(--down)']};
+  // Langfristige Kaufzone: lt_entry_* oder erster Rücksetzer im Wellenpfad (gleiche Regel wie die Auswertung)
+  function ltZone(r) {
+    if (r.lt_entry_low != null && r.lt_entry_high != null) return [r.lt_entry_low, r.lt_entry_high];
+    const p = (((r.ew || {}).lang || {}).path || [])[0];
+    return p && p.p < r.price * .97 ? [Math.round(p.p * 97) / 100, Math.round(p.p * 103) / 100] : null;
+  }
   function ltHTML(r) {
     if (r.lt_target_low == null) return '';
     const p = r.price, v = LTV[r.lt_view] || ['Langfristig', 'var(--muted)'];
@@ -445,6 +452,7 @@
       <div class="levels lt-lv">
         <div><small>Großes Ziel</small><b class="up">${num(r.lt_target_low)}–${money(r.lt_target_high, r)}</b><em>${pct(r.lt_target_low / p - 1)} ab Kurs</em></div>
         <div><small>Langfristige Absicherung</small><b class="down">${money(r.lt_stop, r)}</b><em>${pct(r.lt_stop / p - 1)}</em></div>
+        <div><small>Langfristige Kaufzone</small><b>${(() => { const z = ltZone(r); return z ? num(z[0]) + '–' + money(z[1], r) : 'ab aktuellem Kurs'; })()}</b><em>${ltZone(r) ? 'erwarteter Rücksetzer' : 'kein tieferer Rücksetzer erwartet'}</em></div>
         <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b></div>
         <div><small>Analysten-Ziel (Schnitt)</small><b>${r.lt_consensus != null ? money(r.lt_consensus, r) : '—'}</b>${r.lt_analysts ? `<em>${r.lt_analysts} Analysten</em>` : ''}</div>
       </div>
@@ -460,9 +468,13 @@
       <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(r.price)}%"></span></div>`;
   }
   function ltDo(r) {
-    const p = r.price, k = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null;
+    const p = r.price, k = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null, z = ltZone(r);
     const small = r.lt_view === 'spekulativ' || r.lt_view === 'bärisch' || r.lt_conf === 'niedrig' ? ' Nur mit einer kleinen Position.' : '';
     if (r.lt_view === 'bärisch') return 'Langfristig noch kein bestätigter Boden – eher abwarten.' + small;
+    if (z) {
+      const m = (z[0] + z[1]) / 2, kz = m > r.lt_stop ? (r.lt_target_low - m) / (m - r.lt_stop) : null;
+      return `Langfristig wird zuerst ein Rücksetzer in die Kaufzone ${num(z[0])}–${money(z[1], r)} erwartet. Dort wäre der Einstieg deutlich besser (Chance : Risiko 1 : ${kz == null ? '—' : num(kz, 1)} statt ${k == null ? '—' : '1 : ' + num(k, 1)} ab Kurs). Absicherung unter ${money(r.lt_stop, r)} (Wochenschluss).` + small;
+    }
     if (k != null && k >= 2) return `Ab dem aktuellen Kurs lohnt sich ein langfristiger Einstieg rechnerisch (Chance : Risiko 1 : ${num(k, 1)}). Absicherung unter ${money(r.lt_stop, r)}.` + small;
     return `Ab dem aktuellen Kurs ist der Abstand zum großen Ziel zu klein (Chance : Risiko ${k == null ? '—' : '1 : ' + num(k, 1)}). Langfristig besser in Rücksetzern kaufen – je näher an der Absicherung ${money(r.lt_stop, r)}, desto besser.` + small;
   }
@@ -734,19 +746,28 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
   /* ---------- Analyse / Trefferquote ---------- */
   const OUT = {ziel: 'Ziel erreicht', stop: 'Stop', laeuft: 'läuft', wartet: 'wartet auf Einstieg', ersetzt: 'ersetzt', ersetzt_ohne_einstieg: 'ersetzt (kein Einstieg)', abgelaufen: 'abgelaufen', nicht_ausgeloest: 'nicht ausgelöst'};
   const GRP = {status: 'Nach Phase beim Signal', group: 'Depot vs. Watchlist', entry_type: 'Nach Einstiegsart', bias: 'Nach Einschätzung', crv: 'Nach geplantem Chance:Risiko', sector: 'Nach Branche'};
+  let ALV = null;
+  const ZON = {funktioniert: '✓ funktioniert', gebrochen: '✗ gebrochen', offen: 'offen', ersetzt: 'ersetzt', abgelaufen: 'abgelaufen'};
+  function wireA(box) { box.querySelectorAll('[data-a]').forEach((b) => b.addEventListener('click', () => { ALV = b.dataset.a; renderAnalyse(); })); }
   function renderAnalyse() {
     const box = $('#analyseBody'); if (!box) return;
-    const T = TRACK;
-    if (!T || !T.summary) { box.innerHTML = '<p class="empty">Die Auswertung erscheint nach dem nächsten Kursabruf.</p>'; return; }
+    if (!TRACK || !TRACK.summary) { box.innerHTML = '<p class="empty">Die Auswertung erscheint nach dem nächsten Kursabruf.</p>'; return; }
+    const lv = ALV || HOR, LG = lv === 'lang';
+    const T = LG ? Object.assign({curve: []}, TRACK.lang || {summary: null}) : TRACK;
+    const sw = `<div class="hor" role="tablist" aria-label="Ebene"><button role="tab" data-a="kurz" aria-selected="${!LG}"><b>⚡ Trades</b><small>kurzfristig · Tageschart</small></button><button role="tab" data-a="lang" aria-selected="${LG}"><b>🧭 Investments</b><small>langfristig · Wochenchart</small></button></div>`;
+    if (!T.summary) { box.innerHTML = sw + '<p class="empty">Die Auswertung der Investments startet mit dem nächsten Kursabruf.</p>'; wireA(box); return; }
     const S = T.summary;
     const pr = (x) => x == null ? '—' : Math.round(x * 100) + ' %';
     const r2 = (x) => x == null ? '—' : num(x, 2) + ' R';
     const tile = (l, v, c, hint, sub) => `<div class="kpi"${hint ? ` title="${esc(hint)}"` : ''}><small>${l}</small><b class="${c || ''}">${v}</b>${sub ? `<em>${sub}</em>` : ''}</div>`;
-    const few = (S.wins + S.losses) < 20;
-    let h = `<p class="sub">Jede Einschätzung wird seit dem ${dShort(T.since)}${T.since.slice(0, 4)} gespeichert und mit den echten Kursen nachgespielt: Einstieg, sobald der Kurs die Zone berührt, dann Stop oder Ziel – was zuerst kommt. <b>R</b> = Gewinn oder Verlust in Vielfachen des Risikos (1 R = Abstand Einstieg bis Stop).</p>`;
-    if (few) h += `<div class="warnbox">Noch wenig Daten: ${S.wins + S.losses} abgeschlossene Trades. Aussagekräftig wird die Trefferquote ab etwa 20–30 Trades – bis dahin sind die Zahlen ein erster Eindruck.</div>`;
+    const nz = S.zone_won + S.zone_lost, few = nz < 20;
+    let h = sw + `<p class="sub">${LG ? 'Jede langfristige Einschätzung' : 'Jede Trade-Einschätzung'} wird seit dem ${dShort(T.since)}${T.since.slice(0, 4)} gespeichert und mit den echten ${LG ? 'Wochenkerzen' : 'Tageskerzen'} nachgespielt.
+      ${LG ? 'Kaufzone = langfristige Zone bzw. Kurs bei der Einschätzung, Absicherung zählt nur per Wochenschluss.' : 'Einstieg, sobald der Kurs die Zone berührt.'} <b>R</b> = Gewinn oder Verlust in Vielfachen des Risikos (1 R = Abstand Einstieg bis Stop).</p>
+      <div class="rulebox"><b>Wann zählt eine Zone als Treffer?</b> Nach dem Einstieg schließt der Kurs ${LG ? 'zwei Wochen' : 'zwei Tage'} in Folge über der Zone <i>und</i> steht mindestens 1 R im Plus – bevor der Stop fällt. Ab da kann der Stop auf den Einstiegskurs: Der Trade kann nicht mehr verlieren. Fällt vorher der Stop, war die Zone falsch. Ob das Ziel erreicht wird, steht zusätzlich darunter.</div>`;
+    if (few) h += `<div class="warnbox">Noch wenig Daten: ${nz} entschiedene Zonen. Aussagekräftig wird es ab etwa 20–30 – bis dahin sind die Zahlen ein erster Eindruck.${LG ? ' Investments brauchen naturgemäß Monate.' : ''}</div>`;
     h += '<h2>Ergebnis</h2><div class="kpis-big">' +
-      tile('Trefferquote', pr(S.hit_rate), S.hit_rate == null ? '' : S.hit_rate >= .4 ? 'up' : 'down', 'Ziel erreicht ÷ (Ziel + Stop). Bei 1:2-Chance reichen schon gut 33 %.', `${S.wins} Ziele · ${S.losses} Stops`) +
+      tile('Zone hat funktioniert', pr(S.zone_rate), S.zone_rate == null ? '' : S.zone_rate >= .5 ? 'up' : 'down', 'Funktioniert ÷ (funktioniert + gebrochen)', `${S.zone_won} funktioniert · ${S.zone_lost} gebrochen · ${S.zone_open} offen`) +
+      tile('Ziel erreicht', pr(S.hit_rate), S.hit_rate == null ? '' : S.hit_rate >= .4 ? 'up' : 'down', 'Ziel erreicht ÷ (Ziel + Stop). Bei 1:2-Chance reichen schon gut 33 %.', `${S.wins} Ziele · ${S.losses} Stops`) +
       tile('Ø Ergebnis pro Trade', r2(S.avg_r), cls(S.avg_r), 'Erwartungswert: über 0 R verdient die Methode Geld') +
       tile('Summe', r2(S.sum_r), cls(S.sum_r), 'Alle abgeschlossenen Trades zusammen') +
       tile('Profit-Faktor', S.profit_factor == null ? '—' : num(S.profit_factor, 2), S.profit_factor == null ? '' : S.profit_factor >= 1.5 ? 'up' : S.profit_factor < 1 ? 'down' : '', 'Summe Gewinne ÷ Summe Verluste – über 1,5 ist gut') + '</div>';
@@ -757,11 +778,11 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       tile('Ø Gewinner', r2(S.avg_win_r), 'up') + tile('Ø Verlierer', r2(S.avg_loss_r), 'down') + '</div>';
     h += '<h2>Wie genau sind die Analysen?</h2><div class="kpis-grid">' +
       tile('Ø geplantes Chance:Risiko', S.avg_crv_plan == null ? '—' : '1 : ' + num(S.avg_crv_plan, 1), S.avg_crv_plan >= 2 ? 'up' : 'down', 'Durchschnitt aller Signale – Ziel ist mindestens 1:2') +
-      tile('Zone hat gehalten', pr(S.zone_respected), '', 'Anteil der Trades, die nach dem Einstieg weniger als 0,5 R ins Minus liefen – zeigt, wie genau die Einstiegszone sitzt') +
+      tile('Wenig Gegenwind', pr(S.zone_respected), '', 'Anteil der Trades, die nach dem Einstieg weniger als 0,5 R ins Minus liefen – zeigt, wie genau die Einstiegszone sitzt') +
       tile('Ø bester Stand', r2(S.avg_mfe_r), 'up', 'Wie weit lief der Trade im Schnitt maximal ins Plus (MFE)') +
       tile('Ø schlechtester Stand', r2(S.avg_mae_r), 'down', 'Wie weit lief der Trade im Schnitt maximal ins Minus (MAE)') +
-      tile('Richtung nach 5 Tagen', pr(S.dir_hit_5d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_5d} Signale`) +
-      tile('Richtung nach 20 Tagen', pr(S.dir_hit_20d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_20d} Signale`) +
+      (LG ? '' : tile('Richtung nach 5 Tagen', pr(S.dir_hit_5d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_5d} Signale`) +
+      tile('Richtung nach 20 Tagen', pr(S.dir_hit_20d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_20d} Signale`)) +
       tile('Hauptszenario bestätigt', pr(S.scenario_ok), '', 'Kurs schloss zuerst über der Bestätigungsmarke statt unter der Invalidierung', `${S.scenario_n} entschieden`) +
       tile('Ziel im Zeitfenster', pr(S.horizon_ok), '', 'Ziel innerhalb des geschätzten Zeitraums erreicht') +
       tile('Ø Tage bis Einstieg', S.avg_days_fill == null ? '—' : num(S.avg_days_fill, 1)) + tile('Ø Haltedauer (Tage)', S.avg_days_trade == null ? '—' : num(S.avg_days_trade, 1)) + '</div>';
@@ -775,21 +796,21 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     // Aufschlüsselung
     Object.keys(GRP).forEach((g) => {
       const rows = (T.groups || {})[g]; if (!rows || !rows.length) return;
-      const lab = (k) => g === 'status' ? (STATUS[k] || {l: k}).l : g === 'group' ? (k === 'Portfolio' ? 'Depot' : k) : k;
-      h += `<h2>${GRP[g]}</h2><div class="tbl"><table><tr><th></th><th>Signale</th><th>Einstieg</th><th>Ziel / Stop</th><th>Treffer</th><th>Ø R</th></tr>` +
-        rows.map((x) => `<tr><td>${esc(lab(x.key))}</td><td>${x.signals}</td><td>${x.filled}</td><td>${x.wins} / ${x.losses}</td><td>${pr(x.hit_rate)}</td><td class="${cls(x.avg_r)}">${x.avg_r == null ? '—' : num(x.avg_r, 2)}</td></tr>`).join('') + '</table></div>';
+      const lab = (k) => LG ? ((LTV[k] || [k])[0]) : g === 'status' ? (STATUS[k] || {l: k}).l : g === 'group' ? (k === 'Portfolio' ? 'Depot' : k) : k;
+      h += `<h2>${GRP[g]}</h2><div class="tbl"><table><tr><th></th><th>Signale</th><th>Einstieg</th><th>Zone ✓ / ✗</th><th>Zone</th><th>Ziel / Stop</th><th>Ø R</th></tr>` +
+        rows.map((x) => `<tr><td>${esc(lab(x.key))}</td><td>${x.signals}</td><td>${x.filled}</td><td>${x.zone_won} / ${x.zone_lost}</td><td>${pr(x.zone_rate)}</td><td>${x.wins} / ${x.losses}</td><td class="${cls(x.avg_r)}">${x.avg_r == null ? '—' : num(x.avg_r, 2)}</td></tr>`).join('') + '</table></div>';
     });
     // Signal-Liste
     const sig = T.signals || [];
     const live = sig.filter((x) => x.outcome === 'laeuft');
     if (live.length) {
-      h += '<h2>Laufende Trades</h2><div class="tbl"><table><tr><th>Aktie</th><th>Einstieg</th><th>Stop</th><th>Ziel</th><th>Stand</th><th>bester / schlechtester</th></tr>' +
-        live.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td><b>${esc(x.ticker)}</b></td><td>${num(x.fill)} · ${dShort(x.fill_day)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td class="${cls(x.r)}">${x.r == null ? '—' : num(x.r, 2) + ' R'}</td><td>${x.mfe_r == null ? '—' : num(x.mfe_r, 1) + ' / ' + num(x.mae_r, 1)}</td></tr>`).join('') + '</table></div>';
+      h += '<h2>Laufende Trades</h2><div class="tbl"><table><tr><th>Aktie</th><th>Einstieg</th><th>Stop</th><th>Ziel</th><th>Zone</th><th>Stand</th><th>bester / schlechtester</th></tr>' +
+        live.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td><b>${esc(x.ticker)}</b></td><td>${num(x.fill)} · ${dShort(x.fill_day)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td>${ZON[x.zone] || '—'}</td><td class="${cls(x.r)}">${x.r == null ? '—' : num(x.r, 2) + ' R'}</td><td>${x.mfe_r == null ? '—' : num(x.mfe_r, 1) + ' / ' + num(x.mae_r, 1)}</td></tr>`).join('') + '</table></div>';
     }
-    h += `<details class="more"><summary>Alle ${sig.length} Signale</summary><div class="tbl"><table><tr><th>Datum</th><th>Aktie</th><th>Phase</th><th>Zone</th><th>Stop</th><th>Ziel</th><th>C:R</th><th>Ergebnis</th><th>R</th></tr>` +
-      sig.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td>${dShort(x.issued_day)}</td><td><b>${esc(x.ticker)}</b></td><td>${esc((STATUS[x.status] || {l: x.status}).l)}</td><td>${num(x.entry_low)}–${num(x.entry_high)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td>${x.crv_plan == null ? '—' : num(x.crv_plan, 1)}</td><td><span class="oc oc-${x.outcome}">${OUT[x.outcome] || x.outcome}</span></td><td class="${cls(x.r)}">${x.r == null ? '' : num(x.r, 2)}</td></tr>`).join('') + '</table></div></details>';
+    h += `<details class="more"><summary>Alle ${sig.length} Signale</summary><div class="tbl"><table><tr><th>Datum</th><th>Aktie</th><th>Phase</th><th>Zone</th><th>Stop</th><th>Ziel</th><th>C:R</th><th>Zone</th><th>Ergebnis</th><th>R</th></tr>` +
+      sig.map((x) => `<tr class="go" data-t="${esc(x.ticker)}"><td>${dShort(x.issued_day)}</td><td><b>${esc(x.ticker)}</b></td><td>${esc(LG ? (LTV[x.status] || [x.status || ''])[0] : (STATUS[x.status] || {l: x.status}).l)}</td><td>${num(x.entry_low)}–${num(x.entry_high)}</td><td>${num(x.stop)}</td><td>${num(x.target_low)}</td><td>${x.crv_plan == null ? '—' : num(x.crv_plan, 1)}</td><td>${ZON[x.zone] || ''}</td><td><span class="oc oc-${x.outcome}">${OUT[x.outcome] || x.outcome}</span></td><td class="${cls(x.r)}">${x.r == null ? '' : num(x.r, 2)}</td></tr>`).join('') + '</table></div></details>';
     h += '<p class="foot">Vereinfachte Simulation: nur Kauf (long), ohne Gebühren und Steuern, Einstieg zum Zonenpreis, am selben Tag gilt im Zweifel der Stop. Kein Versprechen für die Zukunft.</p>';
-    box.innerHTML = h;
+    box.innerHTML = h; wireA(box);
     box.querySelectorAll('tr.go').forEach((tr) => tr.addEventListener('click', () => { location.hash = 'aktien'; setTimeout(() => openSheet(tr.dataset.t), 60); }));
   }
 
@@ -1027,7 +1048,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       $('#stand').textContent = st ? 'Stand ' + st.toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'}) + ' Uhr' : '';
       const nh = alerts.filter((a) => a.level === 'hoch').length;
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
-      document.body.dataset.hor = HOR; document.querySelectorAll('.hor button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === HOR))); $('#horNote').textContent = HORTXT[HOR];
+      document.body.dataset.hor = HOR; document.querySelectorAll('.hor button[data-h]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === HOR))); $('#horNote').textContent = HORTXT[HOR];
       if (HOR === 'lang') { try { WEEKLY = ((await load('weekly')) || {}).stocks || {}; } catch (e) { WEEKLY = {}; } }
       renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       renderCockpit(events); renderAnalyse(); renderChancen();

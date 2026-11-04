@@ -79,6 +79,8 @@ täglich von der Action aktualisiert): `lt_view` („bullisch“|„neutral“|�
 `lt_target_low`, `lt_target_high`, `lt_stop` (langfristige Absicherung = großes Wochentief bzw. Invalidierung der großen Welle),
 `lt_text` (1–2 Sätze: große Welle mit echten Wendepunkten/Daten, warum dieses Ziel),
 `lt_consensus` und `lt_analysts` (aus data/fund.json: targetMeanPrice, numberOfAnalystOpinions).
+`lt_entry_low`/`lt_entry_high` (optional): langfristige Kaufzone, wenn vorher ein größerer Rücksetzer erwartet wird (z. B. Welle (4)).
+Fehlt sie, gilt der erste Punkt von ew.lang.path ±3 %, wenn er > 3 % unter dem Kurs liegt, sonst „Kauf zum Kurs“.
 `lt_until`: nur noch fürs Claude-Dashboard – grobe Angabe, wann das große Ziel erreicht sein dürfte (z. B. „Aug. 2028“), geschätzt aus der
 Dauer vergleichbarer früherer großer Wellen, nicht pauschal „+18 Monate“. Die Website berechnet den Zeitpunkt selbst aus ew.lang.
 - Ermittlung: große Welle höheren Grades (Impuls/Korrektur im Wochenchart), Fibonacci-Retracements/-Extensions; `scripts/longterm.py`
@@ -155,6 +157,11 @@ Lieber wenige echte News als viele;
 events.json `[{id,date,ticker,event}]` (nur kommende, ~3 Monate); alerts.json `[{id,at,ticker,level,text}]` („hoch“ = Lenn muss evtl.
 bald handeln: Stop/Invalidierung gebrochen, Zahlen-Schock >8 %, Übernahme/Prognose, große Analystenänderung, Ausbruch über Bestätigung,
 Watchlist-Wert mit Umkehrsignal in der Zone; „mittel“ = genau beobachten); run.json `[{id:"latest",updated_at,kind,headline,market,next_update}]`.
+
+**Trefferquote (data/track.json, schreibt die Action):** getrennt nach `summary` (Trades, kurz) und `lang.summary` (Investments).
+Hauptkennzahl `zone_rate` = „Zone hat funktioniert“: nach dem Einstieg zwei Schlusskurse (lang: Wochenschlüsse) in Folge über der
+Zone und mindestens 1 R im Plus, bevor der Stop fällt. In der Freitags-Abendanalyse kurz in der Zusammenfassung nennen, wenn sich
+Muster zeigen (z. B. Zonen einer Phase brechen gehäuft) – daraus lernen, Zonen aber nicht rückwirkend ändern.
 
 Prüfskript vor dem Schreiben: keine NaN, entry_low ≤ entry_high, target_low ≤ target_high, stop < entry_low, status passt zum Kurs,
 jeder Kurs = prices.json-Kurs.

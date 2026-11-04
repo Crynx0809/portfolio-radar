@@ -394,3 +394,6 @@ body[data-hor="lang"] { --hz: var(--accent); }
 
 .ew .halo { paint-order: stroke; stroke: #0b0c10; stroke-width: 3px; stroke-linejoin: round; }
 .ew-note{margin:.35rem 0 0;font-size:.72rem;color:var(--dim)}
+.rulebox{background:rgba(90,167,255,.08);border:1px solid rgba(90,167,255,.3);border-radius:12px;padding:12px 14px;font-size:13.5px;margin:10px 0;line-height:1.5}
+.rulebox b{display:block;margin-bottom:3px}
+#analyse .hor{margin-bottom:12px}

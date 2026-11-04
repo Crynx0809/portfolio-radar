@@ -1,8 +1,15 @@
 """Trefferquote der Analysen.
 1. Signal-Log (data/signals.json): Jede neue Einschätzung (Status, Einstiegszone, Stop, Ziel …) einer Aktie wird als Signal
    mit Zeitpunkt und Kurs gespeichert. Ändern sich die Marken, entsteht ein neues Signal, das alte gilt als „ersetzt“.
-2. Auswertung (data/track.json): Jedes Signal wird mit den echten Tageskerzen nachgespielt (nur Long, ohne Gebühren):
+2. Auswertung (data/track.json): Jedes Signal wird mit den echten Kerzen nachgespielt (nur Long, ohne Gebühren):
    Einstieg, sobald der Kurs die Einstiegszone berührt; danach Stop oder Ziel – was zuerst kommt (am selben Tag zählt der Stop).
+3. Zwei Ebenen getrennt:
+   - kurz (Trade): Tageskerzen, Zone/Stop/Ziel = entry_*, stop, target_*.
+   - lang (Investment): Wochenkerzen, Zone = lt_entry_* (sonst erster Rücksetzer im Wellenpfad ew.lang bzw. Kurs bei Signal),
+     Stop = lt_stop (zählt nur per Wochenschluss), Ziel = lt_target_low.
+4. „Zone hat funktioniert“ (wie bei Analysehäusern üblich, Hauptkennzahl): Nach dem Einstieg schließt der Kurs zweimal in Folge
+   über der Zone UND steht mindestens 1 R über dem Einstieg, bevor der Stop fällt. Ab da kann der Stop auf Einstand – der Trade
+   kann nicht mehr verlieren. Fällt vorher der Stop: „Zone gebrochen“. Das Ziel wird zusätzlich gemessen.
 Aufruf: python scripts/track.py            (normal, in GitHub Actions nach dem Kursabruf)
         python scripts/track.py --seed     (einmalig: Signale aus der Git-Historie von data/stocks.json nachtragen)"""
 import json, sys, os, subprocess, datetime, statistics
@@ -36,17 +43,48 @@ def issue_day(r):
     return TODAY, NOW.isoformat(timespec="seconds")
 
 
-def add_signals(signals, stocks):
+def lt_zone(r):
+    """Langfristige Kaufzone: lt_entry_* oder erster Rücksetzer im Wellenpfad, sonst None (= Kauf zum Kurs)."""
+    lo, hi = num(r.get("lt_entry_low")), num(r.get("lt_entry_high"))
+    if lo and hi:
+        return lo, hi
+    path = ((r.get("ew") or {}).get("lang") or {}).get("path") or []
+    p, px = (num(path[0].get("p")) if path else None), num(r.get("price"))
+    if p and px and p < px * 0.97:
+        return round(p * 0.97, 2), round(p * 1.03, 2)
+    return None
+
+
+def lang_view(r):
+    """Langfristige Einschätzung als Signal-Felder (gleiches Schema wie kurz)."""
+    if num(r.get("lt_stop")) is None or num(r.get("lt_target_low")) is None or num(r.get("price")) is None:
+        return None
+    z = lt_zone(r)
+    px = num(r["price"])
+    lo, hi = z if z else (round(px * 0.99, 2), round(px * 1.01, 2))
+    return {**r, "status": r.get("lt_view"), "bias": r.get("lt_view"), "entry_type": "Rücksetzer" if z else "Kurs",
+            "entry_low": lo, "entry_high": hi, "stop": num(r["lt_stop"]), "target_low": num(r["lt_target_low"]),
+            "target_high": num(r.get("lt_target_high")), "trigger": None, "invalidation": None,
+            "horizon_weeks_low": None, "horizon_weeks_high": None, "horizon_end": None}
+
+
+def add_signals(signals, stocks, lv="kurz"):
     latest = {}
     for s in signals:
-        if not s.get("replaced"):
+        if not s.get("replaced") and s.get("lv", "kurz") == lv:
             latest[s["ticker"]] = s
     added = 0
     for r in stocks:
+        if lv == "lang":
+            r = lang_view(r)
+            if not r:
+                continue
         t = r.get("ticker")
         if not t or num(r.get("entry_low")) is None or num(r.get("stop")) is None:
             continue
         cur = {k: (num(r.get(k)) if k not in ("status", "bias", "entry_type") else r.get(k)) for k in KEYS}
+        if lv == "lang" and prev_same_zone(latest.get(t), cur):
+            continue
         prev = latest.get(t)
         if prev and all(prev.get(k) == cur[k] for k in KEYS):
             continue
@@ -58,7 +96,7 @@ def add_signals(signals, stocks):
                 signals.remove(prev)
             else:
                 prev["replaced"] = day
-        sig = {"id": f"{t}-{at[:16].replace(':', '').replace('-', '')}", "ticker": t, "name": r.get("name"),
+        sig = {"id": ("L-" if lv == "lang" else "") + f"{t}-{at[:16].replace(':', '').replace('-', '')}", "lv": lv, "ticker": t, "name": r.get("name"),
                "group": r.get("group"), "sector": r.get("sector"), "currency": r.get("currency"),
                "issued_at": at, "issued_day": day, "issued_price": num(r.get("price")),
                "trigger": num(r.get("trigger")), "invalidation": num(r.get("invalidation")),
@@ -70,21 +108,31 @@ def add_signals(signals, stocks):
     return added
 
 
+def prev_same_zone(prev, cur):
+    """lang: Zone „zum Kurs“ wandert mit dem Kurs – nur neue Signale, wenn sich Ziel/Stop/Einschätzung/echte Zone ändern."""
+    if not prev:
+        return False
+    keys = ["status", "stop", "target_low", "target_high", "entry_type"] + (["entry_low", "entry_high"] if cur["entry_type"] != "Kurs" else [])
+    return all(prev.get(k) == cur[k] for k in keys)
+
+
 def days_between(a, b):
     return (datetime.date.fromisoformat(b) - datetime.date.fromisoformat(a)).days
 
 
 def evaluate(s, ohlc):
+    lang = s.get("lv") == "lang"
     lo, hi, stop, tgt = s["entry_low"], s["entry_high"], s["stop"], s["target_low"]
     p0 = s["issued_price"]
-    out = {k: s.get(k) for k in ("id", "ticker", "name", "group", "sector", "currency", "issued_day", "issued_price", "status", "bias",
+    out = {k: s.get(k) for k in ("id", "lv", "ticker", "name", "group", "sector", "currency", "issued_day", "issued_price", "status", "bias",
                                  "entry_type", "entry_low", "entry_high", "stop", "target_low", "target_high", "trigger", "invalidation",
                                  "horizon_weeks_low", "horizon_weeks_high", "replaced")}
     mid = (lo + hi) / 2
     out["crv_plan"] = round((tgt - mid) / (mid - stop), 2) if tgt is not None and mid > stop else None
     end = s.get("replaced") or None
-    expire = s.get("horizon_end") or (datetime.date.fromisoformat(s["issued_day"]) + datetime.timedelta(weeks=26)).isoformat()
-    candles = [k for k in ohlc if k[0] > s["issued_day"]]
+    expire = s.get("horizon_end") or (datetime.date.fromisoformat(s["issued_day"]) + datetime.timedelta(weeks=104 if lang else 26)).isoformat()
+    # Wochenkerzen tragen das Datum des Wochenanfangs: die Woche des Signals zählt erst ab der Folgewoche
+    candles = [k for k in ohlc if k[0] > s["issued_day"]] if not lang else [k for k in ohlc if days_between(s["issued_day"], k[0]) > 0]
     # Richtung: Kursentwicklung nach 5 und 20 Handelstagen
     for n in (5, 20):
         out[f"ret_{n}d"] = round(candles[n - 1][4] / p0 - 1, 4) if p0 and len(candles) >= n else None
@@ -103,6 +151,8 @@ def evaluate(s, ohlc):
     if p0 and lo <= p0 <= hi:
         fill, fill_day = p0, s["issued_day"]
     outcome, exit_p, exit_day, mfe, mae = None, None, None, 0.0, 0.0
+    zone, zone_day, above = None, None, 0
+    hit_stop = (lambda l, c: c < stop) if lang else (lambda l, c: l <= stop)  # lang: nur Wochenschluss unter dem Stop
     for k in candles:
         d, o, h, l, c = k
         if end and d > end:
@@ -114,15 +164,22 @@ def evaluate(s, ohlc):
                 fill = min(max(o, lo), hi); fill_day = d
                 risk = fill - stop
                 if risk <= 0:
-                    outcome, exit_p, exit_day = "stop", min(o, stop), d; break
-                if l <= stop:  # Einstieg und Stop am selben Tag
-                    outcome, exit_p, exit_day = "stop", stop, d
+                    outcome, exit_p, exit_day = "stop", min(o, stop), d; zone, zone_day = "gebrochen", d; break
+                if hit_stop(l, c):  # Einstieg und Stop in derselben Kerze
+                    outcome, exit_p, exit_day = "stop", stop if not lang else c, d
+                    zone, zone_day = "gebrochen", d
                     mae = -1.0; break
             continue
         risk = fill - stop
         mfe = max(mfe, (h - fill) / risk); mae = min(mae, (l - fill) / risk)
-        if l <= stop:
-            outcome, exit_p, exit_day = "stop", min(o, stop), d; break
+        if hit_stop(l, c):
+            outcome, exit_p, exit_day = "stop", (min(o, stop) if not lang else c), d
+            if zone is None:
+                zone, zone_day = "gebrochen", d
+            break
+        above = above + 1 if c > hi else 0
+        if zone is None and above >= 2 and c >= fill + risk:
+            zone, zone_day = "funktioniert", d
         if tgt is not None and h >= tgt:
             outcome, exit_p, exit_day = "ziel", max(o, tgt), d; break
         if d > expire:
@@ -135,7 +192,10 @@ def evaluate(s, ohlc):
             outcome = "laeuft"; exit_p = candles[-1][4] if candles else fill; exit_day = None
     if fill is None:
         outcome = "ersetzt_ohne_einstieg" if end else ("nicht_ausgeloest" if candles and candles[-1][0] > expire else "wartet")
-    out.update({"fill": round(fill, 4) if fill else None, "fill_day": fill_day, "outcome": outcome,
+    if fill is not None and zone is None:
+        zone = "ersetzt" if end else ("abgelaufen" if outcome == "abgelaufen" else "offen")
+    out.update({"zone": zone, "zone_day": zone_day,
+                "fill": round(fill, 4) if fill else None, "fill_day": fill_day, "outcome": outcome,
                 "exit": round(exit_p, 4) if exit_p is not None else None, "exit_day": exit_day})
     if fill is not None and fill > stop:
         out["r"] = round((exit_p - fill) / (fill - stop), 2)
@@ -165,7 +225,10 @@ def stats(rows):
     ok = lambda r, k: (r[k] > 0) if r["bias"] == "bullisch" else (r[k] < 0)  # noqa
     sc = [r for r in rows if r.get("scenario")]
     hz = [r for r in wins if r.get("in_horizon") is not None]
+    zw = sum(r.get("zone") == "funktioniert" for r in rows); zl = sum(r.get("zone") == "gebrochen" for r in rows)
     return {
+        "zone_won": zw, "zone_lost": zl, "zone_open": sum(r.get("zone") == "offen" for r in rows),
+        "zone_rate": round(zw / (zw + zl), 3) if zw + zl else None,
         "signals": len(rows), "filled": len(filled), "fill_rate": round(len(filled) / len(eligible), 3) if eligible else None,
         "open": sum(r["outcome"] == "laeuft" for r in rows), "waiting": sum(r["outcome"] == "wartet" for r in rows),
         "closed": len(closed), "wins": len(wins), "losses": len(losses),
@@ -203,9 +266,19 @@ def main():
                 add_signals(signals, st)
             except Exception as e:  # noqa
                 print("übersprungen", h[:7], e)
-    added = add_signals(signals, load("data/stocks.json", []))
+    stocks = load("data/stocks.json", [])
+    added = add_signals(signals, stocks) + add_signals(signals, stocks, "lang")
     prices = load("data/prices.json", {}).get("stocks", {})
-    rows = [evaluate(s, prices.get(s["ticker"], {}).get("ohlc", [])) for s in signals]
+    weekly = load("data/weekly.json", {}).get("stocks", {})
+    def live_weekly(t):  # letzte Wochenkerze mit dem aktuellen Kurs ergänzen
+        w = [list(k) for k in weekly.get(t, [])]
+        d = prices.get(t, {}).get("ohlc", [])
+        if w and d and d[-1][0] >= w[-1][0]:
+            wk = [k for k in d if k[0] >= w[-1][0]]
+            w[-1] = [w[-1][0], w[-1][1], max(k[2] for k in wk + [w[-1]]), min(k[3] for k in wk + [w[-1]]), d[-1][4]]
+        return w
+    rows = [evaluate(s, prices.get(s["ticker"], {}).get("ohlc", [])) for s in signals if s.get("lv", "kurz") == "kurz"]
+    lrows = [evaluate(s, live_weekly(s["ticker"])) for s in signals if s.get("lv") == "lang"]
     groups = {}
     for name, key in (("status", lambda r: r["status"]), ("group", lambda r: r["group"]), ("sector", lambda r: r["sector"]),
                       ("bias", lambda r: r["bias"]), ("entry_type", lambda r: r["entry_type"]), ("crv", lambda r: crv_bucket(r.get("crv_plan")))):
@@ -218,10 +291,13 @@ def main():
         cum += r["r"]; curve.append([r["exit_day"], round(cum, 2), r["ticker"], r["r"]])
     first = min((s["issued_day"] for s in signals), default=TODAY)
     track = {"generated_at": NOW.isoformat(timespec="seconds"), "since": first, "summary": stats(rows), "groups": groups,
-             "curve": curve, "signals": sorted(rows, key=lambda r: r["issued_day"], reverse=True)}
+             "curve": curve, "signals": sorted(rows, key=lambda r: r["issued_day"], reverse=True),
+             "lang": {"since": min((s["issued_day"] for s in signals if s.get("lv") == "lang"), default=TODAY), "summary": stats(lrows),
+                      "groups": {"bias": [{"key": k, **stats([r for r in lrows if r["bias"] == k])} for k in sorted({r["bias"] or "?" for r in lrows})]},
+                      "signals": sorted(lrows, key=lambda r: r["issued_day"], reverse=True)}}
     json.dump(signals, open("data/signals.json", "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     json.dump(track, open("data/track.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-    print(f"{len(signals)} Signale ({added} neu), {track['summary']['closed']} abgeschlossen")
+    print(f"{len(signals)} Signale ({added} neu), kurz {track['summary']['closed']} abgeschlossen, lang {len(lrows)} Signale")
 
 
 if __name__ == "__main__":
