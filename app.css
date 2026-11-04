@@ -410,3 +410,78 @@ body[data-hor="lang"] { --hz: var(--accent); }
 body.fs-on{overflow:hidden}
 .ew2 .halo2{paint-order:stroke;stroke:#131722;stroke-width:3px;stroke-linejoin:round}
 .chart:has(.ew2){background:#131722;border-color:#2a2e39}
+
+/* ================= Glas-Look ================= */
+:root {
+  --bg: rgba(10,9,12,.34); --bg2: rgba(255,255,255,.05); --card: rgba(255,255,255,.07); --card2: rgba(255,255,255,.12);
+  --line: rgba(255,255,255,.13); --fg: #f6f3ef; --muted: rgba(240,234,228,.62); --dim: rgba(240,234,228,.42);
+  --accent: #5b8dff; --accent2: #8fb6ff; --blue: #6ea2ff; --r: 20px;
+  --glass: linear-gradient(160deg, rgba(255,255,255,.13), rgba(255,255,255,.04) 55%, rgba(255,255,255,.06));
+  --glass-shadow: inset 0 1px 0 rgba(255,255,255,.16), inset 0 -1px 0 rgba(0,0,0,.18), 0 12px 36px rgba(0,0,0,.28);
+}
+html { background: #15110e; }
+body { background: transparent; }
+body::before { content: ""; position: fixed; inset: -10%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(38% 45% at 18% 22%, rgba(222,158,96,.55), transparent 70%),
+    radial-gradient(30% 40% at 82% 18%, rgba(110,140,200,.45), transparent 70%),
+    radial-gradient(45% 40% at 70% 85%, rgba(170,105,70,.5), transparent 70%),
+    radial-gradient(35% 35% at 10% 90%, rgba(80,110,130,.4), transparent 70%),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0) 0 11%, rgba(10,8,6,.55) 11% 12.2%),
+    linear-gradient(180deg, #2a2019, #120e0b);
+  filter: blur(26px) saturate(1.1); }
+body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(120% 90% at 50% 40%, transparent 50%, rgba(0,0,0,.35)); }
+
+.row, .news li, .hero, .alerts li, .ck-card, .kpi, .tbl, .if, .levels div, details.more, .search, .wish, .opps li,
+.hor button, .dtabs, .check, .k4, .wishes li, .hz-band, .tgt, .pop {
+  background: var(--glass); border: 1px solid var(--line); box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4); backdrop-filter: blur(22px) saturate(1.4); }
+@media (min-width: 1180px) {
+  .side.right { background: var(--glass); box-shadow: var(--glass-shadow); -webkit-backdrop-filter: blur(28px) saturate(1.4); backdrop-filter: blur(28px) saturate(1.4); border-color: var(--line); }
+  /* Navigation oben als Glas-Pille */
+  .tabbar { top: 12px; bottom: auto; padding: 5px; border-radius: 99px; }
+  .tabbar a { flex-direction: row; gap: 7px; min-width: 0; padding: 8px 14px; border-radius: 99px; font-size: 13px; }
+  .tabbar svg { width: 17px; height: 17px; }
+  .tabbar i { top: 6px; right: 8px; }
+  body { padding-bottom: 30px; }
+}
+.tabbar { background: rgba(40,32,26,.45); border-color: var(--line); box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5); backdrop-filter: blur(24px) saturate(1.5); }
+.tabbar a.on { background: rgba(255,255,255,.9); color: #1a1512; }
+.top { background: linear-gradient(rgba(21,17,14,.55), transparent); }
+.sheet { background: rgba(32,26,22,.72); -webkit-backdrop-filter: blur(30px) saturate(1.4); backdrop-filter: blur(30px) saturate(1.4); border-color: var(--line); }
+.sheet-bg { background: rgba(0,0,0,.35); }
+.brand img { box-shadow: 0 0 24px rgba(91,141,255,.35); }
+
+/* Begrüßung + 4 Kacheln */
+.hello h1 { font-size: 30px; font-weight: 600; letter-spacing: -.03em; margin: 6px 0 0; }
+.hello p { margin: 2px 0 14px; color: var(--muted); font-size: 13.5px; }
+.kp4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 16px; }
+.k4 { text-align: left; color: inherit; font: inherit; border-radius: 18px; padding: 12px 14px; cursor: pointer; position: relative; transition: transform .2s; }
+.k4:hover { transform: translateY(-3px); }
+.k4-i { position: absolute; right: 12px; top: 10px; font-size: 15px; opacity: .85; }
+.k4 small { display: block; color: var(--muted); font-size: 12px; }
+.k4 b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -.02em; margin: 2px 0; }
+.k4 em { font-style: normal; font-size: 11.5px; color: var(--muted); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (min-width: 700px) { .kp4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* Liste schlanker: keine Farbkante, kein Balken */
+.row { border-radius: 18px; padding: 13px 16px; }
+.row::before, .row .bar { display: none; }
+.row .meta { margin-top: 6px; }
+.row:hover { border-color: rgba(255,255,255,.28); transform: translateY(-2px); }
+.row.sel { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), var(--glass-shadow); }
+
+/* Umschalter kurz/lang */
+.hor button[aria-selected="true"][data-h], .hor button[aria-selected="true"][data-a] { background: rgba(255,255,255,.88); color: #1a1512; border-color: transparent; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.hor button[aria-selected="true"][data-h] small, .hor button[aria-selected="true"][data-a] small { color: rgba(26,21,18,.65); }
+
+/* Detail: „Was tun?“ groß oben, Legende eingeklappt */
+.do-top { margin: 12px 0 4px; font-size: 16px; font-weight: 600; line-height: 1.4; padding: 14px 16px; border-radius: 18px;
+  background: linear-gradient(150deg, rgba(91,141,255,.28), rgba(255,255,255,.05)); border: 1px solid rgba(143,182,255,.35); box-shadow: var(--glass-shadow); }
+.do-top small { display: block; font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--accent2); margin-bottom: 4px; }
+details.lgd { margin-top: 6px; }
+details.lgd summary { cursor: pointer; color: var(--muted); font-size: 12.5px; padding: 4px 8px; list-style: none; }
+details.lgd summary::before { content: "ⓘ  "; }
+.chart { border-radius: 18px; overflow: hidden; }
+.fs { background: rgba(21,17,14,.9); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); }

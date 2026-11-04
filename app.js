@@ -145,6 +145,26 @@
     });
     staggerRows();
   }
+  function renderHello() {
+    const h = new Date().getHours();
+    $('#hello').textContent = h < 11 ? 'Guten Morgen' : h < 18 ? 'Guten Tag' : 'Guten Abend';
+    $('#helloSub').textContent = 'Dein Radar für ' + new Date().toLocaleDateString('de-DE', {weekday: 'long', day: 'numeric', month: 'long'});
+    const hot = STOCKS.filter((r) => r.alert === 'hoch'), zone = STOCKS.filter((r) => r.status === 'zone');
+    const fg = MARKET && MARKET.fear_greed, Z = TRACK && TRACK.summary;
+    const fgl = fg ? (fg.score < 25 ? 'Extreme Angst' : fg.score < 45 ? 'Angst' : fg.score <= 55 ? 'Neutral' : fg.score <= 75 ? 'Gier' : 'Extreme Gier') : '';
+    const nz = Z ? Z.zone_won + Z.zone_lost : 0;
+    const tile = (ic, l, v, sub, cls, act) => `<button class="k4" ${act || ''}><span class="k4-i">${ic}</span><small>${l}</small><b class="${cls || ''}">${v}</b><em>${sub}</em></button>`;
+    $('#kp4').innerHTML =
+      tile('⚠️', 'Dringend', hot.length, hot.length ? hot.map((r) => r.ticker).slice(0, 3).join(' · ') : 'alles ruhig', hot.length ? 'down' : '', 'data-go="hot"') +
+      tile('🎯', 'In der Zone', zone.length, zone.length ? zone.map((r) => r.ticker).slice(0, 3).join(' · ') : 'gerade keine', zone.length ? 'up' : '', 'data-go="zone"') +
+      tile('🌡️', 'Markt', fg ? fg.score : '—', fgl || 'Fear &amp; Greed', fg ? (fg.score < 45 ? 'down' : fg.score > 55 ? 'up' : '') : '') +
+      tile('✓', 'Zonen-Treffer', Z && Z.zone_rate != null ? Math.round(Z.zone_rate * 100) + ' %' : '—', nz ? `aus ${nz} Zonen` : 'Messung läuft', '', 'data-go="analyse"');
+    $('#kp4').querySelectorAll('[data-go]').forEach((b) => b.onclick = () => {
+      const g = b.dataset.go;
+      if (g === 'analyse') { location.hash = 'analyse'; return; }
+      const r = (g === 'hot' ? hot : zone)[0]; if (r) openSheet(r.ticker);
+    });
+  }
   function staggerRows() {
     anim((g) => {
       g.from('#list .row', {y: 18, opacity: 0, duration: .5, stagger: .035, ease: 'power3.out', clearProps: 'transform,opacity'});
@@ -533,9 +553,9 @@
     const P = ewPlan(r, lv); if (!P) return '';
     const gr = new Set(P.piv.concat(P.hi || []).filter((p) => p.l).map((p) => deg2(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg2(w.l))));
     const G = [['w x y sehr groß', 3], ['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
-    return `<div class="legend">${G.map((g) => `<span style="--lc:${DEGC2[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">noch keine Zählung</span>' : ''}
+    return `<details class="lgd"><summary>Legende &amp; Erklärung</summary><div class="legend">${G.map((g) => `<span style="--lc:${DEGC2[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">noch keine Zählung</span>' : ''}
       <span style="--lc:#3ddc5a">Hauptszenario ${P.prob} %</span><span style="--lc:#e8e8e8">gepunktet = Alternative ${P.alt ? P.alt.prob + ' %' : ''}</span><span style="--lc:#1a3a8f">${P.L ? 'Langfristiger Einstieg' : 'Einstiegszone'}</span><span style="--lc:#3ddc5a">grüne Linien = Marken nach oben · Ziel</span><span style="--lc:#ff3b3b">rote Linie = ${P.L ? 'Absicherung' : 'Stop'}</span><span style="--lc:#c147e9">E = Quartalszahlen</span></div>
-      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ' Wahrscheinlichkeit grob aus der Sicherheit der Einschätzung, bis die Abendanalyse sie festlegt.' : ''}</p>`;
+      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.${P.probEst ? ' Wahrscheinlichkeit grob aus der Sicherheit der Einschätzung, bis die Abendanalyse sie festlegt.' : ''}</p></details>`;
   }
   // Vollbild für den Wellen-Chart (dreh das Handy quer für mehr Platz)
   let FS = null;
@@ -590,17 +610,17 @@
         <span class="hz-sw" role="tablist" aria-label="Zeitraum"><button data-h="kurz" aria-selected="${HOR === 'kurz'}">⚡ Kurz</button><button data-h="lang" aria-selected="${HOR === 'lang'}">🧭 Lang</button></span></div>
       <div class="dtabs"><button data-p="ov">Überblick</button><button data-p="num">Zahlen</button><button data-p="calc">Rechner</button></div>
 ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pane="ov">
+      <div class="do do-top lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
       <div class="hz-band lang"><b>🧭 Langfristig · Monate bis Jahre</b><span>Ziel um ${esc(ltUntil(r))} · Wochenchart</span></div>
       <div class="chart"><button class="fs-btn" data-fs="lang" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'lang')}
         ${legend(r, 'lang')}</div>
-      <div class="do lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
       ${ltHTML(r)}
       <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
 ` : `      <div class="dpane" data-pane="ov">
+      <div class="do do-top"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="hz-band kurz"><b>⚡ Kurzfristig · Wochen bis Monate</b><span>${(() => { const d = ewEnd(r, 'kurz'); return d ? 'Ziel um ' + esc(roughTxt(d)) : esc(r.horizon_text || ''); })()} · Tageschart</span></div>
       <div class="chart"><button class="fs-btn" data-fs="kurz" aria-label="Vollbild">⛶ Vollbild</button>${ewChart(r, 'kurz')}
         ${legend(r, 'kurz')}</div>
-      <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="ifs">
         ${r.if_up ? `<div class="if" style="--ic:var(--up)"><span class="ic">▲</span><div><b>Wenn es steigt</b>${esc(r.if_up)}</div></div>` : ''}
         ${r.if_wait ? `<div class="if" style="--ic:var(--warn)"><span class="ic">▶</span><div><b>Solange dazwischen</b>${esc(r.if_wait)}</div></div>` : ''}
@@ -1129,7 +1149,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       if (nh) { const b = $('#hotBadge'); b.hidden = false; b.textContent = nh + ' dringend'; b.style.cursor = 'pointer'; b.onclick = () => { location.hash = 'ausblick'; }; }
       document.body.dataset.hor = HOR; document.querySelectorAll('.hor button[data-h]').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === HOR))); $('#horNote').textContent = HORTXT[HOR];
       if (HOR === 'lang') { try { WEEKLY = ((await load('weekly')) || {}).stocks || {}; } catch (e) { WEEKLY = {}; } }
-      renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
+      renderHello(); renderList(); renderNews(news); renderAusblick(run, alerts, events); loadWishes();
       renderCockpit(events); renderAnalyse(); renderChancen();
       setTimeout(() => popups(alerts, watch), 700);
       if (h[0] === 'aktien' && h[1]) openSheet(decodeURIComponent(h[1]));
