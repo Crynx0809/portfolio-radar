@@ -27,7 +27,7 @@
 
   let HOR = (() => { try { return localStorage.getItem('radar-hor') || 'kurz'; } catch (e) { return 'kurz'; } })();
   let WEEKLY = null, DAILY = null;
-  let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null, FUND = {}, SCREEN = null;
+  let EDGE = {}, STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null, FUND = {}, SCREEN = null;
   const REPO = 'Crynx0809/portfolio-radar';
 
   /* ---------- Navigation ---------- */
@@ -168,17 +168,18 @@
     const W = (r) => (KPIS[r.ticker] || {}).perf_1w;
     const th = (k, l, c) => `<th data-k="${k}" class="${c || ''}${SORT.k === k ? ' on' : ''}">${l}${SORT.k === k ? (SORT.d < 0 ? ' ↓' : ' ↑') : ''}</th>`;
     const bar = (w) => w == null ? '' : `<span class="wb"><i class="${w >= 0 ? 'up' : 'down'}" style="width:${Math.min(100, Math.abs(w) / .3 * 100)}%"></i></span>`;
-    $('#tbl').innerHTML = `<table class="st"><thead><tr>${th('name', 'Aktie')}${th('price', 'Kurs', 'n')}${th('day', 'Heute', 'n wide')}${th('week', 'Woche', 'n')}${th('score', 'Score', 'c')}${th('crv', 'CRV', 'c wide')}${th('lang', 'Langfristig', 'wide')}${th('kurz', 'Kurzfristig', 'wide')}</tr></thead><tbody>` +
+    $('#tbl').innerHTML = `<table class="st"><thead><tr>${th('name', 'Aktie')}${th('price', 'Kurs', 'n')}${th('day', 'Heute', 'n wide')}${th('week', 'Woche', 'n')}${th('score', 'Score', 'c')}${th('crv', 'CRV', 'c wide')}${th('ev', 'EV', 'c')}${th('lang', 'Langfristig', 'wide')}${th('kurz', 'Kurzfristig', 'wide')}</tr></thead><tbody>` +
       rows.map((r) => {
         const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'}, q = PRICES[r.ticker] || {}, w = W(r), sc = SC[r.ticker], k = crvOf(r), L = ltState(r);
         const lv = (r.ew || {}).lang, wt = waveTxt(lv);
         return `<tr class="go${r.ticker === SEL ? ' sel' : ''}" data-t="${esc(r.ticker)}" tabindex="0">
-          <td><div class="nm"><i class="dot" style="background:${HOR === 'lang' ? L[1] : s.c}"></i><div><b>${esc(r.name)}</b> <span class="tk">${esc(r.ticker)}</span>${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}<small>${esc(landOf(r))} · ${esc(r.sector || '')}</small></div></div></td>
+          <td><div class="nm"><i class="dot" style="background:${HOR === 'lang' ? L[1] : s.c}"></i><div><b>${esc(r.name)}</b> <span class="tk">${esc(r.ticker)}</span>${r.alert === 'hoch' ? '<span class="hot" title="Dringend"></span>' : ''}${noisy(edgeOf(r)) ? '<span class="noise" title="Stop kleiner als eine normale Schwankung">Stop im Rauschen</span>' : ''}<small>${esc(landOf(r))} · ${esc(r.sector || '')}</small></div></div></td>
           <td class="n"><b class="mono">${money(r.price, r)}</b></td>
           <td class="n wide ${q.chg_pct == null ? '' : q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct == null ? '' : pct(q.chg_pct)}</td>
           <td class="n"><span class="wk ${w == null ? '' : w >= 0 ? 'up' : 'down'}">${w == null ? '—' : pct(w)}</span>${bar(w)}</td>
           <td class="c"><span class="bdg ${scCls(sc)}">${sc == null ? '—' : sc}</span></td>
           <td class="c wide"><span class="bdg ${crvCls(k)}">${k == null ? '—' : num(k, 1) + ' : 1'}</span></td>
+          <td class="c" title="Erwartungswert in R aus der historischen Häufigkeit Ziel vor Stop – keine Vorhersage">${(() => { const e = edgeOf(r); return e && e.ev_r != null ? `<span class="evb ${evCls(e.ev_r)}">${evTxt(e.ev_r)}</span>` : '—'; })()}</td>
           <td class="wide"><span class="stt" style="--c:${L[1]}">${L[0]}</span>${wt ? `<small>${esc(wt)}</small>` : ''}</td>
           <td class="wide"><span class="stt" style="--c:${s.c}">${s.l}</span><small>${esc(distText(r))}</small></td></tr>`;
       }).join('') + '</tbody></table>' + (rows.length ? '' : '<p class="empty">Keine Aktie passt zu diesem Filter.</p>');
@@ -226,7 +227,7 @@
     renderChips(base);
     const flt = (FILT[FIL] || FILT.alle)[1];
     const SC = {}; STOCKS.forEach((r) => { SC[r.ticker] = scoreOf(r).total; });
-    const KEY = {name: (r) => r.name, price: (r) => r.price, day: (r) => (PRICES[r.ticker] || {}).chg_pct, week: (r) => (KPIS[r.ticker] || {}).perf_1w, score: (r) => SC[r.ticker], crv: crvOf, lang: (r) => ltState(r)[0], kurz: (r) => (STATUS[r.status] || {o: 9}).o};
+    const KEY = {ev: (r) => (edgeOf(r) || {}).ev_r, name: (r) => r.name, price: (r) => r.price, day: (r) => (PRICES[r.ticker] || {}).chg_pct, week: (r) => (KPIS[r.ticker] || {}).perf_1w, score: (r) => SC[r.ticker], crv: crvOf, lang: (r) => ltState(r)[0], kurz: (r) => (STATUS[r.status] || {o: 9}).o};
     const tr = base.filter(flt).sort((a, b) => { const x = KEY[SORT.k](a), y = KEY[SORT.k](b); if (x == null) return 1; if (y == null) return -1; return (typeof x === 'string' ? x.localeCompare(y, 'de') : x - y) * SORT.d; });
     renderTable(tr, SC);
     $('#cnt').textContent = tr.length + ' von ' + STOCKS.length;
@@ -245,7 +246,7 @@
         ${HOR === 'lang' && r.lt_target_low != null ? `<div class="meta"><span class="pill" style="--sc:${(LTV[r.lt_view] || [, 'var(--muted)'])[1]}">${(LTV[r.lt_view] || ['—'])[0]}</span>
           <span class="zone"><em>Ziel ~${esc(ltUntil(r))}</em> ${num(r.lt_target_low)}–${money(r.lt_target_high, r)} · <b class="up">${pct(r.lt_target_low / r.price - 1)}</b></span></div>
         ${ltBar(r)}` : `<div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
-          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span></div>
+          <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span>${noisy(edgeOf(r)) ? '<span class="noise">Stop im Rauschen</span>' : ''}</div>
         ${rowBar(r)}`}</li>`;
     }).join('') || (qy ? `<li class="empty">„${esc(SEARCH.trim())}“ ist noch nicht dabei.<br><button class="wish-btn" id="wishFromSearch">＋ „${esc(SEARCH.trim())}“ wünschen</button></li>` : '<li class="empty">Keine Werte.</li>');
     const wf = $('#wishFromSearch'); if (wf) wf.onclick = () => openWish(SEARCH.trim());
@@ -642,6 +643,53 @@
     const p = (((r.ew || {}).lang || {}).path || [])[0];
     return p && p.p < r.price * .97 ? [Math.round(p.p * 97) / 100, Math.round(p.p * 103) / 100] : null;
   }
+
+  /* ---------- Realitäts-Check: Ziel vor Stop? (data/edge.json, scripts/edge.py) ---------- */
+  const edgeOf = (r, lv) => ((EDGE[r.ticker] || {})[lv || HOR]) || null;
+  const r5 = (x) => Math.round(x * 20) * 5;                    // auf 5 % runden
+  const evCls = (ev) => ev == null ? '' : ev > .2 ? 'g' : ev >= 0 ? 'a' : 'r';
+  const evTxt = (ev) => ev == null ? '—' : (ev >= 0 ? '+' : '−') + num(Math.abs(ev), 2) + ' R';
+  const noisy = (e) => e && e.stop_atr != null && e.stop_atr < 1;
+  function realityHTML(r, lv) {
+    const e = edgeOf(r, lv), L = lv === 'lang';
+    if (!e) return '';
+    const T = 'historische Häufigkeit, keine Vorhersage';
+    if (e.invalid) return `<div class="rc" title="${T}"><div class="rc-h"><b>Realitäts-Check · Ziel vor Stop?</b></div><p class="rc-s">Nicht berechenbar: ${esc(e.invalid)}.</p></div>`;
+    const w = r5(e.p_win), l = r5(e.p_loss), n = Math.max(0, 100 - w - l), be = r5(e.be), unit = L ? 'Wochen' : 'Wochen';
+    const hz = L ? e.H + ' Wochen' : Math.round(e.H / 5) + ' Wochen';
+    const atrW = L ? 'Wochenschwankung' : 'Tagesschwankung';
+    let say;
+    if (noisy(e)) say = `<b>Stop liegt im Rauschen:</b> Er ist nur ${num(e.stop_pct * 100, 1)} % entfernt – weniger als eine normale ${atrW} (${num(e.stop_pct / e.stop_atr * 100, 1)} %). Solche Stops werden oft zufällig ausgelöst.`;
+    else if (e.p_win < e.be) say = `<b>Ziel historisch selten erreicht:</b> Nur in ${w} % der Fälle kam der Kurs innerhalb von ${hz} zuerst ${num(e.tgt_pct * 100, 0)} % nach oben – nötig wären ${be} %.`;
+    else if (e.ev_r > .2) say = `<b>Historisch tragfähig:</b> Ziel kam oft genug vor dem Stop (${w} % statt nötiger ${be} %).`;
+    else say = `<b>Knapp:</b> Die Trefferquote reicht gerade so – wenig Puffer für Fehler.`;
+    if (e.p_none >= .3) say += ` In ${r5(e.p_none)} % der Fälle kam keins von beiden.`;
+    const o = e.orig && e.orig.ev_r != null ? `<p class="rc-o">Zum Vergleich – ursprünglicher Plan vom ${dShort(e.orig.since)} (Einstieg ${money(e.orig.start, r)}, Stop ${money(e.orig.stop, r)}, −${num(e.orig.stop_pct * 100, 1)} %): historisch ${r5(e.orig.p_win)} % · nötig ${r5(e.orig.be)} % · EV <b class="ev ${evCls(e.orig.ev_r)}">${evTxt(e.orig.ev_r)}</b>${noisy(e.orig) ? ' · Stop lag im Rauschen' : ''}</p>` : '';
+    return `<div class="rc" title="${T}">
+      <div class="rc-h"><b>Realitäts-Check · Ziel vor Stop?</b><span class="ev ${evCls(e.ev_r)}">EV ${evTxt(e.ev_r)}</span></div>
+      <div class="rc-bar" aria-label="Ziel zuerst ${w} %, Stop zuerst ${l} %, keins ${n} %"><i class="w" style="width:${w}%"></i><i class="l" style="width:${l}%"></i><i class="n" style="width:${n}%"></i></div>
+      <div class="rc-k"><span><i class="w"></i>Ziel zuerst ${w} %</span><span><i class="l"></i>Stop zuerst ${l} %</span><span><i class="n"></i>keins ${n} %</span></div>
+      <p class="rc-m">historisch <b>${w} %</b> · nötig <b>${be} %</b> · EV <b class="ev ${evCls(e.ev_r)}">${evTxt(e.ev_r)}</b>${e.few ? ' · <span class="few">wenig Daten</span>' : ''}</p>
+      <p class="rc-s">${say}</p>${o}
+      ${e.below_stop ? '<p class="rc-o warn">⚠ Der Kurs liegt schon unter dem Stop – das Setup gilt nur noch für einen neuen Einstieg in der Zone.</p>' : ''}
+      <p class="rc-f">${T}: ab jeder ${L ? 'Woche' : 'Tageskerze'} der letzten ${L ? '5' : '3'} Jahre geprüft, ob innerhalb von ${hz} zuerst +${num(e.tgt_pct * 100, 1)} % oder −${num(e.stop_pct * 100, 1)} % kam (gerechnet ab ${e.start_kind === 'zone' ? 'Zonenmitte' : 'aktuellem Kurs'}, ${e.variant === 'trend' ? 'Trend herausgerechnet' : 'roh'}, inkl. −0,05 R Kosten; ${num(e.n_eff, 0)} unabhängige Fälle).</p>
+    </div>`;
+  }
+  /* Plan-Gedächtnis: wievielte Fassung, was wurde aus dem vorigen Plan? */
+  function planMem(r, lv) {
+    const rows = ((lv === 'lang' ? (TRACK && TRACK.lang) : TRACK) || {}).signals || [];
+    const mine = rows.filter((x) => x.ticker === r.ticker).sort((a, b) => a.issued_day < b.issued_day ? -1 : 1);
+    if (!mine.length) return '';
+    const cur = mine.filter((x) => !x.replaced).pop() || mine[mine.length - 1], prev = mine[mine.indexOf(cur) - 1];
+    const OUTX = {stop: 'ausgestoppt', ziel: 'Ziel erreicht', ersetzt: 'ersetzt (lief noch)', ersetzt_ohne_einstieg: 'ersetzt ohne Einstieg', abgelaufen: 'abgelaufen', laeuft: 'läuft', wartet: 'wartete', nicht_ausgeloest: 'nicht ausgelöst'};
+    let t = `${mine.length}. Fassung seit ${dShort(cur.issued_day)}`;
+    if (prev) t += ` · voriger Plan ${OUTX[prev.outcome] || prev.outcome || '—'}${prev.r != null && ['stop', 'ziel', 'ersetzt', 'abgelaufen'].includes(prev.outcome) ? ` (${evTxt(prev.r)})` : ''}`;
+    const lastStop = mine.slice(0, mine.indexOf(cur)).filter((x) => x.outcome === 'stop').pop();
+    if (lastStop && lastStop !== prev) t += ` · Plan vom ${dShort(lastStop.issued_day)} ausgestoppt (${evTxt(lastStop.r)})`;
+    if (lastStop && lastStop.stop > cur.stop) t += ` · Stop danach von ${num(lastStop.stop)} auf ${num(cur.stop)} gesenkt`;
+    const bad = !!lastStop;
+    return `<div class="pm${bad ? ' bad' : ''}" title="Aus dem Signal-Log (signals.json): jede geänderte Einschätzung ist eine neue Fassung">🗂 ${t}${bad && r.stop_reset_reason ? ` · Grund: ${esc(r.stop_reset_reason)}` : ''}</div>`;
+  }
   function ltHTML(r) {
     if (r.lt_target_low == null) return '';
     const p = r.price, v = LTV[r.lt_view] || ['Langfristig', 'var(--muted)'];
@@ -661,6 +709,7 @@
         <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b></div>
         <div><small>Analysten-Ziel (Schnitt)</small><b>${r.lt_consensus != null ? money(r.lt_consensus, r) : '—'}</b>${r.lt_analysts ? `<em>${r.lt_analysts} Analysten</em>` : ''}</div>
       </div>
+      ${planMem(r, 'lang')}${realityHTML(r, 'lang')}
       <p class="lt-t">${esc(r.lt_text || '')}</p>
       <p class="lt-c">Sicherheit der Einschätzung: <b>${esc(r.lt_conf || '—')}</b> · Grundlage: Wochenchart (5 Jahre). Die Absicherung liegt weiter weg als beim kurzen Trade – dafür kleinere Position.</p>
     </div>`;
@@ -772,6 +821,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
         <div><small>Kurzes Ziel (Swing)</small><b class="up">${num(r.target_low)}–${money(r.target_high, r)}</b></div>
         <div><small>Chance : Risiko</small><b style="color:${k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)'}">${k == null ? '—' : '1 : ' + num(k, 1)}</b></div>
       </div>
+      ${planMem(r, 'kurz')}${realityHTML(r, 'kurz')}
       <div class="when">${r.entry_eta_text && r.status !== 'zone' && r.status !== 'trend' ? `<span>${esc(r.entry_eta_text)}</span>` : ''}${r.horizon_text ? `<span>${esc(r.horizon_text)}</span>` : ''}${r.next_event ? `<span>${esc(r.next_event)}${r.next_event_date ? ' · ' + dShort(r.next_event_date) : ''}</span>` : ''}</div>
       <details class="more"><summary>Wellenanalyse</summary>
         <p><b>Hauptszenario</b>${esc(r.wave_primary)}</p><p><b>Alternative</b>${esc(r.wave_alt)}</p>
@@ -1002,13 +1052,24 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     const r2 = (x) => x == null ? '—' : num(x, 2) + ' R';
     const tile = (l, v, c, hint, sub) => `<div class="kpi"${hint ? ` title="${esc(hint)}"` : ''}><small>${l}</small><b class="${c || ''}">${v}</b>${sub ? `<em>${sub}</em>` : ''}</div>`;
     const nz = S.zone_won + S.zone_lost, few = nz < 20;
+    // 95-%-Wilson-Intervall: bei wenigen Fällen ist die echte Trefferquote sehr unsicher
+    const wil = (k, n) => { if (!n) return null; const z = 1.96, p = k / n, d = 1 + z * z / n, c = (p + z * z / (2 * n)) / d, h = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; };
+    const ciTxt = (ci) => ci ? `95-%-Bereich ${Math.round(ci[0] * 100)}–${Math.round(ci[1] * 100)} %${ci[1] - ci[0] > .4 ? ' · noch keine Aussage möglich' : ''}` : '';
+    const hitCI = wil(S.wins, S.wins + S.losses), zoneCI = wil(S.zone_won, nz);
+    // Basis-Erwartung: historische Häufigkeit „Ziel vor Stop“ der Setups (beim Signal gespeichert, sonst aktuelle Setups)
+    const lvK = LG ? 'lang' : 'kurz';
+    const cur = Object.values(EDGE).map((x) => x[lvK]).filter((e) => e && e.p_win != null);
+    const baseP = S.base_p_win != null ? S.base_p_win : cur.length ? cur.reduce((a, e) => a + e.p_win, 0) / cur.length : null;
+    const baseEV = S.base_ev_r != null ? S.base_ev_r : cur.length ? cur.reduce((a, e) => a + e.ev_r, 0) / cur.length : null;
+    const baseSrc = S.base_p_win != null ? `aus ${S.base_n} Signalen` : `Ø der ${cur.length} aktuellen Setups`;
+    const baseTxt = baseP == null ? '' : `Basis: Ziel vor Stop historisch ${Math.round(baseP * 100)} % · EV ${baseEV >= 0 ? '+' : '−'}${num(Math.abs(baseEV), 2)} R (${baseSrc})`;
     let h = sw + `<p class="sub">${LG ? 'Jede langfristige Einschätzung' : 'Jede Trade-Einschätzung'} wird seit dem ${dShort(T.since)}${T.since.slice(0, 4)} gespeichert und mit den echten ${LG ? 'Wochenkerzen' : 'Tageskerzen'} nachgespielt.
       ${LG ? 'Kaufzone = langfristige Zone bzw. Kurs bei der Einschätzung, Absicherung zählt nur per Wochenschluss.' : 'Einstieg, sobald der Kurs die Zone berührt.'} <b>R</b> = Gewinn oder Verlust in Vielfachen des Risikos (1 R = Abstand Einstieg bis Stop).</p>
       <div class="rulebox"><b>Wann zählt eine Zone als Treffer?</b> Nach dem Einstieg schließt der Kurs ${LG ? 'zwei Wochen' : 'zwei Tage'} in Folge über der Zone <i>und</i> steht mindestens 1 R im Plus – bevor der Stop fällt. Ab da kann der Stop auf den Einstiegskurs: Der Trade kann nicht mehr verlieren. Fällt vorher der Stop, war die Zone falsch. Ob das Ziel erreicht wird, steht zusätzlich darunter.</div>`;
     if (few) h += `<div class="warnbox">Noch wenig Daten: ${nz} entschiedene Zonen. Aussagekräftig wird es ab etwa 20–30 – bis dahin sind die Zahlen ein erster Eindruck.${LG ? ' Investments brauchen naturgemäß Monate.' : ''}</div>`;
     h += '<h2>Ergebnis</h2><div class="kpis-big">' +
-      tile('Zone hat funktioniert', pr(S.zone_rate), S.zone_rate == null ? '' : S.zone_rate >= .5 ? 'up' : 'down', 'Funktioniert ÷ (funktioniert + gebrochen)', `${S.zone_won} funktioniert · ${S.zone_lost} gebrochen · ${S.zone_open} offen`) +
-      tile('Ziel erreicht', pr(S.hit_rate), S.hit_rate == null ? '' : S.hit_rate >= .4 ? 'up' : 'down', 'Ziel erreicht ÷ (Ziel + Stop). Bei 1:2-Chance reichen schon gut 33 %.', `${S.wins} Ziele · ${S.losses} Stops`) +
+      tile('Zone hat funktioniert', pr(S.zone_rate), S.zone_rate == null ? '' : S.zone_rate >= .5 ? 'up' : 'down', 'Funktioniert ÷ (funktioniert + gebrochen). Der 95-%-Bereich zeigt, wo die echte Quote bei so wenigen Fällen plausibel liegt (Wilson-Intervall).', `${S.zone_won} funktioniert · ${S.zone_lost} gebrochen · ${S.zone_open} offen${zoneCI ? '<br>' + ciTxt(zoneCI) : ''}`) +
+      tile('Ziel erreicht', pr(S.hit_rate), S.hit_rate == null ? '' : S.hit_rate >= .4 ? 'up' : 'down', 'Ziel erreicht ÷ (Ziel + Stop). Bei 1:2-Chance reichen schon gut 33 %. Der 95-%-Bereich zeigt, wo die echte Quote bei so wenigen Fällen plausibel liegt (Wilson-Intervall).', `${S.wins} Ziele · ${S.losses} Stops${hitCI ? '<br>' + ciTxt(hitCI) : ''}${baseP != null ? '<br>Basis historisch ' + Math.round(baseP * 100) + ' %' : ''}`) +
       tile('Ø Ergebnis pro Trade', r2(S.avg_r), cls(S.avg_r), 'Erwartungswert: über 0 R verdient die Methode Geld') +
       tile('Summe', r2(S.sum_r), cls(S.sum_r), 'Alle abgeschlossenen Trades zusammen') +
       tile('Profit-Faktor', S.profit_factor == null ? '—' : num(S.profit_factor, 2), S.profit_factor == null ? '' : S.profit_factor >= 1.5 ? 'up' : S.profit_factor < 1 ? 'down' : '', 'Summe Gewinne ÷ Summe Verluste – über 1,5 ist gut') + '</div>';
@@ -1024,7 +1085,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       tile('Ø schlechtester Stand', r2(S.avg_mae_r), 'down', 'Wie weit lief der Trade im Schnitt maximal ins Minus (MAE)') +
       (LG ? '' : tile('Richtung nach 5 Tagen', pr(S.dir_hit_5d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_5d} Signale`) +
       tile('Richtung nach 20 Tagen', pr(S.dir_hit_20d), '', 'Bullisch → Kurs höher, bärisch → tiefer', `${S.dir_n_20d} Signale`)) +
-      tile('Hauptszenario bestätigt', pr(S.scenario_ok), '', 'Kurs schloss zuerst über der Bestätigungsmarke statt unter der Invalidierung', `${S.scenario_n} entschieden`) +
+      tile('Hauptszenario bestätigt', pr(S.scenario_ok), '', 'Kurs schloss zuerst über der Bestätigungsmarke statt unter der Invalidierung. Basis = wie oft der Kurs bei diesen Setups historisch zuerst das Ziel statt den Stop erreichte (Realitäts-Check) – schlägt die Analyse diese Basis, bringt sie echten Mehrwert.', `${S.scenario_n} entschieden${baseTxt ? '<br>' + baseTxt : ''}`) +
       tile('Ziel im Zeitfenster', pr(S.horizon_ok), '', 'Ziel innerhalb des geschätzten Zeitraums erreicht') +
       tile('Ø Tage bis Einstieg', S.avg_days_fill == null ? '—' : num(S.avg_days_fill, 1)) + tile('Ø Haltedauer (Tage)', S.avg_days_trade == null ? '—' : num(S.avg_days_trade, 1)) + '</div>';
     // Kurve
@@ -1073,6 +1134,12 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     if (r.alert === 'hoch') add('tech', -6, 'Dringende Meldung offen – Lage angespannt');
     const c = crv(r);
     if (c != null) add('tech', c >= 2 ? 12 : c < 1.5 ? -12 : 0, c >= 2 ? 'Chance:Risiko 1:' + num(c, 1) : c < 1.5 ? 'Chance:Risiko nur 1:' + num(c, 1) : '');
+    // Realitäts-Check: historischer Erwartungswert des Setups (Ziel vor Stop)
+    const E = edgeOf(r);
+    if (E && E.ev_r != null) {
+      add('tech', E.ev_r > .2 ? 10 : E.ev_r < 0 ? -12 : 0, E.ev_r > .2 ? 'Setup historisch tragfähig (EV ' + evTxt(E.ev_r) + ')' : E.ev_r < 0 ? 'Setup historisch im Minus (EV ' + evTxt(E.ev_r) + ')' : '');
+      if (noisy(E)) add('tech', -6, 'Stop liegt im Rauschen (kleiner als eine normale Schwankung)');
+    }
     // Fundament
     if (has(f.revenueGrowth)) add('fund', f.revenueGrowth > .15 ? 15 : f.revenueGrowth > .05 ? 5 : f.revenueGrowth < 0 ? -15 : 0, f.revenueGrowth > .15 ? 'Umsatz wächst stark (' + pc(f.revenueGrowth, 0) + ')' : f.revenueGrowth < 0 ? 'Umsatz schrumpft (' + pc(f.revenueGrowth, 0) + ')' : '');
     if (has(f.earningsGrowth)) add('fund', f.earningsGrowth > .15 ? 10 : f.earningsGrowth < 0 ? -10 : 0, f.earningsGrowth > .15 ? 'Gewinn wächst (' + pc(f.earningsGrowth, 0) + ')' : f.earningsGrowth < 0 ? 'Gewinn rückläufig (' + pc(f.earningsGrowth, 0) + ')' : '');
@@ -1276,7 +1343,8 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
       let prices = null; try { prices = await load('prices'); } catch (e) { /* ohne Kerzen weiter */ }
       PRICES = (prices && prices.stocks) || {};
       const opt = async (n) => { try { return await load(n); } catch (e) { return null; } };
-      const [market, kpis, track, fund, screen, watch] = await Promise.all(['market', 'kpis', 'track', 'fund', 'screen', 'watch'].map(opt));
+      const [market, kpis, track, fund, screen, watch, edge] = await Promise.all(['market', 'kpis', 'track', 'fund', 'screen', 'watch', 'edge'].map(opt));
+      EDGE = (edge && edge.stocks) || {};
       MARKET = market; KPIS = (kpis && kpis.stocks) || {}; TRACK = track; FUND = (fund && fund.stocks) || {}; SCREEN = screen;
       window.__events = events;
       stocks.forEach((r) => {

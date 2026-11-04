@@ -10,6 +10,9 @@
 4. „Zone hat funktioniert“ (wie bei Analysehäusern üblich, Hauptkennzahl): Nach dem Einstieg schließt der Kurs zweimal in Folge
    über der Zone UND steht mindestens 1 R über dem Einstieg, bevor der Stop fällt. Ab da kann der Stop auf Einstand – der Trade
    kann nicht mehr verlieren. Fällt vorher der Stop: „Zone gebrochen“. Das Ziel wird zusätzlich gemessen.
+5. Basis-Erwartung: Beim Ausgeben eines Signals wird die historische Häufigkeit „Ziel vor Stop“ aus data/edge.json
+   (scripts/edge.py) mitgespeichert (base_p_win, base_ev_r, base_be). So lässt sich später prüfen, ob die Analyse die
+   historische Basis schlägt (echte Trefferquote vs. Ø base_p_win).
 Aufruf: python scripts/track.py            (normal, in GitHub Actions nach dem Kursabruf)
         python scripts/track.py --seed     (einmalig: Signale aus der Git-Historie von data/stocks.json nachtragen)"""
 import json, sys, os, subprocess, datetime, statistics
@@ -68,7 +71,7 @@ def lang_view(r):
             "horizon_weeks_low": None, "horizon_weeks_high": None, "horizon_end": None}
 
 
-def add_signals(signals, stocks, lv="kurz"):
+def add_signals(signals, stocks, lv="kurz", edge=None):
     latest = {}
     for s in signals:
         if not s.get("replaced") and s.get("lv", "kurz") == lv:
@@ -102,6 +105,9 @@ def add_signals(signals, stocks, lv="kurz"):
                "trigger": num(r.get("trigger")), "invalidation": num(r.get("invalidation")),
                "horizon_weeks_low": num(r.get("horizon_weeks_low")), "horizon_weeks_high": num(r.get("horizon_weeks_high")),
                "horizon_end": r.get("horizon_end"), "replaced": None, **cur}
+        e = ((edge or {}).get(t) or {}).get(lv) or {}
+        if e.get("p_win") is not None:
+            sig.update({"base_p_win": e["p_win"], "base_ev_r": e.get("ev_r"), "base_be": e.get("be"), "base_n_eff": e.get("n_eff")})
         signals.append(sig)
         latest[t] = sig
         added += 1
@@ -126,7 +132,7 @@ def evaluate(s, ohlc):
     p0 = s["issued_price"]
     out = {k: s.get(k) for k in ("id", "lv", "ticker", "name", "group", "sector", "currency", "issued_day", "issued_price", "status", "bias",
                                  "entry_type", "entry_low", "entry_high", "stop", "target_low", "target_high", "trigger", "invalidation",
-                                 "horizon_weeks_low", "horizon_weeks_high", "replaced")}
+                                 "horizon_weeks_low", "horizon_weeks_high", "replaced", "base_p_win", "base_ev_r", "base_be")}
     mid = (lo + hi) / 2
     out["crv_plan"] = round((tgt - mid) / (mid - stop), 2) if tgt is not None and mid > stop else None
     end = s.get("replaced") or None
@@ -246,8 +252,23 @@ def stats(rows):
         "dir_hit_20d": round(sum(ok(r, "ret_20d") for r in dirs) / len(dirs), 3) if dirs else None, "dir_n_20d": len(dirs),
         "dir_hit_5d": round(sum(ok(r, "ret_5d") for r in dirs5) / len(dirs5), 3) if dirs5 else None, "dir_n_5d": len(dirs5),
         "scenario_ok": round(sum(r["scenario"] == "bestaetigt" for r in sc) / len(sc), 3) if sc else None, "scenario_n": len(sc),
+        "base_p_win": mean([r["base_p_win"] for r in rows if r.get("base_p_win") is not None]),
+        "base_ev_r": mean([r["base_ev_r"] for r in rows if r.get("base_ev_r") is not None]),
+        "base_n": sum(r.get("base_p_win") is not None for r in rows),
+        "hit_ci": wilson(len(wins), len(wins) + len(losses)), "zone_ci": wilson(zw, zw + zl),
         "zone_respected": round(sum((r.get("mae_r") or 0) > -0.5 for r in filled) / len(filled), 3) if filled else None,
     }
+
+
+def wilson(k, n, z=1.96):
+    """95-%-Wilson-Intervall für eine Trefferquote k/n (bei kleinem n viel ehrlicher als k/n allein)."""
+    if not n:
+        return None
+    p = k / n
+    d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d
+    h = z * ((p * (1 - p) / n + z * z / (4 * n * n)) ** 0.5) / d
+    return [round(max(0.0, c - h), 3), round(min(1.0, c + h), 3)]
 
 
 def crv_bucket(x):
@@ -267,7 +288,8 @@ def main():
             except Exception as e:  # noqa
                 print("übersprungen", h[:7], e)
     stocks = load("data/stocks.json", [])
-    added = add_signals(signals, stocks) + add_signals(signals, stocks, "lang")
+    edge = load("data/edge.json", {}).get("stocks", {})
+    added = add_signals(signals, stocks, edge=edge) + add_signals(signals, stocks, "lang", edge=edge)
     prices = load("data/prices.json", {}).get("stocks", {})
     weekly = load("data/weekly.json", {}).get("stocks", {})
     def live_weekly(t):  # letzte Wochenkerze mit dem aktuellen Kurs ergänzen

@@ -1,6 +1,7 @@
 """Lange Kursreihen je Wert (Yahoo Finance, Ersatz Stooq), einmal pro Tag:
 - data/weekly.json: Wochenkerzen der letzten 5 Jahre (Chart „Monate/Jahre“)
-- data/daily.json:  Tageskerzen des letzten Jahres (Chart „Wochen/Monate“)"""
+- data/daily.json:  Tageskerzen des letzten Jahres (Chart „Wochen/Monate“)
+- data/daily3y.json: Tageskerzen der letzten 3 Jahre (nur für den Realitäts-Check, scripts/edge.py)"""
 import json, os, time, datetime, csv, io, urllib.request
 
 src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "fetch_prices.py"), encoding="utf-8").read()
@@ -18,7 +19,11 @@ try:
     oldd = json.load(open("data/daily.json"))
 except Exception:  # noqa
     oldd = {}
-if all(o.get("date") == TODAY and set(TICKERS) <= set(o.get("stocks", {})) for o in (old, oldd)):
+try:
+    old3 = json.load(open("data/daily3y.json"))
+except Exception:  # noqa
+    old3 = {}
+if all(o.get("date") == TODAY and set(TICKERS) <= set(o.get("stocks", {})) for o in (old, oldd, old3)):
     print("Wochenkerzen von heute schon da"); raise SystemExit(0)
 
 def get(url):
@@ -61,3 +66,5 @@ if not (old.get("date") == TODAY and set(TICKERS) <= set(old.get("stocks", {})))
     build(lambda s: yahoo(s), lambda s: stooq(s), old, "data/weekly.json", "Wochenkerzen")
 if not (oldd.get("date") == TODAY and set(TICKERS) <= set(oldd.get("stocks", {}))):
     build(lambda s: yahoo(s, "1y", "1d"), lambda s: stooq(s, "d", 255), oldd, "data/daily.json", "Tageskerzen")
+if not (old3.get("date") == TODAY and set(TICKERS) <= set(old3.get("stocks", {}))):
+    build(lambda s: yahoo(s, "3y", "1d"), lambda s: stooq(s, "d", 760), old3, "data/daily3y.json", "Tageskerzen (3 Jahre)")

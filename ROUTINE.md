@@ -142,6 +142,7 @@ entry_eta_text.
   heutigen Datum aufrufen und das Ergebnis (horizon_text, horizon_end, horizon_weeks_low/high, entry_eta_text) in die Zeile
   übernehmen. Wenn die Wellenstruktur klar etwas anderes nahelegt (z. B. Zahlen-Termin, sehr langsame Welle), darf horizon_text
   angepasst werden – dann im Hauptszenario kurz begründen.
+- **stop_reset_reason** (nur nach einem Stop-Bruch mit gesenktem Stop oder geändertem Ziel): ein Satz Begründung, siehe Realitäts-Check.
 - **pros / cons / risk** (optional, Abendanalyse): je bis zu 3 kurze Punkte „spricht dafür“ / „spricht dagegen“ und ein Satz „größtes Risiko“.
   Ohne diese Felder erzeugt die Website sie automatisch aus Kennzahlen. Ehrlich und konkret, keine Werbesprache.
 - tv_symbol (TradingView, z. B. „NASDAQ:AMD“, „XETR:SAP“) beibehalten; für neue Werte ergänzen.
@@ -168,8 +169,21 @@ Hauptkennzahl `zone_rate` = „Zone hat funktioniert“: nach dem Einstieg zwei 
 Zone und mindestens 1 R im Plus, bevor der Stop fällt. In der Freitags-Abendanalyse kurz in der Zusammenfassung nennen, wenn sich
 Muster zeigen (z. B. Zonen einer Phase brechen gehäuft) – daraus lernen, Zonen aber nicht rückwirkend ändern.
 
-Prüfskript vor dem Schreiben: keine NaN, entry_low ≤ entry_high, target_low ≤ target_high, stop < entry_low, status passt zum Kurs,
-jeder Kurs = prices.json-Kurs.
+**Prüfskript vor dem Schreiben:** `python3 scripts/check.py <pfad/stocks.json>`. FEHLER (keine NaN, entry_low ≤ entry_high,
+target_low ≤ target_high, stop < entry_low, jeder Kurs = prices.json-Kurs) beheben. HINWEISE (status passt nicht zum Kurs, Kurs schon
+unter dem Stop, CRV unter 1:2, Realitäts-Check EV < 0, Stop im Rauschen, Stop nach Bruch gesenkt ohne stop_reset_reason) in der
+Abendanalyse begründen oder anpassen.
+
+**Realitäts-Check „Ziel vor Stop?“ (data/edge.json, schreibt die Action mit scripts/edge.py):** je Aktie und Ebene, wie oft der Kurs
+historisch ab jeder Kerze zuerst +Ziel-% statt −Stop-% erreicht hat (kurz: 3 Jahre Tageskerzen, Horizont horizon_weeks_high; lang:
+5 Jahre Wochenkerzen bis lt_until), Erwartungswert ev_r in R (inkl. −0,05 R Kosten, vorsichtigere Variante aus roh/trendbereinigt),
+nötige Trefferquote be = 1/(1+CRV), stop_atr = Stop-Abstand / typische Schwankung. Regeln für die Abendanalyse:
+- **Setups mit ev_r < 0 oder stop_atr < 1 begründen oder anpassen** (z. B. Stop hinter ein echtes Tief statt ins Tagesrauschen,
+  näheres Ziel, oder bewusst „nur kleine Position“ mit Grund in plan/risk). Die Begründung gehört in die Zusammenfassung.
+- **Wer Stop oder Ziel nach einem Bruch ändert, füllt `stop_reset_reason`** (ein Satz, warum der neue Stop sinnvoll ist und nicht nur
+  der Verlust verschoben wird). Die Website zeigt dazu das Plan-Gedächtnis („N. Fassung seit … · voriger Plan ausgestoppt“) und den
+  EV des ursprünglichen Plans zum Vergleich.
+- Die Werte sind historische Häufigkeiten, keine Vorhersage. Bei few = true (n_eff < 20) nur als grobe Orientierung nutzen.
 
 ## Ablauf Abendanalyse (~22:30)
 
