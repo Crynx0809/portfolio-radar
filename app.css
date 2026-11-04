@@ -603,3 +603,4 @@ details.lgd summary::before { content: "ⓘ  "; }
   body.pick .st th { padding: 10px; }
 }
 .tk { white-space: nowrap; }
+@media (min-width: 1180px) { .st th { background: rgb(38,30,25); } }
