@@ -1,6 +1,6 @@
 """Lange Kursreihen je Wert (Yahoo Finance, Ersatz Stooq), einmal pro Tag:
 - data/weekly.json: Wochenkerzen der letzten 5 Jahre (Chart „Monate/Jahre“)
-- data/daily.json:  Tageskerzen der letzten 2 Jahre (Chart „Wochen/Monate“)"""
+- data/daily.json:  Tageskerzen des letzten Jahres (Chart „Wochen/Monate“)"""
 import json, os, time, datetime, csv, io, urllib.request
 
 src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "fetch_prices.py"), encoding="utf-8").read()
@@ -60,4 +60,4 @@ def build(fn_y, fn_s, prev, path, label):
 if not (old.get("date") == TODAY and set(TICKERS) <= set(old.get("stocks", {}))):
     build(lambda s: yahoo(s), lambda s: stooq(s), old, "data/weekly.json", "Wochenkerzen")
 if not (oldd.get("date") == TODAY and set(TICKERS) <= set(oldd.get("stocks", {}))):
-    build(lambda s: yahoo(s, "2y", "1d"), lambda s: stooq(s, "d", 505), oldd, "data/daily.json", "Tageskerzen")
+    build(lambda s: yahoo(s, "1y", "1d"), lambda s: stooq(s, "d", 255), oldd, "data/daily.json", "Tageskerzen")

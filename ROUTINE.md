@@ -2,7 +2,8 @@
 
 Gilt für die geplanten Claude-Läufe „Abendanalyse“ (~22:30), „News-Check 14:15“ und „News-Check 17:45“.
 Alle Texte für Lenn auf Deutsch, klar und konkret. Lenn lernt Trading; seine Regel: Chance:Risiko mindestens 1:2.
-Analyse-Horizont: einige Wochen bis max. 6 Monate, Grundlage Tageskerzen.
+Zwei Ebenen: **kurz** = Wochen bis Monate (Tageskerzen, data/daily.json + prices.json) und **lang** = Monate bis Jahre
+(Wochenkerzen, data/weekly.json). Es gibt keine feste Laufzeit (früher „18 Monate“): Wie lange ein Ziel braucht, ergibt sich aus der Länge der bisherigen Wellen.
 
 ## Ziele
 
@@ -71,18 +72,47 @@ Die Läufe lesen watch.json zu Beginn: Für jedes Ereignis seit dem letzten Upda
 Zählung prüfen, action/if_* und Meldung in alerts.json anpassen) und in der Zusammenfassung erwähnen. watch.json, watch.py und
 den Workflow nicht ändern. Wächter-Issues nicht als Aktien-Wünsche behandeln (Titel beginnt mit „⚠️ Wächter:“).
 
-## Großes Ziel (18 Monate) – Felder lt_*
+## Großes Ziel (lange Ebene) – Felder lt_*
 
 Neben dem kurzen Swing-Ziel hat jede Aktie ein übergeordnetes Ziel aus dem **Wochenchart** (data/weekly.json, 5 Jahre Wochenkerzen,
 täglich von der Action aktualisiert): `lt_view` („bullisch“|„neutral“|„spekulativ“|„bärisch“), `lt_conf` („hoch“|„mittel“|„niedrig“),
 `lt_target_low`, `lt_target_high`, `lt_stop` (langfristige Absicherung = großes Wochentief bzw. Invalidierung der großen Welle),
-`lt_until` (heute + 18 Monate, z. B. „Mai 2028“), `lt_text` (1–2 Sätze: große Welle mit echten Wendepunkten/Daten, warum dieses Ziel),
+`lt_text` (1–2 Sätze: große Welle mit echten Wendepunkten/Daten, warum dieses Ziel),
 `lt_consensus` und `lt_analysts` (aus data/fund.json: targetMeanPrice, numberOfAnalystOpinions).
+`lt_until`: nur noch fürs Claude-Dashboard – grobe Angabe, wann das große Ziel erreicht sein dürfte (z. B. „Aug. 2028“), geschätzt aus der
+Dauer vergleichbarer früherer großer Wellen, nicht pauschal „+18 Monate“. Die Website berechnet den Zeitpunkt selbst aus ew.lang.
 - Ermittlung: große Welle höheren Grades (Impuls/Korrektur im Wochenchart), Fibonacci-Retracements/-Extensions; `scripts/longterm.py`
   liefert einen groben Vorschlag, der immer geprüft wird. Bedingung: lt_stop < Kurs < lt_target_low ≤ lt_target_high.
-- **Stabil halten:** nur in der Abendanalyse am Freitag überprüfen (dann lt_until auf heute + 18 Monate setzen), oder sofort, wenn der
-  Wochen-Schlusskurs unter lt_stop fällt bzw. lt_target_low erreicht ist (dann begründet neu festlegen und in der Zusammenfassung nennen).
+- **Stabil halten:** nur in der Abendanalyse am Freitag überprüfen, oder sofort, wenn der Wochen-Schlusskurs unter lt_stop fällt bzw.
+  lt_target_low erreicht ist (dann begründet neu festlegen und in der Zusammenfassung nennen).
 - Neue Werte bekommen die lt-Felder gleich bei der Aufnahme.
+
+## Wellen-Charts (Feld ew) – zwei Ebenen
+
+Die Website zeichnet je Aktie zwei Charts: kurz (Wochen/Monate, Tageskerzen) und lang (Monate/Jahre, Wochenkerzen) mit
+Wellenzählung in Graden, Zukunftspfad (grün aufwärts, rot abwärts), gepunkteter Alternative mit Wahrscheinlichkeit, Zielkasten mit
+Fibonacci-Stufen, zwei Marken-Linien (grün Bestätigung oben, rot Stop/Absicherung unten) und Quartalszahlen-Markern.
+
+```
+ew: {
+  lang: { count: [{d,p,l}], path: [{p,l}, …], alt: {path: [{p,l}], label, prob}, up, down, prob, fib: {levels: [[0.618, 180.6]]} },
+  kurz: { … gleiche Felder … }
+}
+```
+- **Wellengrad in der Schreibweise:** `[3]` groß (Primär), `(3)` mittel, `3` bzw. `iii` klein. lang meist [ ] und ( ), kurz ( ) und klein.
+- `count`: Wendepunkte der Hauptzählung (d = Datum der Wochen- bzw. Tageskerze, p = Hoch/Tief). Die Website rückt den Punkt
+  auf das echte Hoch/Tief in der Nähe. Wendepunkte mit Datum: `python3 scripts/ew_pivots.py AMD SAP …`.
+- `path`: die erwarteten nächsten Wendepunkte, z. B. `[{p:425,l:"(4)"},{p:720,l:"(5)"}]`. **Ohne d** – die Website schätzt das Datum
+  aus Dauer und Größe der bisherigen Wellen gleicher Richtung. d nur setzen, wenn ein Termin die Zeit klar bestimmt.
+  Letzter Punkt = Mitte der Zielzone (lt_target_* bzw. target_*). Bei Bedarf Zwischenpunkte (z. B. erst Rücksetzer in die Zone).
+- `alt`: Alternativszenario (`label` kurz, z. B. „alt. (4) tiefer“, `prob` in %; Hauptszenario = 100 − prob). Fehlt path, zielt es
+  auf invalidation bzw. stop. `alt: null` blendet die Alternative aus.
+- `up`/`down`: Marken-Linien; Standard kurz = trigger / stop, lang = letztes großes Hoch über dem Kurs / lt_stop.
+- `fib.levels` optional; sonst berechnet die Website die Fibonacci-Stufen im Zielbereich aus den letzten Wellen.
+- Fehlt `ew.kurz.count`, nutzt die Website `waves`; fehlt `ew.lang.count`, zeigt sie automatische Wendepunkte. Pflege: in der
+  Abendanalyse für ~10 Werte pro Abend `ew.lang` ergänzen (Depot ist erledigt, dann Watchlist), bestehende Zählungen und
+  Wahrscheinlichkeiten nur ändern, wenn der Kurs sie widerlegt bzw. bestätigt (dann im Hauptszenario sagen). Wahrscheinlichkeiten
+  ehrlich: selten über 70 %.
 
 ## Felder je Aktie (stocks.json)
 
@@ -113,8 +143,8 @@ entry_eta_text.
 
 - **waves** (für das Chart-Bild der Website, bei jeder Abendanalyse pflegen): Liste der Elliott-Wendepunkte der Hauptzählung,
   `[{d:"2026-10-06", p:658.5, l:"3"}, …]` – d = Datum einer Kerze aus ohlc, p = Hoch/Tief dieser Kerze, l = Wellen-Label
-  („1“…„5“, „A“, „B“, „C“, „W“, „X“, „Y“). 3–7 Punkte in den letzten ~95 Kerzen. **Pflicht für jede Aktie** – der Chart zeigt die Zählung
-  als nummerierte Kreise und leitet daraus die nächste Welle am Ziel ab (letzter Punkt = zuletzt abgeschlossene Welle, Datum muss eine Kerze in
+  („1“…„5“, „A“, „B“, „C“, „W“, „X“, „Y“). 3–7 Punkte in den letzten ~200 Tageskerzen (ganz neu: Labels mit Grad, z. B. „(4)“, siehe ew). **Pflicht für jede Aktie** – der Chart zeigt die Zählung
+  als Wellen-Labels und leitet daraus die nächste Welle am Ziel ab (letzter Punkt = zuletzt abgeschlossene Welle, Datum muss eine Kerze in
   prices.json sein). Fehlt waves bei einem Wert, in der nächsten Abendanalyse ergänzen (höchstens ~15 pro Abend, Depotwerte zuerst).
 
 Sonstige Dateien: news.json `[{id,date,ticker,impact,direction,headline,summary,url}]` (letzte ~10 Tage, max. ~30, eigene Worte).

@@ -26,7 +26,7 @@
   const load = async (n) => { const r = await fetch('data/' + n + '.json?v=' + Date.now()); if (!r.ok) throw new Error(n); return r.json(); };
 
   let HOR = (() => { try { return localStorage.getItem('radar-hor') || 'kurz'; } catch (e) { return 'kurz'; } })();
-  let WEEKLY = null;
+  let WEEKLY = null, DAILY = null;
   let STOCKS = [], PRICES = {}, group = 'Portfolio', SEARCH = '', KPIS = {}, MARKET = null, TRACK = null, FUND = {}, SCREEN = null;
   const REPO = 'Crynx0809/portfolio-radar';
 
@@ -56,15 +56,15 @@
   }));
 
   const HORTXT = {
-    kurz: 'Kurzfristig = Trade über einige Wochen: Einstiegszone, enger Stop, nächstes Ziel aus dem Tageschart.',
-    lang: 'Langfristig = Investment bis ca. 18 Monate: großes Ziel und weite Absicherung aus dem Wochenchart (5 Jahre).'};
+    kurz: 'Kurzfristig = Trade über Wochen bis Monate: Einstiegszone, enger Stop, nächstes Ziel aus dem Tageschart.',
+    lang: 'Langfristig = Investment über Monate bis Jahre: große Wellen im Wochenchart (5 Jahre). Wie lange es dauert, ergibt sich aus der Länge der bisherigen Wellen.'};
   function setHor(h, keepScroll) {
     HOR = h; try { localStorage.setItem('radar-hor', h); } catch (e) { /* ok */ }
     document.body.dataset.hor = h;
     document.querySelectorAll('.hor button, .hz-sw button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === h)));
     $('#horNote').textContent = HORTXT[h];
     const go = () => { renderList(); if (SEL && isDesk()) openSheet(SEL); else if (SEL && !$('#sheet').hidden) refreshSheet(); };
-    if (h === 'lang' && !WEEKLY) load('weekly').then((w) => { WEEKLY = (w && w.stocks) || {}; go(); }).catch(() => { WEEKLY = {}; go(); }); else go();
+    ensure(h).then(go);
   }
   document.querySelectorAll('.hor button').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
 
@@ -131,7 +131,7 @@
         <div><div class="p" data-v="${r.price}" data-cur="${cur(r)}">${money(r.price, r)}</div>
           <div class="c ${chg == null ? '' : chg >= 0 ? 'up' : 'down'}">${chg == null ? '' : pct(chg)}</div></div>
         ${HOR === 'lang' && r.lt_target_low != null ? `<div class="meta"><span class="pill" style="--sc:${(LTV[r.lt_view] || [, 'var(--muted)'])[1]}">${(LTV[r.lt_view] || ['—'])[0]}</span>
-          <span class="zone"><em>Ziel ${esc(r.lt_until || '')}</em> ${num(r.lt_target_low)}–${money(r.lt_target_high, r)} · <b class="up">${pct(r.lt_target_low / r.price - 1)}</b></span></div>
+          <span class="zone"><em>Ziel ~${esc(ltUntil(r))}</em> ${num(r.lt_target_low)}–${money(r.lt_target_high, r)} · <b class="up">${pct(r.lt_target_low / r.price - 1)}</b></span></div>
         ${ltBar(r)}` : `<div class="meta"><span class="pill" style="--sc:${s.c}">${s.l}</span>
           <span class="zone"><em>Zone</em> ${num(r.entry_low)}–${money(r.entry_high, r)}</span></div>
         ${rowBar(r)}`}</li>`;
@@ -153,9 +153,9 @@
   }
 
   /* ---------- Elliott-Chart ---------- */
-  function zigzag(c) {
+  function zigzag(c, mult) {
     const ranges = c.map((k) => (k[2] - k[3]) / k[4]).sort((a, b) => a - b);
-    const th = Math.max(0.05, 2.8 * (ranges[Math.floor(ranges.length / 2)] || 0.02));
+    const th = Math.max(mult ? 0.15 : 0.05, (mult || 2.8) * (ranges[Math.floor(ranges.length / 2)] || 0.02));
     const piv = []; let dir = 0, hi = 0, lo = 0;
     for (let i = 1; i < c.length; i++) {
       if (dir >= 0 && c[i][2] > c[hi][2]) hi = i;
@@ -168,119 +168,255 @@
     }
     return piv.slice(-7);
   }
-  function chart(r) {
-    const q = PRICES[r.ticker];
-    if (!q || !q.ohlc || q.ohlc.length < 10) return '<p class="empty">Keine Kursdaten.</p>';
-    const c = q.ohlc.slice(-95).filter((k) => k.every((v) => v != null));
-    const n = c.length, last = {i: n - 1, p: c[n - 1][4]};
-    // Zukunft: Zeitachse aus dem erwarteten Zeitraum (Handelstage)
-    const hwHi = Math.max(3, Math.min(14, r.horizon_weeks_high || 6)), hwLo = Math.max(1, Math.min(hwHi - 1, r.horizon_weeks_low || Math.round(hwHi / 2)));
-    const fut = Math.max(Math.round(n * .5), Math.min(Math.round(n * .85), hwHi * 5 + 6));
-    const W = 380, H = 300, PL = 4, PR = 56, PT = 16, PB = 22;
-    const cw = (W - PL - PR) / (n + fut);
-    const x = (i) => PL + i * cw + cw / 2;
-    const mid = (r.entry_low + r.entry_high) / 2, tmid = (r.target_low + r.target_high) / 2;
-    const needEntry = r.entry_type !== 'Ausbruch' && r.price > r.entry_high && ['annaeherung', 'boden', 'meiden'].includes(r.status);
-    const altEnd = r.invalidation != null && r.invalidation < r.stop ? r.invalidation : r.stop - (Math.abs(mid - r.stop) || r.price * .05);
-    const levels = [r.entry_low, r.entry_high, r.stop, r.target_low, r.target_high, altEnd].filter((v) => v != null && !isNaN(v));
-    let lo = Math.min(...c.map((k) => k[3]), ...levels), hi = Math.max(...c.map((k) => k[2]), ...levels);
-    const pad = (hi - lo) * .07; lo -= pad; hi += pad;
-    const y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
-    const fmt = (v) => num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2);
-    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew" font-family="Inter, system-ui, sans-serif">
-      <defs><marker id="ahG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2fd08a"/></marker>
-      <marker id="ahR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8a95"/></marker></defs>`;
-    // Raster
-    const step = (hi - lo) / 5;
-    for (let g = 1; g < 5; g++) s += `<line x1="${PL}" x2="${W - PR}" y1="${y(lo + g * step)}" y2="${y(lo + g * step)}" stroke="#ffffff" stroke-opacity=".045"/>`;
-    // Zukunftsbereich
-    const x0 = x(n - 1) + cw / 2;
-    s += `<rect x="${x0}" y="${PT - 6}" width="${W - PR - x0}" height="${H - PT - PB + 6}" fill="#22d3a6" opacity=".035"/>`;
-    s += `<line x1="${x0}" x2="${x0}" y1="${PT - 6}" y2="${H - PB}" stroke="#ffffff" stroke-opacity=".12" stroke-dasharray="2 3"/>`;
-    // Kerzen (gedämpft, damit die Zählung im Vordergrund steht)
-    s += '<g class="cdl">' + c.map((k, i) => {
-      const up = k[4] >= k[1], col = up ? '#2fd08a' : '#ff5d6c', yo = y(k[1]), yc = y(k[4]);
-      return `<line x1="${x(i)}" x2="${x(i)}" y1="${y(k[2])}" y2="${y(k[3])}" stroke="${col}" stroke-width=".7" opacity=".35"/>` +
-        `<rect x="${x(i) - Math.max(.5, cw * .3)}" width="${Math.max(1, cw * .6)}" y="${Math.min(yo, yc)}" height="${Math.max(.7, Math.abs(yo - yc))}" fill="${col}" opacity=".45"/>`;
-    }).join('') + '</g>';
-    // Stop / Invalidierung
-    s += `<line x1="${PL}" x2="${W - PR}" y1="${y(r.stop)}" y2="${y(r.stop)}" stroke="#ff5d6c" stroke-width="1.1" stroke-dasharray="5 4" opacity=".9"/>`;
-    s += `<text x="${PL + 3}" y="${y(r.stop) - 4}" font-size="9" fill="#ff8a95" font-weight="700" class="halo">Stop ${fmt(r.stop)}</text>`;
-    // Zeitfenster der Kästen
-    const fx = (d) => x(n - 1) + d * cw;
-    const eA = 2, eB = needEntry ? Math.max(12, Math.round(fut * .32)) : 0;
-    const tA = Math.max(eB + 4, Math.min(hwLo * 5, fut - 14)), tB = Math.min(fut - 2, Math.max(tA + 10, hwHi * 5));
-    const box = (a, b, v1, v2, col, label) => {
-      const yy = y(Math.max(v1, v2)), hh = Math.max(6, Math.abs(y(v1) - y(v2)));
-      return `<rect x="${fx(a)}" y="${yy}" width="${fx(b) - fx(a)}" height="${hh}" rx="4" fill="${col}" fill-opacity=".16" stroke="${col}" stroke-opacity=".75" stroke-width="1"/>` +
-        `<text x="${fx(a) + 5}" y="${hh >= 22 ? yy + 11 : yy + hh + 10}" font-size="8.5" font-weight="700" fill="${col}" class="halo">${label}</text>`;
+  /* ---------- Elliott-Chart (zwei Ebenen: kurz = Wochen/Monate, lang = Monate/Jahre) ---------- */
+  const MN = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+  const MNL = ['Jan.', 'Feb.', 'März', 'Apr.', 'Mai', 'Juni', 'Juli', 'Aug.', 'Sept.', 'Okt.', 'Nov.', 'Dez.'];
+  const NEXT = {'1': '2', '2': '3', '3': '4', '4': '5', '5': 'A', 'A': 'B', 'B': 'C', 'C': '1', 'W': 'X', 'X': 'Y', 'Y': 'Z', 'Z': '1', 'Start': '1',
+    'i': 'ii', 'ii': 'iii', 'iii': 'iv', 'iv': 'v', 'v': 'a', 'a': 'b', 'b': 'c', 'c': 'i', 'w': 'x', 'x': 'y', 'y': 'z'};
+  // Wellengrad aus der Schreibweise: [3] = groß, (3) = mittel, 3 / iii = klein
+  const deg = (l) => /^\[.*\]$/.test(l) ? 2 : /^\(.*\)$/.test(l) ? 1 : 0;
+  const DEGC = ['#4fd8c4', '#5aa7ff', '#c08bff'];
+  const core = (l) => String(l).replace(/^alt\.?\s*/i, '').replace(/[[\]()]/g, '');
+  const wrap = (l, d) => d === 2 ? '[' + l + ']' : d === 1 ? '(' + l + ')' : l;
+  const ddays = (a, b) => (new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 864e5;
+  const addDays = (s, n) => { const d = new Date(s + 'T12:00:00'); d.setDate(d.getDate() + Math.round(n)); return d.toISOString().slice(0, 10); };
+  const monthTxt = (s) => { const d = new Date(s + 'T12:00:00'); return MNL[d.getMonth()] + ' ' + d.getFullYear(); };
+  const roughTxt = (s) => { const d = new Date(s + 'T12:00:00'), t = d.getDate(); return (t <= 10 ? 'Anfang ' : t <= 20 ? 'Mitte ' : 'Ende ') + MNL[d.getMonth()] + (d.getFullYear() !== new Date().getFullYear() ? ' ' + d.getFullYear() : ''); };
+
+  function series(r, L) {
+    const q = PRICES[r.ticker] || {}, live = (q.ohlc || []).filter((k) => k.every((v) => v != null));
+    let c;
+    if (L) {
+      c = ((WEEKLY && WEEKLY[r.ticker]) || []).filter((k) => k.every((v) => v != null)).map((k) => k.slice());
+      if (c.length && live.length) { const z = live[live.length - 1], w = c[c.length - 1]; w[4] = z[4]; w[2] = Math.max(w[2], z[4]); w[3] = Math.min(w[3], z[4]); }
+    } else {
+      const d = ((DAILY && DAILY[r.ticker]) || []).filter((k) => k.every((v) => v != null));
+      const f = live.length ? live[0][0] : '9999';
+      c = d.filter((k) => k[0] < f).concat(live).slice(-200);
+    }
+    return c.length >= 20 ? c : null;
+  }
+  const near = (c, d) => { // Index der Kerze am oder vor dem Datum
+    let lo = 0, hi = c.length - 1; if (d <= c[0][0]) return 0; if (d >= c[hi][0]) return hi;
+    while (hi - lo > 1) { const m = (lo + hi) >> 1; if (c[m][0] <= d) lo = m; else hi = m; } return lo;
+  };
+
+  // Plan einer Ebene: Zählung, Zukunftspfad mit Daten aus den Wellenlängen, Alternative, Marken
+  function ewPlan(r, lv) {
+    const L = lv === 'lang', e = (r.ew && r.ew[lv]) || {}, c = series(r, L);
+    if (!c) return null;
+    const n = c.length, now = c[n - 1][0], p0 = c[n - 1][4], bar = L ? 7 : 7 / 5; // Kalendertage je Kerze
+    const tgt = L ? [r.lt_target_low, r.lt_target_high] : [r.target_low, r.target_high];
+    if (tgt[0] == null) return null;
+    const stop = L ? r.lt_stop : r.stop;
+    let up = e.up !== undefined ? e.up : L ? null : r.trigger;
+    const down = e.down !== undefined ? e.down : stop;
+    // Zählung
+    let cnt = e.count || (!L && Array.isArray(r.waves) && r.waves.length ? r.waves : null), auto = !cnt;
+    const snap = (w) => { const i0 = near(c, w.d), k = L ? 3 : 2; let bi = i0, bd = Infinity;
+      for (let i = Math.max(0, i0 - k); i <= Math.min(n - 1, i0 + k); i++) { const dd = Math.min(Math.abs(c[i][2] - w.p), Math.abs(c[i][3] - w.p)); if (dd < bd) { bd = dd; bi = i; } }
+      return bi; };
+    let piv = cnt ? cnt.map((w) => { const i = snap(w); return {i, d: c[i][0], p: w.p, l: String(w.l)}; }).filter((p) => p.d > c[0][0] || p.i > 0)
+      : ((z) => (L && z.length < 4 ? zigzag(c, 3) : z))(zigzag(c, L ? 5 : 0)).map((p) => ({i: p.i, d: c[p.i][0], p: p.p, l: null}));
+    // Wellenlängen: Dauer (Tage) und Größe (%) der bisherigen Wellen je Richtung
+    const legs = [];
+    for (let j = 1; j < piv.length; j++) legs.push({up: piv[j].p > piv[j - 1].p, t: ddays(piv[j - 1].d, piv[j].d), m: Math.abs(Math.log(piv[j].p / piv[j - 1].p))});
+    if (piv.length) legs.push({up: p0 > piv[piv.length - 1].p, t: ddays(piv[piv.length - 1].d, now), m: Math.abs(Math.log(p0 / piv[piv.length - 1].p)), open: 1});
+    const dflt = L ? 200 : Math.max(20, (r.horizon_weeks_high || 6) * 7 * .7);
+    const avg = (a, k) => a.length ? a.reduce((s, x) => s + x[k], 0) / a.length : null;
+    const legFor = (isUp, move) => {
+      const same = legs.filter((g) => g.up === isUp && !g.open && g.t >= (L ? 21 : 3)).slice(-2);
+      const t = avg(same, 't') || avg(legs.filter((g) => !g.open), 't') || dflt, m = avg(same, 'm') || avg(legs, 'm') || .1;
+      const ratio = Math.max(.5, Math.min(1.8, Math.abs(Math.log(move)) / m)); // größere Welle braucht länger
+      return Math.max(L ? 90 : 10, Math.min(L ? 1100 : 220, t * Math.sqrt(ratio)));
     };
-    if (needEntry) s += box(eA, eB, r.entry_low, r.entry_high, '#2fd08a', 'Einstieg');
-    else s += `<rect x="${PL}" y="${y(r.entry_high)}" width="${x0 - PL}" height="${Math.max(2, y(r.entry_low) - y(r.entry_high))}" fill="#2fd08a" opacity=".07"/>`;
-    s += box(tA, tB, r.target_low, r.target_high, '#5aa7ff', 'Ziel');
-    // Wellen der Zählung
-    let pts;
-    if (Array.isArray(r.waves) && r.waves.length) {
-      const idx = new Map(c.map((k, i) => [k[0], i]));
-      pts = r.waves.map((w) => ({i: idx.get(w.d), p: w.p, l: w.l})).filter((p) => p.i != null);
-    } else pts = zigzag(c).map((p) => ({...p, l: null}));
-    const path = pts.concat([last]);
-    s += `<polyline class="wave" points="${path.map((p) => x(p.i) + ',' + y(p.p)).join(' ')}" fill="none" stroke="#c9b8ff" stroke-width="1.6" stroke-linejoin="round" opacity=".9"/>`;
-    const imp = (l) => /^\(?[1-5]\)?$/.test(String(l));
-    const tag = (cx, cy, l, top, hollow) => {
-      const col = imp(l) ? '#5aa7ff' : '#f5b74a', ty = cy + (top ? -13 : 13);
-      const w = String(l).length > 2 ? 22 : 15;
-      return `<line x1="${cx}" x2="${cx}" y1="${cy}" y2="${ty + (top ? 6 : -6)}" stroke="${col}" stroke-opacity=".5"/>` +
-        (String(l).length > 2 ? `<rect x="${cx - w / 2}" y="${ty - 7}" width="${w}" height="14" rx="7" fill="${hollow ? '#0b0c10' : col}" stroke="${col}" stroke-width="1.3"/>`
-          : `<circle cx="${cx}" cy="${ty}" r="7.5" fill="${hollow ? '#0b0c10' : col}" stroke="${col}" stroke-width="1.3"/>`) +
-        `<text x="${cx}" y="${ty + 3.3}" font-size="${String(l).length > 2 ? 7.5 : 9.5}" font-weight="800" fill="${hollow ? col : '#0b0c10'}" text-anchor="middle">${esc(l)}</text>`;
-    };
-    pts.forEach((p, j) => {
-      const prevP = j ? pts[j - 1].p : p.p, nextP = j < pts.length - 1 ? pts[j + 1].p : last.p;
-      const top = p.p >= prevP && p.p >= nextP ? true : p.p <= prevP && p.p <= nextP ? false : p.p >= c[p.i][4];
-      if (p.l != null) s += tag(x(p.i), y(p.p), p.l, top, false);
-      else s += `<circle cx="${x(p.i)}" cy="${y(p.p)}" r="2.2" fill="#c9b8ff"/>`;
-    });
-    // nächste Wellen (Projektion)
-    const NEXT = {'1': '2', '2': '3', '3': '4', '4': '5', '5': 'A', 'A': 'B', 'B': 'C', 'C': '1', 'W': 'X', 'X': 'Y', 'Y': '1', 'Start': '1'};
-    const lastL = pts.length && pts[pts.length - 1].l != null ? String(pts[pts.length - 1].l) : null;
-    // Richtung der nächsten Welle: nach einem Hoch abwärts, nach einem Tief aufwärts
-    const lp = pts.length ? pts[pts.length - 1] : null;
-    const lastTop = lp ? lp.p >= Math.max(last.p, pts.length > 1 ? pts[pts.length - 2].p : -Infinity) : false;
-    let tl = null;
-    if (lastL && NEXT[lastL]) tl = (tmid > last.p) === !lastTop ? NEXT[lastL] : NEXT[NEXT[lastL]] || null;
-    const prim = needEntry ? [[(eA + eB) / 2, mid, null], [(tA + tB) / 2, tmid, tl]] : [[(tA + tB) / 2, tmid, tl]];
-    const pp = [[x(last.i), y(last.p)]].concat(prim.map((v) => [fx(v[0]), y(v[1])]));
-    s += `<polyline class="proj" points="${pp.map((p) => p.join(',')).join(' ')}" fill="none" stroke="#2fd08a" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#ahG)"/>`;
-    prim.forEach((v, j) => {
-      if (!v[2]) return;
-      const isT = j === prim.length - 1, up = isT ? v[1] >= (j ? prim[j - 1][1] : last.p) : v[1] > prim[j + 1][1];
-      const edge = isT ? (up ? r.target_high : r.target_low) : (up ? r.entry_high : r.entry_low);
-      s += tag(fx(v[0]), y(edge), '(' + v[2] + ')', up, true);
-    });
+    if (up == null && L && e.up === undefined) { // lang: letztes großes Hoch über dem Kurs als Bestätigung
+      const hs = piv.filter((q) => q.p > p0 * 1.03 && q.p < Math.max(...tgt)); if (hs.length) up = Math.max(...hs.map((q) => q.p));
+    }
+    const needEntry = !L && r.entry_type !== 'Ausbruch' && r.price > r.entry_high && ['annaeherung', 'boden', 'meiden'].includes(r.status);
+    const emid = (r.entry_low + r.entry_high) / 2, tmid = (tgt[0] + tgt[1]) / 2;
+    const lastL = !auto && piv.length ? piv[piv.length - 1].l : null, dg = lastL ? deg(lastL) : (L ? 2 : 1);
+    const lastTop = piv.length ? piv[piv.length - 1].p > p0 : false;
+    let path;
+    const timed = (pts) => { let d = now, pp = p0; return pts.map((w) => { d = w.d || addDays(d, legFor(w.p > pp, w.p / pp)); pp = w.p; return {d, p: w.p, l: w.l || null}; }); };
+    if (e.path && e.path.length) path = timed(e.path);
+    else {
+      path = []; let d = now, pp = p0, lb = lastL ? core(lastL) : null;
+      if (needEntry) {
+        const lp = piv.length ? piv[piv.length - 1] : null;
+        const ext = lp && !lastTop && emid < lp.p; // neues Tief unter dem letzten Tief: dieselbe Welle läuft weiter
+        d = addDays(d, legFor(false, emid / pp) * (lastTop ? .45 : 1));
+        let l = ext ? lb : lb && NEXT[lb];
+        if (ext && lp) lp.moved = 1;
+        path.push({d, p: emid, l: l ? wrap(l, dg) : null}); lb = l || lb; pp = emid;
+      }
+      const isUp = tmid > pp, cont = !needEntry && lastTop !== isUp && piv.length; // Ziel liegt in Richtung der laufenden Welle
+      const full = legFor(isUp, cont ? tmid / piv[piv.length - 1].p : tmid / pp), run = cont ? legs[legs.length - 1].t : 0; // laufende Welle: bereits vergangene Zeit abziehen
+      d = addDays(d, Math.max(full * .25, full - run, L ? 60 : 7));
+      let l = lb && (cont ? null : NEXT[lb]); if (l && (isUp ? /^[24bBXx]$|^ii$|^iv$/.test(l) : /^[135Cc]$|^i+$|^v$/.test(l))) l = NEXT[l];
+      path.push({d, p: tmid, l: l ? wrap(l, dg) : (cont && lastL ? null : null)});
+    }
     // Alternative
-    const ax = fx(Math.max(6, Math.round((tA + tB) / 2 * .7)));
-    s += `<path d="M${x(last.i)} ${y(last.p)} L${ax} ${y(altEnd)}" fill="none" stroke="#ff8a95" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahR)" class="proj"/>`;
-    s += `<text x="${ax + 4}" y="${y(altEnd) + 3}" font-size="9" fill="#ff8a95" font-weight="700" class="halo">Alternative</text>`;
-    // Kurs-Marker
-    s += `<line x1="${PL}" x2="${W - PR}" y1="${y(last.p)}" y2="${y(last.p)}" stroke="#eef0f6" stroke-opacity=".25" stroke-width=".8"/>`;
-    s += `<circle cx="${x(last.i)}" cy="${y(last.p)}" r="3.6" fill="#eef0f6" stroke="#0b0c10" stroke-width="1.5"/>`;
-    // Preisachse rechts
-    const labs = [[r.target_high, '#5aa7ff'], [r.target_low, '#5aa7ff'], [r.entry_high, '#2fd08a'], [r.entry_low, '#2fd08a'], [r.stop, '#ff8a95'], [last.p, 'now']];
-    labs.sort((a, b) => b[0] - a[0]); let prev = -99;
-    labs.forEach(([v, col]) => {
-      const yy = Math.max(y(v) + 3, prev + 11); prev = yy;
-      s += col === 'now' ? `<rect x="${W - PR + 3}" y="${yy - 9}" width="${PR - 5}" height="13" rx="3" fill="#eef0f6"/><text x="${W - PR + 6}" y="${yy}" font-size="9.5" font-weight="800" fill="#0b0c10" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`
-        : `<text x="${W - PR + 6}" y="${yy}" font-size="9.5" fill="${col}" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`;
+    let alt = null;
+    const altDefault = L ? stop : (r.invalidation != null && r.invalidation < r.stop ? r.invalidation : r.stop);
+    if (e.alt !== null) {
+      const a = e.alt || {};
+      const ap = a.path && a.path.length ? a.path : [{d: addDays(now, legFor(false, altDefault / p0) * .8), p: altDefault, l: null}];
+      alt = {path: a.path && a.path.length ? timed(ap) : ap, prob: a.prob != null ? a.prob : null, label: a.label || 'Alternative'};
+    }
+    const end = path[path.length - 1];
+    return {L, e, c, n, now, p0, bar, tgt, stop, up, down, piv, auto, path, alt, needEntry, emid, end,
+      prob: e.prob != null ? e.prob : alt && alt.prob != null ? 100 - alt.prob : null,
+      fib: e.fib || null};
+  }
+  const ewEnd = (r, lv) => { const P = ewPlan(r, lv); return P ? P.end.d : null; };
+  const ltUntil = (r) => { const d = WEEKLY ? ewEnd(r, 'lang') : null; return d ? monthTxt(d) : (r.lt_until || ''); };
+
+  // Fibonacci-Stufen im Zielbereich aus den letzten Wellen
+  function fibLevels(P) {
+    if (P.fib && P.fib.levels) return P.fib.levels;
+    const pv = P.piv, out = [];
+    if (pv.length < 2) return out;
+    const lo = Math.min(...P.tgt) * .97, hi = Math.max(...P.tgt) * 1.03;
+    const a = pv[pv.length - 2].p, b = pv[pv.length - 1].p;
+    [.382, .5, .618, .786].forEach((k) => out.push([k, b + (a - b) * k]));            // Retracement der letzten Welle
+    if (pv.length >= 3) { const s = pv[pv.length - 3].p; [1, 1.272, 1.618, 2, 2.618].forEach((k) => out.push([k, b + (a - s) * k])); } // Ausdehnung
+    [1.272, 1.618].forEach((k) => out.push([k, a + (b - a) * k]));
+    const seen = [], tm = (P.tgt[0] + P.tgt[1]) / 2;
+    return out.filter(([k, v]) => v > 0 && v >= lo && v <= hi && !seen.some((s) => Math.abs(s - v) / v < .025) && seen.push(v))
+      .sort((x, y) => Math.abs(x[1] - tm) - Math.abs(y[1] - tm)).slice(0, 3).sort((x, y) => y[1] - x[1]);
+  }
+
+  function ewChart(r, lv) {
+    const P = ewPlan(r, lv);
+    if (!P) return `<p class="empty">${lv === 'lang' ? 'Wochenchart' : 'Chart'} lädt …</p>`;
+    const {L, c, n, now, p0, bar} = P;
+    const fi = (d) => (n - 1) + ddays(now, d) / bar; // Datum -> x-Index (auch Zukunft)
+    const ends = P.path.map((w) => fi(w.d)).concat(P.alt ? P.alt.path.map((w) => fi(w.d)) : []);
+    const fut = Math.max(n * .25, (Math.max(...ends) - (n - 1)) * 1.12 + n * .03);
+    const W = 380, H = 300, PL = 4, PR = 58, PT = 18, PB = 30;
+    const cw = (W - PL - PR) / (n + fut), x = (i) => PL + i * cw + cw / 2;
+    const vals = c.map((k) => k[4]).concat(P.tgt, P.path.map((w) => w.p), P.alt ? P.alt.path.map((w) => w.p) : [], [P.up, P.down, P.stop].filter((v) => v != null));
+    let lo = Math.min(...c.map((k) => k[3]), ...vals), hi = Math.max(...c.map((k) => k[2]), ...vals);
+    const logS = L && hi / lo > 3; // lange Sicht mit großer Spanne: logarithmisch
+    const tf = (v) => logS ? Math.log(v) : v;
+    let tlo = tf(lo), thi = tf(hi); const pad = (thi - tlo) * .08; tlo -= pad; thi += pad;
+    const y = (v) => PT + (thi - tf(v)) / (thi - tlo) * (H - PT - PB);
+    const fmt = (v) => num(v, v >= 1000 ? 0 : v >= 100 ? 1 : 2);
+    const x0 = x(n - 1), xr = W - PR;
+    const id = r.ticker.replace(/\W/g, '') + lv;
+    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" class="ew" font-family="Inter, system-ui, sans-serif" role="img" aria-label="Elliott-Wellen ${esc(r.name)} ${L ? 'Monate/Jahre' : 'Wochen/Monate'}">
+      <defs>${[['G', '#2fd08a'], ['R', '#ff6b78'], ['A', '#f5b74a'], ['U', '#2fd08a'], ['D', '#ff6b78']].map(([k, col]) => `<marker id="m${k}${id}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="${k === 'U' || k === 'D' ? 5 : 6}" markerHeight="${k === 'U' || k === 'D' ? 5 : 6}" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="${col}"/></marker>`).join('')}</defs>`;
+    // Preisraster rechts
+    const tick = (() => { const span = hi - lo, raw = span / 5, mag = Math.pow(10, Math.floor(Math.log10(raw))); return [1, 2, 2.5, 5, 10].map((k) => k * mag).find((k) => k >= raw) || raw; })();
+    const grid = []; for (let g = Math.ceil(lo / tick) * tick; g <= hi; g += tick) grid.push(g);
+    const gl = logS ? [1, 2, 5].flatMap((k) => [1, 10, 100, 1000, 10000].map((m) => k * m)).filter((v) => v > lo * 1.08 && v < hi * .92) : grid;
+    gl.forEach((g) => {
+      s += `<line x1="${PL}" x2="${xr}" y1="${y(g)}" y2="${y(g)}" stroke="#fff" stroke-opacity=".05"/>`;
     });
-    // Zeitachse (Vergangenheit + Zukunft)
-    const MN = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
-    let lm = c[0][0].slice(5, 7);
-    c.forEach((k, i) => { const m = k[0].slice(5, 7); if (m !== lm) { lm = m; s += `<text x="${x(i)}" y="${H - 7}" font-size="8.5" fill="#5d6378">${MN[+m - 1]}</text>`; } });
-    const d0 = new Date(c[n - 1][0] + 'T12:00:00');
-    for (let d = 1; d < fut; d++) {
-      const dt = new Date(d0.getTime() + d * 7 / 5 * 864e5), m = String(dt.getMonth() + 1).padStart(2, '0');
-      if (m !== lm) { lm = m; s += `<text x="${fx(d)}" y="${H - 7}" font-size="8.5" fill="#22d3a6" opacity=".8">${MN[+m - 1]}</text>`; }
+    // Zukunftsbereich
+    s += `<rect x="${x0}" y="${PT - 8}" width="${xr - x0}" height="${H - PT - PB + 8}" fill="#22d3a6" opacity=".03"/>`;
+    s += `<line x1="${x0}" x2="${x0}" y1="${PT - 8}" y2="${H - PB}" stroke="#fff" stroke-opacity=".14" stroke-dasharray="2 3"/>`;
+    // Marken-Linien über den ganzen Chart (grün = Bestätigung oben, rot = Absicherung unten)
+    const mark = (v, col, k, txt) => v == null ? '' : `<line x1="${PL}" x2="${xr - 2}" y1="${y(v)}" y2="${y(v)}" stroke="${col}" stroke-width="1.2" stroke-opacity=".85" marker-end="url(#m${k}${id})"/>` +
+      `<text x="${PL + 3}" y="${y(v) + (k === 'U' ? -4 : 11)}" font-size="8.5" font-weight="700" fill="${col}" class="halo">${txt}</text>`;
+    s += mark(P.up, '#2fd08a', 'U', 'Bestätigung');
+    s += mark(P.down, '#ff6b78', 'D', L ? 'Absicherung' : 'Stop');
+    // Zielkasten mit Fibonacci-Stufen
+    const ei = fi(P.end.d), bw = Math.max(fut * .18, 6);
+    const bx1 = x(Math.max(n - 1 + 2, ei - bw)), bx2 = Math.min(xr - 2, x(ei + bw * .6));
+    const ty1 = y(Math.max(...P.tgt)), ty2 = y(Math.min(...P.tgt));
+    s += `<rect x="${bx1}" y="${ty1}" width="${bx2 - bx1}" height="${Math.max(6, ty2 - ty1)}" rx="3" fill="#5aa7ff" fill-opacity=".13" stroke="#5aa7ff" stroke-opacity=".7"/>`;
+    const fl = fibLevels(P);
+    let fy = -99;
+    fl.forEach(([k, v]) => {
+      const yy = y(v); s += `<line x1="${bx1}" x2="${bx2}" y1="${yy}" y2="${yy}" stroke="#9cc8ff" stroke-opacity=".55" stroke-dasharray="3 2"/>`;
+      if (Math.abs(yy - fy) > 10) { s += `<text x="${bx1 - 3}" y="${yy + 3}" font-size="7.5" fill="#9cc8ff" text-anchor="end" class="halo">${num(k * 100, 1)} % (${fmt(v)})</text>`; fy = yy; }
+    });
+    if (!fl.length) s += `<text x="${bx1 + 3}" y="${ty1 - 4}" font-size="8" font-weight="700" fill="#9cc8ff" class="halo">Ziel</text>`;
+    // Einstiegskasten (kurz)
+    if (P.needEntry && !P.e.path) {
+      const ei2 = fi(P.path[0].d), w2 = Math.max(fut * .12, 4);
+      const ex1 = x(Math.max(n - 1 + 1, ei2 - w2)), ex2 = x(ei2 + w2 * .7);
+      s += `<rect x="${ex1}" y="${y(r.entry_high)}" width="${ex2 - ex1}" height="${Math.max(5, y(r.entry_low) - y(r.entry_high))}" rx="3" fill="#2fd08a" fill-opacity=".14" stroke="#2fd08a" stroke-opacity=".7"/>` +
+        `<text x="${ex2 + 3}" y="${(y(r.entry_low) + y(r.entry_high)) / 2 + 3}" font-size="8" font-weight="700" fill="#2fd08a" class="halo">Einstieg</text>`;
+    }
+    // Kurslinie
+    s += `<path d="${c.map((k, i) => (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ')}" fill="none" stroke="#d6d9e4" stroke-width="1.15" stroke-linejoin="round" class="wave"/>`;
+    // Zählung
+    const lab = (cx, cy, l, top, extra) => {
+      const d = deg(l), col = DEGC[d], fs = [9.5, 10.5, 12][d], ty = cy + (top ? -6 : 6 + fs * .8);
+      return `<text x="${cx}" y="${ty}" font-size="${fs}" font-weight="800" fill="${col}" text-anchor="middle" class="halo"${extra || ''}>${esc(l)}</text>`;
+    };
+    P.piv.forEach((p, j) => {
+      const prev = j ? P.piv[j - 1].p : null, nxt = j < P.piv.length - 1 ? P.piv[j + 1].p : p0;
+      const top = prev == null ? p.p > nxt : p.p >= prev;
+      if (p.l && !p.moved) s += lab(x(p.i), y(p.p), p.l, top);
+      else if (p.l) s += lab(x(p.i), y(p.p), p.l + '?', top, ' opacity=".45"');
+      else s += `<circle cx="${x(p.i)}" cy="${y(p.p)}" r="2" fill="#c9b8ff" opacity=".8"/>`;
+    });
+    // Alternative (gepunktet)
+    if (P.alt) {
+      const ap = [[x0, y(p0)]].concat(P.alt.path.map((w) => [x(fi(w.d)), y(w.p)]));
+      s += `<polyline points="${ap.map((q) => q.join(',')).join(' ')}" fill="none" stroke="#f5b74a" stroke-width="1.4" stroke-dasharray="2 3" stroke-linejoin="round" marker-end="url(#mA${id})" class="proj"/>`;
+      P.alt.path.forEach((w, j) => { if (w.l && j < P.alt.path.length - 1) s += `<text x="${x(fi(w.d))}" y="${y(w.p) + (w.p > p0 ? -6 : 13)}" font-size="9" font-weight="700" fill="#f5b74a" text-anchor="middle" class="halo">${esc(w.l)}</text>`; });
+      const a = P.alt.path[P.alt.path.length - 1], ax = x(fi(a.d)), ay = y(a.p), below = a.p < p0;
+      const txt = (P.alt.label || 'Alternative') + (P.alt.prob != null ? ' · ' + P.alt.prob + ' %' : '');
+      const tw = txt.length * 4.6 + 10, bxx = Math.min(xr - tw - 2, Math.max(x0 + 2, ax - tw / 2));
+      s += `<rect x="${bxx}" y="${ay + (below ? 6 : -21)}" width="${tw}" height="15" rx="4" fill="#0b0c10" stroke="#f5b74a" stroke-opacity=".8"/>` +
+        `<text x="${bxx + tw / 2}" y="${ay + (below ? 16.5 : -10.5)}" font-size="8.5" font-weight="700" fill="#f5b74a" text-anchor="middle">${esc(txt)}</text>`;
+    }
+    // Hauptpfad: grün aufwärts, rot abwärts, Pfeil an jedem Abschnitt
+    let px = x0, py = y(p0), pv = p0, seg = null;
+    P.path.forEach((w, j) => {
+      const nx = x(fi(w.d)), ny = y(w.p), isUp = w.p >= pv, col = isUp ? '#2fd08a' : '#ff6b78';
+      s += `<line x1="${px}" y1="${py}" x2="${nx}" y2="${ny}" stroke="${col}" stroke-width="2.1" stroke-linecap="round" marker-end="url(#m${isUp ? 'G' : 'R'}${id})" class="proj"/>`;
+      if (w.l) s += lab(nx, ny, w.l, isUp);
+      seg = [px, py, nx, ny]; px = nx; py = ny; pv = w.p;
+    });
+    if (P.prob != null) {
+      const t2 = P.prob + ' %', tw = 30, mx = (seg[0] + seg[2]) / 2, my = (seg[1] + seg[3]) / 2;
+      const bxx = Math.min(xr - tw - 2, Math.max(x0 + 2, mx + 5)), byy = Math.max(PT - 6, Math.min(H - PB - 16, my + 2));
+      s += `<rect x="${bxx}" y="${byy}" width="${tw}" height="14" rx="4" fill="#0b0c10" stroke="#2fd08a" stroke-opacity=".8"/><text x="${bxx + tw / 2}" y="${byy + 10}" font-size="8.5" font-weight="800" fill="#2fd08a" text-anchor="middle">${t2}</text>`;
+    }
+    // aktueller Kurs
+    s += `<circle cx="${x0}" cy="${y(p0)}" r="3.4" fill="#eef0f6" stroke="#0b0c10" stroke-width="1.5"/>`;
+    // Preisachse rechts: Raster + Marken + Kurs
+    const labs = [[p0, 'now']];
+    if (P.up != null) labs.push([P.up, '#2fd08a']); if (P.down != null) labs.push([P.down, '#ff6b78']);
+    labs.push([P.tgt[1], '#5aa7ff'], [P.tgt[0], '#5aa7ff']);
+    const used = labs.map((v) => y(v[0]));
+    gl.forEach((g) => { if (used.every((u) => Math.abs(u - y(g)) > 11)) labs.push([g, '#5d6378']); });
+    labs.sort((a, b) => b[0] - a[0]); let prevY = -99;
+    labs.forEach(([v, col]) => {
+      const yy = Math.max(y(v) + 3, prevY + 11); if (yy > H - PB + 4) return; prevY = yy;
+      s += col === 'now' ? `<rect x="${xr + 3}" y="${yy - 9}" width="${PR - 5}" height="13" rx="3" fill="#eef0f6"/><text x="${xr + 6}" y="${yy}" font-size="9.5" font-weight="800" fill="#0b0c10" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`
+        : `<text x="${xr + 6}" y="${yy}" font-size="9" fill="${col}" font-family="JetBrains Mono, monospace">${fmt(v)}</text>`;
+    });
+    // Quartalszahlen: vergangene (grün = besser als erwartet) und die nächste (hohl)
+    const f = FUND[r.ticker] || {}, zy = H - PB + 3;
+    const ern = (f.eps_hist || []).map((h) => ({d: addDays(new Date(h.q * 1000).toISOString().slice(0, 10), 32), s: h.surprise}));
+    const nx = f.next_earnings || (/zahl/i.test(r.next_event || '') ? r.next_event_date : null);
+    if (nx && !ern.some((h) => Math.abs(ddays(h.d, nx)) < 20)) ern.push({d: nx, s: null, fut: nx > now});
+    ern.forEach((h) => {
+      const i = fi(h.d); if (i < 0 || x(i) > xr) return;
+      const col = h.fut || h.s == null ? '#9aa0b4' : h.s >= 0 ? '#2fd08a' : '#ff6b78';
+      s += `<g><title>Quartalszahlen ${dShort(h.d)}${h.s != null ? ' · Überraschung ' + pct(h.s) : ''}</title><rect x="${x(i) - 5}" y="${zy}" width="10" height="10" rx="2" fill="${h.fut ? '#0b0c10' : col}" fill-opacity="${h.fut ? 1 : .85}" stroke="${col}"/>` +
+        `<text x="${x(i)}" y="${zy + 7.8}" font-size="7" font-weight="800" fill="${h.fut ? col : '#0b0c10'}" text-anchor="middle">Z</text></g>`;
+    });
+    // Zeitachse bis zum Ende des Pfads
+    const ay = H - 6;
+    const tickAt = (i, txt, futr) => { s += `<text x="${x(i)}" y="${ay}" font-size="8.5" fill="${futr ? '#22d3a6' : '#5d6378'}" text-anchor="middle">${txt}</text>`; };
+    const totalDays = (n + fut) * bar, stepM = L ? (totalDays > 2400 ? 12 : 6) : (totalDays > 400 ? 3 : totalDays > 200 ? 2 : 1);
+    let d = new Date(c[0][0].slice(0, 7) + '-01T12:00:00'); d.setMonth(d.getMonth() + 1);
+    const endD = addDays(now, fut * bar);
+    while (d.toISOString().slice(0, 10) <= endD) {
+      const ds = d.toISOString().slice(0, 10), m = d.getMonth();
+      if (m % stepM === 0) {
+        const i = ds <= now ? near(c, ds) + .5 : fi(ds);
+        if (x(i) > PL + 8 && x(i) < xr - 8) tickAt(i, L ? (m === 0 ? d.getFullYear() : MN[m]) : (m === 0 ? String(d.getFullYear()) : MN[m]), ds > now);
+      }
+      d.setMonth(d.getMonth() + 1);
     }
     return s + '</svg>';
   }
@@ -292,7 +428,7 @@
     return (r.target_low - mid) / risk;
   }
 
-  /* ---------- Langfristiges Ziel (18 Monate) ---------- */
+  /* ---------- Langfristiges Ziel (große Wellen) ---------- */
   const LTV = {bullisch: ['Langfristig aufwärts', 'var(--up)'], neutral: ['Langfristig offen', 'var(--warn)'], spekulativ: ['Spekulativ', 'var(--purple)'], 'bärisch': ['Langfristig schwach', 'var(--down)']};
   function ltHTML(r) {
     if (r.lt_target_low == null) return '';
@@ -303,11 +439,11 @@
     const col = (k) => k == null ? 'inherit' : k >= 2 ? 'var(--up)' : 'var(--warn)';
     const lo = Math.min(r.lt_stop, p), hi = r.lt_target_high, span = hi - lo || 1, x = (val) => Math.max(0, Math.min(100, (val - lo) / span * 100));
     return `<div class="lt">
-      <div class="lt-h"><b>Großes Ziel bis ${esc(r.lt_until || '')}</b><span class="pill" style="--sc:${v[1]}">${v[0]}</span></div>
+      <div class="lt-h"><b>Großes Ziel · um ${esc(ltUntil(r))}</b><span class="pill" style="--sc:${v[1]}">${v[0]}</span></div>
       <div class="lt-bar"><span class="g" style="left:${x(r.lt_target_low)}%;width:${Math.max(1.5, x(r.lt_target_high) - x(r.lt_target_low))}%"></span>
         <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(p)}%"></span></div>
       <div class="levels lt-lv">
-        <div><small>Ziel 18 Monate</small><b class="up">${num(r.lt_target_low)}–${money(r.lt_target_high, r)}</b><em>${pct(r.lt_target_low / p - 1)} ab Kurs</em></div>
+        <div><small>Großes Ziel</small><b class="up">${num(r.lt_target_low)}–${money(r.lt_target_high, r)}</b><em>${pct(r.lt_target_low / p - 1)} ab Kurs</em></div>
         <div><small>Langfristige Absicherung</small><b class="down">${money(r.lt_stop, r)}</b><em>${pct(r.lt_stop / p - 1)}</em></div>
         <div><small>Chance : Risiko ab Kurs</small><b style="color:${col(crvNow)}">${crvNow == null ? '—' : '1 : ' + num(crvNow, 1)}</b></div>
         <div><small>Analysten-Ziel (Schnitt)</small><b>${r.lt_consensus != null ? money(r.lt_consensus, r) : '—'}</b>${r.lt_analysts ? `<em>${r.lt_analysts} Analysten</em>` : ''}</div>
@@ -323,32 +459,6 @@
     return `<div class="bar lt-bar2"><span class="g" style="left:${x(r.lt_target_low)}%;width:${Math.max(1.5, x(r.lt_target_high) - x(r.lt_target_low))}%"></span>
       <span class="s" style="left:${x(r.lt_stop)}%"></span><span class="k" style="left:${x(r.price)}%"></span></div>`;
   }
-  function ltChart(r) {
-    const w = (WEEKLY && WEEKLY[r.ticker]) || null;
-    if (!w || w.length < 20) return '<p class="empty">Wochenchart lädt …</p>';
-    const c = w.slice(-156), W = 360, H = 220, PL = 6, PR = 54, PT = 12, PB = 20, FUT = 90;
-    const cw = (W - PL - PR - FUT) / c.length;
-    const lv = [r.lt_target_low, r.lt_target_high, r.lt_stop, r.price];
-    let lo = Math.min(...c.map((k) => k[3]), ...lv), hi = Math.max(...c.map((k) => k[2]), ...lv);
-    const pad = (hi - lo) * .06; lo -= pad; hi += pad;
-    const y = (v) => PT + (hi - v) / (hi - lo) * (H - PT - PB);
-    const xe = W - PR - FUT, xEnd = W - PR;
-    const line = c.map((k, i) => (i ? 'L' : 'M') + (PL + i * cw + cw / 2).toFixed(1) + ' ' + y(k[4]).toFixed(1)).join(' ');
-    const yr = (d) => d.slice(0, 4); let lab = ''; let prev = '';
-    c.forEach((k, i) => { if (yr(k[0]) !== prev && i > 3) lab += `<text x="${(PL + i * cw).toFixed(1)}" y="${H - 5}" class="ax">${yr(k[0])}</text><line x1="${(PL + i * cw).toFixed(1)}" x2="${(PL + i * cw).toFixed(1)}" y1="${PT}" y2="${H - PB}" class="gl"/>`; prev = yr(k[0]); });
-    const tm = (r.lt_target_low + r.lt_target_high) / 2;
-    return `<svg viewBox="0 0 ${W} ${H}" class="ltc" role="img" aria-label="Wochenchart ${esc(r.name)} mit großem Ziel und Absicherung">
-      ${lab}
-      <rect x="${PL}" y="${y(r.lt_target_high)}" width="${xEnd - PL}" height="${Math.max(2, y(r.lt_target_low) - y(r.lt_target_high))}" class="tz"/>
-      <line x1="${PL}" x2="${xEnd}" y1="${y(r.lt_stop)}" y2="${y(r.lt_stop)}" class="st"/>
-      <path d="${line}" class="wl"/>
-      <path d="M${xe} ${y(r.price)} L${xEnd - 6} ${y(tm)}" class="pj"/>
-      <circle cx="${xe}" cy="${y(r.price)}" r="3.5" class="pt"/>
-      <text x="${xEnd + 4}" y="${y(tm) + 4}" class="lb up">Ziel</text>
-      <text x="${xEnd + 4}" y="${y(r.lt_stop) + 4}" class="lb down">Absich.</text>
-      <text x="${xEnd - 4}" y="${H - 5}" class="ax" text-anchor="end">${esc(r.lt_until || '')}</text>
-    </svg>`;
-  }
   function ltDo(r) {
     const p = r.price, k = p > r.lt_stop ? (r.lt_target_low - p) / (p - r.lt_stop) : null;
     const small = r.lt_view === 'spekulativ' || r.lt_view === 'bärisch' || r.lt_conf === 'niedrig' ? ' Nur mit einer kleinen Position.' : '';
@@ -356,13 +466,30 @@
     if (k != null && k >= 2) return `Ab dem aktuellen Kurs lohnt sich ein langfristiger Einstieg rechnerisch (Chance : Risiko 1 : ${num(k, 1)}). Absicherung unter ${money(r.lt_stop, r)}.` + small;
     return `Ab dem aktuellen Kurs ist der Abstand zum großen Ziel zu klein (Chance : Risiko ${k == null ? '—' : '1 : ' + num(k, 1)}). Langfristig besser in Rücksetzern kaufen – je näher an der Absicherung ${money(r.lt_stop, r)}, desto besser.` + small;
   }
+  function legend(r, lv) {
+    const P = ewPlan(r, lv); if (!P) return '';
+    const gr = new Set(P.piv.filter((p) => p.l).map((p) => deg(p.l)).concat(P.path.filter((w) => w.l).map((w) => deg(w.l))));
+    const G = [['[ ] groß', 2], ['( ) mittel', 1], ['klein', 0]].filter((g) => gr.has(g[1]));
+    return `<div class="legend">${G.map((g) => `<span style="--lc:${DEGC[g[1]]}">Wellen ${g[0]}</span>`).join('')}${P.auto ? '<span style="--lc:#c9b8ff">automatische Wendepunkte</span>' : ''}
+      <span style="--lc:#2fd08a">Hauptszenario${P.prob != null ? ' ' + P.prob + ' %' : ''}</span><span style="--lc:#f5b74a">Alternative</span><span style="--lc:#5aa7ff">Zielzone + Fibonacci</span><span style="--lc:#9aa0b4">Z = Quartalszahlen</span></div>
+      <p class="ew-note">Zeitpunkte aus der Länge der bisherigen Wellen geschätzt${P.e.path ? '' : ' (automatisch)'} – keine festen Termine.</p>`;
+  }
+  function ensure(h) {
+    if (h === 'lang' && !WEEKLY) return load('weekly').then((w) => { WEEKLY = (w && w.stocks) || {}; return true; }).catch(() => { WEEKLY = {}; return true; });
+    if (h === 'kurz' && !DAILY) return load('daily').then((w) => { DAILY = (w && w.stocks) || {}; return true; }).catch(() => { DAILY = {}; return true; });
+    return Promise.resolve(false);
+  }
+  function redraw() {
+    const r = STOCKS.find((x) => x.ticker === SEL); if (!r) return;
+    if (isDesk() && $('#detail')) { const box = $('#detail'), top = box.scrollTop; box.innerHTML = detailHTML(r, 'dtP'); wireDetail(box, r); box.scrollTop = top; }
+    else if (!$('#sheet').hidden) refreshSheet();
+  }
   const isDesk = () => matchMedia('(min-width: 1180px)').matches;
   let SEL = null;
   function detailHTML(r, pid) {
     const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
     const q = PRICES[r.ticker] || {};
     const k = crv(r);
-    const auto = !(Array.isArray(r.waves) && r.waves.length);
     return `
       <div class="sh-head"><div><div class="t">${esc(r.ticker)}</div><div class="n">${esc(r.name)} · ${esc(r.sector || '')}</div></div>
         <div class="sh-price"><div class="p" id="${pid}">${money(r.price, r)}</div>
@@ -373,16 +500,16 @@
         <span class="hz-sw" role="tablist" aria-label="Zeitraum"><button data-h="kurz" aria-selected="${HOR === 'kurz'}">⚡ Kurz</button><button data-h="lang" aria-selected="${HOR === 'lang'}">🧭 Lang</button></span></div>
       <div class="dtabs"><button data-p="ov">Überblick</button><button data-p="num">Zahlen</button><button data-p="calc">Rechner</button></div>
 ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pane="ov">
-      <div class="hz-band lang"><b>🧭 Langfristig · Investment</b><span>bis ${esc(r.lt_until || '')} · Wochenchart</span></div>
-      <div class="chart">${ltChart(r)}
-        <div class="legend"><span style="--lc:#5aa7ff">Großes Ziel</span><span style="--lc:#ff5d6c">Langfristige Absicherung</span><span style="--lc:#7c5cff">Weg zum Ziel</span></div></div>
+      <div class="hz-band lang"><b>🧭 Langfristig · Monate bis Jahre</b><span>Ziel um ${esc(ltUntil(r))} · Wochenchart</span></div>
+      <div class="chart">${ewChart(r, 'lang')}
+        ${legend(r, 'lang')}</div>
       <div class="do lang"><small>Was heißt das langfristig?</small>${esc(ltDo(r))}</div>
       ${ltHTML(r)}
       <p class="foot">Technisches Szenario auf Wochenbasis, keine Anlageberatung.</p></div>
 ` : `      <div class="dpane" data-pane="ov">
-      <div class="hz-band kurz"><b>⚡ Kurzfristig · Trade</b><span>${esc(r.horizon_text || 'einige Wochen')}</span></div>
-      <div class="chart">${chart(r)}
-        <div class="legend"><span style="--lc:#5aa7ff">Impulswelle 1–5</span><span style="--lc:#f5b74a">Korrektur A-B-C</span><span style="--lc:#2fd08a">Hauptszenario</span><span style="--lc:#ff8a95">Alternative</span>${auto ? '<span style="--lc:#c9b8ff">automatische Wendepunkte</span>' : ''}</div></div>
+      <div class="hz-band kurz"><b>⚡ Kurzfristig · Wochen bis Monate</b><span>${(() => { const d = ewEnd(r, 'kurz'); return d ? 'Ziel um ' + esc(roughTxt(d)) : esc(r.horizon_text || ''); })()} · Tageschart</span></div>
+      <div class="chart">${ewChart(r, 'kurz')}
+        ${legend(r, 'kurz')}</div>
       <div class="do"><small>Was tun?</small>${esc(r.action || r.plan || '')}</div>
       <div class="ifs">
         ${r.if_up ? `<div class="if" style="--ic:var(--up)"><span class="ic">▲</span><div><b>Wenn es steigt</b>${esc(r.if_up)}</div></div>` : ''}
@@ -440,6 +567,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
   function openSheet(t) {
     const r = STOCKS.find((x) => x.ticker === t); if (!r) return;
     SEL = r.ticker;
+    ensure(HOR).then((ch) => { if (ch && SEL === r.ticker) redraw(); });
     document.querySelectorAll('#list .row').forEach((li) => li.classList.toggle('sel', li.dataset.t === SEL));
     if (isDesk() && $('#detail')) {
       const box = $('#detail');

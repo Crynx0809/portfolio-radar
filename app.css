@@ -393,3 +393,4 @@ body[data-hor="lang"] { --hz: var(--accent); }
 .sh-pills { flex-wrap: wrap; }
 
 .ew .halo { paint-order: stroke; stroke: #0b0c10; stroke-width: 3px; stroke-linejoin: round; }
+.ew-note{margin:.35rem 0 0;font-size:.72rem;color:var(--dim)}
