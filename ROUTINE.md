@@ -144,6 +144,11 @@ entry_eta_text.
   Schluss über entry_low die Einstiegsbedingung. Wer einem Fall wie einem fallenden Messer nicht traut, setzt status „meiden“ oder
   eine tiefere Zone – nicht eine Zone plus Wartebedingung. Die Trefferquote (track.py) und der Realitäts-Check (edge.py) messen
   genau so: Einstieg beim Berühren der Zone.
+- **Ziel = Ziel für einen Kauf in der Zone.** target_* muss zu einem Einstieg in der Zone passen. Liegt die Zone als Rücksetzer deutlich
+  unter dem Kurs und steht der Kurs schon nahe am Ziel der laufenden Bewegung, ist dieses Ziel veraltet: Dann target_* auf das Ziel der
+  NÄCHSTEN Welle nach dem Rücksetzer setzen (z. B. neues Hoch / Welle-5- bzw. (3)-Ziel) und das Ziel der laufenden Bewegung nur in
+  if_up nennen („Teilgewinne bei …“). Das Prüfskript meldet solche Fälle; die Website zeigt dann „Ziel fast erreicht, Plan braucht ein
+  neues Ziel“ statt eines Kaufsignals.
 - action: eine klare Zeile (Depot: Bedeutung für Lenns Position; Watchlist: Einstiegs-Hinweis). if_up/if_wait/if_down: Wenn-dann-Regeln mit Kursmarken.
 - wave_primary/wave_alt nennen die echten Wendepunkte mit Datum und Kurs aus den Kerzen.
 - **Zeitraum:** nach jeder Analyse `from horizon import estimate` (scripts/horizon.py) mit der Zeile, den ohlc-Kerzen und dem

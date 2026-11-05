@@ -657,3 +657,4 @@ body.pick .st .noise { display: none; }
 #detail .sbar { display: none; }
 .sbar .sp { white-space: nowrap; }
 .sbar { background: rgb(36,29,24); }
+.bdg.st-old { background: rgba(255,255,255,.12); color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(255,255,255,.35); }

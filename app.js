@@ -179,7 +179,7 @@
           <td class="n wide ${q.chg_pct == null ? '' : q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct == null ? '' : pct(q.chg_pct)}</td>
           <td class="n"><span class="wk ${w == null ? '' : w >= 0 ? 'up' : 'down'}">${w == null ? '—' : pct(w)}</span>${bar(w)}</td>
           <td class="c"><span class="bdg ${scCls(sc)}">${sc == null ? '—' : sc}</span></td>
-          <td class="c wide"><span class="bdg ${crvCls(k)}">${k == null ? '—' : num(k, 1) + ' : 1'}</span></td>
+          <td class="c wide">${staleTarget(r, HOR) ? `<span class="bdg st-old" title="Ziel fast erreicht – CRV ab Zone nicht aussagekräftig, Plan braucht ein neues Ziel">${k == null ? '—' : num(k, 1) + ' : 1'} ?</span>` : `<span class="bdg ${crvCls(k)}">${k == null ? '—' : num(k, 1) + ' : 1'}</span>`}</td>
           <td class="c" title="Erwartungswert in R aus der historischen Häufigkeit Ziel vor Stop – keine Vorhersage">${(() => { const e = edgeOf(r); return e && e.ev_r != null ? `<span class="evb ${evCls(e.ev_r)}">${evTxt(e.ev_r)}</span>` : '—'; })()}</td>
           <td class="wide"><span class="stt" style="--c:${L[1]}">${L[0]}</span>${wt ? `<small>${esc(wt)}</small>` : ''}</td>
           <td class="wide"><span class="stt" style="--c:${s.c}">${s.l}</span><small>${esc(distText(r))}</small></td></tr>`;
@@ -667,6 +667,7 @@
     else if (e.ev_r > .2) say = `<b>Historisch tragfähig:</b> Ziel kam oft genug vor dem Stop (${w} % statt nötiger ${be} %).`;
     else say = `<b>Knapp:</b> Die Trefferquote reicht gerade so – wenig Puffer für Fehler.`;
     if (e.p_none >= .3) say += ` In ${r5(e.p_none)} % der Fälle kam keins von beiden.`;
+    if (staleTarget(r, lv)) say = `<b>Ziel passt nicht zur Zone:</b> Der Kurs steht schon fast am Ziel. Gerechnet wird ein Kauf in der Zone mit diesem alten Ziel – nach einem Rücksetzer bräuchte es das Ziel der nächsten Welle. Die Zahlen sind deshalb vorerst nicht aussagekräftig.`;
     const o = e.orig && e.orig.ev_r != null ? `<p class="rc-o">Zum Vergleich – ursprünglicher Plan vom ${dShort(e.orig.since)} (Einstieg ${money(e.orig.start, r)}, Stop ${money(e.orig.stop, r)}, −${num(e.orig.stop_pct * 100, 1)} %): historisch ${r5(e.orig.p_win)} % · nötig ${r5(e.orig.be)} % · EV <b class="ev ${evCls(e.orig.ev_r)}">${evTxt(e.orig.ev_r)}</b>${noisy(e.orig) ? ' · Stop lag im Rauschen' : ''}</p>` : '';
     return `<div class="rc" title="${T}">
       <div class="rc-h"><b>Realitäts-Check · Ziel vor Stop?</b><span class="ev ${evCls(e.ev_r)}">EV ${evTxt(e.ev_r)}</span></div>
@@ -700,6 +701,13 @@
      3. Einstieg   Kauforders in der Zone (gestaffelt), nicht erst nach Bestätigung
      4. Halten     Stop, Ziel; Bestätigungsmarke = Stop auf Einstand ziehen
      Fazit:        🔴 Finger weg (EV < −0,05 R, Abwärtstrend, Kurs unter Stop; EV −0,05…0 = gelb „knapp“) · 🟡 Beobachten/Vormerken · 🟢 Kaufen mit … Position */
+  // Ziel passt nicht mehr zur Zone: Kurs steht über der Zone und schon fast am Ziel → das Ziel gehört zur laufenden Bewegung.
+  // Nach einem Rücksetzer in die Zone bräuchte es das Ziel der NÄCHSTEN Welle – sonst ist Chance:Risiko ab Zone nicht aussagekräftig.
+  function staleTarget(r, lv) {
+    const L = lv === 'lang', p = r.price;
+    if (L) { const z = ltZone(r); return !!(z && r.lt_target_low != null && p > z[1] * 1.02 && p >= r.lt_target_low * .97); }
+    return r.entry_type !== 'Ausbruch' && r.target_low != null && p > r.entry_high * 1.02 && p >= r.target_low * .97;
+  }
   function decide(r, lv) {
     const L = lv === 'lang', e = edgeOf(r, lv) || {}, p = r.price, c = (r2) => money(r2, r);
     const z = L ? ltZone(r) : [r.entry_low, r.entry_high];
@@ -714,15 +722,18 @@
     const down = L ? r.lt_view === 'bärisch' : r.status === 'meiden';
     if (down) no.push(L ? 'langfristig schwach' : 'Abwärtstrend');
     if (e.below_stop || (!L && p < r.stop) || (L && r.lt_stop != null && p < r.lt_stop)) no.push('Kurs schon unter dem Stop');
-    const knapp = e.ev_r != null && e.ev_r < 0 && e.ev_r >= -.05;   // im Rahmen der Messungenauigkeit
-    if (e.ev_r != null && e.ev_r < -.05) no.push(`EV ${evTxt(e.ev_r)} (Ziel kommt zu selten zuerst)`);
+    const stale = staleTarget(r, lv);   // EV ist dann mit einem veralteten Ziel gerechnet → nicht werten
+    const knapp = !stale && e.ev_r != null && e.ev_r < 0 && e.ev_r >= -.05;   // im Rahmen der Messungenauigkeit
+    if (stale) { /* EV nicht aussagekräftig */ }
+    else if (e.ev_r != null && e.ev_r < -.05) no.push(`EV ${evTxt(e.ev_r)} (Ziel kommt zu selten zuerst)`);
     else if (knapp) no.push(`EV knapp unter 0 (${evTxt(e.ev_r)})`);
     else if (e.ev_r != null) ok.push(`EV ${evTxt(e.ev_r)}`);
     const tight = noisy(e);
     if (tight) no.push(`Stop zu eng (${num(e.stop_pct * 100, 1)} % bei ${num(e.stop_pct / e.stop_atr * 100, 1)} % ${L ? 'Wochen' : 'Tages'}schwankung)`);
     else if (e.stop_atr != null) ok.push('Stop ok');
     if (inZ) ok.unshift(z && (L ? ltZone(r) : true) ? 'Kurs in der Zone' : 'Einstieg ab Kurs');
-    const hard = no.some((x) => !x.startsWith('Stop zu eng') && !x.startsWith('EV knapp'));
+    if (stale) no.push(`Ziel ${num(L ? r.lt_target_low : r.target_low)} fast erreicht – für einen Kauf in der Zone fehlt das nächste Ziel`);
+    const hard = no.some((x) => !x.startsWith('Stop zu eng') && !x.startsWith('EV knapp') && !x.startsWith('Ziel '));
     const pass = !no.length;
     // 2. Wie viel?
     let lvl = S == null ? 1 : S >= 65 ? 2 : S >= 45 ? 1 : 0;
@@ -742,13 +753,15 @@
     if (down && !L) when = 'Nicht auffangen – erst Bodenbildung abwarten.';
     else if (brk) when = `Kauf erst bei Schlusskurs über ${c(r.entry_low)} (Ausbruch), dann bis ${c(r.entry_high)} einsteigen.`;
     else if (inZ) when = z ? `${p > z[1] ? `Kurs knapp über der Zone ${num(z[0])}–${c(z[1])} – Kauforders` : `Jetzt in der Zone ${num(z[0])}–${c(z[1])} kaufen`} – ${p <= steps[0] ? `erste Hälfte jetzt (≈ ${c(p)})` : `erste Hälfte bei ${c(steps[0])}`}, zweite bei ${c(Math.min(p, steps[1]))}.` : 'Jetzt ab Kurs kaufen.';
+    else if (above && stale) when = `Zone ${num(z[0])}–${c(z[1])} bleibt der Nachkaufbereich – Kauforders erst, wenn ein neues Ziel feststeht.`;
     else if (above) when = `Kauforders in die Zone ${num(z[0])}–${c(z[1])} legen (${stag}; noch ${pct(gap).replace('−', '')} entfernt) – nicht hinterherkaufen.`;
     else when = `Kurs unter der Zone – erst zurück über ${c(z[0])} abwarten.`;
     // 4. Halten? Absicherung und Ausstieg – wie lange, entscheidet jeder selbst über Stop/Ziel
-    const hold = hard ? 'Kein neuer Einstieg – bestehende Position nach dem Plan unter „Was tun?“ behandeln.' : `Stop ${c(st)}${L ? ' (Wochenschluss)' : ''} · Ziel ${num(tg[0])}–${c(tg[1])}` + (conf && z && conf > z[1] ? ` · Schluss über ${c(conf)} → Stop auf Einstand ziehen` : '');
+    const hold = stale ? `Wer schon drin ist: Ziel ${num(tg[0])}–${c(tg[1])} fast erreicht – Teilgewinne sichern oder Stop nachziehen. Neue Käufe erst mit neuem Ziel.` : hard ? 'Kein neuer Einstieg – bestehende Position nach dem Plan unter „Was tun?“ behandeln.' : `Stop ${c(st)}${L ? ' (Wochenschluss)' : ''} · Ziel ${num(tg[0])}–${c(tg[1])}` + (conf && z && conf > z[1] ? ` · Schluss über ${c(conf)} → Stop auf Einstand ziehen` : '');
     // Fazit
     let col, fz;
     if (hard) { col = 'r'; fz = 'Finger weg'; }
+    else if (stale) { col = 'a'; fz = 'Beobachten – Ziel fast erreicht, Plan braucht ein neues Ziel'; }
     else if (tight) { col = 'a'; fz = 'Beobachten – Stop zu eng, so nicht handeln'; }
     else if (knapp) { col = 'a'; fz = 'Beobachten – Setup lohnt sich historisch nur knapp'; }
     else if (inZ && !brk) { col = 'g'; fz = `Kaufen in der Zone mit ${size} Position`; }

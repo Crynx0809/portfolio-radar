@@ -2,7 +2,7 @@
 python3 scripts/check.py [pfad/zu/stocks.json]      (Standard: data/stocks.json)
 FEHLER (Exit-Code 1) müssen behoben werden. HINWEISE müssen in der Abendanalyse begründet oder angepasst werden.
 Fehler:   NaN/fehlende Marken, entry_low > entry_high, target_low > target_high, stop ≥ entry_low, Kurs ≠ prices.json-Kurs.
-Hinweise: status passt nicht zum Kurs, Kurs schon unter dem Stop, CRV unter 1:2, Realitäts-Check EV < 0 oder Stop im Rauschen
+Hinweise: status passt nicht zum Kurs, Ziel fast erreicht bei Zone weit darunter (Ziel gehört zur laufenden Bewegung), Kurs schon unter dem Stop, CRV unter 1:2, Realitäts-Check EV < 0 oder Stop im Rauschen
           (stop_atr < 1, aus data/edge.json), Stop nach einem Stop-Bruch gesenkt ohne stop_reset_reason."""
 import json, math, sys
 
@@ -47,6 +47,8 @@ for r in S:
     crv = (tl - mid) / (mid - st) if mid > st else None
     if crv is not None and crv < 2:
         warn.append(f"{t}: CRV nur 1:{crv:.1f} (unter 1:2)")
+    if r.get("entry_type") != "Ausbruch" and px > hi * 1.02 and px >= tl * 0.97:
+        warn.append(f"{t}: Ziel {tl} fast erreicht (Kurs {px}), Zone {lo}–{hi} liegt darunter – für einen Kauf in der Zone neues Ziel (nächste Welle) setzen")
     e = (E.get(t) or {}).get("kurz") or {}
     if e.get("ev_r") is not None and e["ev_r"] < 0:
         warn.append(f"{t}: Realitäts-Check EV {e['ev_r']:+.2f} R (Ziel zuerst {e['p_win']:.0%}, nötig {e['be']:.0%}) – begründen oder anpassen")
