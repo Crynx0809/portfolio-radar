@@ -1,7 +1,8 @@
 """Lange Kursreihen je Wert (Yahoo Finance, Ersatz Stooq), einmal pro Tag:
 - data/weekly.json: Wochenkerzen der letzten 5 Jahre (Chart „Monate/Jahre“)
 - data/daily.json:  Tageskerzen des letzten Jahres (Chart „Wochen/Monate“)
-- data/daily3y.json: Tageskerzen der letzten 3 Jahre (nur für den Realitäts-Check, scripts/edge.py)"""
+- data/daily3y.json: Tageskerzen der letzten 3 Jahre (nur für den Realitäts-Check, scripts/edge.py).
+  Liegt NICHT im Repo (.gitignore), sondern im Actions-Cache; täglich werden nur die neuen Tage (1 Monat) nachgeladen."""
 import json, os, time, datetime, csv, io, urllib.request
 
 src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "fetch_prices.py"), encoding="utf-8").read()
@@ -66,5 +67,38 @@ if not (old.get("date") == TODAY and set(TICKERS) <= set(old.get("stocks", {})))
     build(lambda s: yahoo(s), lambda s: stooq(s), old, "data/weekly.json", "Wochenkerzen")
 if not (oldd.get("date") == TODAY and set(TICKERS) <= set(oldd.get("stocks", {}))):
     build(lambda s: yahoo(s, "1y", "1d"), lambda s: stooq(s, "d", 255), oldd, "data/daily.json", "Tageskerzen")
+def build3y():
+    """Vorhandene 3-Jahres-Reihe aus dem Cache um den letzten Monat ergänzen; nur neue Werte komplett laden."""
+    out = {"date": TODAY, "stocks": {}, "errors": {}}
+    have = old3.get("stocks", {})
+    full = incr = 0
+    for t, (ysym, ssym, ccy) in TICKERS.items():
+        prev = have.get(t) or []
+        rows = None
+        if len(prev) > 300:
+            try:
+                new = yahoo(ysym, "1mo", "1d")
+                if new:
+                    by = {r[0]: r for r in prev}
+                    by.update({r[0]: r for r in new})
+                    rows = [by[d] for d in sorted(by)][-760:]; incr += 1
+            except Exception as e:  # noqa
+                out["errors"][f"{t}:yahoo1mo"] = str(e)[:120]
+        if rows is None:
+            for name, fn in (("yahoo", lambda: yahoo(ysym, "3y", "1d")), ("stooq", lambda: stooq(ssym, "d", 760))):
+                try:
+                    rows = fn()
+                    if rows:
+                        full += 1; break
+                except Exception as e:  # noqa
+                    out["errors"][f"{t}:{name}"] = str(e)[:120]
+        if rows:
+            out["stocks"][t] = rows
+        elif prev:
+            out["stocks"][t] = prev
+        time.sleep(0.3)
+    json.dump(out, open("data/daily3y.json", "w"), separators=(",", ":"))
+    print(len(out["stocks"]), "Werte mit Tageskerzen (3 Jahre):", incr, "ergänzt,", full, "komplett geladen")
+
 if not (old3.get("date") == TODAY and set(TICKERS) <= set(old3.get("stocks", {}))):
-    build(lambda s: yahoo(s, "3y", "1d"), lambda s: stooq(s, "d", 760), old3, "data/daily3y.json", "Tageskerzen (3 Jahre)")
+    build3y()

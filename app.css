@@ -642,3 +642,18 @@ body.pick .st .noise { display: none; }
 .dec-q { display: grid; grid-template-columns: 86px 1fr; gap: 8px; font-size: 13.5px; line-height: 1.4; padding: 4px 0; border-top: 1px solid rgba(255,255,255,.06); }
 .dec-q b { color: var(--muted); font-weight: 600; }
 .dec small { display: block; margin-top: 6px; font-size: 11px; color: var(--dim); }
+
+/* ===== Handy: mitlaufende Leiste mit Fazit ===== */
+.sbar { position: sticky; top: -1px; z-index: 5; display: flex; align-items: center; gap: 10px; margin: -6px -4px 0; padding: 9px 14px; border-radius: 14px;
+  background: rgba(32,26,22,.92); border: 1px solid var(--line); -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+  font-size: 13px; opacity: 0; transform: translateY(-8px); pointer-events: none; transition: opacity .2s, transform .2s; height: 0; overflow: hidden; padding-top: 0; padding-bottom: 0; border-width: 0; }
+.sbar.on { opacity: 1; transform: none; height: auto; padding-top: 9px; padding-bottom: 9px; border-width: 1px; margin-bottom: 8px; }
+.sbar b { font-size: 15px; } .sbar .sp { font: 600 13px JetBrains Mono, monospace; color: var(--muted); }
+.sbar .sf { margin-left: auto; display: flex; align-items: center; gap: 6px; font-weight: 700; text-align: right; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sbar .sf i { flex: none; width: 9px; height: 9px; border-radius: 50%; }
+.sbar.g .sf { color: #6ef0ad; } .sbar.g .sf i { background: #2fd27f; }
+.sbar.a .sf { color: #ffd27a; } .sbar.a .sf i { background: #ffb428; }
+.sbar.r .sf { color: #ff8f8f; } .sbar.r .sf i { background: #ff5a5a; }
+#detail .sbar { display: none; }
+.sbar .sp { white-space: nowrap; }
+.sbar { background: rgb(36,29,24); }

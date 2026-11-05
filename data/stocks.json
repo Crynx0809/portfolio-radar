@@ -5182,5 +5182,128 @@
   "horizon_end": "2027-01-12",
   "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Ende Nov.)"
+ },
+ {
+  "ticker": "GRAB",
+  "name": "Grab Holdings",
+  "sector": "Super-App Südostasien",
+  "tv_symbol": "NASDAQ:GRAB",
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "status": "annaeherung",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 2.95,
+  "entry_high": 3.12,
+  "stop": 2.78,
+  "invalidation": 2.67,
+  "trigger": 3.45,
+  "target_low": 3.7,
+  "target_high": 3.97,
+  "waves": [
+   {
+    "d": "2026-10-26",
+    "p": 2.67,
+    "l": "Tief"
+   },
+   {
+    "d": "2026-11-04",
+    "p": 3.39,
+    "l": "1"
+   }
+  ],
+  "wave_primary": "Nach dem Abwärtstrend seit Sept. 2025 (6,62 $) Tief bei 2,67 $ (26.10.) – knapp über dem Tief von 2023 (2,65 $). Seitdem +27 % in sieben Handelstagen als mögliche Welle 1 bis 3,39 $. Erwartet: Rücksetzer (Welle 2) in den 38,2–61,8 %-Bereich 2,95–3,12 $, dann Welle 3 Richtung 3,70–3,97 $ (Juli-/August-Hochs).",
+  "wave_alt": "Nur eine Gegenbewegung im Abwärtstrend: Rückfall unter 2,78 $ und neues Tief unter 2,67 $.",
+  "plan": "Super-App für Fahrdienste, Essenslieferung und Bezahlen in Südostasien. Wächst kräftig und ist profitabel, die Aktie ist aber seit Herbst 2025 mehr als halbiert. Spekulative Bodenbildung, kleiner Einsatz.",
+  "news_brief": "Kurs seit dem Tief 2,67 $ (26.10.) um rund 27 % gestiegen, davon +7,7 % am 5.11. Den genauen Auslöser prüft das nächste Abend-Update.",
+  "next_event": "",
+  "next_event_date": null,
+  "action": "Nicht hinterherkaufen – Rücksetzer in 2,95–3,12 $ mit Umkehrsignal abwarten, Stop 2,78 $",
+  "if_up": "Schluss über 3,45 $ ohne Rücksetzer → Welle 3 läuft, Ziel 3,70–3,97 $.",
+  "if_wait": "Zwischen 3,12 und 3,45 $: abwarten.",
+  "if_down": "Schluss unter 2,78 $ → Boden gescheitert, Ziel unter 2,67 $.",
+  "pros": [
+   "Umsatz wächst stark (≈ +27 %), profitabel",
+   "Analysten klar positiv, Kursziel ≈ 5,50 $",
+   "Doppelboden-Bereich 2,65–2,67 $ (2023 und 2026)"
+  ],
+  "cons": [
+   "Abwärtstrend seit Sept. 2025, unter der 200-Tage-Linie",
+   "Nach +27 % in einer Woche ist ein Rücksetzer normal",
+   "Wettbewerb und Regulierung in Südostasien"
+  ],
+  "risk": "Fällt der Kurs unter das Doppeltief von 2,65–2,67 $, ist der Boden gescheitert und ein neues Mehrjahrestief möglich.",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 5.5,
+  "lt_target_high": 6.6,
+  "lt_stop": 2.45,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 2.85,
+  "lt_entry_high": 3.1,
+  "lt_text": "Seit dem Börsengang 2021 große Spanne zwischen 2,2 und 6,6 $. Welle (1) von 2,19 $ (2022) bis 6,62 $ (Sept. 2025), Korrektur (2) bis 2,67 $. Hält das Doppeltief, zielt Welle (3) zurück Richtung 5,50–6,60 $.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2022-10-24",
+      "p": 2.19,
+      "l": "[2]"
+     },
+     {
+      "d": "2025-09-22",
+      "p": 6.62,
+      "l": "(1)"
+     },
+     {
+      "d": "2026-10-26",
+      "p": 2.67,
+      "l": "(2)"
+     }
+    ],
+    "path": [
+     {
+      "p": 3.0,
+      "l": "2"
+     },
+     {
+      "p": 6.0,
+      "l": "(3)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 2.2
+      }
+     ],
+     "label": "alt. (2) tiefer",
+     "prob": 45
+    },
+    "up": 4.06
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. nur Gegenbewegung",
+     "prob": 45
+    }
+   }
+  },
+  "support_low": 2.95,
+  "support_high": 3.12,
+  "price": 3.36,
+  "price_date": "2026-11-05",
+  "range_low": 2.67,
+  "range_high": 6.235,
+  "chg_note": "+7,7 % am 5.11.",
+  "updated_at": "2026-11-05T12:20:00+01:00",
+  "lt_consensus": 5.49,
+  "lt_analysts": 23,
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-01-20",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 2–4 Wochen (bis ca. Ende Nov.)"
  }
 ]

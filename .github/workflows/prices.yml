@@ -19,6 +19,12 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python scripts/fetch_prices.py
+      - name: 3-Jahres-Tageskerzen aus dem Cache (nicht im Repo)
+        uses: actions/cache@v4
+        with:
+          path: data/daily3y.json
+          key: daily3y-${{ github.run_id }}
+          restore-keys: daily3y-
       - name: Wochenkerzen (langfristiges Ziel)
         run: python scripts/fetch_weekly.py
         continue-on-error: true

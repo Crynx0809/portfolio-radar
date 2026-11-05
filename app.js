@@ -63,7 +63,7 @@
     document.body.dataset.hor = h;
     document.querySelectorAll('.hor button[data-h], .hz-sw button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.h === h)));
     $('#horNote').textContent = HORTXT[h];
-    const go = () => { renderList(); if (SEL && isDesk()) openSheet(SEL); else if (SEL && !$('#sheet').hidden) refreshSheet(); };
+    const go = () => { renderHello(); renderList(); if (SEL && isDesk()) openSheet(SEL); else if (SEL && !$('#sheet').hidden) refreshSheet(); };
     ensure(h).then(go);
   }
   document.querySelectorAll('.hor button[data-h]').forEach((b) => b.addEventListener('click', () => setHor(b.dataset.h)));
@@ -127,6 +127,7 @@
     up: ['Aufwärtstrend', (r) => r.status === 'trend'],
     down: ['Abwärtstrend', (r) => r.status === 'meiden' || r.lt_view === 'bärisch'],
     hot: ['Dringend', (r) => r.alert === 'hoch'],
+    buy: ['Heute kaufbar', (r) => decide(r, HOR).col === 'g'],
   };
   function ltState(r) {
     const z = ltZone(r), p = r.price;
@@ -265,16 +266,18 @@
     const hot = STOCKS.filter((r) => r.alert === 'hoch'), zone = STOCKS.filter((r) => r.status === 'zone');
     const fg = MARKET && MARKET.fear_greed, Z = TRACK && TRACK.summary;
     const fgl = fg ? (fg.score < 25 ? 'Extreme Angst' : fg.score < 45 ? 'Angst' : fg.score <= 55 ? 'Neutral' : fg.score <= 75 ? 'Gier' : 'Extreme Gier') : '';
-    const nz = Z ? Z.zone_won + Z.zone_lost : 0;
+    // „Heute kaufbar“ = Fazit grün (Zone erreicht, EV ok, Stop nicht im Rauschen) – für die gewählte Ebene
+    const buy = STOCKS.filter((r) => decide(r, HOR).col === 'g').sort((a, b) => (scoreOf(b).total || 0) - (scoreOf(a).total || 0));
     const tile = (ic, l, v, sub, cls, act) => `<button class="k4" ${act || ''}><span class="k4-i">${ic}</span><small>${l}</small><b class="${cls || ''}">${v}</b><em>${sub}</em></button>`;
     $('#kp4').innerHTML =
       tile('⚠️', 'Dringend', hot.length, hot.length ? hot.map((r) => r.ticker).slice(0, 3).join(' · ') : 'alles ruhig', hot.length ? 'down' : '', 'data-go="hot"') +
       tile('🎯', 'In der Zone', zone.length, zone.length ? zone.map((r) => r.ticker).slice(0, 3).join(' · ') : 'gerade keine', zone.length ? 'up' : '', 'data-go="zone"') +
       tile('🌡️', 'Markt', fg ? fg.score : '—', fgl || 'Fear &amp; Greed', fg ? (fg.score < 45 ? 'down' : fg.score > 55 ? 'up' : '') : '') +
-      tile('✓', 'Zonen-Treffer', Z && Z.zone_rate != null ? Math.round(Z.zone_rate * 100) + ' %' : '—', nz ? `aus ${nz} Zonen` : 'Messung läuft', '', 'data-go="analyse"');
+      tile('🟢', 'Heute kaufbar', buy.length, buy.length ? buy.map((r) => r.ticker).slice(0, 3).join(' · ') : 'gerade nichts – abwarten', buy.length ? 'up' : '', 'data-go="buy"');
     $('#kp4').querySelectorAll('[data-go]').forEach((b) => b.onclick = () => {
       const g = b.dataset.go;
       if (g === 'analyse') { location.hash = 'analyse'; return; }
+      if (g === 'buy') { FIL = 'buy'; renderList(); const t = $('.tools'); if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'}); return; }
       const r = (g === 'hot' ? hot : zone)[0]; if (r) openSheet(r.ticker);
     });
   }
@@ -851,7 +854,9 @@
     const s = STATUS[r.status] || {l: r.status, c: 'var(--dim)'};
     const q = PRICES[r.ticker] || {};
     const k = crv(r);
+    const D = decide(r, HOR);
     return `
+      <div class="sbar ${D.col}" aria-hidden="true"><b>${esc(r.ticker)}</b><span class="sp">${money(r.price, r)}</span><span class="sf"><i></i>${esc(D.fz.split(' – ')[0].replace(' (bei Umkehrsignal)', '').replace('Vormerken: Kauf in der Zone mit', 'Vormerken ·').replace('Kaufen mit', 'Kaufen ·'))}</span></div>
       <div class="sh-head"><div><div class="t">${esc(r.ticker)}</div><div class="n">${esc(r.name)} · ${esc(r.sector || '')}</div></div>
         <div class="sh-price"><div class="p" id="${pid}">${money(r.price, r)}</div>
         <div class="c ${q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct != null ? pct(q.chg_pct) : esc(r.chg_note || '')}</div></div></div>
@@ -947,6 +952,7 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     $('#sheetBody').innerHTML = detailHTML(r, 'shP');
     const sh = $('#sheet'), bg = $('#sheetBg');
     sh.hidden = false; bg.hidden = false; sh.scrollTop = 0;
+    if (!sh.dataset.sb) { sh.dataset.sb = 1; sh.addEventListener('scroll', () => { const b = sh.querySelector('.sbar'); if (b) b.classList.toggle('on', sh.scrollTop > 120); }, {passive: true}); }
     document.body.style.overflow = 'hidden';
     anim((g) => {
       g.fromTo(bg, {opacity: 0}, {opacity: 1, duration: .25});
