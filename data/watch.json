@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T21:48:07+00:00",
+ "generated_at": "2026-11-05T08:53:31+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -20,38 +20,35 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.945,
+   "price": 37.475,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2648
+   "gap_to_stop": 0.2492
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 214.3,
+   "price": 217.5,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.2039
+   "gap_to_stop": 0.2219
   }
  ],
  "events": [
   {
-   "ticker": "NOVO-B",
-   "name": "Novo Nordisk B",
+   "ticker": "SAP",
+   "name": "SAP SE",
    "group": "Portfolio",
-   "price": 37.945,
-   "chg_pct": 0.0514,
-   "at": "2026-11-04T21:48+00:00",
-   "id": "NOVO-B-ausbruch-2026-11-04",
+   "price": 217.5,
+   "chg_pct": 0.0149,
+   "at": "2026-11-05T08:53+00:00",
+   "id": "SAP-ausbruch-2026-11-05",
    "type": "ausbruch",
    "level": "mittel",
-   "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
-   "text": "Kurs 37,95 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
+   "title": "SAP SE über der Bestätigungsmarke 217,00 €",
+   "text": "Kurs 217,50 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Über 217 € → Ziel 225–232 € (52-Wochen-Hoch); dort Teilgewinne erwägen."
   }
  ],
- "notified": [
-  "APLD-absturz-2026-11-04",
-  "MRVL-absturz-2026-11-04"
- ]
+ "notified": []
 }
