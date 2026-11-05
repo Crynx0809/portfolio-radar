@@ -1,29 +1,29 @@
 {
- "generated_at": "2026-11-05T21:16:24+00:00",
+ "generated_at": "2026-11-05T21:45:18+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "price": 404.4,
-   "stop": 408,
-   "trigger": 513,
-   "gap_to_stop": -0.0088
+   "stop": 335,
+   "trigger": 456,
+   "gap_to_stop": 0.2072
   },
   {
-   "ticker": "FTNT",
-   "name": "Fortinet",
-   "price": 122.51,
-   "stop": 118,
-   "trigger": 150,
-   "gap_to_stop": 0.0382
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "price": 14.17,
+   "stop": 13.2,
+   "trigger": 20.4,
+   "gap_to_stop": 0.0735
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "price": 133.55,
-   "stop": 144,
-   "trigger": 208,
-   "gap_to_stop": -0.0726
+   "stop": 92,
+   "trigger": 162,
+   "gap_to_stop": 0.4516
   },
   {
    "ticker": "SAP",
@@ -41,27 +41,13 @@
    "group": "Portfolio",
    "price": 404.4,
    "chg_pct": -0.1726,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "AMD-stop-2026-11-05",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Advanced Micro Devices unter dem Stop 408,00 $",
-   "text": "Kurs 404,40 $ (−17,3 % heute) liegt unter deinem Stop 408,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schlusskurs unter 466 $ trotz guter Zahlen → C läuft weiter Richtung 420–445 $; unter 408 $ auch Rest abbauen."
-  },
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 404.4,
-   "chg_pct": -0.1726,
-   "at": "2026-11-05T21:16+00:00",
+   "at": "2026-11-05T21:45+00:00",
    "id": "AMD-absturz-2026-11-05",
    "type": "absturz",
    "level": "hoch",
    "title": "Advanced Micro Devices −17,3 % heute",
    "text": "Starker Tagesverlust auf 404,40 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "−12,3 % auf 428,6 $ im Chip-Ausverkauf – jetzt in 420–445 $ (Ziel der C-Welle aus dem Plan). Rest halten, nicht im Affekt verkaufen; Schluss unter 408 $ → Rest abbauen"
+   "todo": "Schluss 404,4 $ unter dem Stop 408 $ → laut Plan Rest verkaufen. Wiedereinstieg in 360–380 $ (gestaffelt), Stop 335 $, Ziel 470–513 $; über 456 $ Stop auf Einstand"
   },
   {
    "ticker": "APLD",
@@ -69,13 +55,13 @@
    "group": "Portfolio",
    "price": 14.17,
    "chg_pct": -0.1469,
-   "at": "2026-11-05T21:16+00:00",
+   "at": "2026-11-05T21:45+00:00",
    "id": "APLD-absturz-2026-11-05",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −14,7 % heute",
    "text": "Starker Tagesverlust auf 14,17 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "−14,7 % auf 14,17 $ – am Boden der Zone 14–16 $. Nicht aufstocken; Schluss unter 13,2 $ → alles abbauen"
+   "todo": "Halten, nicht aufstocken – Schluss 14,17 $ knapp über dem Stop 13,2 $ (Tief 13,12 $). Schluss unter 13,2 $ → alles verkaufen"
   },
   {
    "ticker": "MRVL",
@@ -83,97 +69,13 @@
    "group": "Portfolio",
    "price": 133.55,
    "chg_pct": -0.1643,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "MRVL-stop-2026-11-05",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Marvell Technology unter dem Stop 144,00 $",
-   "text": "Kurs 133,55 $ (−16,4 % heute) liegt unter deinem Stop 144,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Umkehrsignal in 150–162 $ = mögliche Wiedereinstiegszone; Schlusskurs unter 144 $ → Rest abbauen, großer Trend gebrochen."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 133.55,
-   "chg_pct": -0.1643,
-   "at": "2026-11-05T21:16+00:00",
+   "at": "2026-11-05T21:45+00:00",
    "id": "MRVL-absturz-2026-11-05",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −16,4 % heute",
    "text": "Starker Tagesverlust auf 133,55 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "−11,1 % auf 142,1 $ – unter dem Stop 144 $. Zählt der Schluss: Schluss unter 144 $ → Rest abbauen laut Plan; Neubewertung in der Abendanalyse"
-  },
-  {
-   "ticker": "MELI",
-   "name": "MercadoLibre",
-   "group": "Watchlist",
-   "price": 1530.28,
-   "chg_pct": -0.1205,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "MELI-zone-2026-11-05",
-   "type": "zone",
-   "level": "mittel",
-   "title": "MercadoLibre in der Einstiegszone",
-   "text": "Kurs 1.530 $ ist in die Zone 1.500 $–1.560 $ gelaufen.",
-   "todo": "Zwischen 1.560 und 1.760 $: abwarten."
-  },
-  {
-   "ticker": "NOW",
-   "name": "ServiceNow",
-   "group": "Watchlist",
-   "price": 102.36,
-   "chg_pct": -0.0593,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "NOW-zone-2026-11-05",
-   "type": "zone",
-   "level": "mittel",
-   "title": "ServiceNow in der Einstiegszone",
-   "text": "Kurs 102,36 $ ist in die Zone 98,00 $–107,00 $ gelaufen.",
-   "todo": "98–121,5 $: Bodenbildung beobachten; Einstieg nur mit Umkehrsignal in der Zone."
-  },
-  {
-   "ticker": "META",
-   "name": "Meta Platforms",
-   "group": "Watchlist",
-   "price": 605.08,
-   "chg_pct": -0.0396,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "META-zone-2026-11-05",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Meta Platforms in der Einstiegszone",
-   "text": "Kurs 605,08 $ ist in die Zone 595,00 $–615,00 $ gelaufen.",
-   "todo": "Zwischen 615 und 660 $: abwarten, nicht hinterherkaufen."
-  },
-  {
-   "ticker": "ADBE",
-   "name": "Adobe",
-   "group": "Watchlist",
-   "price": 246.44,
-   "chg_pct": -0.0082,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "ADBE-zone-2026-11-05",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Adobe in der Einstiegszone",
-   "text": "Kurs 246,44 $ ist in die Zone 238,00 $–247,00 $ gelaufen.",
-   "todo": "Zwischen 247 und 272 $: abwarten."
-  },
-  {
-   "ticker": "ZS",
-   "name": "Zscaler",
-   "group": "Watchlist",
-   "price": 203.88,
-   "chg_pct": -0.0916,
-   "at": "2026-11-05T21:16+00:00",
-   "id": "ZS-zone-2026-11-05",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Zscaler in der Einstiegszone",
-   "text": "Kurs 203,88 $ ist in die Zone 196,00 $–212,00 $ gelaufen.",
-   "todo": "Zwischen 212 und 245 $: abwarten."
+   "todo": "Schluss 133,6 $ unter dem Stop 144 $ → laut Plan Rest verkaufen. Kein Wiedereinstieg vor 105–115 $ (gestaffelt), Stop 92 $, Ziel 150–162 $"
   }
  ],
  "notified": [
