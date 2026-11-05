@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_rhm_1105",
+  "date": "2026-11-05",
+  "ticker": "RHM",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Rheinmetall senkt Prognose 2026 erneut – Aktie −16,5 %",
+  "summary": "Trotz voller Auftragsbücher kappt der Rüstungskonzern mit den Q3-Zahlen erneut die Umsatz- und Ergebnisprognose für 2026. Die Aktie fällt auf rund 838 € und damit unter die Elliott-Invalidierung 909 €.",
+  "url": "https://www.handelsblatt.com/unternehmen/industrie/ruestungsindustrie-rheinmetall-senkt-erneut-prognose-aktie-bricht-ein/100267059.html"
+ },
+ {
+  "id": "n_zts_1105",
+  "date": "2026-11-05",
+  "ticker": "ZTS",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Zoetis schlägt die Gewinnerwartung und hebt EPS-Prognose an",
+  "summary": "Bereinigter Gewinn je Aktie im Q3 deutlich über Konsens, Nutztier-Geschäft gleicht schwächeres Heimtier-Geschäft aus. Umsatzprognose 2026 eingeengt, EPS-Prognose angehoben. Kursreaktion zum US-Start abwarten.",
+  "url": "https://www.financialcontent.com/article/bizwire-2026-11-5-zoetis-announces-third-quarter-2026-results-highlights-progress-advancing-innovation-across-diversified-portfolio-and-narrows-full-year-2026-revenue-guidance-raises-full-year-2026-adjusted-eps-guidance"
+ },
+ {
+  "id": "n_mkt_1105",
+  "date": "2026-11-05",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Nasdaq-Futures rund −1 %: Qualcomm-Prognose und Arm belasten Chipwerte, Dow-Futures leicht im Plus",
+  "summary": "Nach der Wahl-Rally kühlt die Stimmung ab. Qualcomm vorbörslich deutlich schwächer nach verhaltenem Ausblick, Arm mit Lizenzerlösen unter den Erwartungen; Kospi −5 %, SK Hynix −9 %. Ölpreis den vierten Tag gefallen.",
+  "url": "https://www.xtb.com/int/market-analysis/news-and-research/what-drives-the-market-top-morning-news-november-5-2026"
+ },
+ {
   "id": "n_mkt_close_1104",
   "date": "2026-11-04",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Eli Lilly: Umsatz +39 %, Prognose angehoben",
   "summary": "Q3-Umsatz 24,4 Mrd $ über Erwartung; Jahresausblick erneut erhöht.",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
- },
- {
-  "id": "n13",
-  "date": "2026-10-29",
-  "ticker": "CAT",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Caterpillar: Beat, aber Aktie ~−9 %",
-  "summary": "EPS 7,20 $ über Erwartung, Rekord-Auftragsbestand 78 Mrd $, aber langsameres Wachstum; seit August über 20 % Minus.",
-  "url": "https://www.tradingpedia.com/2026/10/29/caterpillar-earnings-beat-fails-to-ease-growth-fears/"
- },
- {
-  "id": "n3",
-  "date": "2026-10-28",
-  "ticker": "FTNT",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Fortinet trotz Beat nachbörslich ~−25 %",
-  "summary": "Q3 über Erwartung, Prognose angehoben; Service-Umsatz wächst aber langsamer. Management spricht von Timing-Effekten und Besserung 2027.",
-  "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-fortinet-beats-q3-2026-estimates-but-shares-plunge-93CH-4981034"
- },
- {
-  "id": "n_mbg_1027",
-  "date": "2026-10-27",
-  "ticker": "MBG",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Mercedes-Benz senkt Prognose 2026",
-  "summary": "Pkw-Marge nur noch 2–3 % statt 3–5 %, Konzern-EBIT auf Vorjahresniveau; Gründe: China und höhere Kosten. Q3 (28.10.) operativ leicht über Konsens, Free Cashflow deutlich darunter.",
-  "url": "https://group.mercedes-benz.com/investors/reports-news/ad-hoc/adhoc-release-453568.html"
  }
 ]

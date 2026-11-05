@@ -1,17 +1,5 @@
 [
  {
-  "id": "e8",
-  "date": "2026-11-05",
-  "ticker": "RHM",
-  "event": "Q3-Zahlen"
- },
- {
-  "id": "e_zts_1105",
-  "date": "2026-11-05",
-  "ticker": "ZTS",
-  "event": "Q3-Zahlen (vor US-Start)"
- },
- {
   "id": "e5",
   "date": "2026-11-06",
   "ticker": "Markt",
