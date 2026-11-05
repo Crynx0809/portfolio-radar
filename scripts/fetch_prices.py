@@ -31,6 +31,9 @@ TICKERS = {  # unser Ticker -> (Yahoo-Symbol, Stooq-Symbol, Währung)
     "MU": ("MU", "mu.us", "USD"),
     "TEAM": ("TEAM", "team.us", "USD"),
     "GRAB": ("GRAB", "grab.us", "USD"),
+    "DHER": ("DHER.DE", "dher.de", "EUR"),
+    "CRWD": ("CRWD", "crwd.us", "USD"),
+    "VST": ("VST", "vst.us", "USD"),
 }
 UA = {"User-Agent": "Mozilla/5.0 (portfolio-radar; GitHub Actions)"}
 TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD": "NASDAQ:APLD", "BAC": "NYSE:BAC",
@@ -41,7 +44,7 @@ TV = {"AMD": "NASDAQ:AMD", "GOOGL": "NASDAQ:GOOGL", "AMZN": "NASDAQ:AMZN", "APLD
       "RACE": "NYSE:RACE", "MELI": "NASDAQ:MELI", "RKLB": "NASDAQ:RKLB", "OKLO": "NYSE:OKLO", "HIMS": "NYSE:HIMS",
       "NU": "NYSE:NU", "HOOD": "NASDAQ:HOOD",
       "MBG": "XETR:MBG", "TTD": "NASDAQ:TTD", "NOW": "NYSE:NOW", "MOH": "NYSE:MOH", "NKE": "NYSE:NKE",
-      "META": "NASDAQ:META", "ADBE": "NASDAQ:ADBE", "ZS": "NASDAQ:ZS", "NVDA": "NASDAQ:NVDA", "INTC": "NASDAQ:INTC", "EL": "NYSE:EL", "ZTS": "NYSE:ZTS", "MRNA": "NASDAQ:MRNA", "1810": "HKEX:1810", "BABA": "NYSE:BABA", "MU": "NASDAQ:MU", "TEAM": "NASDAQ:TEAM", "GRAB": "NASDAQ:GRAB"}
+      "META": "NASDAQ:META", "ADBE": "NASDAQ:ADBE", "ZS": "NASDAQ:ZS", "NVDA": "NASDAQ:NVDA", "INTC": "NASDAQ:INTC", "EL": "NYSE:EL", "ZTS": "NYSE:ZTS", "MRNA": "NASDAQ:MRNA", "1810": "HKEX:1810", "BABA": "NYSE:BABA", "MU": "NASDAQ:MU", "TEAM": "NASDAQ:TEAM", "GRAB": "NASDAQ:GRAB", "DHER": "XETR:DHER", "CRWD": "NASDAQ:CRWD", "VST": "NYSE:VST"}
 
 def tradingview():
     body = json.dumps({"symbols": {"tickers": list(TV.values()), "query": {"types": []}},
