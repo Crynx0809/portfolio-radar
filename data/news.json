@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_mkt_chips_1105",
+  "date": "2026-11-05",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip- und KI-Ausverkauf: Nasdaq rund −3,6 %, S&P 500 −2 %",
+  "summary": "Nach dem Demokraten-Sieg im Kongress fürchten Anleger strengere KI-Regeln und einen langsameren Rechenzentrums-Ausbau. AMD fällt rund 13 % trotz Rekordquartal, Nvidia −7 %, Intel −8 %, Broadcom −6 %; Qualcomm nach schwachem Ausblick deutlich im Minus. Stand am Nachmittag (US-Zeit), Schluss steht noch aus.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
+ },
+ {
+  "id": "n_ai_infra_1105",
+  "date": "2026-11-05",
+  "ticker": "MRVL",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Depot: Marvell −11 % unter den Stop, Applied Digital −15 %, AMD −12 %",
+  "summary": "Die KI-Werte im Depot fallen zweistellig im Sog des Chip-Ausverkaufs; eigene Firmennews gab es dafür nicht. Micron −11 %, Rocket Lab −10 %, Oklo −12 % auf der Watchlist ebenfalls schwach.",
+  "url": "https://247wallst.com/investing/2026/11/05/amd-tumbles-13-nvidia-slides-7-as-ai-regulation-fears-hit-chip-stocks-intel-sinks-8/"
+ },
+ {
   "id": "n_rhm_1105",
   "date": "2026-11-05",
   "ticker": "RHM",
@@ -18,16 +38,6 @@
   "headline": "Zoetis schlägt die Gewinnerwartung und hebt EPS-Prognose an",
   "summary": "Bereinigter Gewinn je Aktie im Q3 deutlich über Konsens, Nutztier-Geschäft gleicht schwächeres Heimtier-Geschäft aus. Umsatzprognose 2026 eingeengt, EPS-Prognose angehoben. Kursreaktion zum US-Start abwarten.",
   "url": "https://www.financialcontent.com/article/bizwire-2026-11-5-zoetis-announces-third-quarter-2026-results-highlights-progress-advancing-innovation-across-diversified-portfolio-and-narrows-full-year-2026-revenue-guidance-raises-full-year-2026-adjusted-eps-guidance"
- },
- {
-  "id": "n_mkt_1105",
-  "date": "2026-11-05",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Nasdaq-Futures rund −1 %: Qualcomm-Prognose und Arm belasten Chipwerte, Dow-Futures leicht im Plus",
-  "summary": "Nach der Wahl-Rally kühlt die Stimmung ab. Qualcomm vorbörslich deutlich schwächer nach verhaltenem Ausblick, Arm mit Lizenzerlösen unter den Erwartungen; Kospi −5 %, SK Hynix −9 %. Ölpreis den vierten Tag gefallen.",
-  "url": "https://www.xtb.com/int/market-analysis/news-and-research/what-drives-the-market-top-morning-news-november-5-2026"
  },
  {
   "id": "n_mkt_close_1104",
@@ -287,16 +297,6 @@
   "direction": "negativ",
   "headline": "Nasdaq −1,4 %, Inflation zieht an",
   "summary": "September-PCE bei 3,6 %, Kern-PCE 3,1 %; EZB hält Einlagenzins bei 2,5 %. Die Fed hatte am 28.10. die Zinsen gehalten, Markt preist eher Erhöhungen ein.",
-  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
- },
- {
-  "id": "n5",
-  "date": "2026-10-29",
-  "ticker": "LLY",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Eli Lilly: Umsatz +39 %, Prognose angehoben",
-  "summary": "Q3-Umsatz 24,4 Mrd $ über Erwartung; Jahresausblick erneut erhöht.",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
  }
 ]

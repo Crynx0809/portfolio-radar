@@ -1,5 +1,33 @@
 [
  {
+  "id": "a_mrvl_1105n",
+  "at": "2026-11-05T17:55:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Marvell −11,1 % auf 142,1 $ – unter dem Stop 144 $ und der Invalidierung 146,85 $ (Chip-Ausverkauf nach der Wahl). Es zählt der Schlusskurs: Schluss unter 144 $ → Rest abbauen laut Plan."
+ },
+ {
+  "id": "a_amd_1105n",
+  "at": "2026-11-05T17:55:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "AMD −12,3 % auf 428,6 $ trotz Rekordquartal – Sorge vor KI-Regulierung. Jetzt in 420–445 $, Stop 408 $ rund 5 % entfernt. Nicht im Affekt handeln; Schluss unter 408 $ → Rest abbauen."
+ },
+ {
+  "id": "a_apld_1105n",
+  "at": "2026-11-05T17:55:00+01:00",
+  "ticker": "APLD",
+  "level": "hoch",
+  "text": "Applied Digital −14,7 % auf 14,17 $ – am Boden der Zone 14–16 $, Stop 13,2 $ nur ~7 % entfernt. Nicht aufstocken; Schluss unter 13,2 $ → alles abbauen."
+ },
+ {
+  "id": "a_wl_1105n",
+  "at": "2026-11-05T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Watchlist im Ausverkauf: MercadoLibre −13,2 % auf 1.510 $ (in der Zone 1.500–1.560 $, Ursache unbestätigt), Micron −11,2 % auf 706 $ knapp über dem Stop 705 $, Nvidia −7 % auf 186 $ unter der Zone. Rocket Lab (47 $) und Oklo (19,6 $) unter ihren Stops. Gegenläufig: Xiaomi +8,8 % auf 31,3 HK$ über der Bestätigung 30 HK$."
+ },
+ {
   "id": "a_rhm_1105",
   "at": "2026-11-05T14:25:00+01:00",
   "ticker": "RHM",
@@ -14,32 +42,11 @@
   "text": "Schluss 37,95 € (+5,1 %) über der Bestätigung 37,5 € nach starken Q3-Zahlen und höherer Prognose – der Boden ist wahrscheinlicher. Position halten, nicht hinterherkaufen; Schluss unter 36 € hieße: Ausbruch gescheitert. Ziel 40–42 €."
  },
  {
-  "id": "a_mrvl_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Schluss 159,8 $ (−7,1 %) in der Zone 150–162 $. Stop 178 $ war schon am 2.11. gebrochen (Teilverkauf laut Plan). Rest nur mit Stop 144 $ halten, nicht aufstocken; Umkehrsignal in der Zone abwarten."
- },
- {
-  "id": "a_apld_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "APLD",
-  "level": "hoch",
-  "text": "Schluss 16,61 $ (−6,7 %) – Erholung vom 3.11. weg, KI-Rechenzentrums-Werte nach der Wahl unter Druck. Knapp über der Zone 14–16 $, Stop 13,2 $. Plan (Ausstieg/Reduktion) gilt, erst über 20,4 $ hinfällig."
- },
- {
   "id": "a_amzn_1104e",
   "at": "2026-11-04T22:45:00+01:00",
   "ticker": "AMZN",
   "level": "mittel",
   "text": "Schluss 266,0 $ (+6,1 %) über der Bestätigung 258 $ – der Abwärtsbruch war ein Fehlausbruch. Halten, Ziel 276–287 $; neuer Stop-Vorschlag 228 $ (unter dem Oktober-Tief)."
- },
- {
-  "id": "a_amd_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "AMD",
-  "level": "mittel",
-  "text": "Tageshoch 514,6 $, aber Schluss nur 488,8 $ (+1,0 %) – Bestätigung 513 $ per Schluss nicht erreicht. Rest halten, keine Käufe; unter 466 $ reduzieren/absichern, Zone 420–445 $, Stop 408 $."
  },
  {
   "id": "a_cat_1104e",
