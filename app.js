@@ -697,7 +697,8 @@
   /* ---------- Entscheidung: 3 Fragen + Fazit (unter dem Chart) ----------
      1. Darf ich?  Ausschluss: Zone erreicht? EV ≥ 0? Stop nicht im Rauschen? (Kurs nicht schon unter dem Stop)
      2. Wie viel?  Score = Qualität: ≥ 65 normal, 45–64 halb, < 45 klein; Zahlen in ≤ 5 Tagen oder wenig Daten → eine Stufe kleiner
-     3. Wann?      Timing aus Zone / Bestätigungsmarke
+     3. Einstieg   Kauforders in der Zone (gestaffelt), nicht erst nach Bestätigung
+     4. Halten     Stop, Ziel; Bestätigungsmarke = Stop auf Einstand ziehen
      Fazit:        🔴 Finger weg (EV < −0,05 R, Abwärtstrend, Kurs unter Stop; EV −0,05…0 = gelb „knapp“) · 🟡 Beobachten/Vormerken · 🟢 Kaufen mit … Position */
   function decide(r, lv) {
     const L = lv === 'lang', e = edgeOf(r, lv) || {}, p = r.price, c = (r2) => money(r2, r);
@@ -730,21 +731,29 @@
     if (e.few) { lvl = Math.max(0, lvl - 1); why2.push('wenig Daten'); }
     if (L && r.lt_view === 'spekulativ' && lvl > 0) { lvl -= 1; why2.push('spekulativ'); }
     const size = ['kleiner', 'halber', 'normaler'][lvl];
-    // 3. Wann?
+    // 3. Wann? Die Zone IST der Einstieg (gestaffelte Kauforders) – nicht erst auf eine Bestätigung warten,
+    //    denn die liegt meist schon nahe am Ziel (schlechtes Chance:Risiko). Die Bestätigungsmarke dient nur zum Stop-Nachziehen.
+    const brk = !L && r.entry_type === 'Ausbruch' && p < r.entry_low;
+    const st = L ? r.lt_stop : r.stop, tg = L ? [r.lt_target_low, r.lt_target_high] : [r.target_low, r.target_high];
+    const conf = L ? ((r.ew || {}).lang || {}).up : r.trigger;
+    const steps = z ? [z[1] - (z[1] - z[0]) * .25, z[0] + (z[1] - z[0]) * .25] : null;
+    const stag = steps ? `je die Hälfte bei ${num(steps[0])} und ${c(steps[1])}` : '';
     let when;
     if (down && !L) when = 'Nicht auffangen – erst Bodenbildung abwarten.';
-    else if (!L && r.entry_type === 'Ausbruch' && p < r.entry_low) when = `Erst bei Schlusskurs über ${c(r.entry_low)} (Ausbruch).`;
-    else if (inZ) when = L ? 'Jetzt im Kaufbereich – gestaffelt kaufen, Absicherung per Wochenschluss.' : `Jetzt in der Zone – auf Umkehrsignal warten${r.trigger ? `, bestätigt über ${c(r.trigger)}` : ''}.`;
-    else if (above) when = `Rücksetzer in ${num(z[0])}–${c(z[1])} abwarten (noch ${pct(gap).replace('−', '')} entfernt), nicht hinterherkaufen.`;
-    else when = `Unter der Zone – erst zurück über ${c(z[0])} abwarten.`;
+    else if (brk) when = `Kauf erst bei Schlusskurs über ${c(r.entry_low)} (Ausbruch), dann bis ${c(r.entry_high)} einsteigen.`;
+    else if (inZ) when = z ? `${p > z[1] ? `Kurs knapp über der Zone ${num(z[0])}–${c(z[1])} – Kauforders` : `Jetzt in der Zone ${num(z[0])}–${c(z[1])} kaufen`} – ${p <= steps[0] ? `erste Hälfte jetzt (≈ ${c(p)})` : `erste Hälfte bei ${c(steps[0])}`}, zweite bei ${c(Math.min(p, steps[1]))}.` : 'Jetzt ab Kurs kaufen.';
+    else if (above) when = `Kauforders in die Zone ${num(z[0])}–${c(z[1])} legen (${stag}; noch ${pct(gap).replace('−', '')} entfernt) – nicht hinterherkaufen.`;
+    else when = `Kurs unter der Zone – erst zurück über ${c(z[0])} abwarten.`;
+    // 4. Halten? Absicherung und Ausstieg – wie lange, entscheidet jeder selbst über Stop/Ziel
+    const hold = hard ? 'Kein neuer Einstieg – bestehende Position nach dem Plan unter „Was tun?“ behandeln.' : `Stop ${c(st)}${L ? ' (Wochenschluss)' : ''} · Ziel ${num(tg[0])}–${c(tg[1])}` + (conf && z && conf > z[1] ? ` · Schluss über ${c(conf)} → Stop auf Einstand ziehen` : '');
     // Fazit
     let col, fz;
     if (hard) { col = 'r'; fz = 'Finger weg'; }
     else if (tight) { col = 'a'; fz = 'Beobachten – Stop zu eng, so nicht handeln'; }
     else if (knapp) { col = 'a'; fz = 'Beobachten – Setup lohnt sich historisch nur knapp'; }
-    else if (inZ && !(r.entry_type === 'Ausbruch' && p < r.entry_low)) { col = 'g'; fz = `Kaufen mit ${size} Position${L ? '' : ' (bei Umkehrsignal)'}`; }
-    else { col = 'a'; fz = `Vormerken: Kauf in der Zone mit ${size} Position`; }
-    return {col, fz, a1: pass ? '✓ ' + ok.join(' · ') : '✗ ' + no.join(' · '), a2: `${['Kleine', 'Halbe', 'Normale'][lvl]} Position (Score ${S == null ? '—' : S}${why2.length ? ', ' + why2.join(', ') : ''})`, a3: when};
+    else if (inZ && !brk) { col = 'g'; fz = `Kaufen in der Zone mit ${size} Position`; }
+    else { col = 'a'; fz = brk ? `Vormerken: Kauf erst beim Ausbruch über ${c(r.entry_low)}` : `Vormerken: Kauforder in die Zone mit ${size} Position`; }
+    return {col, fz, a1: pass ? '✓ ' + ok.join(' · ') : '✗ ' + no.join(' · '), a2: `${['Kleine', 'Halbe', 'Normale'][lvl]} Position (Score ${S == null ? '—' : S}${why2.length ? ', ' + why2.join(', ') : ''})`, a3: when, a4: hold};
   }
   function decideHTML(r, lv) {
     const d = decide(r, lv);
@@ -752,7 +761,8 @@
       <div class="dec-f"><span class="dot"></span>${esc(d.fz)}</div>
       <div class="dec-q"><b>Darf ich?</b><span>${esc(d.a1)}</span></div>
       <div class="dec-q"><b>Wie viel?</b><span>${esc(d.a2)}</span></div>
-      <div class="dec-q"><b>Wann?</b><span>${esc(d.a3)}</span></div>
+      <div class="dec-q"><b>Einstieg</b><span>${esc(d.a3)}</span></div>
+      <div class="dec-q"><b>Halten</b><span>${esc(d.a4)}</span></div>
       <small>Regel-Fazit aus Zone, Realitäts-Check und Score – keine Anlageberatung.</small></div>`;
   }
   function ltHTML(r) {
@@ -856,7 +866,7 @@
     const k = crv(r);
     const D = decide(r, HOR);
     return `
-      <div class="sbar ${D.col}" aria-hidden="true"><b>${esc(r.ticker)}</b><span class="sp">${money(r.price, r)}</span><span class="sf"><i></i>${esc(D.fz.split(' – ')[0].replace(' (bei Umkehrsignal)', '').replace('Vormerken: Kauf in der Zone mit', 'Vormerken ·').replace('Kaufen mit', 'Kaufen ·'))}</span></div>
+      <div class="sbar ${D.col}" aria-hidden="true"><b>${esc(r.ticker)}</b><span class="sp">${money(r.price, r)}</span><span class="sf"><i></i>${esc(D.fz.split(' – ')[0].replace(' (bei Umkehrsignal)', '').replace(/Vormerken: Kauforder in die Zone mit (\w+) Position/, 'Vormerken · $1').replace(/Vormerken: Kauf erst beim Ausbruch.*/, 'Vormerken · Ausbruch').replace(/Kaufen in der Zone mit (\w+) Position/, 'Kaufen · $1').replace(/ · (kleiner|halber|normaler)$/, (m, w) => ' · ' + {kleiner: 'klein', halber: 'halb', normaler: 'normal'}[w]))}</span></div>
       <div class="sh-head"><div><div class="t">${esc(r.ticker)}</div><div class="n">${esc(r.name)} · ${esc(r.sector || '')}</div></div>
         <div class="sh-price"><div class="p" id="${pid}">${money(r.price, r)}</div>
         <div class="c ${q.chg_pct >= 0 ? 'up' : 'down'}">${q.chg_pct != null ? pct(q.chg_pct) : esc(r.chg_note || '')}</div></div></div>

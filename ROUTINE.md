@@ -136,6 +136,14 @@ entry_eta_text.
 - entry_low/entry_high: die EINE Einstiegszone; entry_type „Rücksetzer“ oder „Ausbruch“ (Zone über dem Kurs).
 - stop: praktischer Stop knapp unter Zone/relevantem Tief; invalidation = Elliott-Invalidierung; trigger = Bestätigungsmarke.
 - target_low/target_high: nächstes Elliott-Ziel. Chance:Risiko = (target_low − Zonenmitte)/(Zonenmitte − stop), ehrlich auch unter 2.
+- **Einstiegszone = Einstieg (Lenns Regel seit 5.11.26):** Die Zone ist der Bereich, in dem gekauft wird (gestaffelte Kauforders),
+  NICHT ein Bereich, in dem man auf eine Bestätigung wartet. Die Bestätigungsmarke (trigger) liegt meist nahe am Ziel – wer erst dort
+  kauft, hat ein schlechtes Chance:Risiko. trigger heißt daher nur noch: „Schluss über X → Plan bestätigt, Stop auf Einstand ziehen“.
+  action/if_* also so formulieren: „In 82–92 $ kaufen (gestaffelt), Stop 78 $, Ziel 108 $; über 101 $ Stop auf Einstand“ – nicht
+  „Umkehrsignal abwarten“ oder „Einstieg erst über trigger“. Ausnahme: entry_type „Ausbruch“ (Zone liegt über dem Kurs) – dort ist der
+  Schluss über entry_low die Einstiegsbedingung. Wer einem Fall wie einem fallenden Messer nicht traut, setzt status „meiden“ oder
+  eine tiefere Zone – nicht eine Zone plus Wartebedingung. Die Trefferquote (track.py) und der Realitäts-Check (edge.py) messen
+  genau so: Einstieg beim Berühren der Zone.
 - action: eine klare Zeile (Depot: Bedeutung für Lenns Position; Watchlist: Einstiegs-Hinweis). if_up/if_wait/if_down: Wenn-dann-Regeln mit Kursmarken.
 - wave_primary/wave_alt nennen die echten Wendepunkte mit Datum und Kurs aus den Kerzen.
 - **Zeitraum:** nach jeder Analyse `from horizon import estimate` (scripts/horizon.py) mit der Zeile, den ohlc-Kerzen und dem
