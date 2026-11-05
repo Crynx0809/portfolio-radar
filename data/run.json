@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-05T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Ausverkauf trifft das Depot: Marvell −11 % auf 142,1 $ unter dem Stop 144 $, AMD −12 % auf 428,6 $ (Stop 408 $), Applied Digital −15 % auf 14,17 $ (Stop 13,2 $). Auslöser: Sorge vor KI-Regulierung nach dem Demokraten-Sieg. SAP +1,2 % auf 216,8 €, Novo −4,8 % auf 36,13 €.",
-  "market": "Nasdaq rund −3,6 %, S&P 500 −2 %, Dow −0,9 % (Nachmittag US-Zeit). Chips am schwächsten: Nvidia −7 %, Intel −8 %. Öl (WTI) ca. 90 $ (+1,8 %). Kurse: TradingView, Abruf 17:46 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-05T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Schwarzer Donnerstag für KI-Werte: AMD (−17,3 %, 404,4 $) und Marvell (−16,4 %, 133,6 $) schließen unter ihren Stops – laut Plan Rest verkaufen. Applied Digital hält knapp (14,17 $, Stop 13,2 $). Viele Watchlist-Zonen nach unten angepasst; neu: CrowdStrike, Vistra, Delivery Hero.",
+  "market": "Nasdaq rund −5 % (Korrektur), S&P 500 rund −4 %, Halbleiter-Index ca. −10 % – Sorge vor Rechenzentrums-Moratorien nach dem Demokraten-Sieg. Öl (WTI) ca. 90 $. Morgen US-Arbeitsmarktbericht. Kurse: TradingView, Schlusskurse, Abruf 22:33 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

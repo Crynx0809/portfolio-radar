@@ -1,38 +1,52 @@
 [
  {
-  "id": "a_mrvl_1105n",
-  "at": "2026-11-05T17:55:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Marvell −11,1 % auf 142,1 $ – unter dem Stop 144 $ und der Invalidierung 146,85 $ (Chip-Ausverkauf nach der Wahl). Es zählt der Schlusskurs: Schluss unter 144 $ → Rest abbauen laut Plan."
- },
- {
-  "id": "a_amd_1105n",
-  "at": "2026-11-05T17:55:00+01:00",
+  "id": "a_amd_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "AMD −12,3 % auf 428,6 $ trotz Rekordquartal – Sorge vor KI-Regulierung. Jetzt in 420–445 $, Stop 408 $ rund 5 % entfernt. Nicht im Affekt handeln; Schluss unter 408 $ → Rest abbauen."
+  "text": "AMD schließt mit −17,3 % bei 404,4 $ unter dem Stop 408 $ → laut Plan Rest verkaufen. Ursache ist der branchenweite Ausverkauf, nicht AMD selbst. Wiedereinstieg erst in 360–380 $, Stop 335 $, Ziel 470–513 $."
  },
  {
-  "id": "a_apld_1105n",
-  "at": "2026-11-05T17:55:00+01:00",
+  "id": "a_mrvl_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Marvell schließt mit −16,4 % bei 133,6 $ klar unter dem Stop 144 $ → laut Plan Rest verkaufen. Wochenschluss unter 145 $ (Freitag) → großes Ziel wird neu festgelegt. Wiedereinstieg erst in 105–115 $, Stop 92 $."
+ },
+ {
+  "id": "a_apld_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
   "ticker": "APLD",
   "level": "hoch",
-  "text": "Applied Digital −14,7 % auf 14,17 $ – am Boden der Zone 14–16 $, Stop 13,2 $ nur ~7 % entfernt. Nicht aufstocken; Schluss unter 13,2 $ → alles abbauen."
+  "text": "Applied Digital −14,7 % auf 14,17 $ – Tief 13,12 $ lag kurz unter dem Stop, Schluss darüber. Halten, nicht aufstocken (Rechenzentrums-Moratorien treffen das Geschäft direkt); Schluss unter 13,2 $ → alles verkaufen."
  },
  {
-  "id": "a_wl_1105n",
-  "at": "2026-11-05T17:55:00+01:00",
+  "id": "a_ftnt_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
+  "ticker": "FTNT",
+  "level": "mittel",
+  "text": "Fortinet −5,3 % auf 122,5 $ – unter der alten Zone, Stop 118 $ hielt. Zone auf 115–126 $ angepasst, neuer Stop 105 $; über 139,4 $ Stop auf Einstand."
+ },
+ {
+  "id": "a_wl_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Watchlist im Ausverkauf: MercadoLibre −13,2 % auf 1.510 $ (in der Zone 1.500–1.560 $, Ursache unbestätigt), Micron −11,2 % auf 706 $ knapp über dem Stop 705 $, Nvidia −7 % auf 186 $ unter der Zone. Rocket Lab (47 $) und Oklo (19,6 $) unter ihren Stops. Gegenläufig: Xiaomi +8,8 % auf 31,3 HK$ über der Bestätigung 30 HK$."
+  "text": "Watchlist-Pläne nach dem Ausverkauf neu: Micron (656 $, −17,5 %) Zone 560–600 $; Nvidia (181,6 $) Zone 162–170 $; Rocket Lab (46 $) 38–41 $; GE Vernova (770 $) 690–740 $; Caterpillar (554 $) meiden, 500–530 $. In der Zone: MercadoLibre, Meta, Adobe, Zscaler, ServiceNow, Hims, Telekom, Exxon."
+ },
+ {
+  "id": "a_new_1105e",
+  "at": "2026-11-05T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Neu auf der Watchlist: CrowdStrike (217 $, Zone 200–212 $), Vistra (112,9 $, Zahlen 6.11., Zone 100–108 $) und Delivery Hero (36,97 €, Übernahme-Sondersituation: Uber-Angebot 41,50 €)."
  },
  {
   "id": "a_rhm_1105",
   "at": "2026-11-05T14:25:00+01:00",
   "ticker": "RHM",
   "level": "hoch",
-  "text": "Rheinmetall −16,5 % auf 838 € nach erneuter Prognosesenkung – Elliott-Invalidierung 909 € gebrochen, Bodenszenario hinfällig. Nicht kaufen (Watchlist), neue Zählung folgt in der Abendanalyse."
+  "text": "Rheinmetall −16,1 % auf 841,5 € nach erneuter Prognosesenkung – Juni-/Juli-Tiefs (929–936 €) gebrochen. Neu: meiden, erst in 760–800 € kaufen, Stop 720 €. Wochenschluss unter 850 € → großes Ziel wird neu festgelegt."
  },
  {
   "id": "a_novo_1104e",
@@ -49,59 +63,10 @@
   "text": "Schluss 266,0 $ (+6,1 %) über der Bestätigung 258 $ – der Abwärtsbruch war ein Fehlausbruch. Halten, Ziel 276–287 $; neuer Stop-Vorschlag 228 $ (unter dem Oktober-Tief)."
  },
  {
-  "id": "a_cat_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "CAT",
-  "level": "mittel",
-  "text": "Caterpillar −5,2 % auf 591,3 $ – unter die Zone 600–652 $ gefallen, Tief 582,5 $. Meiden; unter 575 $ nächstes Ziel 537 $."
- },
- {
-  "id": "a_xom_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "XOM",
-  "level": "mittel",
-  "text": "Exxon −4,6 % auf 169,3 $ – in der Einstiegszone 160–170 $ (Wächter). Umkehrsignal abwarten, Stop 152 $."
- },
- {
-  "id": "a_gev_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "GEV",
-  "level": "mittel",
-  "text": "GE Vernova −9,3 % auf 832,8 $, Siemens Energy −8,0 % auf 119,5 € – beide in ihren Einstiegszonen, aber kein Umkehrsignal. Nicht ins fallende Messer greifen; Stops 760 $ bzw. 108 €."
- },
- {
   "id": "a_hc_1104e",
   "at": "2026-11-04T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
   "text": "Gesundheitswerte springen nach der Wahl: Moderna +13,1 % (neues Hoch 258,4 $, Zahlen 6.11.), Intuitive Surgical +9,4 %, Molina +8,9 % (knapp über 226 $), Zoetis +7,5 % (Zahlen 5.11.). Nicht hinterherkaufen."
- },
- {
-  "id": "a_mbg_1103e",
-  "at": "2026-11-03T22:50:00+01:00",
-  "ticker": "MBG",
-  "level": "mittel",
-  "text": "Mercedes-Benz 40,48 € in der Einstiegszone 39,5–40,5 € (Wächter-Meldung). Umkehrsignal abwarten, Stop 38,4 €."
- },
- {
-  "id": "a_race_1103e",
-  "at": "2026-11-03T22:50:00+01:00",
-  "ticker": "RACE",
-  "level": "mittel",
-  "text": "Ferrari hebt Prognose an, Aktie 414,8 $ – nahe Ziel 425–437 $. Nicht hinterherkaufen."
- },
- {
-  "id": "a_ftnt_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "FTNT",
-  "level": "mittel",
-  "text": "−7,3 % auf 126,2 $: genau am Zonenboden und am 61,8 %-Rücklauf (126 $). Stop 118 $ rund 6,5 % entfernt."
- },
- {
-  "id": "a_hims_1102e",
-  "at": "2026-11-02T22:55:00+01:00",
-  "ticker": "HIMS",
-  "level": "mittel",
-  "text": "−8,8 % auf 25,2 $, unterer Rand der Spanne 24–32 $. Zahlen am 9.11. abwarten."
  }
 ]

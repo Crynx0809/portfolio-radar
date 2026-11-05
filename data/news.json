@@ -1,23 +1,43 @@
 [
  {
-  "id": "n_mkt_chips_1105",
+  "id": "n_mkt_close_1105",
   "date": "2026-11-05",
   "ticker": "Markt",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Chip- und KI-Ausverkauf: Nasdaq rund −3,6 %, S&P 500 −2 %",
-  "summary": "Nach dem Demokraten-Sieg im Kongress fürchten Anleger strengere KI-Regeln und einen langsameren Rechenzentrums-Ausbau. AMD fällt rund 13 % trotz Rekordquartal, Nvidia −7 %, Intel −8 %, Broadcom −6 %; Qualcomm nach schwachem Ausblick deutlich im Minus. Stand am Nachmittag (US-Zeit), Schluss steht noch aus.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-5-dow-sp-500-nasdaq-oil-rises-chip-stocks-141439950.html"
+  "headline": "KI-Ausverkauf: Nasdaq rund −5 %, S&P 500 rund −4 %, Halbleiter-Index ca. −10 %",
+  "summary": "Schlechtester Nasdaq-Tag seit April 2025, Nasdaq rutscht in die Korrektur (−10 % vom Hoch). Auslöser: Sorge vor Baustopps für Rechenzentren nach dem Demokraten-Sieg (u. a. neue Gouverneurin in Texas will ein Moratorium, viele lokale Abstimmungen gegen Rechenzentren angenommen) und Abbau von Gewinner-Positionen durch Hedgefonds. Basiskonsum und Berkshire (Rekordhoch) gefragt. Werte aus dem Handelsverlauf, offizielle Schlussstände nicht geprüft.",
+  "url": "https://fortune.com/2026/11/05/wall-street-drop-off-tech-ai-plunge-2-trillion/"
  },
  {
-  "id": "n_ai_infra_1105",
+  "id": "n_chips_close_1105",
   "date": "2026-11-05",
-  "ticker": "MRVL",
+  "ticker": "AMD",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Depot: Marvell −11 % unter den Stop, Applied Digital −15 %, AMD −12 %",
-  "summary": "Die KI-Werte im Depot fallen zweistellig im Sog des Chip-Ausverkaufs; eigene Firmennews gab es dafür nicht. Micron −11 %, Rocket Lab −10 %, Oklo −12 % auf der Watchlist ebenfalls schwach.",
-  "url": "https://247wallst.com/investing/2026/11/05/amd-tumbles-13-nvidia-slides-7-as-ai-regulation-fears-hit-chip-stocks-intel-sinks-8/"
+  "headline": "Depot: AMD −17,3 % und Marvell −16,4 % schließen unter ihren Stops, Applied Digital −14,7 %",
+  "summary": "AMD schließt bei 404,4 $ (Stop 408 $), Marvell bei 133,6 $ (Stop 144 $). Applied Digital hält mit 14,17 $ knapp den Stop 13,2 $. Auch Micron −17,5 %, Nvidia −9,3 %, Intel −10 %. AMD-Chefin Lisa Su nennt die Reaktion „kurzsichtig“.",
+  "url": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
+ },
+ {
+  "id": "n_zts_1105",
+  "date": "2026-11-05",
+  "ticker": "ZTS",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Zoetis: Q3-Umsatz −1 %, Haustier-Geschäft in den USA −8 % – Aktie −7,9 %",
+  "summary": "Umsatz 2,39 Mrd. $ (−1 %), bereinigter Gewinn je Aktie 1,75 $ (+3 %). Die Gewinnprognose 2026 wurde auf 6,25–6,35 $ angehoben, die Umsatzprognose eingeengt. Belastend: US-Haustiersparte −8 %.",
+  "url": "https://www.sec.gov/Archives/edgar/data/0001555280/000155528026000048/exhibit99q32026.htm"
+ },
+ {
+  "id": "n_vst_1105",
+  "date": "2026-11-05",
+  "ticker": "VST",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Vistra in zwei Tagen ca. −20 % auf 112,9 $ – Texas-Moratorium für Rechenzentren befürchtet",
+  "summary": "Der texanische Stromerzeuger galt als Gewinner des KI-Strombedarfs. Nach dem Wahlsieg der Demokratin Hinojosa, die neue Rechenzentren stoppen will, bricht die Aktie ein. Zahlen laut Ankündigung am 6.11. (unbestätigt).",
+  "url": "https://fortune.com/2026/11/05/wall-street-drop-off-tech-ai-plunge-2-trillion/"
  },
  {
   "id": "n_rhm_1105",
@@ -28,16 +48,6 @@
   "headline": "Rheinmetall senkt Prognose 2026 erneut – Aktie −16,5 %",
   "summary": "Trotz voller Auftragsbücher kappt der Rüstungskonzern mit den Q3-Zahlen erneut die Umsatz- und Ergebnisprognose für 2026. Die Aktie fällt auf rund 838 € und damit unter die Elliott-Invalidierung 909 €.",
   "url": "https://www.handelsblatt.com/unternehmen/industrie/ruestungsindustrie-rheinmetall-senkt-erneut-prognose-aktie-bricht-ein/100267059.html"
- },
- {
-  "id": "n_zts_1105",
-  "date": "2026-11-05",
-  "ticker": "ZTS",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Zoetis schlägt die Gewinnerwartung und hebt EPS-Prognose an",
-  "summary": "Bereinigter Gewinn je Aktie im Q3 deutlich über Konsens, Nutztier-Geschäft gleicht schwächeres Heimtier-Geschäft aus. Umsatzprognose 2026 eingeengt, EPS-Prognose angehoben. Kursreaktion zum US-Start abwarten.",
-  "url": "https://www.financialcontent.com/article/bizwire-2026-11-5-zoetis-announces-third-quarter-2026-results-highlights-progress-advancing-innovation-across-diversified-portfolio-and-narrows-full-year-2026-revenue-guidance-raises-full-year-2026-adjusted-eps-guidance"
  },
  {
   "id": "n_mkt_close_1104",
@@ -288,15 +298,5 @@
   "headline": "Amazon nachbörslich schwächer nach Q3",
   "summary": "Umsatz knapp unter Konsens, EPS-Miss; AWS +39 % stark, aber Capex 2026 ~220 Mrd $ und mehr in 2027. Aktie schloss −4,3 % und fiel nachbörslich weiter.",
   "url": "https://www.marketbeat.com/earnings/reports/2026-10-29-amazoncom-inc-stock/"
- },
- {
-  "id": "n4",
-  "date": "2026-10-29",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Nasdaq −1,4 %, Inflation zieht an",
-  "summary": "September-PCE bei 3,6 %, Kern-PCE 3,1 %; EZB hält Einlagenzins bei 2,5 %. Die Fed hatte am 28.10. die Zinsen gehalten, Markt preist eher Erhöhungen ein.",
-  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262255000-us-stock-nasdaq-drop-alphabet-microsoft-neoclouds-lumentum-marvell-tradingkey"
  }
 ]

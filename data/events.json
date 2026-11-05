@@ -12,6 +12,12 @@
   "event": "Q3-Zahlen"
  },
  {
+  "id": "e_vst_1106",
+  "date": "2026-11-06",
+  "ticker": "VST",
+  "event": "Q3-Zahlen (unbestätigt)"
+ },
+ {
   "id": "e10",
   "date": "2026-11-09",
   "ticker": "HIMS",
@@ -22,6 +28,18 @@
   "date": "2026-11-09",
   "ticker": "TTD",
   "event": "Q3-Zahlen nach US-Schluss"
+ },
+ {
+  "id": "e_dher_1110",
+  "date": "2026-11-10",
+  "ticker": "DHER",
+  "event": "Ergebnis der Annahmefrist Uber-Angebot (ungefähr, unbestätigt)"
+ },
+ {
+  "id": "e_crwd_1201",
+  "date": "2026-12-01",
+  "ticker": "CRWD",
+  "event": "Q3-Zahlen (Anfang Dez., unbestätigt)"
  },
  {
   "id": "e6",
