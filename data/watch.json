@@ -1,54 +1,134 @@
 {
- "generated_at": "2026-11-05T08:53:31+00:00",
+ "generated_at": "2026-11-05T15:26:39+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 488.78,
+   "price": 424.4751,
    "stop": 408,
    "trigger": 513,
-   "gap_to_stop": 0.198
+   "gap_to_stop": 0.0404
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 159.8,
+   "price": 142.61,
    "stop": 144,
    "trigger": 208,
-   "gap_to_stop": 0.1097
-  },
-  {
-   "ticker": "NOVO-B",
-   "name": "Novo Nordisk B",
-   "price": 37.475,
-   "stop": 30,
-   "trigger": 37.5,
-   "gap_to_stop": 0.2492
+   "gap_to_stop": -0.0097
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 217.5,
+   "price": 216.65,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.2219
+   "gap_to_stop": 0.2171
   }
  ],
  "events": [
   {
-   "ticker": "SAP",
-   "name": "SAP SE",
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 217.5,
-   "chg_pct": 0.0149,
-   "at": "2026-11-05T08:53+00:00",
-   "id": "SAP-ausbruch-2026-11-05",
-   "type": "ausbruch",
+   "price": 424.4751,
+   "chg_pct": -0.1316,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "AMD-absturz-2026-11-05",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Advanced Micro Devices −13,2 % heute",
+   "text": "Starker Tagesverlust auf 424,48 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Schluss 488,8 $: Tageshoch 514,6 $ kurz über 513 $, aber Schlusskurs darunter – Bestätigung nicht erreicht. Rest halten, keine Käufe; unter 466 $ gilt der Plan reduzieren/absichern"
+  },
+  {
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "group": "Portfolio",
+   "price": 14.3303,
+   "chg_pct": -0.1372,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "APLD-absturz-2026-11-05",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Applied Digital −13,7 % heute",
+   "text": "Starker Tagesverlust auf 14,33 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Schluss 16,61 $ (−6,7 %) knapp über der Zone 14–16 $ – Plan (Ausstieg/Reduktion nach Stop-Bruch am 2.11.) erst über 20,4 $ hinfällig; nicht aufstocken"
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "group": "Portfolio",
+   "price": 142.61,
+   "chg_pct": -0.1076,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "MRVL-stop-2026-11-05",
+   "type": "stop",
+   "level": "hoch",
+   "title": "Marvell Technology unter dem Stop 144,00 $",
+   "text": "Kurs 142,61 $ (−10,8 % heute) liegt unter deinem Stop 144,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "todo": "Umkehrsignal in 150–162 $ = mögliche Wiedereinstiegszone; Schlusskurs unter 144 $ → Rest abbauen, großer Trend gebrochen."
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "group": "Portfolio",
+   "price": 142.61,
+   "chg_pct": -0.1076,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "MRVL-absturz-2026-11-05",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Marvell Technology −10,8 % heute",
+   "text": "Starker Tagesverlust auf 142,61 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Schluss 159,8 $ (−7,1 %) in der Zone 150–162 $ – Stop 178 $ war schon am 2.11. gebrochen (Teilverkauf laut Plan). Rest nur mit Stop 144 $ halten, nicht aufstocken"
+  },
+  {
+   "ticker": "NOW",
+   "name": "ServiceNow",
+   "group": "Watchlist",
+   "price": 104.27,
+   "chg_pct": -0.0417,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "NOW-zone-2026-11-05",
+   "type": "zone",
    "level": "mittel",
-   "title": "SAP SE über der Bestätigungsmarke 217,00 €",
-   "text": "Kurs 217,50 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Über 217 € → Ziel 225–232 € (52-Wochen-Hoch); dort Teilgewinne erwägen."
+   "title": "ServiceNow in der Einstiegszone",
+   "text": "Kurs 104,27 $ ist in die Zone 98,00 $–107,00 $ gelaufen.",
+   "todo": "98–121,5 $: Bodenbildung beobachten; Einstieg nur mit Umkehrsignal in der Zone."
+  },
+  {
+   "ticker": "META",
+   "name": "Meta Platforms",
+   "group": "Watchlist",
+   "price": 600.0032,
+   "chg_pct": -0.0476,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "META-zone-2026-11-05",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Meta Platforms in der Einstiegszone",
+   "text": "Kurs 600,00 $ ist in die Zone 595,00 $–615,00 $ gelaufen.",
+   "todo": "Zwischen 615 und 660 $: abwarten, nicht hinterherkaufen."
+  },
+  {
+   "ticker": "ZS",
+   "name": "Zscaler",
+   "group": "Watchlist",
+   "price": 207.85,
+   "chg_pct": -0.0739,
+   "at": "2026-11-05T15:26+00:00",
+   "id": "ZS-zone-2026-11-05",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Zscaler in der Einstiegszone",
+   "text": "Kurs 207,85 $ ist in die Zone 196,00 $–212,00 $ gelaufen.",
+   "todo": "Zwischen 212 und 245 $: abwarten."
   }
  ],
- "notified": []
+ "notified": [
+  "AMD-absturz-2026-11-05",
+  "APLD-absturz-2026-11-05",
+  "MRVL-stop-2026-11-05"
+ ]
 }
