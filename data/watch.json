@@ -1,29 +1,37 @@
 {
- "generated_at": "2026-11-06T15:50:14+00:00",
+ "generated_at": "2026-11-06T17:43:46+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 438.83,
+   "price": 443.26,
    "stop": 335,
    "trigger": 456,
-   "gap_to_stop": 0.3099
+   "gap_to_stop": 0.3232
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 14.83,
+   "price": 15.635,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.1235
+   "gap_to_stop": 0.1845
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 136.93,
+   "price": 138.77,
    "stop": 92,
    "trigger": 162,
-   "gap_to_stop": 0.4884
+   "gap_to_stop": 0.5084
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 210.75,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.184
   }
  ],
  "events": [
@@ -31,14 +39,14 @@
    "ticker": "ZTS",
    "name": "Zoetis",
    "group": "Watchlist",
-   "price": 79.775,
-   "chg_pct": -0.0284,
-   "at": "2026-11-06T15:50+00:00",
+   "price": 78.89,
+   "chg_pct": -0.0392,
+   "at": "2026-11-06T17:43+00:00",
    "id": "ZTS-zone-2026-11-06",
    "type": "zone",
    "level": "mittel",
    "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 79,78 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "text": "Kurs 78,89 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
    "todo": "Zwischen 82 und 92 $: abwarten."
   }
  ],
