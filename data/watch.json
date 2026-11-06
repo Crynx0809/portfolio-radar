@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T21:45:18+00:00",
+ "generated_at": "2026-11-06T08:50:58+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -28,10 +28,10 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 215.75,
+   "price": 212.2,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.2121
+   "gap_to_stop": 0.1921
   }
  ],
  "events": [
@@ -41,8 +41,8 @@
    "group": "Portfolio",
    "price": 404.4,
    "chg_pct": -0.1726,
-   "at": "2026-11-05T21:45+00:00",
-   "id": "AMD-absturz-2026-11-05",
+   "at": "2026-11-06T08:50+00:00",
+   "id": "AMD-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
    "title": "Advanced Micro Devices −17,3 % heute",
@@ -55,8 +55,8 @@
    "group": "Portfolio",
    "price": 14.17,
    "chg_pct": -0.1469,
-   "at": "2026-11-05T21:45+00:00",
-   "id": "APLD-absturz-2026-11-05",
+   "at": "2026-11-06T08:50+00:00",
+   "id": "APLD-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −14,7 % heute",
@@ -69,8 +69,8 @@
    "group": "Portfolio",
    "price": 133.55,
    "chg_pct": -0.1643,
-   "at": "2026-11-05T21:45+00:00",
-   "id": "MRVL-absturz-2026-11-05",
+   "at": "2026-11-06T08:50+00:00",
+   "id": "MRVL-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −16,4 % heute",
@@ -79,8 +79,8 @@
   }
  ],
  "notified": [
-  "AMD-absturz-2026-11-05",
-  "APLD-absturz-2026-11-05",
-  "MRVL-stop-2026-11-05"
+  "AMD-absturz-2026-11-06",
+  "APLD-absturz-2026-11-06",
+  "MRVL-absturz-2026-11-06"
  ]
 }
