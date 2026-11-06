@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_depot_1106m",
+  "at": "2026-11-06T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Erholung im Depot: AMD +10,2 % (445,6 $, Bestätigung 456 $), Applied Digital +8,9 % (15,43 $, in der Zone, Stop 13,2 $), Marvell +4,6 % (139,7 $). Kein Stop neu gebrochen. Für AMD/Marvell gilt weiter der Plan von gestern; der Freitags-Schluss entscheidet (Marvell: Wochenschluss unter 145 $ → großes Ziel neu)."
+ },
+ {
+  "id": "a_wl_1106m",
+  "at": "2026-11-06T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Watchlist: Zoetis (79,8 $) in der Zone 78–82 $ (Wächter), Moderna +8,2 % über der Bestätigung 254,5 $, Vistra +9,9 % nahe 128 $, Oklo +21 % an der Marke 23,5 $. Nicht hinterherkaufen."
+ },
+ {
   "id": "a_amd_1105e",
   "at": "2026-11-05T22:45:00+01:00",
   "ticker": "AMD",
@@ -71,9 +85,9 @@
  },
  {
   "id": "a_team_1106",
-  "at": "2026-11-06T14:30:00+01:00",
+  "at": "2026-11-06T17:55:00+01:00",
   "ticker": "TEAM",
   "level": "mittel",
-  "text": "Atlassian vorbörslich ca. −14 bis −16 % (um 155–158 $) nach schwachem Abo-Ausblick – unter der Zone 168–178 $ und am Stop 158 $. Nicht in den Fall kaufen; Schluss unter 158 $ → Plan ungültig, Abendanalyse legt ihn neu fest."
+  "text": "Atlassian ca. −13,8 % auf 158,07 $ nach schwachem Abo-Ausblick – genau am Stop 158 $, unter der Zone 168–178 $. Nicht in den Fall kaufen; Schluss unter 158 $ → Plan ungültig, Abendanalyse legt ihn neu fest."
  }
 ]
