@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T08:50:58+00:00",
+ "generated_at": "2026-11-06T10:57:38+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -24,14 +24,6 @@
    "stop": 92,
    "trigger": 162,
    "gap_to_stop": 0.4516
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "price": 212.2,
-   "stop": 178,
-   "trigger": 217,
-   "gap_to_stop": 0.1921
   }
  ],
  "events": [
@@ -41,7 +33,7 @@
    "group": "Portfolio",
    "price": 404.4,
    "chg_pct": -0.1726,
-   "at": "2026-11-06T08:50+00:00",
+   "at": "2026-11-06T10:57+00:00",
    "id": "AMD-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
@@ -55,7 +47,7 @@
    "group": "Portfolio",
    "price": 14.17,
    "chg_pct": -0.1469,
-   "at": "2026-11-06T08:50+00:00",
+   "at": "2026-11-06T10:57+00:00",
    "id": "APLD-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
@@ -69,7 +61,7 @@
    "group": "Portfolio",
    "price": 133.55,
    "chg_pct": -0.1643,
-   "at": "2026-11-06T08:50+00:00",
+   "at": "2026-11-06T10:57+00:00",
    "id": "MRVL-absturz-2026-11-06",
    "type": "absturz",
    "level": "hoch",
