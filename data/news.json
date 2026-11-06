@@ -5,8 +5,8 @@
   "ticker": "Markt",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "Starker US-Arbeitsmarkt (+165.000 Stellen, Quote 4,1 %) und Erholung der Chipwerte: Nasdaq ca. +1,5 bis +1,9 %, Halbleiter-Index ca. +4 %",
-  "summary": "Im Oktober entstanden deutlich mehr Stellen als erwartet (ca. 65.000–70.000), die Arbeitslosenquote fiel auf 4,1 %, die Löhne stiegen um 0,4 %. Die Renditen zogen an; eine Zinserhöhung im Dezember bleibt im Gespräch. Nach dem Ausverkauf vom Donnerstag erholten sich Chipwerte: AMD ca. +10 %, Nvidia ca. +4 %, Micron ca. +6 %. Der Dow lag kaum verändert.",
+  "headline": "Starker US-Arbeitsmarkt (+165.000 Stellen) und Erholung der Chipwerte: Nasdaq 100 +1,4 %, S&P 500 +0,3 %; DAX −1,9 %",
+  "summary": "Nach dem Ausverkauf vom Donnerstag erholten sich KI- und Chipwerte (AMD +11 %, Marvell +5,7 %, Micron +5,1 %). Auf Wochensicht bleibt der Nasdaq 100 rund −4,9 % im Minus; VIX fällt auf 25,6. In Europa Verluste, DAX −1,9 %.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
  },
  {
@@ -15,7 +15,7 @@
   "ticker": "MRNA",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "Moderna am Zahlentag ca. +8 % auf rund 261 $ – neues Hoch über der Bestätigung 254,5 $",
+  "headline": "Moderna am Zahlentag +5,3 % auf 254,2 $ – im Handel neues Hoch, Schluss knapp unter der Bestätigung 254,5 $",
   "summary": "Moderna legte nach den Quartalszahlen kräftig zu und schloss die Lücke zum Hoch vom 4.11. Details zu den Zahlen folgen in der Abendanalyse. Watchlist-Zone 180–200 $ liegt weit unter dem Kurs – nicht hinterherkaufen.",
   "url": "https://www.benzinga.com/trading-ideas/movers/26/11/62988477/moderna-jfrog-transmedics-ubiquiti-and-other-big-stocks-moving-higher-on-friday"
  },
@@ -25,7 +25,7 @@
   "ticker": "VST",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "Vistra nach Q3-Zahlen ca. +10 % auf rund 124 $ – Erholung nach dem Moratoriums-Ausverkauf",
+  "headline": "Vistra nach Q3-Zahlen +10,5 % auf 124,8 $ – Erholung nach dem Moratoriums-Ausverkauf",
   "summary": "Vistra legte nach den Quartalszahlen deutlich zu und holte einen Teil des Einbruchs der Vortage auf. Der Kurs nähert sich der Bestätigungsmarke 128 $; die Zone 100–108 $ liegt klar darunter.",
   "url": "https://www.sec.gov/Archives/edgar/data/0001692819/000169281926000023/vistra-20260930xearningsre.htm"
  },
@@ -35,7 +35,7 @@
   "ticker": "TEAM",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Atlassian: Q1 über den Erwartungen, aber schwächerer Ausblick fürs Abo-Wachstum – Aktie ca. −14 % auf rund 158 $",
+  "headline": "Atlassian: Q1 über den Erwartungen, aber schwächerer Ausblick fürs Abo-Wachstum – Aktie −16,2 % auf 153,7 $",
   "summary": "Umsatz und Gewinn lagen über den Schätzungen, doch der Ausblick für das Cloud-/Abo-Wachstum enttäuschte. Vorbörslich notiert die Aktie damit um 155–158 $ und damit unter der Einstiegszone 168–178 $ und am Stop 158 $ (Schluss Donnerstag 183,29 $). Entscheidend ist der Schlusskurs heute.",
   "url": "https://uk.finance.yahoo.com/news/atlassian-tumbles-16-weaker-subscription-214811605.html"
  },

@@ -1,17 +1,24 @@
 [
  {
-  "id": "a_depot_1106m",
-  "at": "2026-11-06T17:55:00+01:00",
+  "id": "a_depot_1106e",
+  "at": "2026-11-06T22:45:00+01:00",
   "ticker": "Depot",
   "level": "mittel",
-  "text": "Erholung im Depot: AMD +10,2 % (445,6 $, Bestätigung 456 $), Applied Digital +8,9 % (15,43 $, in der Zone, Stop 13,2 $), Marvell +4,6 % (139,7 $). Kein Stop neu gebrochen. Für AMD/Marvell gilt weiter der Plan von gestern; der Freitags-Schluss entscheidet (Marvell: Wochenschluss unter 145 $ → großes Ziel neu)."
+  "text": "Wochenschluss Depot: kein Stop neu gebrochen. AMD 449 $ (+11 %) knapp unter der Bestätigung 456 $; Applied Digital 15,55 $ und Fortinet 118,8 $ in ihren Zonen. Marvell schließt die Woche bei 141,2 $ unter 145 $ → großes Ziel neu: 230–290 $, Absicherung 100 $ (Wiedereinstieg kurz weiter erst in 105–115 $)."
  },
  {
-  "id": "a_wl_1106m",
-  "at": "2026-11-06T17:55:00+01:00",
+  "id": "a_team_1106e",
+  "at": "2026-11-06T22:45:00+01:00",
+  "ticker": "TEAM",
+  "level": "mittel",
+  "text": "Atlassian schließt nach den Zahlen −16,2 % bei 153,7 $ unter dem Stop 158 $. Die alte Zone 168–178 $ wurde nie erreicht – kein Kauf. Neuer Plan: meiden, Zone 133–142 $ (61,8 %), Stop 124 $, Ziel 175–190 $."
+ },
+ {
+  "id": "a_wl_1106e",
+  "at": "2026-11-06T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Watchlist: Zoetis (79,8 $) in der Zone 78–82 $ (Wächter), Moderna +8,2 % über der Bestätigung 254,5 $, Vistra +9,9 % nahe 128 $, Oklo +21 % an der Marke 23,5 $. Nicht hinterherkaufen."
+  "text": "Alte Ziele erreicht, neue Ziele gesetzt: Rocket Lab (53,1 $) 61–70 $, Oklo (23,6 $) 30–35 $, Vistra (124,8 $) 140–152 $, Micron (690 $) 850–990 $ – jeweils nur für Käufe in der Zone, nicht hinterherkaufen. Rheinmetall (812,7 €) war mit 798 € kurz in der Zone 760–800 €, aber ohne Umkehrsignal; großes Ziel neu (1.150–1.330 €, Absicherung 640 €). Zoetis 79,4 $ in der Zone 78–82 $."
  },
  {
   "id": "a_amd_1105e",
@@ -82,12 +89,5 @@
   "ticker": "Watchlist",
   "level": "mittel",
   "text": "Gesundheitswerte springen nach der Wahl: Moderna +13,1 % (neues Hoch 258,4 $, Zahlen 6.11.), Intuitive Surgical +9,4 %, Molina +8,9 % (knapp über 226 $), Zoetis +7,5 % (Zahlen 5.11.). Nicht hinterherkaufen."
- },
- {
-  "id": "a_team_1106",
-  "at": "2026-11-06T17:55:00+01:00",
-  "ticker": "TEAM",
-  "level": "mittel",
-  "text": "Atlassian ca. −13,8 % auf 158,07 $ nach schwachem Abo-Ausblick – genau am Stop 158 $, unter der Zone 168–178 $. Nicht in den Fall kaufen; Schluss unter 158 $ → Plan ungültig, Abendanalyse legt ihn neu fest."
  }
 ]

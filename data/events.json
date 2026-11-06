@@ -1,23 +1,5 @@
 [
  {
-  "id": "e5",
-  "date": "2026-11-06",
-  "ticker": "Markt",
-  "event": "US-Arbeitsmarktbericht Oktober"
- },
- {
-  "id": "e_mrna_1106",
-  "date": "2026-11-06",
-  "ticker": "MRNA",
-  "event": "Q3-Zahlen"
- },
- {
-  "id": "e_vst_1106",
-  "date": "2026-11-06",
-  "ticker": "VST",
-  "event": "Q3-Zahlen (unbestätigt)"
- },
- {
   "id": "e10",
   "date": "2026-11-09",
   "ticker": "HIMS",

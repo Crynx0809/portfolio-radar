@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-06T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Starker Arbeitsmarktbericht und Erholung der Chipwerte: AMD +10 %, Applied Digital +9 %, Marvell +5 % – kein Depot-Stop neu gebrochen, Plan von gestern gilt. Atlassian −14 % genau am Stop 158 $; Moderna (+8 %) und Vistra (+10 %) nach Zahlen fest.",
-  "market": "US-Stellen Oktober +165.000 (erwartet ca. 65.000–70.000), Quote 4,1 %. Nasdaq ca. +1,5 bis +1,9 %, S&P 500 ca. +0,8 bis +1 %, Dow kaum verändert; Halbleiter-Index ca. +4 %. Europa schwächer (SAP −2,5 %, Allianz −3,4 %, Rheinmetall −3,3 %). Kurse: TradingView, Abruf 17:47 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-06T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Erholungstag nach dem KI-Ausverkauf: AMD +11 % (449 $), Marvell +5,7 %, Applied Digital +9,7 % – kein Depot-Stop neu gebrochen. Marvell und Rheinmetall schließen die Woche unter ihrer langfristigen Absicherung, die großen Ziele sind neu gesetzt. Atlassian nach Zahlen −16 % unter den Stop, neuer Plan 133–142 $.",
+  "market": "Nasdaq 100 +1,4 % (Woche −4,9 %), S&P 500 +0,3 % (Woche −2,7 %), DAX −1,9 %. VIX 25,6, US-Zins 10 J. 4,86 %, Brent 97,8 $. Starker Arbeitsmarkt (+165.000 Stellen). Kurse: TradingView-Schluss, Abruf 22:32 Uhr.",
+  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
  }
 ]
