@@ -1,73 +1,53 @@
 {
- "generated_at": "2026-11-06T10:57:38+00:00",
+ "generated_at": "2026-11-06T14:59:04+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 404.4,
+   "price": 452.02,
    "stop": 335,
    "trigger": 456,
-   "gap_to_stop": 0.2072
+   "gap_to_stop": 0.3493
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 14.17,
+   "price": 15.33,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.0735
+   "gap_to_stop": 0.1614
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 133.55,
+   "price": 144.28,
    "stop": 92,
    "trigger": 162,
-   "gap_to_stop": 0.4516
+   "gap_to_stop": 0.5683
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 210.5,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.1826
   }
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 404.4,
-   "chg_pct": -0.1726,
-   "at": "2026-11-06T10:57+00:00",
-   "id": "AMD-absturz-2026-11-06",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Advanced Micro Devices −17,3 % heute",
-   "text": "Starker Tagesverlust auf 404,40 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Schluss 404,4 $ unter dem Stop 408 $ → laut Plan Rest verkaufen. Wiedereinstieg in 360–380 $ (gestaffelt), Stop 335 $, Ziel 470–513 $; über 456 $ Stop auf Einstand"
-  },
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 14.17,
-   "chg_pct": -0.1469,
-   "at": "2026-11-06T10:57+00:00",
-   "id": "APLD-absturz-2026-11-06",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Applied Digital −14,7 % heute",
-   "text": "Starker Tagesverlust auf 14,17 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Halten, nicht aufstocken – Schluss 14,17 $ knapp über dem Stop 13,2 $ (Tief 13,12 $). Schluss unter 13,2 $ → alles verkaufen"
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 133.55,
-   "chg_pct": -0.1643,
-   "at": "2026-11-06T10:57+00:00",
-   "id": "MRVL-absturz-2026-11-06",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Marvell Technology −16,4 % heute",
-   "text": "Starker Tagesverlust auf 133,55 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Schluss 133,6 $ unter dem Stop 144 $ → laut Plan Rest verkaufen. Kein Wiedereinstieg vor 105–115 $ (gestaffelt), Stop 92 $, Ziel 150–162 $"
+   "ticker": "ZTS",
+   "name": "Zoetis",
+   "group": "Watchlist",
+   "price": 79.97,
+   "chg_pct": -0.0261,
+   "at": "2026-11-06T14:59+00:00",
+   "id": "ZTS-zone-2026-11-06",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Zoetis in der Einstiegszone",
+   "text": "Kurs 79,97 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "todo": "Zwischen 82 und 92 $: abwarten."
   }
  ],
  "notified": [
