@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-05T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Schwarzer Donnerstag für KI-Werte: AMD (−17,3 %, 404,4 $) und Marvell (−16,4 %, 133,6 $) schließen unter ihren Stops – laut Plan Rest verkaufen. Applied Digital hält knapp (14,17 $, Stop 13,2 $). Viele Watchlist-Zonen nach unten angepasst; neu: CrowdStrike, Vistra, Delivery Hero.",
-  "market": "Nasdaq rund −5 % (Korrektur), S&P 500 rund −4 %, Halbleiter-Index ca. −10 % – Sorge vor Rechenzentrums-Moratorien nach dem Demokraten-Sieg. Öl (WTI) ca. 90 $. Morgen US-Arbeitsmarktbericht. Kurse: TradingView, Schlusskurse, Abruf 22:33 Uhr.",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-06T14:30:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Vorbörsliche Erholung der Chipwerte nach dem Ausverkauf (AMD, Marvell ca. +6 bis +10 %) – für AMD und Marvell gilt trotzdem der Plan von gestern (Schluss unter Stop). Watchlist: Atlassian vorbörslich ca. −15 % nach schwachem Ausblick, am Stop 158 $.",
+  "market": "Nasdaq-100-Futures ca. +1,4 %, S&P-Futures ca. +0,3 %, Dow-Futures ca. −1 %. Europa schwächer: SAP −2,9 %, Allianz −4,0 %, Rheinmetall −4,1 %. 14:30 Uhr US-Arbeitsmarktbericht. Kurse: TradingView, Abruf 14:20 Uhr (US-Werte noch Schluss 5.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

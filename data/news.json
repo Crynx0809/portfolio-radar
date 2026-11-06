@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_team_1106",
+  "date": "2026-11-06",
+  "ticker": "TEAM",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Atlassian: Q1 über den Erwartungen, aber schwächerer Ausblick fürs Abo-Wachstum – Aktie vorbörslich ca. −14 bis −16 %",
+  "summary": "Umsatz und Gewinn lagen über den Schätzungen, doch der Ausblick für das Cloud-/Abo-Wachstum enttäuschte. Vorbörslich notiert die Aktie damit um 155–158 $ und damit unter der Einstiegszone 168–178 $ und am Stop 158 $ (Schluss Donnerstag 183,29 $). Entscheidend ist der Schlusskurs heute.",
+  "url": "https://uk.finance.yahoo.com/news/atlassian-tumbles-16-weaker-subscription-214811605.html"
+ },
+ {
+  "id": "n_chips_pre_1106",
+  "date": "2026-11-06",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Vorbörslich Erholung nach dem KI-Ausverkauf: Nasdaq-100-Futures ca. +1,4 %, AMD, Marvell, Micron ca. +6 bis +10 %",
+  "summary": "Nach dem schwersten Nasdaq-Tag seit 19 Monaten stabilisieren sich die Chipwerte vor Handelsbeginn (Nvidia ca. +4,5 %), Dow-Futures dagegen ca. −1 %. Um 14:30 Uhr kommt der US-Arbeitsmarktbericht; der Markt preist eine Zinserhöhung im Dezember mit über 65 % ein. Vorbörsliche Kurse sind unbestätigt – für die Pläne zählt der Schlusskurs.",
+  "url": "https://finance.yahoo.com/technology/ai/articles/nasdaq-futures-rise-steep-ai-094400237.html"
+ },
+ {
   "id": "n_mkt_close_1105",
   "date": "2026-11-05",
   "ticker": "Markt",
@@ -278,25 +298,5 @@
   "headline": "Alphabet −12,6 %: Gewinn verfehlt, Free Cashflow negativ",
   "summary": "EPS-Miss durch Beteiligungsverluste, hohe KI-Investitionen (Capex 195–205 Mrd $ für 2026); Cloud wächst trotzdem um 103 %. Schwächster Tag seit Jahren.",
   "url": "https://www.xtb.com/en/market-analysis/alphabet-disappoints-wall-street-despite-record-results-shares-plunge-over-8-and-test-300"
- },
- {
-  "id": "n1",
-  "date": "2026-10-29",
-  "ticker": "MRVL",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Marvell −13,2 %: Gespräche über Lumentum-Übernahme",
-  "summary": "Laut Bloomberg fortgeschrittene Gespräche über einen Aktientausch-Deal (Lumentum ~83 Mrd $). Nichts unterschrieben; Ankündigung evtl. nächste Woche.",
-  "url": "https://www.heygotrade.com/en/news/marvell-mrvl-stock-news-october-30-2026/"
- },
- {
-  "id": "n2",
-  "date": "2026-10-29",
-  "ticker": "AMZN",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Amazon nachbörslich schwächer nach Q3",
-  "summary": "Umsatz knapp unter Konsens, EPS-Miss; AWS +39 % stark, aber Capex 2026 ~220 Mrd $ und mehr in 2027. Aktie schloss −4,3 % und fiel nachbörslich weiter.",
-  "url": "https://www.marketbeat.com/earnings/reports/2026-10-29-amazoncom-inc-stock/"
  }
 ]
