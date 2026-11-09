@@ -1,24 +1,38 @@
 [
  {
-  "id": "a_amd_1109b",
-  "at": "2026-11-09T17:50:00+01:00",
+  "id": "a_amd_1109e",
+  "at": "2026-11-09T22:45:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "AMD im Handel ca. 496 $ (+10,5 %) – klar über der Bestätigungsmarke 456 $ (Oppenheimer-Hochstufung, Ziel 600 $). Zählt erst mit dem Schlusskurs: Schluss über 456 $ → Erholung bestätigt, Stop auf Einstand ziehen; Zone 360–380 $ und Stop 335 $ bleiben bis zur Abendanalyse unverändert."
+  "text": "AMD schließt mit +13,3 % bei 508,6 $ klar über der Bestätigung 456 $ – der Ausverkauf (Tief 402 $) war wahrscheinlich der Boden, das alte Ziel 470–513 $ ist erreicht. Neuer Plan: nicht hinterherkaufen, Rücksetzer in 450–472 $ gestaffelt kaufen, Stop 428 $, Ziel 600–658 $; über 579 $ Stop auf Einstand."
  },
  {
-  "id": "a_wl_1109b",
-  "at": "2026-11-09T17:50:00+01:00",
-  "ticker": "Watchlist",
+  "id": "a_mrvl_1109e",
+  "at": "2026-11-09T22:45:00+01:00",
+  "ticker": "MRVL",
   "level": "mittel",
-  "text": "Mehrere Watchlist-Werte im Handel über ihrer Bestätigungsmarke, weit über ihren Zonen (nicht hinterherkaufen): Moderna ca. 277 $ (+9 %, Marke 254,5 $), Rocket Lab ca. 59 $ (+11 %, 54,5 $), Trade Desk ca. 14,8 $ (+15 %, 13,35 $), Vistra ca. 133 $ (+6 %, 128 $), Freeport ca. 62,7 $ (+6 %, 62,6 $), Allianz 456 € (453,3 €). Schlusskurse abwarten."
+  "text": "Marvell +9,5 % auf 154,6 $ – altes Ziel 150–162 $ ohne Einstieg erreicht, C-Tief 132,5 $ wohl der Boden. Neuer Wiedereinstieg in 138–146 $, Stop 130 $, Ziel 185–205 $; über 162 $ Stop auf Einstand."
  },
  {
-  "id": "a_hims_1109",
-  "at": "2026-11-09T17:50:00+01:00",
+  "id": "a_hims_1109e",
+  "at": "2026-11-09T22:45:00+01:00",
   "ticker": "HIMS",
   "level": "mittel",
-  "text": "Hims & Hers im Handel ca. −8 % auf ca. 24 $ – in der Zone 22,5–24,5 $ (Stop 20,8 $), Grund noch unklar. Gegen den freundlichen Markt schwach; Abendanalyse prüft die Lage."
+  "text": "Hims & Hers −11,8 % auf 22,94 $ (Lilly-Vertrag drückt Marge, Q3 laut ersten Meldungen schwach) – unter dem Tief vom 5.11. Neu: meiden, Zone 18,6–20 $, Stop 17,2 $, Ziel 24,5–26,5 $."
+ },
+ {
+  "id": "a_wl_1109e",
+  "at": "2026-11-09T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Schluss über der Bestätigung, weit über den Zonen (Status „Trend“, nicht hinterherkaufen): Siemens Energy 124,1 €, Airbus 206 €, Rocket Lab 58,9 $, Oklo 26,8 $, Vistra 133,9 $. Neue Pläne: Caterpillar Zone 560–575 $ (Stop 540 $), Trade Desk 12,9–13,5 $ (Zahlen nach Schluss, Reaktion offen), Freeport Ziel 68–74 $."
+ },
+ {
+  "id": "a_ce_1109e",
+  "at": "2026-11-09T22:45:00+01:00",
+  "ticker": "CE",
+  "level": "mittel",
+  "text": "Neu auf der Watchlist (Wunsch): Celanese 48,75 $ – Basis zwischen 42 und 51,6 $, Zone 44–46 $, Stop 41,8 $, Ziel 55–58 $."
  },
  {
   "id": "a_nvda_1109n",
@@ -110,26 +124,5 @@
   "ticker": "RHM",
   "level": "hoch",
   "text": "Rheinmetall −16,1 % auf 841,5 € nach erneuter Prognosesenkung – Juni-/Juli-Tiefs (929–936 €) gebrochen. Neu: meiden, erst in 760–800 € kaufen, Stop 720 €. Wochenschluss unter 850 € → großes Ziel wird neu festgelegt."
- },
- {
-  "id": "a_novo_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "NOVO-B",
-  "level": "hoch",
-  "text": "Schluss 37,95 € (+5,1 %) über der Bestätigung 37,5 € nach starken Q3-Zahlen und höherer Prognose – der Boden ist wahrscheinlicher. Position halten, nicht hinterherkaufen; Schluss unter 36 € hieße: Ausbruch gescheitert. Ziel 40–42 €."
- },
- {
-  "id": "a_amzn_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "AMZN",
-  "level": "mittel",
-  "text": "Schluss 266,0 $ (+6,1 %) über der Bestätigung 258 $ – der Abwärtsbruch war ein Fehlausbruch. Halten, Ziel 276–287 $; neuer Stop-Vorschlag 228 $ (unter dem Oktober-Tief)."
- },
- {
-  "id": "a_hc_1104e",
-  "at": "2026-11-04T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Gesundheitswerte springen nach der Wahl: Moderna +13,1 % (neues Hoch 258,4 $, Zahlen 6.11.), Intuitive Surgical +9,4 %, Molina +8,9 % (knapp über 226 $), Zoetis +7,5 % (Zahlen 5.11.). Nicht hinterherkaufen."
  }
 ]

@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-09T17:50:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Kräftige Erholung an der Wall Street: AMD +10,5 % (ca. 496 $) nach Oppenheimer-Hochstufung – klar über der Bestätigung 456 $, Schluss abwarten. Marvell +9 %, Alphabet und Amazon fester; Nvidia schwächer (Untersuchung gegen Huang). Kein Depot-Stop gebrochen.",
-  "market": "Nasdaq ca. +2,5 %, S&P 500 ca. +1,9 %, Dow ca. +1,6 % (Stand Mittag US-Zeit); VIX ca. 21, Brent ca. 95 $ (−3,6 %). Morgen US-Inflation (CPI). Kurse: TradingView, Abruf 17:47 Uhr (US-Werte im Handel).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-09T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Starke Erholung: AMD schließt +13,3 % bei 508,6 $ über der Bestätigung 456 $ – Boden bei 402 $ wahrscheinlich, neuer Plan (Zone 450–472 $, Stop 428 $, Ziel 600–658 $). Marvell +9,5 % (154,6 $), neue Zone 138–146 $. Hims −11,8 % (meiden). Neu: Celanese.",
+  "market": "S&P 500 ca. +2,3 %, Nasdaq 100 ca. +3,3 %, Dow ca. +2,2 %; Brent ca. 95 $ (−3,6 %). Morgen US-Inflation (CPI). Kurse: TradingView, Abruf 22:35 Uhr (Schlusskurse).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

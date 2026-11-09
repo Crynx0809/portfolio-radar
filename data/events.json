@@ -1,23 +1,5 @@
 [
  {
-  "id": "e10",
-  "date": "2026-11-09",
-  "ticker": "HIMS",
-  "event": "Q3-Zahlen"
- },
- {
-  "id": "e11",
-  "date": "2026-11-09",
-  "ticker": "TTD",
-  "event": "Q3-Zahlen nach US-Schluss"
- },
- {
-  "id": "e_rklb_1109",
-  "date": "2026-11-09",
-  "ticker": "RKLB",
-  "event": "Q3-Zahlen nach US-Schluss"
- },
- {
   "id": "e_dher_1110",
   "date": "2026-11-10",
   "ticker": "DHER",
@@ -30,6 +12,12 @@
   "event": "US-Inflation Oktober (CPI), 14:30 Uhr"
  },
  {
+  "id": "e_nvda_1118",
+  "date": "2026-11-18",
+  "ticker": "NVDA",
+  "event": "Q3-Zahlen (ca. 18.11., unbestätigt)"
+ },
+ {
   "id": "e_crwd_1201",
   "date": "2026-12-01",
   "ticker": "CRWD",
@@ -40,5 +28,11 @@
   "date": "2027-01-28",
   "ticker": "SAP",
   "event": "Q4-Zahlen"
+ },
+ {
+  "id": "e_ce_0212",
+  "date": "2027-02-12",
+  "ticker": "CE",
+  "event": "Q4-Zahlen (Mitte Feb., unbestätigt)"
  }
 ]
