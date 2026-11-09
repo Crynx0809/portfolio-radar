@@ -1,5 +1,26 @@
 [
  {
+  "id": "a_amd_1109b",
+  "at": "2026-11-09T17:50:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "AMD im Handel ca. 496 $ (+10,5 %) – klar über der Bestätigungsmarke 456 $ (Oppenheimer-Hochstufung, Ziel 600 $). Zählt erst mit dem Schlusskurs: Schluss über 456 $ → Erholung bestätigt, Stop auf Einstand ziehen; Zone 360–380 $ und Stop 335 $ bleiben bis zur Abendanalyse unverändert."
+ },
+ {
+  "id": "a_wl_1109b",
+  "at": "2026-11-09T17:50:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Mehrere Watchlist-Werte im Handel über ihrer Bestätigungsmarke, weit über ihren Zonen (nicht hinterherkaufen): Moderna ca. 277 $ (+9 %, Marke 254,5 $), Rocket Lab ca. 59 $ (+11 %, 54,5 $), Trade Desk ca. 14,8 $ (+15 %, 13,35 $), Vistra ca. 133 $ (+6 %, 128 $), Freeport ca. 62,7 $ (+6 %, 62,6 $), Allianz 456 € (453,3 €). Schlusskurse abwarten."
+ },
+ {
+  "id": "a_hims_1109",
+  "at": "2026-11-09T17:50:00+01:00",
+  "ticker": "HIMS",
+  "level": "mittel",
+  "text": "Hims & Hers im Handel ca. −8 % auf ca. 24 $ – in der Zone 22,5–24,5 $ (Stop 20,8 $), Grund noch unklar. Gegen den freundlichen Markt schwach; Abendanalyse prüft die Lage."
+ },
+ {
   "id": "a_nvda_1109n",
   "at": "2026-11-09T14:30:00+01:00",
   "ticker": "NVDA",

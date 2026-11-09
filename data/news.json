@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_amd_1109",
+  "date": "2026-11-09",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "AMD im Handel rund +10 % auf ca. 496 $ nach Hochstufung durch Oppenheimer (Outperform, Kursziel 600 $)",
+  "summary": "Oppenheimer sieht AMD als dauerhaften Lieferanten von KI-Rechenleistung. Die Aktie liegt damit klar über der Bestätigungsmarke 456 $ – zählt aber erst mit dem Schlusskurs. Chipwerte erholen sich breit (Marvell ca. +9 %, Broadcom, Applied Materials), nur Nvidia fällt wegen der Untersuchung gegen Chef Huang.",
+  "url": "https://thecryptobasic.com/2026/11/09/amd-stock-rises-as-oppenheimer-upgrades-shares-forecasts-135-data-center-revenue-growth/"
+ },
+ {
+  "id": "n_mkt_1109",
+  "date": "2026-11-09",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Kräftige Erholung: Nasdaq ca. +2,5 %, S&P 500 ca. +1,9 %, Ölpreis rund −3 bis −4 %",
+  "summary": "Nach der schwächsten Woche seit April 2025 kaufen Anleger Tech- und Chipwerte zurück; der VIX fällt deutlich (ca. 21). Öl gibt nach, weil Trump neue Angriffe auf Iran während laufender Gespräche herunterspielte (Brent ca. 95 $). Alphabet ca. +3 % nach Vorstellung neuer TPU-Chips, Amazon ca. +4 %. Stand Mittag US-Zeit, Schlusskurse stehen aus; morgen US-Inflation (CPI).",
+  "url": "https://leprivatebanker.com/2026/11/09/nasdaq-surges-2-5-to-claw-back-part-of-correction-as-chipmakers-rally-even-with-nvidia-down-on-board-probe-of-huang/"
+ },
+ {
   "id": "n_nvda_1109",
   "date": "2026-11-09",
   "ticker": "NVDA",
@@ -278,25 +298,5 @@
   "headline": "Chip-Ausverkauf: AMD −10,9 %, Marvell −10,0 %",
   "summary": "AMD fiel im Tief bis 492 $, schloss aber mit 504,8 $ knapp über dem Stop 500 $ – vier Tage vor den eigenen Zahlen. Marvell rutschte nach dem Lumentum-Gerücht des Vortags tiefer in die Zone. Auch Applied Digital (−8 %), Cameco (−8 %), Robinhood und Rocket Lab (je −7 %) deutlich schwächer.",
   "url": "https://www.marketscreener.com/news/semiconductor-stocks-fall-as-intel-earnings-trigger-broad-tech-selloff-update-ce785fdbdc80f521"
- },
- {
-  "id": "n_amzn_1730",
-  "date": "2026-10-30",
-  "ticker": "AMZN",
-  "impact": "mittel",
-  "direction": "neutral",
-  "headline": "Amazon erholt sich im Handel deutlich vom vorbörslichen Minus",
-  "summary": "Statt rund −7 % vorbörslich notiert Amazon am Nachmittag nur gut −1 % bei ca. 240 $ – die Einstiegszone 215–230 $ wurde damit (noch) nicht erreicht.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-october-30-dow-sp-500-nasdaq-amazon-intel-131609630.html"
- },
- {
-  "id": "n_amzn_pm_1030",
-  "date": "2026-10-30",
-  "ticker": "AMZN",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Amazon vorbörslich rund −7 % nach Q3",
-  "summary": "Der Ausblick enttäuscht, dazu wachsen die Sorgen über die sehr hohen KI-Investitionen. Mit dem Minus von gestern liegt die Aktie damit gut 10 % unter dem Kurs vor den Zahlen und würde zur Eröffnung in die Einstiegszone 215–230 $ fallen.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
  }
 ]
