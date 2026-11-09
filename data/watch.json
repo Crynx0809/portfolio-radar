@@ -1,29 +1,21 @@
 {
- "generated_at": "2026-11-09T20:47:23+00:00",
+ "generated_at": "2026-11-09T21:46:55+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 513.82,
-   "stop": 335,
-   "trigger": 456,
-   "gap_to_stop": 0.5338
+   "price": 508.58,
+   "stop": 428,
+   "trigger": 579,
+   "gap_to_stop": 0.1883
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.775,
+   "price": 16.72,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2708
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "price": 155.85,
-   "stop": 92,
-   "trigger": 162,
-   "gap_to_stop": 0.694
+   "gap_to_stop": 0.2667
   },
   {
    "ticker": "NOVO-B",
@@ -42,63 +34,6 @@
    "gap_to_stop": 0.189
   }
  ],
- "events": [
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 513.82,
-   "chg_pct": 0.1443,
-   "at": "2026-11-09T20:47+00:00",
-   "id": "AMD-ausbruch-2026-11-09",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Advanced Micro Devices über der Bestätigungsmarke 456,00 $",
-   "text": "Kurs 513,82 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 456 $ → Verkaufshöhepunkt wahrscheinlich: Erholung Richtung 500–513 $; wer neu kauft, zieht den Stop auf Einstand."
-  },
-  {
-   "ticker": "HIMS",
-   "name": "Hims & Hers",
-   "group": "Watchlist",
-   "price": 23.35,
-   "chg_pct": -0.1019,
-   "at": "2026-11-09T20:47+00:00",
-   "id": "HIMS-zone-2026-11-09",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Hims & Hers in der Einstiegszone",
-   "text": "Kurs 23,35 $ ist in die Zone 22,50 $–24,50 $ gelaufen.",
-   "todo": "24,5–27,7 $: abwarten."
-  },
-  {
-   "ticker": "MOH",
-   "name": "Molina Healthcare",
-   "group": "Watchlist",
-   "price": 201.28,
-   "chg_pct": -0.0369,
-   "at": "2026-11-09T20:47+00:00",
-   "id": "MOH-zone-2026-11-09",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Molina Healthcare in der Einstiegszone",
-   "text": "Kurs 201,28 $ ist in die Zone 196,00 $–203,00 $ gelaufen.",
-   "todo": "203–226 $: beobachten; Einstieg nur bei Rücksetzer in 196–203 $."
-  },
-  {
-   "ticker": "ZTS",
-   "name": "Zoetis",
-   "group": "Watchlist",
-   "price": 81.97,
-   "chg_pct": 0.0324,
-   "at": "2026-11-09T20:47+00:00",
-   "id": "ZTS-zone-2026-11-09",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,97 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
-   "todo": "Zwischen 82 und 92 $: abwarten."
-  }
- ],
+ "events": [],
  "notified": []
 }
