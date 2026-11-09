@@ -12,10 +12,22 @@
   "event": "Q3-Zahlen nach US-Schluss"
  },
  {
+  "id": "e_rklb_1109",
+  "date": "2026-11-09",
+  "ticker": "RKLB",
+  "event": "Q3-Zahlen nach US-Schluss"
+ },
+ {
   "id": "e_dher_1110",
   "date": "2026-11-10",
   "ticker": "DHER",
   "event": "Ergebnis der Annahmefrist Uber-Angebot (ungefähr, unbestätigt)"
+ },
+ {
+  "id": "e_cpi_1110",
+  "date": "2026-11-10",
+  "ticker": "Markt",
+  "event": "US-Inflation Oktober (CPI), 14:30 Uhr"
  },
  {
   "id": "e_crwd_1201",

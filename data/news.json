@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_nvda_1109",
+  "date": "2026-11-09",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Nvidia vorbörslich rund −4,5 %: Chef Jensen Huang räumt Affäre ein, Verwaltungsrat startet unabhängige Untersuchung",
+  "summary": "Laut Berichten geht es um eine Verbindung zu einer früheren Managerin eines Nvidia-Kunden, die US-Dienste als mögliche Quelle Chinas einstufen (nicht unabhängig bestätigt). Der Rat prüft, ob Huang Ziel ausländischer Geheimdienste war. Zusätzlich belasten Berichte, dass die Demokraten Regeln für KI und Rechenzentren vorbereiten. US-Futures sonst leicht im Plus (Dow ca. +0,7 %, S&P 500 ca. +0,4 %, Nasdaq 100 ca. +0,2 %). Nvidia-Zone 162–170 $ bleibt unverändert.",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-rise-rough-103539344.html"
+ },
+ {
   "id": "n_jobs_1106",
   "date": "2026-11-06",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "Amazon vorbörslich rund −7 % nach Q3",
   "summary": "Der Ausblick enttäuscht, dazu wachsen die Sorgen über die sehr hohen KI-Investitionen. Mit dem Minus von gestern liegt die Aktie damit gut 10 % unter dem Kurs vor den Zahlen und würde zur Eröffnung in die Einstiegszone 215–230 $ fallen.",
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-30-2026"
- },
- {
-  "id": "n_xom_q3_1030",
-  "date": "2026-10-30",
-  "ticker": "XOM",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Exxon schlägt Erwartungen, mehr Dividende und Rückkäufe",
-  "summary": "Bereinigter Gewinn 4,23 $ je Aktie (erwartet ~4,12 $), Umsatz +33 %. Dividende steigt auf 1,07 $ je Quartal, dazu ein Rückkaufprogramm über 20 Mrd. $. Vorbörslich ca. +2 % – das läge knapp über der Bestätigungsmarke 184,9 $; erst der Schlusskurs zählt.",
-  "url": "https://www.kiro7.com/news/business/exxonmobil-chevron/VIJHWIGWFM7EXAVSPFXPKNI2PI/"
  }
 ]

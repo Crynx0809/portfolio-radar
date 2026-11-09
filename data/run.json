@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-06T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Erholungstag nach dem KI-Ausverkauf: AMD +11 % (449 $), Marvell +5,7 %, Applied Digital +9,7 % – kein Depot-Stop neu gebrochen. Marvell und Rheinmetall schließen die Woche unter ihrer langfristigen Absicherung, die großen Ziele sind neu gesetzt. Atlassian nach Zahlen −16 % unter den Stop, neuer Plan 133–142 $.",
-  "market": "Nasdaq 100 +1,4 % (Woche −4,9 %), S&P 500 +0,3 % (Woche −2,7 %), DAX −1,9 %. VIX 25,6, US-Zins 10 J. 4,86 %, Brent 97,8 $. Starker Arbeitsmarkt (+165.000 Stellen). Kurse: TradingView-Schluss, Abruf 22:32 Uhr.",
-  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-09T14:30:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Nvidia vorbörslich ca. −4,5 %: Untersuchung gegen Chef Jensen Huang. Depot ruhig – SAP +1,5 % (214 €, nahe Bestätigung 217 €), Novo Nordisk +1,8 %. Airbus und Siemens Energy im Handel knapp über ihren Bestätigungsmarken (Schluss abwarten). Kein Stop gebrochen.",
+  "market": "US-Futures leicht im Plus nach der Verlustwoche (Dow ca. +0,7 %, S&P 500 ca. +0,4 %, Nasdaq 100 ca. +0,2 %), DAX zurück über 26.000. Morgen US-Inflation (CPI). Kurse: TradingView, Abruf 14:24 Uhr; US-Werte noch Freitagsschluss.",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

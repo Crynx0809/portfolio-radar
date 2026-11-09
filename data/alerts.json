@@ -1,5 +1,26 @@
 [
  {
+  "id": "a_nvda_1109n",
+  "at": "2026-11-09T14:30:00+01:00",
+  "ticker": "NVDA",
+  "level": "mittel",
+  "text": "Nvidia vorbörslich ca. −4,5 % (ca. 178 $) wegen Untersuchung gegen Chef Huang – nähert sich der Zone 162–170 $ (Stop 155 $). Plan unverändert; Lage bis zu den Zahlen (ca. 18.11.) beobachten."
+ },
+ {
+  "id": "a_air_1109n",
+  "at": "2026-11-09T14:30:00+01:00",
+  "ticker": "AIR",
+  "level": "mittel",
+  "text": "Airbus im Handel +3,5 % auf 203,25 € – knapp über der Bestätigungsmarke 203 €. Erst ein Schlusskurs darüber zählt; Zone 186–192 € bleibt."
+ },
+ {
+  "id": "a_enr_1109n",
+  "at": "2026-11-09T14:30:00+01:00",
+  "ticker": "ENR",
+  "level": "mittel",
+  "text": "Siemens Energy im Handel +2,3 % auf 120,76 € – über der Bestätigungsmarke 120 €. Erst ein Schlusskurs darüber zählt; Zone 105–113 € bleibt."
+ },
+ {
   "id": "a_depot_1106e",
   "at": "2026-11-06T22:45:00+01:00",
   "ticker": "Depot",
