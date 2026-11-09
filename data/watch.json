@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-09T09:02:14+00:00",
+ "generated_at": "2026-11-09T10:11:12+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -26,12 +26,20 @@
    "gap_to_stop": 0.5348
   },
   {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "price": 36.625,
+   "stop": 30,
+   "trigger": 37.5,
+   "gap_to_stop": 0.2208
+  },
+  {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 215.6,
+   "price": 214.65,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.2112
+   "gap_to_stop": 0.2059
   }
  ],
  "events": [
@@ -41,7 +49,7 @@
    "group": "Watchlist",
    "price": 79.4,
    "chg_pct": -0.033,
-   "at": "2026-11-09T09:02+00:00",
+   "at": "2026-11-09T10:11+00:00",
    "id": "ZTS-zone-2026-11-09",
    "type": "zone",
    "level": "mittel",
