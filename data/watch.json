@@ -1,60 +1,96 @@
 {
- "generated_at": "2026-11-09T10:11:12+00:00",
+ "generated_at": "2026-11-09T15:40:22+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 449.04,
+   "price": 490.455,
    "stop": 335,
    "trigger": 456,
-   "gap_to_stop": 0.3404
+   "gap_to_stop": 0.464
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Alphabet A",
+   "price": 294.65,
+   "stop": 262,
+   "trigger": 301,
+   "gap_to_stop": 0.1246
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 15.55,
+   "price": 16.2659,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.178
+   "gap_to_stop": 0.2323
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 141.2,
+   "price": 153.175,
    "stop": 92,
    "trigger": 162,
-   "gap_to_stop": 0.5348
+   "gap_to_stop": 0.6649
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.625,
+   "price": 36.535,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2208
+   "gap_to_stop": 0.2178
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 214.65,
+   "price": 212.8,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.2059
+   "gap_to_stop": 0.1955
   }
  ],
  "events": [
   {
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "group": "Portfolio",
+   "price": 490.455,
+   "chg_pct": 0.0922,
+   "at": "2026-11-09T15:40+00:00",
+   "id": "AMD-ausbruch-2026-11-09",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Advanced Micro Devices über der Bestätigungsmarke 456,00 $",
+   "text": "Kurs 490,45 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 456 $ → Verkaufshöhepunkt wahrscheinlich: Erholung Richtung 500–513 $; wer neu kauft, zieht den Stop auf Einstand."
+  },
+  {
+   "ticker": "HIMS",
+   "name": "Hims & Hers",
+   "group": "Watchlist",
+   "price": 24.27,
+   "chg_pct": -0.0665,
+   "at": "2026-11-09T15:40+00:00",
+   "id": "HIMS-zone-2026-11-09",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Hims & Hers in der Einstiegszone",
+   "text": "Kurs 24,27 $ ist in die Zone 22,50 $–24,50 $ gelaufen.",
+   "todo": "24,5–27,7 $: abwarten."
+  },
+  {
    "ticker": "ZTS",
    "name": "Zoetis",
    "group": "Watchlist",
-   "price": 79.4,
-   "chg_pct": -0.033,
-   "at": "2026-11-09T10:11+00:00",
+   "price": 80.36,
+   "chg_pct": 0.0121,
+   "at": "2026-11-09T15:40+00:00",
    "id": "ZTS-zone-2026-11-09",
    "type": "zone",
    "level": "mittel",
    "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 79,40 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "text": "Kurs 80,36 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
    "todo": "Zwischen 82 und 92 $: abwarten."
   }
  ],
