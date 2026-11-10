@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-09T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Starke Erholung: AMD schließt +13,3 % bei 508,6 $ über der Bestätigung 456 $ – Boden bei 402 $ wahrscheinlich, neuer Plan (Zone 450–472 $, Stop 428 $, Ziel 600–658 $). Marvell +9,5 % (154,6 $), neue Zone 138–146 $. Hims −11,8 % (meiden). Neu: Celanese.",
-  "market": "S&P 500 ca. +2,3 %, Nasdaq 100 ca. +3,3 %, Dow ca. +2,2 %; Brent ca. 95 $ (−3,6 %). Morgen US-Inflation (CPI). Kurse: TradingView, Abruf 22:35 Uhr (Schlusskurse).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-10T14:35:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Keine wichtigen neuen Meldungen zu den Depotwerten seit gestern Abend. Vorbörslich Gewinnmitnahmen bei Chipwerten (Nasdaq-100-Futures ca. −0,4 %) vor der US-Inflation um 14:30 Uhr. Mercedes knapp über der Bestätigung 42 €.",
+  "market": "Futures: Dow ca. +0,4 %, S&P 500 ca. ±0 %, Nasdaq 100 ca. −0,4 %; Brent ca. 91 $ (−1,9 %). DAX-Werte fest (Rheinmetall +2,6 %, Airbus +2,5 %, Allianz +1,9 %). CPI um 14:30 Uhr (Erwartung +0,3 %, Kern +0,2 %), Ergebnis zum 17:45-Check. Kurse: TradingView, Abruf 14:23 Uhr (US-Werte = Schluss vom 9.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

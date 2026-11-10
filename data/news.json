@@ -1,5 +1,15 @@
 [
  {
+  "id": "n-20261110-markt",
+  "date": "2026-11-10",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "neutral",
+  "headline": "Vor der US-Inflation (CPI, 14:30 Uhr): Nasdaq-100-Futures ca. −0,4 %, Dow-Futures ca. +0,4 % – Geld fließt aus Chipwerten in Banken und Industrie",
+  "summary": "Erwartet werden +0,3 % (Kernrate +0,2 %) zum Vormonat. Der Markt preist eine Zinserhöhung der Fed im Dezember zu rund 80–85 % ein; eine heiße Kernrate (≥ 0,3 %) könnte sogar 0,5 Punkte ins Gespräch bringen. Öl fällt weiter (Brent ca. 91 $). Laut WSJ strebt Anthropic beim Börsengang eine Bewertung von rund 1,3 Bio. $ an (Amazon und Alphabet sind beteiligt).",
+  "url": "https://coincentral.com/stock-market-today-dow-climbs-nasdaq-slips-as-traders-dump-chips-before-cpi-report"
+ },
+ {
   "id": "n_mkt_close_1109",
   "date": "2026-11-09",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "Amazon +4,6 % auf ca. 251 $",
   "summary": "Nach dem Zahlen-Wackler vom Freitag kaufen Anleger wieder – getragen vom Rekordwachstum im Cloud-Geschäft (AWS). Die Aktie nähert sich der Bestätigungsmarke 258 $.",
   "url": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-midday-nov-2-stocks-rally-as-oil-prices-tumble-on-diplomatic-hopes/"
- },
- {
-  "id": "n_mrvl_lite_1102",
-  "date": "2026-11-02",
-  "ticker": "MRVL",
-  "impact": "hoch",
-  "direction": "neutral",
-  "headline": "Marvell kündigt Übernahme von Lumentum für rund 115 Mrd. $ an",
-  "summary": "Nach tagelangen Berichten bestätigt: Marvell kauft den KI-Optik-Spezialisten Lumentum – einer der größten Deals des Jahres, Marvells größter Zukauf seit Inphi 2021. Vorbörslich Marvell ca. +1 %, Lumentum ca. +2,5 %. Die Aktie hatte auf die Gerüchte bereits rund 22 % verloren (Sorge vor Prämie, Verwässerung durch neue Aktien, Kartellprüfung).",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-02-2026"
  }
 ]
