@@ -1,64 +1,50 @@
 {
- "generated_at": "2026-11-10T15:59:46+00:00",
+ "generated_at": "2026-11-10T16:52:20+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 525.24,
+   "price": 519.56,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.2272
+   "gap_to_stop": 0.2139
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.845,
+   "price": 16.615,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2761
+   "gap_to_stop": 0.2587
   }
  ],
  "events": [
   {
-   "ticker": "MOH",
-   "name": "Molina Healthcare",
+   "ticker": "NU",
+   "name": "Nu Holdings",
    "group": "Watchlist",
-   "price": 202.28,
-   "chg_pct": -0.0053,
-   "at": "2026-11-10T15:59+00:00",
-   "id": "MOH-zone-2026-11-10",
+   "price": 12.0499,
+   "chg_pct": -0.0251,
+   "at": "2026-11-10T16:52+00:00",
+   "id": "NU-zone-2026-11-10",
    "type": "zone",
    "level": "mittel",
-   "title": "Molina Healthcare in der Einstiegszone",
-   "text": "Kurs 202,28 $ ist in die Zone 196,00 $–203,00 $ gelaufen.",
-   "todo": "203–226 $: beobachten; Einstieg nur bei Rücksetzer in 196–203 $."
-  },
-  {
-   "ticker": "NVDA",
-   "name": "Nvidia",
-   "group": "Watchlist",
-   "price": 169.73,
-   "chg_pct": -0.05,
-   "at": "2026-11-10T15:59+00:00",
-   "id": "NVDA-zone-2026-11-10",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nvidia in der Einstiegszone",
-   "text": "Kurs 169,73 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
-   "todo": "170–200 $: abwarten."
+   "title": "Nu Holdings in der Einstiegszone",
+   "text": "Kurs 12,05 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
+   "todo": "In 11,4–12,1 $: Einstiegsbereich, Stop unter 10,9 $."
   },
   {
    "ticker": "ZTS",
    "name": "Zoetis",
    "group": "Watchlist",
-   "price": 81.095,
-   "chg_pct": -0.0149,
-   "at": "2026-11-10T15:59+00:00",
+   "price": 81.54,
+   "chg_pct": -0.0095,
+   "at": "2026-11-10T16:52+00:00",
    "id": "ZTS-zone-2026-11-10",
    "type": "zone",
    "level": "mittel",
    "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,09 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "text": "Kurs 81,54 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
    "todo": "Zwischen 82 und 92 $: abwarten."
   }
  ],
