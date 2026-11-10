@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-10T17:48:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "US-Inflation heißer als erwartet (Oktober +0,4 %, Kern +0,3 %) – Zinserhöhungs-Sorgen drücken Tech: Nasdaq 100 ca. −1,1 %. Nvidia (−5 %, Klage gegen Chef Huang) und Hims & Hers (−18 %, Q3) fallen in ihre Zonen; Depot ruhig, kein Stop in Gefahr.",
-  "market": "S&P 500 7.489 (−0,8 %), Nasdaq 100 27.593 (−1,1 %), VIX 20,6, US-Zins 10 J. 5,0 %, DAX 26.390 (+0,5 %), Brent 91,5 $ (−1,1 %), Gold 4.029 $ (−2,1 %). Waller: ab Kerninflation +0,3 % Zinsschritt um 0,5 Punkte im Dezember erwägen. Kurse: TradingView, Abruf 17:47 Uhr (US-Handel läuft).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-10T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Heiße US-Inflation belastet Tech nur mäßig (Nasdaq 100 −0,6 %). Nvidia schließt −5,5 % in der Zone 162–170 $, Hims & Hers −16,6 % nach Zahlen – Zone tiefer auf 15,5–16,8 $. Rocket Lab +6,5 % über das Okt.-Hoch, neuer Rücksetzer-Plan 50–53,5 $. Depot ruhig, kein Stop in Gefahr; Nu jetzt in der Zone.",
+  "market": "S&P 500 7.521 (−0,4 %), Nasdaq 100 27.741 (−0,6 %), VIX 19,5, US-Zins 10 J. 4,98 %, DAX 26.347 (+0,3 %), Brent 92,0 $ (−0,6 %), Gold 4.039 $ (−1,8 %), Bitcoin 73.900 $ (−1,7 %). CPI Okt. +0,4 %, Kern +0,3 % – Dezember-Zinserhöhung gilt als wahrscheinlich. Kurse: TradingView, Abruf 22:32 Uhr (US-Schlusskurse).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

@@ -1,38 +1,146 @@
 [
  {
-  "id": "e_dher_1110",
-  "date": "2026-11-10",
-  "ticker": "DHER",
-  "event": "Ergebnis der Annahmefrist Uber-Angebot (ungefähr, unbestätigt)"
+  "id": "e_nke_20261116",
+  "date": "2026-11-16",
+  "ticker": "NKE",
+  "event": "Investor Day"
  },
  {
-  "id": "e_cpi_1110",
-  "date": "2026-11-10",
-  "ticker": "Markt",
-  "event": "US-Inflation Oktober (CPI), 14:30 Uhr"
- },
- {
-  "id": "e_nvda_1118",
-  "date": "2026-11-18",
+  "id": "e_nvda_20261117",
+  "date": "2026-11-17",
   "ticker": "NVDA",
-  "event": "Q3-Zahlen (ca. 18.11., unbestätigt)"
+  "event": "Q3-Zahlen"
  },
  {
-  "id": "e_crwd_1201",
+  "id": "e_anth_1119",
+  "date": "2026-11-19",
+  "ticker": "Markt",
+  "event": "Börsengang Anthropic (Handelsstart ca. 19./20.11., unbestätigt)"
+ },
+ {
+  "id": "e_zs_20261124",
+  "date": "2026-11-24",
+  "ticker": "ZS",
+  "event": "Q1-Zahlen"
+ },
+ {
+  "id": "e_1810_20261124",
+  "date": "2026-11-24",
+  "ticker": "1810",
+  "event": "Q3-Zahlen"
+ },
+ {
+  "id": "e_baba_20261124",
+  "date": "2026-11-24",
+  "ticker": "BABA",
+  "event": "Q2-Zahlen"
+ },
+ {
+  "id": "e_crwd_20261201",
   "date": "2026-12-01",
   "ticker": "CRWD",
   "event": "Q3-Zahlen (Anfang Dez., unbestätigt)"
  },
  {
-  "id": "e6",
+  "id": "e_mrvl_20261203",
+  "date": "2026-12-03",
+  "ticker": "MRVL",
+  "event": "Q3-Zahlen (Anfang Dez., unbestätigt)"
+ },
+ {
+  "id": "e_adbe_20261209",
+  "date": "2026-12-09",
+  "ticker": "ADBE",
+  "event": "Q4-Zahlen"
+ },
+ {
+  "id": "e_fed_1209",
+  "date": "2026-12-09",
+  "ticker": "Markt",
+  "event": "Fed-Zinsentscheid (Dezember, Datum unbestätigt) – Markt erwartet Zinserhöhung"
+ },
+ {
+  "id": "e_mu_20261223",
+  "date": "2026-12-23",
+  "ticker": "MU",
+  "event": "Q1-Zahlen"
+ },
+ {
+  "id": "e_apld_20270108",
+  "date": "2027-01-08",
+  "ticker": "APLD",
+  "event": "Nächste Quartalszahlen (Jan., unbestätigt)"
+ },
+ {
+  "id": "e_bac_20270114",
+  "date": "2027-01-14",
+  "ticker": "BAC",
+  "event": "Q4-Zahlen (Mitte Jan.)"
+ },
+ {
+  "id": "e_meta_20270127",
+  "date": "2027-01-27",
+  "ticker": "META",
+  "event": "Q4-Zahlen"
+ },
+ {
+  "id": "e_sap_20270128",
   "date": "2027-01-28",
   "ticker": "SAP",
   "event": "Q4-Zahlen"
  },
  {
-  "id": "e_ce_0212",
-  "date": "2027-02-12",
-  "ticker": "CE",
-  "event": "Q4-Zahlen (Mitte Feb., unbestätigt)"
+  "id": "e_now_20270128",
+  "date": "2027-01-28",
+  "ticker": "NOW",
+  "event": "Q4-Zahlen (Ende Jan., unbestätigt)"
+ },
+ {
+  "id": "e_intc_20270128",
+  "date": "2027-01-28",
+  "ticker": "INTC",
+  "event": "Q4-Zahlen"
+ },
+ {
+  "id": "e_googl_20270202",
+  "date": "2027-02-02",
+  "ticker": "GOOGL",
+  "event": "Q4-Zahlen (Anfang Feb.)"
+ },
+ {
+  "id": "e_amd_20270203",
+  "date": "2027-02-03",
+  "ticker": "AMD",
+  "event": "Q4-Zahlen (Anfang Feb., unbestätigt)"
+ },
+ {
+  "id": "e_el_20270203",
+  "date": "2027-02-03",
+  "ticker": "EL",
+  "event": "Q2-Zahlen"
+ },
+ {
+  "id": "e_amzn_20270204",
+  "date": "2027-02-04",
+  "ticker": "AMZN",
+  "event": "Q4-Zahlen (Anfang Feb.)"
+ },
+ {
+  "id": "e_novo-b_20270204",
+  "date": "2027-02-04",
+  "ticker": "NOVO-B",
+  "event": "Kapitalmarkttag/Q4-Zahlen (Anfang Feb., unbestätigt)"
+ },
+ {
+  "id": "e_ftnt_20270205",
+  "date": "2027-02-05",
+  "ticker": "FTNT",
+  "event": "Q4-Zahlen (Anfang Feb.)"
+ },
+ {
+  "id": "e_moh_20270205",
+  "date": "2027-02-05",
+  "ticker": "MOH",
+  "event": "Q4-Zahlen und Ausblick 2027 (Anfang Feb., unbestätigt)"
  }
 ]
