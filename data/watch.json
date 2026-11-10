@@ -1,38 +1,23 @@
 {
- "generated_at": "2026-11-10T17:42:49+00:00",
+ "generated_at": "2026-11-10T21:39:11+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 509.2,
+   "price": 515.21,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.1897
+   "gap_to_stop": 0.2038
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.335,
+   "price": 16.68,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2375
+   "gap_to_stop": 0.2636
   }
  ],
- "events": [
-  {
-   "ticker": "NU",
-   "name": "Nu Holdings",
-   "group": "Watchlist",
-   "price": 12.005,
-   "chg_pct": -0.0287,
-   "at": "2026-11-10T17:42+00:00",
-   "id": "NU-zone-2026-11-10",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nu Holdings in der Einstiegszone",
-   "text": "Kurs 12,01 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
-   "todo": "In 11,4–12,1 $: Einstiegsbereich, Stop unter 10,9 $."
-  }
- ],
+ "events": [],
  "notified": []
 }
