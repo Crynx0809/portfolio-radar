@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T09:51:14+00:00",
+ "generated_at": "2026-11-10T11:46:36+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -20,10 +20,18 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.69,
+   "price": 36.755,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.223
+   "gap_to_stop": 0.2252
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 210.55,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.1829
   }
  ],
  "events": [],
