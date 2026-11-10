@@ -1,31 +1,66 @@
 {
- "generated_at": "2026-11-10T15:02:05+00:00",
+ "generated_at": "2026-11-10T15:59:46+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 518.73,
+   "price": 525.24,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.212
+   "gap_to_stop": 0.2272
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.6608,
+   "price": 16.845,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2622
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "price": 210.95,
-   "stop": 178,
-   "trigger": 217,
-   "gap_to_stop": 0.1851
+   "gap_to_stop": 0.2761
   }
  ],
- "events": [],
+ "events": [
+  {
+   "ticker": "MOH",
+   "name": "Molina Healthcare",
+   "group": "Watchlist",
+   "price": 202.28,
+   "chg_pct": -0.0053,
+   "at": "2026-11-10T15:59+00:00",
+   "id": "MOH-zone-2026-11-10",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Molina Healthcare in der Einstiegszone",
+   "text": "Kurs 202,28 $ ist in die Zone 196,00 $–203,00 $ gelaufen.",
+   "todo": "203–226 $: beobachten; Einstieg nur bei Rücksetzer in 196–203 $."
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "group": "Watchlist",
+   "price": 169.73,
+   "chg_pct": -0.05,
+   "at": "2026-11-10T15:59+00:00",
+   "id": "NVDA-zone-2026-11-10",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Nvidia in der Einstiegszone",
+   "text": "Kurs 169,73 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
+   "todo": "170–200 $: abwarten."
+  },
+  {
+   "ticker": "ZTS",
+   "name": "Zoetis",
+   "group": "Watchlist",
+   "price": 81.095,
+   "chg_pct": -0.0149,
+   "at": "2026-11-10T15:59+00:00",
+   "id": "ZTS-zone-2026-11-10",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Zoetis in der Einstiegszone",
+   "text": "Kurs 81,09 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "todo": "Zwischen 82 und 92 $: abwarten."
+  }
+ ],
  "notified": []
 }
