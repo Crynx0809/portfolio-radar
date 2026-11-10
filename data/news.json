@@ -1,13 +1,43 @@
 [
  {
-  "id": "n-20261110-markt",
+  "id": "2026-11-10-cpi",
   "date": "2026-11-10",
   "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "neutral",
-  "headline": "Vor der US-Inflation (CPI, 14:30 Uhr): Nasdaq-100-Futures ca. −0,4 %, Dow-Futures ca. +0,4 % – Geld fließt aus Chipwerten in Banken und Industrie",
-  "summary": "Erwartet werden +0,3 % (Kernrate +0,2 %) zum Vormonat. Der Markt preist eine Zinserhöhung der Fed im Dezember zu rund 80–85 % ein; eine heiße Kernrate (≥ 0,3 %) könnte sogar 0,5 Punkte ins Gespräch bringen. Öl fällt weiter (Brent ca. 91 $). Laut WSJ strebt Anthropic beim Börsengang eine Bewertung von rund 1,3 Bio. $ an (Amazon und Alphabet sind beteiligt).",
-  "url": "https://coincentral.com/stock-market-today-dow-climbs-nasdaq-slips-as-traders-dump-chips-before-cpi-report"
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "US-Inflation heißer als erwartet: Verbraucherpreise Oktober +0,4 % (erwartet +0,3 %), Kern +0,3 % – Nasdaq 100 ca. −1,1 %, 10-jährige Rendite ca. 5,0 %",
+  "summary": "Der Kernwert lag den dritten Monat in Folge bei +0,3 %. Fed-Gouverneur Waller hatte vorab gesagt, ab +0,3 % Kerninflation sei im Dezember sogar eine Zinserhöhung um 0,5 Prozentpunkte zu erwägen. S&P 500 ca. −0,8 %, VIX über 20; Chipwerte unter Druck, DAX dagegen fest (+0,5 %).",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
+ },
+ {
+  "id": "2026-11-10-nvda",
+  "date": "2026-11-10",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Nvidia erneut ca. −5 % auf ca. 169 $: Klage gegen Chef Huang, laut Trump ermittelt das FBI",
+  "summary": "Eine Aktionärsklage wirft Huang vor, Anleger getäuscht zu haben; ein Kongress-Ausschuss verlangt Antworten zu möglichen Chip-Lieferungen nach China. Der Kurs steht damit in der Einstiegszone 162–170 $ (Stop 155 $).",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+ },
+ {
+  "id": "2026-11-10-hims",
+  "date": "2026-11-10",
+  "ticker": "HIMS",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Hims & Hers nach Q3-Zahlen ca. −18 % auf ca. 18,9 $ – Gewinn unter den Erwartungen",
+  "summary": "Nach dem Minus vom Vortag (Lilly-Vertrag) folgt der nächste Einbruch; der Kurs liegt jetzt in der Zone 18,6–20 $, knapp über dem Stop 17,2 $. Status bleibt „meiden“, solange der Abwärtstrend läuft.",
+  "url": "https://www.finanzen.at/nachrichten/aktien/hims-&-hers-health-inc-reports-drop-in-q3-bottom-line-misses-estimates-1035481341"
+ },
+ {
+  "id": "2026-11-10-gev",
+  "date": "2026-11-10",
+  "ticker": "GEV",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "GE Vernova ca. −6,6 % auf ca. 775 $ nach SoftBank-Abschreibung auf US-Stromtechnik für KI-Rechenzentren",
+  "summary": "SoftBank meldet eine Belastung von 3,7 Mrd. $ auf Ausrüstung für KI-Rechenzentren – das schürt Zweifel an der Nachfrage. Der Kurs nähert sich der Zone 690–740 $ (Stop 650 $).",
+  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
  },
  {
   "id": "n_mkt_close_1109",
@@ -268,35 +298,5 @@
   "headline": "Tech-Abverkauf: Nasdaq −1,1 %, S&P 500 −0,5 %, Dow +0,4 %; Öl −7,5 %",
   "summary": "Anleger schichteten vor den Midterms aus Tech- und Chipwerten um (Tech-Sektor zeitweise −2,4 %). Oracles milliardenschwere Kapitalaufnahme nährt Sorgen um die Finanzierung des KI-Ausbaus. Öl (WTI) fiel auf ~96 $ nach Berichten über US-Iran-Gespräche; 10-j. Rendite 4,89 %.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-2-dow-sp-500-nasdaq-091835095.html"
- },
- {
-  "id": "n_chips_close_1102",
-  "date": "2026-11-02",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Chip- und KI-Werte brechen ein: AMD −7,5 %, Marvell −12,7 %, Applied Digital −9,0 %",
-  "summary": "Drei Depotwerte schließen unter ihren Stops. AMD fiel vor den Zahlen (3.11.) von 513 $ im Hoch auf 466,8 $. Eigene Unternehmensmeldungen gab es außer bei Marvell nicht – der Druck kam aus der Branche.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
- },
- {
-  "id": "n_mrvl_close_1102",
-  "date": "2026-11-02",
-  "ticker": "MRVL",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Marvell −12,7 % nach Lumentum-Übernahme per Aktientausch",
-  "summary": "Marvell zahlt 4,5 eigene Aktien je Lumentum-Aktie (Unternehmenswert ca. 115 Mrd. $, Abschluss erwartet 1. Hj. 2028). Die Verwässerung belastet; Schluss 171,4 $, neues Tief seit Juli.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-2-2026"
- },
- {
-  "id": "n_amzn_1102",
-  "date": "2026-11-02",
-  "ticker": "AMZN",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Amazon +4,6 % auf ca. 251 $",
-  "summary": "Nach dem Zahlen-Wackler vom Freitag kaufen Anleger wieder – getragen vom Rekordwachstum im Cloud-Geschäft (AWS). Die Aktie nähert sich der Bestätigungsmarke 258 $.",
-  "url": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-midday-nov-2-stocks-rally-as-oil-prices-tumble-on-diplomatic-hopes/"
  }
 ]

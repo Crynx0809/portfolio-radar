@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-10T14:35:00+01:00",
-  "kind": "News-Check 14:15",
-  "headline": "Keine wichtigen neuen Meldungen zu den Depotwerten seit gestern Abend. Vorbörslich Gewinnmitnahmen bei Chipwerten (Nasdaq-100-Futures ca. −0,4 %) vor der US-Inflation um 14:30 Uhr. Mercedes knapp über der Bestätigung 42 €.",
-  "market": "Futures: Dow ca. +0,4 %, S&P 500 ca. ±0 %, Nasdaq 100 ca. −0,4 %; Brent ca. 91 $ (−1,9 %). DAX-Werte fest (Rheinmetall +2,6 %, Airbus +2,5 %, Allianz +1,9 %). CPI um 14:30 Uhr (Erwartung +0,3 %, Kern +0,2 %), Ergebnis zum 17:45-Check. Kurse: TradingView, Abruf 14:23 Uhr (US-Werte = Schluss vom 9.11.).",
-  "next_update": "heute ca. 17:45 Uhr (News-Check)"
+  "updated_at": "2026-11-10T17:48:00+01:00",
+  "kind": "News-Check 17:45",
+  "headline": "US-Inflation heißer als erwartet (Oktober +0,4 %, Kern +0,3 %) – Zinserhöhungs-Sorgen drücken Tech: Nasdaq 100 ca. −1,1 %. Nvidia (−5 %, Klage gegen Chef Huang) und Hims & Hers (−18 %, Q3) fallen in ihre Zonen; Depot ruhig, kein Stop in Gefahr.",
+  "market": "S&P 500 7.489 (−0,8 %), Nasdaq 100 27.593 (−1,1 %), VIX 20,6, US-Zins 10 J. 5,0 %, DAX 26.390 (+0,5 %), Brent 91,5 $ (−1,1 %), Gold 4.029 $ (−2,1 %). Waller: ab Kerninflation +0,3 % Zinsschritt um 0,5 Punkte im Dezember erwägen. Kurse: TradingView, Abruf 17:47 Uhr (US-Handel läuft).",
+  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
  }
 ]
