@@ -1,37 +1,29 @@
 {
- "generated_at": "2026-11-10T11:46:36+00:00",
+ "generated_at": "2026-11-10T15:02:05+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 508.58,
+   "price": 518.73,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.1883
+   "gap_to_stop": 0.212
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.72,
+   "price": 16.6608,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2667
-  },
-  {
-   "ticker": "NOVO-B",
-   "name": "Novo Nordisk B",
-   "price": 36.755,
-   "stop": 30,
-   "trigger": 37.5,
-   "gap_to_stop": 0.2252
+   "gap_to_stop": 0.2622
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 210.55,
+   "price": 210.95,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.1829
+   "gap_to_stop": 0.1851
   }
  ],
  "events": [],
