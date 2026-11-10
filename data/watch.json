@@ -1,21 +1,21 @@
 {
- "generated_at": "2026-11-10T16:52:20+00:00",
+ "generated_at": "2026-11-10T17:42:49+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 519.56,
+   "price": 509.2,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.2139
+   "gap_to_stop": 0.1897
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.615,
+   "price": 16.335,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2587
+   "gap_to_stop": 0.2375
   }
  ],
  "events": [
@@ -23,29 +23,15 @@
    "ticker": "NU",
    "name": "Nu Holdings",
    "group": "Watchlist",
-   "price": 12.0499,
-   "chg_pct": -0.0251,
-   "at": "2026-11-10T16:52+00:00",
+   "price": 12.005,
+   "chg_pct": -0.0287,
+   "at": "2026-11-10T17:42+00:00",
    "id": "NU-zone-2026-11-10",
    "type": "zone",
    "level": "mittel",
    "title": "Nu Holdings in der Einstiegszone",
-   "text": "Kurs 12,05 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
+   "text": "Kurs 12,01 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
    "todo": "In 11,4–12,1 $: Einstiegsbereich, Stop unter 10,9 $."
-  },
-  {
-   "ticker": "ZTS",
-   "name": "Zoetis",
-   "group": "Watchlist",
-   "price": 81.54,
-   "chg_pct": -0.0095,
-   "at": "2026-11-10T16:52+00:00",
-   "id": "ZTS-zone-2026-11-10",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,54 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
-   "todo": "Zwischen 82 und 92 $: abwarten."
   }
  ],
  "notified": []
