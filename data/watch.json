@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T21:39:11+00:00",
+ "generated_at": "2026-11-11T08:51:12+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -16,6 +16,14 @@
    "stop": 13.2,
    "trigger": 20.4,
    "gap_to_stop": 0.2636
+  },
+  {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "price": 36.545,
+   "stop": 30,
+   "trigger": 37.5,
+   "gap_to_stop": 0.2182
   }
  ],
  "events": [],
