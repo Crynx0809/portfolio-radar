@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-11T20:14:30+00:00",
+ "generated_at": "2026-11-11T21:51:36+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 558.83,
+   "price": 552.9,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.3057
+   "gap_to_stop": 0.2918
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 294.14,
+   "price": 293.45,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1227
+   "gap_to_stop": 0.12
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 18.075,
+   "price": 17.91,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3693
+   "gap_to_stop": 0.3568
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 170.04,
-   "stop": 130,
-   "trigger": 162,
-   "gap_to_stop": 0.308
+   "price": 168.8,
+   "stop": 135,
+   "trigger": 175,
+   "gap_to_stop": 0.2504
   },
   {
    "ticker": "NOVO-B",
@@ -52,31 +52,17 @@
  ],
  "events": [
   {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 170.04,
-   "chg_pct": 0.1014,
-   "at": "2026-11-11T20:14+00:00",
-   "id": "MRVL-ausbruch-2026-11-11",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Marvell Technology über der Bestätigungsmarke 162,00 $",
-   "text": "Kurs 170,04 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 162 $ (altes A-Tief) → Boden bestätigt, Stop auf Einstand; Teilgewinne ab 185 $."
-  },
-  {
    "ticker": "BABA",
    "name": "Alibaba",
    "group": "Watchlist",
-   "price": 101.695,
-   "chg_pct": -0.01,
-   "at": "2026-11-11T20:14+00:00",
+   "price": 101.52,
+   "chg_pct": -0.0117,
+   "at": "2026-11-11T21:51+00:00",
    "id": "BABA-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 101,69 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
+   "text": "Kurs 101,52 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
    "todo": "Zwischen 102 und 113 $: abwarten."
   }
  ],
