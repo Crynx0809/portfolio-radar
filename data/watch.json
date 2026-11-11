@@ -1,29 +1,53 @@
 {
- "generated_at": "2026-11-11T16:05:23+00:00",
+ "generated_at": "2026-11-11T17:10:04+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 549.6599,
+   "price": 554.79,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.2843
+   "gap_to_stop": 0.2962
+  },
+  {
+   "ticker": "GOOGL",
+   "name": "Alphabet A",
+   "price": 293.075,
+   "stop": 262,
+   "trigger": 301,
+   "gap_to_stop": 0.1186
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 18.025,
+   "price": 18.265,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3655
+   "gap_to_stop": 0.3837
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 170.12,
+   "price": 173.635,
    "stop": 130,
    "trigger": 162,
-   "gap_to_stop": 0.3086
+   "gap_to_stop": 0.3357
+  },
+  {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "price": 36.58,
+   "stop": 30,
+   "trigger": 37.5,
+   "gap_to_stop": 0.2193
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 210.95,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.1851
   }
  ],
  "events": [
@@ -31,42 +55,56 @@
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 170.12,
-   "chg_pct": 0.1019,
-   "at": "2026-11-11T16:05+00:00",
+   "price": 173.635,
+   "chg_pct": 0.1247,
+   "at": "2026-11-11T17:10+00:00",
    "id": "MRVL-ausbruch-2026-11-11",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Marvell Technology über der Bestätigungsmarke 162,00 $",
-   "text": "Kurs 170,12 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 173,63 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schluss über 162 $ (altes A-Tief) → Boden bestätigt, Stop auf Einstand; Teilgewinne ab 185 $."
+  },
+  {
+   "ticker": "NKE",
+   "name": "Nike",
+   "group": "Watchlist",
+   "price": 37.815,
+   "chg_pct": -0.0221,
+   "at": "2026-11-11T17:10+00:00",
+   "id": "NKE-zone-2026-11-11",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Nike in der Einstiegszone",
+   "text": "Kurs 37,81 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
+   "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
   },
   {
    "ticker": "ZTS",
    "name": "Zoetis",
    "group": "Watchlist",
-   "price": 81.14,
-   "chg_pct": -0.016,
-   "at": "2026-11-11T16:05+00:00",
+   "price": 81.3464,
+   "chg_pct": -0.0135,
+   "at": "2026-11-11T17:10+00:00",
    "id": "ZTS-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,14 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "text": "Kurs 81,35 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
    "todo": "Zwischen 82 und 92 $: abwarten."
   },
   {
    "ticker": "BABA",
    "name": "Alibaba",
    "group": "Watchlist",
-   "price": 101.53,
-   "chg_pct": -0.0116,
-   "at": "2026-11-11T16:05+00:00",
+   "price": 101.43,
+   "chg_pct": -0.0126,
+   "at": "2026-11-11T17:10+00:00",
    "id": "BABA-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 101,53 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
+   "text": "Kurs 101,43 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
    "todo": "Zwischen 102 und 113 $: abwarten."
   }
  ],
