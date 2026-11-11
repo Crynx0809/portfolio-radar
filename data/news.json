@@ -1,5 +1,25 @@
 [
  {
+  "id": "n-20261111-ai",
+  "date": "2026-11-11",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "CoreWeave hebt Prognose an – Chipwerte erholen sich vorbörslich, Nasdaq-100-Futures ca. +1,9 %",
+  "summary": "CoreWeave übertraf im 3. Quartal die Umsatzerwartung und erhöhte den Jahresausblick; Aktie vorbörslich ca. +17 %. Das dämpft Sorgen um die KI-Nachfrage und hilft KI-Rechenzentren und Chips (Depot: AMD, Marvell, Applied Digital; Watchlist: Nvidia). Gegenwind bleibt der Zins: 10-jährige US-Rendite um 4,98 %, Fed-Gouverneurin Bowman sieht breitere Inflation.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html"
+ },
+ {
+  "id": "n-20261111-enr",
+  "date": "2026-11-11",
+  "ticker": "ENR",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Siemens Energy +8,7 % auf 130,26 € nach Rekordjahr und neuen Zielen bis 2030",
+  "summary": "Jahreszahlen mit Rekordgewinn, Ausblick für 2027 und neue Mittelfristziele auf dem Kapitalmarkttag. Kurs damit nahe am Ziel 132 € des laufenden Plans.",
+  "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-11-11-2026-11201142"
+ },
+ {
   "id": "n-20261110-rklb",
   "date": "2026-11-10",
   "ticker": "RKLB",
@@ -278,25 +298,5 @@
   "headline": "US-Kongresswahl: Demokraten gewinnen laut Berichten Repräsentantenhaus und Senat",
   "summary": "Nach der Zwischenwahl zeichnet sich ein Machtwechsel im Kongress ab. Chipwerte zeigten sich vorbörslich dennoch fest; wie der Gesamtmarkt reagiert, zeigt der US-Handel heute.",
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
- },
- {
-  "id": "n_amd_q3_1103",
-  "date": "2026-11-03",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "AMD: Rekord im Rechenzentrum, Q4-Ausblick ca. 17 Mrd. $",
-  "summary": "Q3-Umsatz 13,4 Mrd. $ (+45 %), Rechenzentrum 8,5 Mrd. $ (+97 %), bereinigtes EPS 2,09 $. Für Q4 erwartet AMD rund 17 Mrd. $ (±3 %), etwa +66 % zum Vorjahr. Nachbörslich laut Bericht ca. +8 % – Schlusskurs am 4.11. abwarten.",
-  "url": "https://www.marketscreener.com/news/amd-reports-third-quarter-2026-financial-results-ce785fdedc89f625"
- },
- {
-  "id": "n_race_q3_1103",
-  "date": "2026-11-03",
-  "ticker": "RACE",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Ferrari hebt Prognose 2026 erneut an",
-  "summary": "Q3-Umsatz 1,90 Mrd. € (+7 %), EBITDA +12 % (Marge 39,7 %), EPS 2,44 €. Neue Jahresziele: Umsatz ca. 7,65 Mrd. €, bereinigtes EPS mindestens 9,85 €. Aktie +2,9 %.",
-  "url": "https://www.sec.gov/Archives/edgar/data/0001648416/000164841626000141/fnvq32026results.htm"
  }
 ]

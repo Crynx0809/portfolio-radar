@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-10T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Heiße US-Inflation belastet Tech nur mäßig (Nasdaq 100 −0,6 %). Nvidia schließt −5,5 % in der Zone 162–170 $, Hims & Hers −16,6 % nach Zahlen – Zone tiefer auf 15,5–16,8 $. Rocket Lab +6,5 % über das Okt.-Hoch, neuer Rücksetzer-Plan 50–53,5 $. Depot ruhig, kein Stop in Gefahr; Nu jetzt in der Zone.",
-  "market": "S&P 500 7.521 (−0,4 %), Nasdaq 100 27.741 (−0,6 %), VIX 19,5, US-Zins 10 J. 4,98 %, DAX 26.347 (+0,3 %), Brent 92,0 $ (−0,6 %), Gold 4.039 $ (−1,8 %), Bitcoin 73.900 $ (−1,7 %). CPI Okt. +0,4 %, Kern +0,3 % – Dezember-Zinserhöhung gilt als wahrscheinlich. Kurse: TradingView, Abruf 22:32 Uhr (US-Schlusskurse).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-11T14:25:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Siemens Energy +8,7 % nach Rekordzahlen, nahe am Ziel 132 €. Vorbörslich Chip-Erholung dank starker CoreWeave-Zahlen (Nasdaq-100-Futures ca. +1,9 %). Depot ruhig, kein Stop in Gefahr.",
+  "market": "Vorbörse: S&P-500-Futures ca. +0,8 %, Nasdaq-100-Futures ca. +1,9 %, Dow-Futures +0,1 %; US-Zins 10 J. ca. 4,98 %. Kurse: TradingView, Abruf 14:20 Uhr (Europa live, USA Schlusskurse vom 10.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_enr_1111n",
+  "at": "2026-11-11T14:25:00+01:00",
+  "ticker": "ENR",
+  "level": "mittel",
+  "text": "Siemens Energy +8,7 % auf 130,26 € nach Rekordzahlen – Ziel 132 € fast erreicht, weit über der Zone 105–113 €. Nicht hinterherkaufen; Plan wird in der Abendanalyse neu bewertet."
+ },
+ {
+  "id": "a_mkt_1111n",
+  "at": "2026-11-11T14:25:00+01:00",
+  "ticker": "Markt",
+  "level": "mittel",
+  "text": "Vorbörslich Erholung bei Chips/KI (CoreWeave-Prognose, Nasdaq-100-Futures ca. +1,9 %). Depot ruhig: kein Stop in Gefahr, kein Wächter-Ereignis seit gestern Abend. Nvidia (Zone 162–170 $) dürfte zur Eröffnung über die Zone laufen."
+ },
+ {
   "id": "a_hims_1110e",
   "at": "2026-11-10T22:45:00+01:00",
   "ticker": "HIMS",
