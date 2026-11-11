@@ -36,6 +36,12 @@
   "event": "Q2-Zahlen"
  },
  {
+  "id": "e_rhm_20261127",
+  "date": "2026-11-27",
+  "ticker": "RHM",
+  "event": "Kapitalmarkttag"
+ },
+ {
   "id": "e_crwd_20261201",
   "date": "2026-12-01",
   "ticker": "CRWD",
@@ -58,6 +64,12 @@
   "date": "2026-12-09",
   "ticker": "Markt",
   "event": "Fed-Zinsentscheid (Dezember, Datum unbestätigt) – Markt erwartet Zinserhöhung"
+ },
+ {
+  "id": "e_tsm_20261210",
+  "date": "2026-12-10",
+  "ticker": "TSM",
+  "event": "November-Umsatz"
  },
  {
   "id": "e_mu_20261223",

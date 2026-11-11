@@ -1,17 +1,45 @@
 [
  {
-  "id": "a_mrvl_1111n2",
-  "at": "2026-11-11T17:50:00+01:00",
+  "id": "a_mrvl_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
   "ticker": "MRVL",
   "level": "hoch",
-  "text": "Marvell +12 % auf ca. 173 $ im Chip-Rally nach den CoreWeave-Zahlen – klar über der Bestätigung 162 $ (zählt mit Schlusskurs darüber). Plan laut Regel: Stop auf Einstand ziehen, Teilgewinne ab 185 $ (Ziel 185 $+). Nicht nachkaufen."
+  "text": "Marvell schließt bei 168,8 $ (+9,3 %) über der Bestätigung 162 $ – Boden bei 132,5 $ bestätigt. Plan: Stop für die Position auf Einstand ziehen (mindestens unter 135 $), Teilgewinne ab 185 $. Zukauf nur bei Rücksetzer in 147–154 $."
  },
  {
-  "id": "a_mu_1111n2",
-  "at": "2026-11-11T17:50:00+01:00",
+  "id": "a_mu_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
   "ticker": "MU",
   "level": "mittel",
-  "text": "Micron +13 % auf ca. 820 $ (Speicher-Rally) – weit über der Zone 560–600 $ und über 740 $, nahe am Ziel 850 $. Nicht hinterherkaufen; Plan wird in der Abendanalyse neu bewertet."
+  "text": "Micron schließt bei 811 $ (+11,9 %), alte Zone 560–600 $ nie erreicht. Neuer Plan: Rücksetzer in 715–745 $ kaufen, Stop 670 $, Ziel 900–990 $; über 892 $ Stop auf Einstand."
+ },
+ {
+  "id": "a_enr_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
+  "ticker": "ENR",
+  "level": "mittel",
+  "text": "Siemens Energy schließt bei 132,8 € (+10,8 %) – Ziel 132 € erreicht. Neuer Plan: Rücksetzer in 118–123 € kaufen, Stop 112 €, Ziel 148–160 €."
+ },
+ {
+  "id": "a_baba_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
+  "ticker": "BABA",
+  "level": "mittel",
+  "text": "Alibaba schließt bei 101,5 $ in der Zone 98–102 $ (Stop 94 $, Ziel 122–132 $). Noch kein Umkehrsignal; Zahlen am 24.11."
+ },
+ {
+  "id": "a_tsm_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
+  "ticker": "TSM",
+  "level": "mittel",
+  "text": "Neu auf der Watchlist (Wunsch): TSMC (ADR, NYSE:TSM) bei 413 $. Rücksetzer in 376–386 $ kaufen, Stop 365 $, Ziel 440–470 $."
+ },
+ {
+  "id": "a_mkt_1111e",
+  "at": "2026-11-11T22:45:00+01:00",
+  "ticker": "Markt",
+  "level": "mittel",
+  "text": "Chip-Rally hält bis Schluss: Nasdaq +1,55 %, S&P 500 +1,3 %. Depot: AMD +7,3 % (552,9 $), Marvell +9,3 %, Applied Digital +7,4 %. Kein Stop in Gefahr. Ziele fast erreicht: Lilly, Costco, Airbus, Robinhood, Alphabet-Ziel angehoben."
  },
  {
   "id": "a_rhm_1111n2",
@@ -19,20 +47,6 @@
   "ticker": "RHM",
   "level": "mittel",
   "text": "Rheinmetall −6,6 % auf 797 € – in der Zone 760–800 €, aber Status weiter „meiden“ (Abwärtstrend). Ohne klaren Auslöser in den News; Stop-Marke 720 €. Abendanalyse prüft."
- },
- {
-  "id": "a_mkt_1111n2",
-  "at": "2026-11-11T17:50:00+01:00",
-  "ticker": "Markt",
-  "level": "mittel",
-  "text": "US-Sitzung: Chip-Rally nach CoreWeave (Halbleiterindex ca. +5 %). Depot stark: AMD +7,5 % (553 $), Applied Digital +8,5 % (18,1 $), Fortinet +4,4 %. Kein Stop in Gefahr. Rocket Lab +7,4 % (67,3 $) über 64,5 $."
- },
- {
-  "id": "a_enr_1111n",
-  "at": "2026-11-11T14:25:00+01:00",
-  "ticker": "ENR",
-  "level": "mittel",
-  "text": "Siemens Energy +8,7 % auf 130,26 € nach Rekordzahlen – Ziel 132 € fast erreicht, weit über der Zone 105–113 €. Nicht hinterherkaufen; Plan wird in der Abendanalyse neu bewertet."
  },
  {
   "id": "a_hims_1110e",

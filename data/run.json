@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-11T17:50:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Rally nach CoreWeave: Marvell +12 % über der Bestätigung 162 $ (Stop auf Einstand ziehen), AMD +7,5 %, Applied Digital +8,5 %. Micron +13 % nahe am Ziel. Rheinmetall −6,6 % in der Zone, bleibt „meiden“. Kein Stop in Gefahr.",
-  "market": "US-Sitzung: Halbleiter stark (Index ca. +5 %), Nasdaq im Plus nach CoreWeave-Zahlen. Kurse: TradingView, Abruf 17:47 Uhr (USA live, Europa nahe Schluss).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-11T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Chip-Rally bis Schluss: Marvell schließt bei 168,8 $ über der Bestätigung 162 $ (Stop auf Einstand ziehen), AMD +7,3 %, Applied Digital +7,4 %. Micron und Siemens Energy mit neuen Plänen nach Zielerreichung. Neu: TSMC auf der Watchlist. Kein Stop in Gefahr.",
+  "market": "S&P 500 +1,3 %, Nasdaq +1,55 %, Dow +0,5 % nach starken CoreWeave-Zahlen; Dezember-Zinserhöhung fast eingepreist. Kurse: TradingView-Schlusskurse, Abruf 22:36 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]
