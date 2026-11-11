@@ -1,17 +1,38 @@
 [
  {
+  "id": "a_mrvl_1111n2",
+  "at": "2026-11-11T17:50:00+01:00",
+  "ticker": "MRVL",
+  "level": "hoch",
+  "text": "Marvell +12 % auf ca. 173 $ im Chip-Rally nach den CoreWeave-Zahlen – klar über der Bestätigung 162 $ (zählt mit Schlusskurs darüber). Plan laut Regel: Stop auf Einstand ziehen, Teilgewinne ab 185 $ (Ziel 185 $+). Nicht nachkaufen."
+ },
+ {
+  "id": "a_mu_1111n2",
+  "at": "2026-11-11T17:50:00+01:00",
+  "ticker": "MU",
+  "level": "mittel",
+  "text": "Micron +13 % auf ca. 820 $ (Speicher-Rally) – weit über der Zone 560–600 $ und über 740 $, nahe am Ziel 850 $. Nicht hinterherkaufen; Plan wird in der Abendanalyse neu bewertet."
+ },
+ {
+  "id": "a_rhm_1111n2",
+  "at": "2026-11-11T17:50:00+01:00",
+  "ticker": "RHM",
+  "level": "mittel",
+  "text": "Rheinmetall −6,6 % auf 797 € – in der Zone 760–800 €, aber Status weiter „meiden“ (Abwärtstrend). Ohne klaren Auslöser in den News; Stop-Marke 720 €. Abendanalyse prüft."
+ },
+ {
+  "id": "a_mkt_1111n2",
+  "at": "2026-11-11T17:50:00+01:00",
+  "ticker": "Markt",
+  "level": "mittel",
+  "text": "US-Sitzung: Chip-Rally nach CoreWeave (Halbleiterindex ca. +5 %). Depot stark: AMD +7,5 % (553 $), Applied Digital +8,5 % (18,1 $), Fortinet +4,4 %. Kein Stop in Gefahr. Rocket Lab +7,4 % (67,3 $) über 64,5 $."
+ },
+ {
   "id": "a_enr_1111n",
   "at": "2026-11-11T14:25:00+01:00",
   "ticker": "ENR",
   "level": "mittel",
   "text": "Siemens Energy +8,7 % auf 130,26 € nach Rekordzahlen – Ziel 132 € fast erreicht, weit über der Zone 105–113 €. Nicht hinterherkaufen; Plan wird in der Abendanalyse neu bewertet."
- },
- {
-  "id": "a_mkt_1111n",
-  "at": "2026-11-11T14:25:00+01:00",
-  "ticker": "Markt",
-  "level": "mittel",
-  "text": "Vorbörslich Erholung bei Chips/KI (CoreWeave-Prognose, Nasdaq-100-Futures ca. +1,9 %). Depot ruhig: kein Stop in Gefahr, kein Wächter-Ereignis seit gestern Abend. Nvidia (Zone 162–170 $) dürfte zur Eröffnung über die Zone laufen."
  },
  {
   "id": "a_hims_1110e",

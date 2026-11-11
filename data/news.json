@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_mrvl_1111",
+  "date": "2026-11-11",
+  "ticker": "MRVL",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Marvell +12 % auf ca. 173 $ – Chip-Rally nach CoreWeave-Prognose hebt den Wert über die Bestätigungsmarke",
+  "summary": "Starke CoreWeave-Zahlen und eine angehobene Prognose beruhigen Sorgen um KI-Investitionen; Halbleiter erholen sich breit, Marvell gehört zu den stärksten Werten.",
+  "url": "https://news.jkn.co.kr/editions/english/post/1087207"
+ },
+ {
+  "id": "n_mu_1111",
+  "date": "2026-11-11",
+  "ticker": "MU",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Micron +13 % auf ca. 820 $ – Speicherwerte springen nach CoreWeave-Ausblick",
+  "summary": "CoreWeave spricht von einem Rekordquartal und hebt den Ausblick an; Speicherhersteller wie Micron und SK hynix legen zweistellig zu.",
+  "url": "https://www.tikr.com/blog/micron-soars-10-sk-hynix-up-9-as-coreweave-raises-outlook-on-a-breakout-quarter"
+ },
+ {
   "id": "n-20261111-ai",
   "date": "2026-11-11",
   "ticker": "Markt",
@@ -278,25 +298,5 @@
   "headline": "KI-Rechenzentrums-Werte unter Druck: Applied Digital −8,6 %, Marvell −7,7 %, GE Vernova −10,6 %",
   "summary": "Sorge, dass die neue Kongress-Mehrheit und angekündigte Rechenzentrums-Stopps auf Bundesstaats-Ebene (Texas) den Ausbau bremsen. CoreWeave, Iren, Nebius ebenfalls schwach; Siemens Energy −7,4 %. Bei GE Vernova belastet laut Bericht zusätzlich ein Streit mit Iberdrola.",
   "url": "https://www.pulse.bot/manufacturing/news/ge-vernova-shares-tumble-11-as-datacenter-slowdown-and-iberdrola-dispute-raise-doubts-9af8fecd-ffef-43d6-b3f2-26da0306c5bf/"
- },
- {
-  "id": "n_novo_q3_1104",
-  "date": "2026-11-04",
-  "ticker": "NOVO-B",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Novo Nordisk: Q3 über den Erwartungen, Prognose 2026 angehoben",
-  "summary": "Novo Nordisk hat im dritten Quartal mehr verdient als erwartet und die Jahresprognose 2026 erhöht. Die Aktie stieg bis Mittag um 5,1 % auf 37,94 € – über die Bestätigungsmarke 37,5 €.",
-  "url": "https://www.investing.com/news/stock-market-news/novo-nordisk-q3-profit-beats-forecast-raises-2026-guidance-4997498"
- },
- {
-  "id": "n_macro_kongress_1104",
-  "date": "2026-11-04",
-  "ticker": "",
-  "impact": "mittel",
-  "direction": "neutral",
-  "headline": "US-Kongresswahl: Demokraten gewinnen laut Berichten Repräsentantenhaus und Senat",
-  "summary": "Nach der Zwischenwahl zeichnet sich ein Machtwechsel im Kongress ab. Chipwerte zeigten sich vorbörslich dennoch fest; wie der Gesamtmarkt reagiert, zeigt der US-Handel heute.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-04-2026"
  }
 ]
