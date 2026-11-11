@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-11T17:10:04+00:00",
+ "generated_at": "2026-11-11T18:04:32+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 554.79,
+   "price": 560.475,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.2962
+   "gap_to_stop": 0.3095
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 293.075,
+   "price": 294.0,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1186
+   "gap_to_stop": 0.1221
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 18.265,
+   "price": 18.315,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3837
+   "gap_to_stop": 0.3875
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 173.635,
+   "price": 173.37,
    "stop": 130,
    "trigger": 162,
-   "gap_to_stop": 0.3357
+   "gap_to_stop": 0.3336
   },
   {
    "ticker": "NOVO-B",
@@ -55,56 +55,42 @@
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 173.635,
-   "chg_pct": 0.1247,
-   "at": "2026-11-11T17:10+00:00",
+   "price": 173.37,
+   "chg_pct": 0.1229,
+   "at": "2026-11-11T18:04+00:00",
    "id": "MRVL-ausbruch-2026-11-11",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Marvell Technology über der Bestätigungsmarke 162,00 $",
-   "text": "Kurs 173,63 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 173,37 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schluss über 162 $ (altes A-Tief) → Boden bestätigt, Stop auf Einstand; Teilgewinne ab 185 $."
-  },
-  {
-   "ticker": "NKE",
-   "name": "Nike",
-   "group": "Watchlist",
-   "price": 37.815,
-   "chg_pct": -0.0221,
-   "at": "2026-11-11T17:10+00:00",
-   "id": "NKE-zone-2026-11-11",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nike in der Einstiegszone",
-   "text": "Kurs 37,81 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
-   "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
   },
   {
    "ticker": "ZTS",
    "name": "Zoetis",
    "group": "Watchlist",
-   "price": 81.3464,
-   "chg_pct": -0.0135,
-   "at": "2026-11-11T17:10+00:00",
+   "price": 81.525,
+   "chg_pct": -0.0113,
+   "at": "2026-11-11T18:04+00:00",
    "id": "ZTS-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,35 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
+   "text": "Kurs 81,53 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
    "todo": "Zwischen 82 und 92 $: abwarten."
   },
   {
    "ticker": "BABA",
    "name": "Alibaba",
    "group": "Watchlist",
-   "price": 101.43,
-   "chg_pct": -0.0126,
-   "at": "2026-11-11T17:10+00:00",
+   "price": 101.67,
+   "chg_pct": -0.0102,
+   "at": "2026-11-11T18:04+00:00",
    "id": "BABA-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 101,43 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
+   "text": "Kurs 101,67 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
    "todo": "Zwischen 102 und 113 $: abwarten."
   }
  ],
