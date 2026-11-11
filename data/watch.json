@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-11T18:04:32+00:00",
+ "generated_at": "2026-11-11T20:14:30+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 560.475,
+   "price": 558.83,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.3095
+   "gap_to_stop": 0.3057
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 294.0,
+   "price": 294.14,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1221
+   "gap_to_stop": 0.1227
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 18.315,
+   "price": 18.075,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3875
+   "gap_to_stop": 0.3693
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 173.37,
+   "price": 170.04,
    "stop": 130,
    "trigger": 162,
-   "gap_to_stop": 0.3336
+   "gap_to_stop": 0.308
   },
   {
    "ticker": "NOVO-B",
@@ -55,42 +55,28 @@
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 173.37,
-   "chg_pct": 0.1229,
-   "at": "2026-11-11T18:04+00:00",
+   "price": 170.04,
+   "chg_pct": 0.1014,
+   "at": "2026-11-11T20:14+00:00",
    "id": "MRVL-ausbruch-2026-11-11",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Marvell Technology über der Bestätigungsmarke 162,00 $",
-   "text": "Kurs 173,37 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 170,04 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schluss über 162 $ (altes A-Tief) → Boden bestätigt, Stop auf Einstand; Teilgewinne ab 185 $."
-  },
-  {
-   "ticker": "ZTS",
-   "name": "Zoetis",
-   "group": "Watchlist",
-   "price": 81.525,
-   "chg_pct": -0.0113,
-   "at": "2026-11-11T18:04+00:00",
-   "id": "ZTS-zone-2026-11-11",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,53 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
-   "todo": "Zwischen 82 und 92 $: abwarten."
   },
   {
    "ticker": "BABA",
    "name": "Alibaba",
    "group": "Watchlist",
-   "price": 101.67,
-   "chg_pct": -0.0102,
-   "at": "2026-11-11T18:04+00:00",
+   "price": 101.695,
+   "chg_pct": -0.01,
+   "at": "2026-11-11T20:14+00:00",
    "id": "BABA-zone-2026-11-11",
    "type": "zone",
    "level": "mittel",
    "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 101,67 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
+   "text": "Kurs 101,69 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
    "todo": "Zwischen 102 und 113 $: abwarten."
   }
  ],
