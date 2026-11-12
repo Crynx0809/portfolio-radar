@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-12T20:30:54+00:00",
+ "generated_at": "2026-11-12T21:44:54+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 584.24,
+   "price": 585.3,
    "stop": 428,
-   "trigger": 579,
-   "gap_to_stop": 0.365
+   "trigger": 658.5,
+   "gap_to_stop": 0.3675
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 299.605,
+   "price": 298.7,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1435
+   "gap_to_stop": 0.1401
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.84,
+   "price": 16.95,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2758
+   "gap_to_stop": 0.2841
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 164.775,
+   "price": 164.45,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.2206
+   "gap_to_stop": 0.2181
   },
   {
    "ticker": "NOVO-B",
@@ -52,46 +52,18 @@
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 584.24,
-   "chg_pct": 0.0567,
-   "at": "2026-11-12T20:30+00:00",
-   "id": "AMD-ausbruch-2026-11-12",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Advanced Micro Devices über der Bestätigungsmarke 579,00 $",
-   "text": "Kurs 584,24 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 579 $ (B-Hoch 28.10.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 600–658 $."
-  },
-  {
    "ticker": "NKE",
    "name": "Nike",
    "group": "Watchlist",
-   "price": 37.71,
-   "chg_pct": -0.0159,
-   "at": "2026-11-12T20:30+00:00",
+   "price": 37.76,
+   "chg_pct": -0.0146,
+   "at": "2026-11-12T21:44+00:00",
    "id": "NKE-zone-2026-11-12",
    "type": "zone",
    "level": "mittel",
    "title": "Nike in der Einstiegszone",
-   "text": "Kurs 37,71 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
+   "text": "Kurs 37,76 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
    "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
-  },
-  {
-   "ticker": "NVDA",
-   "name": "Nvidia",
-   "group": "Watchlist",
-   "price": 163.68,
-   "chg_pct": -0.0578,
-   "at": "2026-11-12T20:30+00:00",
-   "id": "NVDA-zone-2026-11-12",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nvidia in der Einstiegszone",
-   "text": "Kurs 163,68 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
-   "todo": "170–200 $: abwarten."
   }
  ],
  "notified": [
