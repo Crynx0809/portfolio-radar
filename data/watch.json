@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-12T18:33:21+00:00",
+ "generated_at": "2026-11-12T19:38:59+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 580.04,
+   "price": 582.12,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.3552
+   "gap_to_stop": 0.3601
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 301.94,
+   "price": 301.09,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1524
+   "gap_to_stop": 0.1492
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 17.1483,
+   "price": 16.975,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2991
+   "gap_to_stop": 0.286
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 165.55,
+   "price": 166.1,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.2263
+   "gap_to_stop": 0.2304
   },
   {
    "ticker": "NOVO-B",
@@ -55,42 +55,56 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 580.04,
-   "chg_pct": 0.0491,
-   "at": "2026-11-12T18:33+00:00",
+   "price": 582.12,
+   "chg_pct": 0.0528,
+   "at": "2026-11-12T19:38+00:00",
    "id": "AMD-ausbruch-2026-11-12",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Advanced Micro Devices über der Bestätigungsmarke 579,00 $",
-   "text": "Kurs 580,04 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 582,12 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schluss über 579 $ (B-Hoch 28.10.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 600–658 $."
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
    "group": "Portfolio",
-   "price": 301.94,
-   "chg_pct": 0.0289,
-   "at": "2026-11-12T18:33+00:00",
+   "price": 301.09,
+   "chg_pct": 0.026,
+   "at": "2026-11-12T19:38+00:00",
    "id": "GOOGL-ausbruch-2026-11-12",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Alphabet A über der Bestätigungsmarke 301,00 $",
-   "text": "Kurs 301,94 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 301,09 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Schluss über 301 $ → Boden bestätigt, Stop auf Einstand; Teilgewinne bei 325–345 $ (Gap-Schluss / 50–61,8 % des Rückgangs)."
+  },
+  {
+   "ticker": "NKE",
+   "name": "Nike",
+   "group": "Watchlist",
+   "price": 37.784701,
+   "chg_pct": -0.014,
+   "at": "2026-11-12T19:38+00:00",
+   "id": "NKE-zone-2026-11-12",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Nike in der Einstiegszone",
+   "text": "Kurs 37,78 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
+   "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
   },
   {
    "ticker": "NVDA",
    "name": "Nvidia",
    "group": "Watchlist",
-   "price": 165.31,
-   "chg_pct": -0.0485,
-   "at": "2026-11-12T18:33+00:00",
+   "price": 164.825,
+   "chg_pct": -0.0513,
+   "at": "2026-11-12T19:38+00:00",
    "id": "NVDA-zone-2026-11-12",
    "type": "zone",
    "level": "mittel",
    "title": "Nvidia in der Einstiegszone",
-   "text": "Kurs 165,31 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
+   "text": "Kurs 164,82 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
    "todo": "170–200 $: abwarten."
   }
  ],
