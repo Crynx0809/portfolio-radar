@@ -1,70 +1,64 @@
 {
- "generated_at": "2026-11-12T11:53:29+00:00",
+ "generated_at": "2026-11-12T15:24:33+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 552.9,
+   "price": 560.8055,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.2918
+   "gap_to_stop": 0.3103
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 293.45,
+   "price": 294.25,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.12
+   "gap_to_stop": 0.1231
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 17.91,
+   "price": 16.3401,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.3568
+   "gap_to_stop": 0.2379
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 168.8,
+   "price": 161.69,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.2504
+   "gap_to_stop": 0.1977
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.32,
+   "price": 36.465,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.244
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "price": 210.7,
-   "stop": 178,
-   "trigger": 217,
-   "gap_to_stop": 0.1837
+   "gap_to_stop": 0.2155
   }
  ],
  "events": [
   {
-   "ticker": "BABA",
-   "name": "Alibaba",
-   "group": "Watchlist",
-   "price": 101.52,
-   "chg_pct": -0.0117,
-   "at": "2026-11-12T11:53+00:00",
-   "id": "BABA-zone-2026-11-12",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 101,52 $ ist in die Zone 98,00 $–102,00 $ gelaufen.",
-   "todo": "Zwischen 102 und 113 $: abwarten."
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "group": "Portfolio",
+   "price": 16.3401,
+   "chg_pct": -0.0877,
+   "at": "2026-11-12T15:24+00:00",
+   "id": "APLD-absturz-2026-11-12",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Applied Digital −8,8 % heute",
+   "text": "Starker Tagesverlust auf 16,34 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Erholung aus der Zone 14–16 $ auf 16,7 $ (+7,5 %). Halten, nicht aufstocken; Stop 13,2 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand"
   }
  ],
- "notified": []
+ "notified": [
+  "APLD-absturz-2026-11-12"
+ ]
 }
