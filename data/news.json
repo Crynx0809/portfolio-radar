@@ -1,5 +1,55 @@
 [
  {
+  "id": "n_mkt_close_1112",
+  "date": "2026-11-12",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Leichte Verluste: S&P 500 −0,35 %, Nasdaq 100 −0,3 %, DAX +0,4 % – US-Rendite 5,1 %, Brent +3,5 % auf 96 $",
+  "summary": "Der Nvidia-Chefwechsel drückte die Indizes zur Eröffnung, der Großteil wurde aufgeholt. Die 10-jährige US-Rendite stieg auf 5,1 %, Öl zog an, Gold fiel um gut 3 %. Erstanträge auf Arbeitslosenhilfe 200.000 (+9.000). Freitag folgen die Erzeugerpreise (PPI).",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-12-2026"
+ },
+ {
+  "id": "n_nvda_1112e",
+  "date": "2026-11-12",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Nvidia schließt −4,3 % bei 166,2 $ nach Huang-Rücktritt – Tief 148,8 $ lag unter dem Stop 155 $",
+  "summary": "Jensen Huang trat mit sofortiger Wirkung als Chef und Verwaltungsrat zurück, Finanzchefin Colette Kress führt übergangsweise. Die Aktie fiel zur Eröffnung bis 148,8 $, holte bis Schluss aber den größten Teil auf. Q3-Zahlen am 17.11.",
+  "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+ },
+ {
+  "id": "n_amd_1112e",
+  "date": "2026-11-12",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "AMD schließt +5,9 % bei 585,3 $ – erstmals seit Oktober über dem B-Hoch 579 $",
+  "summary": "Anleger schichten nach dem Nvidia-Chefwechsel in Konkurrenten um. Mit dem Schluss über 579 $ ist die Erholung seit dem Tief 402 $ (5.11.) technisch bestätigt; das Rekordhoch 658,5 $ ist 12 % entfernt.",
+  "url": "https://www.forbes.com/sites/fionariley/2026/11/12/nvidia-sinks-11-at-open-after-jensen-huang-resigns-pushing-market-cap-below-microsoft/"
+ },
+ {
+  "id": "n_baba_1112e",
+  "date": "2026-11-12",
+  "ticker": "BABA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Alibaba −7,1 % auf 94,4 $ – Stop 94 $ im Handel unterschritten, Juni-Tief 92 $ in Reichweite",
+  "summary": "China-Tech wurde breit verkauft, dazu Sorgen um hohe KI-Ausgaben. Ein Einzelauslöser fehlt. Zahlen am 24.11.",
+  "url": "https://rallies.ai/news/alibaba-adrs-slide-as-china-tech-sells-off-and-ai-spending-fears-linger"
+ },
+ {
+  "id": "n_mrna_1112e",
+  "date": "2026-11-12",
+  "ticker": "MRNA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Moderna −7,0 % auf 231,4 $ – Biotech-Rally pausiert",
+  "summary": "Gewinnmitnahmen nach dem Rekordlauf, dazu Sorgen um Mittelabfluss und die Zulassung des Grippe-Impfstoffs. Seit dem Hoch 280,8 $ (9.11.) rund −18 %; die Zone 180–200 $ liegt noch deutlich tiefer.",
+  "url": "https://www.itiger.com/news/2676351901"
+ },
+ {
   "id": "n_nvda_1112c",
   "date": "2026-11-12",
   "ticker": "NVDA",
@@ -8,16 +58,6 @@
   "headline": "Jensen Huang tritt als Nvidia-Chef zurück – Aktie zur Eröffnung bis −14 %, dann Erholung auf ca. 165 $",
   "summary": "Nach einer Sitzung des Verwaltungsrats zu Vorwürfen rund um Huangs Kontakt zu einer Geschäftsfrau mit mutmaßlichen Verbindungen zu Geheimdiensten und Chip-Transfers nach China ist Huang zurückgetreten; übergangsweise führt laut Berichten Finanzchefin Colette Kress. Die Vorwürfe sind nicht bewiesen. Nvidia fiel zur Eröffnung bis 148,8 $ (unter den Stop 155 $), erholte sich bis zum Nachmittag aber auf rund 165 $ (−5 %). AMD (+6 %) und Broadcom (+4–6 %) gelten als Profiteure; Nasdaq zur Eröffnung −1,5 %, inzwischen leicht im Plus.",
   "url": "https://www.bnnbloomberg.ca/markets/2026/11/12/nvidia-shares-plunge-13-at-open-after-ceo-jensen-huang-resigns/"
- },
- {
-  "id": "n_amd_1112c",
-  "date": "2026-11-12",
-  "ticker": "AMD",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "AMD +6 % auf ca. 588 $ – Anleger setzen nach Huangs Rücktritt auf Nvidia-Konkurrenten",
-  "summary": "AMD steigt im Handel über die Bestätigungsmarke 579 $ (Hoch 28.10.). Broadcom ebenfalls deutlich fester. Zählt erst mit Schlusskurs darüber.",
-  "url": "https://www.morningstar.com/news/marketwatch/20261109172/are-amd-and-broadcom-the-real-winners-of-the-nvidia-spy-scandal"
  },
  {
   "id": "n_nvda_1112",
@@ -258,45 +298,5 @@
   "headline": "Atlassian: Q1 über den Erwartungen, aber schwächerer Ausblick fürs Abo-Wachstum – Aktie −16,2 % auf 153,7 $",
   "summary": "Umsatz und Gewinn lagen über den Schätzungen, doch der Ausblick für das Cloud-/Abo-Wachstum enttäuschte. Vorbörslich notiert die Aktie damit um 155–158 $ und damit unter der Einstiegszone 168–178 $ und am Stop 158 $ (Schluss Donnerstag 183,29 $). Entscheidend ist der Schlusskurs heute.",
   "url": "https://uk.finance.yahoo.com/news/atlassian-tumbles-16-weaker-subscription-214811605.html"
- },
- {
-  "id": "n_chips_pre_1106",
-  "date": "2026-11-06",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Vorbörslich Erholung nach dem KI-Ausverkauf: Nasdaq-100-Futures ca. +1,4 %, AMD, Marvell, Micron ca. +6 bis +10 %",
-  "summary": "Nach dem schwersten Nasdaq-Tag seit 19 Monaten stabilisieren sich die Chipwerte vor Handelsbeginn (Nvidia ca. +4,5 %), Dow-Futures dagegen ca. −1 %. Um 14:30 Uhr kommt der US-Arbeitsmarktbericht; der Markt preist eine Zinserhöhung im Dezember mit über 65 % ein. Vorbörsliche Kurse sind unbestätigt – für die Pläne zählt der Schlusskurs.",
-  "url": "https://finance.yahoo.com/technology/ai/articles/nasdaq-futures-rise-steep-ai-094400237.html"
- },
- {
-  "id": "n_mkt_close_1105",
-  "date": "2026-11-05",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "KI-Ausverkauf: Nasdaq rund −5 %, S&P 500 rund −4 %, Halbleiter-Index ca. −10 %",
-  "summary": "Schlechtester Nasdaq-Tag seit April 2025, Nasdaq rutscht in die Korrektur (−10 % vom Hoch). Auslöser: Sorge vor Baustopps für Rechenzentren nach dem Demokraten-Sieg (u. a. neue Gouverneurin in Texas will ein Moratorium, viele lokale Abstimmungen gegen Rechenzentren angenommen) und Abbau von Gewinner-Positionen durch Hedgefonds. Basiskonsum und Berkshire (Rekordhoch) gefragt. Werte aus dem Handelsverlauf, offizielle Schlussstände nicht geprüft.",
-  "url": "https://fortune.com/2026/11/05/wall-street-drop-off-tech-ai-plunge-2-trillion/"
- },
- {
-  "id": "n_chips_close_1105",
-  "date": "2026-11-05",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Depot: AMD −17,3 % und Marvell −16,4 % schließen unter ihren Stops, Applied Digital −14,7 %",
-  "summary": "AMD schließt bei 404,4 $ (Stop 408 $), Marvell bei 133,6 $ (Stop 144 $). Applied Digital hält mit 14,17 $ knapp den Stop 13,2 $. Auch Micron −17,5 %, Nvidia −9,3 %, Intel −10 %. AMD-Chefin Lisa Su nennt die Reaktion „kurzsichtig“.",
-  "url": "https://www.cnbc.com/2026/11/05/qualcomm-earnings-chip-stocks-election.html"
- },
- {
-  "id": "n_zts_1105",
-  "date": "2026-11-05",
-  "ticker": "ZTS",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Zoetis: Q3-Umsatz −1 %, Haustier-Geschäft in den USA −8 % – Aktie −7,9 %",
-  "summary": "Umsatz 2,39 Mrd. $ (−1 %), bereinigter Gewinn je Aktie 1,75 $ (+3 %). Die Gewinnprognose 2026 wurde auf 6,25–6,35 $ angehoben, die Umsatzprognose eingeengt. Belastend: US-Haustiersparte −8 %.",
-  "url": "https://www.sec.gov/Archives/edgar/data/0001555280/000155528026000048/exhibit99q32026.htm"
  }
 ]

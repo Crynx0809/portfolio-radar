@@ -1,5 +1,11 @@
 [
  {
+  "id": "e_ppi_20261113",
+  "date": "2026-11-13",
+  "ticker": "Markt",
+  "event": "US-Erzeugerpreise (PPI) Oktober"
+ },
+ {
   "id": "e_nke_20261116",
   "date": "2026-11-16",
   "ticker": "NKE",

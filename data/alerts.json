@@ -1,5 +1,40 @@
 [
  {
+  "id": "a_amd_1112e",
+  "at": "2026-11-12T22:45:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "AMD schließt bei 585,3 $ (+5,9 %) über der Bestätigung 579 $ – Aufwärtswelle bestätigt. Plan: Stop der Position auf Einstand ziehen, Teilgewinne bei 600–658 $ möglich. Neues Ziel für Käufe im Rücksetzer (450–472 $, Stop 428 $): 680–760 $."
+ },
+ {
+  "id": "a_nvda_1112e",
+  "at": "2026-11-12T22:45:00+01:00",
+  "ticker": "NVDA",
+  "level": "hoch",
+  "text": "Nvidia: Plan v1 intraday ausgestoppt (Tief 148,8 $ < Stop 155 $ nach Huangs Rücktritt), Schluss aber 166,2 $. Neuer Plan: 158–168 $ nur klein kaufen, Stop 145 $, Ziel 200–218 $; über 178 $ Stop auf Einstand. Zahlen am 17.11."
+ },
+ {
+  "id": "a_baba_1112e",
+  "at": "2026-11-12T22:45:00+01:00",
+  "ticker": "BABA",
+  "level": "mittel",
+  "text": "Alibaba −7,1 % auf 94,4 $ – Stop 94 $ im Handel unterschritten (Tief 93,4 $). Neuer Plan: erst am Juni-Tief 88–92 $ kaufen, Stop 84 $, Ziel 108–113 $. Zahlen am 24.11."
+ },
+ {
+  "id": "a_zs_1112e",
+  "at": "2026-11-12T22:45:00+01:00",
+  "ticker": "ZS",
+  "level": "mittel",
+  "text": "Zscaler: Stop 185 $ im Handel knapp unterschritten (Tief 184,6 $), Schluss 193,2 $. Neue Zone 172–182 $ (61,8-%-Rücklauf), Stop 158 $, Ziel 225–245 $. Zahlen am 24.11."
+ },
+ {
+  "id": "a_wl_1112e",
+  "at": "2026-11-12T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In der Zone: Nike 37,76 $, Adobe 238,5 $, ServiceNow 100,7 $, Nu 11,83 $, Exxon 169,8 $, BofA 50,5 $ (Depot). Allianz nach Q3 auf Rekord 472,4 € – neues Ziel 505–530 € für Käufe im Rücksetzer. Moderna −7 %, Oklo −5,5 %."
+ },
+ {
   "id": "a_nvda_1112c",
   "at": "2026-11-12T17:55:00+01:00",
   "ticker": "NVDA",

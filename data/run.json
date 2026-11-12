@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-12T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Jensen Huang tritt als Nvidia-Chef zurück: Nvidia zur Eröffnung bis 148,8 $ (kurz unter Stop 155 $), jetzt ca. 165 $ (−5 %) in der Zone – der Schlusskurs entscheidet. AMD +6,4 % über der Bestätigung 579 $. Alibaba −6,4 % auf 95 $, knapp über dem Stop 94 $. Im Depot kein Stop in Gefahr.",
-  "market": "S&P 500 +0,1 %, Nasdaq 100 +0,1 % (nach −1,5 % zur Eröffnung), DAX +0,6 %; 10-jährige US-Rendite 5,08 %, Brent 94 $, Gold −3,2 %. Kurse: TradingView, Abruf 16:47 UTC (im Handel).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-12T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "AMD schließt bei 585 $ über der Bestätigung 579 $ – Stop der Position auf Einstand, neues Ziel 680–760 $. Nvidia nach Huang-Rücktritt intraday ausgestoppt (148,8 $), Schluss 166 $: neuer Plan klein in 158–168 $, Stop 145 $. Alibaba und Zscaler knapp ausgestoppt, Zonen tiefer gelegt. Im Depot kein Stop in Gefahr.",
+  "market": "S&P 500 −0,35 %, Nasdaq 100 −0,3 %, DAX +0,4 %; 10-jährige US-Rendite 5,1 %, Brent 96 $ (+3,5 %), Gold −3,1 %. Kurse: TradingView-Schlusskurse, Abruf 21:32 UTC.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]
