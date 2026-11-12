@@ -1,61 +1,83 @@
 {
- "generated_at": "2026-11-12T15:24:33+00:00",
+ "generated_at": "2026-11-12T16:30:47+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 560.8055,
+   "price": 586.8799,
    "stop": 428,
    "trigger": 579,
-   "gap_to_stop": 0.3103
+   "gap_to_stop": 0.3712
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 294.25,
+   "price": 299.38,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1231
+   "gap_to_stop": 0.1427
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.3401,
+   "price": 17.3801,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2379
+   "gap_to_stop": 0.3167
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 161.69,
+   "price": 168.385,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.1977
+   "gap_to_stop": 0.2473
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.465,
+   "price": 36.86,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2155
+   "gap_to_stop": 0.2287
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 211.85,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.1902
   }
  ],
  "events": [
   {
-   "ticker": "APLD",
-   "name": "Applied Digital",
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 16.3401,
-   "chg_pct": -0.0877,
-   "at": "2026-11-12T15:24+00:00",
-   "id": "APLD-absturz-2026-11-12",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Applied Digital −8,8 % heute",
-   "text": "Starker Tagesverlust auf 16,34 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Erholung aus der Zone 14–16 $ auf 16,7 $ (+7,5 %). Halten, nicht aufstocken; Stop 13,2 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand"
+   "price": 586.8799,
+   "chg_pct": 0.0615,
+   "at": "2026-11-12T16:30+00:00",
+   "id": "AMD-ausbruch-2026-11-12",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Advanced Micro Devices über der Bestätigungsmarke 579,00 $",
+   "text": "Kurs 586,88 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 579 $ (B-Hoch 28.10.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 600–658 $."
+  },
+  {
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "group": "Watchlist",
+   "price": 166.36,
+   "chg_pct": -0.0424,
+   "at": "2026-11-12T16:30+00:00",
+   "id": "NVDA-zone-2026-11-12",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Nvidia in der Einstiegszone",
+   "text": "Kurs 166,36 $ ist in die Zone 162,00 $–170,00 $ gelaufen.",
+   "todo": "170–200 $: abwarten."
   }
  ],
  "notified": [
