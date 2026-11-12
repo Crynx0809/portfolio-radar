@@ -1,5 +1,26 @@
 [
  {
+  "id": "a_nvda_1112c",
+  "at": "2026-11-12T17:55:00+01:00",
+  "ticker": "NVDA",
+  "level": "hoch",
+  "text": "Jensen Huang ist als Nvidia-Chef zurückgetreten. Aktie fiel zur Eröffnung bis 148,8 $ – kurz unter den Stop 155 $ –, erholt sich aber auf ca. 165 $ (−5 %, in der Zone 162–170 $). Es zählt der Schlusskurs: Schluss unter 155 $ = Plan ungültig, Position schließen. Schlagzeilen-Risiko bleibt hoch; nicht aufstocken, Zahlen ca. 18.11."
+ },
+ {
+  "id": "a_amd_1112c",
+  "at": "2026-11-12T17:55:00+01:00",
+  "ticker": "AMD",
+  "level": "mittel",
+  "text": "AMD im Handel +6,4 % auf ca. 588 $ – über der Bestätigungsmarke 579 $. Schließt AMD heute darüber: Stop für die Position auf Einstand ziehen (mindestens über 428 $), Teilgewinne bei 600–658 $. Nicht hinterherkaufen; Zukauf nur im Rücksetzer 450–472 $."
+ },
+ {
+  "id": "a_baba_1112c",
+  "at": "2026-11-12T17:55:00+01:00",
+  "ticker": "BABA",
+  "level": "mittel",
+  "text": "Alibaba −6,4 % auf ca. 95 $ – unter der Zone 98–102 $, nur noch ~1 % über dem Stop 94 $ (China-Tech schwach, kein Einzelauslöser gefunden). Schluss unter 94 $ = Plan ungültig. Zahlen am 24.11."
+ },
+ {
   "id": "a_nvda_1112n",
   "at": "2026-11-12T14:20:00+01:00",
   "ticker": "NVDA",
