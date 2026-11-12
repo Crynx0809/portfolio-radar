@@ -1,5 +1,12 @@
 [
  {
+  "id": "a_nvda_1112n",
+  "at": "2026-11-12T14:20:00+01:00",
+  "ticker": "NVDA",
+  "level": "mittel",
+  "text": "Nvidia vorbörslich ca. −5,5 % (Bericht: Verwaltungsrat erwägt Absetzung von Jensen Huang) – damit rund 164 $ und in der Einstiegszone 162–170 $. Plan unverändert: gestaffelt in 162–170 $, Stop 155 $. Schlagzeilen-Risiko hoch, nur kleine Position; Schluss unter 155 $ = Plan ungültig."
+ },
+ {
   "id": "a_mrvl_1111e",
   "at": "2026-11-11T22:45:00+01:00",
   "ticker": "MRVL",

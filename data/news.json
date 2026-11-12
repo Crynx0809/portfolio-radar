@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_nvda_1112",
+  "date": "2026-11-12",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Nvidia vorbörslich ca. −5,5 %: Bericht über mögliche Absetzung von Chef Jensen Huang",
+  "summary": "Laut Wall Street Journal bereitet der Verwaltungsrat eine Ablösung von Jensen Huang vor; als Übergangslösung werden u. a. Finanzchefin Colette Kress genannt. Die Nasdaq-100-Futures geben rund 0,8 % nach, AMD und Broadcom legen dagegen vorbörslich zu. Kurs aus prices.json noch Schluss vom 11.11.",
+  "url": "https://sg.finance.yahoo.com/news/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
+ },
+ {
   "id": "n_mkt_close_1111",
   "date": "2026-11-11",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "Rheinmetall senkt Prognose 2026 erneut – Aktie −16,5 %",
   "summary": "Trotz voller Auftragsbücher kappt der Rüstungskonzern mit den Q3-Zahlen erneut die Umsatz- und Ergebnisprognose für 2026. Die Aktie fällt auf rund 838 € und damit unter die Elliott-Invalidierung 909 €.",
   "url": "https://www.handelsblatt.com/unternehmen/industrie/ruestungsindustrie-rheinmetall-senkt-erneut-prognose-aktie-bricht-ein/100267059.html"
- },
- {
-  "id": "n_mkt_close_1104",
-  "date": "2026-11-04",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Wahl-Rally: Dow ca. +2,4 %, S&P 500 +1,6 %, Nasdaq +1,9 % nach Demokraten-Sieg im Kongress",
-  "summary": "Laut Berichten bester Tag nach einer Zwischenwahl seit Jahrzehnten. Gewinner: Krankenversicherer, Kliniken, Erneuerbare. Verlierer: KI-Rechenzentrums-Werte (Sorge vor Anhörungen und Untersuchungen zum Ausbau), Rüstung. US-Zehnjahresrendite um 4,95 %.",
-  "url": "https://finance.yahoo.com/energy/articles/ai-data-center-stocks-dip-113427491.html"
  }
 ]
