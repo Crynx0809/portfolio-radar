@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_chips_1113",
+  "at": "2026-11-13T17:55:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "Chip-Ausverkauf im Depot: AMD 526 $ (−10 %), Marvell 153 $ (−7 %), Applied Digital 15,40 $ (−9 %). Kein Stop gebrochen. AMD hat die Bestätigung 579 $ wieder verloren – Plan bleibt: Stop der Position auf Einstand bzw. 428 $, neu kaufen erst im Rücksetzer 450–472 $. Marvell (Zone 147–154 $, Stop 135 $) und Applied Digital (Zone 14–16 $, Stop 13,20 $) sind jetzt in der Einstiegszone – nur gestaffelt aufstocken, nicht im Affekt; Schlusskurs abwarten."
+ },
+ {
+  "id": "a_nu_1113",
+  "at": "2026-11-13T17:55:00+01:00",
+  "ticker": "NU",
+  "level": "mittel",
+  "text": "Nu Holdings +11 % auf 13,12 $ nach starken Q3-Zahlen – über der Bestätigung 13 $. Wer in der Zone 11,4–12,1 $ gekauft hat: Stop auf Einstand ziehen. Nicht hinterherkaufen."
+ },
+ {
   "id": "a_amd_1112e",
   "at": "2026-11-12T22:45:00+01:00",
   "ticker": "AMD",

@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_sox_1113",
+  "date": "2026-11-13",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf: SOX-Index bis −5 %, AMD −10 %, Marvell −7 %, Applied Digital −9 %",
+  "summary": "Breiter Abverkauf bei Halbleitern und KI-Werten am Freitag, einen Tag nach AMDs +5,9 %-Sprung. Ein einzelner Auslöser ist bisher nicht belegt; Nvidia nur ca. −3 %, Broadcom und Intel über −5 %. Nasdaq 100 ca. −2 %, S&P 500 ca. −1 %, US-Zins 10 J. 5,13 %. AMD liegt mit 526 $ weiter klar über der Zone 450–472 $; Marvell (153 $) und Applied Digital (15,40 $) sind in ihre Einstiegszonen gefallen, kein Stop gebrochen.",
+  "url": "https://www.tokenpost.com/news/investing/56823"
+ },
+ {
+  "id": "n_nu_1113",
+  "date": "2026-11-13",
+  "ticker": "NU",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Nu Holdings +11 % auf 13,12 $ nach starken Q3-Zahlen",
+  "summary": "Nubank steigert den Gewinn im 3. Quartal deutlich (+39 % laut brasilianischen Berichten) über den Erwartungen, Rekord-Eigenkapitalrendite. Die Aktie springt aus der Zone 11,4–12,1 $ über die Bestätigungsmarke 13 $.",
+  "url": "https://www.infomoney.com.br/?p=3103315"
+ },
+ {
+  "id": "n_mkt_1113",
+  "date": "2026-11-13",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Tech-Abverkauf: Nasdaq 100 −2,1 %, S&P 500 −1,0 % am Freitagnachmittag",
+  "summary": "Technologie-Sektor ca. −3 %, VIX auf 20, US-Zins 10 J. 5,13 %, Bitcoin −3,8 %. DAX und Euro Stoxx kaum verändert. Stand ca. 17:50 Uhr.",
+  "url": "https://www.tokenpost.com/news/investing/56826"
+ },
+ {
   "id": "n_mkt_close_1112",
   "date": "2026-11-12",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Starker US-Arbeitsmarkt (+165.000 Stellen) und Erholung der Chipwerte: Nasdaq 100 +1,4 %, S&P 500 +0,3 %; DAX −1,9 %",
   "summary": "Nach dem Ausverkauf vom Donnerstag erholten sich KI- und Chipwerte (AMD +11 %, Marvell +5,7 %, Micron +5,1 %). Auf Wochensicht bleibt der Nasdaq 100 rund −4,9 % im Minus; VIX fällt auf 25,6. In Europa Verluste, DAX −1,9 %.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
- },
- {
-  "id": "n_mrna_1106",
-  "date": "2026-11-06",
-  "ticker": "MRNA",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Moderna am Zahlentag +5,3 % auf 254,2 $ – im Handel neues Hoch, Schluss knapp unter der Bestätigung 254,5 $",
-  "summary": "Moderna legte nach den Quartalszahlen kräftig zu und schloss die Lücke zum Hoch vom 4.11. Details zu den Zahlen folgen in der Abendanalyse. Watchlist-Zone 180–200 $ liegt weit unter dem Kurs – nicht hinterherkaufen.",
-  "url": "https://www.benzinga.com/trading-ideas/movers/26/11/62988477/moderna-jfrog-transmedics-ubiquiti-and-other-big-stocks-moving-higher-on-friday"
- },
- {
-  "id": "n_vst_1106",
-  "date": "2026-11-06",
-  "ticker": "VST",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Vistra nach Q3-Zahlen +10,5 % auf 124,8 $ – Erholung nach dem Moratoriums-Ausverkauf",
-  "summary": "Vistra legte nach den Quartalszahlen deutlich zu und holte einen Teil des Einbruchs der Vortage auf. Der Kurs nähert sich der Bestätigungsmarke 128 $; die Zone 100–108 $ liegt klar darunter.",
-  "url": "https://www.sec.gov/Archives/edgar/data/0001692819/000169281926000023/vistra-20260930xearningsre.htm"
- },
- {
-  "id": "n_team_1106",
-  "date": "2026-11-06",
-  "ticker": "TEAM",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Atlassian: Q1 über den Erwartungen, aber schwächerer Ausblick fürs Abo-Wachstum – Aktie −16,2 % auf 153,7 $",
-  "summary": "Umsatz und Gewinn lagen über den Schätzungen, doch der Ausblick für das Cloud-/Abo-Wachstum enttäuschte. Vorbörslich notiert die Aktie damit um 155–158 $ und damit unter der Einstiegszone 168–178 $ und am Stop 158 $ (Schluss Donnerstag 183,29 $). Entscheidend ist der Schlusskurs heute.",
-  "url": "https://uk.finance.yahoo.com/news/atlassian-tumbles-16-weaker-subscription-214811605.html"
  }
 ]

@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-13T14:50:00+01:00",
-  "kind": "News-Check 14:15",
-  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
-  "market": "Vorbörslich US-Futures leicht im Plus (S&P 500 ca. +0,1 bis +0,3 %) vor den Erzeugerpreisen (PPI, 14:30 Uhr); Nvidia nach Huang-Rücktritt vorbörslich ca. +2,7 %, AMD ca. −1,8 % nach dem +5,9 %-Sprung. US-Rendite über 5,1 %. Europa: SAP +1,0 %, Novo +0,5 %, Rheinmetall −2,0 %, Xiaomi −3,7 %. Kurse: TradingView, Abruf 13:45 UTC (US-Werte = Schlusskurs 12.11.).",
-  "next_update": "heute ca. 17:45 Uhr (News-Check)"
+  "updated_at": "2026-11-13T17:55:00+01:00",
+  "kind": "News-Check 17:45",
+  "headline": "Chip-Ausverkauf: AMD −10 %, Marvell −7 %, Applied Digital −9 % – kein Stop gebrochen, Marvell und Applied Digital jetzt in der Einstiegszone. Nu +11 % nach Q3-Zahlen.",
+  "market": "Nasdaq 100 −2,1 %, S&P 500 −1,0 %, Technologie-Sektor ca. −3 %, Halbleiter-Index SOX bis −5 %. VIX 20, US-Zins 10 J. 5,13 %, Bitcoin −3,8 %. DAX −0,1 %, Euro Stoxx −0,2 %. Kurse: TradingView, Abruf 16:50 UTC (laufender US-Handel).",
+  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
  }
 ]
