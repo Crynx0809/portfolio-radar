@@ -1,69 +1,69 @@
 {
- "generated_at": "2026-11-13T08:51:50+00:00",
+ "generated_at": "2026-11-13T15:04:32+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 585.3,
+   "price": 552.175,
    "stop": 428,
    "trigger": 658.5,
-   "gap_to_stop": 0.3675
+   "gap_to_stop": 0.2901
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 298.7,
+   "price": 303.3133,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1401
+   "gap_to_stop": 0.1577
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 16.95,
+   "price": 15.81,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": 0.2841
+   "gap_to_stop": 0.1977
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 164.45,
+   "price": 158.91,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.2181
+   "gap_to_stop": 0.1771
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.81,
+   "price": 36.945,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.227
+   "gap_to_stop": 0.2315
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 212.75,
+   "price": 214.1,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.1952
+   "gap_to_stop": 0.2028
   }
  ],
  "events": [
   {
-   "ticker": "NKE",
-   "name": "Nike",
-   "group": "Watchlist",
-   "price": 37.76,
-   "chg_pct": -0.0146,
-   "at": "2026-11-13T08:51+00:00",
-   "id": "NKE-zone-2026-11-13",
-   "type": "zone",
+   "ticker": "GOOGL",
+   "name": "Alphabet A",
+   "group": "Portfolio",
+   "price": 303.3133,
+   "chg_pct": 0.0154,
+   "at": "2026-11-13T15:04+00:00",
+   "id": "GOOGL-ausbruch-2026-11-13",
+   "type": "ausbruch",
    "level": "mittel",
-   "title": "Nike in der Einstiegszone",
-   "text": "Kurs 37,76 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
-   "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
+   "title": "Alphabet A über der Bestätigungsmarke 301,00 $",
+   "text": "Kurs 303,31 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 301 $ → Boden bestätigt, Stop auf Einstand; Teilgewinne bei 325–345 $ (Gap-Schluss / 50–61,8 % des Rückgangs)."
   }
  ],
  "notified": []
