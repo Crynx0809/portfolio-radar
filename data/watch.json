@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T21:44:54+00:00",
+ "generated_at": "2026-11-13T08:51:50+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -36,18 +36,18 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.8,
+   "price": 36.81,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2267
+   "gap_to_stop": 0.227
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 212.55,
+   "price": 212.75,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.1941
+   "gap_to_stop": 0.1952
   }
  ],
  "events": [
@@ -57,8 +57,8 @@
    "group": "Watchlist",
    "price": 37.76,
    "chg_pct": -0.0146,
-   "at": "2026-11-12T21:44+00:00",
-   "id": "NKE-zone-2026-11-12",
+   "at": "2026-11-13T08:51+00:00",
+   "id": "NKE-zone-2026-11-13",
    "type": "zone",
    "level": "mittel",
    "title": "Nike in der Einstiegszone",
@@ -66,7 +66,5 @@
    "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
   }
  ],
- "notified": [
-  "APLD-absturz-2026-11-12"
- ]
+ "notified": []
 }
