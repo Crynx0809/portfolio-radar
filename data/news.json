@@ -1,33 +1,33 @@
 [
  {
-  "id": "n_sox_1113",
-  "date": "2026-11-13",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Chip-Ausverkauf: SOX-Index bis −5 %, AMD −10 %, Marvell −7 %, Applied Digital −9 %",
-  "summary": "Breiter Abverkauf bei Halbleitern und KI-Werten am Freitag, einen Tag nach AMDs +5,9 %-Sprung. Ein einzelner Auslöser ist bisher nicht belegt; Nvidia nur ca. −3 %, Broadcom und Intel über −5 %. Nasdaq 100 ca. −2 %, S&P 500 ca. −1 %, US-Zins 10 J. 5,13 %. AMD liegt mit 526 $ weiter klar über der Zone 450–472 $; Marvell (153 $) und Applied Digital (15,40 $) sind in ihre Einstiegszonen gefallen, kein Stop gebrochen.",
-  "url": "https://www.tokenpost.com/news/investing/56823"
- },
- {
-  "id": "n_nu_1113",
-  "date": "2026-11-13",
-  "ticker": "NU",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Nu Holdings +11 % auf 13,12 $ nach starken Q3-Zahlen",
-  "summary": "Nubank steigert den Gewinn im 3. Quartal deutlich (+39 % laut brasilianischen Berichten) über den Erwartungen, Rekord-Eigenkapitalrendite. Die Aktie springt aus der Zone 11,4–12,1 $ über die Bestätigungsmarke 13 $.",
-  "url": "https://www.infomoney.com.br/?p=3103315"
- },
- {
-  "id": "n_mkt_1113",
+  "id": "n_mkt_close_1113",
   "date": "2026-11-13",
   "ticker": "Markt",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "Tech-Abverkauf: Nasdaq 100 −2,1 %, S&P 500 −1,0 % am Freitagnachmittag",
-  "summary": "Technologie-Sektor ca. −3 %, VIX auf 20, US-Zins 10 J. 5,13 %, Bitcoin −3,8 %. DAX und Euro Stoxx kaum verändert. Stand ca. 17:50 Uhr.",
-  "url": "https://www.tokenpost.com/news/investing/56826"
+  "headline": "Wochenschluss: Nasdaq 100 −1,2 %, S&P 500 −0,4 % – US-Rendite 10 J. auf 5,15 %, Bitcoin unter 70.000 $",
+  "summary": "Die Erzeugerpreise (PPI) stiegen im Oktober um 0,3 % zum Vormonat (erwartet 0,4 %), auf Jahressicht aber um 6,5 % – so stark wie seit Ende 2022 nicht. Die 10-jährige US-Rendite stieg im Handel bis 5,17 %, der Markt rechnet mit einer Zinserhöhung im Dezember. Tech schwach, Dow leicht im Plus. DAX −0,1 %, VIX 19,3. Auf Wochensicht: S&P 500 +2,5 %, Nasdaq 100 +3,5 %.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+ },
+ {
+  "id": "n_sox_close_1113",
+  "date": "2026-11-13",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf zum Wochenschluss: AMD −8,8 %, Applied Digital −5,8 %, Marvell −4,7 %, Nvidia −2,0 %",
+  "summary": "AMD fiel nach fast +50 % in einer Woche auf 534,1 $ (Tief 520 $) – Gewinnmitnahmen; der Nvidia-Skandal (Rücktritt Jensen Huang, Berichte über mögliche Chip-Umleitung nach China, unbestätigt) und steigende Zinsen belasten den ganzen KI-Handel. Broadcom und Intel je ca. −5 bis −6 %, Micron −2,5 %. Kein Stop im Depot gebrochen; Marvell lief im Tief (149,2 $) in die Zukaufzone 147–154 $.",
+  "url": "https://www.fool.com/investing/2026/11/13/why-advanced-micro-devices-is-down-today/"
+ },
+ {
+  "id": "n_nu_close_1113",
+  "date": "2026-11-13",
+  "ticker": "NU",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Nu Holdings +11,8 % auf 13,22 $ nach Rekordquartal – Schluss über der Bestätigung 13 $",
+  "summary": "Q3: Rekordgewinn 1,1 Mrd. $ (+31 % zum Vorjahr), 143 Mio. Kunden, Eigenkapitalrendite 32 %, Effizienzquote 19 %. Damit ist der Doppelboden bei 11,6–11,8 $ bestätigt.",
+  "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-third-quarter-2026-financial-results"
  },
  {
   "id": "n_mkt_close_1112",

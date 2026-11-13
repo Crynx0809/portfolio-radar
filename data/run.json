@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-13T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Ausverkauf: AMD −10 %, Marvell −7 %, Applied Digital −9 % – kein Stop gebrochen, Marvell und Applied Digital jetzt in der Einstiegszone. Nu +11 % nach Q3-Zahlen.",
-  "market": "Nasdaq 100 −2,1 %, S&P 500 −1,0 %, Technologie-Sektor ca. −3 %, Halbleiter-Index SOX bis −5 %. VIX 20, US-Zins 10 J. 5,13 %, Bitcoin −3,8 %. DAX −0,1 %, Euro Stoxx −0,2 %. Kurse: TradingView, Abruf 16:50 UTC (laufender US-Handel).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-13T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Chip-Ausverkauf zum Wochenschluss: AMD −8,8 %, Applied Digital −5,8 %, Marvell −4,7 % – kein Stop gebrochen. Nu +11,8 % nach Rekordquartal über der Bestätigung. Nvidia vor den Zahlen am 17.11. in der Zone.",
+  "market": "S&P 500 −0,4 %, Nasdaq 100 −1,2 % (Woche +2,5 % bzw. +3,5 %), DAX −0,1 %, Euro Stoxx 50 −0,2 %. US-Rendite 10 J. 5,15 % (PPI auf Jahressicht 6,5 %), VIX 19,3, Bitcoin −4,4 % auf 68.200 $, Brent 96 $. Kurse: TradingView-Schlusskurse, Abruf 21:32 UTC.",
+  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
  }
 ]

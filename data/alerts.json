@@ -1,5 +1,33 @@
 [
  {
+  "id": "a_depot_1113e",
+  "at": "2026-11-13T22:45:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Wochenschluss Depot: kein Stop gebrochen. AMD schließt bei 534,1 $ (−8,8 %, Tief 520 $) – Rücksetzer nach +50 % in einer Woche, im Hauptszenario Welle ii; Stop für Neukäufe auf 398 $ (unter das C-Tief) erweitert. Marvell 156,8 $ (Tief 149,2 $ in der Zukaufzone 147–154 $). Applied Digital 15,97 $ in der Zone 14–16 $, Stop 13,2 $."
+ },
+ {
+  "id": "a_nu_1113e",
+  "at": "2026-11-13T22:45:00+01:00",
+  "ticker": "NU",
+  "level": "mittel",
+  "text": "Nu Holdings schließt nach Rekord-Q3 bei 13,22 $ (+11,8 %) über der Bestätigung 13 $ – Doppelboden bestätigt, Status jetzt „Trend“. Wer in 11,4–12,1 $ gekauft hat: Stop auf Einstand, Teilgewinne bei 14,2–15 $. Nicht hinterherkaufen."
+ },
+ {
+  "id": "a_nvda_1113e",
+  "at": "2026-11-13T22:45:00+01:00",
+  "ticker": "NVDA",
+  "level": "mittel",
+  "text": "Nvidia schließt bei 162,9 $ (−2,0 %, Tief 158,4 $) in der Zone 158–168 $. Q3-Zahlen am Dienstag 17.11. – erste Zahlen ohne Jensen Huang; nur klein kaufen oder Zahlen abwarten, Stop 145 $."
+ },
+ {
+  "id": "a_wl_1113e",
+  "at": "2026-11-13T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In der Zone: Adobe 243,1 $, ServiceNow 102,3 $, Rheinmetall 765,5 € (weiter „meiden“, Stop jetzt 705 €), Telekom 26,60 €. Knapp darunter: MercadoLibre 1.491 $ (Zone 1.500–1.560 $). Stops außerhalb des Tagesrauschens gesetzt: Micron 645 $, TSMC 348 $."
+ },
+ {
   "id": "a_chips_1113",
   "at": "2026-11-13T17:55:00+01:00",
   "ticker": "AMD",
@@ -236,54 +264,5 @@
   "ticker": "Watchlist",
   "level": "mittel",
   "text": "Alte Ziele erreicht, neue Ziele gesetzt: Rocket Lab (53,1 $) 61–70 $, Oklo (23,6 $) 30–35 $, Vistra (124,8 $) 140–152 $, Micron (690 $) 850–990 $ – jeweils nur für Käufe in der Zone, nicht hinterherkaufen. Rheinmetall (812,7 €) war mit 798 € kurz in der Zone 760–800 €, aber ohne Umkehrsignal; großes Ziel neu (1.150–1.330 €, Absicherung 640 €). Zoetis 79,4 $ in der Zone 78–82 $."
- },
- {
-  "id": "a_amd_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "AMD",
-  "level": "hoch",
-  "text": "AMD schließt mit −17,3 % bei 404,4 $ unter dem Stop 408 $ → laut Plan Rest verkaufen. Ursache ist der branchenweite Ausverkauf, nicht AMD selbst. Wiedereinstieg erst in 360–380 $, Stop 335 $, Ziel 470–513 $."
- },
- {
-  "id": "a_mrvl_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Marvell schließt mit −16,4 % bei 133,6 $ klar unter dem Stop 144 $ → laut Plan Rest verkaufen. Wochenschluss unter 145 $ (Freitag) → großes Ziel wird neu festgelegt. Wiedereinstieg erst in 105–115 $, Stop 92 $."
- },
- {
-  "id": "a_apld_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "APLD",
-  "level": "hoch",
-  "text": "Applied Digital −14,7 % auf 14,17 $ – Tief 13,12 $ lag kurz unter dem Stop, Schluss darüber. Halten, nicht aufstocken (Rechenzentrums-Moratorien treffen das Geschäft direkt); Schluss unter 13,2 $ → alles verkaufen."
- },
- {
-  "id": "a_ftnt_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "FTNT",
-  "level": "mittel",
-  "text": "Fortinet −5,3 % auf 122,5 $ – unter der alten Zone, Stop 118 $ hielt. Zone auf 115–126 $ angepasst, neuer Stop 105 $; über 139,4 $ Stop auf Einstand."
- },
- {
-  "id": "a_wl_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Watchlist-Pläne nach dem Ausverkauf neu: Micron (656 $, −17,5 %) Zone 560–600 $; Nvidia (181,6 $) Zone 162–170 $; Rocket Lab (46 $) 38–41 $; GE Vernova (770 $) 690–740 $; Caterpillar (554 $) meiden, 500–530 $. In der Zone: MercadoLibre, Meta, Adobe, Zscaler, ServiceNow, Hims, Telekom, Exxon."
- },
- {
-  "id": "a_new_1105e",
-  "at": "2026-11-05T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Neu auf der Watchlist: CrowdStrike (217 $, Zone 200–212 $), Vistra (112,9 $, Zahlen 6.11., Zone 100–108 $) und Delivery Hero (36,97 €, Übernahme-Sondersituation: Uber-Angebot 41,50 €)."
- },
- {
-  "id": "a_rhm_1105",
-  "at": "2026-11-05T14:25:00+01:00",
-  "ticker": "RHM",
-  "level": "hoch",
-  "text": "Rheinmetall −16,1 % auf 841,5 € nach erneuter Prognosesenkung – Juni-/Juli-Tiefs (929–936 €) gebrochen. Neu: meiden, erst in 760–800 € kaufen, Stop 720 €. Wochenschluss unter 850 € → großes Ziel wird neu festgelegt."
  }
 ]
