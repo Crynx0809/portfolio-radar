@@ -1,37 +1,21 @@
 {
- "generated_at": "2026-11-13T20:48:28+00:00",
+ "generated_at": "2026-11-13T21:45:49+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 531.3299,
-   "stop": 428,
+   "price": 534.06,
+   "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2414
+   "gap_to_stop": 0.3419
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 295.17,
+   "price": 295.77,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.1266
-  },
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "price": 15.695,
-   "stop": 13.2,
-   "trigger": 20.4,
-   "gap_to_stop": 0.189
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "price": 156.51,
-   "stop": 135,
-   "trigger": 175,
-   "gap_to_stop": 0.1593
+   "gap_to_stop": 0.1289
   },
   {
    "ticker": "NOVO-B",
@@ -55,15 +39,15 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 531.3299,
-   "chg_pct": -0.0922,
-   "at": "2026-11-13T20:48+00:00",
+   "price": 534.06,
+   "chg_pct": -0.0875,
+   "at": "2026-11-13T21:45+00:00",
    "id": "AMD-absturz-2026-11-13",
    "type": "absturz",
    "level": "hoch",
-   "title": "Advanced Micro Devices −9,2 % heute",
-   "text": "Starker Tagesverlust auf 531,33 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Bestätigung per Schluss (585 $ > 579 $): Stop der Position auf Einstand ziehen, Teilgewinne bei 600–658 $. Neu kaufen nur im Rücksetzer 450–472 $ (gestaffelt), Stop 428 $, Ziel 680–760 $."
+   "title": "Advanced Micro Devices −8,8 % heute",
+   "text": "Starker Tagesverlust auf 534,06 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Position halten, Stop auf Einstand (bzw. mind. unter 398 $). Neu kaufen nur im Rücksetzer 450–472 $ (gestaffelt), Stop 398 $, Ziel 680–760 $; über 658,5 $ Stop nachziehen."
   }
  ],
  "notified": [
