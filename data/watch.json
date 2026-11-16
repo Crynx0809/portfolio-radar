@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-16T20:34:17+00:00",
+ "generated_at": "2026-11-16T21:46:46+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 503.025,
+   "price": 504.28,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2639
+   "gap_to_stop": 0.267
   },
   {
    "ticker": "NOVO-B",
@@ -31,15 +31,15 @@
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 14.605,
-   "chg_pct": -0.0855,
-   "at": "2026-11-16T20:34+00:00",
+   "price": 14.58,
+   "chg_pct": -0.087,
+   "at": "2026-11-16T21:46+00:00",
    "id": "APLD-absturz-2026-11-16",
    "type": "absturz",
    "level": "hoch",
-   "title": "Applied Digital −8,5 % heute",
-   "text": "Starker Tagesverlust auf 14,61 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "In der Zone 14–16 $: halten, nicht aufstocken (politisches Risiko); Stop 13,2 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand."
+   "title": "Applied Digital −8,7 % heute",
+   "text": "Starker Tagesverlust auf 14,58 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "In der Zone 14–16 $ (Schluss 14,58 $, −8,7 %): halten, nicht aufstocken (politisches Risiko); Stop 13,2 $ knapp unter dem Nov.-Tief 13,12 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand."
   },
   {
    "ticker": "NOVO-B",
@@ -47,97 +47,13 @@
    "group": "Portfolio",
    "price": 38.07,
    "chg_pct": 0.025,
-   "at": "2026-11-16T20:34+00:00",
+   "at": "2026-11-16T21:46+00:00",
    "id": "NOVO-B-ausbruch-2026-11-16",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
    "text": "Kurs 38,07 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
-  },
-  {
-   "ticker": "FCX",
-   "name": "Freeport-McMoRan",
-   "group": "Watchlist",
-   "price": 55.355,
-   "chg_pct": -0.0656,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "FCX-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Freeport-McMoRan in der Einstiegszone",
-   "text": "Kurs 55,35 $ ist in die Zone 54,00 $–57,00 $ gelaufen.",
-   "todo": "57–62,6 $: abwarten."
-  },
-  {
-   "ticker": "CAT",
-   "name": "Caterpillar",
-   "group": "Watchlist",
-   "price": 571.02,
-   "chg_pct": -0.0486,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "CAT-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Caterpillar in der Einstiegszone",
-   "text": "Kurs 571,02 $ ist in die Zone 560,00 $–575,00 $ gelaufen.",
-   "todo": "575–620 $: nicht hinterherkaufen."
-  },
-  {
-   "ticker": "HOOD",
-   "name": "Robinhood",
-   "group": "Watchlist",
-   "price": 72.28,
-   "chg_pct": -0.0717,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "HOOD-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Robinhood in der Einstiegszone",
-   "text": "Kurs 72,28 $ ist in die Zone 72,00 $–76,00 $ gelaufen.",
-   "todo": "76–92 $: abwarten."
-  },
-  {
-   "ticker": "MBG",
-   "name": "Mercedes-Benz Group",
-   "group": "Watchlist",
-   "price": 40.425,
-   "chg_pct": -0.0081,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "MBG-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Mercedes-Benz Group in der Einstiegszone",
-   "text": "Kurs 40,42 € ist in die Zone 39,50 €–40,50 € gelaufen.",
-   "todo": "40,5–42 €: beobachten, Basis noch nicht bestätigt."
-  },
-  {
-   "ticker": "BABA",
-   "name": "Alibaba",
-   "group": "Watchlist",
-   "price": 91.03,
-   "chg_pct": -0.0355,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "BABA-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Alibaba in der Einstiegszone",
-   "text": "Kurs 91,03 $ ist in die Zone 88,00 $–92,00 $ gelaufen.",
-   "todo": "92–102 $: abwarten, Zone liegt tiefer."
-  },
-  {
-   "ticker": "MU",
-   "name": "Micron Technology",
-   "group": "Watchlist",
-   "price": 719.7341,
-   "chg_pct": -0.0753,
-   "at": "2026-11-16T20:34+00:00",
-   "id": "MU-zone-2026-11-16",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Micron Technology in der Einstiegszone",
-   "text": "Kurs 719,73 $ ist in die Zone 715,00 $–745,00 $ gelaufen.",
-   "todo": "745–892 $: nicht hinterherkaufen, Rücksetzer abwarten."
   }
  ],
  "notified": [
