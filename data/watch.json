@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T21:45:49+00:00",
+ "generated_at": "2026-11-16T10:12:22+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -20,18 +20,18 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.14,
+   "price": 38.41,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.238
+   "gap_to_stop": 0.2803
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 213.45,
+   "price": 213.55,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.1992
+   "gap_to_stop": 0.1997
   }
  ],
  "events": [
@@ -41,18 +41,30 @@
    "group": "Portfolio",
    "price": 534.06,
    "chg_pct": -0.0875,
-   "at": "2026-11-13T21:45+00:00",
-   "id": "AMD-absturz-2026-11-13",
+   "at": "2026-11-16T10:12+00:00",
+   "id": "AMD-absturz-2026-11-16",
    "type": "absturz",
    "level": "hoch",
    "title": "Advanced Micro Devices −8,8 % heute",
    "text": "Starker Tagesverlust auf 534,06 $. Ursache in den News prüfen, nicht im Affekt handeln.",
    "todo": "Position halten, Stop auf Einstand (bzw. mind. unter 398 $). Neu kaufen nur im Rücksetzer 450–472 $ (gestaffelt), Stop 398 $, Ziel 680–760 $; über 658,5 $ Stop nachziehen."
+  },
+  {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "group": "Portfolio",
+   "price": 38.41,
+   "chg_pct": 0.0342,
+   "at": "2026-11-16T10:12+00:00",
+   "id": "NOVO-B-ausbruch-2026-11-16",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
+   "text": "Kurs 38,41 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
   }
  ],
  "notified": [
-  "AMD-absturz-2026-11-13",
-  "APLD-absturz-2026-11-13",
-  "MRVL-absturz-2026-11-13"
+  "AMD-absturz-2026-11-16"
  ]
 }
