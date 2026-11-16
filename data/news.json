@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_chips_1116p",
+  "date": "2026-11-16",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Chip-Werte weiter unter Druck vor den Nvidia-Zahlen: Nasdaq zur Eröffnung ca. −1 %, AMD −3,8 %, Micron −5,3 %, Marvell −4,9 %",
+  "summary": "Die Sorge um den KI-Handel nach dem Huang-Rücktritt hält an; in Asien fielen Taiex (−6 %) und Kospi (−3,6 %) deutlich. Nvidia legt am Dienstag nach Börsenschluss Zahlen vor, Mittwoch folgen die Fed-Protokolle. Kurse laut TradingView-Abruf 16:47 UTC.",
+  "url": "https://www.bnnbloomberg.ca/markets/nasdaq/2026/11/16/stocks-decline-on-tech-sell-off-as-concerns-over-the-nvidia-fallout-persist/"
+ },
+ {
+  "id": "n_apld_1116p",
+  "date": "2026-11-16",
+  "ticker": "APLD",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Applied Digital −7,5 % auf 14,78 $ im Sog der KI-Rechenzentrums-Werte",
+  "summary": "Eine eigene Unternehmensmeldung war nicht zu finden; der Rückgang läuft mit dem Abverkauf von KI- und Chipwerten. Kurs weiter in der Zone 14–16 $, Stop 13,20 $ rund 11 % entfernt.",
+  "url": "https://www.benzinga.com/trading-ideas/movers/26/11/63299337/why-is-applied-digital-stock-falling-on-monday"
+ },
+ {
+  "id": "n_moh_1116p",
+  "date": "2026-11-16",
+  "ticker": "MOH",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Molina Healthcare +8 % auf 226,3 $ – knapp über der Bestätigung 226 $",
+  "summary": "Krankenversicherer steigen; als Grund wird ein Bericht über eine mögliche Verlängerung der ACA-Zuschüsse genannt (nicht bestätigt). Schlusskurs abwarten.",
+  "url": "https://www.stockopedia.com/share-prices/molina-healthcare-NYQ:MOH/news/health-insurers-rise-on-report-trump-considering-aca-subsidy-extension-updated-019e69f8-9d6a-752a-885b-9ad0ceafbf5f/"
+ },
+ {
   "id": "n_mkt_pre_1116",
   "date": "2026-11-16",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Kräftige Erholung: S&P 500 ca. +2,3 %, Nasdaq 100 ca. +3,3 %, Dow ca. +2,2 % – Öl ca. −3 %",
   "summary": "Nach der schwächsten Woche seit April 2025 kehrten Käufer in Tech- und Chipwerte zurück; Brent fiel auf rund 95 $, weil Trump neue Angriffe auf Iran herunterspielte. Citi stufte US-Aktien und Tech auf neutral ab. Morgen US-Inflation (CPI).",
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
- },
- {
-  "id": "n_amd_1109c",
-  "date": "2026-11-09",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "AMD +13,3 % auf 508,6 $ nach Hochstufung durch Oppenheimer – Schluss klar über der Bestätigung 456 $",
-  "summary": "Oppenheimer stuft auf Outperform (Kursziel 600 $). Damit ist der Ausverkauf vom 5.11. (Tief 402 $) wahrscheinlich der Verkaufshöhepunkt; altes Ziel 470–513 $ erreicht, neuer Plan mit Zone 450–472 $.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
- },
- {
-  "id": "n_mrvl_1109c",
-  "date": "2026-11-09",
-  "ticker": "MRVL",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Marvell +9,5 % auf 154,6 $ – seit dem Tief vom 5.11. bereits +17 %",
-  "summary": "Die Chip-Erholung erreicht das alte Ziel 150–162 $ ohne Rücksetzer in die Wiedereinstiegszone. Neuer Plan: Zone 138–146 $, Stop 130 $.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-9-dow-sp-500-nasdaq-nvidia-090535419.html"
- },
- {
-  "id": "n_nvda_1109c",
-  "date": "2026-11-09",
-  "ticker": "NVDA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Nvidia −4,3 % auf 178,7 $: Untersuchung des Verwaltungsrats gegen Chef Jensen Huang",
-  "summary": "Hintergrund ist eine eingeräumte Affäre mit Verbindungen, die US-Behörden einer mutmaßlichen chinesischen Geheimdienstoperation zuordnen. Laut Verwaltungsrat keine Hinweise auf abgeflossene Firmengeheimnisse. Zone 162–170 $ bleibt.",
-  "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-9-145714241.html"
  }
 ]

@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_depot_1116p",
+  "at": "2026-11-16T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Kein Stop gebrochen. Applied Digital 14,78 $ (−7,5 %) – Wächter meldete −8,6 %; keine eigene Firmenmeldung gefunden, Abverkauf mit den KI-Werten. In der Zone 14–16 $ halten, nicht aufstocken, Stop 13,20 $. Marvell 149,07 $ (−4,9 %) in der Zukaufzone 147–154 $ (Stop 135 $), AMD 514 $ (−3,8 %) weiter über der Zone 450–472 $. Novo Nordisk 38,08 € (+2,5 %) über der Bestätigung 37,50 € – bei Schluss darüber Stop auf Einstand."
+ },
+ {
+  "id": "a_wl_1116p",
+  "at": "2026-11-16T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In der Zone: Micron 737 $ (−5,3 %, Zone 715–745 $, Stop 645 $), Robinhood 73,68 $ (−5,4 %, Zone 72–76 $, Stop 68 $), dazu Freeport, Alibaba und TSMC laut Wächter. Molina 226,3 $ (+8 %) knapp über der Bestätigung 226 $ – Schlusskurs abwarten. Vor den Nvidia-Zahlen (Di.) nur klein und gestaffelt."
+ },
+ {
   "id": "a_depot_1116m",
   "at": "2026-11-16T14:25:00+01:00",
   "ticker": "Depot",
