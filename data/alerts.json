@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_depot_1116m",
+  "at": "2026-11-16T14:25:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vorbörslich weiterer Chip-Druck: AMD ca. 509 $ (−4,6 % nach −8,8 % am Freitag) – noch klar über der Zukaufzone 450–472 $ und dem Stop 398 $; Plan unverändert, nicht im Affekt verkaufen. Novo Nordisk 38,38 € (+3,3 %) über der Bestätigung 37,50 € – bei Schluss darüber Stop auf Einstand ziehen, Ziel 40–42 €. Kein Stop gebrochen."
+ },
+ {
+  "id": "a_wl_1116m",
+  "at": "2026-11-16T14:25:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Nvidia vorbörslich ca. −3 % (Bericht über Huang-Rückkehr) – nahe der Unterkante der Zone 158–168 $, Zahlen am Dienstag nach Börsenschluss: nur klein kaufen, Stop 145 $. Telekom 27,01 € knapp über der Bestätigung 27 €, Rheinmetall 788,5 € (+3 %) in der Zone (weiter „meiden“)."
+ },
+ {
   "id": "a_depot_1113e",
   "at": "2026-11-13T22:45:00+01:00",
   "ticker": "Depot",

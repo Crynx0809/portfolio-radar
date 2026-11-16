@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_mkt_pre_1116",
+  "date": "2026-11-16",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Vorbörslich schwach vor Nvidia-Zahlen: Nasdaq-100-Future ca. −1,3 %, S&P-500-Future ca. −0,6 %",
+  "summary": "Chipwerte unter Druck: AMD vorbörslich rund −4,6 % (nach −8,8 % am Freitag), Micron, Broadcom und CoreWeave ebenfalls schwächer. US-Rendite 10 J. weiter um 5,15 %, Bitcoin rund 64.000 $. Nvidia legt am Dienstag nach Börsenschluss Zahlen vor; Anthropic-Börsengang (Kürzel ANT, Spanne 70–78 $) mit Preisfestsetzung am 18.11. und Handelsstart am 19.11.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+ },
+ {
+  "id": "n_nvda_1116",
+  "date": "2026-11-16",
+  "ticker": "NVDA",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Nvidia vorbörslich ca. −3 %: Bericht, Jensen Huang und Unterstützer arbeiten an seiner Rückkehr als Chef",
+  "summary": "Laut einem FT-Bericht wird eine Rückkehr Huangs vorbereitet; Interims-Chefin ist Finanzchefin Colette Kress. Die Unsicherheit drückt die Aktie einen Tag vor den Q3-Zahlen in Richtung Unterkante der Zone 158–168 $ (Stop 145 $).",
+  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262307008-us-nvda-nasdaq-futures-nvidia-jensen-huang-anthropic-ipo-tradingkey"
+ },
+ {
+  "id": "n_novo_1116",
+  "date": "2026-11-16",
+  "ticker": "NOVO-B",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Novo Nordisk +3,3 % auf 38,38 € – Phase-3-Daten zu CagriSema und EU-Zulassung, Kurs über der Bestätigung 37,50 €",
+  "summary": "Neue Studiendaten (REDEFINE 9) zu CagriSema, eine EU-Zulassung (Frehemgo) und ein Zulassungsantrag für Etavopivat stützen die Aktie. Über 37,50 € greift das bullische Szenario, wenn der Schlusskurs darüber bleibt.",
+  "url": "https://www.investing.com/news/stock-market-news/why-is-novo-nordisk-stock-climbing-today-93CH-5028678"
+ },
+ {
   "id": "n_mkt_close_1113",
   "date": "2026-11-13",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Nvidia −4,3 % auf 178,7 $: Untersuchung des Verwaltungsrats gegen Chef Jensen Huang",
   "summary": "Hintergrund ist eine eingeräumte Affäre mit Verbindungen, die US-Behörden einer mutmaßlichen chinesischen Geheimdienstoperation zuordnen. Laut Verwaltungsrat keine Hinweise auf abgeflossene Firmengeheimnisse. Zone 162–170 $ bleibt.",
   "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-9-145714241.html"
- },
- {
-  "id": "n_hims_1109",
-  "date": "2026-11-09",
-  "ticker": "HIMS",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Hims & Hers −11,8 % nach erweitertem Lilly-Vertrag – Q3 nach Schluss laut ersten Meldungen schwach",
-  "summary": "Anleger sehen den Lilly-Deal als Margen-Zugeständnis. Erste Meldungen zu Q3: Verlust je Aktie statt erwartetem Gewinn, Umsatz knapp unter Erwartung, EBITDA-Prognose gesenkt (noch unbestätigt). Status jetzt „meiden“, neue Zone 18,6–20 $.",
-  "url": "https://247wallst.com/cards/hims-hers-hims-enriched-price-move-01m710z8crag61qjq8fb7x3rk6"
- },
- {
-  "id": "n_rklb_1109",
-  "date": "2026-11-09",
-  "ticker": "RKLB",
-  "impact": "mittel",
-  "direction": "neutral",
-  "headline": "Rocket Lab: Q3-Umsatz +73 % über Erwartung, Verlust höher – nachbörslich leicht schwächer",
-  "summary": "Umsatz 268 Mio. $, Verlust je Aktie −0,12 $ (erwartet −0,07 $), Q4-Umsatzprognose 270–290 Mio. $. Am Tag zuvor +10,9 % auf 58,9 $.",
-  "url": "https://www.tipranks.com/news/rocket-lab-stock-slips-after-mixed-q3-results"
- },
- {
-  "id": "n_jobs_1106",
-  "date": "2026-11-06",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Starker US-Arbeitsmarkt (+165.000 Stellen) und Erholung der Chipwerte: Nasdaq 100 +1,4 %, S&P 500 +0,3 %; DAX −1,9 %",
-  "summary": "Nach dem Ausverkauf vom Donnerstag erholten sich KI- und Chipwerte (AMD +11 %, Marvell +5,7 %, Micron +5,1 %). Auf Wochensicht bleibt der Nasdaq 100 rund −4,9 % im Minus; VIX fällt auf 25,6. In Europa Verluste, DAX −1,9 %.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-6-dow-sp-500-nasdaq-jobs-report-earnings-135953863.html"
  }
 ]
