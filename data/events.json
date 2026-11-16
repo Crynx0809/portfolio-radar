@@ -1,15 +1,21 @@
 [
  {
-  "id": "e_nke_20261116",
-  "date": "2026-11-16",
-  "ticker": "NKE",
-  "event": "Investor Day"
- },
- {
   "id": "e_nvda_20261117",
   "date": "2026-11-17",
   "ticker": "NVDA",
   "event": "Q3-Zahlen"
+ },
+ {
+  "id": "e_nke_20261117",
+  "date": "2026-11-17",
+  "ticker": "NKE",
+  "event": "Investor Day (erster seit 9 Jahren, neues Finanzmodell bis 2031)"
+ },
+ {
+  "id": "e_fomc_1118",
+  "date": "2026-11-18",
+  "ticker": "Markt",
+  "event": "Fed-Protokolle (Oktober-Sitzung)"
  },
  {
   "id": "e_anth_1119",

@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-16T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Abverkauf geht weiter: AMD −3,8 %, Marvell −4,9 % (in der Zone), Applied Digital −7,5 % ohne eigene Meldung. Novo Nordisk hält sich über der Bestätigung 37,50 €. Kein Stop gebrochen.",
-  "market": "Nasdaq zur Eröffnung ca. −1 % vor den Nvidia-Zahlen (Di.) und den Fed-Protokollen (Mi.); Asien schwach (Taiex −6 %, Kospi −3,6 %). Kurse: TradingView, Abruf 16:47 UTC.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-16T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Tech-Ausverkauf vor den Nvidia-Zahlen: Chips −4 bis −8 %, aber kein Stop im Depot gebrochen. Novo Nordisk bestätigt den Ausbruch über 37,50 € (Stop auf Einstand). Amazon, Micron, TSMC, Robinhood, Caterpillar und Freeport jetzt in der Einstiegszone; Molina bricht nach oben aus.",
+  "market": "Nasdaq 100 ca. −2,7 %, S&P 500 ca. −1,9 %, Dow ca. −1,4 % (ETF-Schluss). Belastend: Nvidia-Zahlen morgen (erstmals ohne Huang), neue US-Chip-Exportregel, schwacher Empire-State-Index. Kurse: TradingView, Abruf 21:31 UTC.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

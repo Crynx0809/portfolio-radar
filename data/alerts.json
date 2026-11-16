@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_depot_1116e",
+  "at": "2026-11-16T22:45:00+01:00",
+  "ticker": "Depot",
+  "level": "hoch",
+  "text": "Tech-Ausverkauf (Nasdaq 100 ca. −2,7 %), kein Stop gebrochen. Novo Nordisk schließt 38,07 € über der Bestätigung 37,50 € → Stop der Position auf Einstand ziehen, Ziel 40–42 €. Applied Digital 14,58 $ (−8,7 %, keine Firmenmeldung): in der Zone halten, nicht aufstocken, Stop 13,20 $. Marvell 145,36 $ (−7,3 %) knapp unter der Zukaufzone 147–154 $ – nur klein, Stop 135 $. Amazon 257,75 $ jetzt in der Zone 248–258 $, Alphabet 283,72 $ nähert sich der Zone 271–280 $. AMD 504 $ (−5,6 %) weiter über der Zone 450–472 $."
+ },
+ {
+  "id": "a_wl_1116e",
+  "at": "2026-11-16T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In bzw. knapp unter der Zone: Micron 719 $ (Zone 715–745 $), TSMC 373,5 $ (376–386 $), Nvidia 156,1 $ (158–168 $, Zahlen morgen nach Börsenschluss – vorher nicht kaufen; unter der großen Absicherung 160 $, entscheidend ist der Wochenschluss), Robinhood 72,1 $, Alibaba 90,6 $, Freeport 55,2 $, Caterpillar 570,5 $, Mercedes 40,43 €. Molina +11,3 % auf 233,1 $ über der Bestätigung 226 $ → Status „Trend“, neue Zone 214–222 $, Ziel 257–280 $. Nu fällt mit 12,68 $ wieder unter 13 $."
+ },
+ {
   "id": "a_depot_1116p",
   "at": "2026-11-16T17:55:00+01:00",
   "ticker": "Depot",
@@ -278,19 +292,5 @@
   "ticker": "Depot",
   "level": "mittel",
   "text": "Wochenschluss Depot: kein Stop neu gebrochen. AMD 449 $ (+11 %) knapp unter der Bestätigung 456 $; Applied Digital 15,55 $ und Fortinet 118,8 $ in ihren Zonen. Marvell schließt die Woche bei 141,2 $ unter 145 $ → großes Ziel neu: 230–290 $, Absicherung 100 $ (Wiedereinstieg kurz weiter erst in 105–115 $)."
- },
- {
-  "id": "a_team_1106e",
-  "at": "2026-11-06T22:45:00+01:00",
-  "ticker": "TEAM",
-  "level": "mittel",
-  "text": "Atlassian schließt nach den Zahlen −16,2 % bei 153,7 $ unter dem Stop 158 $. Die alte Zone 168–178 $ wurde nie erreicht – kein Kauf. Neuer Plan: meiden, Zone 133–142 $ (61,8 %), Stop 124 $, Ziel 175–190 $."
- },
- {
-  "id": "a_wl_1106e",
-  "at": "2026-11-06T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Alte Ziele erreicht, neue Ziele gesetzt: Rocket Lab (53,1 $) 61–70 $, Oklo (23,6 $) 30–35 $, Vistra (124,8 $) 140–152 $, Micron (690 $) 850–990 $ – jeweils nur für Käufe in der Zone, nicht hinterherkaufen. Rheinmetall (812,7 €) war mit 798 € kurz in der Zone 760–800 €, aber ohne Umkehrsignal; großes Ziel neu (1.150–1.330 €, Absicherung 640 €). Zoetis 79,4 $ in der Zone 78–82 $."
  }
 ]

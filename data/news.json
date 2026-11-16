@@ -1,43 +1,53 @@
 [
  {
-  "id": "n_chips_1116p",
+  "id": "n_mkt_1116e",
   "date": "2026-11-16",
   "ticker": "Markt",
-  "impact": "mittel",
+  "impact": "hoch",
   "direction": "negativ",
-  "headline": "Chip-Werte weiter unter Druck vor den Nvidia-Zahlen: Nasdaq zur Eröffnung ca. −1 %, AMD −3,8 %, Micron −5,3 %, Marvell −4,9 %",
-  "summary": "Die Sorge um den KI-Handel nach dem Huang-Rücktritt hält an; in Asien fielen Taiex (−6 %) und Kospi (−3,6 %) deutlich. Nvidia legt am Dienstag nach Börsenschluss Zahlen vor, Mittwoch folgen die Fed-Protokolle. Kurse laut TradingView-Abruf 16:47 UTC.",
-  "url": "https://www.bnnbloomberg.ca/markets/nasdaq/2026/11/16/stocks-decline-on-tech-sell-off-as-concerns-over-the-nvidia-fallout-persist/"
+  "headline": "Tech-Ausverkauf vor den Nvidia-Zahlen: Nasdaq 100 ca. −2,7 %, S&P 500 ca. −1,9 %, Dow ca. −1,4 %",
+  "summary": "Breiter Abverkauf, angeführt von Chip- und KI-Werten. Gründe laut Berichten: Umschichtung aus KI-Aktien vor den ersten Nvidia-Zahlen ohne Jensen Huang (Di. nach Börsenschluss), eine neue US-Regel zum Fernzugriff auf fortschrittliche Chips über Rechenzentren in Drittländern und ein schwacher Empire-State-Index (7,8 statt 16,7). Alphabet −4,1 %, Amazon −3,3 %, Meta −2,4 %. Werte laut ETF-Schlusskursen (SPY, QQQ, DIA).",
+  "url": "https://www.marketalleys.com/post/marketalleys-closing-tape-2026-11-16"
  },
  {
-  "id": "n_apld_1116p",
+  "id": "n_chips_1116e",
+  "date": "2026-11-16",
+  "ticker": "MU",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf vertieft sich: Micron −7,6 %, Marvell −7,3 %, Intel −7,0 %, TSMC −6,3 %, AMD −5,6 %, Nvidia −4,1 %",
+  "summary": "Zweiter schwacher Tag in Folge für Halbleiter. Marvell leidet zusätzlich unter Verwässerungssorgen wegen der Lumentum-Übernahme per Aktientausch; Arm fiel ebenfalls rund 8 %. Micron, TSMC und Marvell schließen in bzw. knapp unter ihren Einstiegszonen.",
+  "url": "https://www.fool.com/investing/2026/11/16/why-marvell-stock-is-down-today/"
+ },
+ {
+  "id": "n_apld_1116e",
   "date": "2026-11-16",
   "ticker": "APLD",
   "impact": "mittel",
   "direction": "negativ",
-  "headline": "Applied Digital −7,5 % auf 14,78 $ im Sog der KI-Rechenzentrums-Werte",
-  "summary": "Eine eigene Unternehmensmeldung war nicht zu finden; der Rückgang läuft mit dem Abverkauf von KI- und Chipwerten. Kurs weiter in der Zone 14–16 $, Stop 13,20 $ rund 11 % entfernt.",
-  "url": "https://www.benzinga.com/trading-ideas/movers/26/11/63299337/why-is-applied-digital-stock-falling-on-monday"
+  "headline": "Applied Digital −8,7 % auf 14,58 $ ohne eigene Meldung",
+  "summary": "Abverkauf mit den KI-Rechenzentrums-Werten vor den Nvidia-Zahlen; seit Jahresbeginn rund −41 %. Kurs in der Zone 14–16 $, Stop 13,20 $ knapp unter dem November-Tief.",
+  "url": "https://247wallst.com/investing/2026/11/16/applied-digital-is-down-41-this-year-what-will-it-take-to-get-apld-stock-back-to-20/"
  },
  {
-  "id": "n_moh_1116p",
+  "id": "n_moh_1116e",
   "date": "2026-11-16",
   "ticker": "MOH",
   "impact": "mittel",
   "direction": "positiv",
-  "headline": "Molina Healthcare +8 % auf 226,3 $ – knapp über der Bestätigung 226 $",
-  "summary": "Krankenversicherer steigen; als Grund wird ein Bericht über eine mögliche Verlängerung der ACA-Zuschüsse genannt (nicht bestätigt). Schlusskurs abwarten.",
-  "url": "https://www.stockopedia.com/share-prices/molina-healthcare-NYQ:MOH/news/health-insurers-rise-on-report-trump-considering-aca-subsidy-extension-updated-019e69f8-9d6a-752a-885b-9ad0ceafbf5f/"
+  "headline": "Molina Healthcare +11,3 % auf 233,1 $ – Schluss über der Bestätigung 226 $",
+  "summary": "Medicaid-Versicherer gefragt (Centene ca. +5 %, Elevance ca. +4 %), keine eigene Firmenmeldung. Molina beendet damit wahrscheinlich die Korrektur seit Juli; neue Einstiegszone 214–222 $.",
+  "url": "https://seekingalpha.com/news/4673097-molina-healthcare-climbs-8-as-sector-moves-higher"
  },
  {
-  "id": "n_mkt_pre_1116",
+  "id": "n_novo_1116e",
   "date": "2026-11-16",
-  "ticker": "Markt",
+  "ticker": "NOVO-B",
   "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Vorbörslich schwach vor Nvidia-Zahlen: Nasdaq-100-Future ca. −1,3 %, S&P-500-Future ca. −0,6 %",
-  "summary": "Chipwerte unter Druck: AMD vorbörslich rund −4,6 % (nach −8,8 % am Freitag), Micron, Broadcom und CoreWeave ebenfalls schwächer. US-Rendite 10 J. weiter um 5,15 %, Bitcoin rund 64.000 $. Nvidia legt am Dienstag nach Börsenschluss Zahlen vor; Anthropic-Börsengang (Kürzel ANT, Spanne 70–78 $) mit Preisfestsetzung am 18.11. und Handelsstart am 19.11.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
+  "direction": "positiv",
+  "headline": "Novo Nordisk +2,5 % auf 38,07 € – zweiter Schluss über der Bestätigung 37,50 €",
+  "summary": "Rückenwind durch Phase-3-Daten zu CagriSema und eine EU-Zulassung. Bodenszenario gestärkt; Stop der Position auf Einstand ziehen.",
+  "url": "https://www.marketalleys.com/post/marketalleys-closing-tape-2026-11-16"
  },
  {
   "id": "n_nvda_1116",
@@ -48,16 +58,6 @@
   "headline": "Nvidia vorbörslich ca. −3 %: Bericht, Jensen Huang und Unterstützer arbeiten an seiner Rückkehr als Chef",
   "summary": "Laut einem FT-Bericht wird eine Rückkehr Huangs vorbereitet; Interims-Chefin ist Finanzchefin Colette Kress. Die Unsicherheit drückt die Aktie einen Tag vor den Q3-Zahlen in Richtung Unterkante der Zone 158–168 $ (Stop 145 $).",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262307008-us-nvda-nasdaq-futures-nvidia-jensen-huang-anthropic-ipo-tradingkey"
- },
- {
-  "id": "n_novo_1116",
-  "date": "2026-11-16",
-  "ticker": "NOVO-B",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Novo Nordisk +3,3 % auf 38,38 € – Phase-3-Daten zu CagriSema und EU-Zulassung, Kurs über der Bestätigung 37,50 €",
-  "summary": "Neue Studiendaten (REDEFINE 9) zu CagriSema, eine EU-Zulassung (Frehemgo) und ein Zulassungsantrag für Etavopivat stützen die Aktie. Über 37,50 € greift das bullische Szenario, wenn der Schlusskurs darüber bleibt.",
-  "url": "https://www.investing.com/news/stock-market-news/why-is-novo-nordisk-stock-climbing-today-93CH-5028678"
  },
  {
   "id": "n_mkt_close_1113",
