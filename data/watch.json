@@ -1,39 +1,24 @@
 {
- "generated_at": "2026-11-17T12:56:37+00:00",
+ "generated_at": "2026-11-17T15:23:07+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 504.28,
+   "price": 502.4533,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.267
+   "gap_to_stop": 0.2624
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.47,
+   "price": 36.895,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.249
+   "gap_to_stop": 0.2298
   }
  ],
- "events": [
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 14.58,
-   "chg_pct": -0.087,
-   "at": "2026-11-17T12:56+00:00",
-   "id": "APLD-absturz-2026-11-17",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Applied Digital −8,7 % heute",
-   "text": "Starker Tagesverlust auf 14,58 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "In der Zone 14–16 $ (Schluss 14,58 $, −8,7 %): halten, nicht aufstocken (politisches Risiko); Stop 13,2 $ knapp unter dem Nov.-Tief 13,12 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand."
-  }
- ],
+ "events": [],
  "notified": [
   "APLD-absturz-2026-11-17"
  ]
