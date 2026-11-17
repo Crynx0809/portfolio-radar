@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_sap_1117m",
+  "date": "2026-11-17",
+  "ticker": "SAP",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "SAP rund −3 %: Kundenvorstand Thomas Saueressig wechselt zu IONOS, dazu KI-Sorgen vor den Nvidia-Zahlen",
+  "summary": "Der Abgang des Vorstands für Kunden und Dienstleistungen belastet zusammen mit der allgemeinen Nervosität bei Software- und KI-Werten. SAP fällt auf ca. 207 €, bleibt aber klar über der Rücksetzer-Zone 185–190 € und dem Stop 178 €.",
+  "url": "https://aktiencheck.de/artikel/sap-aktie-kundenchef-saueressig-geht-zu-ionos-und-die-ki-angst-ist-zurueck"
+ },
+ {
   "id": "n_mkt_1116e",
   "date": "2026-11-16",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "GE Vernova −3,9 % auf 797 $ nach SoftBank-Abschreibung auf Stromtechnik für KI-Rechenzentren",
   "summary": "SoftBank meldete eine Belastung von 3,7 Mrd. $ und geänderte Verträge für Strom-Ausrüstung von KI-Rechenzentren (u. a. Projekt in Ohio) – Sorge um Gasturbinen-Nachfrage. Im Handel bis −7 %, zum Schluss erholt.",
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
- },
- {
-  "id": "n_mkt_close_1109",
-  "date": "2026-11-09",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Kräftige Erholung: S&P 500 ca. +2,3 %, Nasdaq 100 ca. +3,3 %, Dow ca. +2,2 % – Öl ca. −3 %",
-  "summary": "Nach der schwächsten Woche seit April 2025 kehrten Käufer in Tech- und Chipwerte zurück; Brent fiel auf rund 95 $, weil Trump neue Angriffe auf Iran herunterspielte. Citi stufte US-Aktien und Tech auf neutral ab. Morgen US-Inflation (CPI).",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
  }
 ]

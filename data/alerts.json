@@ -1,5 +1,12 @@
 [
  {
+  "id": "a_depot_1117m",
+  "at": "2026-11-17T14:25:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vor US-Börsenstart: kein Stop gebrochen. US-Werte noch auf Montagsschluss, Futures leicht schwächer vor den Nvidia-Zahlen heute nach Börsenschluss (Nvidia vorher nicht kaufen). SAP 207,00 € (−3,0 %, Vorstandsabgang Saueressig) – Trend intakt, Zone 185–190 €, Stop 178 €. Novo Nordisk 37,51 € (−1,5 %) hält knapp die Bestätigung 37,50 € – Stop bleibt auf Einstand. Applied Digital (Wächter-Meldung −8,7 %) ist der Montagsverlust; in der Zone 14–16 $ halten, Stop 13,20 $."
+ },
+ {
   "id": "a_depot_1116e",
   "at": "2026-11-16T22:45:00+01:00",
   "ticker": "Depot",
