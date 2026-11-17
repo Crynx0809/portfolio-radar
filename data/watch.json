@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-16T21:46:46+00:00",
+ "generated_at": "2026-11-17T08:54:24+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -12,18 +12,10 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 38.07,
+   "price": 37.73,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.269
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "price": 213.4,
-   "stop": 178,
-   "trigger": 217,
-   "gap_to_stop": 0.1989
+   "gap_to_stop": 0.2577
   }
  ],
  "events": [
@@ -33,8 +25,8 @@
    "group": "Portfolio",
    "price": 14.58,
    "chg_pct": -0.087,
-   "at": "2026-11-16T21:46+00:00",
-   "id": "APLD-absturz-2026-11-16",
+   "at": "2026-11-17T08:54+00:00",
+   "id": "APLD-absturz-2026-11-17",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −8,7 % heute",
@@ -45,19 +37,18 @@
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
    "group": "Portfolio",
-   "price": 38.07,
-   "chg_pct": 0.025,
-   "at": "2026-11-16T21:46+00:00",
-   "id": "NOVO-B-ausbruch-2026-11-16",
+   "price": 37.73,
+   "chg_pct": -0.0089,
+   "at": "2026-11-17T08:54+00:00",
+   "id": "NOVO-B-ausbruch-2026-11-17",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
-   "text": "Kurs 38,07 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "text": "Kurs 37,73 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
    "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
   }
  ],
  "notified": [
-  "AMD-absturz-2026-11-16",
-  "APLD-absturz-2026-11-16"
+  "APLD-absturz-2026-11-17"
  ]
 }
