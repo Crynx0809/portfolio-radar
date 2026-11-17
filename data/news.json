@@ -1,12 +1,22 @@
 [
  {
-  "id": "n-20261117-markt-1745",
+  "id": "n_nvda_1117e",
+  "date": "2026-11-17",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Nvidia schlägt Erwartungen und hebt den Ausblick: Q3-Umsatz 115,8 Mrd. $, Q4-Prognose ca. 130 Mrd. $",
+  "summary": "Erste Zahlen ohne Jensen Huang: Umsatz 115,8 Mrd. $ (erwartet ca. 109 Mrd.), Rechenzentren 107,6 Mrd. $, Gewinn je Aktie 2,68 $ (erwartet 2,47 $). Q4-Prognose 127,4–132,6 Mrd. $ (erwartet ca. 125 Mrd.), dazu 150 Mrd. $ Aktienrückkauf. Nachbörslich ca. +2,4 %. Gleichzeitig meldet das WSJ eine SEC-Prüfung von Nvidia-Offenlegungen. Wichtig für AMD und Marvell im Depot.",
+  "url": "https://finance.yahoo.com/technology/live/nvidia-earnings-live-nvidia-to-report-q3-results-after-the-bell-with-colette-kress-to-host-first-call-as-interim-ceo-202616349.html"
+ },
+ {
+  "id": "n_mkt_1117e",
   "date": "2026-11-17",
   "ticker": "Markt",
   "impact": "mittel",
   "direction": "negativ",
-  "headline": "Wall Street rutscht vor den Nvidia-Zahlen weiter ab",
-  "summary": "Am Nachmittag S&P 500 ca. −1 %, Dow ca. −1,4 %, Nasdaq ca. −1,1 bis −1,8 %; VIX steigt auf rund 26, 10-jährige US-Rendite bei etwa 5,1 %. Fed-Vertreter Musalem fordert eher frühere Zinserhöhungen. US-Einzelhandelsumsatz Oktober +0,2 % (leicht über Erwartung). Nvidia berichtet heute nach Börsenschluss – erstmals ohne Jensen Huang.",
+  "headline": "Zweiter Verlusttag: Dow −1,6 %, S&P 500 −1,0 %, Nasdaq −0,7 %",
+  "summary": "Vorsicht vor den Nvidia-Zahlen, VIX steigt um ca. 11 % auf rund 26, 10-jährige US-Rendite um 5,1 %. Software-Werte besonders schwach (ServiceNow −6,5 %, Atlassian −6 %, Adobe −4,2 %, SAP −5,6 %). Nike fällt am Investor Day um 6,3 %.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-17-dow-sp-500-nasdaq-nvidia-earnings-retail-sales-143848454.html"
  },
  {
@@ -288,15 +298,5 @@
   "headline": "Nvidia −5,5 % auf 168,89 $: Klage und FBI-Prüfung rund um Chef Huang – tiefster Schluss seit Ende März",
   "summary": "Aktionärsklage wirft Nvidia Irreführung vor; laut Trump prüft das FBI. Bericht über Chips im Wert von mindestens 7,5 Mrd. $, die über ein Netzwerk an chinesische Firmen gelangt sein sollen. RSI ca. 23 (stark überverkauft); Goldman Sachs nennt Chipwerte überverkauft. Q3-Zahlen ca. 17./18.11.",
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
- },
- {
-  "id": "2026-11-10-hims",
-  "date": "2026-11-10",
-  "ticker": "HIMS",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Hims & Hers −16,6 % auf 19,13 $ nach Q3: Marge bricht ein, Ergebnisprognose gesenkt",
-  "summary": "Umsatz +49 % auf 890 Mio. $, aber Bruttomarge 57 % (Vorjahr 74 %) wegen des Lilly-Vertrags, Abo-Wachstum schwächer, EBITDA-Prognose gesenkt. In einer Woche rund −25 %.",
-  "url": "https://www.finanzen.at/nachrichten/aktien/hims-&-hers-health-inc-reports-drop-in-q3-bottom-line-misses-estimates-1035481341"
  }
 ]

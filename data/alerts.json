@@ -1,17 +1,17 @@
 [
  {
-  "id": "a-20261117-1745-depot",
-  "at": "2026-11-17T17:55:00+01:00",
+  "id": "a_depot_1117e",
+  "at": "2026-11-17T22:45:00+01:00",
   "ticker": "Depot",
   "level": "mittel",
-  "text": "Kein Depot-Stop gebrochen. SAP 201,30 € (−5,7 %) weiter über der Zone 185–190 €; Novo Nordisk 36,80 € (−3,3 %) wieder unter 37,50 €; Applied Digital 14,27 $ (−2,1 %) in der Zone 14–16 $, Stop 13,20 $ ca. 7 % entfernt; Marvell 144,12 $ knapp unter der Zone 147–154 $ (Stop 135 $). Nvidia-Zahlen heute Abend können Chipwerte (AMD, Marvell) stark bewegen."
+  "text": "Kein Depot-Stop gebrochen. Nvidia-Zahlen nach Börsenschluss klar über Erwartung (Umsatz 115,8 Mrd. $, Q4-Prognose ca. 130 Mrd. $), nachbörslich ca. +2,4 % – stützt AMD (503,4 $, Zone 450–472 $, Stop 398 $) und Marvell (148,7 $, wieder in der Zukaufzone 147–154 $, Stop 135 $). SAP 201,5 € (−5,6 %) weiter über der Zone 185–190 €. Alphabet 280,2 $ jetzt an der Zukaufzone 271–280 $ (Stop 262 $). Applied Digital 14,22 $ in der Zone, Stop 13,20 $."
  },
  {
-  "id": "a-20261117-1745-watch",
-  "at": "2026-11-17T17:55:00+01:00",
+  "id": "a_wl_1117e",
+  "at": "2026-11-17T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Watchlist-Stops unterschritten (keine Position): ServiceNow 92,16 $ (−7,3 %, Stop 94 $) und Robinhood 67,88 $ (−5,8 %, Stop 68 $) – Setups vorerst ungültig, Neubewertung in der Abendanalyse. Unter die Zone gefallen: Micron 686 $ (Zone 715–745 $), TSMC 359 $ (376–386 $), Nvidia 154 $ (158–168 $)."
+  "text": "Neu bewertet nach Stop-Brüchen (keine Position): ServiceNow (Schluss 92,9 $) – neue Zone 87–91 $, Stop 84 $, Ziel 105–115 $; Robinhood (Tief 67,3 $) – neue Zone 64–67 $, Stop 61,5 $, Ziel 80–88 $; Nike nach Investor Day −6,3 % – Boden gescheitert, „meiden“, neue Zone erst 32,5–33,8 $. In der Zone: JPMorgan 330 $ (325–332 $, Stop 318 $), Molina 221,2 $ (214–222 $, Stop 199 $). Unter die Zone gefallen, „meiden“: TSMC 359,7 $ (Stop 348 $), MercadoLibre 1.437 $ (Stop 1.420 $). Nvidia 155,5 $ knapp unter der Zone 158–168 $: nach den starken Zahlen klein und gestaffelt, Stop 145 $."
  },
  {
   "id": "a_depot_1117m",

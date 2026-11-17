@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-17T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Breiter Abverkauf vor den Nvidia-Zahlen, aber kein Depot-Stop gebrochen. SAP −5,7 %, Novo −3,3 %; auf der Watchlist fallen ServiceNow und Robinhood unter ihre Stops.",
-  "market": "S&P 500 ca. −1 %, Dow ca. −1,4 %, Nasdaq ca. −1,1 bis −1,8 %, VIX ~26, 10-j. Rendite ~5,1 %. Nvidia meldet nach US-Börsenschluss. Kurse: TradingView, Abruf 16:47 UTC (während der US-Sitzung).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-17T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Nvidia schlägt die Erwartungen und hebt den Ausblick (nachbörslich ca. +2,4 %) – gut für AMD und Marvell. Kein Depot-Stop gebrochen; auf der Watchlist ServiceNow, Robinhood und Nike neu bewertet.",
+  "market": "Dow −1,6 %, S&P 500 −1,0 %, Nasdaq −0,7 %, VIX ~26 (+11 %), 10-j. Rendite ~5,1 %. Kurse: TradingView, Abruf 21:32 UTC (nach US-Börsenschluss).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]
