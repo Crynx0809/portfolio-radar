@@ -1,5 +1,15 @@
 [
  {
+  "id": "n-20261117-markt-1745",
+  "date": "2026-11-17",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Wall Street rutscht vor den Nvidia-Zahlen weiter ab",
+  "summary": "Am Nachmittag S&P 500 ca. −1 %, Dow ca. −1,4 %, Nasdaq ca. −1,1 bis −1,8 %; VIX steigt auf rund 26, 10-jährige US-Rendite bei etwa 5,1 %. Fed-Vertreter Musalem fordert eher frühere Zinserhöhungen. US-Einzelhandelsumsatz Oktober +0,2 % (leicht über Erwartung). Nvidia berichtet heute nach Börsenschluss – erstmals ohne Jensen Huang.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-17-dow-sp-500-nasdaq-nvidia-earnings-retail-sales-143848454.html"
+ },
+ {
   "id": "n_sap_1117m",
   "date": "2026-11-17",
   "ticker": "SAP",
@@ -288,15 +298,5 @@
   "headline": "Hims & Hers −16,6 % auf 19,13 $ nach Q3: Marge bricht ein, Ergebnisprognose gesenkt",
   "summary": "Umsatz +49 % auf 890 Mio. $, aber Bruttomarge 57 % (Vorjahr 74 %) wegen des Lilly-Vertrags, Abo-Wachstum schwächer, EBITDA-Prognose gesenkt. In einer Woche rund −25 %.",
   "url": "https://www.finanzen.at/nachrichten/aktien/hims-&-hers-health-inc-reports-drop-in-q3-bottom-line-misses-estimates-1035481341"
- },
- {
-  "id": "2026-11-10-gev",
-  "date": "2026-11-10",
-  "ticker": "GEV",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "GE Vernova −3,9 % auf 797 $ nach SoftBank-Abschreibung auf Stromtechnik für KI-Rechenzentren",
-  "summary": "SoftBank meldete eine Belastung von 3,7 Mrd. $ und geänderte Verträge für Strom-Ausrüstung von KI-Rechenzentren (u. a. Projekt in Ohio) – Sorge um Gasturbinen-Nachfrage. Im Handel bis −7 %, zum Schluss erholt.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
  }
 ]

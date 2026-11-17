@@ -1,5 +1,19 @@
 [
  {
+  "id": "a-20261117-1745-depot",
+  "at": "2026-11-17T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Kein Depot-Stop gebrochen. SAP 201,30 € (−5,7 %) weiter über der Zone 185–190 €; Novo Nordisk 36,80 € (−3,3 %) wieder unter 37,50 €; Applied Digital 14,27 $ (−2,1 %) in der Zone 14–16 $, Stop 13,20 $ ca. 7 % entfernt; Marvell 144,12 $ knapp unter der Zone 147–154 $ (Stop 135 $). Nvidia-Zahlen heute Abend können Chipwerte (AMD, Marvell) stark bewegen."
+ },
+ {
+  "id": "a-20261117-1745-watch",
+  "at": "2026-11-17T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Watchlist-Stops unterschritten (keine Position): ServiceNow 92,16 $ (−7,3 %, Stop 94 $) und Robinhood 67,88 $ (−5,8 %, Stop 68 $) – Setups vorerst ungültig, Neubewertung in der Abendanalyse. Unter die Zone gefallen: Micron 686 $ (Zone 715–745 $), TSMC 359 $ (376–386 $), Nvidia 154 $ (158–168 $)."
+ },
+ {
   "id": "a_depot_1117m",
   "at": "2026-11-17T14:25:00+01:00",
   "ticker": "Depot",
