@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-17T17:35:58+00:00",
+ "generated_at": "2026-11-17T19:47:36+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 494.36,
+   "price": 490.63,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2421
+   "gap_to_stop": 0.2327
   },
   {
    "ticker": "NOVO-B",
@@ -23,29 +23,15 @@
    "ticker": "JPM",
    "name": "JPMorgan Chase",
    "group": "Watchlist",
-   "price": 331.67,
-   "chg_pct": -0.0193,
-   "at": "2026-11-17T17:35+00:00",
+   "price": 330.05,
+   "chg_pct": -0.0241,
+   "at": "2026-11-17T19:47+00:00",
    "id": "JPM-zone-2026-11-17",
    "type": "zone",
    "level": "mittel",
    "title": "JPMorgan Chase in der Einstiegszone",
-   "text": "Kurs 331,67 $ ist in die Zone 325,00 $–332,00 $ gelaufen.",
+   "text": "Kurs 330,05 $ ist in die Zone 325,00 $–332,00 $ gelaufen.",
    "todo": "Einstiegsidee bei Rücksetzer in 325–332 $."
-  },
-  {
-   "ticker": "NKE",
-   "name": "Nike",
-   "group": "Watchlist",
-   "price": 37.37,
-   "chg_pct": -0.0233,
-   "at": "2026-11-17T17:35+00:00",
-   "id": "NKE-zone-2026-11-17",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nike in der Einstiegszone",
-   "text": "Kurs 37,37 $ ist in die Zone 36,80 $–37,90 $ gelaufen.",
-   "todo": "Zwischen 37,90 und 40 $: abwarten, nicht hinterherkaufen. Einstiegsidee beim Rücksetzer in 36,80–37,90 $."
   }
  ],
  "notified": [
