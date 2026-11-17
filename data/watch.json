@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-17T19:47:36+00:00",
+ "generated_at": "2026-11-17T20:48:40+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 490.63,
+   "price": 492.6401,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2327
+   "gap_to_stop": 0.2378
   },
   {
    "ticker": "NOVO-B",
@@ -23,15 +23,29 @@
    "ticker": "JPM",
    "name": "JPMorgan Chase",
    "group": "Watchlist",
-   "price": 330.05,
-   "chg_pct": -0.0241,
-   "at": "2026-11-17T19:47+00:00",
+   "price": 330.34,
+   "chg_pct": -0.0233,
+   "at": "2026-11-17T20:48+00:00",
    "id": "JPM-zone-2026-11-17",
    "type": "zone",
    "level": "mittel",
    "title": "JPMorgan Chase in der Einstiegszone",
-   "text": "Kurs 330,05 $ ist in die Zone 325,00 $–332,00 $ gelaufen.",
+   "text": "Kurs 330,34 $ ist in die Zone 325,00 $–332,00 $ gelaufen.",
    "todo": "Einstiegsidee bei Rücksetzer in 325–332 $."
+  },
+  {
+   "ticker": "MOH",
+   "name": "Molina Healthcare",
+   "group": "Watchlist",
+   "price": 221.17,
+   "chg_pct": -0.0511,
+   "at": "2026-11-17T20:48+00:00",
+   "id": "MOH-zone-2026-11-17",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Molina Healthcare in der Einstiegszone",
+   "text": "Kurs 221,17 $ ist in die Zone 214,00 $–222,00 $ gelaufen.",
+   "todo": "222–245 $: nicht hinterherkaufen, Rücksetzer abwarten."
   }
  ],
  "notified": [
