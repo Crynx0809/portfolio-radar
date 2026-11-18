@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T21:37:16+00:00",
+ "generated_at": "2026-11-18T21:51:59+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -12,74 +12,18 @@
  ],
  "events": [
   {
-   "ticker": "RKLB",
-   "name": "Rocket Lab",
+   "ticker": "NVDA",
+   "name": "Nvidia",
    "group": "Watchlist",
-   "price": 53.07,
-   "chg_pct": -0.036,
-   "at": "2026-11-18T21:37+00:00",
-   "id": "RKLB-zone-2026-11-18",
+   "price": 150.96,
+   "chg_pct": -0.0289,
+   "at": "2026-11-18T21:51+00:00",
+   "id": "NVDA-zone-2026-11-18",
    "type": "zone",
    "level": "mittel",
-   "title": "Rocket Lab in der Einstiegszone",
-   "text": "Kurs 53,07 $ ist in die Zone 50,00 $–53,50 $ gelaufen.",
-   "todo": "53,5–64,5 $: abwarten, kein Kauf."
-  },
-  {
-   "ticker": "NU",
-   "name": "Nu Holdings",
-   "group": "Watchlist",
-   "price": 12.08,
-   "chg_pct": -0.0203,
-   "at": "2026-11-18T21:37+00:00",
-   "id": "NU-zone-2026-11-18",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Nu Holdings in der Einstiegszone",
-   "text": "Kurs 12,08 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
-   "todo": "12,1–14,2 $: halten (Stop Einstand), nicht hinterherkaufen. Am 16.11. Schluss 12,68 $ wieder unter 13 $ – Bestätigung noch nicht gefestigt."
-  },
-  {
-   "ticker": "NOW",
-   "name": "ServiceNow",
-   "group": "Watchlist",
-   "price": 90.59,
-   "chg_pct": -0.0249,
-   "at": "2026-11-18T21:37+00:00",
-   "id": "NOW-zone-2026-11-18",
-   "type": "zone",
-   "level": "mittel",
-   "title": "ServiceNow in der Einstiegszone",
-   "text": "Kurs 90,59 $ ist in die Zone 87,00 $–91,00 $ gelaufen.",
-   "todo": "91–103,7 $: nicht kaufen, Zone 87–91 $ abwarten."
-  },
-  {
-   "ticker": "MRNA",
-   "name": "Moderna",
-   "group": "Watchlist",
-   "price": 196.79,
-   "chg_pct": -0.0484,
-   "at": "2026-11-18T21:37+00:00",
-   "id": "MRNA-zone-2026-11-18",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Moderna in der Einstiegszone",
-   "text": "Kurs 196,79 $ ist in die Zone 180,00 $–200,00 $ gelaufen.",
-   "todo": "Über 200 $: abwarten, nicht jagen."
-  },
-  {
-   "ticker": "DHER",
-   "name": "Delivery Hero",
-   "group": "Watchlist",
-   "price": 36.35,
-   "chg_pct": -0.0055,
-   "at": "2026-11-18T21:37+00:00",
-   "id": "DHER-zone-2026-11-18",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Delivery Hero in der Einstiegszone",
-   "text": "Kurs 36,35 € ist in die Zone 35,50 €–36,50 € gelaufen.",
-   "todo": "36,5–38 €: abwarten; der Kurs bewegt sich bis zur Freigabe meist nur wenig."
+   "title": "Nvidia in der Einstiegszone",
+   "text": "Kurs 150,96 $ ist in die Zone 148,00 $–155,00 $ gelaufen.",
+   "todo": "155–170 $: halten, nicht hinterherkaufen."
   }
  ],
  "notified": []
