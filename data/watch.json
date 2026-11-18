@@ -1,13 +1,13 @@
 {
- "generated_at": "2026-11-18T17:39:14+00:00",
+ "generated_at": "2026-11-18T19:43:11+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 515.94,
+   "price": 523.4363,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2963
+   "gap_to_stop": 0.3152
   }
  ],
  "events": [
@@ -15,15 +15,43 @@
    "ticker": "NOW",
    "name": "ServiceNow",
    "group": "Watchlist",
-   "price": 90.66,
-   "chg_pct": -0.0241,
-   "at": "2026-11-18T17:39+00:00",
+   "price": 90.37,
+   "chg_pct": -0.0272,
+   "at": "2026-11-18T19:43+00:00",
    "id": "NOW-zone-2026-11-18",
    "type": "zone",
    "level": "mittel",
    "title": "ServiceNow in der Einstiegszone",
-   "text": "Kurs 90,66 $ ist in die Zone 87,00 $–91,00 $ gelaufen.",
+   "text": "Kurs 90,37 $ ist in die Zone 87,00 $–91,00 $ gelaufen.",
    "todo": "91–103,7 $: nicht kaufen, Zone 87–91 $ abwarten."
+  },
+  {
+   "ticker": "EL",
+   "name": "Estée Lauder",
+   "group": "Watchlist",
+   "price": 103.83,
+   "chg_pct": -0.0066,
+   "at": "2026-11-18T19:43+00:00",
+   "id": "EL-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Estée Lauder in der Einstiegszone",
+   "text": "Kurs 103,83 $ ist in die Zone 100,00 $–104,00 $ gelaufen.",
+   "todo": "Über 104 $: abwarten, Trend läuft."
+  },
+  {
+   "ticker": "MRNA",
+   "name": "Moderna",
+   "group": "Watchlist",
+   "price": 199.34,
+   "chg_pct": -0.0361,
+   "at": "2026-11-18T19:43+00:00",
+   "id": "MRNA-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Moderna in der Einstiegszone",
+   "text": "Kurs 199,34 $ ist in die Zone 180,00 $–200,00 $ gelaufen.",
+   "todo": "Über 200 $: abwarten, nicht jagen."
   },
   {
    "ticker": "DHER",
@@ -31,7 +59,7 @@
    "group": "Watchlist",
    "price": 36.35,
    "chg_pct": -0.0055,
-   "at": "2026-11-18T17:39+00:00",
+   "at": "2026-11-18T19:43+00:00",
    "id": "DHER-zone-2026-11-18",
    "type": "zone",
    "level": "mittel",
