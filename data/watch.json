@@ -1,36 +1,98 @@
 {
- "generated_at": "2026-11-18T09:59:16+00:00",
+ "generated_at": "2026-11-18T16:36:15+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 503.41,
+   "price": 504.08,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2648
-  },
-  {
-   "ticker": "NOVO-B",
-   "name": "Novo Nordisk B",
-   "price": 37.08,
-   "stop": 30,
-   "trigger": 37.5,
-   "gap_to_stop": 0.236
+   "gap_to_stop": 0.2665
   }
  ],
  "events": [
   {
+   "ticker": "RKLB",
+   "name": "Rocket Lab",
+   "group": "Watchlist",
+   "price": 53.37,
+   "chg_pct": -0.0305,
+   "at": "2026-11-18T16:36+00:00",
+   "id": "RKLB-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Rocket Lab in der Einstiegszone",
+   "text": "Kurs 53,37 $ ist in die Zone 50,00 $–53,50 $ gelaufen.",
+   "todo": "53,5–64,5 $: abwarten, kein Kauf."
+  },
+  {
+   "ticker": "NU",
+   "name": "Nu Holdings",
+   "group": "Watchlist",
+   "price": 12.09,
+   "chg_pct": -0.0195,
+   "at": "2026-11-18T16:36+00:00",
+   "id": "NU-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Nu Holdings in der Einstiegszone",
+   "text": "Kurs 12,09 $ ist in die Zone 11,40 $–12,10 $ gelaufen.",
+   "todo": "12,1–14,2 $: halten (Stop Einstand), nicht hinterherkaufen. Am 16.11. Schluss 12,68 $ wieder unter 13 $ – Bestätigung noch nicht gefestigt."
+  },
+  {
+   "ticker": "NOW",
+   "name": "ServiceNow",
+   "group": "Watchlist",
+   "price": 89.389216,
+   "chg_pct": -0.0378,
+   "at": "2026-11-18T16:36+00:00",
+   "id": "NOW-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "ServiceNow in der Einstiegszone",
+   "text": "Kurs 89,39 $ ist in die Zone 87,00 $–91,00 $ gelaufen.",
+   "todo": "91–103,7 $: nicht kaufen, Zone 87–91 $ abwarten."
+  },
+  {
+   "ticker": "META",
+   "name": "Meta Platforms",
+   "group": "Watchlist",
+   "price": 610.64,
+   "chg_pct": -0.0133,
+   "at": "2026-11-18T16:36+00:00",
+   "id": "META-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Meta Platforms in der Einstiegszone",
+   "text": "Kurs 610,64 $ ist in die Zone 595,00 $–615,00 $ gelaufen.",
+   "todo": "Zwischen 615 und 660 $: abwarten, nicht hinterherkaufen."
+  },
+  {
+   "ticker": "EL",
+   "name": "Estée Lauder",
+   "group": "Watchlist",
+   "price": 103.35,
+   "chg_pct": -0.0112,
+   "at": "2026-11-18T16:36+00:00",
+   "id": "EL-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Estée Lauder in der Einstiegszone",
+   "text": "Kurs 103,35 $ ist in die Zone 100,00 $–104,00 $ gelaufen.",
+   "todo": "Über 104 $: abwarten, Trend läuft."
+  },
+  {
    "ticker": "DHER",
    "name": "Delivery Hero",
    "group": "Watchlist",
-   "price": 36.5,
-   "chg_pct": -0.0014,
-   "at": "2026-11-18T09:59+00:00",
+   "price": 36.48,
+   "chg_pct": -0.0019,
+   "at": "2026-11-18T16:36+00:00",
    "id": "DHER-zone-2026-11-18",
    "type": "zone",
    "level": "mittel",
    "title": "Delivery Hero in der Einstiegszone",
-   "text": "Kurs 36,50 € ist in die Zone 35,50 €–36,50 € gelaufen.",
+   "text": "Kurs 36,48 € ist in die Zone 35,50 €–36,50 € gelaufen.",
    "todo": "36,5–38 €: abwarten; der Kurs bewegt sich bis zur Freigabe meist nur wenig."
   }
  ],
