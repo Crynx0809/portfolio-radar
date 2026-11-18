@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-18-1755-depot",
+  "at": "2026-11-18T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "US-Sitzung (Stand 17:47 Uhr): kein Depot-Stop gebrochen. Chip-Erholung nach Nvidia verpufft: Marvell 143,8 $ (−3,3 %), AMD 507 $ (+0,7 %), Applied Digital 14,18 $ (in der Zone 14–16 $, Stop 13,2 $). Fortinet +4,4 % auf 130 $, Amazon +2,4 % auf 264 $. SAP 194,3 € (−3,6 %), Novo Nordisk 36,15 € (−1,8 %, wieder unter der Bestätigung 37,50 €)."
+ },
+ {
+  "id": "2026-11-18-1755-watch",
+  "at": "2026-11-18T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Freeport-McMoRan 51,0 $ (−7,7 %) intraday unter dem Stop 51,5 $ – Gold/Kupfer schwach; Schlusskurs abwarten, Neubewertung in der Abendanalyse (keine Position). Knapp über dem Stop: MercadoLibre 1.425 $ (Stop 1.420 $), Mercedes-Benz 39,09 € (Stop 38,40 €), Adobe 226,1 $ (Stop 223 $), Alibaba 85,7 $ (Stop 84 $). Laut Wächter in der Zone: Rocket Lab, Nu, ServiceNow, Meta, Estée Lauder, Delivery Hero. Molina −7 % auf 205,7 $ (Branche schwach)."
+ },
+ {
   "id": "2026-11-18-1425-depot",
   "at": "2026-11-18T14:25:00+01:00",
   "ticker": "Depot",
@@ -264,19 +278,5 @@
   "ticker": "MBG",
   "level": "mittel",
   "text": "Mercedes-Benz im Handel bei 42,02 € knapp über der Bestätigungsmarke 42 € (Tageshoch 42,34 €) – zählt erst mit Schlusskurs darüber. Zone 39,5–40,5 € unverändert, nicht hinterherkaufen."
- },
- {
-  "id": "a_amd_1109e",
-  "at": "2026-11-09T22:45:00+01:00",
-  "ticker": "AMD",
-  "level": "hoch",
-  "text": "AMD schließt mit +13,3 % bei 508,6 $ klar über der Bestätigung 456 $ – der Ausverkauf (Tief 402 $) war wahrscheinlich der Boden, das alte Ziel 470–513 $ ist erreicht. Neuer Plan: nicht hinterherkaufen, Rücksetzer in 450–472 $ gestaffelt kaufen, Stop 428 $, Ziel 600–658 $; über 579 $ Stop auf Einstand."
- },
- {
-  "id": "a_mrvl_1109e",
-  "at": "2026-11-09T22:45:00+01:00",
-  "ticker": "MRVL",
-  "level": "mittel",
-  "text": "Marvell +9,5 % auf 154,6 $ – altes Ziel 150–162 $ ohne Einstieg erreicht, C-Tief 132,5 $ wohl der Boden. Neuer Wiedereinstieg in 138–146 $, Stop 130 $, Ziel 185–205 $; über 162 $ Stop auf Einstand."
  }
 ]
