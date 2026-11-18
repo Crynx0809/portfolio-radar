@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-18-2245-depot",
+  "at": "2026-11-18T22:45:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Kein Depot-Stop gebrochen. AMD 530,1 $ (+5,3 %), Fortinet 131,8 $ (+5,9 %, jetzt über der Zone – nicht aufstocken), Amazon 267,7 $ (+3,8 %, wieder über der Zone 248–258 $). Marvell 145,5 $ (−2,2 %) knapp unter der Zukaufzone 147–154 $, Stop 135 $. SAP 193,9 € (−3,8 %) nähert sich der Zone 185–190 €. Novo Nordisk 36,13 € unter der Bestätigung 37,50 € – Stop bleibt auf Einstand. Applied Digital 14,45 $ und Bank of America 48,91 $ in ihren Zonen."
+ },
+ {
+  "id": "2026-11-18-2245-watch",
+  "at": "2026-11-18T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Freeport-McMoRan schließt 51,45 $ unter dem Stop 51,5 $ → „meiden“, neue Zone 46–48,5 $ (Stop 43,5 $). Status „meiden“ auch für Molina (206,6 $, unter der Zone, Stop 199 $), Adobe (226,2 $, 1 % über dem Stop 223 $) und Alibaba (84,37 $, direkt am Stop 84 $). Nvidia 151 $: Zone an das Doppeltief gelegt (148–155 $, Stop 142 $, Ziel 185–200 $). In der Zone: Rocket Lab, Nu, ServiceNow, Meta, Moderna, Delivery Hero, Estée Lauder, Exxon, JPMorgan (knapp darunter). CrowdStrike +8 % auf 237 $ – nicht hinterherkaufen."
+ },
+ {
   "id": "2026-11-18-1755-depot",
   "at": "2026-11-18T17:55:00+01:00",
   "ticker": "Depot",
@@ -264,19 +278,5 @@
   "ticker": "NVDA",
   "level": "mittel",
   "text": "Nvidia schließt −5,5 % bei 168,89 $ in der Zone 162–170 $ (RSI ca. 23, stark überverkauft). Plan: gestaffelt, wegen Rechtsrisiken klein; Stop 155 $, Ziel 200–218 $. Zahlen ca. 17./18.11."
- },
- {
-  "id": "a_wl_1110e",
-  "at": "2026-11-10T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "In der Zone: Nu 12,08 $ (11,4–12,1 $), Zoetis knapp darüber (82,5 $), Telekom 25,92 €, ServiceNow 99,6 $, Exxon 164,5 $. Molina mit 206,4 $ knapp über der Zone 196–203 $. Depot ruhig: kein Stop in Gefahr, AMD 515 $ (+1,3 %)."
- },
- {
-  "id": "a-20261110-mbg",
-  "at": "2026-11-10T14:35:00+01:00",
-  "ticker": "MBG",
-  "level": "mittel",
-  "text": "Mercedes-Benz im Handel bei 42,02 € knapp über der Bestätigungsmarke 42 € (Tageshoch 42,34 €) – zählt erst mit Schlusskurs darüber. Zone 39,5–40,5 € unverändert, nicht hinterherkaufen."
  }
 ]

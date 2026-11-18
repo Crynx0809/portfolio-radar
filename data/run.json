@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-18T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Kein Depot-Stop gebrochen. Die Chip-Erholung nach den Nvidia-Zahlen ist verpufft (Marvell −3 %), Dow ca. −1,3 % nach Fed-Gouverneur Waller (Dezember-Zinserhöhung um 0,5 Punkte wahrscheinlich nötig). Freeport-McMoRan (Watchlist) −7,7 % intraday unter dem Stop.",
-  "market": "US-Vormittag: S&P 500 ca. −0,6 %, Nasdaq ca. −0,2 %, Dow ca. −1,3 %; 10-j. Rendite ~5,07 %, WTI ~83 $, Gold deutlich schwächer. Fed-Protokoll 20 Uhr MEZ, Anthropic-Börsengang ab Donnerstag. Kurse: TradingView, Abruf 16:47 UTC (Intraday).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-18T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Kein Depot-Stop gebrochen. Fed-Protokoll stützt weitere Zinserhöhungen (Dow −1,1 %, S&P 500 fünfter Verlusttag), Tech hält sich (Nasdaq +0,4 %): AMD +5,3 %, Fortinet +5,9 % mit der Cybersecurity-Rally. Freeport-McMoRan unter dem Stop, Krankenversicherer (Molina −6,6 %) unter Druck.",
+  "market": "Schluss 18.11.: Dow −1,1 %, S&P 500 −0,2 %, Nasdaq +0,4 %. WTI ca. 82 $ (−4 %), Gold auf Jahrestief. Anthropic-Börsengang: Handel ab Donnerstag. Kurse: TradingView, Abruf 21:31 UTC (Schlusskurse).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

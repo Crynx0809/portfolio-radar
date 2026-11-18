@@ -1,13 +1,43 @@
 [
  {
-  "id": "2026-11-18-markt-mittag",
+  "id": "2026-11-18-fed-protokoll",
   "date": "2026-11-18",
   "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Fed-Protokoll: fast alle Notenbanker halten weitere Zinserhöhungen für angemessen – Dow −1,1 %, Gold auf Jahrestief",
+  "summary": "Laut Protokoll der Oktober-Sitzung hielten fast alle Mitglieder weitere Zinserhöhungen für wahrscheinlich angemessen; einige brachten für Dezember mehr als 0,25 Punkte ins Spiel. Fed-Gouverneur Waller sprach sich am Morgen für 0,5 Punkte am 8./9.12. aus. Schluss: Dow −1,1 %, S&P 500 −0,2 % (fünfter Verlusttag in Folge), Nasdaq +0,4 %. Gold auf dem tiefsten Stand seit über einem Jahr, Öl (WTI) −4 % auf ca. 82 $.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
+ },
+ {
+  "id": "2026-11-18-cyber",
+  "date": "2026-11-18",
+  "ticker": "CRWD",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Palo Alto erhöht Prognose – Cybersecurity-Werte springen an: CrowdStrike +8 %, Zscaler +6,8 %, Fortinet +5,9 %",
+  "summary": "Palo Alto Networks steigerte den Quartalsumsatz um 39 % und hob die Jahresprognose an; die Aktie stieg rund 10 %. Die ganze Branche zog mit: CrowdStrike schloss bei 237 $ (weit über der Zone 200–212 $), Zscaler bei 197,8 $ (Zahlen am 24.11.), Depotwert Fortinet bei 131,8 $ über der Zone 115–126 $.",
+  "url": "https://247wallst.com/investing/2026/11/18/google-says-fully-autonomous-ai-cyberattacks-are-likely-within-6-months/"
+ },
+ {
+  "id": "2026-11-18-moh",
+  "date": "2026-11-18",
+  "ticker": "MOH",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Krankenversicherer brechen ein: Molina −6,6 % unter die Einstiegszone, UnitedHealth −10 %, Humana −13 %",
+  "summary": "Zweiter Verlusttag der Branche nach einem CMS-Vorschlag für schärfere Prüfungen bei Medicare Advantage. Molina schloss bei 206,6 $ unter der Zone 214–222 $, der Stop 199 $ (unter dem Tief 200,8 $) hält noch. Status auf „meiden“.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
+ },
+ {
+  "id": "2026-11-18-fcx",
+  "date": "2026-11-18",
+  "ticker": "FCX",
   "impact": "mittel",
   "direction": "negativ",
-  "headline": "Chip-Erholung verpufft, Dow ca. −1,3 %: Fed-Gouverneur Waller hält eine Zinserhöhung um 0,5 Punkte im Dezember für wahrscheinlich nötig",
-  "summary": "Am US-Vormittag (ca. 11:20 Uhr New York) S&P 500 ca. −0,6 %, Nasdaq ca. −0,2 %, Dow ca. −1,3 %. Die vorbörslichen Gewinne nach den Nvidia-Zahlen sind großteils weg (Nvidia ca. −2 %, Marvell ca. −3 %). Gold fällt deutlich auf Zinserhöhungserwartungen, 10-j. Rendite ~5,07 %, WTI ~83 $. Anthropic-Börsengang soll heute bepreist werden, Handel ab Donnerstag. Heute 20 Uhr MEZ: Fed-Protokoll. Intraday-Stand, Schlusskurse fehlen noch.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-18-dow-sp-500-nasdaq-nvidia-anthropic-ipo-090613569.html"
+  "headline": "Freeport-McMoRan −7 % unter den Stop: Kupfer und Gold fallen mit den Zinserwartungen",
+  "summary": "Schluss 51,45 $ unter dem Stop 51,5 $, Tief 50,46 $. Plan ausgestoppt (keine Position); neue Zone erst 46–48,5 $ am 78,6 %-Rücklauf, Stop 43,5 $.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
  },
  {
   "id": "2026-11-18-fcx",
@@ -268,35 +298,5 @@
   "headline": "CoreWeave hebt Prognose an – Chipwerte erholen sich vorbörslich, Nasdaq-100-Futures ca. +1,9 %",
   "summary": "CoreWeave übertraf im 3. Quartal die Umsatzerwartung und erhöhte den Jahresausblick; Aktie vorbörslich ca. +17 %. Das dämpft Sorgen um die KI-Nachfrage und hilft KI-Rechenzentren und Chips (Depot: AMD, Marvell, Applied Digital; Watchlist: Nvidia). Gegenwind bleibt der Zins: 10-jährige US-Rendite um 4,98 %, Fed-Gouverneurin Bowman sieht breitere Inflation.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html"
- },
- {
-  "id": "n-20261111-enr",
-  "date": "2026-11-11",
-  "ticker": "ENR",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Siemens Energy +8,7 % auf 130,26 € nach Rekordjahr und neuen Zielen bis 2030",
-  "summary": "Jahreszahlen mit Rekordgewinn, Ausblick für 2027 und neue Mittelfristziele auf dem Kapitalmarkttag. Kurs damit nahe am Ziel 132 € des laufenden Plans.",
-  "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-11-11-2026-11201142"
- },
- {
-  "id": "n_tsm_1110",
-  "date": "2026-11-10",
-  "ticker": "TSM",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "TSMC: Oktober-Umsatz wächst so langsam wie seit 2024 nicht mehr",
-  "summary": "Das Wachstum hat sich deutlich verlangsamt; die Aktie reagierte kaum und stieg am 11.11. im Chip-Rally um 4,3 % auf 413 $.",
-  "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000796/tsm-revenue20261110.htm"
- },
- {
-  "id": "n-20261110-rklb",
-  "date": "2026-11-10",
-  "ticker": "RKLB",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Rocket Lab dreht nach Zahlen ins Plus: +6,5 % auf 62,71 $, über dem Hoch vom 29.10.",
-  "summary": "Vorbörslich noch ca. −8 % (höherer Verlust, Neutron-Start verschoben), dann Kehrtwende dank Rekord-Auftragsbestand und Q4-Prognose über Erwartung. Seit dem Tief vom 5.11. (43,9 $) rund +43 %.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
  }
 ]

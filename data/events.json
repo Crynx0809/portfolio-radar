@@ -1,11 +1,5 @@
 [
  {
-  "id": "e_fomc_1118",
-  "date": "2026-11-18",
-  "ticker": "Markt",
-  "event": "Fed-Protokolle (Oktober-Sitzung)"
- },
- {
   "id": "e_anth_1119",
   "date": "2026-11-19",
   "ticker": "Markt",
@@ -57,7 +51,7 @@
   "id": "e_fed_1209",
   "date": "2026-12-09",
   "ticker": "Markt",
-  "event": "Fed-Zinsentscheid (Dezember, Datum unbestätigt) – Markt erwartet Zinserhöhung"
+  "event": "Fed-Zinsentscheid (8./9.12.) – Erhöhung erwartet, evtl. 0,5 Punkte"
  },
  {
   "id": "e_tsm_20261210",
