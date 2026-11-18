@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T08:57:24+00:00",
+ "generated_at": "2026-11-18T09:59:16+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -12,12 +12,27 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.05,
+   "price": 37.08,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.235
+   "gap_to_stop": 0.236
   }
  ],
- "events": [],
+ "events": [
+  {
+   "ticker": "DHER",
+   "name": "Delivery Hero",
+   "group": "Watchlist",
+   "price": 36.5,
+   "chg_pct": -0.0014,
+   "at": "2026-11-18T09:59+00:00",
+   "id": "DHER-zone-2026-11-18",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Delivery Hero in der Einstiegszone",
+   "text": "Kurs 36,50 € ist in die Zone 35,50 €–36,50 € gelaufen.",
+   "todo": "36,5–38 €: abwarten; der Kurs bewegt sich bis zur Freigabe meist nur wenig."
+  }
+ ],
  "notified": []
 }
