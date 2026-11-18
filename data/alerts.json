@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-18-1425-depot",
+  "at": "2026-11-18T14:25:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vor US-Börsenstart: kein Depot-Stop gebrochen. US-Werte noch auf Dienstagsschluss; vorbörslich AMD und Marvell ca. +2–3 %, Applied Digital ca. +5–6 % nach den Nvidia-Zahlen. SAP 1,3 % schwächer, Novo Nordisk knapp behauptet (37,08 €, um die Bestätigung 37,50 €)."
+ },
+ {
+  "id": "2026-11-18-1425-watch",
+  "at": "2026-11-18T14:25:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Delivery Hero 36,48 € an der Oberkante der Zone 35,50–36,50 €. Mercedes-Benz 38,62 € (−2,3 %) nur noch knapp über dem Stop 38,40 €. MercadoLibre (Dienstagsschluss 1.436,8 $) knapp über dem Stop 1.420 $ – US-Eröffnung beobachten."
+ },
+ {
   "id": "a_depot_1117e",
   "at": "2026-11-17T22:45:00+01:00",
   "ticker": "Depot",
@@ -264,54 +278,5 @@
   "ticker": "MRVL",
   "level": "mittel",
   "text": "Marvell +9,5 % auf 154,6 $ – altes Ziel 150–162 $ ohne Einstieg erreicht, C-Tief 132,5 $ wohl der Boden. Neuer Wiedereinstieg in 138–146 $, Stop 130 $, Ziel 185–205 $; über 162 $ Stop auf Einstand."
- },
- {
-  "id": "a_hims_1109e",
-  "at": "2026-11-09T22:45:00+01:00",
-  "ticker": "HIMS",
-  "level": "mittel",
-  "text": "Hims & Hers −11,8 % auf 22,94 $ (Lilly-Vertrag drückt Marge, Q3 laut ersten Meldungen schwach) – unter dem Tief vom 5.11. Neu: meiden, Zone 18,6–20 $, Stop 17,2 $, Ziel 24,5–26,5 $."
- },
- {
-  "id": "a_wl_1109e",
-  "at": "2026-11-09T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Schluss über der Bestätigung, weit über den Zonen (Status „Trend“, nicht hinterherkaufen): Siemens Energy 124,1 €, Airbus 206 €, Rocket Lab 58,9 $, Oklo 26,8 $, Vistra 133,9 $. Neue Pläne: Caterpillar Zone 560–575 $ (Stop 540 $), Trade Desk 12,9–13,5 $ (Zahlen nach Schluss, Reaktion offen), Freeport Ziel 68–74 $."
- },
- {
-  "id": "a_ce_1109e",
-  "at": "2026-11-09T22:45:00+01:00",
-  "ticker": "CE",
-  "level": "mittel",
-  "text": "Neu auf der Watchlist (Wunsch): Celanese 48,75 $ – Basis zwischen 42 und 51,6 $, Zone 44–46 $, Stop 41,8 $, Ziel 55–58 $."
- },
- {
-  "id": "a_nvda_1109n",
-  "at": "2026-11-09T14:30:00+01:00",
-  "ticker": "NVDA",
-  "level": "mittel",
-  "text": "Nvidia vorbörslich ca. −4,5 % (ca. 178 $) wegen Untersuchung gegen Chef Huang – nähert sich der Zone 162–170 $ (Stop 155 $). Plan unverändert; Lage bis zu den Zahlen (ca. 18.11.) beobachten."
- },
- {
-  "id": "a_air_1109n",
-  "at": "2026-11-09T14:30:00+01:00",
-  "ticker": "AIR",
-  "level": "mittel",
-  "text": "Airbus im Handel +3,5 % auf 203,25 € – knapp über der Bestätigungsmarke 203 €. Erst ein Schlusskurs darüber zählt; Zone 186–192 € bleibt."
- },
- {
-  "id": "a_enr_1109n",
-  "at": "2026-11-09T14:30:00+01:00",
-  "ticker": "ENR",
-  "level": "mittel",
-  "text": "Siemens Energy im Handel +2,3 % auf 120,76 € – über der Bestätigungsmarke 120 €. Erst ein Schlusskurs darüber zählt; Zone 105–113 € bleibt."
- },
- {
-  "id": "a_depot_1106e",
-  "at": "2026-11-06T22:45:00+01:00",
-  "ticker": "Depot",
-  "level": "mittel",
-  "text": "Wochenschluss Depot: kein Stop neu gebrochen. AMD 449 $ (+11 %) knapp unter der Bestätigung 456 $; Applied Digital 15,55 $ und Fortinet 118,8 $ in ihren Zonen. Marvell schließt die Woche bei 141,2 $ unter 145 $ → großes Ziel neu: 230–290 $, Absicherung 100 $ (Wiedereinstieg kurz weiter erst in 105–115 $)."
  }
 ]

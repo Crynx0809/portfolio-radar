@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-17T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Nvidia schlägt die Erwartungen und hebt den Ausblick (nachbörslich ca. +2,4 %) – gut für AMD und Marvell. Kein Depot-Stop gebrochen; auf der Watchlist ServiceNow, Robinhood und Nike neu bewertet.",
-  "market": "Dow −1,6 %, S&P 500 −1,0 %, Nasdaq −0,7 %, VIX ~26 (+11 %), 10-j. Rendite ~5,1 %. Kurse: TradingView, Abruf 21:32 UTC (nach US-Börsenschluss).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-18T14:25:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update – vorbörslich Erholung bei Chips nach den Nvidia-Zahlen (AMD, Marvell ca. +2–3 %). Kein Depot-Stop gebrochen; Mercedes-Benz und MercadoLibre nahe am Stop.",
+  "market": "Futures: Nasdaq 100 ca. +1,2 %, S&P 500 ca. +0,7 %, Dow ca. +0,3 %; 10-j. Rendite ~5,1 %, Brent ~92,7 $. Fed-Protokoll 20 Uhr MEZ. Kurse: TradingView, Abruf 13:19 UTC (US-Werte noch Schluss 17.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

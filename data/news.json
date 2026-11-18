@@ -1,5 +1,15 @@
 [
  {
+  "id": "2026-11-18-markt-vorboerse",
+  "date": "2026-11-18",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Vorbörslich Erholung nach Nvidia-Zahlen: Nasdaq-100-Futures ca. +1,2 %, AMD und Marvell je ca. +2–3 %, Applied Digital ca. +5–6 %",
+  "summary": "Die starken Nvidia-Zahlen ziehen Chip- und KI-Rechenzentrumswerte vorbörslich an (Nvidia ca. +3 %, Micron ca. +3 %). Alphabet, Amazon und Meta nur leicht im Plus. Lowe's nach Zahlen ca. −2,5 %. Heute 20 Uhr MEZ: Protokoll der Fed-Sitzung. Vorbörsliche Kurse, noch nicht bestätigt.",
+  "url": "https://www.investing.com/news/stock-market-news/premarket-movers-nvidia-jumps-on-strong-ai-outlook-lowes-falls-5035719"
+ },
+ {
   "id": "n_nvda_1117e",
   "date": "2026-11-17",
   "ticker": "NVDA",
@@ -230,16 +240,6 @@
   "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-11-2026"
  },
  {
-  "id": "n_tsm_1110",
-  "date": "2026-11-10",
-  "ticker": "TSM",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "TSMC: Oktober-Umsatz wächst so langsam wie seit 2024 nicht mehr",
-  "summary": "Das Wachstum hat sich deutlich verlangsamt; die Aktie reagierte kaum und stieg am 11.11. im Chip-Rally um 4,3 % auf 413 $.",
-  "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000796/tsm-revenue20261110.htm"
- },
- {
   "id": "n-20261111-ai",
   "date": "2026-11-11",
   "ticker": "Markt",
@@ -258,6 +258,16 @@
   "headline": "Siemens Energy +8,7 % auf 130,26 € nach Rekordjahr und neuen Zielen bis 2030",
   "summary": "Jahreszahlen mit Rekordgewinn, Ausblick für 2027 und neue Mittelfristziele auf dem Kapitalmarkttag. Kurs damit nahe am Ziel 132 € des laufenden Plans.",
   "url": "https://www.finanzen.net/nachricht/aktien/siemens_energy-aktie-kursbewegung-11-11-2026-11201142"
+ },
+ {
+  "id": "n_tsm_1110",
+  "date": "2026-11-10",
+  "ticker": "TSM",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "TSMC: Oktober-Umsatz wächst so langsam wie seit 2024 nicht mehr",
+  "summary": "Das Wachstum hat sich deutlich verlangsamt; die Aktie reagierte kaum und stieg am 11.11. im Chip-Rally um 4,3 % auf 413 $.",
+  "url": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000796/tsm-revenue20261110.htm"
  },
  {
   "id": "n-20261110-rklb",
@@ -288,15 +298,5 @@
   "headline": "US-Inflation heißer als erwartet (Oktober +0,4 %, Kern +0,3 %): S&P 500 −0,4 %, Nasdaq 100 −0,6 %, 10-jährige Rendite 4,98 %",
   "summary": "Verbraucherpreise Oktober +0,4 % (erwartet +0,3 %), Kernrate +0,3 % (erwartet +0,2 %). Fed-Gouverneur Waller: bei Kernrate ab +0,3 % sei im Dezember sogar ein Zinsschritt um 0,5 Punkte zu erwägen; der Markt rechnet überwiegend mit +0,25 Punkten. Gold −1,8 %, Bitcoin −1,7 %; Indizes erholten sich in der letzten Stunde teilweise.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
- },
- {
-  "id": "2026-11-10-nvda",
-  "date": "2026-11-10",
-  "ticker": "NVDA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Nvidia −5,5 % auf 168,89 $: Klage und FBI-Prüfung rund um Chef Huang – tiefster Schluss seit Ende März",
-  "summary": "Aktionärsklage wirft Nvidia Irreführung vor; laut Trump prüft das FBI. Bericht über Chips im Wert von mindestens 7,5 Mrd. $, die über ein Netzwerk an chinesische Firmen gelangt sein sollen. RSI ca. 23 (stark überverkauft); Goldman Sachs nennt Chipwerte überverkauft. Q3-Zahlen ca. 17./18.11.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
  }
 ]
