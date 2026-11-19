@@ -1,42 +1,28 @@
 {
- "generated_at": "2026-11-19T18:54:28+00:00",
+ "generated_at": "2026-11-19T19:58:21+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 484.4272,
+   "price": 490.32,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2172
+   "gap_to_stop": 0.232
   }
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 484.4272,
-   "chg_pct": -0.0862,
-   "at": "2026-11-19T18:54+00:00",
-   "id": "AMD-absturz-2026-11-19",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Advanced Micro Devices −8,6 % heute",
-   "text": "Starker Tagesverlust auf 484,43 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Position halten, Stop auf Einstand (bzw. mind. unter 398 $). Neu kaufen nur im Rücksetzer 450–472 $ (gestaffelt), Stop 398 $, Ziel 680–760 $; über 658,5 $ Stop nachziehen."
-  },
-  {
    "ticker": "ISRG",
    "name": "Intuitive Surgical",
    "group": "Watchlist",
-   "price": 412.585,
-   "chg_pct": -0.0199,
-   "at": "2026-11-19T18:54+00:00",
+   "price": 407.495,
+   "chg_pct": -0.032,
+   "at": "2026-11-19T19:58+00:00",
    "id": "ISRG-zone-2026-11-19",
    "type": "zone",
    "level": "mittel",
    "title": "Intuitive Surgical in der Einstiegszone",
-   "text": "Kurs 412,58 $ ist in die Zone 400,00 $–420,00 $ gelaufen.",
+   "text": "Kurs 407,50 $ ist in die Zone 400,00 $–420,00 $ gelaufen.",
    "todo": "Rücksetzer in 400–420 $ wäre eine Einstiegszone (Welle 2/4)."
   },
   {
@@ -45,7 +31,7 @@
    "group": "Watchlist",
    "price": 26.04,
    "chg_pct": -0.011,
-   "at": "2026-11-19T18:54+00:00",
+   "at": "2026-11-19T19:58+00:00",
    "id": "DTE-zone-2026-11-19",
    "type": "zone",
    "level": "mittel",
@@ -57,28 +43,28 @@
    "ticker": "NVDA",
    "name": "Nvidia",
    "group": "Watchlist",
-   "price": 149.26,
-   "chg_pct": -0.0113,
-   "at": "2026-11-19T18:54+00:00",
+   "price": 148.2399,
+   "chg_pct": -0.018,
+   "at": "2026-11-19T19:58+00:00",
    "id": "NVDA-zone-2026-11-19",
    "type": "zone",
    "level": "mittel",
    "title": "Nvidia in der Einstiegszone",
-   "text": "Kurs 149,26 $ ist in die Zone 148,00 $–155,00 $ gelaufen.",
+   "text": "Kurs 148,24 $ ist in die Zone 148,00 $–155,00 $ gelaufen.",
    "todo": "155–170 $: halten, nicht hinterherkaufen."
   },
   {
    "ticker": "GRAB",
    "name": "Grab Holdings",
    "group": "Watchlist",
-   "price": 3.025,
-   "chg_pct": -0.0366,
-   "at": "2026-11-19T18:54+00:00",
+   "price": 2.995,
+   "chg_pct": -0.0462,
+   "at": "2026-11-19T19:58+00:00",
    "id": "GRAB-zone-2026-11-19",
    "type": "zone",
    "level": "mittel",
    "title": "Grab Holdings in der Einstiegszone",
-   "text": "Kurs 3,02 $ ist in die Zone 2,95 $–3,12 $ gelaufen.",
+   "text": "Kurs 3,00 $ ist in die Zone 2,95 $–3,12 $ gelaufen.",
    "todo": "Zwischen 3,12 und 3,45 $: abwarten."
   }
  ],
