@@ -1,5 +1,25 @@
 [
  {
+  "id": "2026-11-19-amd-hunterbrook",
+  "date": "2026-11-19",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "AMD dreht ins Minus (ca. −6,5 %, zeitweise bis −9 %): Leerverkäufer Hunterbrook wettet gegen die Aktie",
+  "summary": "Hunterbrook Capital hat eine Short-Position eröffnet und verweist auf AMDs enge China-Verbindungen, während Washington schärfere Chip-Exportregeln prüft; laut Bericht soll der gelistete chinesische Serverhersteller IEIT weiter AMD-Firmware-Updates erhalten haben. Eine Stellungnahme von AMD lag noch nicht vor. Der vorbörsliche Anthropic-Schwung ist damit bei AMD verpufft.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html"
+ },
+ {
+  "id": "2026-11-19-krankenversicherer-audits",
+  "date": "2026-11-19",
+  "ticker": "MOH",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Krankenversicherer weiter unter Druck: Pläne für mehr Medicare-Advantage-Prüfungen – Molina −3,8 %, UnitedHealth bis −5 %",
+  "summary": "Ein Vorschlag der US-Regierung, Medicare-Advantage-Abrechnungen stärker zu prüfen, und neue Rufe nach „Medicare for All“ belasten die Branche erneut. UnitedHealth steuert auf rund −18 % in fünf Tagen zu; Molina fällt weiter unter den Stop.",
+  "url": "https://www.marketscreener.com/news/anthropic-s-ipo-revives-ai-sentiment-as-healthcare-stocks-tumble-ce785ed2dd8af725"
+ },
+ {
   "id": "2026-11-19-anthropic-ipo",
   "date": "2026-11-19",
   "ticker": "Markt",
@@ -278,25 +298,5 @@
   "headline": "Jensen Huang tritt als Nvidia-Chef zurück – Aktie zur Eröffnung bis −14 %, dann Erholung auf ca. 165 $",
   "summary": "Nach einer Sitzung des Verwaltungsrats zu Vorwürfen rund um Huangs Kontakt zu einer Geschäftsfrau mit mutmaßlichen Verbindungen zu Geheimdiensten und Chip-Transfers nach China ist Huang zurückgetreten; übergangsweise führt laut Berichten Finanzchefin Colette Kress. Die Vorwürfe sind nicht bewiesen. Nvidia fiel zur Eröffnung bis 148,8 $ (unter den Stop 155 $), erholte sich bis zum Nachmittag aber auf rund 165 $ (−5 %). AMD (+6 %) und Broadcom (+4–6 %) gelten als Profiteure; Nasdaq zur Eröffnung −1,5 %, inzwischen leicht im Plus.",
   "url": "https://www.bnnbloomberg.ca/markets/2026/11/12/nvidia-shares-plunge-13-at-open-after-ceo-jensen-huang-resigns/"
- },
- {
-  "id": "n_nvda_1112",
-  "date": "2026-11-12",
-  "ticker": "NVDA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Nvidia vorbörslich ca. −5,5 %: Bericht über mögliche Absetzung von Chef Jensen Huang",
-  "summary": "Laut Wall Street Journal bereitet der Verwaltungsrat eine Ablösung von Jensen Huang vor; als Übergangslösung werden u. a. Finanzchefin Colette Kress genannt. Die Nasdaq-100-Futures geben rund 0,8 % nach, AMD und Broadcom legen dagegen vorbörslich zu. Kurs aus prices.json noch Schluss vom 11.11.",
-  "url": "https://sg.finance.yahoo.com/news/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
- },
- {
-  "id": "n_mkt_close_1111",
-  "date": "2026-11-11",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Chip-Rally nach CoreWeave: S&P 500 +1,3 %, Nasdaq +1,55 %, Dow +0,5 %",
-  "summary": "CoreWeave übertraf die Erwartungen (Umsatz +168 %) und hob die Jahresprognose an – KI- und Chipwerte führten die Erholung an. Gleichzeitig gilt nach der heißen Inflation vom Dienstag eine Zinserhöhung im Dezember als fast eingepreist.",
-  "url": "https://247wallst.com/cards/tech-did-the-heavy-lifting-again-the-nasdaq-s-1-55-close-m-gspc-market-bell-01m766s5wqxj8egm37q8ks13gp"
  }
 ]

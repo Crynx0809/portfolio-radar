@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-19-1755-depot",
+  "at": "2026-11-19T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "US-Sitzung (TradingView 17:47 Uhr): kein Depot-Stop gebrochen. AMD 495,7 $ (−6,5 %) nach Short-Bericht von Hunterbrook (China-Bezug) – noch klar über der Zone 450–472 $ und dem Stop 398 $; bei Rücklauf in die Zone gilt der Plan, keine Panikverkäufe. Fortinet 137,6 $ (+4,4 %) knapp unter der Bestätigung 139,4 $. SAP 187,5 $, Marvell 147,9 $, Bank of America 48,7 $ und Applied Digital 14,85 $ in ihren Zonen. Indizes: Dow ca. −1 %, S&P 500 ca. −0,2 %, Nasdaq ca. +0,3 %."
+ },
+ {
+  "id": "2026-11-19-1755-watch",
+  "at": "2026-11-19T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Mercedes-Benz 38,35 € intraday knapp unter dem Stop 38,4 € – Xetra-Schluss abwarten, Neubewertung in der Abendanalyse. Molina 198,8 $ (−3,8 %) weiter unter dem Stop (Krankenversicherer-Ausverkauf). In der Zone (Wächter): Intuitive Surgical 417 $, Nvidia 152,9 $, Deutsche Telekom 26,07 €, Grab 3,04 $. Zscaler 212,5 $ (+7,4 %) und CrowdStrike 252,7 $ (+6,6 %) laufen weiter weg von ihren Zonen – nicht hinterherkaufen."
+ },
+ {
   "id": "2026-11-19-1410-depot",
   "at": "2026-11-19T16:10:00+01:00",
   "ticker": "Depot",
