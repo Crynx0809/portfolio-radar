@@ -1,5 +1,45 @@
 [
  {
+  "id": "2026-11-19-anthropic-ipo",
+  "date": "2026-11-19",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Anthropic-Börsengang zu 83 $ je Aktie (über der Spanne 70–78 $) – Nasdaq-100-Futures ca. +2 %, Alphabet vorbörslich ca. +4 %",
+  "summary": "Größter Börsengang bisher: rund 81 Mrd. $ Emissionsvolumen, Bewertung ca. 1,5 Bio. $, Handelsstart heute an der Nasdaq (Kürzel ANT). Alphabet und Amazon sind große Anteilseigner und steigen vorbörslich ca. 3–4 % bzw. 2–3 %; Chipwerte (AMD, Marvell, Micron) ebenfalls deutlich fester. Vorbörsliche Kurse, Eröffnung abwarten.",
+  "url": "https://blockonomi.com/todays-market-movers-anthropic-ipo-pricing-lifts-alphabet-amazon-and-ai-stocks-before-the-bell/"
+ },
+ {
+  "id": "2026-11-19-wmt-q3",
+  "date": "2026-11-19",
+  "ticker": "WMT",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Walmart über Erwartung und hebt die Gewinnprognose an",
+  "summary": "Q3-Umsatz 188,8 Mrd. $ (+5,2 %, erwartet ca. 187,3 Mrd. $); Jahresprognose für den Gewinn je Aktie auf 2,84–2,89 $ angehoben. Kursreaktion zum Börsenstart beobachten.",
+  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262313137-us-pre-market-anthropic-tradingkey"
+ },
+ {
+  "id": "2026-11-19-cyber",
+  "date": "2026-11-19",
+  "ticker": "FTNT",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Cybersecurity-Rally geht weiter: Palo Alto vorbörslich ca. +10 % nach Zahlen, Zscaler +9,7 %, CrowdStrike +7 %, Fortinet +5 %",
+  "summary": "Palo Alto: Quartalsumsatz +39 %, Jahresprognose auf 14,52–14,57 Mrd. $ angehoben. Fortinet (Depot) mit 138,6 $ knapp unter der Bestätigungsmarke 139,4 $.",
+  "url": "https://blockonomi.com/todays-market-movers-anthropic-ipo-pricing-lifts-alphabet-amazon-and-ai-stocks-before-the-bell/"
+ },
+ {
+  "id": "2026-11-19-baba-q2",
+  "date": "2026-11-19",
+  "ticker": "BABA",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Alibaba: Umsatz +10 %, KI-Cloud +53 % – Aktie vorbörslich ca. +4 % auf 87,9 $",
+  "summary": "Umsatz 271,5 Mrd. Yuan, bereinigtes EBITA stark gestiegen. Kurs knapp unter der Zone 88–92 $ (Status „meiden“); Quellen widersprechen sich bei der vorbörslichen Richtung.",
+  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262313137-us-pre-market-anthropic-tradingkey"
+ },
+ {
   "id": "2026-11-18-fed-protokoll",
   "date": "2026-11-18",
   "ticker": "Markt",
@@ -258,45 +298,5 @@
   "headline": "Chip-Rally nach CoreWeave: S&P 500 +1,3 %, Nasdaq +1,55 %, Dow +0,5 %",
   "summary": "CoreWeave übertraf die Erwartungen (Umsatz +168 %) und hob die Jahresprognose an – KI- und Chipwerte führten die Erholung an. Gleichzeitig gilt nach der heißen Inflation vom Dienstag eine Zinserhöhung im Dezember als fast eingepreist.",
   "url": "https://247wallst.com/cards/tech-did-the-heavy-lifting-again-the-nasdaq-s-1-55-close-m-gspc-market-bell-01m766s5wqxj8egm37q8ks13gp"
- },
- {
-  "id": "n_mrvl_1111c",
-  "date": "2026-11-11",
-  "ticker": "MRVL",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Marvell schließt +9,3 % bei 168,8 $ – klar über der Bestätigung 162 $",
-  "summary": "Im Chip-Rally stieg Marvell bis 174,5 $. Der Schlusskurs über dem alten A-Tief 162 $ bestätigt den Boden bei 132,5 $; Plan: Stop auf Einstand, Teilgewinne ab 185 $.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-11-2026"
- },
- {
-  "id": "n_mu_1111c",
-  "date": "2026-11-11",
-  "ticker": "MU",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Micron schließt +11,9 % bei 811 $ – Speicherwerte springen nach CoreWeave-Ausblick",
-  "summary": "Micron liegt damit 25 % über dem Tief vom 5.11. (650 $). Das alte Ziel 850 $ ist nah; der Plan wurde auf eine neue Aufwärtswelle umgestellt (Rücksetzer 715–745 $, Ziel 900–990 $).",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html"
- },
- {
-  "id": "n_nvda_1111",
-  "date": "2026-11-11",
-  "ticker": "NVDA",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Baird stuft Nvidia auf Neutral ab (Ziel 200 statt 500 $), Morgan Stanley streicht Top-Pick-Status",
-  "summary": "Baird nennt geringe Sicht auf das Rechenzentrumsgeschäft 2027 und Unsicherheit an der Spitze. Morgan Stanley bleibt bei Overweight (Ziel 300 $). Die Aktie erholte sich trotzdem um 2,9 % auf 173,7 $.",
-  "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-11-2026"
- },
- {
-  "id": "n-20261111-ai",
-  "date": "2026-11-11",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "CoreWeave hebt Prognose an – Chipwerte erholen sich vorbörslich, Nasdaq-100-Futures ca. +1,9 %",
-  "summary": "CoreWeave übertraf im 3. Quartal die Umsatzerwartung und erhöhte den Jahresausblick; Aktie vorbörslich ca. +17 %. Das dämpft Sorgen um die KI-Nachfrage und hilft KI-Rechenzentren und Chips (Depot: AMD, Marvell, Applied Digital; Watchlist: Nvidia). Gegenwind bleibt der Zins: 10-jährige US-Rendite um 4,98 %, Fed-Gouverneurin Bowman sieht breitere Inflation.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-123445799.html"
  }
 ]

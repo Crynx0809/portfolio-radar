@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-18T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Kein Depot-Stop gebrochen. Fed-Protokoll stützt weitere Zinserhöhungen (Dow −1,1 %, S&P 500 fünfter Verlusttag), Tech hält sich (Nasdaq +0,4 %): AMD +5,3 %, Fortinet +5,9 % mit der Cybersecurity-Rally. Freeport-McMoRan unter dem Stop, Krankenversicherer (Molina −6,6 %) unter Druck.",
-  "market": "Schluss 18.11.: Dow −1,1 %, S&P 500 −0,2 %, Nasdaq +0,4 %. WTI ca. 82 $ (−4 %), Gold auf Jahrestief. Anthropic-Börsengang: Handel ab Donnerstag. Kurse: TradingView, Abruf 21:31 UTC (Schlusskurse).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-19T16:10:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Anthropic-Börsengang (83 $ je Aktie) treibt Tech vorbörslich: Alphabet ca. +4 %, AMD und Marvell ca. +4–5 %. Kein Depot-Stop gebrochen; SAP −3,5 % in der Einstiegszone. Walmart hebt die Prognose.",
+  "market": "Vorbörslich: Nasdaq-100-Futures ca. +2,2 %, S&P 500 ca. +1,3 %, Dow ca. +0,7 %. Gold und Silber auf 52-Wochen-Tief; Fed-Protokoll deutet auf weitere Zinserhöhungen. Kurse 16:08 Uhr (TradingView), US-Werte vor Börsenstart.",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

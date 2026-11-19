@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-19-1410-depot",
+  "at": "2026-11-19T16:10:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vor US-Börsenstart (TradingView 16:08 Uhr, US-Werte vorbörslich): kein Depot-Stop gebrochen. Tech fest nach Anthropic-Preis: AMD 553,0 $ (+4,3 %), Alphabet 294,2 $ (+4,2 %, über der Zone – nicht nachkaufen; Bestätigung 301 $), Marvell 153,2 $ (+5,2 %, in der Zone 147–154 $), Fortinet 138,6 $ (+5,1 %, knapp unter der Bestätigung 139,4 $ – Schluss darüber: Stop auf Einstand), Applied Digital 15,62 $ (+8,1 %). SAP 187,14 € (−3,5 %) fällt in die Zone 185–190 €, noch ca. 5 % über dem Stop 178 € – beobachten, keine eigene Meldung gefunden."
+ },
+ {
+  "id": "2026-11-19-1410-watch",
+  "at": "2026-11-19T16:10:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Nvidia 156,91 $ (+3,9 % am 19.11.) wieder knapp über der Zone 148–155 $ (Wächter meldete sie um 15:37 Uhr). Zscaler 216,9 $ (+9,7 %) und CrowdStrike 254,0 $ (+7,2 %) über ihren Bestätigungsmarken, aber weit über den Zonen – nicht hinterherkaufen. Micron 750,9 $ (+6,5 %) über der Zone. Alibaba 87,9 $ nach Zahlen knapp unter der Zone 88–92 $ (Status „meiden“). Alles vorbörslich, Schlusskurse maßgeblich."
+ },
+ {
   "id": "2026-11-18-2245-depot",
   "at": "2026-11-18T22:45:00+01:00",
   "ticker": "Depot",
