@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-18T21:51:59+00:00",
+ "generated_at": "2026-11-19T08:56:58+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -17,8 +17,8 @@
    "group": "Watchlist",
    "price": 150.96,
    "chg_pct": -0.0289,
-   "at": "2026-11-18T21:51+00:00",
-   "id": "NVDA-zone-2026-11-18",
+   "at": "2026-11-19T08:56+00:00",
+   "id": "NVDA-zone-2026-11-19",
    "type": "zone",
    "level": "mittel",
    "title": "Nvidia in der Einstiegszone",
