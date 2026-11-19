@@ -1,11 +1,5 @@
 [
  {
-  "id": "e_anth_1119",
-  "date": "2026-11-19",
-  "ticker": "Markt",
-  "event": "Börsengang Anthropic (ANT): Preisfestsetzung 18.11., Handelsstart 19.11., Spanne 70–78 $"
- },
- {
   "id": "e_zs_20261124",
   "date": "2026-11-24",
   "ticker": "ZS",
@@ -16,12 +10,6 @@
   "date": "2026-11-24",
   "ticker": "1810",
   "event": "Q3-Zahlen"
- },
- {
-  "id": "e_baba_20261124",
-  "date": "2026-11-24",
-  "ticker": "BABA",
-  "event": "Q2-Zahlen"
  },
  {
   "id": "e_rhm_20261127",

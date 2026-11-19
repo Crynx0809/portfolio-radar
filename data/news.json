@@ -1,12 +1,32 @@
 [
  {
+  "id": "2026-11-19-markt-wende",
+  "date": "2026-11-19",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Wende nach dem Anthropic-Debüt: Dow −2,2 %, Nasdaq −2,25 %, S&P 500 ca. −2 % – Chipwerte geben Gewinne ab",
+  "summary": "Anthropic (ANT) eröffnete rund 34 % über dem Ausgabepreis 83 $ und schloss +17 %. Der Gesamtmarkt drehte nach einem festen Start auf Tagestief; Chip- und KI-Werte gaben ihre Gewinne ab. S&P 500 und Nasdaq 100 liegen jetzt unter der 200-Tage-Linie. Im Depot: AMD −7,7 %, Marvell −4,9 %, Amazon −3,9 %, SAP −3,6 %, Alphabet −3,5 %.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html"
+ },
+ {
+  "id": "2026-11-19-baba-stop",
+  "date": "2026-11-19",
+  "ticker": "BABA",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Alibaba trotz Cloud-Wachstum (+53 %) im Minus: Schluss 83,3 $ (−1,3 %) unter dem Stop 84 $",
+  "summary": "Nach den Q2-Zahlen zunächst ca. +4 % vorbörslich (Hoch 88,2 $), dann Abverkauf mit dem Markt. Neuer Plan erst in 74–78 $.",
+  "url": ""
+ },
+ {
   "id": "2026-11-19-amd-hunterbrook",
   "date": "2026-11-19",
   "ticker": "AMD",
   "impact": "hoch",
   "direction": "negativ",
-  "headline": "AMD dreht ins Minus (ca. −6,5 %, zeitweise bis −9 %): Leerverkäufer Hunterbrook wettet gegen die Aktie",
-  "summary": "Hunterbrook Capital hat eine Short-Position eröffnet und verweist auf AMDs enge China-Verbindungen, während Washington schärfere Chip-Exportregeln prüft; laut Bericht soll der gelistete chinesische Serverhersteller IEIT weiter AMD-Firmware-Updates erhalten haben. Eine Stellungnahme von AMD lag noch nicht vor. Der vorbörsliche Anthropic-Schwung ist damit bei AMD verpufft.",
+  "headline": "AMD schließt −7,7 % bei 489,2 $ (Tief 470,6 $): Leerverkäufer Hunterbrook wettet gegen die Aktie (China-Bezug)",
+  "summary": "Hunterbrook Capital hat eine Short-Position offengelegt und verweist auf China-Verbindungen und Risiken durch Exportkontrollen. AMD drehte von +4 % vorbörslich auf −7,7 % zum Schluss. Für Lenns Position: Stop 398 $ weit entfernt, Zukaufzone 450–472 $ unverändert.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-19-dow-sp-500-nasdaq-anthropic-ipo-live-141306032.html"
  },
  {
@@ -98,16 +118,6 @@
   "headline": "Freeport-McMoRan −7 % unter den Stop: Kupfer und Gold fallen mit den Zinserwartungen",
   "summary": "Schluss 51,45 $ unter dem Stop 51,5 $, Tief 50,46 $. Plan ausgestoppt (keine Position); neue Zone erst 46–48,5 $ am 78,6 %-Rücklauf, Stop 43,5 $.",
   "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
- },
- {
-  "id": "2026-11-18-fcx",
-  "date": "2026-11-18",
-  "ticker": "FCX",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Freeport-McMoRan ca. −7,7 % auf 51,0 $ – Gold- und Kupferpreise fallen deutlich",
-  "summary": "Minenwerte unter Druck: Gold bricht auf Zinserhöhungserwartungen ein, Kupfer an der LME laut Berichten auf einem Siebenmonatstief. Freeport notiert intraday unter dem Watchlist-Stop 51,5 $ (keine Position). Entscheidend ist der Schlusskurs.",
-  "url": "https://www.schaeffersresearch.com/content/news/2026/11/18/2-mining-stocks-selling-off-as-gold-prices-crater"
  },
  {
   "id": "2026-11-18-markt-vorboerse",
@@ -288,15 +298,5 @@
   "headline": "Moderna −7,0 % auf 231,4 $ – Biotech-Rally pausiert",
   "summary": "Gewinnmitnahmen nach dem Rekordlauf, dazu Sorgen um Mittelabfluss und die Zulassung des Grippe-Impfstoffs. Seit dem Hoch 280,8 $ (9.11.) rund −18 %; die Zone 180–200 $ liegt noch deutlich tiefer.",
   "url": "https://www.itiger.com/news/2676351901"
- },
- {
-  "id": "n_nvda_1112c",
-  "date": "2026-11-12",
-  "ticker": "NVDA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Jensen Huang tritt als Nvidia-Chef zurück – Aktie zur Eröffnung bis −14 %, dann Erholung auf ca. 165 $",
-  "summary": "Nach einer Sitzung des Verwaltungsrats zu Vorwürfen rund um Huangs Kontakt zu einer Geschäftsfrau mit mutmaßlichen Verbindungen zu Geheimdiensten und Chip-Transfers nach China ist Huang zurückgetreten; übergangsweise führt laut Berichten Finanzchefin Colette Kress. Die Vorwürfe sind nicht bewiesen. Nvidia fiel zur Eröffnung bis 148,8 $ (unter den Stop 155 $), erholte sich bis zum Nachmittag aber auf rund 165 $ (−5 %). AMD (+6 %) und Broadcom (+4–6 %) gelten als Profiteure; Nasdaq zur Eröffnung −1,5 %, inzwischen leicht im Plus.",
-  "url": "https://www.bnnbloomberg.ca/markets/2026/11/12/nvidia-shares-plunge-13-at-open-after-ceo-jensen-huang-resigns/"
  }
 ]

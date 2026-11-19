@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-19-2255-depot",
+  "at": "2026-11-19T22:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Kein Depot-Stop gebrochen, aber Marvell schließt 138,5 $ (−4,9 %) nur 2,5 % über dem Stop 135 $ – keine Zukäufe, Stop per Schlusskurs beachten. AMD 489,2 $ (−7,7 %, Short-Bericht Hunterbrook): Plan unverändert, Zukaufzone 450–472 $. Alphabet 272,7 $, Amazon 257,4 $ und SAP 187,0 € jetzt in ihren Zukaufzonen; Applied Digital 13,98 $ an der Zonen-Unterkante (Stop 13,2 $)."
+ },
+ {
+  "id": "2026-11-19-2255-watch",
+  "at": "2026-11-19T22:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Stops gebrochen (keine Position) → „meiden“ mit neuen, tieferen Zonen: Caterpillar 537,4 $ (neu 480–505 $), Adobe 221,7 $ (195–205 $), Alibaba 83,3 $ nach Zahlen (74–78 $), Mercedes-Benz 38,27 € (34,5–35,5 €), MercadoLibre 1.355 $ (1.250–1.320 $). In der Zone: Meta 596 $, Intuitive Surgical 407 $, Telekom 26,04 €, Zoetis 80,8 $, Hims 16,0 $, Grab 2,93 $. Micron 690 $ und Nvidia 146 $ unter ihren Zonen – keine Zukäufe."
+ },
+ {
   "id": "2026-11-19-1755-depot",
   "at": "2026-11-19T17:55:00+01:00",
   "ticker": "Depot",
@@ -285,26 +299,5 @@
   "ticker": "RHM",
   "level": "mittel",
   "text": "Rheinmetall −6,6 % auf 797 € – in der Zone 760–800 €, aber Status weiter „meiden“ (Abwärtstrend). Ohne klaren Auslöser in den News; Stop-Marke 720 €. Abendanalyse prüft."
- },
- {
-  "id": "a_hims_1110e",
-  "at": "2026-11-10T22:45:00+01:00",
-  "ticker": "HIMS",
-  "level": "mittel",
-  "text": "Hims & Hers schließt −16,6 % bei 19,13 $ (Tief 18,40 $) nach Q3 mit Margeneinbruch und gesenkter Ergebnisprognose. Zone tiefer gelegt: meiden, erst in 15,5–16,8 $ (Feb.-Tief), Stop 13,5 $, Ziel 21,5–23,5 $."
- },
- {
-  "id": "a_rklb_1110e",
-  "at": "2026-11-10T22:45:00+01:00",
-  "ticker": "RKLB",
-  "level": "mittel",
-  "text": "Rocket Lab +6,5 % auf 62,71 $ – altes Ziel 61 $ ohne Einstieg erreicht, neue Aufwärtswelle läuft. Neuer Plan: Rücksetzer in 50–53,5 $ kaufen, Stop 46 $, Ziel 70–78 $; über 64,5 $ Stop auf Einstand."
- },
- {
-  "id": "a_nvda_1110e",
-  "at": "2026-11-10T22:45:00+01:00",
-  "ticker": "NVDA",
-  "level": "mittel",
-  "text": "Nvidia schließt −5,5 % bei 168,89 $ in der Zone 162–170 $ (RSI ca. 23, stark überverkauft). Plan: gestaffelt, wegen Rechtsrisiken klein; Stop 155 $, Ziel 200–218 $. Zahlen ca. 17./18.11."
  }
 ]

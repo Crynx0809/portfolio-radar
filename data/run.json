@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-19T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "AMD dreht nach Short-Bericht (China-Bezug) auf ca. −6,5 % – Stop 398 $ weit entfernt, Plan unverändert. Kein Depot-Stop gebrochen. Mercedes-Benz intraday knapp unter dem Stop; Krankenversicherer fallen weiter.",
-  "market": "US-Sitzung uneinheitlich: Dow ca. −1 %, S&P 500 ca. −0,2 %, Nasdaq ca. +0,3 % (Stand ca. 17:30 Uhr). Anthropic (ANT) zu 83 $ zugeteilt, erster Kurs stand noch aus; Healthcare schwach, Nvidia nach fünf Minustagen fester. Kurse 17:47 Uhr (TradingView).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-19T22:55:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Marktwende nach dem Anthropic-Debüt: AMD −7,7 % (Short-Bericht), Marvell nur noch 2,5 % über dem Stop 135 $. Kein Depot-Stop gebrochen; Alphabet, Amazon und SAP in ihren Zukaufzonen. Fünf Watchlist-Stops gebrochen (CAT, ADBE, BABA, MBG, MELI) – neue, tiefere Zonen.",
+  "market": "Dow −2,2 %, Nasdaq −2,25 %, S&P 500 ca. −2 % – S&P 500 und Nasdaq 100 unter der 200-Tage-Linie. Anthropic (ANT) schließt am ersten Tag +17 % über 83 $. Kurse TradingView 22:32 Uhr (nach US-Schluss).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]
