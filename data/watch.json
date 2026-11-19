@@ -1,101 +1,45 @@
 {
- "generated_at": "2026-11-19T20:53:30+00:00",
+ "generated_at": "2026-11-19T21:50:28+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 487.2,
+   "price": 489.19,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2241
+   "gap_to_stop": 0.2291
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 274.665,
+   "price": 272.66,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0483
+   "gap_to_stop": 0.0407
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 139.6,
+   "price": 138.47,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.0341
+   "gap_to_stop": 0.0257
   }
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 487.2,
-   "chg_pct": -0.081,
-   "at": "2026-11-19T20:53+00:00",
-   "id": "AMD-absturz-2026-11-19",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Advanced Micro Devices −8,1 % heute",
-   "text": "Starker Tagesverlust auf 487,20 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Position halten, Stop auf Einstand (bzw. mind. unter 398 $). Neu kaufen nur im Rücksetzer 450–472 $ (gestaffelt), Stop 398 $, Ziel 680–760 $; über 658,5 $ Stop nachziehen."
-  },
-  {
-   "ticker": "ISRG",
-   "name": "Intuitive Surgical",
-   "group": "Watchlist",
-   "price": 406.2,
-   "chg_pct": -0.035,
-   "at": "2026-11-19T20:53+00:00",
-   "id": "ISRG-zone-2026-11-19",
-   "type": "zone",
+   "price": 138.47,
+   "chg_pct": -0.0486,
+   "at": "2026-11-19T21:50+00:00",
+   "id": "MRVL-stopnah-2026-11-19",
+   "type": "stop_nah",
    "level": "mittel",
-   "title": "Intuitive Surgical in der Einstiegszone",
-   "text": "Kurs 406,20 $ ist in die Zone 400,00 $–420,00 $ gelaufen.",
-   "todo": "Rücksetzer in 400–420 $ wäre eine Einstiegszone (Welle 2/4)."
-  },
-  {
-   "ticker": "DTE",
-   "name": "Deutsche Telekom",
-   "group": "Watchlist",
-   "price": 26.04,
-   "chg_pct": -0.011,
-   "at": "2026-11-19T20:53+00:00",
-   "id": "DTE-zone-2026-11-19",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Deutsche Telekom in der Einstiegszone",
-   "text": "Kurs 26,04 € ist in die Zone 25,40 €–26,20 € gelaufen.",
-   "todo": "26,2–29 €: nicht hinterherkaufen; Kauf nur bei Rücksetzer in 25,4–26,2 €."
-  },
-  {
-   "ticker": "ZTS",
-   "name": "Zoetis",
-   "group": "Watchlist",
-   "price": 81.05,
-   "chg_pct": -0.0528,
-   "at": "2026-11-19T20:53+00:00",
-   "id": "ZTS-zone-2026-11-19",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Zoetis in der Einstiegszone",
-   "text": "Kurs 81,05 $ ist in die Zone 78,00 $–82,00 $ gelaufen.",
-   "todo": "Zwischen 82 und 92 $: abwarten."
-  },
-  {
-   "ticker": "GRAB",
-   "name": "Grab Holdings",
-   "group": "Watchlist",
-   "price": 2.955,
-   "chg_pct": -0.0589,
-   "at": "2026-11-19T20:53+00:00",
-   "id": "GRAB-zone-2026-11-19",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Grab Holdings in der Einstiegszone",
-   "text": "Kurs 2,96 $ ist in die Zone 2,95 $–3,12 $ gelaufen.",
-   "todo": "Zwischen 3,12 und 3,45 $: abwarten."
+   "title": "Marvell Technology nah am Stop",
+   "text": "Kurs 138,47 $ nur noch 2,6 % über dem Stop 135,00 $.",
+   "todo": "Schlusskurs beobachten. Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
   }
  ],
  "notified": [
