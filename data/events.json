@@ -12,6 +12,12 @@
   "event": "Q3-Zahlen"
  },
  {
+  "id": "e_us_20261126",
+  "date": "2026-11-26",
+  "ticker": "Markt",
+  "event": "Thanksgiving – US-Börsen geschlossen (27.11. verkürzter Handel)"
+ },
+ {
   "id": "e_rhm_20261127",
   "date": "2026-11-27",
   "ticker": "RHM",

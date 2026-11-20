@@ -4,40 +4,40 @@
   "name": "Advanced Micro Devices",
   "group": "Portfolio",
   "sector": "Halbleiter",
-  "price": 435.37,
+  "price": 424.39,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−11,0 % am 20.11.",
-  "bias": "bullisch",
-  "wave_primary": "Welle 3 endete am 6.10. beim Rekord 658,5 $, die ABC-Korrektur am 5.11. bei 402,1 $ (C). Anstieg bis 594 $ (12.11.), heute Rücksetzer auf 534,1 $ (Tief 520 $) – das ist im Hauptszenario Welle ii der neuen Aufwärtswelle (38,2 % Rücklauf ≈ 520 $, 50 % ≈ 498 $). Hauptszenario bleibt: Welle 5 Richtung 680–760 $.",
-  "wave_alt": "Der Anstieg von 402 $ ist nur eine B-Welle; danach fällt C noch einmal Richtung 61,8 %-Rücklauf (ca. 367 $). Ein Schluss unter 433 $ (Tief 6.11.) wäre das erste Warnzeichen, unter 402 $ gilt die Alternative.",
+  "chg_note": "−13,2 % am 20.11.",
+  "bias": "neutral",
+  "wave_primary": "Welle 3 endete am 6.10. beim Rekord 658,5 $, die ABC-Korrektur am 5.11. bei 402,1 $ (C). Anstieg bis 594 $ (12.11.), seitdem −29 % in sechs Handelstagen bis 418,8 $ (Tief 20.11.). Das ist tiefer als ein normaler Welle-2-Rücksetzer (78,6 % ≈ 443 $ unterschritten). Hauptszenario nur noch knapp: Doppelboden über dem C-Tief 402 $, danach neue Aufwärtswelle Richtung 680–760 $.",
+  "wave_alt": "Der Anstieg 402→594 $ war nur eine B-Welle; C fällt unter 402 $ Richtung 367 $ (61,8 % des Anstiegs seit März) – nach dem Tag heute etwa gleich wahrscheinlich wie das Hauptszenario.",
   "target_low": 680,
   "target_high": 760,
   "support_low": 450,
   "support_high": 472,
   "invalidation": 402.1,
   "trigger": 658.5,
-  "plan": "Schluss 585,3 $ über der Bestätigung 579 $ (B-Hoch 28.10.) – die Aufwärtswelle seit dem C-Tief 402 $ (5.11.) ist bestätigt. Das Swing-Ziel 600–658 $ liegt nur noch 3–12 % entfernt; für einen Kauf in der Zone 450–472 $ gilt jetzt das Ziel der nächsten Welle: neues Rekordhoch 680–760 $ (1,0–1,27 × Welle 1–3, passt zum großen Ziel 660–780 $). Position: Stop auf Einstand nachziehen, bei 600–658 $ Teilgewinne möglich. Stop für Neukäufe am 13.11. von 428 $ auf 398 $ (unter das C-Tief) erweitert: 428 $ lag mit unter 1 Tagesschwankung im Rauschen; dafür kleinere Stückzahl.",
-  "news_brief": "20.11. (17:47): −11 % auf 435,4 $ (Tief 433 $) – Chip-Ausverkauf geht weiter (Micron, Broadcom, Nvidia ebenfalls stark im Minus, Asien −5 bis −6 %); keine eigene Firmenmeldung. Unter der Zukaufzone, Stop 398 $ noch ~9 % entfernt. 19.11.: −7,7 % auf 489,2 $ (Hoch 555 $, Tief 470,6 $) – Leerverkäufer Hunterbrook meldet eine Short-Position (China-Bezug, Exportkontrollen); dazu Wende des ganzen Marktes nach dem Anthropic-Debüt (Nasdaq −2,2 %). 18.11.: +5,3 % auf 530,1 $ – Chipwerte gegen den Markt fester (Nasdaq +0,4 %). 17.11.: −0,2 % auf 503,4 $ (Tief 480,5 $) – Erholung vom Tagestief; Nvidia-Zahlen nachbörslich stark. 13.11.: −8,8 % auf 534,1 $ (Tief 520 $) – Gewinnmitnahmen nach fast +50 % in einer Woche, Chip-Ausverkauf nach Nvidia-Chefwechsel und US-Rendite 5,15 %. 12.11.: Schluss 585,3 $ über der Bestätigung 579 $. 9.11.: +13,3 % nach Oppenheimer-Hochstufung.",
+  "plan": "Gestaffelte Zukäufe in 450–472 $ sind ausgelöst; der Kurs liegt jetzt darunter. Keine weiteren Käufe, bis AMD wieder über 472 $ schließt. Entscheidend ist das C-Tief 402 $: Stop 398 $ per Schlusskurs (seit 13.11. unverändert, nicht weiter senken). Ziel für die Position bleibt 680–760 $, Teilgewinne bei 600–658 $.",
+  "news_brief": "20.11. (Schluss): −13,2 % auf 424,4 $ (Tief 418,8 $) – Tech-Crash (Nasdaq 100 −5,6 %), dazu Berichte über Firmware-Sicherheitsprobleme und China-Bezug nach dem Hunterbrook-Short; zwei Tage zusammen −20 %. Stop 398 $ noch 6 % entfernt. 20.11. (17:47): −11 % auf 435,4 $ (Tief 433 $) – Chip-Ausverkauf geht weiter (Micron, Broadcom, Nvidia ebenfalls stark im Minus, Asien −5 bis −6 %); keine eigene Firmenmeldung. Unter der Zukaufzone, Stop 398 $ noch ~9 % entfernt. 19.11.: −7,7 % auf 489,2 $ (Hoch 555 $, Tief 470,6 $) – Leerverkäufer Hunterbrook meldet eine Short-Position (China-Bezug, Exportkontrollen); dazu Wende des ganzen Marktes nach dem Anthropic-Debüt (Nasdaq −2,2 %). 18.11.: +5,3 % auf 530,1 $ – Chipwerte gegen den Markt fester (Nasdaq +0,4 %). 17.11.: −0,2 % auf 503,4 $ (Tief 480,5 $) – Erholung vom Tagestief; Nvidia-Zahlen nachbörslich stark. 13.11.: −8,8 % auf 534,1 $ (Tief 520 $) – Gewinnmitnahmen nach fast +50 % in einer Woche, Chip-Ausverkauf nach Nvidia-Chefwechsel und US-Rendite 5,15 %. 12.11.: Schluss 585,3 $ über der Bestätigung 579 $. 9.11.: +13,3 % nach Oppenheimer-Hochstufung.",
   "next_event": "Q4-Zahlen (Anfang Feb., unbestätigt)",
   "next_event_date": "2027-02-03",
   "alert": "hoch",
   "range_low": 188.22,
   "range_high": 658.52,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Position halten. Intraday 435,4 $ (−11 %) schon unter der Zukaufzone 450–472 $: gestaffelte Käufe dort ausgelöst, nicht weiter nachkaufen; Stop 398 $ per Schlusskurs (unter dem C-Tief 402 $), Ziel 680–760 $; über 658,5 $ Stop nachziehen.",
-  "if_up": "Teilgewinne bei 600–658 $ (Rekord 6.10.). Schluss über 658,5 $ → Welle Richtung 680–760 $, Stop unter 579 $ nachziehen.",
-  "if_wait": "472–658 $: Position halten (Stop Einstand), nicht hinterherkaufen.",
-  "if_down": "Rücksetzer in 450–472 $ gestaffelt kaufen, Stop 398 $ (unter dem C-Tief 402 $ vom 5.11.). Schluss unter 398 $ → Zählung falsch, 367 $ bzw. tiefer möglich.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Position halten mit Stop 398 $ per Schlusskurs (6 % unter dem Kurs). Nicht nachkaufen, bis AMD wieder über 472 $ schließt. Ziel 680–760 $.",
+  "if_up": "Schluss über 472 $ → Boden wahrscheinlich, Plan wieder intakt; Teilgewinne bei 600–658 $, über 658,5 $ Stop nachziehen.",
+  "if_wait": "398–472 $: halten, nicht nachkaufen; das C-Tief 402 $ ist die entscheidende Marke.",
+  "if_down": "Schluss unter 398 $ → Position verkaufen (Alternative: C-Welle Richtung 367 $).",
   "stop": 398,
-  "status": "zone",
+  "status": "meiden",
   "entry_low": 450,
   "entry_high": 472,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-29",
-  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-11",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:AMD",
   "waves": [
@@ -135,12 +135,12 @@
    "kurz": {
     "path": [
      {
-      "p": 461,
-      "l": "ii"
+      "p": 402,
+      "l": "2"
      },
      {
-      "p": 629,
-      "l": "iii"
+      "p": 720,
+      "l": "3"
      }
     ],
     "alt": {
@@ -150,10 +150,10 @@
        "l": "C"
       }
      ],
-     "label": "alt. nur B-Welle",
-     "prob": 40
+     "label": "alt. nur B-Welle, C bis 367 $",
+     "prob": 50
     },
-    "up": 579,
+    "up": 472,
     "down": 398
    }
   },
@@ -164,40 +164,40 @@
   "name": "Alphabet A",
   "group": "Portfolio",
   "sector": "Internet / Cloud",
-  "price": 276.96,
+  "price": 265.29,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+1,6 % am 20.11.",
+  "chg_note": "−2,7 % am 20.11.",
   "bias": "neutral",
-  "wave_primary": "ABC-Korrektur vom Rekord 408,6 $ (18.5.): A 314,9 $ (23.7.), B 384,5 $ (5.8.), C 276,9 $ (30.10.). Doppelboden mit 277,1 $ (5.11.); seitdem Erholung auf 293,5 $ (11.11.). Hauptszenario: C ist beendet, Schluss über 301 $ bestätigt den Boden.",
-  "wave_alt": "C ist noch nicht fertig: Schluss unter 271 $ (Jahrestief) → Rücklauf Richtung 250–262 $.",
+  "wave_primary": "Hoch 408,6 $ (18.5.), A 314,9 $ (23.7.), B 384,5 $ (5.8.), C 276,9 $ (30.10.). Der Doppelboden-Versuch bei 272,4 $ (19.11.) ist gescheitert: Schluss 265,3 $ unter beiden Tiefs und unter der Invalidierung 270,7 $. Neue Zählung: C ist noch nicht fertig, Ziel ≈ 245–255 $ (C = 1,0 × A ≈ 253 $; 61,8 % des Anstiegs seit März ≈ 241 $).",
+  "wave_alt": "Bärenfalle: ein schneller Schluss zurück über 277 $ würde den Bruch als Fehlsignal entlarven; dann wieder Welle 3 Richtung 325 $.",
   "target_low": 325,
   "target_high": 345,
   "support_low": 271,
   "support_high": 280,
   "invalidation": 270.7,
   "trigger": 301,
-  "plan": "Nach dem Zahlen-Schock steht die Aktie direkt über dem Jahrestief. Hält es, ist eine Erholung wahrscheinlich; bricht es, wird es ungemütlich.",
-  "news_brief": "19.11.: −3,5 % auf 272,7 $ – vorbörslich ca. +4 % (Anthropic-Beteiligung), dann Wende mit dem Markt; in der Zukaufzone 271–280 $, Stop 262 $ rund 4 % entfernt. 17.11.: −1,2 % auf 280,2 $ – an der Zukaufzone. Q3: Umsatz knapp unter Erwartung, EPS-Miss wegen Beteiligungsverlusten, Free Cashflow negativ (−9 Mrd $), Capex-Prognose 195–205 Mrd $. Google Cloud +103 %.",
+  "plan": "Die Zukaufzone 271–280 $ hat nicht gehalten, die Elliott-Invalidierung 270,7 $ ist per Schluss gebrochen. Der Stop 262 $ liegt nur 1,2 % unter dem Kurs (im Tagesrauschen) – er ist bewusst Lenns Entscheidungsmarke für die Position: Schluss darunter → deutlich reduzieren; Rest mit der großen Absicherung 240 $. Keine Zukäufe.",
+  "news_brief": "20.11. (Schluss): −2,7 % auf 265,3 $ (Tief 264,2 $) – im Tech-Crash relativ stabil, aber unter dem Oktober-Tief 276,9 $ und der Invalidierung 270,7 $. 19.11.: −3,5 % auf 272,7 $ – vorbörslich ca. +4 % (Anthropic-Beteiligung), dann Wende mit dem Markt; in der Zukaufzone 271–280 $, Stop 262 $ rund 4 % entfernt. 17.11.: −1,2 % auf 280,2 $ – an der Zukaufzone. Q3: Umsatz knapp unter Erwartung, EPS-Miss wegen Beteiligungsverlusten, Free Cashflow negativ (−9 Mrd $), Capex-Prognose 195–205 Mrd $. Google Cloud +103 %.",
   "next_event": "Q4-Zahlen (Anfang Feb.)",
   "next_event_date": "2027-02-02",
-  "alert": "mittel",
-  "range_low": 272.11,
+  "alert": "hoch",
+  "range_low": 264.22,
   "range_high": 408.61,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Halten. Schluss 272,7 $ in der Zukaufzone 271–280 $: gestaffelt zukaufen, Stop 262 $, Ziel 325–345 $; über 301 $ Stop auf Einstand.",
-  "if_up": "Schluss über 301 $ → Boden bestätigt, Stop auf Einstand; Teilgewinne bei 325–345 $ (Gap-Schluss / 50–61,8 % des Rückgangs).",
-  "if_wait": "280–301 $: halten, nicht nachkaufen.",
-  "if_down": "In 271–280 $ gestaffelt zukaufen, Stop 262 $; Schluss unter 262 $ → Abwärtstrend bestätigt, Position deutlich reduzieren.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Elliott-Invalidierung 270,7 $ per Schluss gebrochen, Kurs nur 1,2 % über dem Stop 262 $. Nicht zukaufen; Schluss unter 262 $ → Position deutlich reduzieren.",
+  "if_up": "Schluss über 277 $ → Bärenfalle, Plan mit Ziel 325 $ wieder aktiv; über 301 $ Stop auf Einstand.",
+  "if_wait": "262–277 $: halten, nicht zukaufen.",
+  "if_down": "Schluss unter 262 $ → Position deutlich reduzieren; nächste Unterstützung 240–255 $ (große Absicherung 240 $).",
   "stop": 262,
-  "status": "zone",
+  "status": "meiden",
   "entry_low": 271,
   "entry_high": 280,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-10",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-14",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:GOOGL",
   "waves": [
@@ -220,6 +220,11 @@
     "d": "2026-10-30",
     "p": 276.92,
     "l": "C"
+   },
+   {
+    "d": "2026-11-20",
+    "p": 264.22,
+    "l": "C?"
    }
   ],
   "lt_view": "bullisch",
@@ -276,23 +281,23 @@
     "alt": {
      "path": [
       {
-       "p": 255
+       "p": 325
       }
      ],
-     "label": "alt. C tiefer",
-     "prob": 40
+     "label": "alt. Bärenfalle, zurück über 277 $",
+     "prob": 35
     },
     "path": [
      {
-      "p": 282,
-      "l": "2"
+      "p": 253,
+      "l": "C"
      },
      {
-      "p": 335,
-      "l": "3"
+      "p": 340,
+      "l": "1"
      }
     ],
-    "up": 301,
+    "up": 277,
     "down": 262
    }
   }
@@ -302,10 +307,10 @@
   "name": "Amazon.com",
   "group": "Portfolio",
   "sector": "E-Commerce / Cloud",
-  "price": 252.61,
+  "price": 246.82,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−1,8 % am 20.11.",
+  "chg_note": "−4,1 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Die Korrektur vom August-Hoch (287,2 $) endete am 30.10. bei 229,4 $ (Welle 4). Der Ausbruch nach unten ist gescheitert: Schluss 266,0 $ (+6,1 %) über der Bestätigung 258 $ – das frühere Gegenszenario ist jetzt die Hauptzählung. Welle 5 läuft Richtung 276–287 $.",
   "wave_alt": "Nur eine Gegenbewegung (B) in der Korrektur: Rückfall unter 248 $ und erneuter Test von 229 $.",
@@ -316,14 +321,14 @@
   "invalidation": 229.36,
   "trigger": 287.2,
   "plan": "Fehlausbruch nach unten bestätigt: über 258 $ ist der Weg Richtung 276–287 $ (August-Hoch) frei. Nachkauf nur bei einem Rücksetzer auf die Ausbruchszone 248–258 $; Chance:Risiko von dort nur ca. 1:1 aufs erste Ziel – kein starkes Kaufsignal.",
-  "news_brief": "19.11.: −3,9 % auf 257,4 $ – Marktwende nach dem Anthropic-Debüt, zurück in der Zukaufzone 248–258 $. 18.11.: +3,8 % auf 267,7 $ – Anthropic-Börsengang (Handel ab 19.11.) stützt Amazon als Großaktionär; Rücksetzer bis 254 $ (17.11.) in der Zone gehalten. 4.11.: +6,1 % auf 266,0 $ in der Wahl-Rally – Schluss über 258 $. Q3 (29.10.): AWS +39 %, aber Capex 2026 ca. 220 Mrd. $ und negativer Free Cashflow.",
+  "news_brief": "20.11. (Schluss): −2,3 % auf 246,8 $ – knapp unter der Zukaufzone 248–258 $, Stop 228 $ 7,6 % entfernt. 19.11.: −3,9 % auf 257,4 $ – Marktwende nach dem Anthropic-Debüt, zurück in der Zukaufzone 248–258 $. 18.11.: +3,8 % auf 267,7 $ – Anthropic-Börsengang (Handel ab 19.11.) stützt Amazon als Großaktionär; Rücksetzer bis 254 $ (17.11.) in der Zone gehalten. 4.11.: +6,1 % auf 266,0 $ in der Wahl-Rally – Schluss über 258 $. Q3 (29.10.): AWS +39 %, aber Capex 2026 ca. 220 Mrd. $ und negativer Free Cashflow.",
   "next_event": "Q4-Zahlen (Anfang Feb.)",
   "next_event_date": "2027-02-04",
   "alert": "mittel",
   "range_low": 196.0,
   "range_high": 287.2,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Halten. Schluss 257,4 $ (−3,9 %) in der Zukaufzone 248–258 $: gestaffelt zukaufen, Stop 228 $, Ziel 300–315 $; über 287,2 $ Stop auf Einstand.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Halten. Schluss 246,8 $ knapp unter der Zukaufzone 248–258 $: gestaffelte Käufe dort ausgelöst, Stop 228 $, Ziel 300–315 $; über 287,2 $ Stop auf Einstand.",
   "if_up": "Teilgewinne bei 276–287 $ (laufende Welle 5, Aug.-Hoch); Schluss über 287,2 $ → Rekord, für Käufe in der Zone gilt 300–315 $.",
   "if_wait": "258–287 $: halten, nicht hinterherkaufen.",
   "if_down": "Schluss unter 248 $ → Ausbruch fraglich; unter 228 $ Position reduzieren.",
@@ -332,10 +337,10 @@
   "entry_low": 248,
   "entry_high": 258,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-29",
-  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-09",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:AMZN",
   "lt_view": "bullisch",
@@ -438,41 +443,41 @@
   "name": "Applied Digital",
   "group": "Portfolio",
   "sector": "KI-Rechenzentren",
-  "price": 11.77,
+  "price": 11.49,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−15,8 % am 20.11.",
+  "chg_note": "−17,8 % am 20.11.",
   "bias": "bärisch",
-  "wave_primary": "ABC-Korrektur vom Hoch 50,7 $ (28.5.): A bis 22,9 $ (29.7.), B bis 33,0 $ (12.8.), C läuft. Heute −14,7 % auf 14,17 $, Tief 13,12 $ – knapp unter dem Stop, Schluss darüber. C = 1,0 × A läge bei ca. 5 $ zu tief; die 0,618-Projektion (15,9 $) ist unterschritten, nächste Marke 0,786 × A ≈ 11,2 $.",
-  "wave_alt": "C dehnt sich weiter aus: Schluss unter 13,5 $ → keine Bodenzone in Sicht, nächste Marke ca. 10–11 $.",
-  "target_low": 20.5,
-  "target_high": 24,
-  "support_low": 14,
-  "support_high": 16,
-  "invalidation": 13.5,
-  "trigger": 20.4,
-  "plan": "Rechenzentrums-Bauer – genau das Segment, das von den nach der Wahl angekündigten Moratorien (u. a. Texas) am stärksten betroffen ist. Der Kurs steht in der Zone 14–16 $, aber ein Nachkauf ist wegen des neuen politischen Risikos nicht sinnvoll. Der enge Stop 13,2 $ ist bewusst so gesetzt (Absicherung der bestehenden Position, kleine Positionsgröße).",
-  "news_brief": "20.11. (17:47): −15,8 % auf 11,77 $ – unter dem Stop 13,2 $ und auf 52-Wochen-Tief; KI-Rechenzentrumswerte mit hoher Verschuldung abverkauft (Finanzierungssorgen), Core Scientific und TeraWulf ebenfalls zweistellig im Minus. 19.11.: −3,3 % auf 13,98 $ (Hoch 15,69 $) – Tagesgewinn nach dem Anthropic-Debüt komplett abgegeben, an der Unterkante der Zone; Stop 13,2 $ rund 6 % entfernt. 17.11.: −2,5 % auf 14,22 $ – weiter in der Zone 14–16 $, Stop 13,2 $. 16.11.: −8,7 % auf 14,58 $ – keine eigene Firmenmeldung, Abverkauf mit den KI-Rechenzentrums-Werten vor den Nvidia-Zahlen (seit Jahresbeginn −41 %). 13.11.: −5,8 % auf 15,97 $.",
+  "wave_primary": "Hoch 50,7 $ (28.5.), danach Abwärtstrend mit tieferen Hochs (33,0 $ am 12.8., 18,6 $ am 11.11.). Heute Schluss 11,49 $ unter dem Novembertief 13,1 $ – die Abwärtswelle (C) läuft weiter. Nächste Unterstützung: Tiefs Juni/Juli 2025 bei 8,0–9,0 $ (≈ 88,6 % des großen Anstiegs 3,3 → 50,7 $).",
+  "wave_alt": "Kapitulation: das Tagestief 11,3 $ war schon das Ende von C; ein Schluss über 13,2 $ würde einen Boden anzeigen.",
+  "target_low": 13,
+  "target_high": 15,
+  "support_low": 8.0,
+  "support_high": 9.5,
+  "invalidation": 8.0,
+  "trigger": 12,
+  "plan": "Stop 13,2 $ per Schluss gebrochen → Position laut Plan verkaufen (Montag, nicht im Affekt am Eröffnungstief, aber am selben Tag). Neuer Einstieg nur klein und gestaffelt in 8,5–9,5 $, Stop 7,4 $, Ziel 13–15 $ (alte Stop-Zone, jetzt Widerstand). Hohe Verschuldung, sehr schwankungsstark.",
+  "news_brief": "20.11. (Schluss): −17,8 % auf 11,49 $ (Tief 11,31 $) – Abverkauf hoch verschuldeter KI-Rechenzentrumswerte im Tech-Crash; Stop 13,2 $ und große Absicherung 12 $ per Schluss gebrochen. 20.11. (17:47): −15,8 % auf 11,77 $ – unter dem Stop 13,2 $ und auf 52-Wochen-Tief; KI-Rechenzentrumswerte mit hoher Verschuldung abverkauft (Finanzierungssorgen), Core Scientific und TeraWulf ebenfalls zweistellig im Minus. 19.11.: −3,3 % auf 13,98 $ (Hoch 15,69 $) – Tagesgewinn nach dem Anthropic-Debüt komplett abgegeben, an der Unterkante der Zone; Stop 13,2 $ rund 6 % entfernt. 17.11.: −2,5 % auf 14,22 $ – weiter in der Zone 14–16 $, Stop 13,2 $. 16.11.: −8,7 % auf 14,58 $ – keine eigene Firmenmeldung, Abverkauf mit den KI-Rechenzentrums-Werten vor den Nvidia-Zahlen (seit Jahresbeginn −41 %). 13.11.: −5,8 % auf 15,97 $.",
   "next_event": "Nächste Quartalszahlen (Jan., unbestätigt)",
   "next_event_date": "2027-01-08",
-  "alert": "mittel",
-  "range_low": 11.67,
+  "alert": "hoch",
+  "range_low": 11.3101,
   "range_high": 50.725,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Intraday 11,77 $ (−15,8 %) klar unter dem Stop 13,2 $: Schließt der Tag unter 13,2 $, greift die Regel „alles verkaufen“ (nächstes Ziel ca. 11 $). Keine Käufe.",
-  "if_up": "Schlusskurs über 20,4 $ (Hoch 28.10.) → Boden wahrscheinlich, Ziel 20,5–24 $.",
-  "if_wait": "16–20,4 $: keine Käufe; Rest nur mit engem Stop.",
-  "if_down": "Schluss unter 13,2 $ → alles verkaufen, nächstes Ziel ca. 11 $.",
-  "stop": 13.2,
-  "status": "zone",
-  "entry_low": 14,
-  "entry_high": 16,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Stop 13,2 $ per Schlusskurs gebrochen (11,49 $): laut Plan Position verkaufen. Neuer Einstieg erst in 8,5–9,5 $ (klein, gestaffelt), Stop 7,4 $, Ziel 13–15 $.",
+  "if_up": "Schluss über 13,2 $ → Abverkauf war Übertreibung; trotzdem nicht hinterherkaufen, Rücksetzer abwarten.",
+  "if_wait": "9,5–13,2 $: keinen Bestand aufbauen.",
+  "if_down": "8,5–9,5 $: klein und gestaffelt kaufen, Stop 7,4 $; über 12 $ Stop auf Einstand.",
+  "stop": 7.4,
+  "status": "meiden",
+  "entry_low": 8.5,
+  "entry_high": 9.5,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-28",
+  "horizon_end": "2026-12-27",
   "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "NASDAQ:APLD",
   "waves": [
    {
@@ -489,15 +494,25 @@
     "d": "2026-08-12",
     "p": 33.04,
     "l": "B"
+   },
+   {
+    "d": "2026-11-05",
+    "p": 13.12,
+    "l": "3"
+   },
+   {
+    "d": "2026-11-11",
+    "p": 18.6,
+    "l": "4"
    }
   ],
   "lt_view": "spekulativ",
   "lt_conf": "niedrig",
-  "lt_target_low": 28,
-  "lt_target_high": 40,
-  "lt_stop": 12,
-  "lt_until": "Mai 2027",
-  "lt_text": "Kursvervielfachung von 3 $ auf 51 $, danach −68 %. Der Rückgang liegt tief zwischen 61,8 und 78,6 % – als große Welle 2 möglich, aber nur mit sehr kleiner Position und hartem Stop.",
+  "lt_target_low": 20,
+  "lt_target_high": 28,
+  "lt_stop": 7.4,
+  "lt_until": "Ende 2027",
+  "lt_text": "Kursvervielfachung von 3,3 $ (Apr. 2025) auf 50,7 $ (Mai 2026), seitdem −78 %. Der Wochenschluss 11,49 $ liegt unter der alten Absicherung 12 $ – neu: große Welle 2 nur, solange die Tiefs von 2025 (8–9 $) halten; dann Erholung Richtung 20–28 $ (38,2–50 % des Rückgangs).",
   "lt_consensus": 60.94,
   "lt_analysts": 16,
   "ew": {
@@ -521,43 +536,62 @@
     ],
     "path": [
      {
-      "p": 12,
+      "p": 8.8,
       "l": "(C)"
      },
      {
-      "p": 34,
+      "p": 24,
       "l": "(1)"
      }
     ],
     "alt": {
      "path": [
       {
-       "p": 10
+       "p": 5
       }
      ],
-     "label": "alt. (C) tiefer",
-     "prob": 50
+     "label": "alt. Tiefs 2024 (3–5 $)",
+     "prob": 45
     },
-    "up": 33
+    "up": 33,
+    "down": 7.4
    },
    "kurz": {
     "alt": {
-     "label": "alt. tiefer",
-     "prob": 45
-    }
+     "path": [
+      {
+       "p": 14
+      }
+     ],
+     "label": "alt. Boden schon bei 11,3 $",
+     "prob": 40
+    },
+    "path": [
+     {
+      "p": 9,
+      "l": "5"
+     },
+     {
+      "p": 14,
+      "l": "A"
+     }
+    ],
+    "up": 12,
+    "down": 7.4
    }
   },
-  "risk": "Politische Baustopps für Rechenzentren treffen das Geschäftsmodell direkt; die Aktie schwankt oft ±10 % am Tag – der enge Stop kann schnell fallen."
+  "risk": "Politische Baustopps für Rechenzentren treffen das Geschäftsmodell direkt; die Aktie schwankt oft ±10 % am Tag – der enge Stop kann schnell fallen.",
+  "stop_reset_reason": "Plan v2 (Zone 14–16 $, Stop 13,2 $) ist per Schlusskurs ausgestoppt – Position laut Regel verkaufen. Der neue Plan ist ein neuer Einstieg erst an den Tiefs von Juni/Juli 2025 (8–9 $) mit Stop darunter, kein Verschieben des alten Verlusts."
  },
  {
   "ticker": "BAC",
   "name": "Bank of America",
   "group": "Portfolio",
   "sector": "Banken",
-  "price": 47.99,
+  "price": 47.08,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−1,2 % am 20.11.",
+  "chg_note": "−3,1 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Korrektur vom Hoch bei 65,2 $; 61,8 %-Retracement (53,1 $) gebrochen, Kurs läuft in die 78,6 %-Zone (≈ 49,8 $).",
   "wave_alt": "Tieferes Tief unter 45,7 $ → größerer Abwärtstrend statt Korrektur.",
@@ -568,26 +602,26 @@
   "invalidation": 46.12,
   "trigger": 54.5,
   "plan": "Zone 48–51 $ ist die letzte typische Umkehrzone. Über 54,5 $ wäre die Korrektur wahrscheinlich beendet (Ziel 56–59 $). Unter 45,65 $ ist die Zählung ungültig.",
-  "news_brief": "Q3 bereinigt über Erwartung, Zinsüberschuss +8 %, aber 1,2 Mrd $ Geldwäsche-Vergleich drückte den Gewinn; Aktie fiel am Zahlentag ca. 8 %.",
+  "news_brief": "20.11. (Schluss): −3,1 % auf 47,1 $ – Banken im Ausverkauf schwach (JPMorgan −1,7 %); Stop 45,8 $ nah. Q3 bereinigt über Erwartung, Zinsüberschuss +8 %, aber 1,2 Mrd $ Geldwäsche-Vergleich drückte den Gewinn; Aktie fiel am Zahlentag ca. 8 %.",
   "next_event": "Q4-Zahlen (Mitte Jan.)",
   "next_event_date": "2027-01-14",
-  "alert": "",
+  "alert": "mittel",
   "range_low": 46.12,
   "range_high": 65.23,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Halten – Kurs in der letzten Umkehrzone 48–51 $",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Halten. Schluss 47,1 $ unter der Zone 48–51 $, Stop 45,8 $ nur 2,7 % entfernt – nicht nachkaufen; Schluss unter 45,8 $ → verkaufen.",
   "if_up": "Über 54,5 $ → Korrektur wahrscheinlich beendet: halten, Ziel 56–59 $.",
   "if_wait": "48–54,5 $: halten. Nachkauf-Idee in 48–50 $ nur, wenn dort ein höheres Tief entsteht.",
-  "if_down": "Schlusskurs unter 45,65 $ → Zählung ungültig: reduzieren.",
+  "if_down": "Schluss unter 45,8 $ → Position verkaufen.",
   "stop": 45.8,
   "status": "zone",
   "entry_low": 48,
   "entry_high": 51,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 4,
-  "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-23",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-02-02",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Anfang Feb.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:BAC",
   "lt_view": "bullisch",
@@ -680,10 +714,10 @@
   "name": "Fortinet",
   "group": "Portfolio",
   "sector": "Cybersecurity",
-  "price": 128.15,
+  "price": 124.56,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−2,5 % am 20.11.",
+  "chg_note": "−5,2 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Impuls vom April-Tief (82 $) bis 197,1 $ (13.10.), jetzt Welle 4 als ABC: A bis 127,4 $ (29.10.), B bis 139,4 $ (29.10.), C läuft – heute Tief 121,9 $, Schluss 122,5 $. Typische Endzone zwischen 61,8 % (126 $) und dem großen 61,8 %-Rücklauf (ca. 118 $).",
   "wave_alt": "Das Hoch bei 197 $ war das Ende des gesamten Impulses → tiefere Korrektur bis 100–110 $.",
@@ -694,26 +728,26 @@
   "invalidation": 104,
   "trigger": 139.4,
   "plan": "Die Zone wurde an das neue Tief angepasst (115–126 $ statt 126–138 $): Hier gestaffelt kaufen bzw. die Position halten, Stop 105 $ unter dem 78,6 %-Rücklauf. Kein Stop-Bruch – der alte Stop 118 $ hielt, er lag aber im Tagesrauschen.",
-  "news_brief": "18.11.: +5,9 % auf 131,8 $ – Cybersecurity-Rally nach starken Palo-Alto-Zahlen (Prognose erhöht, +10 %). 2.11.: −7,3 % ohne eigene Meldung im Tech-Abverkauf. 28.10.: trotz Zahlen über den Erwartungen nachbörslich ~−25 %.",
+  "news_brief": "20.11. (Schluss): −2,8 % auf 124,6 $ – zurück in der Zone 115–126 $; Cybersecurity hält sich besser als Chips. 18.11.: +5,9 % auf 131,8 $ – Cybersecurity-Rally nach starken Palo-Alto-Zahlen (Prognose erhöht, +10 %). 2.11.: −7,3 % ohne eigene Meldung im Tech-Abverkauf. 28.10.: trotz Zahlen über den Erwartungen nachbörslich ~−25 %.",
   "next_event": "Q4-Zahlen (Anfang Feb.)",
   "next_event_date": "2027-02-05",
   "alert": "mittel",
   "range_low": 73.55,
   "range_high": 197.13,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Halten: Schluss 131,8 $ (+5,9 %) über der Zone 115–126 $ – nicht aufstocken. Stop 105 $; über 139,4 $ Stop auf Einstand, Ziel 160–180 $.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Kurs 124,6 $ wieder in der Zone 115–126 $: gestaffelt zukaufen möglich, Stop 105 $, Ziel 160–180 $; über 139,4 $ Stop auf Einstand.",
   "if_up": "Schluss über 139,4 $ (B-Hoch) → Welle 4 vermutlich beendet: halten, Stop auf Einstand, Ziel 160–180 $.",
-  "if_wait": "126–139,4 $: halten.",
+  "if_wait": "126–139,4 $: halten, nicht hinterherkaufen.",
   "if_down": "Schluss unter 105 $ → tiefere Korrektur (Richtung 97 $): reduzieren.",
   "stop": 105,
-  "status": "trend",
+  "status": "zone",
   "entry_low": 115,
   "entry_high": 126,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-04",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-18",
+  "horizon_text": "Ziel in ca. 4–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:FTNT",
   "waves": [
@@ -799,41 +833,41 @@
   "name": "Marvell Technology",
   "group": "Portfolio",
   "sector": "Halbleiter",
-  "price": 125.76,
+  "price": 122.28,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−9,2 % am 20.11.",
-  "bias": "bullisch",
-  "wave_primary": "ABC-Korrektur vom Rekord 329,9 $ (18.6.): A 162,9 $ (29.7.), B 301,3 $ (6.10.), C 132,5 $ (5.11.). Welle 1 bis 174,5 $ (11.11.), seitdem Welle 2: Tief 138,4 $ am 19.11. (≈ 86 % Rücklauf) – sehr tief, aber noch über dem C-Tief 132,5 $. Hauptszenario (knapp): Welle 2 endet über 132,5 $, danach Welle 3 Richtung 185–205 $.",
-  "wave_alt": "Der Anstieg von 132,5 $ ist nur eine Gegenbewegung (B/X) innerhalb einer größeren Korrektur; Schluss unter 135 $ wäre das Warnzeichen, unter 132,5 $ gilt die Alternative (105–115 $).",
-  "target_low": 185,
-  "target_high": 205,
-  "support_low": 147,
-  "support_high": 154,
-  "invalidation": 132.54,
-  "trigger": 175,
-  "plan": "Bestätigung 162 $ per Schlusskurs (168,8 $) erfüllt – der Ausverkauf vom 5.11. (132,5 $) war wahrscheinlich das Ende der C-Welle. Für die bestehende Position: Stop auf Einstand ziehen bzw. mindestens unter 135 $. Für Zukäufe: Rücksetzer in 147–154 $ (50–61,8 % des Anstiegs seit 132,5 $) gestaffelt kaufen, Stop 135 $, Ziel 185–205 $ (Wochenhoch 192 $ bis 38,2 %-Rücklauf des Absturzes). Lumentum-Übernahme (Aktientausch) bleibt ein Unsicherheitsfaktor.",
-  "news_brief": "20.11. (17:47): −9,2 % auf 125,8 $ – unter Stop 135 $ und Invalidierung 132,5 $, Chip-Ausverkauf ohne eigene Firmenmeldung. 19.11.: −4,9 % auf 138,5 $ (Tief 138,4 $) – Chip-Ausverkauf; unter der Zukaufzone und dem Tief vom 17.11. (140,9 $). Welle 2 hat ~86 % des Anstiegs zurückgegeben, Stop 135 $ nur 2,5 % entfernt. 17.11.: +2,3 % auf 148,7 $ – zurück in der Zukaufzone, Nvidia-Zahlen nachbörslich stark. 16.11.: −7,3 % auf 145,4 $ (Tief 144 $) – Chip-Ausverkauf vor den Nvidia-Zahlen, dazu Verwässerungssorgen wegen der Lumentum-Übernahme per Aktientausch. 13.11.: −4,7 % auf 156,8 $. 11.11.: +9,3 % auf 168,8 $ – Schluss über der Bestätigung 162 $.",
+  "chg_note": "−11,7 % am 20.11.",
+  "bias": "bärisch",
+  "wave_primary": "Hoch 329,9 $ (18.6.), A 162,9 $ (29.7.), B 301,3 $ (6.10.), C 132,5 $ (5.11.), Gegenbewegung bis 174,5 $ (11.11.). Heute Schluss 122,3 $ unter dem C-Tief – die Korrektur ist nicht beendet. Neue Zählung: (C) läuft als fünfteilige Welle Richtung 100–108 $ (78,6 % des Anstiegs seit März 2025 ≈ 107 $, Ausbruchsniveau Dez. 2025 102,8 $).",
+  "wave_alt": "Fehlbruch: Schluss zurück über 132,5 $ → Boden doch bei ~120 $, dann Erholung 150–175 $.",
+  "target_low": 135,
+  "target_high": 150,
+  "support_low": 100,
+  "support_high": 108,
+  "invalidation": 92,
+  "trigger": 132.5,
+  "plan": "Stop 135 $ und Invalidierung 132,5 $ per Schluss gebrochen → Position laut Plan verkaufen. Neuer Einstieg gestaffelt in 100–108 $, Stop 92 $, Ziel 135–150 $ (gebrochene Unterstützung, jetzt Widerstand). Q3-Zahlen Anfang Dez. – Position vorher klein halten.",
+  "news_brief": "20.11. (Schluss): −11,7 % auf 122,3 $ (Tief ≈ 121 $) – Chip-Ausverkauf; Stop 135 $ und Elliott-Invalidierung 132,5 $ per Schluss gebrochen. 20.11. (17:47): −9,2 % auf 125,8 $ – unter Stop 135 $ und Invalidierung 132,5 $, Chip-Ausverkauf ohne eigene Firmenmeldung. 19.11.: −4,9 % auf 138,5 $ (Tief 138,4 $) – Chip-Ausverkauf; unter der Zukaufzone und dem Tief vom 17.11. (140,9 $). Welle 2 hat ~86 % des Anstiegs zurückgegeben, Stop 135 $ nur 2,5 % entfernt. 17.11.: +2,3 % auf 148,7 $ – zurück in der Zukaufzone, Nvidia-Zahlen nachbörslich stark. 16.11.: −7,3 % auf 145,4 $ (Tief 144 $) – Chip-Ausverkauf vor den Nvidia-Zahlen, dazu Verwässerungssorgen wegen der Lumentum-Übernahme per Aktientausch. 13.11.: −4,7 % auf 156,8 $. 11.11.: +9,3 % auf 168,8 $ – Schluss über der Bestätigung 162 $.",
   "next_event": "Q3-Zahlen (Anfang Dez., unbestätigt)",
   "next_event_date": "2026-12-03",
-  "alert": "mittel",
+  "alert": "hoch",
   "range_low": 70.69,
   "range_high": 329.88,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Intraday 125,8 $ (−9,2 %) unter dem Stop 135 $ und unter der Invalidierung 132,5 $: Schließt der Tag unter 135 $, greift der Stop (Alternative 105–115 $). Keine Zukäufe.",
-  "if_up": "Schluss über 175 $ → Welle 1 läuft weiter, Teilgewinne ab 185 $; über 192 $ (Wochenhoch 2.11.) ist der Weg Richtung 205 $ frei.",
-  "if_wait": "135–147 $: halten, nicht zukaufen.",
-  "if_down": "Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $.",
-  "stop": 135,
-  "status": "boden",
-  "entry_low": 147,
-  "entry_high": 154,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Stop 135 $ per Schlusskurs gebrochen (122,3 $): laut Plan Position verkaufen. Neuer Einstieg erst in 100–108 $ (gestaffelt), Stop 92 $, Ziel 135–150 $.",
+  "if_up": "Schluss über 132,5 $ → Fehlbruch; nicht hinterherkaufen, Rücksetzer abwarten.",
+  "if_wait": "108–132,5 $: keinen Bestand aufbauen.",
+  "if_down": "100–108 $: gestaffelt kaufen, Stop 92 $; über 132,5 $ Stop auf Einstand. Schluss unter 92 $ → Finger weg (Tief Feb. 2026 bei 71 $ möglich).",
+  "stop": 92,
+  "status": "meiden",
+  "entry_low": 100,
+  "entry_high": 108,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-25",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "NASDAQ:MRVL",
   "waves": [
    {
@@ -866,9 +900,9 @@
   "lt_conf": "niedrig",
   "lt_target_low": 230,
   "lt_target_high": 290,
-  "lt_stop": 100,
+  "lt_stop": 88,
   "lt_until": "Ende 2027",
-  "lt_text": "Impuls von 47 $ (März 2025) auf 330 $ (Juni 2026), dann ABC-Korrektur bis 132,5 $ (Nov.) – 70 % zurückgegeben, der Wochenschluss 141 $ liegt unter der alten Marke 145 $. Neues großes Ziel: Erholung um 50–80 % des Rückgangs (230–290 $). Unter 100 $ (unter 78,6 %) wäre der ganze Anstieg in Frage gestellt; Lumentum-Übernahme bleibt Unsicherheit.",
+  "lt_text": "Impuls von 47 $ (März 2025) auf 330 $ (Juni 2026), dann ABC-Korrektur, die heute unter das Tief 132,5 $ gefallen ist (−63 % vom Hoch). Großes Ziel bleibt eine Erholung um 50–80 % des Rückgangs (230–290 $), aber erst nach einem Boden über 88 $ (Absicherung neu unter dem Ausbruchsniveau Dez. 2025, vorher 100 $).",
   "lt_consensus": 333.09,
   "lt_analysts": 41,
   "ew": {
@@ -897,6 +931,10 @@
     ],
     "path": [
      {
+      "p": 104,
+      "l": "(C)"
+     },
+     {
       "p": 260,
       "l": "(1)"
      }
@@ -904,40 +942,40 @@
     "alt": {
      "path": [
       {
-       "p": 100
+       "p": 71
       }
      ],
-     "label": "alt. (C) bis 100–108 $",
-     "prob": 45
+     "label": "alt. Tief Feb. 2026 (71 $)",
+     "prob": 35
     },
     "up": 192.31,
-    "down": 100
+    "down": 88
    },
    "kurz": {
     "path": [
      {
-      "p": 151,
-      "l": "2"
+      "p": 104,
+      "l": "(C)"
      },
      {
-      "p": 195,
-      "l": "3"
+      "p": 142,
+      "l": "A"
      }
     ],
     "alt": {
      "path": [
       {
-       "p": 115
+       "p": 150
       }
      ],
-     "label": "alt. nur Gegenbewegung",
-     "prob": 45
+     "label": "alt. Fehlbruch, zurück über 132 $",
+     "prob": 35
     },
-    "up": 175,
-    "down": 135
+    "up": 132.5,
+    "down": 92
    }
   },
-  "stop_reset_reason": "Das alte Ziel 150–162 $ wurde ohne Einstieg erreicht; der neue Plan setzt auf das Ende von C bei 132,5 $ und legt den Stop direkt unter dieses Tief (höher als vorher).",
+  "stop_reset_reason": "Plan (Stop 135 $) per Schlusskurs ausgestoppt – Position laut Regel verkaufen. Neuer Einstieg erst am Ausbruchsniveau vom Dez. 2025 (≈ 103 $) mit Stop unter 92 $; das ist ein neuer Plan, kein verschobener Stop.",
   "pros": [
    "Schluss klar über der Bestätigung 162 $",
    "C-Welle bei 132,5 $ wahrscheinlich beendet",
@@ -955,10 +993,10 @@
   "name": "Novo Nordisk B",
   "group": "Portfolio",
   "sector": "Pharma",
-  "price": 35.32,
+  "price": 35.175,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−0,3 % am 20.11.",
+  "chg_note": "−0,7 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Bodenbildung nach dem Einbruch im Februar: Jahrestief 30,2 €, Erholung bis 45,3 € (Juli), Rücksetzer bis 32,7 € (5.10.). Seitdem höhere Kurse – möglicher Start von Welle (3).",
   "wave_alt": "Die Erholung war nur eine Gegenbewegung: Bruch unter 30 € → neuer Abwärtsschub Richtung 26–27 €.",
@@ -975,7 +1013,7 @@
   "alert": "mittel",
   "range_low": 30.235,
   "range_high": 54.87,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Zweiter Schluss über der Bestätigung 37,50 € (38,07 €) – Stop auf Einstand ziehen. Halten, nicht hinterherkaufen; Ziel 40–42 €.",
   "if_up": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €.",
   "if_wait": "36–40 €: halten; Nachkauf erst bei Rücksetzer Richtung 33–36 €.",
@@ -986,9 +1024,9 @@
   "entry_high": 33.5,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-03",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-06",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "XETR:NOV",
   "waves": [
@@ -1076,10 +1114,10 @@
   "name": "SAP SE",
   "group": "Portfolio",
   "sector": "Software",
-  "price": 184,
+  "price": 183.68,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−1,6 % am 20.11.",
+  "chg_note": "−1,8 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Neuer Aufwärtsimpuls vom Tief bei 127,5 € (Juli). Welle 3 läuft; Hoch bisher 216,7 € (22.10.).",
   "wave_alt": "Der Anstieg ist nur eine ABC-Erholung → Rückfall unter 186 € und Richtung 157 €.",
@@ -1090,14 +1128,14 @@
   "invalidation": 157,
   "trigger": 217,
   "plan": "Einziger Wert im Depot mit intaktem Aufwärtstrend. Über 215 € öffnet sich die Zielzone 230–245 € (Vorhochs). Unterstützung 185–190 €; unter 157 € ist die Impulszählung falsch.",
-  "news_brief": "19.11.: −3,6 % auf 187,0 € – Software-Werte schwach, jetzt in der Nachkauf-Zone 185–190 €. 17.11.: −5,6 % auf 201,5 € (Tief 200,9 €) – Kundenvorstand Saueressig wechselt zu IONOS, dazu Software-Abverkauf; weiter über der Zone 185–190 €. Q3: Cloud-Backlog 24,1 Mrd € (+28 %), Cloud-Umsatz +26 %, Prognose am oberen Ende. Goldman hob Kursziel auf 258 €.",
+  "news_brief": "20.11. (Xetra): −1,8 % auf 183,7 € – knapp unter der Nachkauf-Zone, Stop 178 € 3,1 % entfernt. 19.11.: −3,6 % auf 187,0 € – Software-Werte schwach, jetzt in der Nachkauf-Zone 185–190 €. 17.11.: −5,6 % auf 201,5 € (Tief 200,9 €) – Kundenvorstand Saueressig wechselt zu IONOS, dazu Software-Abverkauf; weiter über der Zone 185–190 €. Q3: Cloud-Backlog 24,1 Mrd € (+28 %), Cloud-Umsatz +26 %, Prognose am oberen Ende. Goldman hob Kursziel auf 258 €.",
   "next_event": "Q4-Zahlen",
   "next_event_date": "2027-01-28",
   "alert": "",
   "range_low": 127.5,
   "range_high": 219.65,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Halten. Schluss 187,0 € (−3,6 %) in der Nachkauf-Zone 185–190 €: gestaffelt zukaufen, Stop 178 €, Ziel 225–232 €; über 217 € Stop auf Einstand.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Halten. Schluss 183,7 € knapp unter der Nachkauf-Zone 185–190 €: gestaffelte Käufe dort ausgelöst, Stop 178 €, Ziel 225–232 €; über 217 € Stop auf Einstand.",
   "if_up": "Über 217 € → Ziel 225–232 € (52-Wochen-Hoch); dort Teilgewinne erwägen.",
   "if_wait": "190–215 €: halten. Nachkauf-Idee bei einem Rücksetzer auf 185–190 €.",
   "if_down": "Unter 185 € erhöhte Vorsicht; Schlusskurs unter 157 € → reduzieren.",
@@ -1107,9 +1145,9 @@
   "entry_high": 190,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 4,
-  "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-22",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-27",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "XETR:SAP",
   "waves": [
@@ -1196,10 +1234,10 @@
   "name": "Eli Lilly",
   "group": "Watchlist",
   "sector": "Pharma",
-  "price": 1353.26,
+  "price": 1347.11,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+0,2 % am 20.11.",
+  "chg_note": "−0,3 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Impuls vom April-Tief (850,5 $): Welle 1 bis 1.292,7 $ (19.8.), Welle 2 bis 1.113,3 $ (11.9.), Welle 3 läuft – Rekord 1.453 $ (5.11.), Schluss 1.437,3 $ (11.11.). Ziel der laufenden Welle 1.480 $ fast erreicht; danach Welle 4 und Welle 5 Richtung 1.550–1.700 $.",
   "wave_alt": "Das Hoch ist bereits Welle 5 → Korrektur zurück in die Ausbruchszone 1.150–1.250 $.",
@@ -1216,7 +1254,7 @@
   "alert": "hoch",
   "range_low": 850.51,
   "range_high": 1475.25,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Trend, Ziel der laufenden Welle (1.480 $) fast erreicht – nicht hinterherkaufen. Einstieg bei Rücksetzer in 1.160–1.250 $, Stop 1.130 $, Ziel 1.550–1.700 $",
   "if_up": "Teilgewinne bei 1.480–1.600 $ (Ende Welle 3); für einen Kauf in der Zone gilt 1.550–1.700 $.",
   "if_wait": "1.250–1.480 $: abwarten.",
@@ -1228,7 +1266,7 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-06",
+  "horizon_end": "2027-01-09",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:LLY",
@@ -1313,10 +1351,10 @@
   "name": "Intuitive Surgical",
   "group": "Watchlist",
   "sector": "Medizintechnik",
-  "price": 406.94,
+  "price": 399.05,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−0,1 % am 20.11.",
+  "chg_note": "−2,0 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "ABC-Korrektur vom Hoch (604 $) endete vermutlich am Tief bei 329 $. Seitdem neuer Impuls: Welle 1/3 aufwärts.",
   "wave_alt": "Nur eine B-Welle: erneuter Rückfall unter 400 $ und Test der Tiefs.",
@@ -1333,7 +1371,7 @@
   "alert": "",
   "range_low": 328.57,
   "range_high": 603.88,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "In der Zone 400–420 $ (Schluss 407,2 $, −3,3 %): gestaffelt kaufen, Stop 385 $, Ziel 499 $; über 470 $ Stop auf Einstand.",
   "if_up": "Über 470 $ → Erholung bestätigt, Ziel 499–520 $.",
   "if_wait": "420–470 $: nicht hinterherkaufen.",
@@ -1345,8 +1383,8 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 4,
   "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-18",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Mitte Jan.)",
+  "horizon_end": "2027-01-25",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:ISRG",
   "lt_view": "bullisch",
@@ -1430,10 +1468,10 @@
   "name": "Exxon Mobil",
   "group": "Watchlist",
   "sector": "Energie",
-  "price": 160.46,
+  "price": 159.99,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+1,0 % am 20.11.",
+  "chg_note": "+0,7 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Fünfteiliger Impuls vom Tief bei 110 $; Welle 5 endete am 30.10. beim Rekordhoch 188,5 $. Seitdem Korrektur: heute Tief 167,4 $, Schluss 169,3 $ – erster Teil (A) erreicht die Zone 160–170 $ (38,2–50 % der letzten Welle).",
   "wave_alt": "Welle 5 ist bereits fertig → ABC-Korrektur Richtung 150–160 $.",
@@ -1450,7 +1488,7 @@
   "alert": "mittel",
   "range_low": 114.19,
   "range_high": 188.5,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "In 160–170 $ gestaffelt kaufen, Stop 152 $, Ziel 187–191 $; über 184,9 $ Stop auf Einstand",
   "if_up": "Schlusskurs wieder über 184,9 $ → letzter Schub bis 188–191 $ möglich, dann Korrekturgefahr.",
   "if_wait": "Einstiegsidee erst in 160–170 $ nach einer Korrektur.",
@@ -1462,8 +1500,8 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 4,
   "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-20",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Mitte Jan.)",
+  "horizon_end": "2027-01-23",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:XOM",
   "lt_view": "bullisch",
@@ -1551,49 +1589,49 @@
   "name": "Rheinmetall",
   "group": "Watchlist",
   "sector": "Rüstung",
-  "price": 693.3,
+  "price": 693.4,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−4,5 % am 20.11.",
+  "chg_note": "−4,4 % am 20.11.",
   "bias": "neutral",
-  "wave_primary": "Große Korrektur seit dem Rekord 2.008 € (Sept. 2025): Tiefs bei 928,8 € (Juni) und 936,2 € (Juli) heute nach der Prognosesenkung gebrochen (Schluss 841,5 €, Tief 818,7 €). Die Abwärtswelle ist damit noch nicht beendet; nächste Zone 760–800 € (1,618-Projektion der ersten Abwärtswelle).",
-  "wave_alt": "Fehlausbruch: schneller Rückkauf über 937 € würde die Juni-/Juli-Tiefs als Doppelboden bestätigen.",
-  "target_low": 930,
-  "target_high": 1000,
-  "support_low": 760,
-  "support_high": 800,
-  "invalidation": 700,
-  "trigger": 937,
-  "plan": "Profitiert von steigenden Verteidigungsbudgets in Europa. Berenberg stufte auf Halten ab (Wachstum nach 2030 unsicher).",
-  "news_brief": "5.11.: Q3-Zahlen – Rheinmetall senkt die Prognose 2026 erneut, Aktie −16,5 % auf 838 € und damit unter die Elliott-Invalidierung 909 €. 6.11.: weiter −3,4 % auf 812,7 € (Tief 798 €, damit kurz in der Zone 760–800 €).",
+  "wave_primary": "Rekord 2.008 € (Sept. 2025), seitdem −65 %. Prognosesenkung am 5.11., Tief 798 € (6.11.), heute Schluss 693,4 € (Tief 692,3 €) – die Abwärtswelle läuft weiter. Nächste Unterstützung: Ausbruchsniveau 2024 (572 €) bzw. Zone 600–640 €.",
+  "wave_alt": "Boden schon bei ~690 € vor dem Kapitalmarkttag (27.11.); Schluss über 760 € wäre das Zeichen.",
+  "target_low": 760,
+  "target_high": 800,
+  "support_low": 571,
+  "support_high": 640,
+  "invalidation": 560,
+  "trigger": 705,
+  "plan": "Meiden – Stop 705 € gebrochen. Erst in 600–640 € gestaffelt kaufen, Stop 560 €, Ziel 760–800 €; über 705 € Stop auf Einstand.",
+  "news_brief": "20.11. (Xetra): −2,0 % auf 693,4 € – unter dem Stop 705 € und der Invalidierung 700 €. 5.11.: Q3-Zahlen – Rheinmetall senkt die Prognose 2026 erneut, Aktie −16,5 % auf 838 € und damit unter die Elliott-Invalidierung 909 €. 6.11.: weiter −3,4 % auf 812,7 € (Tief 798 €, damit kurz in der Zone 760–800 €).",
   "next_event": "",
   "next_event_date": "",
-  "alert": "hoch",
+  "alert": "mittel",
   "range_low": 692.3,
   "range_high": 1966.0,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Meiden – erst in 760–800 € gestaffelt, Stop 705 €, Ziel 930–1.000 €; über 937 € Stop auf Einstand",
-  "if_up": "Schluss über 937 € (Juni-/Juli-Tiefs) → Fehlausbruch nach unten, Ziel 1.000 €.",
-  "if_wait": "800–937 €: abwarten.",
-  "if_down": "In 760–800 € gestaffelt kaufen, Stop 705 €; Schluss unter 705 € → nicht kaufen.",
-  "stop": 705,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – Stop 705 € gebrochen. Erst in 600–640 € gestaffelt kaufen, Stop 560 €, Ziel 760–800 €; über 705 € Stop auf Einstand.",
+  "if_up": "Schluss über 705 € → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "640–705 €: abwarten.",
+  "if_down": "600–640 € gestaffelt kaufen, Stop 560 €.",
+  "stop": 560,
   "status": "meiden",
-  "entry_low": 760,
-  "entry_high": 800,
+  "entry_low": 600,
+  "entry_high": 640,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-31",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "",
+  "horizon_end": "2027-01-05",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "XETR:RHM",
-  "lt_view": "neutral",
+  "lt_view": "spekulativ",
   "lt_conf": "niedrig",
   "lt_target_low": 1150,
   "lt_target_high": 1330,
-  "lt_stop": 640,
+  "lt_stop": 540,
   "lt_until": "Ende 2027",
-  "lt_text": "Rekord 2.008 € (Sept. 2025), seitdem −60 %. Der Wochenschluss 812,7 € liegt unter der alten Marke 850 €; das 61,8 %-Retracement (909 €) hat nicht gehalten. Große Korrektur [2] läuft vermutlich bis 760–800 € (Kaufzone); danach Erholung bis 1.150–1.330 € (Hochs Juni–Aug. und 38,2 % des Rückgangs). Unter 640 € (70,7 %) ist auch das hinfällig.",
+  "lt_text": "Rekord 2.008 € (Sept. 2025), seitdem −60 %. Der Wochenschluss 812,7 € liegt unter der alten Marke 850 €; das 61,8 %-Retracement (909 €) hat nicht gehalten. Große Korrektur [2] läuft vermutlich bis 760–800 € (Kaufzone); danach Erholung bis 1.150–1.330 € (Hochs Juni–Aug. und 38,2 % des Rückgangs). Unter 640 € (70,7 %) ist auch das hinfällig. Absicherung am 20.11. von 640 € auf 540 € gesenkt (unter das Hoch 2024 bei 572 €), weil die neue Kaufzone 600–640 € darauf liegt.",
   "lt_consensus": 1552.24,
   "lt_analysts": 21,
   "waves": [
@@ -1634,7 +1672,7 @@
     ],
     "path": [
      {
-      "p": 780,
+      "p": 620,
       "l": "[2]"
      },
      {
@@ -1652,16 +1690,33 @@
      "prob": 40
     },
     "up": 1096.6,
-    "down": 640
+    "down": 540
    },
    "kurz": {
     "alt": {
-     "label": "alt. unter 900",
-     "prob": 40
-    }
+     "path": [
+      {
+       "p": 780
+      }
+     ],
+     "label": "alt. Boden vor dem Kapitalmarkttag",
+     "prob": 35
+    },
+    "path": [
+     {
+      "p": 620,
+      "l": "C"
+     },
+     {
+      "p": 780.0,
+      "l": "Ziel"
+     }
+    ],
+    "up": 705,
+    "down": 560
    }
   },
-  "stop_reset_reason": "Der Ausbruchsplan über 1.150 € ist nach der zweiten Prognosesenkung hinfällig; neuer Plan als Rücksetzer ca. 10 % unter dem heutigen Tief, mit Ziel an den gebrochenen Juni-/Juli-Tiefs.",
+  "stop_reset_reason": "Plan (Zone 760–800 €, Stop 705 €) ohne Einstieg per Schluss gebrochen, kein Bestand. Neue Zone am Hoch 2024 (572 €) / Tief 2024-Ausbruch mit Stop darunter.",
   "lt_entry_low": 760,
   "lt_entry_high": 800
  },
@@ -1670,10 +1725,10 @@
   "name": "Siemens Energy",
   "group": "Watchlist",
   "sector": "Energietechnik",
-  "price": 118.68,
+  "price": 118.32,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−6,3 % am 20.11.",
+  "chg_note": "−6,6 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "ABC-Korrektur vom Rekord 191,7 € (24.4.): A 133,3 € (30.7.), B 165,9 € (12.8.), C 110,9 € (5.11.). Nach Rekordzahlen +10,8 % auf 132,8 € (11.11.) – das alte Ziel 132 € ist erreicht. Hauptszenario: C beendet, neue Aufwärtswelle Richtung 148–160 € nach einem Rücksetzer.",
   "wave_alt": "Der Anstieg ist nur eine Gegenbewegung; unter 112 € (Tief 6.11.) droht ein neues Tief unter 110,9 €.",
@@ -1690,7 +1745,7 @@
   "alert": "",
   "range_low": 102.9,
   "range_high": 191.66,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ziel 132 € erreicht, neue Aufwärtswelle. Nicht hinterherkaufen: in 118–123 € gestaffelt kaufen, Stop 112 €, Ziel 148–160 €; über 138 € Stop auf Einstand",
   "if_up": "Schluss über 138 € (Hoch 29.10.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 148–160 €.",
   "if_wait": "123–138 €: nicht hinterherkaufen.",
@@ -1700,10 +1755,10 @@
   "entry_low": 118,
   "entry_high": 123,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-21",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2027-01-02",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "XETR:ENR",
   "lt_view": "bullisch",
@@ -1805,10 +1860,10 @@
   "name": "GE Vernova",
   "group": "Watchlist",
   "sector": "Energietechnik",
-  "price": 705.44,
+  "price": 699.33,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−6,7 % am 20.11.",
+  "chg_note": "−7,5 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Welle-4-Korrektur nach dem Hoch bei 1.196 $ (Juni). 38,2 %-Rücklauf (942 $) gebrochen; typische Zone 50–61,8 % = 785–865 $.",
   "wave_alt": "Das Hoch war das Ende des Gesamtimpulses → tiefere Korrektur Richtung 700 $.",
@@ -1825,7 +1880,7 @@
   "alert": "",
   "range_low": 530.16,
   "range_high": 1195.9399,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Zone 690–740 $ gestaffelt, Stop 650 $, Ziel 860–960 $; über 920 $ Stop auf Einstand",
   "if_up": "Schluss über 920 $ → Korrektur vorbei, Ziel 960 $+.",
   "if_wait": "740–920 $: abwarten.",
@@ -1836,18 +1891,18 @@
   "entry_high": 740,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-22",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Ende Nov.)",
+  "horizon_weeks_high": 4,
+  "horizon_end": "2026-12-18",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
+  "entry_eta_text": "",
   "tv_symbol": "NYSE:GEV",
-  "lt_view": "bullisch",
-  "lt_conf": "mittel",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
   "lt_target_low": 1100,
   "lt_target_high": 1300,
-  "lt_stop": 700,
+  "lt_stop": 600,
   "lt_until": "Aug. 2027",
-  "lt_text": "Großer Aufwärtstrend (115 $ → 1.196 $). Die Korrektur bis 796 $ erreichte das 38,2 %-Retracement – typisch für eine Welle 4. Danach neues Hoch.",
+  "lt_text": "Großer Aufwärtstrend (115 $ → 1.196 $). Die Korrektur bis 796 $ erreichte das 38,2 %-Retracement – typisch für eine Welle 4. Danach neues Hoch. Wochenschluss 20.11. bei 699 $ knapp unter der alten Absicherung 700 $ – neu 600 $ (unter 50 % des Anstiegs seit April 2025 ≈ 724 $, über dem Tief Nov. 2025 bei 530 $).",
   "lt_consensus": 1188.92,
   "lt_analysts": 33,
   "waves": [
@@ -1907,7 +1962,7 @@
      "prob": 35
     },
     "up": 1195.94,
-    "down": 700
+    "down": 600
    },
    "kurz": {
     "alt": {
@@ -1923,10 +1978,10 @@
   "name": "NextEra Energy",
   "group": "Watchlist",
   "sector": "Versorger",
-  "price": 84.64,
+  "price": 83.535,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+1,0 % am 20.11.",
+  "chg_note": "−0,3 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "ABC-Korrektur vom Hoch bei 98,8 $ endete vermutlich im September bei ca. 75 $. Neue Aufwärtsbewegung im Aufbau.",
   "wave_alt": "Seitwärtsphase hält an; steigende Zinsen drücken Versorger erneut Richtung 74 $.",
@@ -1943,7 +1998,7 @@
   "alert": "",
   "range_low": 74.41,
   "range_high": 98.75,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ausbruch über 86 $ gelungen (Schluss 88,45 $, +4,9 %) – nicht hinterherkaufen, Rücksetzer Richtung 82–86 $ abwarten",
   "if_up": "Schluss über 91 $ (Juli-Hoch) → Ziel 92–98 $.",
   "if_wait": "82–91 $: beobachten.",
@@ -1955,7 +2010,7 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-07",
+  "horizon_end": "2027-01-10",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:NEE",
@@ -2035,10 +2090,10 @@
   "name": "Allianz",
   "group": "Watchlist",
   "sector": "Versicherung",
-  "price": 451.3,
+  "price": 451.8,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−1,4 % am 20.11.",
+  "chg_note": "−1,2 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Intakter Aufwärtstrend; Korrektur im September (ca. 416 €) war vermutlich Welle 4, jetzt Welle 5 Richtung neue Hochs.",
   "wave_alt": "Seitwärtsphase 410–453 € hält länger an (Welle 4 als Dreieck).",
@@ -2055,7 +2110,7 @@
   "alert": "",
   "range_low": 338.8,
   "range_high": 479.1,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Trend, nicht hinterherkaufen: Rücksetzer in 410–420 € gestaffelt kaufen, Stop 398 €, Ziel 505–530 €; über 480 € Stop auf Einstand.",
   "if_up": "Teilziel 480 € der laufenden Welle; Schluss darüber → nächste Welle Richtung 505–530 €.",
   "if_wait": "Rücksetzer in 410–420 € wäre eine Einstiegszone.",
@@ -2065,10 +2120,10 @@
   "entry_low": 410,
   "entry_high": 420,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 8,
-  "horizon_end": "2027-01-14",
-  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-20",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "XETR:ALV",
   "lt_view": "bullisch",
@@ -2147,49 +2202,49 @@
   "name": "JPMorgan Chase",
   "group": "Watchlist",
   "sector": "Banken",
-  "price": 316.06,
+  "price": 310.68,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−1,3 % am 20.11.",
+  "chg_note": "−3,0 % am 20.11.",
   "bias": "neutral",
-  "wave_primary": "Welle-4-Korrektur vom Hoch bei 366,5 $ (August), Tief im September bei ca. 331 $. Erholung läuft.",
-  "wave_alt": "Korrektur wird größer (ABC bis 310–320 $).",
-  "target_low": 370,
-  "target_high": 390,
-  "support_low": 325,
-  "support_high": 332,
-  "invalidation": 310,
-  "trigger": 357,
-  "plan": "Qualitätsbank; relativ stärker als deine Bank-of-America-Position.",
-  "news_brief": "17.11.: −2,4 % auf 330 $ – Bankwerte schwach, Kurs in der Zone 325–332 $.",
+  "wave_primary": "Welle (3) endete bei 366,5 $ (13.8.), Welle (4) fiel bis 325,1 $ (7.10.), Erholung bis 359,8 $ (5.11.). Heute Schluss 310,7 $ unter dem Welle-(4)-Tief – die Korrektur ist größer: ABC Richtung 290–295 $ (Mai-Tief 293,7 $, 50 % des Anstiegs seit März ≈ 323 $ unterschritten).",
+  "wave_alt": "Tiefer bis zum März-Tief 279 $ (61,8 %), falls der Banken-Ausverkauf anhält.",
+  "target_low": 335,
+  "target_high": 350,
+  "support_low": 280,
+  "support_high": 295,
+  "invalidation": 279,
+  "trigger": 325,
+  "plan": "Meiden – Stop 318 $ gebrochen. Erst in 285–295 $ gestaffelt kaufen, Stop 274 $, Ziel 335–350 $; über 325 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −1,7 % auf 310,7 $ – unter dem Stop 318 $ und dem Oktober-Tief 325 $. 17.11.: −2,4 % auf 330 $ – Bankwerte schwach, Kurs in der Zone 325–332 $.",
   "next_event": "Q4-Zahlen (Mitte Jan.)",
   "next_event_date": "",
   "alert": "mittel",
   "range_low": 279.1,
   "range_high": 366.5,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "In der Zone 325–332 $ (Schluss 330 $, −2,4 %): gestaffelt kaufen, Stop 318 $, Ziel 370 $; über 357 $ Stop auf Einstand.",
-  "if_up": "Über 357 $ → Welle 5, Ziel 370–390 $.",
-  "if_wait": "332–357 $: nicht hinterherkaufen.",
-  "if_down": "In 325–332 $ gestaffelt kaufen, Stop 318 $; Schluss unter 318 $ → kein Einstieg.",
-  "stop": 318,
-  "status": "zone",
-  "entry_low": 325,
-  "entry_high": 332,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – Stop 318 $ gebrochen. Erst in 285–295 $ gestaffelt kaufen, Stop 274 $, Ziel 335–350 $; über 325 $ Stop auf Einstand.",
+  "if_up": "Schluss über 325 $ → Fehlbruch, aber nicht hinterherkaufen.",
+  "if_wait": "295–325 $: abwarten.",
+  "if_down": "285–295 $ gestaffelt kaufen, Stop 274 $.",
+  "stop": 274,
+  "status": "meiden",
+  "entry_low": 285,
+  "entry_high": 295,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 4,
-  "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-20",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Mitte Jan.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 5,
+  "horizon_weeks_high": 11,
+  "horizon_end": "2027-02-05",
+  "horizon_text": "Ziel in ca. 5–11 Wochen (bis ca. Anfang Feb.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Dez.)",
   "tv_symbol": "NYSE:JPM",
   "lt_view": "bullisch",
   "lt_conf": "hoch",
   "lt_target_low": 380,
   "lt_target_high": 420,
-  "lt_stop": 295,
+  "lt_stop": 270,
   "lt_until": "Apr. 2027",
-  "lt_text": "Stabiler Aufwärtstrend seit 2022 (101 $ → 367 $). Der Rücksetzer ist klein; das Ziel ist die Fortsetzung des Trends.",
+  "lt_text": "Stabiler Aufwärtstrend seit 2022 (101 $ → 367 $). Der Rücksetzer ist klein; das Ziel ist die Fortsetzung des Trends. Absicherung am 20.11. von 295 $ auf 270 $ (unter das März-Tief 279 $) gesenkt, weil die neue Kaufzone 285–295 $ sonst darunter läge.",
   "lt_consensus": 373.48,
   "lt_analysts": 23,
   "waves": [
@@ -2244,25 +2299,43 @@
      "prob": 30
     },
     "up": 366.5,
-    "down": 295
+    "down": 270
    },
    "kurz": {
     "alt": {
-     "label": "alt. ABC tiefer",
-     "prob": 30
-    }
+     "path": [
+      {
+       "p": 279
+      }
+     ],
+     "label": "alt. bis März-Tief 279 $",
+     "prob": 35
+    },
+    "path": [
+     {
+      "p": 290,
+      "l": "C"
+     },
+     {
+      "p": 342.5,
+      "l": "Ziel"
+     }
+    ],
+    "up": 325,
+    "down": 274
    }
-  }
+  },
+  "stop_reset_reason": "Plan (Zone 325–332 $, Stop 318 $) per Schluss ausgestoppt, kein Bestand. Neue Zone am Mai-Tief 293,7 $ mit Stop unter dem März-Tief 279 $ – neuer Plan auf der nächsten echten Unterstützung."
  },
  {
   "ticker": "V",
   "name": "Visa",
   "group": "Watchlist",
   "sector": "Zahlungsverkehr",
-  "price": 408.16,
+  "price": 402.425,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+1,5 % am 20.11.",
+  "chg_note": "+0,0 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Impuls vom März-Tief (ca. 301 $); Welle 3 läuft, Rücksetzer im Sept. (ca. 359 $) war Welle 2 bzw. eine Unterwelle. Ziel 430–450 $ erreicht (Schluss 436,6 $, Rekord); rechnerisches Ziel von Welle 3 (1,618×) bei ca. 480 $.",
   "wave_alt": "Doppel-Top am Hoch (414 $) → Rücklauf auf 375 $.",
@@ -2279,7 +2352,7 @@
   "alert": "mittel",
   "range_low": 293.89,
   "range_high": 442.23,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ausbruch über 414,6 $ per Schluss bestätigt (425,5 $) – Ziel 430–450 $ nah, nicht jagen",
   "if_up": "Über 414,5 $ → Ziel 430–450 $.",
   "if_wait": "Einstiegsidee bei Rücksetzer in 375–385 $.",
@@ -2291,7 +2364,7 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-07",
+  "horizon_end": "2027-01-09",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:V",
@@ -2369,10 +2442,10 @@
   "name": "Costco",
   "group": "Watchlist",
   "sector": "Basiskonsum",
-  "price": 1119.61,
+  "price": 1102.15,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+2,4 % am 20.11.",
+  "chg_note": "+0,8 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Seitwärtskorrektur (ABC) vom Hoch bei 1.096 $; Welle C endete vermutlich am 25.9. bei 883 $.",
   "wave_alt": "Seitwärtsphase 850–1.010 $ geht weiter.",
@@ -2389,7 +2462,7 @@
   "alert": "mittel",
   "range_low": 844.06,
   "range_high": 1123.67,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ziel der laufenden Welle (1.096 $, Rekord) fast erreicht – nicht hinterherkaufen. Einstieg bei Rücksetzer in 900–930 $, Stop 875 $, Ziel 1.150–1.220 $",
   "if_up": "Teilgewinne bei 1.090–1.100 $; Schluss über 1.100 $ (Rekord) → Ausbruch, Ziel 1.150–1.220 $.",
   "if_wait": "930–1.100 $: abwarten.",
@@ -2486,10 +2559,10 @@
   "name": "Walmart",
   "group": "Watchlist",
   "sector": "Basiskonsum",
-  "price": 130.02,
+  "price": 127.95,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+3,2 % am 20.11.",
+  "chg_note": "+1,5 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Korrektur vom Hoch bei 135 $ endete vermutlich im September um 99–104 $. Neuer Impuls aufwärts.",
   "wave_alt": "Nur eine Gegenbewegung → Rückfall auf 105–110 $.",
@@ -2506,7 +2579,7 @@
   "alert": "mittel",
   "range_low": 102.15,
   "range_high": 135.16,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ausbruch über 125 $ bestätigt (127,7 $) – Ziel 130–135 $, Rücksetzer abwarten",
   "if_up": "Teilgewinne bei 130–135 $; für einen Kauf in der Zone 112–115 $ gilt das nächste Ziel 135–140 $.",
   "if_wait": "Einstiegsidee bei Rücksetzer in 112–115 $.",
@@ -2518,7 +2591,7 @@
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-19",
+  "horizon_end": "2026-12-18",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
   "tv_symbol": "NASDAQ:WMT",
@@ -2603,10 +2676,10 @@
   "name": "Freeport-McMoRan",
   "group": "Watchlist",
   "sector": "Rohstoffe",
-  "price": 46.56,
+  "price": 45.99,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−5,2 % am 20.11.",
+  "chg_note": "−6,4 % am 20.11.",
   "bias": "bärisch",
   "wave_primary": "Korrektur vom Rekord 80,24 $ (26.8.): A 67,0 $ (14.9.), B 74,0 $ (9.10.), C läuft seit 15.10. (Tief bisher 50,46 $ am 18.11.). Das März-Tief 50,8 $ und der 61,8 %-Rücklauf (~54 $) sind gebrochen; nächste Unterstützung ist der 78,6 %-Rücklauf des Anstiegs von 38,9 $ (~47,7 $).",
   "wave_alt": "C endet schon um 50 $ (Doppeltief mit März 50,8 $); dann Rückkehr über 55 $ ohne den tieferen Rücksetzer.",
@@ -2623,7 +2696,7 @@
   "alert": "mittel",
   "range_low": 38.85,
   "range_high": 80.24,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Stop 51,5 $ gebrochen – jetzt nicht kaufen. Neue Zone 46–48,5 $ (78,6 %-Rücklauf): dort gestaffelt kaufen, Stop 43,5 $, Ziel 56–60 $; über 55 $ Stop auf Einstand.",
   "if_up": "Schluss über 55 $ ohne Rücksetzer → C war schon am 50 $-Tief zu Ende; dann neu bewerten, nicht hinterherkaufen.",
   "if_wait": "48,5–55 $: abwarten.",
@@ -2634,18 +2707,18 @@
   "entry_high": 48.5,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-23",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:FCX",
-  "lt_view": "bullisch",
-  "lt_conf": "mittel",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
   "lt_target_low": 78,
   "lt_target_high": 90,
-  "lt_stop": 52,
+  "lt_stop": 38,
   "lt_until": "März 2027",
-  "lt_text": "Kupfer-Aufschwung: 28 $ (2025) → 80 $ (Aug. 2026), seitdem Korrektur. Großes Ziel ist die Rückkehr zum Hoch und etwas darüber. Achtung: Tagesschluss 51,45 $ liegt unter der Absicherung 52 $ – entscheidend ist der Wochenschluss am Freitag.",
+  "lt_text": "Kupfer-Aufschwung: 28 $ (2025) → 80 $ (Aug. 2026), seitdem Korrektur. Großes Ziel ist die Rückkehr zum Hoch und etwas darüber. Achtung: Tagesschluss 51,45 $ liegt unter der Absicherung 52 $ – entscheidend ist der Wochenschluss am Freitag. Wochenschluss 20.11. bei 46,0 $ unter der alten Absicherung 52 $ – neu 38 $ (Tief Juli 2025); großes Ziel weniger sicher.",
   "lt_consensus": 78.75,
   "lt_analysts": 22,
   "waves": [
@@ -2710,7 +2783,8 @@
      "label": "alt. (4) tiefer",
      "prob": 40
     },
-    "up": 80.24
+    "up": 80.24,
+    "down": 38
    }
   },
   "stop_reset_reason": "Stop 51,5 $ am 18.11. per Schluss gebrochen; die neue Zone liegt 7–10 % tiefer am 78,6 %-Rücklauf mit Stop unter 44 $ – ein neuer Plan auf neuer Marke, keine verschobene Verlustgrenze (es gab keine Position)."
@@ -2720,10 +2794,10 @@
   "name": "Caterpillar",
   "group": "Watchlist",
   "sector": "Industrie",
-  "price": 522.54,
+  "price": 510.45,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−2,8 % am 20.11.",
+  "chg_note": "−5,0 % am 20.11.",
   "bias": "bärisch",
   "wave_primary": "Tiefe Korrektur vom Hoch 1.073 $ (30.6.): A 776 $ (29.7.), B 877 $ (6.10.), C läuft fünfteilig: 3 bis 550,8 $ (5.11.), 4 bis 613,6 $ (12.11.), jetzt Welle 5 – Schluss 537,4 $ unter dem Tief 550,8 $. Ziel von 5 (0,618 × Welle 1): ca. 490 $, nahe dem 70 %-Rücklauf des Anstiegs seit April 2025.",
   "wave_alt": "C endet tiefer am 78,6 %-Rücklauf des großen Anstiegs (ca. 440 $).",
@@ -2738,9 +2812,9 @@
   "next_event": "Q4-Zahlen (Ende Jan.)",
   "next_event_date": "",
   "alert": "mittel",
-  "range_low": 516.47,
+  "range_low": 508.11,
   "range_high": 1073.46,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Nicht kaufen: Schluss 537,4 $ unter dem Stop 540 $ – Welle C läuft. Neue Zone 480–505 $ (gestaffelt), Stop 458 $, Ziel 590–620 $; über 560 $ Stop auf Einstand.",
   "if_up": "Schluss über 560 $ → Tief 550,8 $ zurückerobert, Fehlausbruch nach unten möglich; dann neu bewerten.",
   "if_wait": "505–560 $: nicht kaufen.",
@@ -2750,19 +2824,19 @@
   "entry_low": 480,
   "entry_high": 505,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2027-01-02",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Ende Nov.)",
   "tv_symbol": "NYSE:CAT",
   "lt_view": "neutral",
-  "lt_conf": "mittel",
+  "lt_conf": "niedrig",
   "lt_target_low": 850,
   "lt_target_high": 1000,
-  "lt_stop": 540,
+  "lt_stop": 440,
   "lt_until": "Jan. 2028",
-  "lt_text": "Kursverdopplung bis 1.073 $ (Juni 2026), danach −43 % bis ans 61,8 %-Retracement (575 $). Hält diese Zone, ist eine große Erholung Richtung 850–1.000 $ das Ziel.",
+  "lt_text": "Kursverdopplung bis 1.073 $ (Juni 2026), danach −43 % bis ans 61,8 %-Retracement (575 $). Hält diese Zone, ist eine große Erholung Richtung 850–1.000 $ das Ziel. Wochenschluss 20.11. bei 510 $ unter der alten Absicherung 540 $ – neu 440 $ (78,6 % des Anstiegs seit April 2025 ≈ 437 $).",
   "lt_consensus": 838.38,
   "lt_analysts": 26,
   "waves": [
@@ -2826,7 +2900,7 @@
      "prob": 40
     },
     "up": 732.73,
-    "down": 540
+    "down": 440
    },
    "kurz": {
     "path": [
@@ -2859,10 +2933,10 @@
   "name": "Deutsche Telekom",
   "group": "Watchlist",
   "sector": "Telekom",
-  "price": 26.39,
+  "price": 26.34,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "+1,3 % am 20.11.",
+  "chg_note": "+1,2 % am 20.11.",
   "bias": "bärisch",
   "wave_primary": "Abwärtstrend vom Hoch bei 34,4 €; vermutlich späte Welle 5 von C, Ende nahe dem Tief bei 23,5 €.",
   "wave_alt": "Bruch unter 23,5 € → weitere Abwärtswelle Richtung 21–22 €.",
@@ -2879,7 +2953,7 @@
   "alert": "",
   "range_low": 23.53,
   "range_high": 34.36,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "In der Zone 25,4–26,2 € (Schluss 26,04 €): gestaffelt kaufen, Stop 24,4 €, Ziel 29 €; über 27 € Stop auf Einstand.",
   "if_up": "Schluss über 27 € → Ziel 29–30 €.",
   "if_wait": "26,2–27 €: nicht hinterherkaufen.",
@@ -2891,7 +2965,7 @@
   "entry_type": "Ausbruch",
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-10",
+  "horizon_end": "2027-01-07",
   "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "XETR:DTE",
@@ -2966,49 +3040,49 @@
   "name": "Cameco",
   "group": "Watchlist",
   "sector": "Uran / Kernkraft",
-  "price": 59.93,
+  "price": 57.995,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−2,4 % am 20.11.",
+  "chg_note": "−5,6 % am 20.11.",
   "bias": "bärisch",
-  "wave_primary": "ABC-Korrektur vom Hoch (135 $). Der mögliche Boden bei 74–77 $ ist gescheitert: heute Schluss 73,4 $ unter dem Stop 74 $ und neues 52-Wochen-Tief 73,3 $. Welle C läuft weiter; nächste Unterstützung grob 64–68 $ (Ausdehnung von C, unsicher).",
-  "wave_alt": "Fehlausbruch nach unten: schnelle Rückkehr über 77 $ → Boden doch intakt, Ziel 85 $.",
-  "target_low": 85,
-  "target_high": 95,
-  "support_low": 64,
-  "support_high": 68,
-  "invalidation": 62,
-  "trigger": 85,
-  "plan": "Größter westlicher Uran-Produzent; Kernkraft gilt als Stromquelle für KI-Rechenzentren. Analystenziele weit über dem Kurs.",
-  "news_brief": "30.10.: −7,9 % nach Q3 – Bruttomarge 19,7 % statt 27,7 % (Wartung Key Lake), Liefer-Prognose eingeengt, höhere Stückkosten. 2.11.: National Bank senkt Kursziel leicht (184 → 178 C$, Outperform).",
+  "wave_primary": "Hoch 135,2 $ (Jan. 2026), Tief 66,1 $ (2.11.), Erholung bis 78,7 $, heute Schluss 58,0 $ unter dem 61,8 %-Retracement des großen Anstiegs (≈ 73 $) und unter dem Tief 61,2 $ (19.11.). Nächste Unterstützung 48–54 $ (Jan. 2025 / Dez. 2024).",
+  "wave_alt": "Kapitulation bei 57,9 $; Schluss über 61,2 $ wäre das erste Zeichen.",
+  "target_low": 64,
+  "target_high": 70,
+  "support_low": 48,
+  "support_high": 54,
+  "invalidation": 46,
+  "trigger": 61.2,
+  "plan": "Meiden – Stop 61 $ gebrochen. Erst in 50–54 $ gestaffelt kaufen, Stop 46 $, Ziel 64–70 $; über 61,2 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −5,6 % auf 58,0 $ – unter dem Stop 61 $ und der großen Absicherung 60 $. 30.10.: −7,9 % nach Q3 – Bruttomarge 19,7 % statt 27,7 % (Wartung Key Lake), Liefer-Prognose eingeengt, höhere Stückkosten. 2.11.: National Bank senkt Kursziel leicht (184 → 178 C$, Outperform).",
   "next_event": "Q3-Zahlen (Anfang Nov.)",
   "next_event_date": "",
   "alert": "mittel",
-  "range_low": 59.52,
+  "range_low": 57.88,
   "range_high": 135.24,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Tief 69,55 $ – nähert sich der Beobachtungszone 64–68 $. Meiden, bis dort ein Umkehrsignal kommt",
-  "if_up": "Schlusskurs über 77 $ → Fehlausbruch, über 85 $ Boden bestätigt, Ziel 95 $.",
-  "if_wait": "68–85 $: kein Einstieg.",
-  "if_down": "Schlusskurs unter 61 $ → kein Einstieg, Abwärtstrend setzt sich fort.",
-  "stop": 61,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – Stop 61 $ gebrochen. Erst in 50–54 $ gestaffelt kaufen, Stop 46 $, Ziel 64–70 $; über 61,2 $ Stop auf Einstand.",
+  "if_up": "Schluss über 61,2 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "54–61,2 $: abwarten.",
+  "if_down": "50–54 $ gestaffelt kaufen, Stop 46 $.",
+  "stop": 46,
   "status": "meiden",
-  "entry_low": 64,
-  "entry_high": 68,
+  "entry_low": 50,
+  "entry_high": 54,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 4,
-  "horizon_weeks_high": 10,
-  "horizon_end": "2027-01-27",
-  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Ende Jan.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-13",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "NYSE:CCJ",
   "lt_view": "neutral",
-  "lt_conf": "mittel",
-  "lt_target_low": 105,
-  "lt_target_high": 130,
-  "lt_stop": 60,
-  "lt_until": "Feb. 2027",
-  "lt_text": "Anstieg von 35 $ auf 135 $ (Jan. 2026), Korrektur genau bis ans 61,8 %-Retracement (73 $). Hält diese Marke, ist der große Uran-Trend intakt.",
+  "lt_conf": "niedrig",
+  "lt_target_low": 90,
+  "lt_target_high": 110,
+  "lt_stop": 44,
+  "lt_until": "Ende 2027",
+  "lt_text": "Anstieg von 35 $ (Apr. 2025) auf 135 $ (Jan. 2026), Korrektur heute unter das 61,8 %-Retracement (73 $) und unter die alte Absicherung 60 $ (Wochenschluss 58,0 $). Neu: Absicherung 44 $ (unter dem Tief Jan. 2025); hält sie, Ziel Erholung Richtung 90–110 $ (50–78,6 % des Rückgangs).",
   "lt_consensus": 121.56,
   "lt_analysts": 10,
   "waves": [
@@ -3036,9 +3110,26 @@
   "ew": {
    "kurz": {
     "alt": {
-     "label": "alt. Fehlausbruch",
+     "path": [
+      {
+       "p": 68
+      }
+     ],
+     "label": "alt. Boden bei 58 $",
      "prob": 35
-    }
+    },
+    "path": [
+     {
+      "p": 52,
+      "l": "C"
+     },
+     {
+      "p": 67.0,
+      "l": "Ziel"
+     }
+    ],
+    "up": 61.2,
+    "down": 46
    },
    "lang": {
     "count": [
@@ -3055,7 +3146,11 @@
     ],
     "path": [
      {
-      "p": 117.5,
+      "p": 52,
+      "l": "(4)"
+     },
+     {
+      "p": 100,
       "l": "(5)"
      }
     ],
@@ -3068,20 +3163,21 @@
      "label": "alt. (4) tiefer",
      "prob": 40
     },
-    "up": 111.54
+    "up": 111.54,
+    "down": 44
    }
   },
-  "stop_reset_reason": "Stop 74 $ fiel am 30.10. nach den Q3-Zahlen; der neue Plan (Zone 64–68 $, Stop 61 $) setzt am Bereich der Oktober-Tiefs an – ein neuer Einstieg, keine Verlängerung des alten."
+  "stop_reset_reason": "Beobachtungszone 64–68 $ ohne Einstieg, Stop 61 $ per Schluss gebrochen, kein Bestand. Neue Zone an den Tiefs Jan. 2025 (48 $) / Hoch Dez. 2024 mit Stop darunter."
  },
  {
   "ticker": "AIR",
   "name": "Airbus",
   "group": "Watchlist",
   "sector": "Luftfahrt",
-  "price": 191.18,
+  "price": 189.96,
   "currency": "EUR",
   "price_date": "2026-11-20",
-  "chg_note": "−3,5 % am 20.11.",
+  "chg_note": "−4,1 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Aufwärtstrend vom Mai-Tief (165 €) bis 217 € (August); seitdem Korrektur. Kurs nähert sich der Zone 186–192 €, wo Welle 2/4 enden könnte.",
   "wave_alt": "Seitwärtsphase 180–221 € hält an.",
@@ -3098,7 +3194,7 @@
   "alert": "",
   "range_low": 157.42,
   "range_high": 221.3,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Ziel der laufenden Welle (215 €) fast erreicht – nicht hinterherkaufen. Einstieg bei Rücksetzer in 186–192 €, Stop 178 €, Ziel 225–240 € (über dem Rekord 221 €)",
   "if_up": "Teilgewinne bei 215–221 € (Rekord); Schluss über 221 € → Ziel 225–240 €.",
   "if_wait": "192–221 €: abwarten.",
@@ -3108,10 +3204,10 @@
   "entry_low": 186,
   "entry_high": 192,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-08",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 9,
+  "horizon_end": "2027-01-22",
+  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "EURONEXT:AIR",
   "lt_view": "bullisch",
@@ -3195,10 +3291,10 @@
   "name": "Berkshire Hathaway",
   "group": "Watchlist",
   "sector": "Holding / Versicherung",
-  "price": 573.87,
+  "price": 570,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+0,3 % am 20.11.",
+  "chg_note": "−0,4 % am 20.11.",
   "bias": "bullisch",
   "wave_primary": "Ausbruch aus der zweijährigen Spanne 464–515 $ auf ein Rekordhoch; vermutlich Welle 3 eines neuen Impulses.",
   "wave_alt": "Fehlausbruch → Rückkehr in die alte Spanne unter 515 $.",
@@ -3215,7 +3311,7 @@
   "alert": "mittel",
   "range_low": 464.01,
   "range_high": 596.92,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Rekordnähe (583 $), nicht jagen – Einstieg nur beim Rücktest 515–525 $, Stop 498 $, Ziel 630–660 $; über 600 $ Stop auf Einstand",
   "if_up": "Teilgewinne bei 600–630 $ (laufende Welle 3); für einen Kauf in der Zone 515–525 $ gilt das nächste Ziel 630–660 $.",
   "if_wait": "Einstiegsidee beim Rücktest der Ausbruchszone 515–525 $.",
@@ -3226,9 +3322,9 @@
   "entry_high": 525,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-09",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-14",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:BRK.B",
   "lt_view": "bullisch",
@@ -3302,10 +3398,10 @@
   "name": "Ferrari",
   "group": "Watchlist",
   "sector": "Luxusgüter / Auto",
-  "price": 399.42,
+  "price": 392.47,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−1,5 % am 20.11.",
+  "chg_note": "−3,2 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "Aufwärtstrend vom Mai-Tief (320 $) bis 437 $ (August), Korrektur bis 382 $ (5.10.). Seitdem höhere Tiefs – vermutlich Beginn der nächsten Aufwärtswelle.",
   "wave_alt": "Seitwärtsphase 380–437 $ hält an; unter 382 $ tiefere Korrektur Richtung 345–365 $.",
@@ -3322,7 +3418,7 @@
   "alert": "mittel",
   "range_low": 312.51,
   "range_high": 437.15,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Zahlen gut, Prognose angehoben – Kurs über 407 $, aber nahe Ziel 425–437 $: nicht hinterherkaufen, Rücksetzer Richtung 380–388 $ abwarten",
   "if_up": "Teilgewinne bei 425–437 $; für einen Kauf in der Zone 380–388 $ gilt das nächste Ziel 437–470 $.",
   "if_wait": "Einstiegsidee bei Rücksetzer in 380–388 $.",
@@ -3332,10 +3428,10 @@
   "entry_low": 380,
   "entry_high": 388,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-22",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2027-01-03",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:RACE",
   "lt_view": "neutral",
@@ -3420,10 +3516,10 @@
   "name": "MercadoLibre",
   "group": "Watchlist",
   "sector": "E-Commerce Lateinamerika",
-  "price": 1378.15,
+  "price": 1355,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "+1,7 % am 20.11.",
+  "chg_note": "−0,0 % am 20.11.",
   "bias": "bärisch",
   "wave_primary": "Große Korrektur vom Hoch 2.645 $ (Juni 2025). Letzter Abschnitt seit B 2.066 $ (3.9.): 1 bis 1.668 $ (1.10.), 2 bis 1.925 $ (12.10.), 3 bis 1.571 $ (26.10.), 4 bis 1.768 $ (4.11.), jetzt 5 – Schluss 1.355 $ unter dem Jahrestief 1.495 $. Ziel: Tief April 2024 (1.325 $) bis 1.250 $.",
   "wave_alt": "Welle 5 verlängert sich (1,618 × Welle 1) bis ca. 1.130 $.",
@@ -3440,7 +3536,7 @@
   "alert": "",
   "range_low": 1333.54,
   "range_high": 2342.0,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Nicht kaufen: Schluss 1.355 $ (−4,8 %) unter dem Stop 1.420 $ – Welle 5 läuft. Neue Zone 1.250–1.320 $ (gestaffelt), Stop 1.180 $, Ziel 1.550–1.600 $; über 1.470 $ Stop auf Einstand.",
   "if_up": "Schluss über 1.470 $ → Tief vom 5.11. zurückerobert; neu bewerten.",
   "if_wait": "1.320–1.470 $: nicht kaufen.",
@@ -3450,19 +3546,19 @@
   "entry_low": 1250,
   "entry_high": 1320,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-19",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-12",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "NASDAQ:MELI",
   "lt_view": "neutral",
-  "lt_conf": "mittel",
+  "lt_conf": "niedrig",
   "lt_target_low": 2100,
   "lt_target_high": 2500,
-  "lt_stop": 1450,
+  "lt_stop": 1150,
   "lt_until": "Dez. 2027",
-  "lt_text": "Hoch 2.645 $ (Juni 2025), Korrektur bis 1.495 $ (Mai 2026), seitdem breite Bodenbildung. Großes Ziel ist eine Erholung um 50–80 % des Rückgangs.",
+  "lt_text": "Hoch 2.645 $ (Juni 2025), Korrektur bis 1.495 $ (Mai 2026), seitdem breite Bodenbildung. Großes Ziel ist eine Erholung um 50–80 % des Rückgangs. Wochenschluss 20.11. bei 1.355 $ unter der alten Absicherung 1.450 $ – neu 1.150 $ (unter der kurzen Absicherung 1.180 $).",
   "lt_consensus": 2271.93,
   "lt_analysts": 26,
   "waves": [
@@ -3531,7 +3627,7 @@
      "prob": 40
     },
     "up": 2066.0,
-    "down": 1450
+    "down": 1150
    },
    "kurz": {
     "path": [
@@ -3564,49 +3660,49 @@
   "name": "Rocket Lab",
   "group": "Watchlist",
   "sector": "Raumfahrt",
-  "price": 47.21,
+  "price": 45.42,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−7,4 % am 20.11.",
+  "chg_note": "−10,9 % am 20.11.",
   "bias": "bullisch",
-  "wave_primary": "Großer Impuls bis 151 $ (27.5.), danach ABC-Korrektur: A 58,2 $ (29.7.), B 86,83 $ (10.8.), C bis 43,89 $ (5.11.). Seitdem drei starke Tage, heute Schluss 62,71 $ über dem Hoch vom 29.10. (61,13 $) – Welle 1 einer neuen Aufwärtsbewegung läuft; das alte Ziel 61 $ ist erreicht.",
-  "wave_alt": "Nur eine Gegenbewegung (B) – Rückfall unter 50 $ und erneuter Test von 44 $.",
-  "target_low": 70,
-  "target_high": 78,
-  "support_low": 50,
-  "support_high": 53.5,
-  "invalidation": 43.89,
-  "trigger": 64.5,
-  "plan": "Hohes Potenzial, hohes Risiko: Raketen- und Satellitenbauer mit 2,4 Mrd $ Auftragsbestand. Der große Hebel ist die Neutron-Rakete. Schwankt oft 5–10 % am Tag.",
-  "news_brief": "10.11.: +6,5 % auf 62,71 $ trotz schwachem Start (vorbörslich ca. −8 % nach höherem Q3-Verlust und Neutron-Verschiebung). Q3: Umsatz 268 Mio. $ (+73 %), Q4-Prognose 270–290 Mio. $ über Erwartung, Neutron-Aufträge über 515 Mio. $.",
+  "wave_primary": "Hoch 151 $ (27.5.), seitdem Abwärtstrend mit tieferen Hochs (86,8 $ 10.8., 68,3 $ 11.11.). Heute Schluss 45,4 $ unter dem Stop 46 $, knapp über dem Novembertief 43,9 $. Ein Bruch darunter öffnet 37–42 $ (Tief Nov. 2025, 78,6 % des großen Anstiegs).",
+  "wave_alt": "Doppelboden bei 43,9 $ hält; Schluss über 50,5 $ wäre das erste Zeichen.",
+  "target_low": 55,
+  "target_high": 62,
+  "support_low": 37.5,
+  "support_high": 42,
+  "invalidation": 37.5,
+  "trigger": 50.5,
+  "plan": "Meiden – Stop 46 $ gebrochen. Erst in 38–42 $ gestaffelt und klein kaufen, Stop 35 $, Ziel 55–62 $; über 50,5 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −3,8 % auf 45,4 $ – unter dem Stop 46 $ im Wachstumswerte-Ausverkauf. 10.11.: +6,5 % auf 62,71 $ trotz schwachem Start (vorbörslich ca. −8 % nach höherem Q3-Verlust und Neutron-Verschiebung). Q3: Umsatz 268 Mio. $ (+73 %), Q4-Prognose 270–290 Mio. $ über Erwartung, Neutron-Aufträge über 515 Mio. $.",
   "next_event": "Q4-Zahlen (Ende Feb., unbestätigt)",
   "next_event_date": "2027-02-25",
   "alert": "mittel",
   "range_low": 37.57,
   "range_high": 151.0,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "In der Zone 50–53,5 $ (Schluss 53,07 $): gestaffelt kaufen, Stop 46 $, Ziel 70–78 $; über 64,5 $ Stop auf Einstand.",
-  "if_up": "Schluss über 64,5 $ → Welle 3 läuft, Stop auf Einstand; Ziel 70–78 $ (Aug.-Hoch 86,8 $ als nächste Hürde).",
-  "if_wait": "53,5–64,5 $: halten bzw. nicht hinterherkaufen.",
-  "if_down": "In 50–53,5 $ gestaffelt kaufen, Stop 46 $; Schluss unter 46 $ → Erholung gescheitert, unter 43,9 $ Zählung falsch.",
-  "stop": 46,
-  "status": "zone",
-  "entry_low": 50,
-  "entry_high": 53.5,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – Stop 46 $ gebrochen. Erst in 38–42 $ gestaffelt und klein kaufen, Stop 35 $, Ziel 55–62 $; über 50,5 $ Stop auf Einstand.",
+  "if_up": "Schluss über 50,5 $ → Boden bei 43,9 $ hält doch; nicht hinterherkaufen.",
+  "if_wait": "42–50,5 $: abwarten.",
+  "if_down": "38–42 $ klein kaufen, Stop 35 $.",
+  "stop": 35,
+  "status": "meiden",
+  "entry_low": 38,
+  "entry_high": 42,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-26",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-29",
+  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Anfang Dez.)",
   "tv_symbol": "NASDAQ:RKLB",
   "lt_view": "spekulativ",
   "lt_conf": "niedrig",
   "lt_target_low": 85,
   "lt_target_high": 120,
-  "lt_stop": 40,
+  "lt_stop": 34,
   "lt_until": "März 2027",
-  "lt_text": "Kursexplosion von 3,5 $ auf 151 $, danach −66 %. Großes Bild eher eine tiefe Welle 2; der Neutron-Erststart 2027 ist der Schlüssel. Sehr schwankungsanfällig.",
+  "lt_text": "Kursexplosion von 3,5 $ auf 151 $, danach −66 %. Großes Bild eher eine tiefe Welle 2; der Neutron-Erststart 2027 ist der Schlüssel. Sehr schwankungsanfällig. Absicherung am 20.11. von 40 $ auf 34 $ gesenkt (unter die neue Kaufzone und das Tief Nov. 2025).",
   "lt_consensus": 102.15,
   "lt_analysts": 20,
   "waves": [
@@ -3629,9 +3725,26 @@
   "ew": {
    "kurz": {
     "alt": {
-     "label": "alt. nur Gegenbewegung, zurück auf 44 $",
-     "prob": 40
-    }
+     "path": [
+      {
+       "p": 58
+      }
+     ],
+     "label": "alt. Doppelboden 43,9 $",
+     "prob": 35
+    },
+    "path": [
+     {
+      "p": 40,
+      "l": "C"
+     },
+     {
+      "p": 58.5,
+      "l": "Ziel"
+     }
+    ],
+    "up": 50.5,
+    "down": 35
    },
    "lang": {
     "count": [
@@ -3661,20 +3774,21 @@
      "label": "alt. [2] tiefer",
      "prob": 45
     },
-    "up": 86.83
+    "up": 86.83,
+    "down": 34
    }
   },
-  "stop_reset_reason": "Die alte Zone 52–56 $ ist mit Schluss unter 48 $ gescheitert; der neue Plan setzt am Tief vom Nov. 2025 (37,6 $) an, der nächsten echten Unterstützung."
+  "stop_reset_reason": "Plan (Zone 50–53,5 $, Stop 46 $) per Schluss ausgestoppt, kein Bestand. Neue Zone am Tief vom Nov. 2025 (37,6 $) mit Stop darunter."
  },
  {
   "ticker": "OKLO",
   "name": "Oklo",
   "group": "Watchlist",
   "sector": "Kernkraft (Mini-Reaktoren)",
-  "price": 20.71,
+  "price": 19.85,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−0,6 % am 20.11.",
+  "chg_note": "−4,8 % am 20.11.",
   "bias": "bärisch",
   "wave_primary": "Langer Abwärtstrend vom Hoch bei 194 $ (Okt. 2025): fünf Wellen abwärts mit Welle 3 bei 34,38 $ (14.9.), Welle 4 bei 41,29 $ (22.9.) und Welle 5 bis 18,54 $ (5.11.) nahe dem April-2025-Tief (17,4 $). Heute +22,7 % auf 23,55 $ – mögliche Bodenbildung, aber unbestätigt.",
   "wave_alt": "Das Tief bei 25,4 $ war das Ende der Korrektur; dann wäre ein Anstieg über 32 $ der erste Beweis.",
@@ -3691,7 +3805,7 @@
   "alert": "",
   "range_low": 18.535,
   "range_high": 115.72,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "Schluss 26,84 $ über der Bestätigung 23,5 $ – Trend, nicht hinterherkaufen. Einstieg nur in 16,5–18 $ (gestaffelt), Stop 15 $, Ziel 30–35 $",
   "if_up": "Schlüsse über 23,5 $ → Boden wahrscheinlicher; erstes Ziel 30 $, dann 34–35 $ (Sept.-Tiefs).",
   "if_wait": "18–23,5 $: abwarten.",
@@ -3701,10 +3815,10 @@
   "entry_low": 16.5,
   "entry_high": 18,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
+  "horizon_weeks_low": 3,
   "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-28",
-  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "horizon_end": "2027-01-03",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:OKLO",
   "lt_view": "spekulativ",
@@ -3784,39 +3898,39 @@
   "name": "Hims & Hers",
   "group": "Watchlist",
   "sector": "Telemedizin",
-  "price": 15.225,
+  "price": 14.6,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−5,0 % am 20.11.",
+  "chg_note": "−8,9 % am 20.11.",
   "bias": "bärisch",
-  "wave_primary": "Seit dem Hoch 39,05 $ (6.7.) ABC-Korrektur: A 24,24 $ (30.7.), B 34,46 $ (21.8.), C läuft. Nach den Q3-Zahlen −16,6 % auf 19,13 $ (Tief 18,40 $) – C = A (ca. 19,7 $) erreicht, März-Tief 18,62 $ im Handel unterschritten. Nach der Prognosesenkung ist eine Verlängerung Richtung Feb.-Tief (16,35/13,74 $) wahrscheinlicher als ein sofortiger Boden.",
-  "wave_alt": "C endete heute bei 18,40 $ (C = A erfüllt); ein Schluss über 22,8 $ (Kurslücke vom 10.11.) zeigt eine Erholung Richtung 25–27 $.",
-  "target_low": 21.5,
-  "target_high": 23.5,
-  "support_low": 15.5,
-  "support_high": 16.8,
-  "invalidation": 13.74,
-  "trigger": 22.8,
-  "plan": "Online-Rezepte für Abnehm-, Haar- und Männergesundheitsmittel. Q3: Umsatz +49 % auf 890 Mio. $, aber Bruttomarge 57 % (Vorjahr 74 %), Abo-Wachstum schwächer, Ergebnisprognose (EBITDA) gesenkt. Der erweiterte Lilly-Vertrag drückt die Marge. Zone tiefer: 15,5–16,8 $ (Feb.-Tief), Stop 13,5 $ unter dem Jahrestief.",
-  "news_brief": "19.11.: −6,0 % auf 16,02 $ – in der tiefer gelegten Zone 15,5–16,8 $. 10.11.: −16,6 % auf 19,13 $ nach Q3: Gewinn verfehlt, Bruttomarge 57 % statt 74 %, EBITDA-Prognose gesenkt, Abo-Wachstum schwächer. 9.11.: −11,8 % nach erweitertem Lilly-Vertrag. In einer Woche rund −25 %.",
+  "wave_primary": "Hoch 39,1 $ (6.7.), Abwärtswelle nach den Q3-Zahlen bis 14,5 $ (20.11.). Test des Februar-Tiefs 13,74 $ – dort ist ein Doppelboden möglich (Abwärtswelle 5 = 1 × Welle 1).",
+  "wave_alt": "Bruch unter 13,7 $ → neues Mehrjahrestief Richtung 11–12 $.",
+  "target_low": 19,
+  "target_high": 21.5,
+  "support_low": 13.7,
+  "support_high": 14.8,
+  "invalidation": 12.8,
+  "trigger": 18.4,
+  "plan": "In der Zone 13,8–14,8 $ (Februar-Tief 13,74 $): nur kleine Position gestaffelt, Stop 12,8 $, Ziel 19–21,5 $; über 18,4 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −8,9 % auf 14,6 $ – unter der alten Zone, Test des Februar-Tiefs 13,7 $. 19.11.: −6,0 % auf 16,02 $ – in der tiefer gelegten Zone 15,5–16,8 $. 10.11.: −16,6 % auf 19,13 $ nach Q3: Gewinn verfehlt, Bruttomarge 57 % statt 74 %, EBITDA-Prognose gesenkt, Abo-Wachstum schwächer. 9.11.: −11,8 % nach erweitertem Lilly-Vertrag. In einer Woche rund −25 %.",
   "next_event": "Q4-Zahlen (Ende Feb., unbestätigt)",
   "next_event_date": "2027-02-24",
   "alert": "mittel",
   "range_low": 13.74,
   "range_high": 40.99,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "In der Zone 15,5–16,8 $ (Schluss 16,02 $, −6,0 %), Abwärtstrend aber intakt: höchstens kleine Position gestaffelt, Stop 13,5 $, Ziel 21,5 $; über 22,8 $ Stop auf Einstand.",
-  "if_up": "Schluss über 22,8 $ → Kurslücke geschlossen, C wohl beendet; Erholung Richtung 25–27 $ – ohne Einstieg in der Zone nicht hinterherkaufen.",
-  "if_wait": "16,8–22,8 $: nicht hinterherkaufen.",
-  "if_down": "In 15,5–16,8 $ gestaffelt kaufen (Feb.-Tief 16,35 $), Stop 13,5 $; Schluss unter 13,5 $ → Jahrestief gebrochen, nicht kaufen.",
-  "stop": 13.5,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "In der Zone 13,8–14,8 $ (Februar-Tief 13,74 $): nur kleine Position gestaffelt, Stop 12,8 $, Ziel 19–21,5 $; über 18,4 $ Stop auf Einstand.",
+  "if_up": "Schluss über 18,4 $ → Stop auf Einstand.",
+  "if_wait": "14,8–18,4 $: nicht hinterherkaufen.",
+  "if_down": "Schluss unter 12,8 $ → Plan ungültig, kein Boden.",
+  "stop": 12.8,
   "status": "zone",
-  "entry_low": 15.5,
-  "entry_high": 16.8,
+  "entry_low": 13.8,
+  "entry_high": 14.8,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
+  "horizon_end": "2026-12-18",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:HIMS",
@@ -3824,12 +3938,12 @@
   "lt_conf": "niedrig",
   "lt_target_low": 35,
   "lt_target_high": 45,
-  "lt_stop": 18,
+  "lt_stop": 12,
   "lt_until": "Jan. 2027",
-  "lt_text": "Große Spanne seit 2025 zwischen 14 $ und 73 $. Großes Ziel ist die obere Hälfte; hohes Regulierungsrisiko.",
+  "lt_text": "Große Spanne seit 2025 zwischen 13,7 $ und 73 $. Der Wochenschluss 14,6 $ liegt unter der alten Absicherung 18 $; neu: Absicherung 12 $ (unter dem Februar-Tief). Großes Ziel bleibt die obere Hälfte der Spanne (35–45 $), hohes Regulierungsrisiko.",
   "lt_consensus": 31.15,
   "lt_analysts": 13,
-  "stop_reset_reason": "Stop 20,8 $ gehörte zur alten Zone, die nach dem Lilly-Vertrag und den schwachen Zahlen nicht mehr trägt; die neue, tiefere Zone liegt bei C = A und dem März-Tief, Stop darunter – Status „meiden“ bis dahin.",
+  "stop_reset_reason": "Plan (Zone 15,5–16,8 $, Stop 13,5 $) nicht ausgestoppt; Zone auf das Februar-Tief 13,74 $ gelegt und Stop darunter, weil der alte Stop mit 0,5 Tagesschwankungen im Rauschen lag.",
   "waves": [
    {
     "d": "2026-07-06",
@@ -3887,13 +4001,15 @@
      "prob": 45
     },
     "up": 39.05,
-    "down": 18
+    "down": 12
    },
    "kurz": {
     "alt": {
      "label": "alt. Boden schon bei 18,4 $",
      "prob": 40
-    }
+    },
+    "up": 18.4,
+    "down": 12.8
    }
   },
   "pros": [
@@ -3913,10 +4029,10 @@
   "name": "Nu Holdings",
   "group": "Watchlist",
   "sector": "Digitalbank Lateinamerika",
-  "price": 11.455,
+  "price": 11.245,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−3,1 % am 20.11.",
+  "chg_note": "−4,9 % am 20.11.",
   "bias": "neutral",
   "wave_primary": "ABC-Korrektur vom Hoch 16,22 $ (14.8.) bis 11,62 $ (26.10.), Doppelboden mit 11,79 $ (12.11.). Am 13.11. nach den Zahlen +11,8 % auf 13,22 $ (Hoch 13,25 $) – Schluss über der Bestätigung 13 $. Hauptszenario: neue Aufwärtswelle Richtung 14,2–15 $ (61,8 % Rücklauf).",
   "wave_alt": "Unter 11,2 $ wäre der Doppelboden gescheitert → 9,5–10 $.",
@@ -3933,7 +4049,7 @@
   "alert": "mittel",
   "range_low": 11.2,
   "range_high": 18.98,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "action": "In der Zone 11,4–12,1 $ (Schluss 12,08 $): gestaffelt kaufen, Stop 10,9 $, Ziel 14,2–15 $; über 13 $ Stop auf Einstand.",
   "if_up": "Schluss über 13 $ → Doppelboden bestätigt, Stop auf Einstand; Ziel 14,2–15 $ (61,8 % Rücklauf).",
   "if_wait": "12,1–13 $: halten bzw. nicht hinterherkaufen.",
@@ -3944,9 +4060,9 @@
   "entry_high": 12.1,
   "entry_type": "Rücksetzer",
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-02",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-12",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": "",
   "tv_symbol": "NYSE:NU",
   "lt_view": "neutral",
@@ -4034,49 +4150,49 @@
   "name": "Robinhood",
   "group": "Watchlist",
   "sector": "Broker / Fintech",
-  "price": 64.99,
+  "price": 62.17,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−5,3 % am 20.11.",
+  "chg_note": "−9,4 % am 20.11.",
   "bias": "neutral",
-  "wave_primary": "Aufwärtswelle vom März-Tief (63,5 $) bis 126,7 $ (23.9.), danach Abwärtsbewegung: 75,5 $ (5.11.), Erholung bis 86,2 $ (11.11.), seit 13.11. neuer Abwärtsschub auf 67,3 $ (Tief 17.11.). Die Korrektur weitet sich wie in der Alternative Richtung März-Tief aus; mögliche Endzone 64–67 $ (Doppelboden mit 63,5 $).",
-  "wave_alt": "Schluss unter 63,5 $ (März-Tief) → der ganze Anstieg ist korrigiert, nächste Marke um 55 $.",
-  "target_low": 80,
-  "target_high": 88,
-  "support_low": 63.5,
-  "support_high": 67,
-  "invalidation": 63.5,
-  "trigger": 78,
-  "plan": "Hohes Potenzial: Online-Broker mit Krypto-Handel, Bank- und Rentenprodukten; schwankt stark mit dem Krypto-Markt.",
-  "news_brief": "17.11.: −4,0 % auf 69,2 $ (Tief 67,3 $) – Krypto- und Wachstumswerte schwach, Stop 68 $ intraday unterschritten.",
+  "wave_primary": "Hoch 126,7 $ (23.9.), Abwärtswelle bis 67,3 $ (17.11.), heute Schluss 62,2 $ unter dem März-Tief 63,5 $ – neues Jahrestief. Nächste Unterstützung 50–55 $ (Hochs März 2025, 78,6 % des Anstiegs seit April 2025 ≈ 55 $).",
+  "wave_alt": "Fehlbruch unter 63,5 $; Schluss über 64 $ wäre das Zeichen.",
+  "target_low": 70,
+  "target_high": 78,
+  "support_low": 50,
+  "support_high": 55,
+  "invalidation": 45,
+  "trigger": 64,
+  "plan": "Meiden – März-Tief 63,5 $ gebrochen. Erst in 50–55 $ gestaffelt und klein kaufen, Stop 45 $, Ziel 70–78 $; über 64 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −9,4 % auf 62,2 $ – Krypto (Bitcoin −5 % auf ≈ 58.600 $) und Wachstumswerte schwach; neues Jahrestief. 17.11.: −4,0 % auf 69,2 $ (Tief 67,3 $) – Krypto- und Wachstumswerte schwach, Stop 68 $ intraday unterschritten.",
   "next_event": "Q3-Zahlen (Anfang Nov., Termin prüfen)",
   "next_event_date": "",
   "alert": "mittel",
-  "range_low": 63.515,
+  "range_low": 61.76,
   "range_high": 139.75,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Plan v2 (Zone 72–76 $) am 17.11. ausgestoppt (Tief 67,25 $ unter Stop 68 $, Schluss 69,2 $). Neu: in 64–67 $ gestaffelt und klein kaufen, Stop 61,5 $, Ziel 80–88 $; über 78 $ Stop auf Einstand.",
-  "if_up": "Schluss über 78 $ → Erholung, Stop auf Einstand; Teilgewinne bei 80–88 $.",
-  "if_wait": "67–78 $: nicht kaufen, Zone 64–67 $ abwarten.",
-  "if_down": "In 64–67 $ gestaffelt kaufen, Stop 61,5 $; Schluss unter 61,5 $ (unter dem März-Tief) → kein Einstieg.",
-  "stop": 61.5,
-  "status": "zone",
-  "entry_low": 64,
-  "entry_high": 67,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – März-Tief 63,5 $ gebrochen. Erst in 50–55 $ gestaffelt und klein kaufen, Stop 45 $, Ziel 70–78 $; über 64 $ Stop auf Einstand.",
+  "if_up": "Schluss über 64 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "55–64 $: abwarten.",
+  "if_down": "50–55 $ klein kaufen, Stop 45 $.",
+  "stop": 45,
+  "status": "meiden",
+  "entry_low": 50,
+  "entry_high": 55,
   "entry_type": "Rücksetzer",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-27",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
-  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Ende Nov.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-15",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Anfang Dez.)",
   "tv_symbol": "NASDAQ:HOOD",
   "lt_view": "spekulativ",
   "lt_conf": "mittel",
   "lt_target_low": 120,
   "lt_target_high": 150,
-  "lt_stop": 62,
+  "lt_stop": 44,
   "lt_until": "Jan. 2027",
-  "lt_text": "Riesiger Anstieg 2025 (30 $ → 154 $), Korrektur bis 64 $ (März 2026). Großes Ziel ist die Rückkehr Richtung Hoch – stark abhängig vom Krypto-Markt.",
+  "lt_text": "Riesiger Anstieg 2025 (30 $ → 154 $), Korrektur bis 64 $ (März 2026). Großes Ziel ist die Rückkehr Richtung Hoch – stark abhängig vom Krypto-Markt. Absicherung am 20.11. von 62 $ auf 44 $ gesenkt (unter die neue Kaufzone 50–55 $).",
   "lt_consensus": 130.67,
   "lt_analysts": 30,
   "waves": [
@@ -4100,25 +4216,25 @@
    "kurz": {
     "path": [
      {
-      "p": 65.5,
+      "p": 52,
       "l": "C"
      },
      {
-      "p": 84,
-      "l": "1"
+      "p": 74.0,
+      "l": "Ziel"
      }
     ],
     "alt": {
      "path": [
       {
-       "p": 58
+       "p": 72
       }
      ],
-     "label": "alt. unter März-Tief",
-     "prob": 40
+     "label": "alt. Fehlbruch",
+     "prob": 35
     },
-    "up": 78,
-    "down": 61.5
+    "up": 64,
+    "down": 45
    },
    "lang": {
     "count": [
@@ -4158,10 +4274,11 @@
      "label": "alt. (2) tiefer",
      "prob": 40
     },
-    "up": 126.74
+    "up": 126.74,
+    "down": 44
    }
   },
-  "stop_reset_reason": "Stop 68 $ wurde intraday gerissen; der neue Plan sitzt am März-Tief 63,5 $ (Doppelboden-Chance) mit Stop darunter, kleinerer Position und näherem Ziel 80–88 $ statt 95–105 $ – kein bloß verschobener Verlust."
+  "stop_reset_reason": "Plan v3 (Zone 64–67 $, Stop 61,5 $) noch nicht ausgestoppt, aber der Kurs ist unter das März-Tief 63,5 $ gefallen und der Stop lag im Tagesrauschen (0,13 Schwankungen). Neue Zone an den Hochs März 2025 (50–55 $) mit Stop darunter."
  },
  {
   "ticker": "MBG",
@@ -4226,17 +4343,17 @@
     "l": "ii"
    }
   ],
-  "price": 37.73,
+  "price": 37.62,
   "price_date": "2026-11-20",
-  "chg_note": "−1,4 % am 20.11.",
+  "chg_note": "−1,7 % am 20.11.",
   "range_low": 37.57,
   "range_high": 62.34,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-27",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Ende Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
   "lt_view": "neutral",
   "lt_conf": "niedrig",
   "lt_target_low": 50,
@@ -4310,7 +4427,7 @@
   "currency": "USD",
   "tv_symbol": "NASDAQ:TTD",
   "bias": "neutral",
-  "status": "trend",
+  "status": "zone",
   "entry_low": 12.9,
   "entry_high": 13.5,
   "entry_type": "Rücksetzer",
@@ -4365,16 +4482,16 @@
     "l": "2"
    }
   ],
-  "price": 13.795,
+  "price": 13.38,
   "price_date": "2026-11-20",
-  "chg_note": "−5,3 % am 20.11.",
+  "chg_note": "−8,1 % am 20.11.",
   "range_low": 11.62,
-  "range_high": 41.146,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-21",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "range_high": 41.005,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2027-01-01",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": "",
   "lt_view": "bärisch",
   "lt_conf": "niedrig",
@@ -4495,24 +4612,24 @@
     "l": "2"
    }
   ],
-  "price": 91.03,
+  "price": 87.66,
   "price_date": "2026-11-20",
-  "chg_note": "+2,4 % am 20.11.",
+  "chg_note": "−1,4 % am 20.11.",
   "range_low": 81.24,
   "range_high": 175.0,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 5,
-  "horizon_end": "2026-12-26",
-  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-29",
+  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
   "lt_view": "neutral",
-  "lt_conf": "mittel",
+  "lt_conf": "niedrig",
   "lt_target_low": 140,
   "lt_target_high": 170,
-  "lt_stop": 90,
+  "lt_stop": 80,
   "lt_until": "Mai 2027",
-  "lt_text": "Hoch 240 $ (Jan. 2025), Tief 81 $ (Apr. 2026), danach schwankend zwischen 100 und 160 $. Großes Ziel ist der obere Bereich dieser Spanne.",
+  "lt_text": "Hoch 240 $ (Jan. 2025), Tief 81 $ (Apr. 2026), danach schwankend zwischen 100 und 160 $. Großes Ziel ist der obere Bereich dieser Spanne. Wochenschluss 20.11. bei 87,7 $ unter der alten Absicherung 90 $ – neu 80 $ (unter dem Tief April 2026 bei 81,2 $).",
   "lt_consensus": 154.69,
   "lt_analysts": 46,
   "ew": {
@@ -4554,7 +4671,8 @@
      "label": "alt. (C) unter 81 $",
      "prob": 40
     },
-    "up": 159.5
+    "up": 159.5,
+    "down": 80
    },
    "kurz": {
     "path": [
@@ -4591,27 +4709,27 @@
   "tv_symbol": "NYSE:MOH",
   "bias": "bullisch",
   "status": "meiden",
-  "entry_low": 214,
-  "entry_high": 222,
+  "entry_low": 178,
+  "entry_high": 186,
   "entry_type": "Rücksetzer",
-  "stop": 199,
-  "invalidation": 178,
-  "trigger": 244.9,
-  "target_low": 257,
-  "target_high": 280,
-  "support_low": 196,
-  "support_high": 203,
+  "stop": 170,
+  "invalidation": 165,
+  "trigger": 210,
+  "target_low": 215,
+  "target_high": 230,
+  "support_low": 178,
+  "support_high": 186,
   "alert": "mittel",
-  "wave_primary": "Korrektur W-X-Y vom Juli-Hoch 244,9 $ (14.7.) endete am 2.10. bei 178,0 $. Seitdem Welle 1 bis 234,3 $ (5.11.), Welle 2 bis 200,8 $ (9.11.); der Schluss 233,1 $ am 16.11. über 226 $ zeigt den Start von Welle 3 (1,0× Welle 1 ≈ 257 $, 1,618× ≈ 292 $).",
-  "wave_alt": "Der Anstieg ist nur eine B-Welle unter dem Juli-Hoch 244,9 $; danach Rücklauf Richtung 200 $. Unter 199 $ gilt die Alternative.",
-  "plan": "Ausbruch über 226 $ am 16.11. (+11,3 %, Rally der Medicaid-Versicherer: Centene +5 %, Elevance +4 %, ohne eigene Firmenmeldung). Die alte Zone 196–203 $ liegt jetzt 13 % tiefer und passt nicht mehr zum Ziel; neue Zone 214–222 $ = Ausbruchsbereich vom 4.11./Lücke zum 13.11. (Stop 199 $ unter dem Welle-2-Tief). Ziel 257–280 $ (1,0–1,25× Welle 1 von 200,8 $).",
-  "news_brief": "18.11.: −6,6 % auf 206,6 $ – Krankenversicherer den zweiten Tag unter Druck nach CMS-Vorschlag zu Medicare-Advantage-Prüfungen (UnitedHealth −10 %, Humana −13 %). Kurs unter der Zone, Stop 199 $ hält. 17.11.: −5,1 % auf 221,2 $ – Gewinnmitnahmen nach +11 % am Vortag, Kurs zurück in der Zone. 16.11.: +11,3 % auf 233,1 $ – Medicaid-Versicherer gefragt (Centene, Elevance mit), Schluss über der Bestätigung 226 $. 4.11.: +9 % auf 226,4 $.",
+  "wave_primary": "Hoch 244,9 $ (14.7.), Tief 178 $ (2.10.), Erholung bis 234,3 $ (5.11.). Seitdem tiefere Hochs; heute Schluss 198,4 $ unter dem Stop – Rücklauf Richtung Oktober-Tief 178 $ (61,8 % des Anstiegs 178 → 234 ≈ 199 $ gebrochen).",
+  "wave_alt": "Halt bei ~197 $ und Rückkehr über 210 $.",
+  "plan": "Meiden – Stop 199 $ gebrochen. Erst in 178–186 $ gestaffelt kaufen, Stop 170 $, Ziel 215–230 $; über 210 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −2,4 % auf 198,4 $ – Krankenversicherer weiter unter Druck (Medicare-Advantage-Prüfungen). 18.11.: −6,6 % auf 206,6 $ – Krankenversicherer den zweiten Tag unter Druck nach CMS-Vorschlag zu Medicare-Advantage-Prüfungen (UnitedHealth −10 %, Humana −13 %). Kurs unter der Zone, Stop 199 $ hält. 17.11.: −5,1 % auf 221,2 $ – Gewinnmitnahmen nach +11 % am Vortag, Kurs zurück in der Zone. 16.11.: +11,3 % auf 233,1 $ – Medicaid-Versicherer gefragt (Centene, Elevance mit), Schluss über der Bestätigung 226 $. 4.11.: +9 % auf 226,4 $.",
   "next_event": "Q4-Zahlen und Ausblick 2027 (Anfang Feb., unbestätigt)",
   "next_event_date": "2027-02-05",
-  "action": "Nicht neu kaufen: Kurs 206,6 $ unter der Zone 214–222 $, Krankenversicherer unter Branchen-Druck. Wer in der Zone gekauft hat: Stop 199 $ (unter dem Tief 200,8 $) halten.",
-  "if_up": "Schluss über 244,9 $ (Juli-Hoch) → Welle 3 bestätigt, Stop auf Einstand; Teilgewinne ab 257 $.",
-  "if_wait": "199–214 $: nicht kaufen, Stop halten.",
-  "if_down": "Schluss unter 199 $ → Welle-2-Tief gebrochen, Alternative (nur B-Welle) gilt; unter 178 $ Zählung falsch.",
+  "action": "Meiden – Stop 199 $ gebrochen. Erst in 178–186 $ gestaffelt kaufen, Stop 170 $, Ziel 215–230 $; über 210 $ Stop auf Einstand.",
+  "if_up": "Schluss über 210 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "186–210 $: abwarten.",
+  "if_down": "178–186 $ gestaffelt kaufen, Stop 170 $.",
   "pros": [
    "Q3 über den Erwartungen, Prognose bestätigt",
    "Medicaid-Tariferhöhungen 2027 (ca. 6–7 %) über dem Kostentrend",
@@ -4655,24 +4773,24 @@
     "l": "2"
    }
   ],
-  "price": 205.13,
+  "price": 198.39,
   "price_date": "2026-11-20",
-  "chg_note": "+0,9 % am 20.11.",
+  "chg_note": "−2,4 % am 20.11.",
   "range_low": 121.06,
   "range_high": 244.89,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-04",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
-  "entry_eta_text": "",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-31",
+  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "lt_view": "neutral",
   "lt_conf": "mittel",
   "lt_target_low": 260,
   "lt_target_high": 300,
-  "lt_stop": 175,
+  "lt_stop": 165,
   "lt_until": "Jan. 2027",
-  "lt_text": "Absturz von 424 $ (2024) auf 121 $ (Feb. 2026), seitdem Erholung bis 245 $ und höhere Tiefs. Großes Ziel ist eine Erholung um 38,2–50 % des Absturzes.",
+  "lt_text": "Absturz von 424 $ (2024) auf 121 $ (Feb. 2026), seitdem Erholung bis 245 $ und höhere Tiefs. Großes Ziel ist eine Erholung um 38,2–50 % des Absturzes. Absicherung am 20.11. von 175 $ auf 165 $ gesenkt (unter das Oktober-Tief 178 $ und die neue Kaufzone).",
   "lt_consensus": 219.53,
   "lt_analysts": 17,
   "ew": {
@@ -4709,7 +4827,8 @@
      "label": "alt. 2 tiefer",
      "prob": 40
     },
-    "up": 244.89
+    "up": 244.89,
+    "down": 165
    },
    "kurz": {
     "count": [
@@ -4746,28 +4865,28 @@
     ],
     "path": [
      {
-      "p": 218,
-      "l": "ii"
+      "p": 182,
+      "l": "C"
      },
      {
-      "p": 268.5,
-      "l": "3"
+      "p": 222.5,
+      "l": "Ziel"
      }
     ],
     "alt": {
-     "label": "alt. B-Welle, Rücklauf",
-     "prob": 40,
      "path": [
       {
-       "p": 200,
-       "l": "C"
+       "p": 222
       }
-     ]
+     ],
+     "label": "alt. Boden bei 197 $",
+     "prob": 35
     },
-    "up": 244.9,
-    "down": 199
+    "up": 210,
+    "down": 170
    }
-  }
+  },
+  "stop_reset_reason": "Plan (Zone 214–222 $, Stop 199 $) per Schluss ausgestoppt, kein Bestand. Neue Zone am Oktober-Tief 178 $ mit Stop darunter."
  },
  {
   "ticker": "NKE",
@@ -4799,15 +4918,15 @@
   "if_up": "Schluss über 38,7 $ → Erholung lebt wieder, Ziel 41,7–43,5 $.",
   "if_wait": "33,8–38,7 $: nicht kaufen.",
   "if_down": "In 32,5–33,8 $ gestaffelt und klein kaufen, Stop 30,8 $; Schluss unter 30,8 $ → neues Mehrjahrestief, kein Einstieg.",
-  "price": 33.88,
+  "price": 32.935,
   "price_date": "2026-11-20",
   "range_low": 31.97,
   "range_high": 69.14,
-  "chg_note": "−1,3 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−4,1 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
+  "horizon_end": "2026-12-20",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": "",
   "pros": [
@@ -4928,16 +5047,16 @@
   "name": "Meta Platforms",
   "sector": "Internet / Social Media",
   "tv_symbol": "NASDAQ:META",
-  "status": "zone",
+  "status": "meiden",
   "bias": "neutral",
   "entry_type": "Rücksetzer",
-  "entry_low": 595,
-  "entry_high": 615,
-  "stop": 578,
-  "invalidation": 524.49,
-  "trigger": 660,
-  "target_low": 700,
-  "target_high": 740,
+  "entry_low": 525,
+  "entry_high": 545,
+  "stop": 505,
+  "invalidation": 520,
+  "trigger": 600,
+  "target_low": 640,
+  "target_high": 680,
   "waves": [
    {
     "d": "2026-09-24",
@@ -4960,16 +5079,16 @@
     "l": "C"
    }
   ],
-  "wave_primary": "ABC-Korrektur vom Hoch 779,82 $ (24.9.): A bis 711,68 $ (8.10.), B bis 771,27 $ (13.10.), C nach den Q3-Zahlen bis 606,41 $ (2.11.) – knapp unter dem 61,8 %-Rücklauf (622 $) der Welle ab 524,49 $ (30.7.). Hält 606 $, ist die Korrektur fertig und eine neue Aufwärtswelle Richtung 700–740 $ möglich.",
-  "wave_alt": "C ist noch nicht fertig: Schluss unter 600 $ öffnet 560–575 $ (Sommer-Tiefs).",
-  "plan": "Großer Plattform-Konzern mit stark wachsendem Werbegeschäft; seit über einem Jahr Seitwärtsphase zwischen 520 und 800 $. Kaufidee am unteren Teil der Spanne.",
-  "news_brief": "Q3-Zahlen am 29.10.: kräftiges Umsatzwachstum, aber der Markt störte sich an den hohen KI-Ausgaben – Kurs fiel bis 606 $ (2.11.).",
+  "wave_primary": "Rekord 779,8 $ (24.9.), Korrektur bis 583,8 $ (5.11.), Erholung bis 648,5 $ (11.11.). Heute Schluss 560,8 $ unter dem Novembertief – die Korrektur läuft als größere ABC weiter, Ziel C an den Tiefen 520–540 $ (März 520,3 $, Juli 524,5 $).",
+  "wave_alt": "Schnelle Rückkehr über 584 $ → Fehlbruch, dann wieder 640–700 $.",
+  "plan": "Meiden – Stop 578 $ gebrochen. Erst in 525–545 $ gestaffelt kaufen, Stop 505 $, Ziel 640–680 $; über 600 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −4,3 % auf 560,8 $ – unter dem Stop 578 $ und dem Novembertief 583,8 $. Q3-Zahlen am 29.10.: kräftiges Umsatzwachstum, aber der Markt störte sich an den hohen KI-Ausgaben – Kurs fiel bis 606 $ (2.11.).",
   "next_event": "Q4-Zahlen",
   "next_event_date": "2027-01-27",
-  "action": "In der Zone 595–615 $ (Schluss 616,38 $): gestaffelt kaufen, Stop 578 $, Ziel 700–740 $; über 660 $ Stop auf Einstand.",
-  "if_up": "Schluss über 660 $ → Korrektur beendet, Ziel 700–740 $.",
-  "if_wait": "615–660 $: halten bzw. nicht hinterherkaufen.",
-  "if_down": "Schluss unter 578 $ → C läuft weiter Richtung 560 $, kein Einstieg.",
+  "action": "Meiden – Stop 578 $ gebrochen. Erst in 525–545 $ gestaffelt kaufen, Stop 505 $, Ziel 640–680 $; über 600 $ Stop auf Einstand.",
+  "if_up": "Schluss über 600 $ → Fehlbruch; Rücksetzer abwarten.",
+  "if_wait": "545–600 $: abwarten.",
+  "if_down": "525–545 $ gestaffelt kaufen, Stop 505 $.",
   "pros": [
    "Kurs am unteren Teil der einjährigen Spanne (520–800 $)",
    "Umsatz wächst weiter zweistellig",
@@ -4985,11 +5104,11 @@
   "lt_conf": "mittel",
   "lt_target_low": 790,
   "lt_target_high": 900,
-  "lt_stop": 520,
+  "lt_stop": 500,
   "lt_until": "Dez. 2027",
   "lt_entry_low": 560,
   "lt_entry_high": 615,
-  "lt_text": "Großer Aufwärtstrend seit dem Tief 2022 (88 $). Seit dem Rekordhoch 796 $ (Aug. 2025) läuft eine breite Seitwärts-Korrektur [4] zwischen 520 und 780 $. Ist sie fertig, zielt Welle [5] über das Rekordhoch auf 790–900 $.",
+  "lt_text": "Großer Aufwärtstrend seit dem Tief 2022 (88 $). Seit dem Rekordhoch 796 $ (Aug. 2025) läuft eine breite Seitwärts-Korrektur [4] zwischen 520 und 780 $. Ist sie fertig, zielt Welle [5] über das Rekordhoch auf 790–900 $. Absicherung am 20.11. von 520 $ auf 500 $ gesenkt (unter die neue Kaufzone an den Jahrestiefs).",
   "ew": {
    "lang": {
     "count": [
@@ -5034,33 +5153,52 @@
      "label": "alt. [4] tiefer",
      "prob": 35
     },
-    "up": 796.25
+    "up": 796.25,
+    "down": 500
    },
    "kurz": {
     "alt": {
-     "label": "alt. tiefer",
-     "prob": 40
-    }
+     "path": [
+      {
+       "p": 505
+      }
+     ],
+     "label": "alt. tiefer bis 505 $",
+     "prob": 35
+    },
+    "path": [
+     {
+      "p": 532,
+      "l": "C"
+     },
+     {
+      "p": 660.0,
+      "l": "Ziel"
+     }
+    ],
+    "up": 600,
+    "down": 505
    }
   },
   "currency": "USD",
   "group": "Watchlist",
-  "alert": "",
-  "support_low": 595,
-  "support_high": 615,
-  "price": 572.39,
+  "alert": "mittel",
+  "support_low": 520,
+  "support_high": 545,
+  "price": 560.84,
   "price_date": "2026-11-20",
   "range_low": 520.26,
   "range_high": 779.82,
-  "chg_note": "−4,0 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−5,9 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 848.38,
   "lt_analysts": 58,
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-08",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
-  "entry_eta_text": ""
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-18",
+  "horizon_text": "Ziel in ca. 4–8 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
+  "stop_reset_reason": "Plan (Zone 595–615 $, Stop 578 $) per Schluss ausgestoppt, kein Bestand. Neue Zone an den Tiefs März/Juli 2026 (520–540 $) mit Stop darunter."
  },
  {
   "ticker": "ADBE",
@@ -5204,19 +5342,19 @@
   "alert": "mittel",
   "support_low": 195,
   "support_high": 205,
-  "price": 225.09,
+  "price": 217.71,
   "price_date": "2026-11-20",
   "range_low": 190.12,
   "range_high": 362.71,
-  "chg_note": "+1,5 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−1,8 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 268.3,
   "lt_analysts": 33,
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 4,
+  "horizon_weeks_high": 10,
+  "horizon_end": "2027-01-29",
+  "horizon_text": "Ziel in ca. 4–10 Wochen (bis ca. Ende Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Dez.)",
   "stop_reset_reason": "Stop 223 $ brach am 19.11. per Schluss; die neue Zone liegt am Juni-Tief, das Ziel wurde auf 240–250 $ gesenkt (statt 295–320 $) – kein bloß verschobener Verlust."
  },
  {
@@ -5348,19 +5486,19 @@
   "alert": "mittel",
   "support_low": 172,
   "support_high": 182,
-  "price": 198.22,
+  "price": 194.82,
   "price_date": "2026-11-20",
   "range_low": 114.625,
-  "range_high": 298.485,
-  "chg_note": "−3,6 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "range_high": 291.8,
+  "chg_note": "−5,3 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 235.19,
   "lt_analysts": 45,
-  "horizon_weeks_low": 4,
-  "horizon_weeks_high": 9,
-  "horizon_end": "2027-01-22",
-  "horizon_text": "Ziel in ca. 4–9 Wochen (bis ca. Ende Jan.)",
-  "entry_eta_text": "Einstiegszone in ca. 1–3 Wochen (bis ca. Mitte Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-15",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "stop_reset_reason": "Stop 185 $ fiel am 12.11. intraday (Tief 184,6 $); die neue Zone liegt am 61,8-%-Rücklauf des Anstiegs 119,5 → 267,9 $, der Stop unter dem Sept.-Tief 159,2 $ – echte Struktur statt Rauschen, Ziel ebenfalls gesenkt."
  },
  {
@@ -5368,16 +5506,16 @@
   "name": "Nvidia",
   "sector": "Halbleiter",
   "tv_symbol": "NASDAQ:NVDA",
-  "status": "boden",
+  "status": "meiden",
   "bias": "neutral",
   "entry_type": "Rücksetzer",
-  "entry_low": 148,
-  "entry_high": 155,
-  "stop": 142,
-  "invalidation": 148.8,
-  "trigger": 170,
-  "target_low": 185,
-  "target_high": 200,
+  "entry_low": 112,
+  "entry_high": 118,
+  "stop": 104,
+  "invalidation": 101,
+  "trigger": 146,
+  "target_low": 145,
+  "target_high": 160,
   "waves": [
    {
     "d": "2026-06-29",
@@ -5395,16 +5533,16 @@
     "l": "A"
    }
   ],
-  "wave_primary": "Rekord 243,4 $ am 6.10. (Welle (3) bzw. B). Seitdem ABC abwärts: A bis 181,5 $ (5.11.), B 196,3 $ (5.11.), C bisher 148,8 $ (12.11., Intraday-Kapitulation, Schluss 166,2 $). Hauptszenario: C ist am 12.11. ausgelaufen – Erholung Richtung 200–218 $.",
-  "wave_alt": "C läuft noch: Schluss unter 145 $ öffnet 130–135 $ (Tief März 2026 bei 164 $ ist schon klar gebrochen).",
-  "plan": "Die starken Zahlen (17.11.) haben den Kurs nicht getragen: 151 $ am Schluss, knapp über dem Tief 148,8 $ (12.11.) – möglicher Doppelboden der C-Welle seit dem Rekord 243,4 $. Die alte Zone 158–168 $ lag über dem Kurs; neue Zone 148–155 $ direkt am Doppeltief, Stop 142 $ mit Abstand unter dem Tief (alter Stop 145 $ lag im Tagesrauschen). Ziel 185–200 $ statt 200–218 $. Wegen Führungswechsel und SEC-Prüfung bewusst kleine Position.",
-  "news_brief": "19.11.: −3,3 % auf 146,0 $ – knapp unter der Zone 148–155 $, Stop 142 $ nur 2,7 % entfernt. 18.11.: −2,9 % auf 151,0 $ – vorbörsliche Gewinne nach den Zahlen komplett abgegeben. 17.11.: Q3 klar über Erwartung – Umsatz 115,8 Mrd. $ (erw. 109,2), Rechenzentren 107,6 Mrd. $, EPS 2,68 $ (erw. 2,47), Q4-Prognose ca. 130 Mrd. $ (erw. ca. 125), 150 Mrd. $ Rückkauf; nachbörslich ca. +2,4 %. Zugleich Bericht (WSJ) über SEC-Prüfung von Offenlegungen. 16.11.: −4,1 % auf 156,1 $ – knapp unter der Zone 158–168 $ und unter der langfristigen Absicherung 160 $ (zählt erst der Wochenschluss). Chip-Ausverkauf vor den ersten Zahlen ohne Jensen Huang (Rücktritt 12.11., Colette Kress Interims-Chefin).",
+  "wave_primary": "Rekord 243,4 $ (6.10.), Welle A bis 148,8 $ (12.11., Huang-Rücktritt), kleine B bis 170 $ (13.11.). Heute Schluss 125,5 $ – Welle C läuft. C = 1,0 × A ergäbe ≈ 76 $, realistischer ist eine Unterstützung an den Tiefs 2025 (113–116 $, Feb./März) bzw. 50 % des Anstiegs seit April 2025 (≈ 165 $ längst unterschritten, 78,6 % ≈ 110 $).",
+  "wave_alt": "Kapitulation bei 124,5 $ als Ende von C; ein Schluss über 146 $ würde das anzeigen.",
+  "plan": "Meiden – Stop 142 $ gebrochen, Tief seit Mai 2025. Erst in 112–118 $ gestaffelt kaufen, Stop 104 $, Ziel 145–160 $; über 146 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −14,0 % auf 125,5 $ – Chip-Ausverkauf trotz starker Zahlen, Tief seit Mai 2025. 19.11.: −3,3 % auf 146,0 $ – knapp unter der Zone 148–155 $, Stop 142 $ nur 2,7 % entfernt. 18.11.: −2,9 % auf 151,0 $ – vorbörsliche Gewinne nach den Zahlen komplett abgegeben. 17.11.: Q3 klar über Erwartung – Umsatz 115,8 Mrd. $ (erw. 109,2), Rechenzentren 107,6 Mrd. $, EPS 2,68 $ (erw. 2,47), Q4-Prognose ca. 130 Mrd. $ (erw. ca. 125), 150 Mrd. $ Rückkauf; nachbörslich ca. +2,4 %. Zugleich Bericht (WSJ) über SEC-Prüfung von Offenlegungen. 16.11.: −4,1 % auf 156,1 $ – knapp unter der Zone 158–168 $ und unter der langfristigen Absicherung 160 $ (zählt erst der Wochenschluss). Chip-Ausverkauf vor den ersten Zahlen ohne Jensen Huang (Rücktritt 12.11., Colette Kress Interims-Chefin).",
   "next_event": "Q3-Zahlen",
   "next_event_date": "2026-11-17",
-  "action": "Schluss 146,0 $ knapp unter der Zone 148–155 $: wer klein gekauft hat, hält mit Stop 142 $ (Doppeltief); keine Zukäufe unter 148 $. Ziel 185–200 $; über 170 $ Stop auf Einstand.",
-  "if_up": "Schluss über 170 $ (Hoch 13.11.) → Boden bestätigt, Stop auf Einstand; Ziel 185–200 $ (50–61,8 % des Rückgangs seit 243 $).",
-  "if_wait": "155–170 $: halten, nicht hinterherkaufen.",
-  "if_down": "In 148–155 $ klein kaufen, Stop 142 $; Schluss unter 142 $ → C-Welle läuft weiter Richtung 130–135 $.",
+  "action": "Meiden – Stop 142 $ gebrochen, Tief seit Mai 2025. Erst in 112–118 $ gestaffelt kaufen, Stop 104 $, Ziel 145–160 $; über 146 $ Stop auf Einstand.",
+  "if_up": "Schluss über 146 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "118–146 $: abwarten.",
+  "if_down": "112–118 $ gestaffelt kaufen, Stop 104 $.",
   "pros": [
    "Wachstum und Margen weiter sehr hoch",
    "Kurs nahe dem unteren Teil der Jahresspanne",
@@ -5416,15 +5554,15 @@
    "Unter der 50-Tage-Linie"
   ],
   "risk": "Zahlen am 17.11. – eine Enttäuschung kann die Spanne nach unten brechen.",
-  "lt_view": "bullisch",
-  "lt_conf": "mittel",
-  "lt_target_low": 270,
-  "lt_target_high": 310,
-  "lt_stop": 160,
-  "lt_until": "Dez. 2027",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 200,
+  "lt_target_high": 240,
+  "lt_stop": 85,
+  "lt_until": "Ende 2027",
   "lt_entry_low": 175,
   "lt_entry_high": 197,
-  "lt_text": "Großer Aufwärtstrend seit 2022 (11 $). Welle (3) endete wohl bei 243 $; die Seitwärtsphase ist Welle (4). Danach zielt Welle (5) auf 270–310 $.",
+  "lt_text": "Großer Aufwärtstrend seit 2022 (11 $) bis 243 $ (Okt. 2026). Der Wochenschluss 125,5 $ liegt klar unter der alten Absicherung 160 $ – Welle (4) ist viel tiefer als gedacht (−48 %). Neu: Absicherung 85 $ (unter dem Tief April 2025); hält sie, ist eine Erholung Richtung 200–240 $ (Rückkehr nahe ans Hoch) das große Ziel, aber mit niedriger Sicherheit.",
   "ew": {
    "lang": {
     "count": [
@@ -5451,11 +5589,11 @@
     ],
     "path": [
      {
-      "p": 185,
+      "p": 112,
       "l": "(4)"
      },
      {
-      "p": 290,
+      "p": 220,
       "l": "(5)"
      }
     ],
@@ -5468,34 +5606,52 @@
      "label": "alt. (4) tiefer",
      "prob": 35
     },
-    "up": 243.37
+    "up": 243.37,
+    "down": 85
    },
    "kurz": {
     "alt": {
-     "label": "alt. tiefer",
+     "path": [
+      {
+       "p": 95
+      }
+     ],
+     "label": "alt. bis Tief April 2025",
      "prob": 40
-    }
+    },
+    "path": [
+     {
+      "p": 115,
+      "l": "C"
+     },
+     {
+      "p": 152.5,
+      "l": "Ziel"
+     }
+    ],
+    "up": 146,
+    "down": 104
    }
   },
   "currency": "USD",
   "group": "Watchlist",
   "alert": "mittel",
-  "support_low": 148,
-  "support_high": 155,
-  "price": 136.32,
+  "support_low": 113,
+  "support_high": 118,
+  "price": 125.53,
   "price_date": "2026-11-20",
-  "range_low": 135.515,
+  "range_low": 124.5,
   "range_high": 243.37,
-  "chg_note": "−6,6 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−14,0 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 327.14,
   "lt_analysts": 58,
   "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-19",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
-  "stop_reset_reason": "Kein Stop-Bruch (Tief 150,3 $ > 145 $): Die Zone lag nach dem Rückgang über dem Kurs; neue Zone am Doppeltief 148,8/150,3 $, Stop 142 $ hinter dem Tief statt im Rauschen (stop_atr vorher 0,5), Ziel entsprechend näher."
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-24",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Ende Nov.)",
+  "stop_reset_reason": "Plan (Zone 148–155 $, Stop 142 $) per Schluss ausgestoppt, kein Bestand. Neue Zone an den Tiefs Feb./März 2025 (113–116 $) mit Stop darunter."
  },
  {
   "ticker": "INTC",
@@ -5611,18 +5767,18 @@
   "alert": "",
   "support_low": 46,
   "support_high": 52,
-  "price": 53.83,
+  "price": 51.28,
   "price_date": "2026-11-20",
   "range_low": 32.89,
   "range_high": 142.35,
-  "chg_note": "−3,4 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−8,0 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 92.72,
   "lt_analysts": 43,
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-28",
-  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-10",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": ""
  },
  {
@@ -5744,18 +5900,18 @@
   "alert": "",
   "support_low": 100,
   "support_high": 104,
-  "price": 101.41,
+  "price": 99.46,
   "price_date": "2026-11-20",
   "range_low": 66.22,
   "range_high": 121.64,
-  "chg_note": "−0,4 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−2,3 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 113.98,
   "lt_analysts": 27,
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2026-12-30",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Ende Dez.)",
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-10",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": ""
  },
  {
@@ -5872,18 +6028,18 @@
   "alert": "",
   "support_low": 78,
   "support_high": 82,
-  "price": 81.28,
+  "price": 79.11,
   "price_date": "2026-11-20",
   "range_low": 68.77,
   "range_high": 132.49,
-  "chg_note": "+0,6 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−2,1 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 88.38,
   "lt_analysts": 13,
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-03",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-08",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
   "entry_eta_text": ""
  },
  {
@@ -6005,18 +6161,18 @@
   "alert": "mittel",
   "support_low": 180,
   "support_high": 200,
-  "price": 200.58,
+  "price": 195,
   "price_date": "2026-11-20",
   "range_low": 22.28,
   "range_high": 280.8,
-  "chg_note": "+0,6 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−2,2 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 138.37,
   "lt_analysts": 19,
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-10",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-12",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": ""
  },
  {
@@ -6143,13 +6299,13 @@
   "range_low": 21.3,
   "range_high": 43.64,
   "chg_note": "−3,1 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 34.15,
   "lt_analysts": 27,
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 7,
-  "horizon_end": "2027-01-05",
-  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "horizon_weeks_high": 8,
+  "horizon_end": "2027-01-16",
+  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
   "entry_eta_text": ""
  },
  {
@@ -6220,15 +6376,15 @@
    "Politische Risiken (USA–China)"
   ],
   "risk": "US-China-Spannungen können den Kurs jederzeit stark drücken.",
-  "lt_view": "bullisch",
+  "lt_view": "neutral",
   "lt_conf": "niedrig",
   "lt_target_low": 160,
   "lt_target_high": 195,
-  "lt_stop": 88,
+  "lt_stop": 65,
   "lt_until": "Dez. 2027",
   "lt_entry_low": 95,
   "lt_entry_high": 103,
-  "lt_text": "Großer Anstieg 2022–2025 (58 → 193 $) als Welle (1), Korrektur (2) bis 92 $. Hält das Tief, zielt Welle (3) auf 160–195 $ (Rückkehr zum Hoch).",
+  "lt_text": "Großer Anstieg 2022–2025 (58 → 193 $) als Welle (1), Korrektur (2) bis 92 $. Hält das Tief, zielt Welle (3) auf 160–195 $ (Rückkehr zum Hoch). Wochenschluss 20.11. bei 81,1 $ unter der alten Absicherung 88 $ – neu 65 $ (unter dem Tief Jan. 2024 bei 66,6 $).",
   "ew": {
    "lang": {
     "count": [
@@ -6267,7 +6423,8 @@
      "label": "alt. (2) tiefer",
      "prob": 40
     },
-    "up": 132.57
+    "up": 132.57,
+    "down": 65
    },
    "kurz": {
     "path": [
@@ -6298,19 +6455,19 @@
   "alert": "mittel",
   "support_low": 74,
   "support_high": 78,
-  "price": 83.31,
+  "price": 81.08,
   "price_date": "2026-11-20",
-  "range_low": 82.84,
+  "range_low": 80.965,
   "range_high": 181.1,
-  "chg_note": "−0,0 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−2,7 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 184.19,
   "lt_analysts": 40,
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 7,
+  "horizon_end": "2027-01-08",
+  "horizon_text": "Ziel in ca. 3–7 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
   "stop_reset_reason": "Stop 84 $ brach am 19.11. nach den Zahlen; neue Zone erst an den Tiefs von 2024/25 und Ziel gesenkt (90–96 $ statt 108–113 $) – kein bloß verschobener Verlust."
  },
  {
@@ -6318,16 +6475,16 @@
   "name": "Micron Technology",
   "sector": "Halbleiter (Speicher)",
   "tv_symbol": "NASDAQ:MU",
-  "status": "boden",
+  "status": "meiden",
   "bias": "bullisch",
   "entry_type": "Rücksetzer",
-  "entry_low": 715,
-  "entry_high": 745,
-  "stop": 645,
-  "invalidation": 650,
-  "trigger": 892,
-  "target_low": 900,
-  "target_high": 990,
+  "entry_low": 470,
+  "entry_high": 510,
+  "stop": 430,
+  "invalidation": 430,
+  "trigger": 667,
+  "target_low": 650,
+  "target_high": 720,
   "waves": [
    {
     "d": "2026-06-25",
@@ -6350,16 +6507,16 @@
     "l": "C"
    }
   ],
-  "wave_primary": "Nach dem Speicher-Boom (Rekord 1.255 $, 25.6.) ABC-Korrektur: A 737,9 $ (29.7.), B 1.108,7 $ (25.9.), C 650 $ (5.11., C ≈ 1,24 × A). Seitdem +25 %: heute +11,9 % auf 811,3 $ (Hoch 827,6 $), Schluss klar über 740 $. Hauptszenario: C ist beendet, neue Aufwärtswelle; nach einem Rücksetzer (Welle 2) Ziel 900–990 $.",
-  "wave_alt": "Der Anstieg ist nur eine B-/X-Erholung; Schluss unter 670 $ → erneuter Test von 650 $ bzw. tiefer (560–600 $).",
-  "plan": "Die alte Zone 560–600 $ wurde nie erreicht, das Tief lag bei 650 $; das alte Ziel 850 $ ist fast erreicht. Neuer Plan: Rücksetzer in 715–745 $ (50–61,8 % des Anstiegs seit 650 $, Bereich 740 $) gestaffelt kaufen, Stop 645 $ (unter dem Tief 650 $ vom 5.11.), Ziel 900–990 $ (Wochenhoch 892 $ bis Hoch 28.10.).",
-  "news_brief": "19.11.: −2,1 % auf 690,4 $ (Hoch 760 $) – Chip-Wende nach dem Anthropic-Debüt, unter der Zone 715–745 $; Stop 645 $ unter dem Nov.-Tief 650 $. 11.11.: +11,9 % auf 811 $ – Speicherwerte springen nach dem CoreWeave-Ausblick. 5.11.: −17,5 % auf 656 $ im Chip-Ausverkauf (Tief 650 $).",
+  "wave_primary": "Rekord 1.255 $ (25.6.), A 737,9 $ (29.7.), B 1.108,7 $ (25.9.), C bis 650 $ (5.11.), Erholung 827,6 $ (11.11.). Heute Schluss 594,5 $ unter dem C-Tief – die Korrektur ist größer. Nächste Unterstützung: Ausbruchsniveau März 2026 (471 $) und 61,8 % des Anstiegs seit April 2025 (≈ 515 $).",
+  "wave_alt": "Schneller Schluss zurück über 650 $ → Fehlbruch, dann wieder 760–890 $.",
+  "plan": "Meiden – Stop 645 $ gebrochen. Erst in 470–510 $ gestaffelt kaufen, Stop 430 $, Ziel 650–720 $; über 667 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −13,9 % auf 594,5 $ (Tief 585 $) – Speicherchip-Sorgen im Chip-Ausverkauf; unter Stop 645 $ und Absicherung 600 $. 19.11.: −2,1 % auf 690,4 $ (Hoch 760 $) – Chip-Wende nach dem Anthropic-Debüt, unter der Zone 715–745 $; Stop 645 $ unter dem Nov.-Tief 650 $. 11.11.: +11,9 % auf 811 $ – Speicherwerte springen nach dem CoreWeave-Ausblick. 5.11.: −17,5 % auf 656 $ im Chip-Ausverkauf (Tief 650 $).",
   "next_event": "Q1-Zahlen",
   "next_event_date": "2026-12-23",
-  "action": "Unter der Zone (Schluss 690,4 $): wer in 715–745 $ gekauft hat, hält mit Stop 645 $; keine neuen Käufe, bis ein Schluss wieder über 715 $ gelingt. Ziel 900–990 $; über 892 $ Stop auf Einstand.",
-  "if_up": "Schluss über 892 $ (Wochenhoch 2.11.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 900–990 $.",
-  "if_wait": "645–715 $: nicht zukaufen.",
-  "if_down": "In 715–745 $ gestaffelt kaufen, Stop 645 $; Schluss unter 645 $ → nicht kaufen, Test von 650 $.",
+  "action": "Meiden – Stop 645 $ gebrochen. Erst in 470–510 $ gestaffelt kaufen, Stop 430 $, Ziel 650–720 $; über 667 $ Stop auf Einstand.",
+  "if_up": "Schluss über 667 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "510–667 $: abwarten.",
+  "if_down": "470–510 $ gestaffelt kaufen, Stop 430 $.",
   "pros": [
    "Kurs nähert sich der Sommer-Unterstützung",
    "Analysten-Kursziel weit über dem Kurs",
@@ -6371,15 +6528,15 @@
    "Sehr hohe Schwankung (Ø 6 % pro Tag)"
   ],
   "risk": "Dreht der Speicherzyklus, kann die Korrektur deutlich tiefer gehen als 700 $.",
-  "lt_view": "bullisch",
-  "lt_conf": "mittel",
-  "lt_target_low": 1250,
-  "lt_target_high": 1600,
-  "lt_stop": 600,
-  "lt_until": "Sept. 2027",
+  "lt_view": "neutral",
+  "lt_conf": "niedrig",
+  "lt_target_low": 1000,
+  "lt_target_high": 1250,
+  "lt_stop": 400,
+  "lt_until": "Ende 2027",
   "lt_entry_low": 740,
   "lt_entry_high": 800,
-  "lt_text": "Großer Aufwärtstrend: Welle (3) endete bei 1.255 $ (Juni 2026), seitdem Welle (4). Hält sie über 600 $, zielt Welle (5) auf 1.250–1.600 $.",
+  "lt_text": "Großer Aufwärtstrend von 61,5 $ (April 2025) bis 1.255 $ (Juni 2026). Der Wochenschluss 594,5 $ liegt unter der alten Absicherung 600 $ – Welle (4) ist tiefer (−53 %). Neu: Absicherung 400 $ (unter 78,6 % ≈ 316 $ wäre zu weit, darum unter die Kaufzone am März-Hoch 471 $). Hält sie, Ziel Erholung Richtung 1.000–1.250 $.",
   "ew": {
    "lang": {
     "count": [
@@ -6406,11 +6563,11 @@
     ],
     "path": [
      {
-      "p": 765,
+      "p": 470,
       "l": "(4)"
      },
      {
-      "p": 1420,
+      "p": 1125,
       "l": "(5)"
      }
     ],
@@ -6423,51 +6580,52 @@
      "label": "alt. (4) tiefer",
      "prob": 35
     },
-    "up": 1255.0
+    "up": 1255.0,
+    "down": 400
    },
    "kurz": {
     "alt": {
      "path": [
       {
-       "p": 650
+       "p": 760
       }
      ],
-     "label": "alt. nur B-Erholung",
-     "prob": 40
+     "label": "alt. Fehlbruch",
+     "prob": 35
     },
     "path": [
      {
-      "p": 730,
-      "l": "2"
+      "p": 490,
+      "l": "C"
      },
      {
-      "p": 945,
-      "l": "3"
+      "p": 685.0,
+      "l": "Ziel"
      }
     ],
-    "up": 892,
-    "down": 645
+    "up": 667,
+    "down": 430
    }
   },
   "currency": "USD",
   "group": "Watchlist",
   "alert": "mittel",
-  "support_low": 715,
-  "support_high": 745,
-  "price": 608.72,
+  "support_low": 470,
+  "support_high": 510,
+  "price": 594.51,
   "price_date": "2026-11-20",
   "range_low": 192.59,
   "range_high": 1255.0,
-  "chg_note": "−11,8 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−13,9 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 1561.91,
   "lt_analysts": 45,
-  "horizon_weeks_low": 2,
-  "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
-  "entry_eta_text": "",
-  "stop_reset_reason": "Zone und Ziel nicht nach einem Bruch, sondern nach oben neu gesetzt: das Tief 650 $ liegt über dem alten Stop 520 $, die Korrektur endete früher als erwartet."
+  "horizon_weeks_low": 3,
+  "horizon_weeks_high": 6,
+  "horizon_end": "2026-12-31",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
+  "stop_reset_reason": "Plan (Zone 715–745 $, Stop 645 $) per Schluss ausgestoppt, kein Bestand. Neue Zone am Ausbruchsniveau März 2026 (471 $) mit Stop darunter."
  },
  {
   "ticker": "TEAM",
@@ -6594,18 +6752,18 @@
   "alert": "mittel",
   "support_low": 133,
   "support_high": 142,
-  "price": 139.22,
+  "price": 134.65,
   "price_date": "2026-11-20",
   "range_low": 56.01,
   "range_high": 229.96,
-  "chg_note": "+4,7 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "+1,2 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 230.2,
   "lt_analysts": 31,
-  "horizon_weeks_low": 3,
+  "horizon_weeks_low": 2,
   "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-02",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "horizon_end": "2026-12-31",
+  "horizon_text": "Ziel in ca. 2–6 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
   "stop_reset_reason": "Die alte Zone wurde nie berührt (Kurslücke nach den Zahlen), es gab keinen Kauf; der neue Stop liegt unter dem 61,8 %-Rücklauf des ganzen Anstiegs, also hinter einer echten Fibonacci-Marke statt im Tagesrauschen."
  },
@@ -6616,17 +6774,17 @@
   "tv_symbol": "NASDAQ:GRAB",
   "currency": "USD",
   "group": "Watchlist",
-  "alert": "",
-  "status": "zone",
+  "alert": "mittel",
+  "status": "meiden",
   "bias": "neutral",
   "entry_type": "Rücksetzer",
-  "entry_low": 2.95,
-  "entry_high": 3.12,
-  "stop": 2.78,
-  "invalidation": 2.67,
-  "trigger": 3.45,
-  "target_low": 3.7,
-  "target_high": 3.97,
+  "entry_low": 2.5,
+  "entry_high": 2.62,
+  "stop": 2.3,
+  "invalidation": 2.26,
+  "trigger": 2.95,
+  "target_low": 3.1,
+  "target_high": 3.4,
   "waves": [
    {
     "d": "2026-10-26",
@@ -6639,16 +6797,16 @@
     "l": "1"
    }
   ],
-  "wave_primary": "Nach dem Abwärtstrend seit Sept. 2025 (6,62 $) Tief bei 2,67 $ (26.10.) – knapp über dem Tief von 2023 (2,65 $). Seitdem +27 % in sieben Handelstagen als mögliche Welle 1 bis 3,39 $. Erwartet: Rücksetzer (Welle 2) in den 38,2–61,8 %-Bereich 2,95–3,12 $, dann Welle 3 Richtung 3,70–3,97 $ (Juli-/August-Hochs).",
-  "wave_alt": "Nur eine Gegenbewegung im Abwärtstrend: Rückfall unter 2,78 $ und neues Tief unter 2,67 $.",
-  "plan": "Super-App für Fahrdienste, Essenslieferung und Bezahlen in Südostasien. Wächst kräftig und ist profitabel, die Aktie ist aber seit Herbst 2025 mehr als halbiert. Spekulative Bodenbildung, kleiner Einsatz.",
-  "news_brief": "19.11.: −6,7 % auf 2,93 $ – in die Einstiegszone gefallen. Kurs seit dem Tief 2,67 $ (26.10.) um rund 27 % gestiegen, davon +7,7 % am 5.11. Den genauen Auslöser prüft das nächste Abend-Update.",
+  "wave_primary": "Hoch 6,62 $ (Sept. 2025), seitdem Abwärtstrend. Tief 2,67 $ (26.10.), Erholung bis 3,56 $ (6.11.). Heute Schluss 2,75 $ unter dem Stop – Test des Oktober-Tiefs; darunter liegen die Tiefs 2022/23 bei 2,2–2,65 $.",
+  "wave_alt": "Doppelboden über 2,67 $ hält; Schluss über 2,95 $ wäre das Zeichen.",
+  "plan": "Meiden – Stop 2,78 $ gebrochen. Erst in 2,50–2,62 $ gestaffelt kaufen, Stop 2,30 $, Ziel 3,10–3,40 $; über 2,95 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −5,8 % auf 2,75 $ – unter dem Stop 2,78 $, knapp über dem Oktober-Tief. 19.11.: −6,7 % auf 2,93 $ – in die Einstiegszone gefallen. Kurs seit dem Tief 2,67 $ (26.10.) um rund 27 % gestiegen, davon +7,7 % am 5.11. Den genauen Auslöser prüft das nächste Abend-Update.",
   "next_event": "",
   "next_event_date": null,
-  "action": "An der Unterkante der Zone 2,95–3,12 $ (Schluss 2,93 $, −6,7 %): gestaffelt kaufen, Stop 2,78 $, Ziel 3,7 $; über 3,45 $ Stop auf Einstand.",
-  "if_up": "Schluss über 3,45 $ ohne Rücksetzer → Welle 3 läuft, Ziel 3,70–3,97 $.",
-  "if_wait": "3,12–3,45 $: nicht hinterherkaufen.",
-  "if_down": "Schluss unter 2,78 $ → Boden gescheitert, Ziel unter 2,67 $.",
+  "action": "Meiden – Stop 2,78 $ gebrochen. Erst in 2,50–2,62 $ gestaffelt kaufen, Stop 2,30 $, Ziel 3,10–3,40 $; über 2,95 $ Stop auf Einstand.",
+  "if_up": "Schluss über 2,95 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "2,62–2,95 $: abwarten.",
+  "if_down": "2,50–2,62 $ gestaffelt kaufen, Stop 2,30 $.",
   "pros": [
    "Umsatz wächst stark (≈ +27 %), profitabel",
    "Analysten klar positiv, Kursziel ≈ 5,50 $",
@@ -6664,11 +6822,11 @@
   "lt_conf": "niedrig",
   "lt_target_low": 5.5,
   "lt_target_high": 6.6,
-  "lt_stop": 2.45,
+  "lt_stop": 2.2,
   "lt_until": "Dez. 2027",
   "lt_entry_low": 2.85,
   "lt_entry_high": 3.1,
-  "lt_text": "Seit dem Börsengang 2021 große Spanne zwischen 2,2 und 6,6 $. Welle (1) von 2,19 $ (2022) bis 6,62 $ (Sept. 2025), Korrektur (2) bis 2,67 $. Hält das Doppeltief, zielt Welle (3) zurück Richtung 5,50–6,60 $.",
+  "lt_text": "Seit dem Börsengang 2021 große Spanne zwischen 2,2 und 6,6 $. Welle (1) von 2,19 $ (2022) bis 6,62 $ (Sept. 2025), Korrektur (2) bis 2,67 $. Hält das Doppeltief, zielt Welle (3) zurück Richtung 5,50–6,60 $. Absicherung am 20.11. von 2,45 $ auf 2,20 $ gesenkt (unter die neue Kaufzone, Tiefs 2022).",
   "ew": {
    "lang": {
     "count": [
@@ -6707,30 +6865,49 @@
      "label": "alt. (2) tiefer",
      "prob": 45
     },
-    "up": 4.06
+    "up": 4.06,
+    "down": 2.2
    },
    "kurz": {
     "alt": {
-     "label": "alt. nur Gegenbewegung",
-     "prob": 45
-    }
+     "path": [
+      {
+       "p": 3.3
+      }
+     ],
+     "label": "alt. Doppelboden 2,67 $",
+     "prob": 40
+    },
+    "path": [
+     {
+      "p": 2.55,
+      "l": "C"
+     },
+     {
+      "p": 3.25,
+      "l": "Ziel"
+     }
+    ],
+    "up": 2.95,
+    "down": 2.3
    }
   },
-  "support_low": 2.95,
-  "support_high": 3.12,
-  "price": 2.865,
+  "support_low": 2.5,
+  "support_high": 2.67,
+  "price": 2.75,
   "price_date": "2026-11-20",
   "range_low": 2.67,
   "range_high": 5.5,
-  "chg_note": "−2,2 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−6,1 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "lt_consensus": 5.49,
   "lt_analysts": 23,
   "horizon_weeks_low": 3,
   "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-04",
+  "horizon_end": "2027-01-03",
   "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
-  "entry_eta_text": ""
+  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Anfang Dez.)",
+  "stop_reset_reason": "Plan (Zone 2,95–3,12 $, Stop 2,78 $) per Schluss ausgestoppt, kein Bestand. Neue Zone unter dem Oktober-Tief 2,67 $ an den Tiefs 2022/23 mit Stop darunter."
  },
  {
   "ticker": "DHER",
@@ -6861,11 +7038,11 @@
   "range_low": 14.8,
   "range_high": 39.83,
   "chg_note": "−0,6 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "horizon_weeks_low": 9,
-  "horizon_weeks_high": 22,
-  "horizon_end": "2027-04-20",
-  "horizon_text": "Ziel in ca. 9–22 Wochen (bis ca. Mitte Apr.)",
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "horizon_weeks_low": 10,
+  "horizon_weeks_high": 23,
+  "horizon_end": "2027-05-03",
+  "horizon_text": "Ziel in ca. 10–23 Wochen (bis ca. Anfang Mai)",
   "entry_eta_text": ""
  },
  {
@@ -6993,15 +7170,15 @@
     }
    }
   },
-  "price": 232.76,
+  "price": 229.44,
   "price_date": "2026-11-20",
   "range_low": 85.68,
   "range_high": 286.99,
-  "chg_note": "−4,4 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "chg_note": "−5,8 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
+  "horizon_end": "2026-12-18",
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
   "entry_eta_text": ""
  },
@@ -7117,16 +7294,16 @@
     }
    }
   },
-  "price": 117.43,
+  "price": 115.25,
   "price_date": "2026-11-20",
   "range_low": 110.89,
-  "range_high": 189.29,
-  "chg_note": "−5,4 % am 20.11.",
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "range_high": 182.56,
+  "chg_note": "−7,2 % am 20.11.",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "horizon_weeks_low": 2,
   "horizon_weeks_high": 4,
-  "horizon_end": "2026-12-17",
-  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Mitte Dez.)",
+  "horizon_end": "2026-12-22",
+  "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": ""
  },
  {
@@ -7134,7 +7311,7 @@
   "name": "Celanese",
   "group": "Watchlist",
   "sector": "Chemie",
-  "price": 45.88,
+  "price": 45.01,
   "currency": "USD",
   "tv_symbol": "NYSE:CE",
   "bias": "neutral",
@@ -7246,50 +7423,50 @@
    }
   },
   "price_date": "2026-11-20",
-  "chg_note": "−3,2 % am 20.11.",
-  "range_low": 35.48,
+  "chg_note": "−5,0 % am 20.11.",
+  "range_low": 35.71,
   "range_high": 70.7,
-  "updated_at": "2026-11-20T17:55:00+01:00",
+  "updated_at": "2026-11-20T22:45:00+01:00",
   "horizon_weeks_low": 3,
-  "horizon_weeks_high": 8,
-  "horizon_end": "2027-01-14",
-  "horizon_text": "Ziel in ca. 3–8 Wochen (bis ca. Mitte Jan.)",
-  "entry_eta_text": "Einstiegszone in ca. 1–2 Wochen (bis ca. Ende Nov.)"
+  "horizon_weeks_high": 6,
+  "horizon_end": "2027-01-03",
+  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
+  "entry_eta_text": ""
  },
  {
   "ticker": "TSM",
   "name": "Taiwan Semiconductor (TSMC, ADR)",
   "group": "Watchlist",
   "sector": "Halbleiter",
-  "price": 325.73,
+  "price": 319.145,
   "currency": "USD",
   "price_date": "2026-11-20",
-  "chg_note": "−7,5 % am 20.11.",
+  "chg_note": "−9,4 % am 20.11.",
   "bias": "bullisch",
-  "wave_primary": "Vom Rekord 487,5 $ (5.10.) ABC-Korrektur: A 407,1 $ (15.10.), B 440,9 $ (28.10.), C 351,2 $ (5.11.) – genau am 38,2 %-Rücklauf des großen Anstiegs seit April 2025 (134 $). Seitdem +18 % auf 413,4 $ (11.11.). Hauptszenario: Korrektur beendet, neue Aufwärtswelle; nach einem Rücksetzer Ziel 440–470 $.",
-  "wave_alt": "Der Anstieg ist nur eine Gegenbewegung; Schluss unter 365 $ → erneuter Test von 351 $ bzw. Rücklauf Richtung 313–340 $ (März-Tief).",
-  "target_low": 440,
-  "target_high": 470,
-  "support_low": 376,
-  "support_high": 386,
-  "invalidation": 351.19,
-  "trigger": 441,
-  "plan": "Weltgrößter Auftragsfertiger für Chips (fertigt für Nvidia, AMD, Apple). Wachstum stark, im Oktober aber so langsam wie seit 2024 nicht mehr. Plan: Rücksetzer in 376–386 $ (50–61,8 % des Anstiegs seit 351 $) gestaffelt kaufen, Stop 348 $ (unter dem Tief 351 $ vom 5.11.; CRV damit nur ca. 1:1,8), Ziel 440–470 $ (B-Hoch bis Nähe Rekord).",
-  "news_brief": "17.11.: −3,7 % auf 359,7 $ (Tief 353,5 $) – knapp über dem C-Tief 351 $ vom 5.11. 11.11.: +4,3 % auf 413,4 $ im Chip-Rally nach den CoreWeave-Zahlen. 10.11.: Oktober-Umsatz wächst so langsam wie seit 2024 nicht mehr – Aktie reagiert kaum. 5.11.: −10,8 % im Chip-Ausverkauf (Tief 351 $).",
+  "wave_primary": "Rekord 487,5 $ (5.10.), Doppeltief 351 $ (5.11. und 19.11.) heute nach unten gebrochen: Schluss 319,1 $. Die Korrektur zielt auf das März-Tief 313,8 $ und 61,8 % des Anstiegs seit April 2025 (≈ 301 $).",
+  "wave_alt": "Tiefer bis 275–285 $, falls Taiwan weiter verkauft wird (schwächste Woche seit 1997).",
+  "target_low": 360,
+  "target_high": 390,
+  "support_low": 295,
+  "support_high": 314,
+  "invalidation": 280,
+  "trigger": 351,
+  "plan": "Meiden – Stop 348 $ gebrochen. Erst in 295–310 $ gestaffelt kaufen, Stop 280 $, Ziel 360–390 $; über 351 $ Stop auf Einstand.",
+  "news_brief": "20.11. (Schluss): −9,1 % auf 319,1 $ – Taiwan-Index −5,7 %, schwächste Woche seit 1997. 17.11.: −3,7 % auf 359,7 $ (Tief 353,5 $) – knapp über dem C-Tief 351 $ vom 5.11. 11.11.: +4,3 % auf 413,4 $ im Chip-Rally nach den CoreWeave-Zahlen. 10.11.: Oktober-Umsatz wächst so langsam wie seit 2024 nicht mehr – Aktie reagiert kaum. 5.11.: −10,8 % im Chip-Ausverkauf (Tief 351 $).",
   "next_event": "November-Umsatz (ca. 10.12.)",
   "next_event_date": "2026-12-10",
-  "alert": "",
+  "alert": "mittel",
   "range_low": 266.82,
   "range_high": 487.47,
-  "updated_at": "2026-11-20T17:55:00+01:00",
-  "action": "Schluss 359,7 $ (−3,7 %, Tief 353,5 $) unter der Zone 376–386 $, Test des C-Tiefs 351 $. Keine neuen Käufe unter der Zone; wer in der Zone gekauft hat: Stop 348 $ bleibt. Schluss unter 348 $ → Plan ungültig.",
-  "if_up": "Schluss über 441 $ (B-Hoch 28.10.) → Aufwärtswelle bestätigt, Stop auf Einstand; Teilgewinne bei 440–470 $.",
-  "if_wait": "348–376 $: nicht nachkaufen; Rückkehr über 376 $ abwarten.",
-  "if_down": "In 376–386 $ gestaffelt kaufen, Stop 348 $; Schluss unter 348 $ → nicht kaufen.",
-  "stop": 348,
+  "updated_at": "2026-11-20T22:45:00+01:00",
+  "action": "Meiden – Stop 348 $ gebrochen. Erst in 295–310 $ gestaffelt kaufen, Stop 280 $, Ziel 360–390 $; über 351 $ Stop auf Einstand.",
+  "if_up": "Schluss über 351 $ → Fehlbruch; nicht hinterherkaufen.",
+  "if_wait": "310–351 $: abwarten.",
+  "if_down": "295–310 $ gestaffelt kaufen, Stop 280 $.",
+  "stop": 280,
   "status": "meiden",
-  "entry_low": 376,
-  "entry_high": 386,
+  "entry_low": 295,
+  "entry_high": 310,
   "entry_type": "Rücksetzer",
   "tv_symbol": "NYSE:TSM",
   "waves": [
@@ -7323,9 +7500,9 @@
   "lt_conf": "mittel",
   "lt_target_low": 520,
   "lt_target_high": 600,
-  "lt_stop": 310,
+  "lt_stop": 270,
   "lt_until": "Ende 2027",
-  "lt_text": "Großer Aufwärtstrend seit dem Tief 59 $ (Okt. 2022): Welle (1) bis 226 $ (Jan. 2025), (2) bis 134 $ (Apr. 2025), (3) bis 487 $ (Okt. 2026). Der Rückgang auf 351 $ (38,2 %) ist vermutlich Welle (4); Welle (5) zielt auf 520–600 $ (Analysten-Schnitt ca. 587 $).",
+  "lt_text": "Großer Aufwärtstrend seit dem Tief 59 $ (Okt. 2022): Welle (1) bis 226 $ (Jan. 2025), (2) bis 134 $ (Apr. 2025), (3) bis 487 $ (Okt. 2026). Der Rückgang auf 351 $ (38,2 %) ist vermutlich Welle (4); Welle (5) zielt auf 520–600 $ (Analysten-Schnitt ca. 587 $). Absicherung am 20.11. von 310 $ auf 270 $ gesenkt (unter die neue Kaufzone am März-Tief).",
   "lt_consensus": 586.69,
   "lt_analysts": 20,
   "pros": [
@@ -7384,36 +7561,37 @@
      "prob": 35
     },
     "up": 487.47,
-    "down": 310
+    "down": 270
    },
    "kurz": {
     "path": [
      {
-      "p": 381,
-      "l": "ii"
+      "p": 302,
+      "l": "C"
      },
      {
-      "p": 455,
-      "l": "iii"
+      "p": 375.0,
+      "l": "Ziel"
      }
     ],
     "alt": {
      "path": [
       {
-       "p": 340
+       "p": 278
       }
      ],
-     "label": "alt. C tiefer",
+     "label": "alt. tiefer bis 278 $",
      "prob": 35
     },
-    "up": 441,
-    "down": 348
+    "up": 351,
+    "down": 280
    }
   },
-  "horizon_weeks_low": 3,
-  "horizon_weeks_high": 6,
-  "horizon_end": "2027-01-03",
-  "horizon_text": "Ziel in ca. 3–6 Wochen (bis ca. Anfang Jan.)",
-  "entry_eta_text": ""
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-26",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Ende Nov.)",
+  "stop_reset_reason": "Plan (Zone 376–386 $, Stop 348 $) per Schluss ausgestoppt, kein Bestand. Neue Zone am März-Tief 313,8 $ und Dez.-Hoch 2025 mit Stop darunter."
  }
 ]

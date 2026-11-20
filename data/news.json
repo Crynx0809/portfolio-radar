@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_20261120_close",
+  "date": "2026-11-20",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Tech-Crash zum Wochenschluss: Nasdaq 100 −5,6 %, S&P 500 −3,7 % – S&P 500 und Dow in der Korrektur, Nasdaq ohne Jahresgewinn",
+  "summary": "Der Chip-Ausverkauf weitete sich zum breiten Abverkauf aus: S&P 500 schließt bei ca. 6.910 Punkten (Woche −8,6 %), Nasdaq 100 bei ca. 25.030 (Woche −10,4 %), VIX ca. 36. Auslöser: Zweifel an der Rendite der KI-Investitionen, schwacher zweiter Handelstag von Anthropic, Asien −5 bis −6 % und erwartete Fed-Zinserhöhung im Dezember. Gold −4,5 %, Bitcoin ca. 58.600 $.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+ },
+ {
+  "id": "n_20261120_chips",
+  "date": "2026-11-20",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chipwerte brechen ein: AMD −13 %, Nvidia −14 %, Micron −14 %, Marvell −12 %, TSMC −9 %",
+  "summary": "AMD zusätzlich belastet durch Berichte über Firmware-Sicherheitsprobleme und China-Bezug (nach dem Hunterbrook-Short); Micron durch Sorgen um die Speichernachfrage. Nvidia fällt auf den tiefsten Stand seit Mai 2025, Micron, Marvell, TSMC und Nvidia schließen unter ihren Stops.",
+  "url": "https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-midday-nov-20-nasdaq-plunges-nearly-3-as-amd-and-micron-lead-a-brutal-semiconductor-sell-off/"
+ },
+ {
+  "id": "n_20261120_apld",
+  "date": "2026-11-20",
+  "ticker": "APLD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Applied Digital −18 % auf 11,49 $ – Schluss unter dem Stop 13,2 $",
+  "summary": "Hoch verschuldete KI-Rechenzentrumswerte (CoreWeave, Nebius, Applied Digital) wurden im Tech-Crash besonders stark verkauft. Der Depot-Stop 13,2 $ und die große Absicherung 12 $ sind per Schlusskurs gebrochen.",
+  "url": "https://www.tikr.com/blog/applied-digital-sinks-15-as-data-center-rout-deepens-remain-in-gridlock"
+ },
+ {
   "id": "2026-11-20-1755-markt",
   "date": "2026-11-20",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Nvidia vorbörslich ca. −3 %: Bericht, Jensen Huang und Unterstützer arbeiten an seiner Rückkehr als Chef",
   "summary": "Laut einem FT-Bericht wird eine Rückkehr Huangs vorbereitet; Interims-Chefin ist Finanzchefin Colette Kress. Die Unsicherheit drückt die Aktie einen Tag vor den Q3-Zahlen in Richtung Unterkante der Zone 158–168 $ (Stop 145 $).",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262307008-us-nvda-nasdaq-futures-nvidia-jensen-huang-anthropic-ipo-tradingkey"
- },
- {
-  "id": "n_mkt_close_1113",
-  "date": "2026-11-13",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Wochenschluss: Nasdaq 100 −1,2 %, S&P 500 −0,4 % – US-Rendite 10 J. auf 5,15 %, Bitcoin unter 70.000 $",
-  "summary": "Die Erzeugerpreise (PPI) stiegen im Oktober um 0,3 % zum Vormonat (erwartet 0,4 %), auf Jahressicht aber um 6,5 % – so stark wie seit Ende 2022 nicht. Die 10-jährige US-Rendite stieg im Handel bis 5,17 %, der Markt rechnet mit einer Zinserhöhung im Dezember. Tech schwach, Dow leicht im Plus. DAX −0,1 %, VIX 19,3. Auf Wochensicht: S&P 500 +2,5 %, Nasdaq 100 +3,5 %.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
- },
- {
-  "id": "n_sox_close_1113",
-  "date": "2026-11-13",
-  "ticker": "AMD",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Chip-Ausverkauf zum Wochenschluss: AMD −8,8 %, Applied Digital −5,8 %, Marvell −4,7 %, Nvidia −2,0 %",
-  "summary": "AMD fiel nach fast +50 % in einer Woche auf 534,1 $ (Tief 520 $) – Gewinnmitnahmen; der Nvidia-Skandal (Rücktritt Jensen Huang, Berichte über mögliche Chip-Umleitung nach China, unbestätigt) und steigende Zinsen belasten den ganzen KI-Handel. Broadcom und Intel je ca. −5 bis −6 %, Micron −2,5 %. Kein Stop im Depot gebrochen; Marvell lief im Tief (149,2 $) in die Zukaufzone 147–154 $.",
-  "url": "https://www.fool.com/investing/2026/11/13/why-advanced-micro-devices-is-down-today/"
- },
- {
-  "id": "n_nu_close_1113",
-  "date": "2026-11-13",
-  "ticker": "NU",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Nu Holdings +11,8 % auf 13,22 $ nach Rekordquartal – Schluss über der Bestätigung 13 $",
-  "summary": "Q3: Rekordgewinn 1,1 Mrd. $ (+31 % zum Vorjahr), 143 Mio. Kunden, Eigenkapitalrendite 32 %, Effizienzquote 19 %. Damit ist der Doppelboden bei 11,6–11,8 $ bestätigt.",
-  "url": "https://nu.com/en/newsroom/company/nu-holdings-ltd-reports-third-quarter-2026-financial-results"
  }
 ]

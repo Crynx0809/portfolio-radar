@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-20-2245-depot",
+  "at": "2026-11-20T22:45:00+01:00",
+  "ticker": "Depot",
+  "level": "hoch",
+  "text": "Wochenschluss im Tech-Crash (Nasdaq 100 −5,6 %): Zwei Depot-Stops per Schlusskurs gebrochen – Applied Digital 11,49 $ (Stop 13,2 $) und Marvell 122,3 $ (Stop 135 $). Laut Plan beide Positionen am Montag verkaufen; neue Einstiege erst tiefer (APLD 8,5–9,5 $, MRVL 100–108 $). AMD 424,4 $ (−13,2 %) unter der Zukaufzone: halten, nicht nachkaufen, Stop 398 $ per Schluss. Alphabet 265,3 $ unter der Invalidierung 270,7 $, nur 1,2 % über dem Stop 262 $. Bank of America 47,1 $ (Stop 45,8 $) nah."
+ },
+ {
+  "id": "2026-11-20-2245-watch",
+  "at": "2026-11-20T22:45:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Stops gebrochen (kein Bestand) → „meiden“ mit tieferen Zonen: Nvidia 125,5 $ (neu 112–118 $), Micron 594,5 $ (470–510 $), TSMC 319,1 $ (295–310 $), Meta 560,8 $ (525–545 $), JPMorgan 310,7 $ (285–295 $), Rocket Lab 45,4 $ (38–42 $), Molina 198,4 $ (178–186 $), Grab 2,75 $ (2,50–2,62 $), Rheinmetall 693 € (600–640 €), Cameco 58,0 $ (50–54 $), Robinhood 62,2 $ (50–55 $). Große Absicherungen nach Wochenschluss neu gesetzt u. a. bei Nvidia, Micron, GE Vernova, Cameco, Freeport."
+ },
+ {
   "id": "2026-11-20-1755-depot",
   "at": "2026-11-20T17:55:00+01:00",
   "ticker": "Depot",
@@ -292,26 +306,5 @@
   "ticker": "MU",
   "level": "mittel",
   "text": "Micron schließt bei 811 $ (+11,9 %), alte Zone 560–600 $ nie erreicht. Neuer Plan: Rücksetzer in 715–745 $ kaufen, Stop 670 $, Ziel 900–990 $; über 892 $ Stop auf Einstand."
- },
- {
-  "id": "a_enr_1111e",
-  "at": "2026-11-11T22:45:00+01:00",
-  "ticker": "ENR",
-  "level": "mittel",
-  "text": "Siemens Energy schließt bei 132,8 € (+10,8 %) – Ziel 132 € erreicht. Neuer Plan: Rücksetzer in 118–123 € kaufen, Stop 112 €, Ziel 148–160 €."
- },
- {
-  "id": "a_baba_1111e",
-  "at": "2026-11-11T22:45:00+01:00",
-  "ticker": "BABA",
-  "level": "mittel",
-  "text": "Alibaba schließt bei 101,5 $ in der Zone 98–102 $ (Stop 94 $, Ziel 122–132 $). Noch kein Umkehrsignal; Zahlen am 24.11."
- },
- {
-  "id": "a_tsm_1111e",
-  "at": "2026-11-11T22:45:00+01:00",
-  "ticker": "TSM",
-  "level": "mittel",
-  "text": "Neu auf der Watchlist (Wunsch): TSMC (ADR, NYSE:TSM) bei 413 $. Rücksetzer in 376–386 $ kaufen, Stop 365 $, Ziel 440–470 $."
  }
 ]
