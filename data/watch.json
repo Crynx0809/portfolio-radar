@@ -1,29 +1,29 @@
 {
- "generated_at": "2026-11-20T21:30:12+00:00",
+ "generated_at": "2026-11-20T21:47:30+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 424.315,
+   "price": 424.39,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.0661
+   "gap_to_stop": 0.0663
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 265.7,
+   "price": 265.29,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0141
+   "gap_to_stop": 0.0126
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 11.475,
-   "stop": 13.2,
-   "trigger": 20.4,
-   "gap_to_stop": -0.1307
+   "price": 11.49,
+   "stop": 7.4,
+   "trigger": 12,
+   "gap_to_stop": 0.5527
   },
   {
    "ticker": "BAC",
@@ -36,10 +36,10 @@
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 122.29,
-   "stop": 135,
-   "trigger": 175,
-   "gap_to_stop": -0.0941
+   "price": 122.28,
+   "stop": 92,
+   "trigger": 132.5,
+   "gap_to_stop": 0.3291
   },
   {
    "ticker": "SAP",
@@ -55,57 +55,43 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 424.315,
-   "chg_pct": -0.1326,
-   "at": "2026-11-20T21:30+00:00",
+   "price": 424.39,
+   "chg_pct": -0.1325,
+   "at": "2026-11-20T21:47+00:00",
    "id": "AMD-absturz-2026-11-20",
    "type": "absturz",
    "level": "hoch",
-   "title": "Advanced Micro Devices −13,3 % heute",
-   "text": "Starker Tagesverlust auf 424,31 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Position halten. Intraday 435,4 $ (−11 %) schon unter der Zukaufzone 450–472 $: gestaffelte Käufe dort ausgelöst, nicht weiter nachkaufen; Stop 398 $ per Schlusskurs (unter dem C-Tief 402 $), Ziel 680–760 $; über 658,5 $ Stop nachziehen."
+   "title": "Advanced Micro Devices −13,2 % heute",
+   "text": "Starker Tagesverlust auf 424,39 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Position halten mit Stop 398 $ per Schlusskurs (6 % unter dem Kurs). Nicht nachkaufen, bis AMD wieder über 472 $ schließt. Ziel 680–760 $."
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
    "group": "Portfolio",
-   "price": 265.7,
-   "chg_pct": -0.0255,
-   "at": "2026-11-20T21:30+00:00",
+   "price": 265.29,
+   "chg_pct": -0.027,
+   "at": "2026-11-20T21:47+00:00",
    "id": "GOOGL-stopnah-2026-11-20",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Alphabet A nah am Stop",
-   "text": "Kurs 265,70 $ nur noch 1,4 % über dem Stop 262,00 $.",
-   "todo": "Schlusskurs beobachten. In 271–280 $ gestaffelt zukaufen, Stop 262 $; Schluss unter 262 $ → Abwärtstrend bestätigt, Position deutlich reduzieren."
+   "text": "Kurs 265,29 $ nur noch 1,3 % über dem Stop 262,00 $.",
+   "todo": "Schlusskurs beobachten. Schluss unter 262 $ → Position deutlich reduzieren; nächste Unterstützung 240–255 $ (große Absicherung 240 $)."
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 11.475,
-   "chg_pct": -0.1792,
-   "at": "2026-11-20T21:30+00:00",
-   "id": "APLD-stop-2026-11-20",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Applied Digital unter dem Stop 13,20 $",
-   "text": "Kurs 11,47 $ (−17,9 % heute) liegt unter deinem Stop 13,20 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schluss unter 13,2 $ → alles verkaufen, nächstes Ziel ca. 11 $."
-  },
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 11.475,
-   "chg_pct": -0.1792,
-   "at": "2026-11-20T21:30+00:00",
+   "price": 11.49,
+   "chg_pct": -0.1781,
+   "at": "2026-11-20T21:47+00:00",
    "id": "APLD-absturz-2026-11-20",
    "type": "absturz",
    "level": "hoch",
-   "title": "Applied Digital −17,9 % heute",
-   "text": "Starker Tagesverlust auf 11,47 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Intraday 11,77 $ (−15,8 %) klar unter dem Stop 13,2 $: Schließt der Tag unter 13,2 $, greift die Regel „alles verkaufen“ (nächstes Ziel ca. 11 $). Keine Käufe."
+   "title": "Applied Digital −17,8 % heute",
+   "text": "Starker Tagesverlust auf 11,49 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Stop 13,2 $ per Schlusskurs gebrochen (11,49 $): laut Plan Position verkaufen. Neuer Einstieg erst in 8,5–9,5 $ (klein, gestaffelt), Stop 7,4 $, Ziel 13–15 $."
   },
   {
    "ticker": "BAC",
@@ -113,55 +99,27 @@
    "group": "Portfolio",
    "price": 47.08,
    "chg_pct": -0.0307,
-   "at": "2026-11-20T21:30+00:00",
+   "at": "2026-11-20T21:47+00:00",
    "id": "BAC-stopnah-2026-11-20",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Bank of America nah am Stop",
    "text": "Kurs 47,08 $ nur noch 2,8 % über dem Stop 45,80 $.",
-   "todo": "Schlusskurs beobachten. Schlusskurs unter 45,65 $ → Zählung ungültig: reduzieren."
+   "todo": "Schlusskurs beobachten. Schluss unter 45,8 $ → Position verkaufen."
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 122.29,
-   "chg_pct": -0.1168,
-   "at": "2026-11-20T21:30+00:00",
-   "id": "MRVL-stop-2026-11-20",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Marvell Technology unter dem Stop 135,00 $",
-   "text": "Kurs 122,29 $ (−11,7 % heute) liegt unter deinem Stop 135,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 122.29,
-   "chg_pct": -0.1168,
-   "at": "2026-11-20T21:30+00:00",
+   "price": 122.28,
+   "chg_pct": -0.1169,
+   "at": "2026-11-20T21:47+00:00",
    "id": "MRVL-absturz-2026-11-20",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −11,7 % heute",
-   "text": "Starker Tagesverlust auf 122,29 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Intraday 125,8 $ (−9,2 %) unter dem Stop 135 $ und unter der Invalidierung 132,5 $: Schließt der Tag unter 135 $, greift der Stop (Alternative 105–115 $). Keine Zukäufe."
-  },
-  {
-   "ticker": "TTD",
-   "name": "The Trade Desk",
-   "group": "Watchlist",
-   "price": 13.38,
-   "chg_pct": -0.081,
-   "at": "2026-11-20T21:30+00:00",
-   "id": "TTD-zone-2026-11-20",
-   "type": "zone",
-   "level": "mittel",
-   "title": "The Trade Desk in der Einstiegszone",
-   "text": "Kurs 13,38 $ ist in die Zone 12,90 $–13,50 $ gelaufen.",
-   "todo": "13,5–15,3 $: abwarten, Reaktion auf die Zahlen beobachten."
+   "text": "Starker Tagesverlust auf 122,28 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Stop 135 $ per Schlusskurs gebrochen (122,3 $): laut Plan Position verkaufen. Neuer Einstieg erst in 100–108 $ (gestaffelt), Stop 92 $, Ziel 135–150 $."
   }
  ],
  "notified": [
