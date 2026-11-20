@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-20-1435-depot",
+  "at": "2026-11-20T14:35:00+01:00",
+  "ticker": "Depot",
+  "level": "hoch",
+  "text": "Vor US-Börsenstart (TradingView 14:19 Uhr, US-Werte noch auf Donnerstagsschluss): noch kein Depot-Stop gebrochen, aber Marvell (Schluss 138,5 $, Stop 135 $) ist vorbörslich ca. −3,5 bis −5,5 % und könnte unter dem Stop eröffnen – maßgeblich ist der Schlusskurs; unter 132,5 $ gilt die Alternative 105–115 $. AMD vorbörslich ca. −7 % → etwa in der Zukaufzone 450–472 $ (Stop 398 $). SAP 182,8 € (−2,3 %) nur 2,7 % über dem Stop 178 €. Applied Digital (13,98 $, Stop 13,2 $) vorbörslich ca. −3–4 % → nahe am Stop."
+ },
+ {
+  "id": "2026-11-20-1435-watch",
+  "at": "2026-11-20T14:35:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Rheinmetall 702 € knapp unter dem Stop 705 € (kein Bestand, Status bleibt „meiden“; Neubewertung in der Abendanalyse). Siemens Energy 120,0 € (−5,3 %) und Airbus 191,5 € (−3,4 %) jetzt in ihren Einstiegszonen 118–123 € bzw. 186–192 €. Atlassian 133,0 $ an der Zonen-Unterkante. Nah am Stop (US vorbörslich schwächer): Nvidia 146,0 $ (Stop 142 $), Meta 596,2 $ (578 $), JPMorgan 320,2 $ (318 $), TSMC 352,1 $ (348 $), Cameco 61,4 $ (61 $), Molina 203,3 $ (199 $)."
+ },
+ {
   "id": "2026-11-19-2255-depot",
   "at": "2026-11-19T22:55:00+01:00",
   "ticker": "Depot",

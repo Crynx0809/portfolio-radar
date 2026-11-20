@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-19T22:55:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Marktwende nach dem Anthropic-Debüt: AMD −7,7 % (Short-Bericht), Marvell nur noch 2,5 % über dem Stop 135 $. Kein Depot-Stop gebrochen; Alphabet, Amazon und SAP in ihren Zukaufzonen. Fünf Watchlist-Stops gebrochen (CAT, ADBE, BABA, MBG, MELI) – neue, tiefere Zonen.",
-  "market": "Dow −2,2 %, Nasdaq −2,25 %, S&P 500 ca. −2 % – S&P 500 und Nasdaq 100 unter der 200-Tage-Linie. Anthropic (ANT) schließt am ersten Tag +17 % über 83 $. Kurse TradingView 22:32 Uhr (nach US-Schluss).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-20T14:35:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Chip-Ausverkauf geht weiter: AMD vorbörslich ca. −7 % (in Richtung Zukaufzone 450–472 $), Marvell droht unter den Stop 135 $ zu fallen. SAP 2,7 % über dem Stop. Siemens Energy und Airbus in ihren Einstiegszonen, Rheinmetall knapp unter dem Stop.",
+  "market": "Vorbörslich: Nasdaq-100-Futures ca. −1,6 %, S&P 500 ca. −0,7 %, Dow etwa unverändert; Taiex −6,2 %, DAX ca. −2 %. Dezember-Zinserhöhung der Fed fast vollständig eingepreist. Kurse TradingView 14:19 Uhr (US-Werte Schluss vom 19.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

@@ -1,5 +1,25 @@
 [
  {
+  "id": "2026-11-20-markt-chips",
+  "date": "2026-11-20",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip-Ausverkauf geht weiter: Nasdaq-100-Futures ca. −1,6 %, Taiwan −6,2 % (schwächste Woche seit 1991)",
+  "summary": "Vor US-Börsenstart fallen die Nasdaq-100-Futures um rund 1,6 %, S&P-500-Futures ca. −0,7 %, Dow etwa unverändert. In Asien brachen Chipwerte ein (Taiex −6,2 %, Kospi −5,2 %, Nikkei −5,1 %), DAX ca. −2 %. Gründe laut Reuters: Zweifel an den Renditen der KI-Ausgaben, langsamerer Rechenzentrums-Ausbau, höhere Zinsen (Dezember-Zinserhöhung der Fed fast vollständig eingepreist) und der Abgang von Nvidia-Chef Jensen Huang. Anthropic vorbörslich ca. −7 %. Nvidia ca. −2,5 %, TSMC −4 %, Micron −5 %, Rechenzentrums-Werte (u. a. Applied Digital) ca. −3–4 %.",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-anthropic-104746137.html"
+ },
+ {
+  "id": "2026-11-20-amd-vorboerse",
+  "date": "2026-11-20",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "AMD vorbörslich erneut ca. −7 % – zwei Tage zusammen rund −14 %",
+  "summary": "Nach dem Short-Bericht von Hunterbrook (China-Bezug) und −7,7 % am Donnerstag fällt AMD vor Börsenstart um weitere ~7 %. Damit läge die Aktie zur Eröffnung etwa in der Zukaufzone 450–472 $; Stop 398 $ ist weit entfernt. Marvell, Broadcom und Micron vorbörslich je ca. −3,5 bis −5,5 %.",
+  "url": "https://247wallst.com/investing/2026/11/20/amd-stock-drops-another-7-0-before-the-bell-and-taiwan-semiconductor-slides-4-2-as-nasdaq-futures-fall-1-6-after-asias-chip-selloff/"
+ },
+ {
   "id": "2026-11-19-markt-wende",
   "date": "2026-11-19",
   "ticker": "Markt",
@@ -278,25 +298,5 @@
   "headline": "AMD schließt +5,9 % bei 585,3 $ – erstmals seit Oktober über dem B-Hoch 579 $",
   "summary": "Anleger schichten nach dem Nvidia-Chefwechsel in Konkurrenten um. Mit dem Schluss über 579 $ ist die Erholung seit dem Tief 402 $ (5.11.) technisch bestätigt; das Rekordhoch 658,5 $ ist 12 % entfernt.",
   "url": "https://www.forbes.com/sites/fionariley/2026/11/12/nvidia-sinks-11-at-open-after-jensen-huang-resigns-pushing-market-cap-below-microsoft/"
- },
- {
-  "id": "n_baba_1112e",
-  "date": "2026-11-12",
-  "ticker": "BABA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Alibaba −7,1 % auf 94,4 $ – Stop 94 $ im Handel unterschritten, Juni-Tief 92 $ in Reichweite",
-  "summary": "China-Tech wurde breit verkauft, dazu Sorgen um hohe KI-Ausgaben. Ein Einzelauslöser fehlt. Zahlen am 24.11.",
-  "url": "https://rallies.ai/news/alibaba-adrs-slide-as-china-tech-sells-off-and-ai-spending-fears-linger"
- },
- {
-  "id": "n_mrna_1112e",
-  "date": "2026-11-12",
-  "ticker": "MRNA",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Moderna −7,0 % auf 231,4 $ – Biotech-Rally pausiert",
-  "summary": "Gewinnmitnahmen nach dem Rekordlauf, dazu Sorgen um Mittelabfluss und die Zulassung des Grippe-Impfstoffs. Seit dem Hoch 280,8 $ (9.11.) rund −18 %; die Zone 180–200 $ liegt noch deutlich tiefer.",
-  "url": "https://www.itiger.com/news/2676351901"
  }
 ]
