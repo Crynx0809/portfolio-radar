@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-19T21:50:28+00:00",
+ "generated_at": "2026-11-20T08:57:20+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -24,6 +24,14 @@
    "stop": 135,
    "trigger": 175,
    "gap_to_stop": 0.0257
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "price": 185.64,
+   "stop": 178,
+   "trigger": 217,
+   "gap_to_stop": 0.0429
   }
  ],
  "events": [
@@ -33,16 +41,28 @@
    "group": "Portfolio",
    "price": 138.47,
    "chg_pct": -0.0486,
-   "at": "2026-11-19T21:50+00:00",
-   "id": "MRVL-stopnah-2026-11-19",
+   "at": "2026-11-20T08:57+00:00",
+   "id": "MRVL-stopnah-2026-11-20",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Marvell Technology nah am Stop",
    "text": "Kurs 138,47 $ nur noch 2,6 % über dem Stop 135,00 $.",
    "todo": "Schlusskurs beobachten. Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
+  },
+  {
+   "ticker": "ENR",
+   "name": "Siemens Energy",
+   "group": "Watchlist",
+   "price": 120.7,
+   "chg_pct": -0.0474,
+   "at": "2026-11-20T08:57+00:00",
+   "id": "ENR-zone-2026-11-20",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Siemens Energy in der Einstiegszone",
+   "text": "Kurs 120,70 € ist in die Zone 118,00 €–123,00 € gelaufen.",
+   "todo": "123–138 €: nicht hinterherkaufen."
   }
  ],
- "notified": [
-  "AMD-absturz-2026-11-19"
- ]
+ "notified": []
 }
