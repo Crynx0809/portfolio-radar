@@ -1,68 +1,99 @@
 {
- "generated_at": "2026-11-20T13:28:05+00:00",
+ "generated_at": "2026-11-20T15:30:17+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 489.19,
+   "price": 460.96,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.2291
+   "gap_to_stop": 0.1582
   },
   {
-   "ticker": "GOOGL",
-   "name": "Alphabet A",
-   "price": 272.66,
-   "stop": 262,
-   "trigger": 301,
-   "gap_to_stop": 0.0407
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "price": 12.5901,
+   "stop": 13.2,
+   "trigger": 20.4,
+   "gap_to_stop": -0.0462
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 138.47,
+   "price": 130.095,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": 0.0257
+   "gap_to_stop": -0.0363
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 182.4,
+   "price": 184.84,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0247
+   "gap_to_stop": 0.0384
   }
  ],
  "events": [
   {
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "group": "Portfolio",
+   "price": 12.5901,
+   "chg_pct": -0.0994,
+   "at": "2026-11-20T15:30+00:00",
+   "id": "APLD-stop-2026-11-20",
+   "type": "stop",
+   "level": "hoch",
+   "title": "Applied Digital unter dem Stop 13,20 $",
+   "text": "Kurs 12,59 $ (−9,9 % heute) liegt unter deinem Stop 13,20 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "todo": "Schluss unter 13,2 $ → alles verkaufen, nächstes Ziel ca. 11 $."
+  },
+  {
+   "ticker": "APLD",
+   "name": "Applied Digital",
+   "group": "Portfolio",
+   "price": 12.5901,
+   "chg_pct": -0.0994,
+   "at": "2026-11-20T15:30+00:00",
+   "id": "APLD-absturz-2026-11-20",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Applied Digital −9,9 % heute",
+   "text": "Starker Tagesverlust auf 12,59 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "An der Unterkante der Zone 14–16 $ (Schluss 13,98 $): halten, nicht aufstocken (politisches Risiko); Stop 13,2 $ unter dem Nov.-Tief 13,12 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand."
+  },
+  {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 138.47,
-   "chg_pct": -0.0486,
-   "at": "2026-11-20T13:28+00:00",
-   "id": "MRVL-stopnah-2026-11-20",
-   "type": "stop_nah",
-   "level": "mittel",
-   "title": "Marvell Technology nah am Stop",
-   "text": "Kurs 138,47 $ nur noch 2,6 % über dem Stop 135,00 $.",
-   "todo": "Schlusskurs beobachten. Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
+   "price": 130.095,
+   "chg_pct": -0.0605,
+   "at": "2026-11-20T15:30+00:00",
+   "id": "MRVL-stop-2026-11-20",
+   "type": "stop",
+   "level": "hoch",
+   "title": "Marvell Technology unter dem Stop 135,00 $",
+   "text": "Kurs 130,09 $ (−6,0 % heute) liegt unter deinem Stop 135,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "todo": "Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
   },
   {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "group": "Portfolio",
-   "price": 182.4,
-   "chg_pct": -0.0247,
-   "at": "2026-11-20T13:28+00:00",
-   "id": "SAP-stopnah-2026-11-20",
-   "type": "stop_nah",
+   "ticker": "GEV",
+   "name": "GE Vernova",
+   "group": "Watchlist",
+   "price": 727.74,
+   "chg_pct": -0.0377,
+   "at": "2026-11-20T15:30+00:00",
+   "id": "GEV-zone-2026-11-20",
+   "type": "zone",
    "level": "mittel",
-   "title": "SAP SE nah am Stop",
-   "text": "Kurs 182,40 € nur noch 2,5 % über dem Stop 178,00 €.",
-   "todo": "Schlusskurs beobachten. Unter 185 € erhöhte Vorsicht; Schlusskurs unter 157 € → reduzieren."
+   "title": "GE Vernova in der Einstiegszone",
+   "text": "Kurs 727,74 $ ist in die Zone 690,00 $–740,00 $ gelaufen.",
+   "todo": "740–920 $: abwarten."
   }
  ],
- "notified": []
+ "notified": [
+  "APLD-stop-2026-11-20",
+  "MRVL-stop-2026-11-20"
+ ]
 }
