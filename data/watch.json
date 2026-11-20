@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T08:57:20+00:00",
+ "generated_at": "2026-11-20T12:10:15+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -28,10 +28,10 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 185.64,
+   "price": 183.0,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0429
+   "gap_to_stop": 0.0281
   }
  ],
  "events": [
@@ -41,7 +41,7 @@
    "group": "Portfolio",
    "price": 138.47,
    "chg_pct": -0.0486,
-   "at": "2026-11-20T08:57+00:00",
+   "at": "2026-11-20T12:10+00:00",
    "id": "MRVL-stopnah-2026-11-20",
    "type": "stop_nah",
    "level": "mittel",
@@ -50,17 +50,31 @@
    "todo": "Schlusskurs beobachten. Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
   },
   {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "group": "Portfolio",
+   "price": 183.0,
+   "chg_pct": -0.0215,
+   "at": "2026-11-20T12:10+00:00",
+   "id": "SAP-stopnah-2026-11-20",
+   "type": "stop_nah",
+   "level": "mittel",
+   "title": "SAP SE nah am Stop",
+   "text": "Kurs 183,00 € nur noch 2,8 % über dem Stop 178,00 €.",
+   "todo": "Schlusskurs beobachten. Unter 185 € erhöhte Vorsicht; Schlusskurs unter 157 € → reduzieren."
+  },
+  {
    "ticker": "ENR",
    "name": "Siemens Energy",
    "group": "Watchlist",
-   "price": 120.7,
-   "chg_pct": -0.0474,
-   "at": "2026-11-20T08:57+00:00",
+   "price": 120.18,
+   "chg_pct": -0.0515,
+   "at": "2026-11-20T12:10+00:00",
    "id": "ENR-zone-2026-11-20",
    "type": "zone",
    "level": "mittel",
    "title": "Siemens Energy in der Einstiegszone",
-   "text": "Kurs 120,70 € ist in die Zone 118,00 €–123,00 € gelaufen.",
+   "text": "Kurs 120,18 € ist in die Zone 118,00 €–123,00 € gelaufen.",
    "todo": "123–138 €: nicht hinterherkaufen."
   }
  ],
