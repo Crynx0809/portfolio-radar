@@ -1,99 +1,164 @@
 {
- "generated_at": "2026-11-20T15:30:17+00:00",
+ "generated_at": "2026-11-20T16:41:20+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 460.96,
+   "price": 438.0,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.1582
+   "gap_to_stop": 0.1005
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 12.5901,
+   "price": 11.8778,
    "stop": 13.2,
    "trigger": 20.4,
-   "gap_to_stop": -0.0462
+   "gap_to_stop": -0.1002
+  },
+  {
+   "ticker": "BAC",
+   "name": "Bank of America",
+   "price": 48.07,
+   "stop": 45.8,
+   "trigger": 54.5,
+   "gap_to_stop": 0.0496
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 130.095,
+   "price": 125.77,
    "stop": 135,
    "trigger": 175,
-   "gap_to_stop": -0.0363
+   "gap_to_stop": -0.0684
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 184.84,
+   "price": 183.9,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0384
+   "gap_to_stop": 0.0331
   }
  ],
  "events": [
   {
+   "ticker": "AMD",
+   "name": "Advanced Micro Devices",
+   "group": "Portfolio",
+   "price": 438.0,
+   "chg_pct": -0.1046,
+   "at": "2026-11-20T16:41+00:00",
+   "id": "AMD-absturz-2026-11-20",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Advanced Micro Devices −10,5 % heute",
+   "text": "Starker Tagesverlust auf 438,00 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Position halten, Stop auf Einstand (bzw. mind. unter 398 $). Schluss 489,2 $ (−7,7 %) knapp über der Zukaufzone: neu kaufen nur in 450–472 $ (gestaffelt), Stop 398 $, Ziel 680–760 $; über 658,5 $ Stop nachziehen."
+  },
+  {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 12.5901,
-   "chg_pct": -0.0994,
-   "at": "2026-11-20T15:30+00:00",
+   "price": 11.8778,
+   "chg_pct": -0.1504,
+   "at": "2026-11-20T16:41+00:00",
    "id": "APLD-stop-2026-11-20",
    "type": "stop",
    "level": "hoch",
    "title": "Applied Digital unter dem Stop 13,20 $",
-   "text": "Kurs 12,59 $ (−9,9 % heute) liegt unter deinem Stop 13,20 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "text": "Kurs 11,88 $ (−15,0 % heute) liegt unter deinem Stop 13,20 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
    "todo": "Schluss unter 13,2 $ → alles verkaufen, nächstes Ziel ca. 11 $."
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 12.5901,
-   "chg_pct": -0.0994,
-   "at": "2026-11-20T15:30+00:00",
+   "price": 11.8778,
+   "chg_pct": -0.1504,
+   "at": "2026-11-20T16:41+00:00",
    "id": "APLD-absturz-2026-11-20",
    "type": "absturz",
    "level": "hoch",
-   "title": "Applied Digital −9,9 % heute",
-   "text": "Starker Tagesverlust auf 12,59 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "title": "Applied Digital −15,0 % heute",
+   "text": "Starker Tagesverlust auf 11,88 $. Ursache in den News prüfen, nicht im Affekt handeln.",
    "todo": "An der Unterkante der Zone 14–16 $ (Schluss 13,98 $): halten, nicht aufstocken (politisches Risiko); Stop 13,2 $ unter dem Nov.-Tief 13,12 $, Ziel 20,5–24 $; über 20,4 $ Stop auf Einstand."
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 130.095,
-   "chg_pct": -0.0605,
-   "at": "2026-11-20T15:30+00:00",
+   "price": 125.77,
+   "chg_pct": -0.0917,
+   "at": "2026-11-20T16:41+00:00",
    "id": "MRVL-stop-2026-11-20",
    "type": "stop",
    "level": "hoch",
    "title": "Marvell Technology unter dem Stop 135,00 $",
-   "text": "Kurs 130,09 $ (−6,0 % heute) liegt unter deinem Stop 135,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "text": "Kurs 125,77 $ (−9,2 % heute) liegt unter deinem Stop 135,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
    "todo": "Schluss unter 135 $ → Stop, Erholung gescheitert; unter 132,5 $ gilt die Alternative 105–115 $."
+  },
+  {
+   "ticker": "MRVL",
+   "name": "Marvell Technology",
+   "group": "Portfolio",
+   "price": 125.77,
+   "chg_pct": -0.0917,
+   "at": "2026-11-20T16:41+00:00",
+   "id": "MRVL-absturz-2026-11-20",
+   "type": "absturz",
+   "level": "hoch",
+   "title": "Marvell Technology −9,2 % heute",
+   "text": "Starker Tagesverlust auf 125,77 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Position halten, Stop 135 $ per Schlusskurs (nur 2,5 % entfernt). Keine Zukäufe mehr, bis ein Schluss wieder über 147 $ gelingt; Ziel 185–205 $; über 175 $ Stop auf Einstand."
   },
   {
    "ticker": "GEV",
    "name": "GE Vernova",
    "group": "Watchlist",
-   "price": 727.74,
-   "chg_pct": -0.0377,
-   "at": "2026-11-20T15:30+00:00",
+   "price": 708.0,
+   "chg_pct": -0.0638,
+   "at": "2026-11-20T16:41+00:00",
    "id": "GEV-zone-2026-11-20",
    "type": "zone",
    "level": "mittel",
    "title": "GE Vernova in der Einstiegszone",
-   "text": "Kurs 727,74 $ ist in die Zone 690,00 $–740,00 $ gelaufen.",
+   "text": "Kurs 708,00 $ ist in die Zone 690,00 $–740,00 $ gelaufen.",
    "todo": "740–920 $: abwarten."
+  },
+  {
+   "ticker": "HOOD",
+   "name": "Robinhood",
+   "group": "Watchlist",
+   "price": 65.1,
+   "chg_pct": -0.0517,
+   "at": "2026-11-20T16:41+00:00",
+   "id": "HOOD-zone-2026-11-20",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Robinhood in der Einstiegszone",
+   "text": "Kurs 65,10 $ ist in die Zone 64,00 $–67,00 $ gelaufen.",
+   "todo": "67–78 $: nicht kaufen, Zone 64–67 $ abwarten."
+  },
+  {
+   "ticker": "CE",
+   "name": "Celanese",
+   "group": "Watchlist",
+   "price": 45.93,
+   "chg_pct": -0.031,
+   "at": "2026-11-20T16:41+00:00",
+   "id": "CE-zone-2026-11-20",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Celanese in der Einstiegszone",
+   "text": "Kurs 45,93 $ ist in die Zone 44,00 $–46,00 $ gelaufen.",
+   "todo": "46–51,6 $: abwarten, Rücksetzer in die Zone abwarten."
   }
  ],
  "notified": [
   "APLD-stop-2026-11-20",
-  "MRVL-stop-2026-11-20"
+  "MRVL-stop-2026-11-20",
+  "AMD-absturz-2026-11-20"
  ]
 }
