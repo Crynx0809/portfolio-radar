@@ -1,91 +1,32 @@
 {
- "generated_at": "2026-11-23T15:36:10+00:00",
+ "generated_at": "2026-11-23T21:51:15+00:00",
  "watched": [
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "price": 459.935,
-   "stop": 398,
-   "trigger": 658.5,
-   "gap_to_stop": 0.1556
-  },
-  {
-   "ticker": "GOOGL",
-   "name": "Alphabet A",
-   "price": 281.87,
-   "stop": 262,
-   "trigger": 301,
-   "gap_to_stop": 0.0758
-  },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 14.63,
-   "stop": 7.4,
-   "trigger": 12,
-   "gap_to_stop": 0.977
+   "price": 13.82,
+   "stop": 11.0,
+   "trigger": 15.5,
+   "gap_to_stop": 0.2564
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 148.2,
-   "stop": 92,
-   "trigger": 132.5,
-   "gap_to_stop": 0.6109
+   "price": 144.74,
+   "stop": 119.0,
+   "trigger": 155,
+   "gap_to_stop": 0.2163
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 186.7,
+   "price": 186.34,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0489
+   "gap_to_stop": 0.0469
   }
  ],
- "events": [
-  {
-   "ticker": "APLD",
-   "name": "Applied Digital",
-   "group": "Portfolio",
-   "price": 14.63,
-   "chg_pct": 0.2733,
-   "at": "2026-11-23T15:36+00:00",
-   "id": "APLD-ausbruch-2026-11-23",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Applied Digital über der Bestätigungsmarke 12,00 $",
-   "text": "Kurs 14,63 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 13,2 $ → Abverkauf war Übertreibung; trotzdem nicht hinterherkaufen, Rücksetzer abwarten."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 148.2,
-   "chg_pct": 0.212,
-   "at": "2026-11-23T15:36+00:00",
-   "id": "MRVL-ausbruch-2026-11-23",
-   "type": "ausbruch",
-   "level": "mittel",
-   "title": "Marvell Technology über der Bestätigungsmarke 132,50 $",
-   "text": "Kurs 148,20 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 132,5 $ → Fehlbruch; nicht hinterherkaufen, Rücksetzer abwarten."
-  },
-  {
-   "ticker": "CRWD",
-   "name": "CrowdStrike",
-   "group": "Watchlist",
-   "price": 206.29,
-   "chg_pct": -0.1009,
-   "at": "2026-11-23T15:36+00:00",
-   "id": "CRWD-zone-2026-11-23",
-   "type": "zone",
-   "level": "mittel",
-   "title": "CrowdStrike in der Einstiegszone",
-   "text": "Kurs 206,29 $ ist in die Zone 200,00 $–212,00 $ gelaufen.",
-   "todo": "212–245 $: abwarten, nicht hinterherkaufen."
-  }
- ],
+ "events": [],
  "notified": [
   "AMD-absturz-2026-11-23",
   "APLD-absturz-2026-11-23",
