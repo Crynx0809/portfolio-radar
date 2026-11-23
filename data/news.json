@@ -1,23 +1,23 @@
 [
  {
+  "id": "n_20261123_2245_markt",
+  "date": "2026-11-23",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Bester Börsentag seit April 2025: S&P 500 +4,8 %, Nasdaq ca. +6,5 % nach Nvidias CEO-Kehrtwende",
+  "summary": "Nach der Crash-Woche starke Erholung bis Handelsschluss, angeführt von Chipwerten. Mehrere Depotwerte holen Fehlbrüche zurück (Marvell, Applied Digital, Alphabet). Achtung: Fed-Gouverneur Waller hält eine Zinserhöhung um 0,5 Punkte im Dezember für möglich.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+ },
+ {
   "id": "n_20261123_nvda",
   "date": "2026-11-23",
   "ticker": "NVDA",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "Nvidia setzt Jensen Huang wieder als CEO ein – Aktie rund +30 %",
-  "summary": "Elf Tage nach seiner Absetzung holt der Nvidia-Verwaltungsrat Jensen Huang auf den Chefposten zurück (8-K vom 23.11.). Die Aktie springt um rund 30 % auf ca. 166 $ und zieht den ganzen KI- und Chipsektor mit nach oben.",
+  "headline": "Nvidia setzt Jensen Huang wieder als CEO ein – Aktie schließt +31,5 % bei 165 $",
+  "summary": "Der Verwaltungsrat holt Huang nur Tage nach seinem Rücktritt zurück (8-K vom 23.11.). Nvidia schließt bei 165,1 $ (+31,5 %) und zieht den ganzen Chipsektor mit: Micron +19 %, Marvell +18 %, TSMC +14 %, AMD +7 %.",
   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
- },
- {
-  "id": "n_20261123_markt2",
-  "date": "2026-11-23",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Starke Erholung in der US-Sitzung: Nasdaq 100 ca. +6,4 %, S&P 500 ca. +4,5 % – Chipwerte +15 bis +30 %",
-  "summary": "Nach der Crash-Woche holen die Indizes einen großen Teil der Freitagsverluste auf. Treiber ist die Rückkehr von Jensen Huang zu Nvidia. Micron, TSMC und Marvell steigen um 15–20 %, AMD um gut 8 %. Beide Indizes notieren aber weiter unter ihrem 200-Tage-Durchschnitt.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
  },
  {
   "id": "n_20261123_zs",
@@ -25,7 +25,7 @@
   "ticker": "ZS",
   "impact": "hoch",
   "direction": "positiv",
-  "headline": "CrowdStrike will Zscaler für rund 44 Mrd. $ übernehmen – Zscaler vorbörslich ca. +13 %, CrowdStrike ca. −8 %",
+  "headline": "CrowdStrike will Zscaler im Aktientausch übernehmen – Zscaler schließt +17,7 %, CrowdStrike −8,9 %",
   "summary": "Reiner Aktientausch: 1,135 CrowdStrike-Aktien je Zscaler-Aktie, rechnerisch ca. 260 $ je Aktie und rund 34 % Aufschlag auf den Freitagsschluss. Ziel ist ein Anbieter für Endgeräte- und Netzwerksicherheit. CrowdStrike verliert vorbörslich wegen der Verwässerung.",
   "url": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-chip-stocks-lead-124424524.html"
  },
@@ -270,16 +270,6 @@
   "url": "https://finance.yahoo.com/technology/live/nvidia-earnings-live-nvidia-to-report-q3-results-after-the-bell-with-colette-kress-to-host-first-call-as-interim-ceo-202616349.html"
  },
  {
-  "id": "n_mkt_1117e",
-  "date": "2026-11-17",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Zweiter Verlusttag: Dow −1,6 %, S&P 500 −1,0 %, Nasdaq −0,7 %",
-  "summary": "Vorsicht vor den Nvidia-Zahlen, VIX steigt um ca. 11 % auf rund 26, 10-jährige US-Rendite um 5,1 %. Software-Werte besonders schwach (ServiceNow −6,5 %, Atlassian −6 %, Adobe −4,2 %, SAP −5,6 %). Nike fällt am Investor Day um 6,3 %.",
-  "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-17-dow-sp-500-nasdaq-nvidia-earnings-retail-sales-143848454.html"
- },
- {
   "id": "n_sap_1117m",
   "date": "2026-11-17",
   "ticker": "SAP",
@@ -288,35 +278,5 @@
   "headline": "SAP rund −3 %: Kundenvorstand Thomas Saueressig wechselt zu IONOS, dazu KI-Sorgen vor den Nvidia-Zahlen",
   "summary": "Der Abgang des Vorstands für Kunden und Dienstleistungen belastet zusammen mit der allgemeinen Nervosität bei Software- und KI-Werten. SAP fällt auf ca. 207 €, bleibt aber klar über der Rücksetzer-Zone 185–190 € und dem Stop 178 €.",
   "url": "https://aktiencheck.de/artikel/sap-aktie-kundenchef-saueressig-geht-zu-ionos-und-die-ki-angst-ist-zurueck"
- },
- {
-  "id": "n_mkt_1116e",
-  "date": "2026-11-16",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Tech-Ausverkauf vor den Nvidia-Zahlen: Nasdaq 100 ca. −2,7 %, S&P 500 ca. −1,9 %, Dow ca. −1,4 %",
-  "summary": "Breiter Abverkauf, angeführt von Chip- und KI-Werten. Gründe laut Berichten: Umschichtung aus KI-Aktien vor den ersten Nvidia-Zahlen ohne Jensen Huang (Di. nach Börsenschluss), eine neue US-Regel zum Fernzugriff auf fortschrittliche Chips über Rechenzentren in Drittländern und ein schwacher Empire-State-Index (7,8 statt 16,7). Alphabet −4,1 %, Amazon −3,3 %, Meta −2,4 %. Werte laut ETF-Schlusskursen (SPY, QQQ, DIA).",
-  "url": "https://www.marketalleys.com/post/marketalleys-closing-tape-2026-11-16"
- },
- {
-  "id": "n_chips_1116e",
-  "date": "2026-11-16",
-  "ticker": "MU",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Chip-Ausverkauf vertieft sich: Micron −7,6 %, Marvell −7,3 %, Intel −7,0 %, TSMC −6,3 %, AMD −5,6 %, Nvidia −4,1 %",
-  "summary": "Zweiter schwacher Tag in Folge für Halbleiter. Marvell leidet zusätzlich unter Verwässerungssorgen wegen der Lumentum-Übernahme per Aktientausch; Arm fiel ebenfalls rund 8 %. Micron, TSMC und Marvell schließen in bzw. knapp unter ihren Einstiegszonen.",
-  "url": "https://www.fool.com/investing/2026/11/16/why-marvell-stock-is-down-today/"
- },
- {
-  "id": "n_apld_1116e",
-  "date": "2026-11-16",
-  "ticker": "APLD",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Applied Digital −8,7 % auf 14,58 $ ohne eigene Meldung",
-  "summary": "Abverkauf mit den KI-Rechenzentrums-Werten vor den Nvidia-Zahlen; seit Jahresbeginn rund −41 %. Kurs in der Zone 14–16 $, Stop 13,20 $ knapp unter dem November-Tief.",
-  "url": "https://247wallst.com/investing/2026/11/16/applied-digital-is-down-41-this-year-what-will-it-take-to-get-apld-stock-back-to-20/"
  }
 ]

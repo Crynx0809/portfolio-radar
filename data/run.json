@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-23T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Kräftige Erholung: Nvidia holt Jensen Huang als CEO zurück (Aktie ca. +30 %), Nasdaq 100 ca. +6,4 %. Marvell (+19 %) und Applied Digital (+24 %) wieder über ihren Bestätigungsmarken, kein Depot-Stop gebrochen; SAP bleibt knapp über dem Stop.",
-  "market": "US-Sitzung: S&P 500 7.220 (+4,5 %), Nasdaq 100 26.626 (+6,4 %), beide weiter unter dem 200-Tage-Schnitt. Chipwerte führen (Nvidia +32 %, Micron +19 %, TSMC +15 %). Kurse TradingView 17:47 Uhr (Stand intraday).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-23T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Bester Börsentag seit April 2025 nach Nvidias CEO-Kehrtwende. Marvell und Applied Digital holen die Stop-Brüche vom Freitag zurück (Fehlbrüche) – neue Stops 119 $ bzw. 11,0 $, falls noch gehalten. Alphabet wieder über 270,7 $, AMD in der Zukaufzone. Nvidia, Micron, TSMC mit neuen Plänen.",
+  "market": "Schluss US: S&P 500 ca. +4,8 %, Nasdaq ca. +6,5 % (bester Tag seit April 2025), Chipwerte führen (Nvidia +31,5 %, Micron +19 %, Marvell +18 %, TSMC +14 %). Fed-Zinserhöhung im Dezember bleibt Risiko. Kurse TradingView, Schlusskurse 23.11.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]
