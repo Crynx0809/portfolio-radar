@@ -1,125 +1,89 @@
 {
- "generated_at": "2026-11-23T11:33:25+00:00",
+ "generated_at": "2026-11-23T15:36:10+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 424.39,
+   "price": 459.935,
    "stop": 398,
    "trigger": 658.5,
-   "gap_to_stop": 0.0663
+   "gap_to_stop": 0.1556
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 265.29,
+   "price": 281.87,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0126
+   "gap_to_stop": 0.0758
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 11.49,
+   "price": 14.63,
    "stop": 7.4,
    "trigger": 12,
-   "gap_to_stop": 0.5527
-  },
-  {
-   "ticker": "BAC",
-   "name": "Bank of America",
-   "price": 47.08,
-   "stop": 45.8,
-   "trigger": 54.5,
-   "gap_to_stop": 0.0279
+   "gap_to_stop": 0.977
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 122.28,
+   "price": 148.2,
    "stop": 92,
    "trigger": 132.5,
-   "gap_to_stop": 0.3291
+   "gap_to_stop": 0.6109
   },
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 183.94,
+   "price": 186.7,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0334
+   "gap_to_stop": 0.0489
   }
  ],
  "events": [
   {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 424.39,
-   "chg_pct": -0.1325,
-   "at": "2026-11-23T11:33+00:00",
-   "id": "AMD-absturz-2026-11-23",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Advanced Micro Devices −13,2 % heute",
-   "text": "Starker Tagesverlust auf 424,39 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Position halten mit Stop 398 $ per Schlusskurs (6 % unter dem Kurs). Nicht nachkaufen, bis AMD wieder über 472 $ schließt. Ziel 680–760 $."
-  },
-  {
-   "ticker": "GOOGL",
-   "name": "Alphabet A",
-   "group": "Portfolio",
-   "price": 265.29,
-   "chg_pct": -0.027,
-   "at": "2026-11-23T11:33+00:00",
-   "id": "GOOGL-stopnah-2026-11-23",
-   "type": "stop_nah",
-   "level": "mittel",
-   "title": "Alphabet A nah am Stop",
-   "text": "Kurs 265,29 $ nur noch 1,3 % über dem Stop 262,00 $.",
-   "todo": "Schlusskurs beobachten. Schluss unter 262 $ → Position deutlich reduzieren; nächste Unterstützung 240–255 $ (große Absicherung 240 $)."
-  },
-  {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 11.49,
-   "chg_pct": -0.1781,
-   "at": "2026-11-23T11:33+00:00",
-   "id": "APLD-absturz-2026-11-23",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Applied Digital −17,8 % heute",
-   "text": "Starker Tagesverlust auf 11,49 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Stop 13,2 $ per Schlusskurs gebrochen (11,49 $): laut Plan Position verkaufen. Neuer Einstieg erst in 8,5–9,5 $ (klein, gestaffelt), Stop 7,4 $, Ziel 13–15 $."
-  },
-  {
-   "ticker": "BAC",
-   "name": "Bank of America",
-   "group": "Portfolio",
-   "price": 47.08,
-   "chg_pct": -0.0307,
-   "at": "2026-11-23T11:33+00:00",
-   "id": "BAC-stopnah-2026-11-23",
-   "type": "stop_nah",
+   "price": 14.63,
+   "chg_pct": 0.2733,
+   "at": "2026-11-23T15:36+00:00",
+   "id": "APLD-ausbruch-2026-11-23",
+   "type": "ausbruch",
    "level": "mittel",
-   "title": "Bank of America nah am Stop",
-   "text": "Kurs 47,08 $ nur noch 2,8 % über dem Stop 45,80 $.",
-   "todo": "Schlusskurs beobachten. Schluss unter 45,8 $ → Position verkaufen."
+   "title": "Applied Digital über der Bestätigungsmarke 12,00 $",
+   "text": "Kurs 14,63 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 13,2 $ → Abverkauf war Übertreibung; trotzdem nicht hinterherkaufen, Rücksetzer abwarten."
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 122.28,
-   "chg_pct": -0.1169,
-   "at": "2026-11-23T11:33+00:00",
-   "id": "MRVL-absturz-2026-11-23",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Marvell Technology −11,7 % heute",
-   "text": "Starker Tagesverlust auf 122,28 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Stop 135 $ per Schlusskurs gebrochen (122,3 $): laut Plan Position verkaufen. Neuer Einstieg erst in 100–108 $ (gestaffelt), Stop 92 $, Ziel 135–150 $."
+   "price": 148.2,
+   "chg_pct": 0.212,
+   "at": "2026-11-23T15:36+00:00",
+   "id": "MRVL-ausbruch-2026-11-23",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Marvell Technology über der Bestätigungsmarke 132,50 $",
+   "text": "Kurs 148,20 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 132,5 $ → Fehlbruch; nicht hinterherkaufen, Rücksetzer abwarten."
+  },
+  {
+   "ticker": "CRWD",
+   "name": "CrowdStrike",
+   "group": "Watchlist",
+   "price": 206.29,
+   "chg_pct": -0.1009,
+   "at": "2026-11-23T15:36+00:00",
+   "id": "CRWD-zone-2026-11-23",
+   "type": "zone",
+   "level": "mittel",
+   "title": "CrowdStrike in der Einstiegszone",
+   "text": "Kurs 206,29 $ ist in die Zone 200,00 $–212,00 $ gelaufen.",
+   "todo": "212–245 $: abwarten, nicht hinterherkaufen."
   }
  ],
  "notified": [
