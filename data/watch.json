@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T21:47:30+00:00",
+ "generated_at": "2026-11-23T09:18:02+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -44,10 +44,10 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 183.68,
+   "price": 182.4,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0319
+   "gap_to_stop": 0.0247
   }
  ],
  "events": [
@@ -57,8 +57,8 @@
    "group": "Portfolio",
    "price": 424.39,
    "chg_pct": -0.1325,
-   "at": "2026-11-20T21:47+00:00",
-   "id": "AMD-absturz-2026-11-20",
+   "at": "2026-11-23T09:18+00:00",
+   "id": "AMD-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
    "title": "Advanced Micro Devices −13,2 % heute",
@@ -71,8 +71,8 @@
    "group": "Portfolio",
    "price": 265.29,
    "chg_pct": -0.027,
-   "at": "2026-11-20T21:47+00:00",
-   "id": "GOOGL-stopnah-2026-11-20",
+   "at": "2026-11-23T09:18+00:00",
+   "id": "GOOGL-stopnah-2026-11-23",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Alphabet A nah am Stop",
@@ -85,8 +85,8 @@
    "group": "Portfolio",
    "price": 11.49,
    "chg_pct": -0.1781,
-   "at": "2026-11-20T21:47+00:00",
-   "id": "APLD-absturz-2026-11-20",
+   "at": "2026-11-23T09:18+00:00",
+   "id": "APLD-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −17,8 % heute",
@@ -99,8 +99,8 @@
    "group": "Portfolio",
    "price": 47.08,
    "chg_pct": -0.0307,
-   "at": "2026-11-20T21:47+00:00",
-   "id": "BAC-stopnah-2026-11-20",
+   "at": "2026-11-23T09:18+00:00",
+   "id": "BAC-stopnah-2026-11-23",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Bank of America nah am Stop",
@@ -113,18 +113,32 @@
    "group": "Portfolio",
    "price": 122.28,
    "chg_pct": -0.1169,
-   "at": "2026-11-20T21:47+00:00",
-   "id": "MRVL-absturz-2026-11-20",
+   "at": "2026-11-23T09:18+00:00",
+   "id": "MRVL-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −11,7 % heute",
    "text": "Starker Tagesverlust auf 122,28 $. Ursache in den News prüfen, nicht im Affekt handeln.",
    "todo": "Stop 135 $ per Schlusskurs gebrochen (122,3 $): laut Plan Position verkaufen. Neuer Einstieg erst in 100–108 $ (gestaffelt), Stop 92 $, Ziel 135–150 $."
+  },
+  {
+   "ticker": "SAP",
+   "name": "SAP SE",
+   "group": "Portfolio",
+   "price": 182.4,
+   "chg_pct": -0.007,
+   "at": "2026-11-23T09:18+00:00",
+   "id": "SAP-stopnah-2026-11-23",
+   "type": "stop_nah",
+   "level": "mittel",
+   "title": "SAP SE nah am Stop",
+   "text": "Kurs 182,40 € nur noch 2,5 % über dem Stop 178,00 €.",
+   "todo": "Schlusskurs beobachten. Unter 185 € erhöhte Vorsicht; Schlusskurs unter 157 € → reduzieren."
   }
  ],
  "notified": [
-  "APLD-stop-2026-11-20",
-  "MRVL-stop-2026-11-20",
-  "AMD-absturz-2026-11-20"
+  "AMD-absturz-2026-11-23",
+  "APLD-absturz-2026-11-23",
+  "MRVL-absturz-2026-11-23"
  ]
 }
