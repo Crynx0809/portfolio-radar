@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_20261123_1745_depot",
+  "at": "2026-11-23T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "US-Sitzung (TradingView 17:47 Uhr): kräftige Erholung, kein Depot-Stop gebrochen. Marvell 145,8 $ (+19 %) und Applied Digital 14,30 $ (+24 %) liegen wieder über ihren Bestätigungsmarken 132,5 $ bzw. 12 $ – zählt erst per Schlusskurs; nicht hinterherkaufen, Neubewertung in der Abendanalyse. AMD 460 $ (+8,5 %) in der Zone 450–472 $. SAP 186,7 € bleibt nur 4,9 % über dem Stop 178 €."
+ },
+ {
+  "id": "a_20261123_1745_watch",
+  "at": "2026-11-23T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Nvidia 166 $ (+32 %, CEO Huang zurück), Micron 709 $, TSMC 368 $, Cameco 62,0 $, Robinhood 68,0 $ über ihren Bestätigungsmarken – alle Status „meiden“ mit tieferen Zonen, kein Hinterherkaufen; Neubewertung in der Abendanalyse. CrowdStrike 204 $ (−11 %, Zscaler-Übernahme) in der Zone 200–212 $. Exxon 158,3 $ knapp über dem Stop 152 $."
+ },
+ {
   "id": "2026-11-23-1435-depot",
   "at": "2026-11-23T14:35:00+01:00",
   "ticker": "Depot",

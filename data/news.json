@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_20261123_nvda",
+  "date": "2026-11-23",
+  "ticker": "NVDA",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Nvidia setzt Jensen Huang wieder als CEO ein – Aktie rund +30 %",
+  "summary": "Elf Tage nach seiner Absetzung holt der Nvidia-Verwaltungsrat Jensen Huang auf den Chefposten zurück (8-K vom 23.11.). Die Aktie springt um rund 30 % auf ca. 166 $ und zieht den ganzen KI- und Chipsektor mit nach oben.",
+  "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-ceo.html"
+ },
+ {
+  "id": "n_20261123_markt2",
+  "date": "2026-11-23",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Starke Erholung in der US-Sitzung: Nasdaq 100 ca. +6,4 %, S&P 500 ca. +4,5 % – Chipwerte +15 bis +30 %",
+  "summary": "Nach der Crash-Woche holen die Indizes einen großen Teil der Freitagsverluste auf. Treiber ist die Rückkehr von Jensen Huang zu Nvidia. Micron, TSMC und Marvell steigen um 15–20 %, AMD um gut 8 %. Beide Indizes notieren aber weiter unter ihrem 200-Tage-Durchschnitt.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+ },
+ {
   "id": "n_20261123_zs",
   "date": "2026-11-23",
   "ticker": "ZS",
