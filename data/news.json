@@ -1,5 +1,35 @@
 [
  {
+  "id": "n_20261123_zs",
+  "date": "2026-11-23",
+  "ticker": "ZS",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "CrowdStrike will Zscaler für rund 44 Mrd. $ übernehmen – Zscaler vorbörslich ca. +13 %, CrowdStrike ca. −8 %",
+  "summary": "Reiner Aktientausch: 1,135 CrowdStrike-Aktien je Zscaler-Aktie, rechnerisch ca. 260 $ je Aktie und rund 34 % Aufschlag auf den Freitagsschluss. Ziel ist ein Anbieter für Endgeräte- und Netzwerksicherheit. CrowdStrike verliert vorbörslich wegen der Verwässerung.",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-chip-stocks-lead-124424524.html"
+ },
+ {
+  "id": "n_20261123_markt",
+  "date": "2026-11-23",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "Erholung nach der Crash-Woche: US-Futures Nasdaq 100 ca. +3 %, S&P 500 ca. +2,2 % – Chipwerte vorbörslich +5 bis +9 %",
+  "summary": "Nach sieben Verlusttagen in Folge setzen Strategen (u. a. Morgan Stanley) auf eine Gegenbewegung; Stützungsmaßnahmen in Asien am Wochenende helfen. Vorbörslich Nvidia ca. +7–9 %, AMD ca. +4–6 %, Marvell ca. +6 %, Micron ca. +7 %, Applied Digital ca. +10 %. VIX ca. 31 (−13 %), 10-jährige US-Rendite 4,92 %, Öl ca. −1,5 %. Goldman und andere warnen: technische Erholung, die Kapitulation fehle noch.",
+  "url": "https://www.swissinfo.ch/eng/us-stock-futures-bounce-on-wall-street-buy-calls:-markets-wrap/92421262"
+ },
+ {
+  "id": "n_20261123_fed",
+  "date": "2026-11-23",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Fed-Gouverneur Waller bringt Zinserhöhung um 0,5 Prozentpunkte im Dezember ins Spiel",
+  "summary": "Waller hält eine Anhebung um 50 Basispunkte am 9.12. oder eine straffere Politik bis 2027 für möglich. Am Mittwoch kommt die PCE-Inflation (erwartet ca. 3,8 %). Risiko für die Erholung.",
+  "url": "https://www.swissinfo.ch/eng/us-stock-futures-bounce-on-wall-street-buy-calls:-markets-wrap/92421262"
+ },
+ {
   "id": "n_20261120_close",
   "date": "2026-11-20",
   "ticker": "Markt",
@@ -268,35 +298,5 @@
   "headline": "Applied Digital −8,7 % auf 14,58 $ ohne eigene Meldung",
   "summary": "Abverkauf mit den KI-Rechenzentrums-Werten vor den Nvidia-Zahlen; seit Jahresbeginn rund −41 %. Kurs in der Zone 14–16 $, Stop 13,20 $ knapp unter dem November-Tief.",
   "url": "https://247wallst.com/investing/2026/11/16/applied-digital-is-down-41-this-year-what-will-it-take-to-get-apld-stock-back-to-20/"
- },
- {
-  "id": "n_moh_1116e",
-  "date": "2026-11-16",
-  "ticker": "MOH",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Molina Healthcare +11,3 % auf 233,1 $ – Schluss über der Bestätigung 226 $",
-  "summary": "Medicaid-Versicherer gefragt (Centene ca. +5 %, Elevance ca. +4 %), keine eigene Firmenmeldung. Molina beendet damit wahrscheinlich die Korrektur seit Juli; neue Einstiegszone 214–222 $.",
-  "url": "https://seekingalpha.com/news/4673097-molina-healthcare-climbs-8-as-sector-moves-higher"
- },
- {
-  "id": "n_novo_1116e",
-  "date": "2026-11-16",
-  "ticker": "NOVO-B",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Novo Nordisk +2,5 % auf 38,07 € – zweiter Schluss über der Bestätigung 37,50 €",
-  "summary": "Rückenwind durch Phase-3-Daten zu CagriSema und eine EU-Zulassung. Bodenszenario gestärkt; Stop der Position auf Einstand ziehen.",
-  "url": "https://www.marketalleys.com/post/marketalleys-closing-tape-2026-11-16"
- },
- {
-  "id": "n_nvda_1116",
-  "date": "2026-11-16",
-  "ticker": "NVDA",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Nvidia vorbörslich ca. −3 %: Bericht, Jensen Huang und Unterstützer arbeiten an seiner Rückkehr als Chef",
-  "summary": "Laut einem FT-Bericht wird eine Rückkehr Huangs vorbereitet; Interims-Chefin ist Finanzchefin Colette Kress. Die Unsicherheit drückt die Aktie einen Tag vor den Q3-Zahlen in Richtung Unterkante der Zone 158–168 $ (Stop 145 $).",
-  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262307008-us-nvda-nasdaq-futures-nvidia-jensen-huang-anthropic-ipo-tradingkey"
  }
 ]

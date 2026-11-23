@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-20T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Tech-Crash zum Wochenschluss: Applied Digital und Marvell schließen unter ihren Stops – laut Plan verkaufen. AMD −13 % auf 424 $ (Stop 398 $ hält), Alphabet unter der Invalidierung, nah am Stop 262 $. Auf der Watchlist elf Stops gebrochen (u. a. Nvidia, Micron, TSMC, Meta) – neue, tiefere Zonen.",
-  "market": "Schluss: S&P 500 −3,7 % (ca. 6.910, Woche −8,6 %), Nasdaq 100 −5,6 % (Woche −10,4 %), DAX −2,6 %, VIX ca. 36, US-Rendite 10 J. 4,91 %, Gold −4,5 %, Bitcoin ca. 58.600 $. S&P 500 und Dow in der Korrektur. Kurse TradingView 22:31 Uhr (Schlusskurse).",
-  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-23T14:35:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Gegenbewegung nach der Crash-Woche: US-Futures Nasdaq 100 ca. +3 %, Chipwerte vorbörslich +5 bis +9 %. CrowdStrike will Zscaler übernehmen (ca. 260 $ je Aktie, +34 %). Kein neuer Depot-Stop gebrochen; Alphabet und Bank of America bleiben knapp über ihren Stops.",
+  "market": "Vorbörslich: S&P-500-Futures ca. +2,2 %, Nasdaq-100-Futures ca. +3 %, Dow ca. +1,8 %, Stoxx 600 +0,7 %, VIX ca. 31, US-Rendite 10 J. 4,92 %, Öl (WTI) ca. −1,5 %, Gold ca. +2 %. Fed-Gouverneur Waller hält +0,5 Pp im Dezember für möglich. Kurse TradingView 14:21 Uhr (US-Werte Freitagsschluss).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

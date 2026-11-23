@@ -1,5 +1,19 @@
 [
  {
+  "id": "2026-11-23-1435-depot",
+  "at": "2026-11-23T14:35:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vor US-Börsenstart (TradingView 14:21 Uhr, US-Werte noch auf Freitagsschluss): starke Erholung vorbörslich (Nasdaq-100-Futures ca. +3 %, AMD ca. +5 %, Marvell ca. +6 %, Applied Digital ca. +10 %). Pläne vom Freitag gelten: Erholung ist kein Kaufsignal, Stops per Schlusskurs. Knapp: Alphabet 265,3 $ (Stop 262 $, 1,3 % Abstand), Bank of America 47,1 $ (Stop 45,8 $). SAP 183,9 € knapp unter der Zone 185–190 €, Fortinet 124,6 $ in der Zone."
+ },
+ {
+  "id": "2026-11-23-1435-zs",
+  "at": "2026-11-23T14:35:00+01:00",
+  "ticker": "ZS",
+  "level": "hoch",
+  "text": "Zscaler (Watchlist, kein Bestand): CrowdStrike bietet ca. 260 $ je Aktie in eigenen Aktien (+34 %). Die Kaufzone 172–182 $ ist damit hinfällig – kein Einstieg, der Kurs folgt jetzt dem Angebot. CrowdStrike (Watchlist) vorbörslich ca. −8 % wegen Verwässerung."
+ },
+ {
   "id": "2026-11-20-2245-depot",
   "at": "2026-11-20T22:45:00+01:00",
   "ticker": "Depot",
@@ -292,19 +306,5 @@
   "ticker": "NVDA",
   "level": "mittel",
   "text": "Nvidia vorbörslich ca. −5,5 % (Bericht: Verwaltungsrat erwägt Absetzung von Jensen Huang) – damit rund 164 $ und in der Einstiegszone 162–170 $. Plan unverändert: gestaffelt in 162–170 $, Stop 155 $. Schlagzeilen-Risiko hoch, nur kleine Position; Schluss unter 155 $ = Plan ungültig."
- },
- {
-  "id": "a_mrvl_1111e",
-  "at": "2026-11-11T22:45:00+01:00",
-  "ticker": "MRVL",
-  "level": "hoch",
-  "text": "Marvell schließt bei 168,8 $ (+9,3 %) über der Bestätigung 162 $ – Boden bei 132,5 $ bestätigt. Plan: Stop für die Position auf Einstand ziehen (mindestens unter 135 $), Teilgewinne ab 185 $. Zukauf nur bei Rücksetzer in 147–154 $."
- },
- {
-  "id": "a_mu_1111e",
-  "at": "2026-11-11T22:45:00+01:00",
-  "ticker": "MU",
-  "level": "mittel",
-  "text": "Micron schließt bei 811 $ (+11,9 %), alte Zone 560–600 $ nie erreicht. Neuer Plan: Rücksetzer in 715–745 $ kaufen, Stop 670 $, Ziel 900–990 $; über 892 $ Stop auf Einstand."
  }
 ]
