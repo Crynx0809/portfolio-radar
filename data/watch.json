@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T09:18:02+00:00",
+ "generated_at": "2026-11-23T11:33:25+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -44,10 +44,10 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 182.4,
+   "price": 183.94,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0247
+   "gap_to_stop": 0.0334
   }
  ],
  "events": [
@@ -57,7 +57,7 @@
    "group": "Portfolio",
    "price": 424.39,
    "chg_pct": -0.1325,
-   "at": "2026-11-23T09:18+00:00",
+   "at": "2026-11-23T11:33+00:00",
    "id": "AMD-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
@@ -71,7 +71,7 @@
    "group": "Portfolio",
    "price": 265.29,
    "chg_pct": -0.027,
-   "at": "2026-11-23T09:18+00:00",
+   "at": "2026-11-23T11:33+00:00",
    "id": "GOOGL-stopnah-2026-11-23",
    "type": "stop_nah",
    "level": "mittel",
@@ -85,7 +85,7 @@
    "group": "Portfolio",
    "price": 11.49,
    "chg_pct": -0.1781,
-   "at": "2026-11-23T09:18+00:00",
+   "at": "2026-11-23T11:33+00:00",
    "id": "APLD-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
@@ -99,7 +99,7 @@
    "group": "Portfolio",
    "price": 47.08,
    "chg_pct": -0.0307,
-   "at": "2026-11-23T09:18+00:00",
+   "at": "2026-11-23T11:33+00:00",
    "id": "BAC-stopnah-2026-11-23",
    "type": "stop_nah",
    "level": "mittel",
@@ -113,27 +113,13 @@
    "group": "Portfolio",
    "price": 122.28,
    "chg_pct": -0.1169,
-   "at": "2026-11-23T09:18+00:00",
+   "at": "2026-11-23T11:33+00:00",
    "id": "MRVL-absturz-2026-11-23",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −11,7 % heute",
    "text": "Starker Tagesverlust auf 122,28 $. Ursache in den News prüfen, nicht im Affekt handeln.",
    "todo": "Stop 135 $ per Schlusskurs gebrochen (122,3 $): laut Plan Position verkaufen. Neuer Einstieg erst in 100–108 $ (gestaffelt), Stop 92 $, Ziel 135–150 $."
-  },
-  {
-   "ticker": "SAP",
-   "name": "SAP SE",
-   "group": "Portfolio",
-   "price": 182.4,
-   "chg_pct": -0.007,
-   "at": "2026-11-23T09:18+00:00",
-   "id": "SAP-stopnah-2026-11-23",
-   "type": "stop_nah",
-   "level": "mittel",
-   "title": "SAP SE nah am Stop",
-   "text": "Kurs 182,40 € nur noch 2,5 % über dem Stop 178,00 €.",
-   "todo": "Schlusskurs beobachten. Unter 185 € erhöhte Vorsicht; Schlusskurs unter 157 € → reduzieren."
   }
  ],
  "notified": [
