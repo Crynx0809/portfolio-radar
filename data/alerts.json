@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_20261124_1425_depot",
+  "at": "2026-11-24T14:25:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Vor US-Börsenstart (TradingView 14:20 Uhr, US-Werte noch auf Montagsschluss): Kein Depot-Stop gebrochen. Vorbörslich geben Chipwerte einen Teil des Montagsgewinns ab (AMD ca. −3 %, Marvell ca. −4 %, Nasdaq-100-Futures ca. −1,5 %). SAP 185,3 € (−0,6 %) in der Zone 185–190 €, aber nur 4 % über dem Stop 178 € – Schluss unter 178 € beachten. Novo Nordisk 36,0 € (+0,7 %) nähert sich der Bestätigung 37,5 €. Marvell (Stop 119 $) und Applied Digital (Stop 11,0 $) haben noch Puffer von über 20 %."
+ },
+ {
+  "id": "a_20261124_1425_watch",
+  "at": "2026-11-24T14:25:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "In die Einstiegszone gelaufen (kein Bestand): Siemens Energy 122,1 € (−3,5 %, Zone 118–123 €, Stop 112 €) und Xiaomi 26,50 HK$ (−3,7 %, Zone 25,5–26,8 HK$, Stop 24,4 HK$). Plan laut Zone: gestaffelt kaufen, Stop beachten."
+ },
+ {
   "id": "a_20261123_2245_depot",
   "at": "2026-11-23T22:45:00+01:00",
   "ticker": "Depot",

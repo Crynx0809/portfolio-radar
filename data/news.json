@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_20261124_1415_markt",
+  "date": "2026-11-24",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "negativ",
+  "headline": "Vorbörslich Gegenbewegung nach dem Rekordtag: Nasdaq-100-Futures ca. −1,4 bis −1,7 %, Chipwerte geben nach",
+  "summary": "Nach dem besten Tag seit April 2025 nehmen Anleger Gewinne mit: Nvidia vorbörslich ca. −4 bis −5 % (Fragen zur Rückkehr von CEO Huang, Exportliste, SEC-Prüfung), AMD ca. −3 %, Marvell ca. −4 %, HPE −12 % nach Zahlen. Gesundheit und Basiskonsum leicht fester. Heute nach Börsenschluss Zahlen von Dell. Angaben aus Vorbörsen-Berichten, noch unbestätigt.",
+  "url": "https://currentlogic.substack.com/p/the-morning-brief-november-24-2026"
+ },
+ {
   "id": "n_20261123_2245_markt",
   "date": "2026-11-23",
   "ticker": "Markt",

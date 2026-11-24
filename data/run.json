@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-23T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Bester Börsentag seit April 2025 nach Nvidias CEO-Kehrtwende. Marvell und Applied Digital holen die Stop-Brüche vom Freitag zurück (Fehlbrüche) – neue Stops 119 $ bzw. 11,0 $, falls noch gehalten. Alphabet wieder über 270,7 $, AMD in der Zukaufzone. Nvidia, Micron, TSMC mit neuen Plänen.",
-  "market": "Schluss US: S&P 500 ca. +4,8 %, Nasdaq ca. +6,5 % (bester Tag seit April 2025), Chipwerte führen (Nvidia +31,5 %, Micron +19 %, Marvell +18 %, TSMC +14 %). Fed-Zinserhöhung im Dezember bleibt Risiko. Kurse TradingView, Schlusskurse 23.11.",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-24T14:25:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Vor US-Start: Gegenbewegung nach dem Rekordtag – Chipwerte vorbörslich schwächer (AMD ca. −3 %, Marvell ca. −4 %), kein Depot-Stop gebrochen. SAP 185,3 € in der Zone, 4 % über dem Stop. Siemens Energy und Xiaomi in ihre Einstiegszonen gelaufen.",
+  "market": "Vorbörslich: Nasdaq-100-Futures ca. −1,4 bis −1,7 %, S&P-500-Futures ca. −0,7 bis −0,8 % (Berichte, unbestätigt). Nvidia ca. −4 bis −5 %, HPE −12 % nach Zahlen. Heute Abend Dell-Zahlen. Kurse TradingView 14:20 Uhr (US-Werte = Schluss 23.11.).",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]
