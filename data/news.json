@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_20261124_1745_chips",
+  "date": "2026-11-24",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chip- und KI-Werte geben die Montagsrally wieder ab: AMD ca. −12 %, Applied Digital −14 %, Marvell −10 %, Nvidia −8 %",
+  "summary": "Neue Zweifel an den Rechenzentrums-Ausgaben und den Renditen der KI-Investitionen drehen den Rekordtag vom Montag zu großen Teilen zurück. Nasdaq Composite am Vormittag (US-Zeit) ca. −2,2 %, S&P 500 ca. −1 %, Dow leicht im Plus. Bei AMD nennen Berichte zusätzlich eine Wiederverkaufs-Registrierung von rund 337 Mio. Aktien und Vorwürfe eines Leerverkäufers (unbestätigt). Analog Devices −15 % nach Zahlen, Micron ca. −8 %.",
+  "url": "https://sellthenews.org/catalyx/market/2026-11-24"
+ },
+ {
   "id": "n_20261124_1415_markt",
   "date": "2026-11-24",
   "ticker": "Markt",
