@@ -1,29 +1,29 @@
 {
- "generated_at": "2026-11-24T20:54:22+00:00",
+ "generated_at": "2026-11-24T21:56:32+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 409.435,
+   "price": 413.27,
    "stop": 398,
-   "trigger": 658.5,
-   "gap_to_stop": 0.0287
+   "trigger": 594,
+   "gap_to_stop": 0.0384
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 12.11,
+   "price": 12.22,
    "stop": 11.0,
    "trigger": 15.5,
-   "gap_to_stop": 0.1009
+   "gap_to_stop": 0.1109
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 130.63,
+   "price": 131.57,
    "stop": 119.0,
    "trigger": 155,
-   "gap_to_stop": 0.0977
+   "gap_to_stop": 0.1056
   },
   {
    "ticker": "NOVO-B",
@@ -39,85 +39,43 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 409.435,
-   "chg_pct": -0.0971,
-   "at": "2026-11-24T20:54+00:00",
-   "id": "AMD-stopnah-2026-11-24",
-   "type": "stop_nah",
-   "level": "mittel",
-   "title": "Advanced Micro Devices nah am Stop",
-   "text": "Kurs 409,44 $ nur noch 2,9 % über dem Stop 398,00 $.",
-   "todo": "Schlusskurs beobachten. Schluss unter 398 $ → Position verkaufen (C-Tief 402 $ gebrochen, Ziel dann 367 $)."
-  },
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 409.435,
-   "chg_pct": -0.0971,
-   "at": "2026-11-24T20:54+00:00",
+   "price": 413.27,
+   "chg_pct": -0.0886,
+   "at": "2026-11-24T21:56+00:00",
    "id": "AMD-absturz-2026-11-24",
    "type": "absturz",
    "level": "hoch",
-   "title": "Advanced Micro Devices −9,7 % heute",
-   "text": "Starker Tagesverlust auf 409,44 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Halten; Zukauf in 450–472 $ gestaffelt möglich, Stop 398 $ per Schluss, Ziel 680–760 $; über 594 $ Stop auf Einstand."
+   "title": "Advanced Micro Devices −8,9 % heute",
+   "text": "Starker Tagesverlust auf 413,27 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Halten mit Stop 398 $ per Schluss (nur noch 3,7 % entfernt); keine Zukäufe unter 450 $. Hauptszenario jetzt Rücksetzer bis 360–380 $."
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
    "group": "Portfolio",
-   "price": 12.11,
-   "chg_pct": -0.1237,
-   "at": "2026-11-24T20:54+00:00",
+   "price": 12.22,
+   "chg_pct": -0.1158,
+   "at": "2026-11-24T21:56+00:00",
    "id": "APLD-absturz-2026-11-24",
    "type": "absturz",
    "level": "hoch",
-   "title": "Applied Digital −12,4 % heute",
-   "text": "Starker Tagesverlust auf 12,11 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Falls noch gehalten: halten, Stop 11,0 $ per Schluss. Einstieg nur gestaffelt in 12–13 $, Ziel 17–18,6 $; über 15,5 $ Stop auf Einstand."
+   "title": "Applied Digital −11,6 % heute",
+   "text": "Starker Tagesverlust auf 12,22 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Falls noch gehalten: halten, Stop 11,0 $ per Schluss (10 % entfernt). Kurs 12,22 $ in der Zone 12–13 $: nur kleine Position gestaffelt, Ziel 17–18,6 $; über 15,5 $ Stop auf Einstand."
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 130.63,
-   "chg_pct": -0.0975,
-   "at": "2026-11-24T20:54+00:00",
+   "price": 131.57,
+   "chg_pct": -0.091,
+   "at": "2026-11-24T21:56+00:00",
    "id": "MRVL-absturz-2026-11-24",
    "type": "absturz",
    "level": "hoch",
-   "title": "Marvell Technology −9,7 % heute",
-   "text": "Starker Tagesverlust auf 130,63 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Falls noch gehalten: halten, Stop 119 $ per Schluss. Einstieg gestaffelt in 128–136 $, Ziel 170–180 $; über 155 $ Stop auf Einstand."
-  },
-  {
-   "ticker": "GEV",
-   "name": "GE Vernova",
-   "group": "Watchlist",
-   "price": 716.665,
-   "chg_pct": -0.0529,
-   "at": "2026-11-24T20:54+00:00",
-   "id": "GEV-zone-2026-11-24",
-   "type": "zone",
-   "level": "mittel",
-   "title": "GE Vernova in der Einstiegszone",
-   "text": "Kurs 716,66 $ ist in die Zone 690,00 $–740,00 $ gelaufen.",
-   "todo": "740–920 $: abwarten."
-  },
-  {
-   "ticker": "TSM",
-   "name": "Taiwan Semiconductor (TSMC, ADR)",
-   "group": "Watchlist",
-   "price": 347.27,
-   "chg_pct": -0.0449,
-   "at": "2026-11-24T20:54+00:00",
-   "id": "TSM-zone-2026-11-24",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Taiwan Semiconductor (TSMC, ADR) in der Einstiegszone",
-   "text": "Kurs 347,27 $ ist in die Zone 345,00 $–355,00 $ gelaufen.",
-   "todo": "355–387 $: abwarten."
+   "title": "Marvell Technology −9,1 % heute",
+   "text": "Starker Tagesverlust auf 131,57 $. Ursache in den News prüfen, nicht im Affekt handeln.",
+   "todo": "Falls noch gehalten: halten, Stop 119 $ per Schluss. Kurs 131,6 $ in der Zone 128–136 $: gestaffelt kaufen möglich, Ziel 170–180 $; über 155 $ Stop auf Einstand. Zahlen Anfang Dezember."
   }
  ],
  "notified": [
