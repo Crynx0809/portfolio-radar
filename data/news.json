@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_20261124_markt_close",
+  "date": "2026-11-24",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Chipwerte drehen nach der Montagsrally ab: Nasdaq 100 ca. −2 %, S&P 500 −0,5 %, Dow +0,8 %",
+  "summary": "Ein Teil des Rekordtags vom Montag wurde wieder abgegeben. Micron −11 %, AMD −8,9 %, Nvidia −5,9 % (Berichte über eine SEC-Prüfung), Broadcom −4 %. Gestützt wurden Banken, Pharma und Konsumwerte (Dow im Plus). Grund: Zweifel an KI-Ausgaben, Zinssorgen vor dem Fed-Termin im Dezember.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+ },
+ {
+  "id": "n_20261124_amd_s3",
+  "date": "2026-11-24",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "AMD registriert rund 337 Mio. Aktien zum Weiterverkauf – Aktie −8,9 %, Tagestief kurz unter dem Stop",
+  "summary": "Ein Prospekt vom 23.11. erlaubt den Weiterverkauf von Aktien aus Optionsscheinen von OpenAI und Meta (je 160 Mio., Ausübungspreis 1 Cent, gekoppelt an GPU-Abnahme). AMD erhält kein Geld; die Aktien entsprechen etwa 19 % des Aktienbestands. Das Angebot kann den Kurs länger belasten. Tagestief 396 $, Schluss 413,3 $.",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/amd-stocks-fall-9-08-170251435.html"
+ },
+ {
   "id": "n_20261124_1745_chips",
   "date": "2026-11-24",
   "ticker": "AMD",
@@ -278,25 +298,5 @@
   "headline": "Vorbörslich Erholung nach Nvidia-Zahlen: Nasdaq-100-Futures ca. +1,2 %, AMD und Marvell je ca. +2–3 %, Applied Digital ca. +5–6 %",
   "summary": "Die starken Nvidia-Zahlen ziehen Chip- und KI-Rechenzentrumswerte vorbörslich an (Nvidia ca. +3 %, Micron ca. +3 %). Alphabet, Amazon und Meta nur leicht im Plus. Lowe's nach Zahlen ca. −2,5 %. Heute 20 Uhr MEZ: Protokoll der Fed-Sitzung. Vorbörsliche Kurse, noch nicht bestätigt.",
   "url": "https://www.investing.com/news/stock-market-news/premarket-movers-nvidia-jumps-on-strong-ai-outlook-lowes-falls-5035719"
- },
- {
-  "id": "n_nvda_1117e",
-  "date": "2026-11-17",
-  "ticker": "NVDA",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Nvidia schlägt Erwartungen und hebt den Ausblick: Q3-Umsatz 115,8 Mrd. $, Q4-Prognose ca. 130 Mrd. $",
-  "summary": "Erste Zahlen ohne Jensen Huang: Umsatz 115,8 Mrd. $ (erwartet ca. 109 Mrd.), Rechenzentren 107,6 Mrd. $, Gewinn je Aktie 2,68 $ (erwartet 2,47 $). Q4-Prognose 127,4–132,6 Mrd. $ (erwartet ca. 125 Mrd.), dazu 150 Mrd. $ Aktienrückkauf. Nachbörslich ca. +2,4 %. Gleichzeitig meldet das WSJ eine SEC-Prüfung von Nvidia-Offenlegungen. Wichtig für AMD und Marvell im Depot.",
-  "url": "https://finance.yahoo.com/technology/live/nvidia-earnings-live-nvidia-to-report-q3-results-after-the-bell-with-colette-kress-to-host-first-call-as-interim-ceo-202616349.html"
- },
- {
-  "id": "n_sap_1117m",
-  "date": "2026-11-17",
-  "ticker": "SAP",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "SAP rund −3 %: Kundenvorstand Thomas Saueressig wechselt zu IONOS, dazu KI-Sorgen vor den Nvidia-Zahlen",
-  "summary": "Der Abgang des Vorstands für Kunden und Dienstleistungen belastet zusammen mit der allgemeinen Nervosität bei Software- und KI-Werten. SAP fällt auf ca. 207 €, bleibt aber klar über der Rücksetzer-Zone 185–190 € und dem Stop 178 €.",
-  "url": "https://aktiencheck.de/artikel/sap-aktie-kundenchef-saueressig-geht-zu-ionos-und-die-ki-angst-ist-zurueck"
  }
 ]

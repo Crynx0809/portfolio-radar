@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-24T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Chip-Ausverkauf: AMD fällt um 12 % auf 397,5 $ und liegt knapp unter dem Stop 398 $ (zählt per Schluss). Applied Digital −14 %, Marvell −10 % (wieder in der Zone). Übrige Depotwerte stabil in ihren Zonen.",
-  "market": "Nasdaq Composite ca. −2,2 %, S&P 500 ca. −1 %, Dow leicht im Plus (Stand ca. 17:30 Uhr MEZ). Grund: neue Zweifel an KI-Rechenzentrums-Ausgaben, Montagsrally wird zurückgedreht. Nvidia −8 %, Micron −8 %, Analog Devices −15 % nach Zahlen. Heute Abend Dell-Zahlen. Kurse TradingView 17:47 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-24T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "AMD hält den Stop 398 $ per Schluss (413,3 $), das Tagestief 396 $ hat aber das C-Tief 402 $ unterschritten – Zählung angepasst, Status „meiden“, keine Zukäufe unter 450 $. Applied Digital und Marvell zurück in ihren Zonen, übrige Depotwerte stabil.",
+  "market": "Nasdaq 100 ca. −2 %, S&P 500 −0,5 %, Dow +0,8 % – Chipwerte geben einen Teil der Montagsrally ab (Micron −11 %, AMD −8,9 %, Nvidia −5,9 %), Banken, Pharma und Konsum fester. Kurse TradingView 22:32 Uhr (Schlusskurse).",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

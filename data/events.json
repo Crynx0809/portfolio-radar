@@ -1,17 +1,5 @@
 [
  {
-  "id": "e_zs_20261124",
-  "date": "2026-11-24",
-  "ticker": "ZS",
-  "event": "Q1-Zahlen"
- },
- {
-  "id": "e_1810_20261124",
-  "date": "2026-11-24",
-  "ticker": "1810",
-  "event": "Q3-Zahlen"
- },
- {
   "id": "e_us_20261126",
   "date": "2026-11-26",
   "ticker": "Markt",
