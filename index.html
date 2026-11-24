@@ -4,13 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#0b0c10">
+<meta name="theme-color" content="#15110e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="LLM Radar">
+<link rel="manifest" href="manifest.webmanifest">
 <title>LLM Radar</title>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="logo.svg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="app.css?v=2611051528">
+<link rel="stylesheet" href="app.css?v=2611242325">
 </head>
 <body>
 <header class="top">
@@ -19,6 +24,7 @@
     <span><b>LLM Radar</b><small id="stand">lädt …</small></span>
   </a>
   <span class="badge" id="hotBadge" hidden></span>
+  <button class="install" id="installBtn" type="button" hidden>📲 <span>App installieren</span></button>
 </header>
 
 <div class="layout">
@@ -78,6 +84,15 @@
     <ul class="events" id="eventList"></ul>
     <p class="foot">Keine Anlageberatung. Alle Angaben ohne Gewähr.</p>
   </section>
+  <section class="page" id="heatmap" hidden>
+    <h1>Heatmap</h1>
+    <p class="hm-sub" id="hmSub">lädt …</p>
+    <div class="hm-ctl">
+      <div class="hm-seg" id="hmMkt"><button data-m="usa" aria-pressed="true">🇺🇸 USA</button><button data-m="europa" aria-pressed="false">🇪🇺 Europa</button></div>
+      <div class="hm-seg" id="hmPer"><button data-p="d" aria-pressed="true">Heute</button><button data-p="w" aria-pressed="false">1 Woche</button></div>
+    </div>
+    <div id="hmBody"></div>
+  </section>
   <section class="page" id="analyse" hidden>
     <h1>Analyse-Check</h1>
     <div id="analyseBody"></div>
@@ -91,6 +106,7 @@
   <a href="#chancen" data-page="chancen"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg><span>Chancen</span></a>
   <a href="#news" data-page="news"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg><span>News</span><i id="newsDot" hidden></i></a>
   <a href="#ausblick" data-page="ausblick"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 12l5-3"/><circle cx="12" cy="12" r="1.5"/></svg><span>Markt</span></a>
+  <a href="#heatmap" data-page="heatmap"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="10" height="11" rx="1.5"/><rect x="15" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="11" width="6" height="10" rx="1.5"/><rect x="3" y="16" width="10" height="5" rx="1.5"/></svg><span>Heatmap</span></a>
   <a href="#analyse" data-page="analyse"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Analyse</span></a>
 </nav>
 
@@ -102,6 +118,6 @@
 </article>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="app.js?v=2611051528"></script>
+<script src="app.js?v=2611242325"></script>
 </body>
 </html>

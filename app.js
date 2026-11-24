@@ -31,7 +31,7 @@
   const REPO = 'Crynx0809/portfolio-radar';
 
   /* ---------- Navigation ---------- */
-  const PAGES = ['aktien', 'chancen', 'news', 'ausblick', 'analyse'];
+  const PAGES = ['aktien', 'chancen', 'news', 'ausblick', 'heatmap', 'analyse'];
   function show(page, first) {
     if (!PAGES.includes(page)) page = 'aktien';
     PAGES.forEach((p) => { $('#' + p).hidden = p !== page; });
@@ -40,6 +40,7 @@
     if (!first) window.scrollTo({top: 0});
     anim((g) => g.from('#' + page + ' > *', {y: 14, opacity: 0, duration: .45, stagger: .05, ease: 'power2.out', clearProps: 'all'}));
     if (page === 'aktien' && !first) staggerRows();
+    if (page === 'heatmap') heatShow();
   }
   window.addEventListener('hashchange', () => {
     const h = location.hash.slice(1).split('/');
@@ -1427,6 +1428,123 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     box.querySelector('.pop-ok').focus();
   }
 
+
+  /* ---------- Heatmap: Börsenwert je Sektor (data/heat.json, scripts/fetch_heat.py) ----------
+     Fläche = Börsenwert, Farbe = Kursänderung. „Geldfluss“ = Änderung des Börsenwerts (kein echter Zu-/Abfluss). */
+  let HEAT = null, HHIST = null, HM = (() => { try { return JSON.parse(localStorage.getItem('radar-hm')) || {}; } catch (e) { return {}; } })();
+  HM = {m: HM.m || 'usa', p: HM.p || 'd', sec: null};
+  const hmSave = () => { try { localStorage.setItem('radar-hm', JSON.stringify({m: HM.m, p: HM.p})); } catch (e) { /* egal */ } };
+  async function heatShow() {
+    if (!HEAT) {
+      try { [HEAT, HHIST] = await Promise.all([load('heat'), load('heat_hist').catch(() => null)]); }
+      catch (e) { $('#hmSub').textContent = 'Heatmap-Daten noch nicht vorhanden – sie kommen mit dem nächsten Kursabruf.'; return; }
+      $('#hmMkt').querySelectorAll('button').forEach((b) => b.onclick = () => { HM.m = b.dataset.m; HM.sec = null; hmSave(); heatRender(); });
+      $('#hmPer').querySelectorAll('button').forEach((b) => b.onclick = () => { HM.p = b.dataset.p; hmSave(); heatRender(); });
+      let t; addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { if (document.body.dataset.page === 'heatmap') heatRender(); }, 200); });
+    }
+    heatRender();
+  }
+  // Squarified Treemap (Bruls et al.): Rechtecke mit möglichst quadratischen Kacheln
+  function squarify(items, x, y, w, h) {
+    const out = [], tot = items.reduce((a, b) => a + b.v, 0);
+    if (!tot || w <= 0 || h <= 0) return out;
+    const sc = (w * h) / tot;
+    let rest = items.map((it) => ({...it, a: it.v * sc}));
+    const worst = (row, side) => { const s = row.reduce((a, b) => a + b.a, 0), mx = Math.max(...row.map((r) => r.a)), mn = Math.min(...row.map((r) => r.a)); return Math.max(side * side * mx / (s * s), (s * s) / (side * side * mn)); };
+    while (rest.length) {
+      const side = Math.min(w, h); let row = [rest[0]], i = 1;
+      while (i < rest.length && worst([...row, rest[i]], side) <= worst(row, side)) row.push(rest[i++]);
+      const s = row.reduce((a, b) => a + b.a, 0);
+      if (w >= h) { const cw = s / h; let cy = y; row.forEach((r) => { const ch = r.a / cw; out.push({...r, x, y: cy, w: cw, h: ch}); cy += ch; }); x += cw; w -= cw; }
+      else { const ch = s / w; let cx = x; row.forEach((r) => { const cw = r.a / ch; out.push({...r, x: cx, y, w: cw, h: ch}); cx += cw; }); y += ch; h -= ch; }
+      rest = rest.slice(i);
+    }
+    return out;
+  }
+  const hmColor = (c, span) => {
+    if (c == null) return '#3a3431';
+    const t = Math.max(-1, Math.min(1, c / span)), k = Math.pow(Math.abs(t), .75);
+    const base = [58, 52, 49], to = t >= 0 ? [22, 163, 92] : [214, 48, 49];
+    return `rgb(${base.map((b, i) => Math.round(b + (to[i] - b) * k)).join(',')})`;
+  };
+  const bn = (x, cur) => { const a = Math.abs(x), s = x >= 0 ? '+' : '−'; return s + (a >= 1000 ? num(a / 1000, 2) + ' Bio.' : num(a, a >= 100 ? 0 : 1) + ' Mrd.') + ' ' + (cur === 'EUR' ? '€' : '$'); };
+  const hpc = (x) => (x >= 0 ? '+' : '−') + num(Math.abs(x * 100), 2) + ' %';
+  function heatRender() {
+    const M = HEAT && HEAT.markets && HEAT.markets[HM.m];
+    $('#hmMkt').querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.m === HM.m)));
+    $('#hmPer').querySelectorAll('button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.p === HM.p)));
+    if (!M) { $('#hmBody').innerHTML = '<p class="empty">Für diesen Markt gibt es noch keine Daten.</p>'; return; }
+    const W = HM.p === 'w', cur = M.cur, span = W ? .07 : .03;
+    const gen = new Date(HEAT.generated_at), day = new Date(M.date + 'T12:00:00');
+    const today = new Date().toISOString().slice(0, 10) === M.date;
+    $('#hmSub').innerHTML = `${esc(M.label)} · Handelstag ${day.toLocaleDateString('de-DE', {weekday: 'short', day: '2-digit', month: '2-digit'})}${today ? '' : ' (letzter voller Tag)'} · Stand ${gen.toLocaleString('de-DE', {day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'})} Uhr`;
+    const T = M.total, F = W ? T.wf : T.f, C = W ? T.wc : T.c;
+    const secs = M.sectors.map((s) => ({...s, F: W ? s.wf : s.f, C: W ? s.wc : s.c})).sort((a, b) => b.F - a.F);
+    const mx = Math.max(...secs.map((s) => Math.abs(s.F)), 1);
+    const best = secs[0], worst = secs[secs.length - 1];
+    const up = M.stocks.filter((s) => (W ? s.w : s.c) > 0).length;
+    // Verlauf: Gesamt-Börsenwert je Handelstag
+    const hist = HHIST && HHIST[HM.m] ? Object.entries(HHIST[HM.m]).sort().slice(-10) : [];
+    const hmx = Math.max(...hist.map(([, v]) => Math.abs(v.total.f)), 1);
+    const histH = hist.length >= 2 ? `<div class="hm-card"><div class="hm-ch"><b>Letzte Handelstage · Gesamtmarkt</b></div><div class="hm-days">${hist.map(([d, v]) => `<div class="hm-day" title="${d}: ${bn(v.total.f, cur)} (${hpc(v.total.c)})"><i class="${v.total.f >= 0 ? 'up' : 'dn'}" style="height:${Math.max(3, Math.abs(v.total.f) / hmx * 56)}px"></i><small>${new Date(d + 'T12:00:00').toLocaleDateString('de-DE', {weekday: 'short'})}</small></div>`).join('')}</div></div>` : '';
+    $('#hmBody').innerHTML = `
+      <div class="hm-top">
+        <div class="hm-card hm-big ${F >= 0 ? 'up' : 'dn'}"><small>Gesamtmarkt ${W ? 'diese Woche' : today ? 'heute' : 'am letzten Handelstag'}</small><b>${bn(F, cur)}</b><span>${hpc(C)} Börsenwert · ${up} von ${M.stocks.length} Aktien im Plus</span></div>
+        <div class="hm-card"><small>Stärkster Sektor</small><b class="up">${esc(best.g)}</b><span>${bn(best.F, cur)} · ${hpc(best.C)}</span></div>
+        <div class="hm-card"><small>Schwächster Sektor</small><b class="dn">${esc(worst.g)}</b><span>${bn(worst.F, cur)} · ${hpc(worst.C)}</span></div>
+      </div>
+      <div class="hm-grid">
+        <div class="hm-card hm-flow"><div class="hm-ch"><b>Wohin ist das Geld geflossen?</b><small>Änderung des Börsenwerts je Sektor${HM.sec ? ' · <button class="hm-x" data-sec="">alle zeigen ✕</button>' : ' · antippen zum Filtern'}</small></div>
+          ${secs.map((s) => `<button class="hm-bar${HM.sec === s.g ? ' on' : ''}" data-sec="${esc(s.g)}"><span class="hm-bl">${esc(s.g)}</span><span class="hm-bt"><i class="${s.F >= 0 ? 'up' : 'dn'}" style="width:${Math.abs(s.F) / mx * 50}%;${s.F >= 0 ? 'left:50%' : 'right:50%'}"></i></span><span class="hm-bv ${s.F >= 0 ? 'up' : 'dn'}">${bn(s.F, cur)}<small>${hpc(s.C)}</small></span></button>`).join('')}
+        </div>
+        <div class="hm-card hm-mapc"><div class="hm-ch"><b>${HM.sec ? esc(HM.sec) : 'Alle Sektoren'}</b><small>Fläche = Börsenwert · Farbe = ${W ? 'Woche' : 'Tag'} (±${Math.round(span * 100)} %)</small></div><div class="hm-map" id="hmMap"></div>
+          <div class="hm-leg">${[-1, -.66, -.33, 0, .33, .66, 1].map((t) => `<i style="background:${hmColor(t * span, span)}"><small>${t > 0 ? '+' : t < 0 ? '−' : ''}${Math.round(Math.abs(t * span * 100))}%</small></i>`).join('')}</div></div>
+      </div>
+      ${histH}
+      <p class="hm-note">„Geldfluss“ heißt hier: um wie viel sich der Börsenwert aller Aktien eines Sektors verändert hat (Börsenwert × Kursänderung). Das ist kein echter Zu- oder Abfluss – jeder Käufer hat einen Verkäufer –, zeigt aber gut, wo der Markt Wert gewonnen oder verloren hat. Quelle: TradingView, aktualisiert mit jedem Kursabruf (morgens = letzter voller Handelstag, abends = heute).</p>`;
+    $('#hmBody').querySelectorAll('[data-sec]').forEach((b) => b.onclick = () => { HM.sec = b.dataset.sec && HM.sec !== b.dataset.sec ? b.dataset.sec : null; heatRender(); });
+    heatMap(M, W, span);
+  }
+  function heatMap(M, W, span) {
+    const box = $('#hmMap'); if (!box) return;
+    const w = box.clientWidth, mob = w < 600, h = Math.round(HM.sec ? (mob ? w * 1.1 : Math.min(620, w * .62)) : (mob ? w * 1.55 : Math.min(760, w * .7)));
+    box.style.height = h + 'px';
+    const own = {}; STOCKS.forEach((r) => { if (r.tv_symbol) own[r.tv_symbol] = r.ticker; });
+    const secs = M.sectors.filter((s) => !HM.sec || s.g === HM.sec).map((s) => ({g: s.g, v: s.mc}));
+    const HDR = 16;
+    let html = '';
+    squarify(secs, 0, 0, w, h).forEach((S) => {
+      const st = M.stocks.filter((x) => x.g === S.g).map((x) => ({...x, v: x.mc}));
+      const head = S.w > 60 && S.h > 40 && !HM.sec;
+      html += `<div class="hm-sec" style="left:${S.x}px;top:${S.y}px;width:${S.w}px;height:${S.h}px">${head ? `<span class="hm-sl">${esc(S.g)}</span>` : ''}</div>`;
+      squarify(st, S.x + 1, S.y + (head ? HDR : 1), S.w - 2, S.h - (head ? HDR + 1 : 2)).forEach((k) => {
+        const c = W ? k.w : k.c, a = Math.min(k.w, k.h), fs = Math.max(8, Math.min(30, Math.sqrt(k.w * k.h) / 5.2));
+        const showT = k.w > 26 && k.h > 18, showP = k.h > 30 && k.w > 34, logo = a > (mob ? 70 : 84) && k.l;
+        const mine = own[k.s] && showT;
+        html += `<div class="hm-t${mine ? ' mine' : ''}" data-i="${M.stocks.indexOf(M.stocks.find((x) => x.s === k.s))}" style="left:${k.x}px;top:${k.y}px;width:${k.w}px;height:${k.h}px;background:${hmColor(c, span)}">${logo ? `<img loading="lazy" alt="" src="https://s3-symbol-logo.tradingview.com/${encodeURIComponent(k.l)}.svg" style="width:${Math.min(a * .34, 56)}px;height:${Math.min(a * .34, 56)}px" onerror="this.remove()">` : ''}${showT ? `<b style="font-size:${fs}px">${esc(k.t)}</b>` : ''}${showP ? `<span style="font-size:${Math.max(8, fs * .72)}px">${c == null ? '' : hpc(c).replace(' %', '%')}</span>` : ''}</div>`;
+      });
+    });
+    box.innerHTML = html + '<div class="hm-tip" id="hmTip" hidden></div>';
+    const tip = $('#hmTip');
+    const showTip = (el) => {
+      const k = M.stocks[+el.dataset.i]; if (!k) return;
+      const mine = own[k.s];
+      tip.innerHTML = `<b>${esc(k.n)}</b> <span class="tk">${esc(k.t)}</span><br>Heute ${k.c == null ? '—' : hpc(k.c)} · Woche ${k.w == null ? '—' : hpc(k.w)}<br>Börsenwert ${num(k.mc, k.mc >= 100 ? 0 : 1)} Mrd. ${M.cur === 'EUR' ? '€' : '$'} · heute ${bn(k.f, M.cur)}${mine ? '<br><em>In deiner Liste – nochmal tippen für die Analyse</em>' : ''}`;
+      tip.hidden = false;
+      const r = el.getBoundingClientRect(), b = box.getBoundingClientRect();
+      let x = r.left - b.left + r.width / 2 - 120, y = r.top - b.top - tip.offsetHeight - 6;
+      if (y < 0) y = r.bottom - b.top + 6;
+      tip.style.left = Math.max(4, Math.min(b.width - 244, x)) + 'px'; tip.style.top = y + 'px';
+    };
+    let last = null;
+    box.querySelectorAll('.hm-t').forEach((el) => {
+      el.onmouseenter = () => showTip(el);
+      el.onclick = () => { const k = M.stocks[+el.dataset.i], mine = k && own[k.s];
+        if (mine && (last === el || matchMedia('(hover: hover)').matches)) { show('aktien'); history.replaceState(null, '', '#aktien'); openSheet(mine); return; }
+        last = el; showTip(el); };
+    });
+    box.onmouseleave = () => { tip.hidden = true; };
+  }
   /* ---------- Start ---------- */
   (async () => {
     const h = location.hash.slice(1).split('/');
@@ -1462,5 +1580,24 @@ ${HOR === 'lang' && r.lt_target_low != null ? `      <div class="dpane" data-pan
     } catch (e) {
       $('#list').innerHTML = '<li class="empty">Daten konnten nicht geladen werden.</li>';
     }
+  })();
+
+  /* ---------- Als App installieren (PWA) ---------- */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+  (() => {
+    const btn = $('#installBtn'); if (!btn) return;
+    const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+    if (standalone) return;
+    let ev = null;
+    addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); ev = e; btn.hidden = false; });
+    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    if (ios) btn.hidden = false;
+    btn.onclick = async () => {
+      if (ev) { ev.prompt(); const r = await ev.userChoice.catch(() => null); if (r && r.outcome === 'accepted') btn.hidden = true; ev = null; return; }
+      let t = $('#installTip');
+      if (!t) { t = document.createElement('div'); t.id = 'installTip'; t.className = 'install-tip'; document.body.appendChild(t); t.onclick = () => t.remove(); }
+      t.innerHTML = '<b>So kommt LLM Radar auf deinen Home-Bildschirm</b><ol><li>Unten in Safari auf <b>Teilen</b> tippen (Quadrat mit Pfeil)</li><li><b>„Zum Home-Bildschirm“</b> wählen</li><li>Oben rechts <b>Hinzufügen</b></li></ol><small>Tippen zum Schließen</small>';
+    };
+    addEventListener('appinstalled', () => { btn.hidden = true; });
   })();
 })();

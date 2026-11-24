@@ -41,7 +41,7 @@ def rows(market, min_cap, extra_filter=None):
                        {"left": "is_primary", "operation": "equal", "right": True},
                        {"left": "market_cap_basic", "operation": "greater", "right": min_cap}] + (extra_filter or []),
             "options": {"lang": "en"}, "columns": COLS,
-            "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}, "range": [0, 700]}
+            "sort": {"sortBy": "market_cap_basic", "sortOrder": "desc"}, "range": [0, 1200]}
     out = []
     for x in scan(market, body):
         d = dict(zip(COLS, x["d"]))
