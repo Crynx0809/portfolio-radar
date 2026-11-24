@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T12:11:40+00:00",
+ "generated_at": "2026-11-24T13:34:34+00:00",
  "watched": [
   {
    "ticker": "APLD",
@@ -20,41 +20,12 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 184.4,
+   "price": 184.46,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.036
+   "gap_to_stop": 0.0363
   }
  ],
- "events": [
-  {
-   "ticker": "ENR",
-   "name": "Siemens Energy",
-   "group": "Watchlist",
-   "price": 122.64,
-   "chg_pct": -0.0302,
-   "at": "2026-11-24T12:11+00:00",
-   "id": "ENR-zone-2026-11-24",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Siemens Energy in der Einstiegszone",
-   "text": "Kurs 122,64 € ist in die Zone 118,00 €–123,00 € gelaufen.",
-   "todo": "123–138 €: nicht hinterherkaufen."
-  },
-  {
-   "ticker": "1810",
-   "name": "Xiaomi",
-   "group": "Watchlist",
-   "price": 26.5,
-   "chg_pct": -0.0371,
-   "at": "2026-11-24T12:11+00:00",
-   "id": "1810-zone-2026-11-24",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Xiaomi in der Einstiegszone",
-   "text": "Kurs 26,50 $ ist in die Zone 25,50 $–26,80 $ gelaufen.",
-   "todo": "Zwischen 26,8 und 30 HK$: abwarten."
-  }
- ],
+ "events": [],
  "notified": []
 }
