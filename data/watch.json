@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T21:51:15+00:00",
+ "generated_at": "2026-11-24T08:57:40+00:00",
  "watched": [
   {
    "ticker": "APLD",
@@ -20,16 +20,27 @@
   {
    "ticker": "SAP",
    "name": "SAP SE",
-   "price": 186.34,
+   "price": 185.56,
    "stop": 178,
    "trigger": 217,
-   "gap_to_stop": 0.0469
+   "gap_to_stop": 0.0425
   }
  ],
- "events": [],
- "notified": [
-  "AMD-absturz-2026-11-23",
-  "APLD-absturz-2026-11-23",
-  "MRVL-absturz-2026-11-23"
- ]
+ "events": [
+  {
+   "ticker": "1810",
+   "name": "Xiaomi",
+   "group": "Watchlist",
+   "price": 26.5,
+   "chg_pct": -0.0371,
+   "at": "2026-11-24T08:57+00:00",
+   "id": "1810-zone-2026-11-24",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Xiaomi in der Einstiegszone",
+   "text": "Kurs 26,50 $ ist in die Zone 25,50 $–26,80 $ gelaufen.",
+   "todo": "Zwischen 26,8 und 30 HK$: abwarten."
+  }
+ ],
+ "notified": []
 }
