@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_20261125_1745_markt",
+  "date": "2026-11-25",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Ausverkauf weitet sich aus: Nasdaq ca. −3,8 %, S&P 500 ca. −2,6 %, Chip-Index über −6 % – neue Zollpläne und heiße Kerninflation",
+  "summary": "Die US-Regierung schlägt 20 % Zusatzzölle auf China, die EU und zwölf weitere Handelspartner vor (frühestens ab Januar, nach Kommentarfrist). Dazu lag die Kern-PCE-Inflation mit 3,3 % über den erwarteten 3,2 %, das BIP Q3 bei starken 4,3 %; Terminmärkte preisen fast sicher eine Zinserhöhung im Dezember ein. Der Nasdaq 100 steuert auf einen Bärenmarkt (über 20 % unter dem Hoch) zu, VIX ca. 34. Nvidia ca. −8,7 %, Micron ca. −12 %, AMD und Marvell je ca. −9,5 %.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+ },
+ {
   "id": "n_20261125_premarket",
   "date": "2026-11-25",
   "ticker": "Markt",
@@ -287,16 +297,6 @@
   "direction": "negativ",
   "headline": "Krankenversicherer brechen ein: Molina −6,6 % unter die Einstiegszone, UnitedHealth −10 %, Humana −13 %",
   "summary": "Zweiter Verlusttag der Branche nach einem CMS-Vorschlag für schärfere Prüfungen bei Medicare Advantage. Molina schloss bei 206,6 $ unter der Zone 214–222 $, der Stop 199 $ (unter dem Tief 200,8 $) hält noch. Status auf „meiden“.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
- },
- {
-  "id": "2026-11-18-fcx",
-  "date": "2026-11-18",
-  "ticker": "FCX",
-  "impact": "mittel",
-  "direction": "negativ",
-  "headline": "Freeport-McMoRan −7 % unter den Stop: Kupfer und Gold fallen mit den Zinserwartungen",
-  "summary": "Schluss 51,45 $ unter dem Stop 51,5 $, Tief 50,46 $. Plan ausgestoppt (keine Position); neue Zone erst 46–48,5 $ am 78,6 %-Rücklauf, Stop 43,5 $.",
   "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
  }
 ]

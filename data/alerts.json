@@ -1,5 +1,26 @@
 [
  {
+  "id": "a_20261125_1745_depot",
+  "at": "2026-11-25T17:55:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "US-Sitzung (TradingView 17:47 Uhr): AMD 373,9 $ (−9,5 %) klar unter dem Stop 398 $ – schließt AMD heute unter 398 $, ist der Plan ausgestoppt (Regel: Position verkaufen; Neubewertung in der Abendanalyse). Marvell 119,1 $ (−9,5 %) genau auf dem Stop 119 $, Alphabet 265,0 $ (−5,0 %) nur 1,1 % über dem Stop 262 $ – auch hier entscheidet der Schlusskurs um 22 Uhr."
+ },
+ {
+  "id": "a_20261125_1745_depot2",
+  "at": "2026-11-25T17:55:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "Weitere Depotwerte nahe am Stop: Applied Digital 11,39 $ (−6,8 %, Stop 11,0 $, 3,5 % Abstand), Amazon 237,6 $ (−5,8 %, Stop 228 $, 4,2 %), Bank of America 47,7 $ (Stop 45,8 $, 4,2 %). Stabil: SAP 190,2 € (Zone 185–190 €), Novo Nordisk 36,7 €, Fortinet 129,8 $. Auslöser: 20-%-Zollpläne und heiße Kerninflation (Nasdaq ca. −3,8 %)."
+ },
+ {
+  "id": "a_20261125_1745_watch",
+  "at": "2026-11-25T17:55:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Watchlist-Stops gebrochen (kein Bestand, Pläne gelten als ausgestoppt): Siemens Energy Xetra-Schluss 111,7 € unter Stop 112 €, Micron 554,8 $ (−11,9 %) unter Stop 580 $. Knapp darüber: Nvidia 142,0 $ (Stop 136 $), TSMC 324,2 $ (Stop 315 $), GE Vernova 674,3 $ (Stop 650 $). In der Zone, aber im fallenden Markt nur gestaffelt: Intuitive Surgical 419,5 $, Oklo 17,5 $, Hims 13,9 $, ServiceNow 89,8 $, Airbus 190,3 €."
+ },
+ {
   "id": "a_20261125_1415_depot",
   "at": "2026-11-25T14:30:00+01:00",
   "ticker": "AMD",
