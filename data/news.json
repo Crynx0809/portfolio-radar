@@ -1,13 +1,23 @@
 [
  {
-  "id": "n_20261125_1745_markt",
+  "id": "n_20261125_2250_markt",
   "date": "2026-11-25",
   "ticker": "Markt",
   "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Ausverkauf weitet sich aus: Nasdaq ca. −3,8 %, S&P 500 ca. −2,6 %, Chip-Index über −6 % – neue Zollpläne und heiße Kerninflation",
-  "summary": "Die US-Regierung schlägt 20 % Zusatzzölle auf China, die EU und zwölf weitere Handelspartner vor (frühestens ab Januar, nach Kommentarfrist). Dazu lag die Kern-PCE-Inflation mit 3,3 % über den erwarteten 3,2 %, das BIP Q3 bei starken 4,3 %; Terminmärkte preisen fast sicher eine Zinserhöhung im Dezember ein. Der Nasdaq 100 steuert auf einen Bärenmarkt (über 20 % unter dem Hoch) zu, VIX ca. 34. Nvidia ca. −8,7 %, Micron ca. −12 %, AMD und Marvell je ca. −9,5 %.",
+  "direction": "positiv",
+  "headline": "Wende am Nachmittag: Dow dreht nach −1.100 Punkten ins Plus, Nasdaq holt den Großteil des Minus von zeitweise −4,6 % auf",
+  "summary": "Der Morgen brachte den nächsten Ausverkauf (vorgeschlagene US-Zölle auf 14 Handelspartner, Kern-PCE 3,3 % statt 3,2 %, Dezember-Zinserhöhung fast sicher eingepreist). Bis zum Schluss kauften Anleger die Tiefs zurück: Dow im Plus, S&P 500 und Nasdaq nur noch leicht im Minus, Chipwerte mit langen unteren Kerzendochten (AMD Tief 370 $ → Schluss 406 $, Marvell 118 → 131 $). Donnerstag bleibt die US-Börse wegen Thanksgiving geschlossen, Freitag verkürzter Handel.",
   "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+ },
+ {
+  "id": "n_20261125_2250_amd",
+  "date": "2026-11-25",
+  "ticker": "AMD",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "AMD dreht vom Tagestief 370 $ auf 406 $ – Stop 398 $ hält per Schluss",
+  "summary": "AMD fiel am Morgen um mehr als 10 % auf 370,4 $ und damit genau in die vorab genannte Wellen-(4)-Zone 360–380 $, schloss aber mit −1,8 % bei 406,0 $. Der Plan wird angepasst: Stop 365 $ unter dem neuen Tief, Zukauf nur gestaffelt in 380–400 $, Ziel 505–560 $.",
+  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
  },
  {
   "id": "n_20261125_premarket",
@@ -288,15 +298,5 @@
   "headline": "Palo Alto erhöht Prognose – Cybersecurity-Werte springen an: CrowdStrike +8 %, Zscaler +6,8 %, Fortinet +5,9 %",
   "summary": "Palo Alto Networks steigerte den Quartalsumsatz um 39 % und hob die Jahresprognose an; die Aktie stieg rund 10 %. Die ganze Branche zog mit: CrowdStrike schloss bei 237 $ (weit über der Zone 200–212 $), Zscaler bei 197,8 $ (Zahlen am 24.11.), Depotwert Fortinet bei 131,8 $ über der Zone 115–126 $.",
   "url": "https://247wallst.com/investing/2026/11/18/google-says-fully-autonomous-ai-cyberattacks-are-likely-within-6-months/"
- },
- {
-  "id": "2026-11-18-moh",
-  "date": "2026-11-18",
-  "ticker": "MOH",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Krankenversicherer brechen ein: Molina −6,6 % unter die Einstiegszone, UnitedHealth −10 %, Humana −13 %",
-  "summary": "Zweiter Verlusttag der Branche nach einem CMS-Vorschlag für schärfere Prüfungen bei Medicare Advantage. Molina schloss bei 206,6 $ unter der Zone 214–222 $, der Stop 199 $ (unter dem Tief 200,8 $) hält noch. Status auf „meiden“.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
  }
 ]

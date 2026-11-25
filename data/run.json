@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-25T17:55:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Ausverkauf verschärft sich: AMD −9,5 % klar unter dem Stop 398 $, Marvell genau auf dem Stop, Alphabet 1 % darüber – Schlusskurs 22 Uhr entscheidet.",
-  "market": "US-Sitzung (ca. 17:45 Uhr): Nasdaq ca. −3,8 %, S&P 500 ca. −2,6 %, Dow ca. −1,3 %, Chip-Index über −6 %, VIX ca. 34. Gründe: vorgeschlagene 20-%-Zölle auf China, EU und weitere Partner, Kern-PCE 3,3 % (erwartet 3,2 %), Zinserhöhung im Dezember fast sicher eingepreist.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-25T22:50:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Kräftige Erholung vom Tagestief: Alle Depot-Stops halten per Schluss. AMD drehte genau in der Zielzone 370 $ (Schluss 406 $) – neuer Plan mit Stop 365 $.",
+  "market": "US-Schluss: Dow dreht nach zeitweise −1.100 Punkten ins Plus, S&P 500 und Nasdaq holen den Großteil der Verluste auf (Nasdaq zeitweise −4,6 %). Belastend bleiben neue US-Zollpläne, Kern-PCE 3,3 % und eine fast sicher eingepreiste Zinserhöhung im Dezember. Donnerstag US-Börsen zu (Thanksgiving), Freitag verkürzt. Kurse: TradingView, Abruf 22:32 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

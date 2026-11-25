@@ -1,114 +1,23 @@
 [
  {
-  "id": "a_20261125_1745_depot",
-  "at": "2026-11-25T17:55:00+01:00",
+  "id": "a_20261125_2250_amd",
+  "at": "2026-11-25T22:50:00+01:00",
   "ticker": "AMD",
   "level": "hoch",
-  "text": "US-Sitzung (TradingView 17:47 Uhr): AMD 373,9 $ (−9,5 %) klar unter dem Stop 398 $ – schließt AMD heute unter 398 $, ist der Plan ausgestoppt (Regel: Position verkaufen; Neubewertung in der Abendanalyse). Marvell 119,1 $ (−9,5 %) genau auf dem Stop 119 $, Alphabet 265,0 $ (−5,0 %) nur 1,1 % über dem Stop 262 $ – auch hier entscheidet der Schlusskurs um 22 Uhr."
+  "text": "AMD Schluss 406,0 $ (−1,8 %) nach Tagestief 370,4 $ – der Stop 398 $ hielt per Schlusskurs, die Position bleibt. Das Tief traf genau die Wellen-(4)-Zone 360–380 $. Neuer Plan: Stop 365 $ per Schluss (unter dem Tief), Zukauf nur gestaffelt in 380–400 $, Ziel 505–560 $; über 478 $ Stop auf Einstand."
  },
  {
-  "id": "a_20261125_1745_depot2",
-  "at": "2026-11-25T17:55:00+01:00",
+  "id": "a_20261125_2250_depot",
+  "at": "2026-11-25T22:50:00+01:00",
   "ticker": "Depot",
   "level": "mittel",
-  "text": "Weitere Depotwerte nahe am Stop: Applied Digital 11,39 $ (−6,8 %, Stop 11,0 $, 3,5 % Abstand), Amazon 237,6 $ (−5,8 %, Stop 228 $, 4,2 %), Bank of America 47,7 $ (Stop 45,8 $, 4,2 %). Stabil: SAP 190,2 € (Zone 185–190 €), Novo Nordisk 36,7 €, Fortinet 129,8 $. Auslöser: 20-%-Zollpläne und heiße Kerninflation (Nasdaq ca. −3,8 %)."
+  "text": "Alle Depot-Stops haben per Schluss gehalten. Marvell 130,9 $ (Tief 117,8 $ kurz unter dem Stop 119 $) und Applied Digital 12,29 $ (Tief 10,78 $ unter dem Stop 11,0 $) schlossen wieder in ihren Zonen; Alphabet 273,1 $ (Tief 262,7 $, Stop 262 $) ebenfalls zurück in der Zone 271–280 $. Amazon 244,4 $ knapp unter der Zone, Stop 228 $. Freitag (verkürzter US-Handel) zählt wieder der Schlusskurs."
  },
  {
-  "id": "a_20261125_1745_watch",
-  "at": "2026-11-25T17:55:00+01:00",
+  "id": "a_20261125_2250_watch",
+  "at": "2026-11-25T22:50:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Watchlist-Stops gebrochen (kein Bestand, Pläne gelten als ausgestoppt): Siemens Energy Xetra-Schluss 111,7 € unter Stop 112 €, Micron 554,8 $ (−11,9 %) unter Stop 580 $. Knapp darüber: Nvidia 142,0 $ (Stop 136 $), TSMC 324,2 $ (Stop 315 $), GE Vernova 674,3 $ (Stop 650 $). In der Zone, aber im fallenden Markt nur gestaffelt: Intuitive Surgical 419,5 $, Oklo 17,5 $, Hims 13,9 $, ServiceNow 89,8 $, Airbus 190,3 €."
- },
- {
-  "id": "a_20261125_1415_depot",
-  "at": "2026-11-25T14:30:00+01:00",
-  "ticker": "AMD",
-  "level": "hoch",
-  "text": "Vorbörslich AMD ca. −6,5 % (rechnerisch ~386 $ ausgehend vom Schluss 413,3 $) – das läge unter dem Stop 398 $. Der Stop zählt per Schlusskurs: Schließt AMD heute unter 398 $, ist der Plan ausgestoppt (Neubewertung in der Abendanalyse). Ebenfalls schwach vorbörslich: Marvell ca. −5,7 % (rechnerisch ~124 $, unter der Zone 128–136 $, Stop 119 $), Amazon −3 bis −3,5 %, Alphabet −3 %. Applied Digital (Zone 12–13 $, Stop 11,0 $) eng beobachten. Kein Handeln im Affekt – US-Eröffnung und PCE-Daten (14:30 Uhr) abwarten."
- },
- {
-  "id": "a_20261125_1415_eu",
-  "at": "2026-11-25T14:30:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Europa (TradingView 14:18 Uhr): Siemens Energy 115,2 € unter der Zone 118–123 €, nur 2,9 % über dem Stop 112 €. SAP 188,4 € in der Zone 185–190 €, Novo Nordisk 37,0 €, Airbus 193,5 € knapp über der Zone, Rheinmetall 739,3 €. US-Werte zeigen noch die Schlusskurse vom 24.11.; TSMC, GE Vernova, Micron und Nvidia lagen dort in bzw. nahe ihren Zonen – bei −5 bis −6 % vorbörslich rutschen Micron und Nvidia tiefer Richtung Stop (580 $ bzw. 136 $)."
- },
- {
-  "id": "a_20261124_2245_depot",
-  "at": "2026-11-24T22:45:00+01:00",
-  "ticker": "AMD",
-  "level": "hoch",
-  "text": "AMD Schluss 413,3 $ (−8,9 %) – Stop 398 $ hält per Schluss, aber das Tagestief 396 $ lag schon unter dem C-Tief 402 $. Die bisherige Zählung ist damit widerlegt; neues Hauptszenario: Rücksetzer bis 360–380 $ (Alternative 40 %: 396 $ war der Boden). Belastung: ~337 Mio. Aktien von OpenAI/Meta zum Weiterverkauf registriert. Status jetzt „meiden“: Position mit Stop 398 $ per Schluss halten, keine Zukäufe unter 450 $."
- },
- {
-  "id": "a_20261124_2245_depot2",
-  "at": "2026-11-24T22:45:00+01:00",
-  "ticker": "Depot",
-  "level": "mittel",
-  "text": "Schlusskurse 24.11.: Applied Digital 12,22 $ (−11,6 %) und Marvell 131,6 $ (−9,1 %) zurück in ihren Zonen 12–13 $ bzw. 128–136 $; Stops 11,0 $ bzw. 119 $ (je ~10 % entfernt) – nur kleine, gestaffelte Käufe. Alphabet 279,1 $, Amazon 252,3 $, SAP 190,1 €, Bank of America 48,6 $ in ihren Zonen; Novo Nordisk 36,7 € (+2,7 %), Fortinet 132,5 $ stabil."
- },
- {
-  "id": "a_20261124_2245_watch",
-  "at": "2026-11-24T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "In der Kaufzone (kein Bestand): TSMC 349,2 $ (Zone 345–355 $, Stop 315 $), GE Vernova 720,7 $ (690–740 $, Stop 650 $), Micron 629,8 $ knapp darunter (640–670 $, Stop 580 $), Siemens Energy 117,9 € knapp darunter (118–123 €, Stop 112 €). Davongelaufen, nicht hinterherkaufen: Intuitive Surgical 434,5 $, Estée Lauder 108,1 $, Deutsche Telekom 26,8 €. Walmart neues Hoch 132,4 $ – Ziel für einen Kauf im Rücksetzer jetzt 145–152 $."
- },
- {
-  "id": "a_20261124_1745_depot",
-  "at": "2026-11-24T17:55:00+01:00",
-  "ticker": "Depot",
-  "level": "hoch",
-  "text": "US-Sitzung (TradingView 17:47 Uhr): AMD 397,5 $ (−12,3 %) liegt knapp unter dem Stop 398 $ – zählt per Schlusskurs; schließt AMD heute unter 398 $, ist der Plan ausgestoppt (Neubewertung in der Abendanalyse). Applied Digital 11,85 $ (−14 %) unter der Zone 12–13 $, 7,7 % über dem Stop 11,0 $. Marvell 129,7 $ (−10 %) wieder in der Zone 128–136 $, Stop 119 $. Alphabet 277,4 $, Amazon 251,7 $, SAP 189,3 € und Bank of America 48,4 $ halten sich in ihren Zonen."
- },
- {
-  "id": "a_20261124_1745_watch",
-  "at": "2026-11-24T17:55:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "In der Einstiegszone: Nvidia 151,4 $ (−8 %, Zone 145–152 $, Stop 136 $), GE Vernova 711,6 $ (−6 %, Zone 690–740 $, Stop 650 $), Freeport 46,8 $ (Zone 46–48,5 $, aber Status „meiden“). Nahe am Stop: Siemens Energy 117,6 € (unter der Zone 118–123 €, Stop 112 €), Exxon 158,7 $ (Stop 152 $), Celanese 43,8 $ (Stop 41,8 $). Zonen-Käufe nur gestaffelt und mit Stop."
- },
- {
-  "id": "a_20261124_1425_depot",
-  "at": "2026-11-24T14:25:00+01:00",
-  "ticker": "Depot",
-  "level": "mittel",
-  "text": "Vor US-Börsenstart (TradingView 14:20 Uhr, US-Werte noch auf Montagsschluss): Kein Depot-Stop gebrochen. Vorbörslich geben Chipwerte einen Teil des Montagsgewinns ab (AMD ca. −3 %, Marvell ca. −4 %, Nasdaq-100-Futures ca. −1,5 %). SAP 185,3 € (−0,6 %) in der Zone 185–190 €, aber nur 4 % über dem Stop 178 € – Schluss unter 178 € beachten. Novo Nordisk 36,0 € (+0,7 %) nähert sich der Bestätigung 37,5 €. Marvell (Stop 119 $) und Applied Digital (Stop 11,0 $) haben noch Puffer von über 20 %."
- },
- {
-  "id": "a_20261124_1425_watch",
-  "at": "2026-11-24T14:25:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "In die Einstiegszone gelaufen (kein Bestand): Siemens Energy 122,1 € (−3,5 %, Zone 118–123 €, Stop 112 €) und Xiaomi 26,50 HK$ (−3,7 %, Zone 25,5–26,8 HK$, Stop 24,4 HK$). Plan laut Zone: gestaffelt kaufen, Stop beachten."
- },
- {
-  "id": "a_20261123_2245_depot",
-  "at": "2026-11-23T22:45:00+01:00",
-  "ticker": "Depot",
-  "level": "hoch",
-  "text": "Fehlbrüche zurückgeholt (Schlusskurse 23.11.): Marvell 144,7 $ (+18 %) und Applied Digital 13,82 $ (+20 %) schließen wieder über den Freitags-Stops. Falls noch im Depot: halten mit neuem Stop per Schluss – Marvell 119 $, Applied Digital 11,0 $ (unter den Tiefs vom 20.11.). Neue Einstiegszonen: MRVL 128–136 $, APLD 12–13 $ (nicht hinterherkaufen). Alphabet 282,1 $ wieder über 270,7 $ (Stop 262 $), AMD 453,5 $ in der Zone 450–472 $ (Stop 398 $). SAP 186,3 € in der Zone, Stop 178 € nur 4,5 % entfernt."
- },
- {
-  "id": "a_20261123_2245_watch",
-  "at": "2026-11-23T22:45:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Neu geplant nach den Fehlbrüchen (Status „boden“, nicht hinterherkaufen): Nvidia 165 $ → Zone 145–152 $, Stop 136 $, Ziel 195–210 $; Micron 708 $ → 640–670 $, Stop 580 $, Ziel 820–890 $; TSMC 364 $ → 345–355 $, Stop 315 $, Ziel 420–450 $. CrowdStrike 209 $ in der Zone 200–212 $ (Risiko Verwässerung durch Zscaler-Kauf). Zscaler: Übernahme-Sonderfall, kein Einstieg. Exxon 156,9 $ unter der Zone, Stop 152 $."
- },
- {
-  "id": "a_20261123_1745_depot",
-  "at": "2026-11-23T17:55:00+01:00",
-  "ticker": "Depot",
-  "level": "mittel",
-  "text": "US-Sitzung (TradingView 17:47 Uhr): kräftige Erholung, kein Depot-Stop gebrochen. Marvell 145,8 $ (+19 %) und Applied Digital 14,30 $ (+24 %) liegen wieder über ihren Bestätigungsmarken 132,5 $ bzw. 12 $ – zählt erst per Schlusskurs; nicht hinterherkaufen, Neubewertung in der Abendanalyse. AMD 460 $ (+8,5 %) in der Zone 450–472 $. SAP 186,7 € bleibt nur 4,9 % über dem Stop 178 €."
- },
- {
-  "id": "a_20261123_1745_watch",
-  "at": "2026-11-23T17:55:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Nvidia 166 $ (+32 %, CEO Huang zurück), Micron 709 $, TSMC 368 $, Cameco 62,0 $, Robinhood 68,0 $ über ihren Bestätigungsmarken – alle Status „meiden“ mit tieferen Zonen, kein Hinterherkaufen; Neubewertung in der Abendanalyse. CrowdStrike 204 $ (−11 %, Zscaler-Übernahme) in der Zone 200–212 $. Exxon 158,3 $ knapp über dem Stop 152 $."
+  "text": "Watchlist: Micron (Schluss 601 $, Tief 548 $) und Siemens Energy (112,5 €, Tief 111,4 €) hielten ihre Stops 580 $ bzw. 112 € per Schluss nur knapp bzw. nach tiefem Intraday-Bruch – Pläne gelten weiter, keine Nachkäufe. In der Zone: Nvidia 149,3 $ (145–152 $), GE Vernova 715 $, Marvell, Alphabet, SAP, Airbus, Hims, CrowdStrike, Celanese, Xiaomi. Rheinmetall zurück über 705 €, aber 15 % über der Zone 600–640 € (Ziel jetzt 840–900 €); Kapitalmarkttag Freitag."
  }
 ]
