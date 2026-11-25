@@ -1,61 +1,53 @@
 {
- "generated_at": "2026-11-25T16:23:05+00:00",
+ "generated_at": "2026-11-25T17:23:29+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 376.14,
+   "price": 383.445,
    "stop": 398,
    "trigger": 594,
-   "gap_to_stop": -0.0549
+   "gap_to_stop": -0.0366
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 264.77,
+   "price": 267.88,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0106
-  },
-  {
-   "ticker": "AMZN",
-   "name": "Amazon.com",
-   "price": 237.435,
-   "stop": 228,
-   "trigger": 287.2,
-   "gap_to_stop": 0.0414
+   "gap_to_stop": 0.0224
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 11.378,
+   "price": 11.6549,
    "stop": 11.0,
    "trigger": 15.5,
-   "gap_to_stop": 0.0344
+   "gap_to_stop": 0.0595
   },
   {
    "ticker": "BAC",
    "name": "Bank of America",
-   "price": 47.635,
+   "price": 47.875,
    "stop": 45.8,
    "trigger": 54.5,
-   "gap_to_stop": 0.0401
+   "gap_to_stop": 0.0453
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 120.03,
+   "price": 122.0428,
    "stop": 119.0,
    "trigger": 155,
-   "gap_to_stop": 0.0087
+   "gap_to_stop": 0.0256
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.68,
+   "price": 36.64,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2227
+   "gap_to_stop": 0.2213
   }
  ],
  "events": [
@@ -63,99 +55,43 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 376.14,
-   "chg_pct": -0.0898,
-   "at": "2026-11-25T16:23+00:00",
+   "price": 383.445,
+   "chg_pct": -0.0722,
+   "at": "2026-11-25T17:23+00:00",
    "id": "AMD-stop-2026-11-25",
    "type": "stop",
    "level": "hoch",
    "title": "Advanced Micro Devices unter dem Stop 398,00 $",
-   "text": "Kurs 376,14 $ (−9,0 % heute) liegt unter deinem Stop 398,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "text": "Kurs 383,44 $ (−7,2 % heute) liegt unter deinem Stop 398,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
    "todo": "Schluss unter 398 $ → Position verkaufen. Neuer Einstieg erst im Bereich 360–380 $ prüfen (neuer Plan dann in der Abendanalyse)."
-  },
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "group": "Portfolio",
-   "price": 376.14,
-   "chg_pct": -0.0898,
-   "at": "2026-11-25T16:23+00:00",
-   "id": "AMD-absturz-2026-11-25",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Advanced Micro Devices −9,0 % heute",
-   "text": "Starker Tagesverlust auf 376,14 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Halten mit Stop 398 $ per Schluss (nur noch 3,7 % entfernt); keine Zukäufe unter 450 $. Hauptszenario jetzt Rücksetzer bis 360–380 $."
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
    "group": "Portfolio",
-   "price": 264.77,
-   "chg_pct": -0.0512,
-   "at": "2026-11-25T16:23+00:00",
+   "price": 267.88,
+   "chg_pct": -0.04,
+   "at": "2026-11-25T17:23+00:00",
    "id": "GOOGL-stopnah-2026-11-25",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Alphabet A nah am Stop",
-   "text": "Kurs 264,77 $ nur noch 1,1 % über dem Stop 262,00 $.",
+   "text": "Kurs 267,88 $ nur noch 2,2 % über dem Stop 262,00 $.",
    "todo": "Schlusskurs beobachten. 271–280 $: gestaffelt zukaufen; Schluss unter 262 $ → Position verkaufen."
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
    "group": "Portfolio",
-   "price": 120.03,
-   "chg_pct": -0.0877,
-   "at": "2026-11-25T16:23+00:00",
+   "price": 122.0428,
+   "chg_pct": -0.0724,
+   "at": "2026-11-25T17:23+00:00",
    "id": "MRVL-stopnah-2026-11-25",
    "type": "stop_nah",
    "level": "mittel",
    "title": "Marvell Technology nah am Stop",
-   "text": "Kurs 120,03 $ nur noch 0,9 % über dem Stop 119,00 $.",
+   "text": "Kurs 122,04 $ nur noch 2,6 % über dem Stop 119,00 $.",
    "todo": "Schlusskurs beobachten. 128–136 $: gestaffelt kaufen; Schluss unter 119 $ → verkaufen (Ziel dann 100–108 $)."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 120.03,
-   "chg_pct": -0.0877,
-   "at": "2026-11-25T16:23+00:00",
-   "id": "MRVL-absturz-2026-11-25",
-   "type": "absturz",
-   "level": "hoch",
-   "title": "Marvell Technology −8,8 % heute",
-   "text": "Starker Tagesverlust auf 120,03 $. Ursache in den News prüfen, nicht im Affekt handeln.",
-   "todo": "Falls noch gehalten: halten, Stop 119 $ per Schluss. Kurs 131,6 $ in der Zone 128–136 $: gestaffelt kaufen möglich, Ziel 170–180 $; über 155 $ Stop auf Einstand. Zahlen Anfang Dezember."
-  },
-  {
-   "ticker": "ISRG",
-   "name": "Intuitive Surgical",
-   "group": "Watchlist",
-   "price": 419.38,
-   "chg_pct": -0.0347,
-   "at": "2026-11-25T16:23+00:00",
-   "id": "ISRG-zone-2026-11-25",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Intuitive Surgical in der Einstiegszone",
-   "text": "Kurs 419,38 $ ist in die Zone 400,00 $–420,00 $ gelaufen.",
-   "todo": "420–470 $: nicht hinterherkaufen."
-  },
-  {
-   "ticker": "OKLO",
-   "name": "Oklo",
-   "group": "Watchlist",
-   "price": 17.4799,
-   "chg_pct": -0.0896,
-   "at": "2026-11-25T16:23+00:00",
-   "id": "OKLO-zone-2026-11-25",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Oklo in der Einstiegszone",
-   "text": "Kurs 17,48 $ ist in die Zone 16,50 $–18,00 $ gelaufen.",
-   "todo": "18–23,5 $: abwarten."
   }
  ],
  "notified": [
