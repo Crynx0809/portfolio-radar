@@ -7602,5 +7602,154 @@
   "horizon_text": "Ziel in ca. 2–4 Wochen (bis ca. Ende Dez.)",
   "entry_eta_text": "",
   "stop_reset_reason": "Plan v2 (Zone 295–310 $) wurde nie ausgelöst, kein Bestand. Neue Zone am zurückeroberten Doppeltief 351 $, Stop unter dem echten Tief 318,5 $."
+ },
+ {
+  "ticker": "COHR",
+  "name": "Coherent",
+  "sector": "Photonik / KI-Optik",
+  "tv_symbol": "NYSE:COHR",
+  "currency": "USD",
+  "group": "Watchlist",
+  "alert": "",
+  "status": "annaeherung",
+  "bias": "neutral",
+  "entry_type": "Rücksetzer",
+  "entry_low": 162,
+  "entry_high": 175,
+  "stop": 140,
+  "invalidation": 142.46,
+  "trigger": 246,
+  "target_low": 240,
+  "target_high": 265,
+  "waves": [
+   {
+    "d": "2026-06-03",
+    "p": 440.0,
+    "l": "Hoch"
+   },
+   {
+    "d": "2026-07-29",
+    "p": 220.68,
+    "l": "A"
+   },
+   {
+    "d": "2026-08-07",
+    "p": 391.37,
+    "l": "B"
+   },
+   {
+    "d": "2026-11-05",
+    "p": 160.23,
+    "l": "C"
+   },
+   {
+    "d": "2026-11-11",
+    "p": 245.73,
+    "l": "1"
+   },
+   {
+    "d": "2026-11-25",
+    "p": 174.96,
+    "l": "2"
+   }
+  ],
+  "wave_primary": "Große ABC-Korrektur vom Rekordhoch 440 $ (3.6.): A bis 220,68 $ (29.7.), B bis 391,37 $ (7.8.), C bis 160,23 $ (5.11.) – C ist fast genau so lang wie A, die Korrektur kann damit fertig sein. Danach Welle 1 bis 245,73 $ (11.11.); Welle 2 läuft (174,96 $ am 25.11., 83 % zurück). Kaufzone 162–175 $ (Test des Tiefs), dann Welle 3 Richtung 240–265 $.",
+  "wave_alt": "Die Korrektur ist nicht fertig: Die Hochs fallen (245,7 → 240,8 → 234,8 $). Schluss unter 160 $ → neues Tief Richtung 120–140 $.",
+  "plan": "Optik-Spezialist für KI-Rechenzentren (Transceiver, Laser), Nvidia ist Großaktionär. Starkes Wachstum, aber hohe Investitionen und negativer Cashflow – die Aktie schwankt extrem (Ø ~15 % pro Tag). Nur kleine Position, weiter Stop.",
+  "news_brief": "Q1-Zahlen (4.11.): Umsatz +50 % auf 2,37 Mrd. $ über Erwartung, Ausblick angehoben, 5-Jahres-Auftrag über ~20 Mrd. $ (PhotonLink). Trotzdem −16 % am 5.11. im KI-Ausverkauf nach den US-Zwischenwahlen; am 12.11. weiter belastet durch den Rücktritt von Nvidia-Chef Jensen Huang. Operativer Cashflow negativ.",
+  "next_event": "Q2-Zahlen",
+  "next_event_date": "2027-02-03",
+  "action": "In 162–175 $ kaufen (gestaffelt), Stop 140 $, Ziel 240–265 $; über 246 $ Stop auf Einstand – wegen der extremen Schwankung nur kleine Position",
+  "if_up": "Schluss über 246 $ → Welle 3 bestätigt, Stop auf Einstand; Ziel 240–265 $, danach 300 $ möglich.",
+  "if_wait": "Zwischen 175 und 246 $: keine neuen Käufe, Kauforders in der Zone liegen lassen.",
+  "if_down": "Schluss unter 140 $ → Korrektur geht weiter, Ziel 120 $; Plan ungültig.",
+  "pros": [
+   "Umsatz +50 %, Ausblick angehoben, Großauftrag über ~20 Mrd. $",
+   "Korrektur 440 → 160 $ ist ein vollständiges ABC (C ≈ A)",
+   "Analysten-Kursziel ≈ 367 $ weit über dem Kurs"
+  ],
+  "cons": [
+   "Extreme Schwankung (Ø ~15 % pro Tag) – Stops müssen weit sein",
+   "Operativer Cashflow negativ, hohe Investitionen",
+   "Hängt stark an der KI-Stimmung und an Nvidia"
+  ],
+  "risk": "Kippt die KI-Stimmung weiter (Nvidia-Führungswechsel, Finanzierungssorgen), kann das Tief bei 160 $ fallen und der Kurs schnell Richtung 120 $ laufen.",
+  "lt_view": "spekulativ",
+  "lt_conf": "niedrig",
+  "lt_target_low": 360,
+  "lt_target_high": 440,
+  "lt_stop": 115,
+  "lt_until": "Dez. 2027",
+  "lt_entry_low": 160,
+  "lt_entry_high": 180,
+  "lt_text": "Großer Aufwärtstrend seit 2023 (28 $): Welle (1) bis 113,60 $, (2) bis 45,58 $, (3) bis zum Rekordhoch 440 $ (Juni 2026). Die Korrektur bis 160 $ ist Welle (4). Hält sie über 115 $, zielt Welle (5) zurück Richtung 360–440 $ – spekulativ.",
+  "ew": {
+   "lang": {
+    "count": [
+     {
+      "d": "2023-09-18",
+      "p": 28.47,
+      "l": "[2]"
+     },
+     {
+      "d": "2024-12-02",
+      "p": 113.6,
+      "l": "(1)"
+     },
+     {
+      "d": "2025-04-07",
+      "p": 45.58,
+      "l": "(2)"
+     },
+     {
+      "d": "2026-06-01",
+      "p": 440.0,
+      "l": "(3)"
+     },
+     {
+      "d": "2026-11-02",
+      "p": 160.23,
+      "l": "(4)"
+     }
+    ],
+    "path": [
+     {
+      "p": 400,
+      "l": "(5)"
+     }
+    ],
+    "alt": {
+     "path": [
+      {
+       "p": 100
+      }
+     ],
+     "label": "alt. (4) tiefer",
+     "prob": 45
+    },
+    "up": 245.73
+   },
+   "kurz": {
+    "alt": {
+     "label": "alt. neues Tief",
+     "prob": 45
+    }
+   }
+  },
+  "support_low": 162,
+  "support_high": 175,
+  "price": 187.255,
+  "price_date": "2026-11-25",
+  "range_low": 142.46,
+  "range_high": 440.0,
+  "chg_note": "−5,2 % am 25.11.",
+  "updated_at": "2026-11-25T19:10:00+01:00",
+  "lt_consensus": 367.12,
+  "lt_analysts": 25,
+  "horizon_weeks_low": 2,
+  "horizon_weeks_high": 5,
+  "horizon_end": "2026-12-30",
+  "horizon_text": "Ziel in ca. 2–5 Wochen (bis ca. Ende Dez.)",
+  "entry_eta_text": "Einstiegszone in ca. 1 Woche (bis ca. Anfang Dez.)"
  }
 ]
