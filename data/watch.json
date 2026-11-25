@@ -1,45 +1,37 @@
 {
- "generated_at": "2026-11-25T17:23:29+00:00",
+ "generated_at": "2026-11-25T18:12:39+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 383.445,
+   "price": 391.7992,
    "stop": 398,
    "trigger": 594,
-   "gap_to_stop": -0.0366
+   "gap_to_stop": -0.0156
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 267.88,
+   "price": 271.275,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0224
+   "gap_to_stop": 0.0354
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 11.6549,
+   "price": 11.955,
    "stop": 11.0,
    "trigger": 15.5,
-   "gap_to_stop": 0.0595
-  },
-  {
-   "ticker": "BAC",
-   "name": "Bank of America",
-   "price": 47.875,
-   "stop": 45.8,
-   "trigger": 54.5,
-   "gap_to_stop": 0.0453
+   "gap_to_stop": 0.0868
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 122.0428,
+   "price": 125.85,
    "stop": 119.0,
    "trigger": 155,
-   "gap_to_stop": 0.0256
+   "gap_to_stop": 0.0576
   },
   {
    "ticker": "NOVO-B",
@@ -55,43 +47,29 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 383.445,
-   "chg_pct": -0.0722,
-   "at": "2026-11-25T17:23+00:00",
+   "price": 391.7992,
+   "chg_pct": -0.052,
+   "at": "2026-11-25T18:12+00:00",
    "id": "AMD-stop-2026-11-25",
    "type": "stop",
    "level": "hoch",
    "title": "Advanced Micro Devices unter dem Stop 398,00 $",
-   "text": "Kurs 383,44 $ (−7,2 % heute) liegt unter deinem Stop 398,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
+   "text": "Kurs 391,80 $ (−5,2 % heute) liegt unter deinem Stop 398,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
    "todo": "Schluss unter 398 $ → Position verkaufen. Neuer Einstieg erst im Bereich 360–380 $ prüfen (neuer Plan dann in der Abendanalyse)."
   },
   {
-   "ticker": "GOOGL",
-   "name": "Alphabet A",
-   "group": "Portfolio",
-   "price": 267.88,
-   "chg_pct": -0.04,
-   "at": "2026-11-25T17:23+00:00",
-   "id": "GOOGL-stopnah-2026-11-25",
-   "type": "stop_nah",
+   "ticker": "NVDA",
+   "name": "Nvidia",
+   "group": "Watchlist",
+   "price": 146.07,
+   "chg_pct": -0.0599,
+   "at": "2026-11-25T18:12+00:00",
+   "id": "NVDA-zone-2026-11-25",
+   "type": "zone",
    "level": "mittel",
-   "title": "Alphabet A nah am Stop",
-   "text": "Kurs 267,88 $ nur noch 2,2 % über dem Stop 262,00 $.",
-   "todo": "Schlusskurs beobachten. 271–280 $: gestaffelt zukaufen; Schluss unter 262 $ → Position verkaufen."
-  },
-  {
-   "ticker": "MRVL",
-   "name": "Marvell Technology",
-   "group": "Portfolio",
-   "price": 122.0428,
-   "chg_pct": -0.0724,
-   "at": "2026-11-25T17:23+00:00",
-   "id": "MRVL-stopnah-2026-11-25",
-   "type": "stop_nah",
-   "level": "mittel",
-   "title": "Marvell Technology nah am Stop",
-   "text": "Kurs 122,04 $ nur noch 2,6 % über dem Stop 119,00 $.",
-   "todo": "Schlusskurs beobachten. 128–136 $: gestaffelt kaufen; Schluss unter 119 $ → verkaufen (Ziel dann 100–108 $)."
+   "title": "Nvidia in der Einstiegszone",
+   "text": "Kurs 146,07 $ ist in die Zone 145,00 $–152,00 $ gelaufen.",
+   "todo": "152–172 $: abwarten, nicht hinterherkaufen."
   }
  ],
  "notified": [
