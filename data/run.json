@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-24T22:45:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "AMD hält den Stop 398 $ per Schluss (413,3 $), das Tagestief 396 $ hat aber das C-Tief 402 $ unterschritten – Zählung angepasst, Status „meiden“, keine Zukäufe unter 450 $. Applied Digital und Marvell zurück in ihren Zonen, übrige Depotwerte stabil.",
-  "market": "Nasdaq 100 ca. −2 %, S&P 500 −0,5 %, Dow +0,8 % – Chipwerte geben einen Teil der Montagsrally ab (Micron −11 %, AMD −8,9 %, Nvidia −5,9 %), Banken, Pharma und Konsum fester. Kurse TradingView 22:32 Uhr (Schlusskurse).",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-25T14:30:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Vorbörslich nächster Chip-Ausverkauf: Nasdaq-Futures ca. −2,5 %, AMD ca. −6,5 % – damit vorbörslich unter dem Stop 398 $ (zählt per Schluss).",
+  "market": "US-Futures vor dem Start: Nasdaq 100 ca. −2,4 bis −2,8 %, S&P 500 ca. −1,4 %, Dow ca. −0,8 %. Gründe: Zweifel an KI-Ausgaben, mögliche neue Zölle. 14:30 Uhr PCE-Inflation und BIP Q3; Donnerstag Thanksgiving (US-Börsen zu). Kurse: TradingView 14:18 Uhr – Europa aktuell, US-Werte noch Schluss 24.11.",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]

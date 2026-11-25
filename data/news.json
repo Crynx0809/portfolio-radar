@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_20261125_premarket",
+  "date": "2026-11-25",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "negativ",
+  "headline": "Vorbörslich nächster Rückschlag: Nasdaq-100-Futures ca. −2,4 bis −2,8 %, S&P 500 ca. −1,4 %, Chipwerte −5 bis −6,5 %",
+  "summary": "Vor dem US-Start (Stand ca. 13:30 Uhr MEZ) geben die Futures erneut deutlich nach: Zweifel an schuldenfinanzierten KI-/Rechenzentrums-Ausgaben und Berichte über mögliche neue Zölle gegen 16 Handelspartner. Vorbörslich AMD ca. −6,5 %, Micron −6 %, Marvell −5,7 %, Nvidia −5 %, Amazon −3 bis −3,5 %, Alphabet −3 %. Um 14:30 Uhr MEZ kommen PCE-Inflation (Okt., Kernrate erwartet 3,2 %) und BIP Q3; der Markt preist eine Zinserhöhung im Dezember fast sicher ein. Vorbörsliche Kurse, noch keine Schlusskurse.",
+  "url": "https://www.tradingandinvestmentnews.co.uk/nasdaq-futures-slide-2-percent/"
+ },
+ {
   "id": "n_20261124_markt_close",
   "date": "2026-11-24",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "Freeport-McMoRan −7 % unter den Stop: Kupfer und Gold fallen mit den Zinserwartungen",
   "summary": "Schluss 51,45 $ unter dem Stop 51,5 $, Tief 50,46 $. Plan ausgestoppt (keine Position); neue Zone erst 46–48,5 $ am 78,6 %-Rücklauf, Stop 43,5 $.",
   "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
- },
- {
-  "id": "2026-11-18-markt-vorboerse",
-  "date": "2026-11-18",
-  "ticker": "Markt",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Vorbörslich Erholung nach Nvidia-Zahlen: Nasdaq-100-Futures ca. +1,2 %, AMD und Marvell je ca. +2–3 %, Applied Digital ca. +5–6 %",
-  "summary": "Die starken Nvidia-Zahlen ziehen Chip- und KI-Rechenzentrumswerte vorbörslich an (Nvidia ca. +3 %, Micron ca. +3 %). Alphabet, Amazon und Meta nur leicht im Plus. Lowe's nach Zahlen ca. −2,5 %. Heute 20 Uhr MEZ: Protokoll der Fed-Sitzung. Vorbörsliche Kurse, noch nicht bestätigt.",
-  "url": "https://www.investing.com/news/stock-market-news/premarket-movers-nvidia-jumps-on-strong-ai-outlook-lowes-falls-5035719"
  }
 ]

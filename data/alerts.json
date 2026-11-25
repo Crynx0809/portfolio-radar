@@ -1,5 +1,19 @@
 [
  {
+  "id": "a_20261125_1415_depot",
+  "at": "2026-11-25T14:30:00+01:00",
+  "ticker": "AMD",
+  "level": "hoch",
+  "text": "Vorbörslich AMD ca. −6,5 % (rechnerisch ~386 $ ausgehend vom Schluss 413,3 $) – das läge unter dem Stop 398 $. Der Stop zählt per Schlusskurs: Schließt AMD heute unter 398 $, ist der Plan ausgestoppt (Neubewertung in der Abendanalyse). Ebenfalls schwach vorbörslich: Marvell ca. −5,7 % (rechnerisch ~124 $, unter der Zone 128–136 $, Stop 119 $), Amazon −3 bis −3,5 %, Alphabet −3 %. Applied Digital (Zone 12–13 $, Stop 11,0 $) eng beobachten. Kein Handeln im Affekt – US-Eröffnung und PCE-Daten (14:30 Uhr) abwarten."
+ },
+ {
+  "id": "a_20261125_1415_eu",
+  "at": "2026-11-25T14:30:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Europa (TradingView 14:18 Uhr): Siemens Energy 115,2 € unter der Zone 118–123 €, nur 2,9 % über dem Stop 112 €. SAP 188,4 € in der Zone 185–190 €, Novo Nordisk 37,0 €, Airbus 193,5 € knapp über der Zone, Rheinmetall 739,3 €. US-Werte zeigen noch die Schlusskurse vom 24.11.; TSMC, GE Vernova, Micron und Nvidia lagen dort in bzw. nahe ihren Zonen – bei −5 bis −6 % vorbörslich rutschen Micron und Nvidia tiefer Richtung Stop (580 $ bzw. 136 $)."
+ },
+ {
   "id": "a_20261124_2245_depot",
   "at": "2026-11-24T22:45:00+01:00",
   "ticker": "AMD",
