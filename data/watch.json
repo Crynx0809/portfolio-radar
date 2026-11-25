@@ -1,37 +1,37 @@
 {
- "generated_at": "2026-11-25T18:12:39+00:00",
+ "generated_at": "2026-11-25T19:15:26+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 391.7992,
+   "price": 400.25,
    "stop": 398,
    "trigger": 594,
-   "gap_to_stop": -0.0156
+   "gap_to_stop": 0.0057
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 271.275,
+   "price": 271.54,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0354
+   "gap_to_stop": 0.0364
   },
   {
    "ticker": "APLD",
    "name": "Applied Digital",
-   "price": 11.955,
+   "price": 12.145,
    "stop": 11.0,
    "trigger": 15.5,
-   "gap_to_stop": 0.0868
+   "gap_to_stop": 0.1041
   },
   {
    "ticker": "MRVL",
    "name": "Marvell Technology",
-   "price": 125.85,
+   "price": 127.5975,
    "stop": 119.0,
    "trigger": 155,
-   "gap_to_stop": 0.0576
+   "gap_to_stop": 0.0722
   },
   {
    "ticker": "NOVO-B",
@@ -47,28 +47,28 @@
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
    "group": "Portfolio",
-   "price": 391.7992,
-   "chg_pct": -0.052,
-   "at": "2026-11-25T18:12+00:00",
-   "id": "AMD-stop-2026-11-25",
-   "type": "stop",
-   "level": "hoch",
-   "title": "Advanced Micro Devices unter dem Stop 398,00 $",
-   "text": "Kurs 391,80 $ (−5,2 % heute) liegt unter deinem Stop 398,00 $. Laut Regel zählt der Schlusskurs (Xetra 17:30 Uhr, USA 22 Uhr).",
-   "todo": "Schluss unter 398 $ → Position verkaufen. Neuer Einstieg erst im Bereich 360–380 $ prüfen (neuer Plan dann in der Abendanalyse)."
+   "price": 400.25,
+   "chg_pct": -0.0315,
+   "at": "2026-11-25T19:15+00:00",
+   "id": "AMD-stopnah-2026-11-25",
+   "type": "stop_nah",
+   "level": "mittel",
+   "title": "Advanced Micro Devices nah am Stop",
+   "text": "Kurs 400,25 $ nur noch 0,6 % über dem Stop 398,00 $.",
+   "todo": "Schlusskurs beobachten. Schluss unter 398 $ → Position verkaufen. Neuer Einstieg erst im Bereich 360–380 $ prüfen (neuer Plan dann in der Abendanalyse)."
   },
   {
    "ticker": "NVDA",
    "name": "Nvidia",
    "group": "Watchlist",
-   "price": 146.07,
-   "chg_pct": -0.0599,
-   "at": "2026-11-25T18:12+00:00",
+   "price": 147.7,
+   "chg_pct": -0.0494,
+   "at": "2026-11-25T19:15+00:00",
    "id": "NVDA-zone-2026-11-25",
    "type": "zone",
    "level": "mittel",
    "title": "Nvidia in der Einstiegszone",
-   "text": "Kurs 146,07 $ ist in die Zone 145,00 $–152,00 $ gelaufen.",
+   "text": "Kurs 147,70 $ ist in die Zone 145,00 $–152,00 $ gelaufen.",
    "todo": "152–172 $: abwarten, nicht hinterherkaufen."
   }
  ],
