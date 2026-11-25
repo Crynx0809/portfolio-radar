@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T21:56:32+00:00",
+ "generated_at": "2026-11-25T08:59:15+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -28,10 +28,10 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 36.72,
+   "price": 37.195,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.224
+   "gap_to_stop": 0.2398
   }
  ],
  "events": [
@@ -41,8 +41,8 @@
    "group": "Portfolio",
    "price": 413.27,
    "chg_pct": -0.0886,
-   "at": "2026-11-24T21:56+00:00",
-   "id": "AMD-absturz-2026-11-24",
+   "at": "2026-11-25T08:59+00:00",
+   "id": "AMD-absturz-2026-11-25",
    "type": "absturz",
    "level": "hoch",
    "title": "Advanced Micro Devices −8,9 % heute",
@@ -55,8 +55,8 @@
    "group": "Portfolio",
    "price": 12.22,
    "chg_pct": -0.1158,
-   "at": "2026-11-24T21:56+00:00",
-   "id": "APLD-absturz-2026-11-24",
+   "at": "2026-11-25T08:59+00:00",
+   "id": "APLD-absturz-2026-11-25",
    "type": "absturz",
    "level": "hoch",
    "title": "Applied Digital −11,6 % heute",
@@ -69,8 +69,8 @@
    "group": "Portfolio",
    "price": 131.57,
    "chg_pct": -0.091,
-   "at": "2026-11-24T21:56+00:00",
-   "id": "MRVL-absturz-2026-11-24",
+   "at": "2026-11-25T08:59+00:00",
+   "id": "MRVL-absturz-2026-11-25",
    "type": "absturz",
    "level": "hoch",
    "title": "Marvell Technology −9,1 % heute",
@@ -79,8 +79,8 @@
   }
  ],
  "notified": [
-  "AMD-absturz-2026-11-24",
-  "APLD-absturz-2026-11-24",
-  "MRVL-absturz-2026-11-24"
+  "AMD-absturz-2026-11-25",
+  "APLD-absturz-2026-11-25",
+  "MRVL-absturz-2026-11-25"
  ]
 }
