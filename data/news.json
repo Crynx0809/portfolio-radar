@@ -1,5 +1,25 @@
 [
  {
+  "id": "n_20261126_2245_dax",
+  "date": "2026-11-26",
+  "ticker": "Markt",
+  "impact": "hoch",
+  "direction": "positiv",
+  "headline": "DAX erholt sich um 2,1 % auf 25.216 Punkte – US-Börsen wegen Thanksgiving geschlossen",
+  "summary": "Nach dem Rutsch auf den tiefsten Stand seit Juli folgte der DAX der Wende der US-Techwerte vom Mittwochnachmittag. Gefragt waren KI-, Rohstoff- und Autowerte: Rheinmetall +4,1 %, Siemens Energy +4,0 %, Mercedes +3,1 %, SAP +2,3 %, Airbus +2,0 %. In den USA kein Handel, Freitag verkürzt.",
+  "url": "https://www.ariva.de/news/roundup-aktien-frankfurt-schluss-erholung-deutsche-bank-12221903"
+ },
+ {
+  "id": "n_20261126_2245_sap",
+  "date": "2026-11-26",
+  "ticker": "SAP",
+  "impact": "mittel",
+  "direction": "neutral",
+  "headline": "SAP plant laut Bloomberg Abbau von mindestens 10.000 Stellen im Zuge von KI",
+  "summary": "Bloomberg berichtet unter Berufung auf Informierte von einem großen Stellenabbau; offiziell bestätigt ist das nicht. Die Aktie gab ihre Gewinne teils ab, schloss aber mit +2,3 % bei 194,1 € knapp über der Nachkauf-Zone 185–190 €.",
+  "url": "https://www.ariva.de/news/aktien-frankfurt-schluss-dax-erholt-zeit-zum-durchatmen-12221888"
+ },
+ {
   "id": "n_20261125_2250_markt",
   "date": "2026-11-25",
   "ticker": "Markt",
@@ -278,25 +298,5 @@
   "headline": "Alibaba: Umsatz +10 %, KI-Cloud +53 % – Aktie vorbörslich ca. +4 % auf 87,9 $",
   "summary": "Umsatz 271,5 Mrd. Yuan, bereinigtes EBITA stark gestiegen. Kurs knapp unter der Zone 88–92 $ (Status „meiden“); Quellen widersprechen sich bei der vorbörslichen Richtung.",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262313137-us-pre-market-anthropic-tradingkey"
- },
- {
-  "id": "2026-11-18-fed-protokoll",
-  "date": "2026-11-18",
-  "ticker": "Markt",
-  "impact": "hoch",
-  "direction": "negativ",
-  "headline": "Fed-Protokoll: fast alle Notenbanker halten weitere Zinserhöhungen für angemessen – Dow −1,1 %, Gold auf Jahrestief",
-  "summary": "Laut Protokoll der Oktober-Sitzung hielten fast alle Mitglieder weitere Zinserhöhungen für wahrscheinlich angemessen; einige brachten für Dezember mehr als 0,25 Punkte ins Spiel. Fed-Gouverneur Waller sprach sich am Morgen für 0,5 Punkte am 8./9.12. aus. Schluss: Dow −1,1 %, S&P 500 −0,2 % (fünfter Verlusttag in Folge), Nasdaq +0,4 %. Gold auf dem tiefsten Stand seit über einem Jahr, Öl (WTI) −4 % auf ca. 82 $.",
-  "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026"
- },
- {
-  "id": "2026-11-18-cyber",
-  "date": "2026-11-18",
-  "ticker": "CRWD",
-  "impact": "hoch",
-  "direction": "positiv",
-  "headline": "Palo Alto erhöht Prognose – Cybersecurity-Werte springen an: CrowdStrike +8 %, Zscaler +6,8 %, Fortinet +5,9 %",
-  "summary": "Palo Alto Networks steigerte den Quartalsumsatz um 39 % und hob die Jahresprognose an; die Aktie stieg rund 10 %. Die ganze Branche zog mit: CrowdStrike schloss bei 237 $ (weit über der Zone 200–212 $), Zscaler bei 197,8 $ (Zahlen am 24.11.), Depotwert Fortinet bei 131,8 $ über der Zone 115–126 $.",
-  "url": "https://247wallst.com/investing/2026/11/18/google-says-fully-autonomous-ai-cyberattacks-are-likely-within-6-months/"
  }
 ]

@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-26T17:50:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
-  "market": "US-Börsen wegen Thanksgiving geschlossen (Freitag verkürzter Handel) – US-Kurse bleiben auf dem Mittwochsschluss. Europa fest: Rheinmetall +4,5 % (769 €) vor dem Kapitalmarkttag am Freitag, Siemens Energy +4,4 % (117,5 €, knapp unter der Zone 118–123 €), Mercedes +2,7 %, Airbus +2,4 % (194,6 €), SAP +2,0 % (193,6 €, leicht über der Zone 185–190 €), Novo Nordisk +0,9 % (36,97). Alle Depot-Stops weit entfernt; Alphabet bleibt mit gut 4 % Abstand zum Stop 262 $ der knappste Wert. Kurse: TradingView, Abruf 17:47 Uhr.",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-26T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Ruhiger Abend: US-Börsen zu (Thanksgiving), DAX +2,1 % – keine Stops gebrochen, keine neuen dringenden Meldungen.",
+  "market": "US-Kurse unverändert auf dem Mittwochsschluss (Nasdaq-Wende am Nachmittag). DAX 25.216 (+2,1 %) mit KI-, Auto- und Rüstungswerten. Depot: alle Stops intakt, Alphabet mit 4 % Abstand zum Stop am knappsten. Mercedes: neues Ziel 42–44 € für einen Kauf in 34,5–35,5 €. SAP-Stellenabbau-Bericht unbestätigt. Kurse: TradingView, Abruf 22:32 Uhr.",
+  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
  }
 ]

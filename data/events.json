@@ -1,15 +1,15 @@
 [
  {
-  "id": "e_us_20261126",
-  "date": "2026-11-26",
+  "id": "e_us_20261127",
+  "date": "2026-11-27",
   "ticker": "Markt",
-  "event": "Thanksgiving – US-Börsen geschlossen (27.11. verkürzter Handel)"
+  "event": "US-Börsen verkürzter Handel nach Thanksgiving (Schluss 19 Uhr MEZ)"
  },
  {
   "id": "e_rhm_20261127",
   "date": "2026-11-27",
   "ticker": "RHM",
-  "event": "Kapitalmarkttag"
+  "event": "Kapitalmarkttag (zweiter Tag; Mittelfristziele erwartet)"
  },
  {
   "id": "e_crwd_20261201",

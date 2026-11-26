@@ -7,17 +7,17 @@
   "text": "AMD Schluss 406,0 $ (−1,8 %) nach Tagestief 370,4 $ – der Stop 398 $ hielt per Schlusskurs, die Position bleibt. Das Tief traf genau die Wellen-(4)-Zone 360–380 $. Neuer Plan: Stop 365 $ per Schluss (unter dem Tief), Zukauf nur gestaffelt in 380–400 $, Ziel 505–560 $; über 478 $ Stop auf Einstand."
  },
  {
-  "id": "a_20261125_2250_depot",
-  "at": "2026-11-25T22:50:00+01:00",
+  "id": "a_20261126_2245_depot",
+  "at": "2026-11-26T22:45:00+01:00",
   "ticker": "Depot",
   "level": "mittel",
-  "text": "Alle Depot-Stops haben per Schluss gehalten. Marvell 130,9 $ (Tief 117,8 $ kurz unter dem Stop 119 $) und Applied Digital 12,29 $ (Tief 10,78 $ unter dem Stop 11,0 $) schlossen wieder in ihren Zonen; Alphabet 273,1 $ (Tief 262,7 $, Stop 262 $) ebenfalls zurück in der Zone 271–280 $. Amazon 244,4 $ knapp unter der Zone, Stop 228 $. Freitag (verkürzter US-Handel) zählt wieder der Schlusskurs."
+  "text": "US-Börsen heute geschlossen (Thanksgiving) – US-Depotwerte unverändert auf dem Mittwochsschluss, alle Stops intakt; knappster Wert Alphabet 273,1 $ (Stop 262 $, 4 % Abstand). SAP 194,1 € (+2,3 %) knapp über der Zone 185–190 €; Stellenabbau-Bericht (Bloomberg) unbestätigt. Novo Nordisk 37,1 € nahe der Bestätigungsmarke 37,5 €. Freitag verkürzter US-Handel."
  },
  {
-  "id": "a_20261125_2250_watch",
-  "at": "2026-11-25T22:50:00+01:00",
+  "id": "a_20261126_2245_watch",
+  "at": "2026-11-26T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Watchlist: Micron (Schluss 601 $, Tief 548 $) und Siemens Energy (112,5 €, Tief 111,4 €) hielten ihre Stops 580 $ bzw. 112 € per Schluss nur knapp bzw. nach tiefem Intraday-Bruch – Pläne gelten weiter, keine Nachkäufe. In der Zone: Nvidia 149,3 $ (145–152 $), GE Vernova 715 $, Marvell, Alphabet, SAP, Airbus, Hims, CrowdStrike, Celanese, Xiaomi. Rheinmetall zurück über 705 €, aber 15 % über der Zone 600–640 € (Ziel jetzt 840–900 €); Kapitalmarkttag Freitag."
+  "text": "Europa erholt: Siemens Energy 117 € (+4 %) knapp unter der Zone 118–123 € – nur kleine Position, Stop 112 €. Rheinmetall 765,7 € (+4,1 %) vor Tag 2 des Kapitalmarkttags, weiter 20 % über der Zone 600–640 €. Mercedes 38,7 € in einer Erholung (Welle iv); Kaufzone weiter 34,5–35,5 €, Ziel neu 42–44 €. Airbus 193,8 € knapp über der Zone 186–192 €."
  }
 ]
