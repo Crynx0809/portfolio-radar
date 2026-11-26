@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-25T22:50:00+01:00",
-  "kind": "Abendanalyse",
-  "headline": "Kräftige Erholung vom Tagestief: Alle Depot-Stops halten per Schluss. AMD drehte genau in der Zielzone 370 $ (Schluss 406 $) – neuer Plan mit Stop 365 $.",
-  "market": "US-Schluss: Dow dreht nach zeitweise −1.100 Punkten ins Plus, S&P 500 und Nasdaq holen den Großteil der Verluste auf (Nasdaq zeitweise −4,6 %). Belastend bleiben neue US-Zollpläne, Kern-PCE 3,3 % und eine fast sicher eingepreiste Zinserhöhung im Dezember. Donnerstag US-Börsen zu (Thanksgiving), Freitag verkürzt. Kurse: TradingView, Abruf 22:32 Uhr.",
-  "next_update": "morgen ca. 14:15 Uhr (News-Check)"
+  "updated_at": "2026-11-26T14:20:00+01:00",
+  "kind": "News-Check 14:15",
+  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
+  "market": "US-Börsen heute wegen Thanksgiving geschlossen, Freitag verkürzter Handel – US-Kurse bleiben auf dem Mittwochsschluss. Europa freundlich: DAX im Plus, Rheinmetall +3,5 % (761 €) vor dem Kapitalmarkttag am Freitag, Siemens Energy +4,6 %, Airbus +2,3 %, SAP +1,2 % (192 €, knapp über der Zone 185–190 €). Alle Depot-Stops weit entfernt; Alphabet bleibt mit 4 % Abstand zum Stop 262 $ der knappste Wert. Kurse: TradingView, Abruf 14:16 Uhr.",
+  "next_update": "heute ca. 17:45 Uhr (News-Check)"
  }
 ]
