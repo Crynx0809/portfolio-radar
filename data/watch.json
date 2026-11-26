@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T15:56:55+00:00",
+ "generated_at": "2026-11-26T17:05:45+00:00",
  "watched": [
   {
    "ticker": "AMD",
@@ -20,27 +20,12 @@
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.05,
+   "price": 37.125,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.235
+   "gap_to_stop": 0.2375
   }
  ],
- "events": [
-  {
-   "ticker": "ENR",
-   "name": "Siemens Energy",
-   "group": "Watchlist",
-   "price": 118.12,
-   "chg_pct": 0.0503,
-   "at": "2026-11-26T15:56+00:00",
-   "id": "ENR-zone-2026-11-26",
-   "type": "zone",
-   "level": "mittel",
-   "title": "Siemens Energy in der Einstiegszone",
-   "text": "Kurs 118,12 € ist in die Zone 118,00 €–123,00 € gelaufen.",
-   "todo": "123–138 €: nicht hinterherkaufen."
-  }
- ],
+ "events": [],
  "notified": []
 }
