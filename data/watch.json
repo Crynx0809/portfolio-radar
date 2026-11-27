@@ -1,45 +1,95 @@
 {
- "generated_at": "2026-11-27T08:58:32+00:00",
+ "generated_at": "2026-11-27T15:42:52+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 406.03,
+   "price": 406.7928,
    "stop": 365,
    "trigger": 478,
-   "gap_to_stop": 0.1124
+   "gap_to_stop": 0.1145
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 273.1,
+   "price": 271.505,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0424
+   "gap_to_stop": 0.0363
+  },
+  {
+   "ticker": "FTNT",
+   "name": "Fortinet",
+   "price": 136.01,
+   "stop": 105,
+   "trigger": 139.4,
+   "gap_to_stop": 0.2953
   },
   {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
-   "price": 37.185,
+   "price": 37.51,
    "stop": 30,
    "trigger": 37.5,
-   "gap_to_stop": 0.2395
+   "gap_to_stop": 0.2503
   }
  ],
  "events": [
   {
+   "ticker": "NOVO-B",
+   "name": "Novo Nordisk B",
+   "group": "Portfolio",
+   "price": 37.51,
+   "chg_pct": 0.0104,
+   "at": "2026-11-27T15:42+00:00",
+   "id": "NOVO-B-ausbruch-2026-11-27",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
+   "text": "Kurs 37,51 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
+  },
+  {
+   "ticker": "XOM",
+   "name": "Exxon Mobil",
+   "group": "Watchlist",
+   "price": 161.16,
+   "chg_pct": 0.0195,
+   "at": "2026-11-27T15:42+00:00",
+   "id": "XOM-zone-2026-11-27",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Exxon Mobil in der Einstiegszone",
+   "text": "Kurs 161,16 $ ist in die Zone 160,00 $–170,00 $ gelaufen.",
+   "todo": "Einstiegsidee erst in 160–170 $ nach einer Korrektur."
+  },
+  {
    "ticker": "ENR",
    "name": "Siemens Energy",
    "group": "Watchlist",
-   "price": 121.94,
-   "chg_pct": 0.0422,
-   "at": "2026-11-27T08:58+00:00",
+   "price": 118.88,
+   "chg_pct": 0.0161,
+   "at": "2026-11-27T15:42+00:00",
    "id": "ENR-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
    "title": "Siemens Energy in der Einstiegszone",
-   "text": "Kurs 121,94 € ist in die Zone 118,00 €–123,00 € gelaufen.",
+   "text": "Kurs 118,88 € ist in die Zone 118,00 €–123,00 € gelaufen.",
    "todo": "123–138 €: nicht hinterherkaufen."
+  },
+  {
+   "ticker": "TSM",
+   "name": "Taiwan Semiconductor (TSMC, ADR)",
+   "group": "Watchlist",
+   "price": 348.0,
+   "chg_pct": 0.0165,
+   "at": "2026-11-27T15:42+00:00",
+   "id": "TSM-zone-2026-11-27",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Taiwan Semiconductor (TSMC, ADR) in der Einstiegszone",
+   "text": "Kurs 348,00 $ ist in die Zone 345,00 $–355,00 $ gelaufen.",
+   "todo": "355–387 $: abwarten."
   }
  ],
  "notified": []
