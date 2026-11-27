@@ -1,29 +1,29 @@
 {
- "generated_at": "2026-11-27T17:51:29+00:00",
+ "generated_at": "2026-11-27T18:52:05+00:00",
  "watched": [
   {
    "ticker": "AMD",
    "name": "Advanced Micro Devices",
-   "price": 417.495,
+   "price": 424.54,
    "stop": 365,
    "trigger": 478,
-   "gap_to_stop": 0.1438
+   "gap_to_stop": 0.1631
   },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
-   "price": 273.7557,
+   "price": 274.96,
    "stop": 262,
    "trigger": 301,
-   "gap_to_stop": 0.0449
+   "gap_to_stop": 0.0495
   },
   {
    "ticker": "FTNT",
    "name": "Fortinet",
-   "price": 138.12,
+   "price": 139.48,
    "stop": 105,
    "trigger": 139.4,
-   "gap_to_stop": 0.3154
+   "gap_to_stop": 0.3284
   },
   {
    "ticker": "NOVO-B",
@@ -36,12 +36,26 @@
  ],
  "events": [
   {
+   "ticker": "FTNT",
+   "name": "Fortinet",
+   "group": "Portfolio",
+   "price": 139.48,
+   "chg_pct": 0.0335,
+   "at": "2026-11-27T18:52+00:00",
+   "id": "FTNT-ausbruch-2026-11-27",
+   "type": "ausbruch",
+   "level": "mittel",
+   "title": "Fortinet über der Bestätigungsmarke 139,40 $",
+   "text": "Kurs 139,48 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
+   "todo": "Schluss über 139,4 $ (B-Hoch) → Welle 4 vermutlich beendet: halten, Stop auf Einstand, Ziel 160–180 $."
+  },
+  {
    "ticker": "NOVO-B",
    "name": "Novo Nordisk B",
    "group": "Portfolio",
    "price": 37.64,
    "chg_pct": 0.0139,
-   "at": "2026-11-27T17:51+00:00",
+   "at": "2026-11-27T18:52+00:00",
    "id": "NOVO-B-ausbruch-2026-11-27",
    "type": "ausbruch",
    "level": "mittel",
@@ -53,14 +67,14 @@
    "ticker": "XOM",
    "name": "Exxon Mobil",
    "group": "Watchlist",
-   "price": 160.78,
-   "chg_pct": 0.0171,
-   "at": "2026-11-27T17:51+00:00",
+   "price": 160.18,
+   "chg_pct": 0.0133,
+   "at": "2026-11-27T18:52+00:00",
    "id": "XOM-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
    "title": "Exxon Mobil in der Einstiegszone",
-   "text": "Kurs 160,78 $ ist in die Zone 160,00 $–170,00 $ gelaufen.",
+   "text": "Kurs 160,18 $ ist in die Zone 160,00 $–170,00 $ gelaufen.",
    "todo": "Einstiegsidee erst in 160–170 $ nach einer Korrektur."
   },
   {
@@ -69,7 +83,7 @@
    "group": "Watchlist",
    "price": 119.18,
    "chg_pct": 0.0186,
-   "at": "2026-11-27T17:51+00:00",
+   "at": "2026-11-27T18:52+00:00",
    "id": "ENR-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
@@ -78,17 +92,31 @@
    "todo": "123–138 €: nicht hinterherkaufen."
   },
   {
+   "ticker": "MU",
+   "name": "Micron Technology",
+   "group": "Watchlist",
+   "price": 646.95,
+   "chg_pct": 0.076,
+   "at": "2026-11-27T18:52+00:00",
+   "id": "MU-zone-2026-11-27",
+   "type": "zone",
+   "level": "mittel",
+   "title": "Micron Technology in der Einstiegszone",
+   "text": "Kurs 646,95 $ ist in die Zone 640,00 $–670,00 $ gelaufen.",
+   "todo": "670–760 $: abwarten."
+  },
+  {
    "ticker": "TSM",
    "name": "Taiwan Semiconductor (TSMC, ADR)",
    "group": "Watchlist",
-   "price": 351.1,
-   "chg_pct": 0.0256,
-   "at": "2026-11-27T17:51+00:00",
+   "price": 353.34,
+   "chg_pct": 0.0321,
+   "at": "2026-11-27T18:52+00:00",
    "id": "TSM-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
    "title": "Taiwan Semiconductor (TSMC, ADR) in der Einstiegszone",
-   "text": "Kurs 351,10 $ ist in die Zone 345,00 $–355,00 $ gelaufen.",
+   "text": "Kurs 353,34 $ ist in die Zone 345,00 $–355,00 $ gelaufen.",
    "todo": "355–387 $: abwarten."
   }
  ],
