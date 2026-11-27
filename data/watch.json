@@ -1,14 +1,6 @@
 {
- "generated_at": "2026-11-27T18:52:05+00:00",
+ "generated_at": "2026-11-27T21:55:30+00:00",
  "watched": [
-  {
-   "ticker": "AMD",
-   "name": "Advanced Micro Devices",
-   "price": 424.54,
-   "stop": 365,
-   "trigger": 478,
-   "gap_to_stop": 0.1631
-  },
   {
    "ticker": "GOOGL",
    "name": "Alphabet A",
@@ -41,13 +33,13 @@
    "group": "Portfolio",
    "price": 139.48,
    "chg_pct": 0.0335,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "FTNT-ausbruch-2026-11-27",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Fortinet über der Bestätigungsmarke 139,40 $",
    "text": "Kurs 139,48 $ – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Schluss über 139,4 $ (B-Hoch) → Welle 4 vermutlich beendet: halten, Stop auf Einstand, Ziel 160–180 $."
+   "todo": "Schluss über 145 $ → Welle 5 läuft sicher; Teilgewinne bei 160–180 $."
   },
   {
    "ticker": "NOVO-B",
@@ -55,13 +47,13 @@
    "group": "Portfolio",
    "price": 37.64,
    "chg_pct": 0.0139,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "NOVO-B-ausbruch-2026-11-27",
    "type": "ausbruch",
    "level": "mittel",
    "title": "Novo Nordisk B über der Bestätigungsmarke 37,50 €",
    "text": "Kurs 37,64 € – das bullische Szenario greift, wenn der Schlusskurs darüber bleibt.",
-   "todo": "Über 37,5 € → Welle (3) wahrscheinlich: halten, Ziel 40–42 €."
+   "todo": "Schluss über 38,6 € (Hoch 16.11.) → Welle (3) läuft; Teilgewinne bei 40–42 €."
   },
   {
    "ticker": "XOM",
@@ -69,7 +61,7 @@
    "group": "Watchlist",
    "price": 160.18,
    "chg_pct": 0.0133,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "XOM-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
@@ -83,7 +75,7 @@
    "group": "Watchlist",
    "price": 119.18,
    "chg_pct": 0.0186,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "ENR-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
@@ -97,7 +89,7 @@
    "group": "Watchlist",
    "price": 646.95,
    "chg_pct": 0.076,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "MU-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
@@ -111,7 +103,7 @@
    "group": "Watchlist",
    "price": 353.34,
    "chg_pct": 0.0321,
-   "at": "2026-11-27T18:52+00:00",
+   "at": "2026-11-27T21:55+00:00",
    "id": "TSM-zone-2026-11-27",
    "type": "zone",
    "level": "mittel",
