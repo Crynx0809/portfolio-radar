@@ -1,15 +1,9 @@
 [
  {
-  "id": "e_us_20261127",
-  "date": "2026-11-27",
+  "id": "e_opec_20261129",
+  "date": "2026-11-29",
   "ticker": "Markt",
-  "event": "US-Börsen verkürzter Handel nach Thanksgiving (Schluss 19 Uhr MEZ)"
- },
- {
-  "id": "e_rhm_20261127",
-  "date": "2026-11-27",
-  "ticker": "RHM",
-  "event": "Kapitalmarkttag (zweiter Tag; Mittelfristziele erwartet)"
+  "event": "OPEC+-Treffen (Ölpreis wichtig für Exxon)"
  },
  {
   "id": "e_crwd_20261201",
@@ -22,6 +16,12 @@
   "date": "2026-12-03",
   "ticker": "MRVL",
   "event": "Q3-Zahlen (Anfang Dez., unbestätigt)"
+ },
+ {
+  "id": "e_jobs_20261204",
+  "date": "2026-12-04",
+  "ticker": "Markt",
+  "event": "US-Arbeitsmarktbericht November"
  },
  {
   "id": "e_adbe_20261209",

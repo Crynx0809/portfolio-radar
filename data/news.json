@@ -1,23 +1,23 @@
 [
  {
-  "id": "n_20261127_1745_chips",
+  "id": "n_20261127_2245_close",
   "date": "2026-11-27",
   "ticker": "Markt",
-  "impact": "mittel",
+  "impact": "hoch",
   "direction": "positiv",
-  "headline": "Black-Friday-Halbtag: Chip- und Optikwerte erholen sich weiter – Marvell +5 %, Coherent +12 %, AMD +3 % trotz Abstufung",
-  "summary": "Im verkürzten US-Handel (Schluss 19 Uhr MEZ) setzt sich die Erholung der KI-Werte nach dem Ausverkauf vom Mittwoch fort; Nasdaq am Nachmittag knapp +1 %. AMD steigt trotz einer Abstufung durch die Erste Group (Bewertung). Optikwerte wie Coherent und Lumentum ziehen deutlich an. Keine neuen Unternehmenszahlen – eine Erholungsbewegung, noch keine Trendwende.",
-  "url": "https://247wallst.com/investing/2026/11/27/amd-rises-4-despite-erste-group-downgrade-on-valuation-marvell-climbs-6-intel-gains-5/"
+  "headline": "Black-Friday-Halbtag: Nasdaq +2,3 %, S&P 500 +1,6 %, Dow +1,2 % – Halbleiterindex fast +5 %",
+  "summary": "Im verkürzten Handel erholten sich Chip- und KI-Werte weiter (Micron +7,6 %, Marvell +7,3 %, AMD +4,6 %, Coherent +14 %). Die Woche endet für den Nasdaq mit rund +1 %, der Halbleiterindex liegt auf Wochensicht trotz der Erholung im Minus. Dämpfer: 10-jährige US-Rendite um 4,9 % nach der Anhebung des Q3-Wachstums auf 4,3 %, der Markt rechnet weiter mit einer Fed-Zinserhöhung im Dezember.",
+  "url": "https://finance.yahoo.com/markets/live/stock-market-today-firday-november-27-dow-sp-500-nasdaq-black-friday-holiday-091152065.html"
  },
  {
-  "id": "RHM-2026-11-27-cmd",
+  "id": "n_20261127_rhm_cmd",
   "date": "2026-11-27",
   "ticker": "RHM",
   "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Rheinmetall-Kapitalmarkttag: neue Mittelfristziele etwa im Rahmen der Erwartungen – Aktie bis zu +6 %",
-  "summary": "Rheinmetall hat auf dem Kapitalmarkttag seine Ziele nach den Enttäuschungen der letzten Monate neu aufgestellt; die Zahlen liegen laut dpa-AFX etwa beim Konsens. Die Aktie stieg im Tageshoch bis 814 € und notiert am Mittag bei 794 € (+3,7 %).",
-  "url": "https://www.onvista.de/news/2026/11-27-roundup-aktien-frankfurt-erholung-geht-weiter-tech-werte-weiter-gefragt-0-10-26581237"
+  "direction": "neutral",
+  "headline": "Rheinmetall senkt beim Kapitalmarkttag das Umsatzziel 2030 auf 33–37 Mrd. € – Aktie steigt trotzdem",
+  "summary": "Nach Projektverzögerungen (u. a. Arminius) und dem verlorenen F126-Auftrag plant Rheinmetall vorsichtiger; das alte Ziel lag bei rund 50 Mrd. €. Der Markt hatte Schlimmeres befürchtet: Xetra-Schluss 791,1 € (+3,3 %), Tageshoch 814 €.",
+  "url": "https://mlq.ai/news/rheinmetall-cuts-2030-sales-goal-to-33-37-billion-wins-romania-lynx-order/"
  },
  {
   "id": "n_20261126_2245_dax",

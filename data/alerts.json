@@ -1,37 +1,30 @@
 [
  {
-  "id": "a_20261125_2250_amd",
-  "at": "2026-11-25T22:50:00+01:00",
-  "ticker": "AMD",
+  "id": "a_20261127_2245_ftnt",
+  "at": "2026-11-27T22:45:00+01:00",
+  "ticker": "FTNT",
   "level": "hoch",
-  "text": "AMD Schluss 406,0 $ (−1,8 %) nach Tagestief 370,4 $ – der Stop 398 $ hielt per Schlusskurs, die Position bleibt. Das Tief traf genau die Wellen-(4)-Zone 360–380 $. Neuer Plan: Stop 365 $ per Schluss (unter dem Tief), Zukauf nur gestaffelt in 380–400 $, Ziel 505–560 $; über 478 $ Stop auf Einstand."
+  "text": "Fortinet schließt bei 139,5 $ knapp über der Bestätigungsmarke 139,4 $ – Welle 4 vermutlich bei 120,5 $ beendet. Plan: Stop auf Einstand ziehen (mindestens unter 124 $), halten, Ziel 160–180 $. Der Ausbruch ist sehr knapp: Schluss unter 132 $ würde ihn wieder in Frage stellen."
  },
  {
-  "id": "a_20261126_2245_depot",
-  "at": "2026-11-26T22:45:00+01:00",
+  "id": "a_20261127_2245_novo",
+  "at": "2026-11-27T22:45:00+01:00",
+  "ticker": "NOVO-B",
+  "level": "hoch",
+  "text": "Novo Nordisk schließt bei 37,64 € über der Bestätigungsmarke 37,5 €. Plan: Stop auf Einstand ziehen (mindestens unter 34,8 €), halten, Ziel 40–42 €."
+ },
+ {
+  "id": "a_20261127_2245_depot",
+  "at": "2026-11-27T22:45:00+01:00",
   "ticker": "Depot",
   "level": "mittel",
-  "text": "US-Börsen heute geschlossen (Thanksgiving) – US-Depotwerte unverändert auf dem Mittwochsschluss, alle Stops intakt; knappster Wert Alphabet 273,1 $ (Stop 262 $, 4 % Abstand). SAP 194,1 € (+2,3 %) knapp über der Zone 185–190 €; Stellenabbau-Bericht (Bloomberg) unbestätigt. Novo Nordisk 37,1 € nahe der Bestätigungsmarke 37,5 €. Freitag verkürzter US-Handel."
+  "text": "Wochenschluss mit Erholung: AMD 424,5 $ (+4,6 %, Stop 365 $ jetzt 14 % entfernt), Marvell 140,5 $ (+7,3 %) über der Zone 128–136 $ – Zahlen am 3.12., Amazon 254,1 $ in der Zone. Alphabet 275,0 $ bleibt am knappsten (5 % über dem Stop 262 $). Alle Stops intakt."
  },
  {
-  "id": "a_20261126_2245_watch",
-  "at": "2026-11-26T22:45:00+01:00",
+  "id": "a_20261127_2245_watch",
+  "at": "2026-11-27T22:45:00+01:00",
   "ticker": "Watchlist",
   "level": "mittel",
-  "text": "Europa erholt: Siemens Energy 117 € (+4 %) knapp unter der Zone 118–123 € – nur kleine Position, Stop 112 €. Rheinmetall 765,7 € (+4,1 %) vor Tag 2 des Kapitalmarkttags, weiter 20 % über der Zone 600–640 €. Mercedes 38,7 € in einer Erholung (Welle iv); Kaufzone weiter 34,5–35,5 €, Ziel neu 42–44 €. Airbus 193,8 € knapp über der Zone 186–192 €."
- },
- {
-  "id": "a_20261127_1745_depot",
-  "at": "2026-11-27T17:50:00+01:00",
-  "ticker": "Depot",
-  "level": "mittel",
-  "text": "US-Halbtag mit Erholung: AMD 417,5 $ (+2,8 %), Amazon 253,7 $ (+3,8 %) wieder in der Zone 248–258 $, Marvell 137,9 $ (+5,3 %) knapp über der Zone 128–136 $, Applied Digital 12,9 $ (+4,8 %). Novo Nordisk 37,6 € über der Bestätigungsmarke 37,5 € – hält der Schluss darüber, Stop auf Einstand ziehen. Alphabet 273,5 $ bleibt am knappsten (4 % über dem Stop 262 $). Alle Stops intakt."
- },
- {
-  "id": "a_20261127_1745_watch",
-  "at": "2026-11-27T17:50:00+01:00",
-  "ticker": "Watchlist",
-  "level": "mittel",
-  "text": "Watchlist: Micron 640 $ (+6,5 %) und TSMC 351 $ am Unterrand bzw. in ihren Zonen (640–670 $ / 345–355 $), Exxon 160,7 $ in der Zone 160–170 $, Zoetis 81,9 $ in der Zone 78–82 $. Caterpillar, MercadoLibre und Nu steigen über ihre Bestätigungsmarken (Status bisher „meiden“) – Prüfung in der Abendanalyse. Coherent +12 % nach oben weg von der Zone 162–175 $."
+  "text": "Neue Pläne nach Boden-Signalen: Caterpillar, MercadoLibre, Meta, Robinhood, Cameco, Alibaba und Rocket Lab haben ihre Marken überschritten, ohne die alten tiefen Zonen zu erreichen – jetzt „boden“ mit neuen Rücksetzer-Zonen knapp unter dem Kurs (z. B. Meta 598–612 $, Stop 565 $, Ziel 695–720 $). Nike: Zone 32,5–33,8 $ am 20.11. getroffen, seitdem +13 %. Micron und TSMC in ihren Zonen, Exxon an der Unterkante 160 $."
  }
 ]

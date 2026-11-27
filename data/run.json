@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-27T17:50:00+01:00",
-  "kind": "News-Check 17:45",
-  "headline": "US-Halbtag nach Thanksgiving: Chip- und KI-Werte erholen sich weiter, Depot durchweg im Plus – keine dringenden Meldungen.",
-  "market": "Wall Street im verkürzten Black-Friday-Handel fester (Nasdaq am Nachmittag knapp +1 %, Schluss 19 Uhr MEZ), getragen von Halbleiter- und Optikwerten. Depot: AMD +2,8 %, Amazon +3,8 % (zurück in der Zone), Marvell +5,3 %, Novo Nordisk über der Bestätigungsmarke 37,5 €; alle Stops intakt, Alphabet weiter am knappsten (4 % über 262 $). Kurse: TradingView, Abruf 17:47 Uhr (US-Kurse intraday).",
-  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
+  "updated_at": "2026-11-27T22:45:00+01:00",
+  "kind": "Abendanalyse",
+  "headline": "Fortinet und Novo Nordisk schließen über ihren Bestätigungsmarken – Stop jeweils auf Einstand ziehen. Sieben Watchlist-Werte mit neuen Boden-Plänen.",
+  "market": "US-Halbtag nach Thanksgiving: Nasdaq +2,3 %, S&P 500 +1,6 %, Dow +1,2 %, Halbleiterindex fast +5 %; Rendite 10 J. um 4,9 %, Fed-Erhöhung im Dezember erwartet. Depot: AMD +4,6 %, Marvell +7,3 %, Amazon +4,0 %, alle Stops intakt; Alphabet am knappsten (5 % über 262 $). Kurse: TradingView, Abruf 22:32 Uhr (Schlusskurse).",
+  "next_update": "Montag ca. 14:15 Uhr (News-Check)"
  }
 ]
