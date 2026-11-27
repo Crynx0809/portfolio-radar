@@ -1,10 +1,10 @@
 [
  {
   "id": "latest",
-  "updated_at": "2026-11-27T14:25:00+01:00",
-  "kind": "News-Check 14:15",
-  "headline": "Keine wichtigen neuen Meldungen seit dem letzten Update.",
-  "market": "DAX setzt die Erholung fort (mittags ca. +0,9 % um 25.400), Tech- und Energiewerte vorn. Rheinmetall +3,7 % nach dem Kapitalmarkttag, Siemens Energy +2,4 %, Xiaomi +4,5 % (jetzt über der Einstiegszone 25,5–26,8 HKD). US-Börsen öffnen heute nach Thanksgiving verkürzt (Schluss 19 Uhr MEZ); US-Kurse noch auf dem Mittwochsschluss. Depot: alle Stops intakt, Alphabet weiterhin am knappsten (4 % über dem Stop 262 $). Kurse: TradingView, Abruf 14:16 Uhr.",
-  "next_update": "heute ca. 17:45 Uhr (News-Check)"
+  "updated_at": "2026-11-27T17:50:00+01:00",
+  "kind": "News-Check 17:45",
+  "headline": "US-Halbtag nach Thanksgiving: Chip- und KI-Werte erholen sich weiter, Depot durchweg im Plus – keine dringenden Meldungen.",
+  "market": "Wall Street im verkürzten Black-Friday-Handel fester (Nasdaq am Nachmittag knapp +1 %, Schluss 19 Uhr MEZ), getragen von Halbleiter- und Optikwerten. Depot: AMD +2,8 %, Amazon +3,8 % (zurück in der Zone), Marvell +5,3 %, Novo Nordisk über der Bestätigungsmarke 37,5 €; alle Stops intakt, Alphabet weiter am knappsten (4 % über 262 $). Kurse: TradingView, Abruf 17:47 Uhr (US-Kurse intraday).",
+  "next_update": "heute ca. 22:30 Uhr (Abendanalyse)"
  }
 ]

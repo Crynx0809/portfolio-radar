@@ -1,5 +1,15 @@
 [
  {
+  "id": "n_20261127_1745_chips",
+  "date": "2026-11-27",
+  "ticker": "Markt",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Black-Friday-Halbtag: Chip- und Optikwerte erholen sich weiter – Marvell +5 %, Coherent +12 %, AMD +3 % trotz Abstufung",
+  "summary": "Im verkürzten US-Handel (Schluss 19 Uhr MEZ) setzt sich die Erholung der KI-Werte nach dem Ausverkauf vom Mittwoch fort; Nasdaq am Nachmittag knapp +1 %. AMD steigt trotz einer Abstufung durch die Erste Group (Bewertung). Optikwerte wie Coherent und Lumentum ziehen deutlich an. Keine neuen Unternehmenszahlen – eine Erholungsbewegung, noch keine Trendwende.",
+  "url": "https://247wallst.com/investing/2026/11/27/amd-rises-4-despite-erste-group-downgrade-on-valuation-marvell-climbs-6-intel-gains-5/"
+ },
+ {
   "id": "RHM-2026-11-27-cmd",
   "date": "2026-11-27",
   "ticker": "RHM",
@@ -288,15 +298,5 @@
   "headline": "Walmart über Erwartung und hebt die Gewinnprognose an",
   "summary": "Q3-Umsatz 188,8 Mrd. $ (+5,2 %, erwartet ca. 187,3 Mrd. $); Jahresprognose für den Gewinn je Aktie auf 2,84–2,89 $ angehoben. Kursreaktion zum Börsenstart beobachten.",
   "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262313137-us-pre-market-anthropic-tradingkey"
- },
- {
-  "id": "2026-11-19-cyber",
-  "date": "2026-11-19",
-  "ticker": "FTNT",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Cybersecurity-Rally geht weiter: Palo Alto vorbörslich ca. +10 % nach Zahlen, Zscaler +9,7 %, CrowdStrike +7 %, Fortinet +5 %",
-  "summary": "Palo Alto: Quartalsumsatz +39 %, Jahresprognose auf 14,52–14,57 Mrd. $ angehoben. Fortinet (Depot) mit 138,6 $ knapp unter der Bestätigungsmarke 139,4 $.",
-  "url": "https://blockonomi.com/todays-market-movers-anthropic-ipo-pricing-lifts-alphabet-amazon-and-ai-stocks-before-the-bell/"
  }
 ]

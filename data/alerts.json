@@ -19,5 +19,19 @@
   "ticker": "Watchlist",
   "level": "mittel",
   "text": "Europa erholt: Siemens Energy 117 € (+4 %) knapp unter der Zone 118–123 € – nur kleine Position, Stop 112 €. Rheinmetall 765,7 € (+4,1 %) vor Tag 2 des Kapitalmarkttags, weiter 20 % über der Zone 600–640 €. Mercedes 38,7 € in einer Erholung (Welle iv); Kaufzone weiter 34,5–35,5 €, Ziel neu 42–44 €. Airbus 193,8 € knapp über der Zone 186–192 €."
+ },
+ {
+  "id": "a_20261127_1745_depot",
+  "at": "2026-11-27T17:50:00+01:00",
+  "ticker": "Depot",
+  "level": "mittel",
+  "text": "US-Halbtag mit Erholung: AMD 417,5 $ (+2,8 %), Amazon 253,7 $ (+3,8 %) wieder in der Zone 248–258 $, Marvell 137,9 $ (+5,3 %) knapp über der Zone 128–136 $, Applied Digital 12,9 $ (+4,8 %). Novo Nordisk 37,6 € über der Bestätigungsmarke 37,5 € – hält der Schluss darüber, Stop auf Einstand ziehen. Alphabet 273,5 $ bleibt am knappsten (4 % über dem Stop 262 $). Alle Stops intakt."
+ },
+ {
+  "id": "a_20261127_1745_watch",
+  "at": "2026-11-27T17:50:00+01:00",
+  "ticker": "Watchlist",
+  "level": "mittel",
+  "text": "Watchlist: Micron 640 $ (+6,5 %) und TSMC 351 $ am Unterrand bzw. in ihren Zonen (640–670 $ / 345–355 $), Exxon 160,7 $ in der Zone 160–170 $, Zoetis 81,9 $ in der Zone 78–82 $. Caterpillar, MercadoLibre und Nu steigen über ihre Bestätigungsmarken (Status bisher „meiden“) – Prüfung in der Abendanalyse. Coherent +12 % nach oben weg von der Zone 162–175 $."
  }
 ]
