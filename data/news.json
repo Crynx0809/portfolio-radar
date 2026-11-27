@@ -1,5 +1,15 @@
 [
  {
+  "id": "RHM-2026-11-27-cmd",
+  "date": "2026-11-27",
+  "ticker": "RHM",
+  "impact": "mittel",
+  "direction": "positiv",
+  "headline": "Rheinmetall-Kapitalmarkttag: neue Mittelfristziele etwa im Rahmen der Erwartungen – Aktie bis zu +6 %",
+  "summary": "Rheinmetall hat auf dem Kapitalmarkttag seine Ziele nach den Enttäuschungen der letzten Monate neu aufgestellt; die Zahlen liegen laut dpa-AFX etwa beim Konsens. Die Aktie stieg im Tageshoch bis 814 € und notiert am Mittag bei 794 € (+3,7 %).",
+  "url": "https://www.onvista.de/news/2026/11-27-roundup-aktien-frankfurt-erholung-geht-weiter-tech-werte-weiter-gefragt-0-10-26581237"
+ },
+ {
   "id": "n_20261126_2245_dax",
   "date": "2026-11-26",
   "ticker": "Markt",
@@ -288,15 +298,5 @@
   "headline": "Cybersecurity-Rally geht weiter: Palo Alto vorbörslich ca. +10 % nach Zahlen, Zscaler +9,7 %, CrowdStrike +7 %, Fortinet +5 %",
   "summary": "Palo Alto: Quartalsumsatz +39 %, Jahresprognose auf 14,52–14,57 Mrd. $ angehoben. Fortinet (Depot) mit 138,6 $ knapp unter der Bestätigungsmarke 139,4 $.",
   "url": "https://blockonomi.com/todays-market-movers-anthropic-ipo-pricing-lifts-alphabet-amazon-and-ai-stocks-before-the-bell/"
- },
- {
-  "id": "2026-11-19-baba-q2",
-  "date": "2026-11-19",
-  "ticker": "BABA",
-  "impact": "mittel",
-  "direction": "positiv",
-  "headline": "Alibaba: Umsatz +10 %, KI-Cloud +53 % – Aktie vorbörslich ca. +4 % auf 87,9 $",
-  "summary": "Umsatz 271,5 Mrd. Yuan, bereinigtes EBITA stark gestiegen. Kurs knapp unter der Zone 88–92 $ (Status „meiden“); Quellen widersprechen sich bei der vorbörslichen Richtung.",
-  "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262313137-us-pre-market-anthropic-tradingkey"
  }
 ]
